@@ -37,34 +37,69 @@ graph LR
 **¶3 Human matrisome reference list:**
 
 **Source:**
-- **URL:** https://docs.google.com/spreadsheets/d/1GwwV3pFvsp7DKBbCgr8kLpf8Eh_xV8ks/edit
-- **Format:** Google Sheets (downloadable as CSV/XLSX)
+- **Local file:** `references/human_matrisome_v2.csv` (164KB, 1,026 entries)
+- **Online URL:** https://docs.google.com/spreadsheets/d/1GwwV3pFvsp7DKBbCgr8kLpf8Eh_xV8ks/edit
 - **Species:** *Homo sapiens*
-- **Total entries:** 1027 genes
+- **Total entries:** 1,026 genes (1,027 rows including header)
+- **File format:** CSV with pipe-separated synonyms, colon-separated multiple IDs
 
-**Data structure (expected columns):**
+**Data structure (actual columns):**
+```csv
+Matrisome Division   - Core matrisome | Matrisome-associated
+Matrisome Category   - ECM Glycoproteins | Collagens | Proteoglycans | ECM Regulators | ECM-affiliated | Secreted Factors
+Gene Symbol          - Official HGNC gene symbol (all uppercase: COL1A1, FN1, ADIPOQ)
+Gene Name            - Full protein name (e.g., "collagen type I alpha 1 chain")
+Synonyms             - Alternative gene names (pipe-separated: ACDC|ACRP30|ADIPQTL1)
+HGNC_IDs             - HGNC gene database identifiers
+HGNC_IDs Links       - Link to HGNC database entries
+UniProt_IDs          - UniProt accessions, colon-separated if multiple isoforms (Q15848 or P02452:Q8N123)
+Refseq_IDs           - RefSeq identifiers, colon-separated (NP_001171271.1:NP_004788.1)
+Notes                - Additional annotations (usually empty)
 ```
-Gene_Symbol          - Official HGNC gene symbol (e.g., COL1A1, FN1)
-UniProt_ID           - UniProt accession (e.g., P02452)
-Ensembl_ID           - Ensembl gene ID (e.g., ENSG00000108821)
-Matrisome_Division   - High-level category (Core Matrisome | Matrisome-associated)
-Matrisome_Category   - Detailed classification (see ¶5)
-Synonyms             - Alternative gene names (semicolon-separated)
-Description          - Protein function summary
+
+**Example entries (actual data):**
+```csv
+Core matrisome,ECM Glycoproteins,ADIPOQ,"adiponectin, C1Q and collagen domain containing",ACDC|ACRP30|ADIPQTL1|ADPN|APM-1|APM1|GBP28|adipone,13633,13633,Q15848,NP_001171271.1:NP_004788.1,
+Core matrisome,Collagens,COL1A1,collagen type I alpha 1 chain,OI4,2197,2197,P02452,NP_000079.2,Major fibrillar collagen
+Core matrisome,ECM Glycoproteins,FN1,fibronectin 1,CIG|ED-B|FINC|FN|FNZ|GFND|GFND2|LETS|MSF,3603,3603,P02751,NP_001293058.1:NP_001293059.1:NP_002017.1:NP_212464.1:NP_212465.1:NP_212466.1:NP_212467.1:NP_212468.1:NP_212469.1,
 ```
 
 **¶4 Mouse matrisome reference list:**
 
 **Source:**
-- **URL:** https://docs.google.com/spreadsheets/d/1Te6n2q_cisXeirzBClK-VzA6T-zioOB5/edit
-- **Format:** Google Sheets (downloadable as CSV/XLSX)
+- **Local file:** `references/mouse_matrisome_v2.csv` (197KB, 1,109 entries)
+- **Online URL:** https://docs.google.com/spreadsheets/d/1Te6n2q_cisXeirzBClK-VzA6T-zioOB5/edit
 - **Species:** *Mus musculus*
-- **Total entries:** 1110 genes
+- **Total entries:** 1,109 genes (1,110 rows including header)
+- **File format:** CSV with pipe-separated synonyms, colon-separated multiple IDs
 
-**Critical difference from human list:**
-- **Nomenclature subtlety:** >100 proteins have near-identical names to human orthologs but represent distinct mouse genes
-- **Example:** Human COL1A1 ≠ Mouse Col1a1 (capitalization convention: human uppercase, mouse sentence case)
+**Data structure (actual columns):**
+```csv
+Matrisome Division   - Core matrisome | Matrisome-associated
+Matrisome Category   - ECM Glycoproteins | Collagens | Proteoglycans | ECM Regulators | ECM-affiliated | Secreted Factors
+Gene Symbol          - Official MGI gene symbol (sentence case: Adipoq, Col1a1, Fn1)
+Gene Name            - Full protein name
+Synonyms             - Alternative gene names (pipe-separated: 30kDa|APN|Acdc|Acrp30)
+MGI_IDs              - MGI gene database identifiers
+MGI_IDs Links        - Link to MGI database entries
+UniProt_IDs          - UniProt accessions, colon-separated if multiple isoforms
+Refseq_IDs           - RefSeq identifiers, colon-separated
+Notes                - Additional annotations (usually empty)
+```
+
+**Example entries (actual data):**
+```csv
+Core matrisome,ECM Glycoproteins,Adipoq,"adiponectin, C1Q and collagen domain containing",30kDa|APN|Acdc|Acrp30|GBP28|adipo|apM1,MGI:106675,MGI:106675,E9PWU4:Q60994:Q8BRW2,NP_033735.3,
+Core matrisome,Collagens,Col1a1,collagen type I alpha 1 chain,Cola1|Cola-1|Mov13,MGI:88467,MGI:88467,P11087,NP_031764.2,
+Core matrisome,ECM Glycoproteins,Fn1,fibronectin 1,CIG|Fn|LETS,MGI:95566,MGI:95566,P11276,NP_034346.2,
+```
+
+**Critical differences from human list:**
+- **Nomenclature convention:** Mouse uses sentence case (Adipoq, Col1a1, Fn1) vs human uppercase (ADIPOQ, COL1A1, FN1)
+- **Gene duplications:** Mouse has 1,109 vs human 1,026 genes due to some evolutionary gene duplications
+- **Database IDs:** MGI instead of HGNC
 - **Orthology notes:** Some entries include human ortholog mappings for cross-species analysis
+- **>100 near-identical names:** Require expert-level disambiguation (e.g., Col1a1 vs Cola1 synonyms)
 
 **¶5 Matrisome classification hierarchy:**
 
