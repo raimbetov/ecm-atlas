@@ -1,0 +1,1 @@
+import pandas as pd; pd.set_option('display.max_columns', None); df = pd.read_excel('/Users/Kravtsovd/projects/ecm-atlas/data_raw/Chmelova et al. - 2023/Data Sheet 1.XLSX', sheet_name='protein.expression.imputed.new('); print(df.head())
