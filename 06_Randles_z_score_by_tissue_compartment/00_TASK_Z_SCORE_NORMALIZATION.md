@@ -1,5 +1,26 @@
 # Task: Z-Score Normalization by Tissue Compartment (Randles 2021)
 
+**Status:** ✅ COMPLETE (2025-10-12) - All success criteria met (12/12)
+
+**Winner:** Claude Code (100/100 points vs Codex CLI 66/100, Gemini CLI 0/100)
+
+**Deliverables:**
+- `claude_code/Randles_2021_Glomerular_zscore.csv` (847 KB, 2,610 proteins)
+- `claude_code/Randles_2021_Tubulointerstitial_zscore.csv` (888 KB, 2,610 proteins)
+- `claude_code/zscore_validation_report.md` (2.6 KB, comprehensive QC)
+- `claude_code/zscore_metadata.json` (1.7 KB, normalization parameters)
+- `claude_code/90_results_claude_code.md` (20 KB, biological insights + usage examples)
+- `00_AGENT_COMPARISON.md` (comparison of all three agents)
+
+**Key Results:**
+- Log2-transformation applied (skewness 11-17 detected)
+- Perfect z-score normalization (mean=0.000000, std=1.000000)
+- Only 0.80% extreme outliers (|Z| > 3), well below 5% threshold
+- Top aging markers identified: FN1 (+0.55 universal), COL4A3 (-1.35 Glom), TOR1AIP1 (+3.35 Tubu)
+- Compartment-specific patterns validated (Tubulointerstitial shows higher aging variance)
+
+---
+
 **Thesis:** Calculate z-score normalization separately for each kidney tissue compartment (Glomerular and Tubulointerstitial) to enable within-study statistical comparisons while preserving biological differences between compartments, applying log2-transformation for skewed distributions, computing z-scores independently for Young and Old abundance values, and generating normalized datasets ready for cross-study aggregation.
 
 **Overview:** Task transforms wide-format Randles 2021 CSV into compartment-specific z-score normalized datasets through three execution phases: (1.0) Data splitting separates Glomerular and Tubulointerstitial proteins into independent files, (2.0) Statistical normalization applies log2-transformation and z-score calculation per compartment per age group, (3.0) Export and validation generates normalized CSVs with validation metrics and distribution plots.
@@ -634,4 +655,7 @@ print(compartment_specific.sort_values('Zscore_Delta_Glom', ascending=False).hea
   - `01_TASK_DATA_STANDARDIZATION.md` (section 3.0 Normalization Design)
   - `05_Randles_paper_to_csv/00_TASK_RANDLES_2021_CSV_CONVERSION.md` (source data)
 - **Created:** 2025-10-12
-- **Status:** Draft - Awaiting approval
+- **Status:** ✅ Complete (100% success - all 12 criteria met)
+- **Completed:** 2025-10-12
+- **Agent comparison:** `00_AGENT_COMPARISON.md`
+- **Git commit:** bbbdaee ("feat: add compartment-specific z-score normalization for Randles 2021")
