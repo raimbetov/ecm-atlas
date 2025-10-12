@@ -57,9 +57,11 @@ graph LR
 - **Key columns:** `Accession`, `Description`, `Gene name`, `G15`-`G69`, `T15`-`T69`
 
 **¶5 Expected output:**
-- **Parsed rows:** 2,611 proteins × 12 samples = **31,332 rows**
-- **Format:** Long-format CSV with 14 columns (standardized schema)
+- **Long-format (intermediate):** 2,611 proteins × 12 samples = 31,332 rows
+- **Wide-format (final deliverable):** 2,422 proteins × 2 compartments = **5,220 rows**
+- **Format:** Wide-format CSV with separate Abundance_Young and Abundance_Old columns
 - **Annotation target:** ≥90% coverage using human matrisome reference (1,026 genes)
+- **Key benefit:** Each protein appears once per compartment (no sample duplication)
 
 ---
 
@@ -267,25 +269,33 @@ print(f"Null abundances: {df_long['Abundance'].isna().sum()} ({df_long['Abundanc
 
 **¶1 Ordering principle:** Define mappings → apply transformations → add study metadata → validate schema compliance. Map to unified 14-column format.
 
-**¶2 Target schema (17 columns):**
+**¶2 Target schema (15 columns - wide-format recommended):**
+
+**Wide-format schema (FINAL DELIVERABLE):**
 ```
 1. Protein_ID              - UniProt accession from 'Accession' column
 2. Protein_Name            - Full name from 'Description' column
 3. Gene_Symbol             - Gene symbol from 'Gene name' column
-4. Canonical_Gene_Symbol   - [Added in annotation phase]
-5. Matrisome_Category      - [Added in annotation phase]
-6. Tissue                  - "Kidney_Glomerular" OR "Kidney_Tubulointerstitial" (SEPARATE values)
-7. Tissue_Compartment      - "Glomerular" or "Tubulointerstitial" (explicit compartment)
-8. Species                 - "Homo sapiens" (paper metadata)
-9. Age                     - Numeric age (15, 29, 37, 61, 67, 69)
-10. Age_Unit               - "years"
-11. Age_Bin                - "Young" or "Old"
-12. Abundance              - Hi-N LFQ intensity value
-13. Abundance_Unit         - "HiN_LFQ_intensity"
-14. Method                 - "Label-free LC-MS/MS (Progenesis + Mascot)"
-15. Study_ID               - "Randles_2021"
-16. Sample_ID              - "{compartment}_{age}" (e.g., G_15, T_61)
-17. Parsing_Notes          - Additional metadata
+4. Tissue                  - "Kidney_Glomerular" OR "Kidney_Tubulointerstitial" (SEPARATE values)
+5. Tissue_Compartment      - "Glomerular" or "Tubulointerstitial" (explicit compartment)
+6. Species                 - "Homo sapiens" (paper metadata)
+7. Abundance_Young         - Mean Hi-N LFQ intensity for young samples (ages 15, 29, 37)
+8. Abundance_Old           - Mean Hi-N LFQ intensity for old samples (ages 61, 67, 69)
+9. Method                  - "Label-free LC-MS/MS (Progenesis + Mascot)"
+10. Study_ID               - "Randles_2021"
+11. Canonical_Gene_Symbol  - [Added in annotation phase]
+12. Matrisome_Category     - [Added in annotation phase]
+13. Matrisome_Division     - [Added in annotation phase]
+14. Match_Level            - [Added in annotation phase]
+15. Match_Confidence       - [Added in annotation phase]
+```
+
+**Long-format schema (INTERMEDIATE for processing):**
+```
+- Used internally for parsing and annotation
+- Then pivoted to wide-format for final export
+- 17 columns including Age, Age_Unit, Age_Bin, Abundance, Sample_ID, Parsing_Notes
+- See section 2.0 for details
 ```
 
 **⚠️ CRITICAL REQUIREMENT:** Tissue column uses **combined format** to keep compartments separate:

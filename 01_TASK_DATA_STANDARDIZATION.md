@@ -24,7 +24,7 @@ graph LR
 
 **¶1 Ordering principle:** Existing schema → dataset coverage → gap identification. Start with proposed structure, validate against reality, then refine.
 
-**¶2 Proposed unified schema (12 columns):**
+**¶2 Proposed unified schema (12 columns - long-format):**
 ```
 Protein_ID        - Standard identifier (UniProt/Gene symbol)
 Protein_Name      - Full protein name
@@ -39,6 +39,36 @@ Method            - Proteomic technique (LC-MS/MS, DIA, etc.)
 Study_ID          - Publication identifier (PMID, DOI)
 Sample_ID         - Biological/technical replicate ID
 ```
+
+**¶2.1 Wide-format schema variant (recommended for binary age comparisons):**
+
+For studies with binary age design (Young vs Old), wide-format provides cleaner structure:
+```
+Protein_ID         - Standard identifier (UniProt/Gene symbol)
+Protein_Name       - Full protein name
+Gene_Symbol        - Gene nomenclature
+Tissue             - Organ/tissue type (with compartment if applicable)
+Tissue_Compartment - Sub-tissue region (e.g., Glomerular, Tubulointerstitial)
+Species            - Organism (Mus musculus, Homo sapiens, Bos taurus)
+Abundance_Young    - Mean abundance in young samples (averaged across replicates)
+Abundance_Old      - Mean abundance in old samples (averaged across replicates)
+Method             - Proteomic technique (LC-MS/MS, DIA, etc.)
+Study_ID           - Publication identifier (PMID, DOI)
+```
+
+**Benefits of wide-format:**
+- Each protein appears **once per tissue compartment** (no duplication)
+- Young/Old comparison is immediate (side-by-side columns)
+- Cleaner for visualization (fold-change = Old/Young)
+- Smaller file size (~5x reduction: 31,320 rows → 5,220 rows)
+- Direct compatibility with statistical comparison tools (t-test, fold-change)
+
+**When to use:**
+- ✅ Binary age design (Young/Old only)
+- ✅ Compartmentalized tissues (kidney, brain regions)
+- ✅ Fold-change analysis focus
+- ❌ Multi-timepoint studies (3+ age groups) → use long-format
+- ❌ Single-sample studies without replicates → use long-format
 
 **¶3 Dataset inventory (13 studies to map):**
 1. Angelidis et al. 2019 - Lung (mouse) - 11 files, 59MB
