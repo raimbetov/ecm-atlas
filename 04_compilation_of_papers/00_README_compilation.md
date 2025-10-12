@@ -17,6 +17,40 @@ This folder contains **comprehensive analyses** for all 11 ECM Atlas papers, syn
 
 ---
 
+## 📊 Column Mapping Completeness
+
+**Schema Requirements:** All studies need 13 columns mapped: Protein_ID, Protein_Name, Gene_Symbol, Tissue, Species, Age, Age_Unit, Abundance, Abundance_Unit, Method, Study_ID, Sample_ID, Parsing_Notes
+
+### Mapping Success by Study (Sorted by % Completeness)
+
+| Study | Required | Mapped | % Complete | Status | Notes |
+|-------|----------|--------|------------|--------|-------|
+| **01_Angelidis_2019** | 13 | **13/13** | **100%** ✅ | Phase 1 Ready | All columns complete, binary design |
+| **05_Dipali_2023** | 13 | **13/13** | **100%** ✅ | Phase 1 Ready | All columns complete (Codex found better source file) |
+| **09_Randles_2021** | 13 | **13/13** | **100%** ✅ | Phase 1 Ready | All columns complete, binary design |
+| **10_Tam_2020** | 13 | **13/13** | **100%** ✅ | Phase 1 Ready | All columns complete, spatially resolved |
+| **06_LiDermis_2021** | 13 | **12/13** | **92%** ⚠️ | Phase 1 (preprocessing needed) | Protein_Name requires UniProt lookup or Table S3 join |
+| **02_Ariosa_2021** | 13 | 8/13 | 62% | Phase 3 Deferred | SILAC - labeled method, mapping preview only |
+| **03_Caldeira_2017** | 13 | 9/13 | 69% | Phase 3 Deferred | iTRAQ - labeled method, mapping preview only |
+| **07_LiPancreas_2021** | 13 | 9/13 | 69% | Phase 3 Deferred | DiLeu - labeled method, mapping preview only |
+| **08_Ouni_2022** | 13 | 9/13 | 69% | Phase 3 Deferred | TMTpro - labeled method, mapping preview only |
+| **11_Tsumagari_2023** | 13 | 9/13 | 69% | Phase 3 Deferred | TMT - labeled method, mapping preview only |
+| **04_Chmelova_2023** | 13 | **0/13** | **0%** ❌ | **EXCLUDED** | **RNA-Seq (transcriptomics) - NOT proteomics** |
+
+### Summary Statistics
+
+**Phase 1 (LFQ Proteomics):**
+- ✅ **4 studies with 100% mapping** (Angelidis, Dipali, Randles, Tam) - **Ready for immediate parsing**
+- ⚠️ **1 study with 92% mapping** (LiDermis) - **Needs Protein_Name preprocessing before parsing**
+
+**Phase 3 (Labeled Methods):**
+- **5 studies with 69% mapping** (partial preview) - Deferred to Phase 3 with different schema requirements
+
+**Excluded:**
+- ❌ **1 study with 0% mapping** (Chmelova) - Permanently excluded (RNA-Seq, not proteomics)
+
+---
+
 ## 🎯 Compilation Methodology
 
 ### Agent Accuracy Context
