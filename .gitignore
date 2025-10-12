@@ -119,3 +119,9 @@ node_modules/
 .*.swp
 .*.swo
 .*.tmp
+
+# Screenshots from dashboard validation
+**/01_screenshots/
+*.png
+*.jpg
+*.jpeg
