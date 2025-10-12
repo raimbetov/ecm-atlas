@@ -1,0 +1,88 @@
+================================================================================
+RANDLES 2021 DATASET CONVERSION
+================================================================================
+
+[PHASE 1] FILE RECONNAISSANCE
+--------------------------------------------------------------------------------
+✅ Excel file loaded: data_raw/Randles et al. - 2021/ASN.2020101442-File027.xlsx
+   Available sheets: ['Summary of datasets', 'Col4a1 matrix fraction', 'Col4a3 early matrix fraction', 'Col4a3 late matrix fraction', 'Col4a5 early matrix fraction', 'Col4a5 late matrix fraction', 'Human data matrix fraction']
+✅ Sheet loaded: Human data matrix fraction
+   Shape: (2610, 31) (rows × columns)
+   Columns: ['Gene name', 'Accession', 'Peptide count', 'Unique peptides', 'Confidence score', 'P value', 'Description', 'G15', 'G29', 'G37', 'G61', 'G67', 'G69', 'T15', 'T29', 'T37', 'T61', 'T67', 'T69', 'G15.1', 'G29.1', 'G37.1', 'G61.1', 'G67.1', 'G69.1', 'T15.1', 'T29.1', 'T37.1', 'T61.1', 'T67.1', 'T69.1']
+✅ Row count validated: 2610 proteins
+✅ All 12 intensity columns present
+   Null Accessions: 0 (0.0%)
+   Null Gene names: 0 (0.0%)
+
+✅ PHASE 1 COMPLETE: File validation passed
+
+[PHASE 2] DATA PARSING - Excel to Long Format
+--------------------------------------------------------------------------------
+✅ Filtered columns: 15 columns retained
+✅ Reshaped to long format: 31,320 rows
+   Total rows: 31,320 (expected: 31,332)
+   Unique proteins: 2,610 (expected: 2,611)
+   Unique samples: 12 (expected: 12)
+   Age bin distribution:
+Age_Bin
+Young    15660
+Old      15660
+Name: count, dtype: int64
+
+✅ PHASE 2 COMPLETE: Data parsing successful
+
+[PHASE 3] SCHEMA STANDARDIZATION - 17-Column Format
+--------------------------------------------------------------------------------
+✅ Standardized dataframe created: (31320, 17)
+✅ All required columns validated (no nulls)
+   Unique Tissue values: ['Kidney_Glomerular', 'Kidney_Tubulointerstitial']
+✅ Compartments correctly separated
+
+✅ PHASE 3 COMPLETE: Schema standardization successful
+
+[PHASE 4] PROTEIN ANNOTATION - Matrisome Reference Matching
+--------------------------------------------------------------------------------
+✅ Human matrisome reference loaded: 1027 genes
+   Categories: {'Secreted Factors': 344, 'ECM Regulators': 238, 'ECM Glycoproteins': 195, 'ECM-affiliated Proteins': 171, 'Collagens': 44, 'Proteoglycans': 35}
+   Lookup tables created:
+     - Gene symbols: 1027
+     - UniProt IDs: 1027
+     - Synonyms: 3275
+   Annotating proteins...
+
+   Annotation Coverage Report:
+     Total unique proteins: 2610
+     Matched proteins: 229 (8.8%)
+     Unmatched proteins: 2381 (91.2%)
+
+   Match Level Distribution:
+     exact_gene: 221 proteins
+     synonym: 8 proteins
+     unmatched: 2381 proteins
+
+   Matrisome Category Distribution:
+Traceback (most recent call last):
+  File "/Users/Kravtsovd/projects/ecm-atlas/05_Randles_paper_to_csv/randles_conversion.py", line 322, in <module>
+    df_matched = df_annotated[df_annotated['Matrisome_Category'].notna()].copy()
+                 ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Kravtsovd/projects/chrome-extension-tcs/venv/lib/python3.11/site-packages/pandas/core/frame.py", line 4100, in __getitem__
+    return self.where(key)
+           ^^^^^^^^^^^^^^^
+  File "/Users/Kravtsovd/projects/chrome-extension-tcs/venv/lib/python3.11/site-packages/pandas/core/generic.py", line 11048, in where
+    return self._where(cond, other, inplace, axis, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Kravtsovd/projects/chrome-extension-tcs/venv/lib/python3.11/site-packages/pandas/core/generic.py", line 10748, in _where
+    cond = cond.reindex(self._info_axis, axis=self._info_axis_number, copy=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/Kravtsovd/projects/chrome-extension-tcs/venv/lib/python3.11/site-packages/pandas/core/frame.py", line 5400, in reindex
+    return super().reindex(
+           ^^^^^^^^^^^^^^^^
+  File "/Users/Kravtsovd/projects/chrome-extension-tcs/venv/lib/python3.11/site-packages/pandas/core/generic.py", line 5632, in reindex
+    return self._reindex_axes(
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/Kravtsovd/projects/chrome-extension-tcs/venv/lib/python3.11/site-packages/pandas/core/generic.py", line 5655, in _reindex_axes
+    new_index, indexer = ax.reindex(
+                         ^^^^^^^^^^^
+  File "/Users/Kravtsovd/projects/chrome-extension-tcs/venv/lib/python3.11/site-packages/pandas/core/indexes/base.py", line 4436, in reindex
+    raise ValueError("cannot reindex on an axis with duplicate labels")
+ValueError: cannot reindex on an axis with duplicate labels
