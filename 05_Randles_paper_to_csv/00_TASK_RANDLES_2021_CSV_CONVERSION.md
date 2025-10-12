@@ -28,7 +28,10 @@ graph LR
 - **Authors:** Randles et al.
 - **Year:** 2021
 - **PMID:** 34049963
-- **Tissue:** Human kidney cortex (two compartments: glomerular and tubulointerstitial)
+- **Tissue:** Human kidney cortex with **TWO SEPARATE compartments**
+  - **Glomerular (G):** Filtration units - analyzed separately
+  - **Tubulointerstitial (T):** Tubule structures - analyzed separately
+  - **⚠️ CRITICAL:** Compartments must remain **SEPARATE** in final CSV (not combined)
 - **Species:** *Homo sapiens*
 - **Method:** Label-free LC-MS/MS (Progenesis LC-MS with Hi-N quantification + Mascot identification)
 
@@ -264,15 +267,15 @@ print(f"Null abundances: {df_long['Abundance'].isna().sum()} ({df_long['Abundanc
 
 **¶1 Ordering principle:** Define mappings → apply transformations → add study metadata → validate schema compliance. Map to unified 14-column format.
 
-**¶2 Target schema (14 columns):**
+**¶2 Target schema (17 columns):**
 ```
 1. Protein_ID              - UniProt accession from 'Accession' column
 2. Protein_Name            - Full name from 'Description' column
 3. Gene_Symbol             - Gene symbol from 'Gene name' column
 4. Canonical_Gene_Symbol   - [Added in annotation phase]
 5. Matrisome_Category      - [Added in annotation phase]
-6. Tissue                  - "Kidney" (derived from compartment)
-7. Tissue_Compartment      - "Glomerular" or "Tubulointerstitial" (parsed from column name)
+6. Tissue                  - "Kidney_Glomerular" OR "Kidney_Tubulointerstitial" (SEPARATE values)
+7. Tissue_Compartment      - "Glomerular" or "Tubulointerstitial" (explicit compartment)
 8. Species                 - "Homo sapiens" (paper metadata)
 9. Age                     - Numeric age (15, 29, 37, 61, 67, 69)
 10. Age_Unit               - "years"
@@ -284,6 +287,12 @@ print(f"Null abundances: {df_long['Abundance'].isna().sum()} ({df_long['Abundanc
 16. Sample_ID              - "{compartment}_{age}" (e.g., G_15, T_61)
 17. Parsing_Notes          - Additional metadata
 ```
+
+**⚠️ CRITICAL REQUIREMENT:** Tissue column uses **combined format** to keep compartments separate:
+- Rows from Glomerular samples: `Tissue = "Kidney_Glomerular"`
+- Rows from Tubulointerstitial samples: `Tissue = "Kidney_Tubulointerstitial"`
+- **DO NOT** combine compartments into single "Kidney" value
+- **DO NOT** average or merge Glomerular and Tubulointerstitial data
 
 **¶3 Column mapping implementation:**
 
@@ -297,9 +306,9 @@ df_standardized = pd.DataFrame({
     'Canonical_Gene_Symbol': None,  # Filled in annotation phase
     'Matrisome_Category': None,      # Filled in annotation phase
 
-    # Tissue metadata
-    'Tissue': 'Kidney',
-    'Tissue_Compartment': df_long['Compartment'],
+    # Tissue metadata - COMPARTMENTS KEPT SEPARATE
+    'Tissue': 'Kidney_' + df_long['Compartment'],  # "Kidney_Glomerular" or "Kidney_Tubulointerstitial"
+    'Tissue_Compartment': df_long['Compartment'],  # Explicit compartment for filtering
 
     # Species
     'Species': 'Homo sapiens',
@@ -550,7 +559,8 @@ checks = [
     ('Unique samples', validation_report['unique_samples'] == validation_report['expected_samples']),
     ('Annotation coverage', validation_report['annotation_coverage'] >= 90),
     ('No null Protein_ID', validation_report['null_protein_id'] == 0),
-    ('No null Abundance', validation_report['null_abundance'] == 0)
+    ('No null Abundance', validation_report['null_abundance'] == 0),
+    ('Compartments separate', set(df_annotated['Tissue'].unique()) == {'Kidney_Glomerular', 'Kidney_Tubulointerstitial'})
 ]
 
 print("\nValidation Checks:")
@@ -644,7 +654,7 @@ print(f"✅ Metadata exported: {metadata_file}")
 2. **Row count exact:** 31,332 rows (2,611 proteins × 12 samples)
 3. **Zero null critical fields:** No nulls in Protein_ID, Abundance, Study_ID, Sample_ID
 4. **Age bins correct:** 6 young samples (15,29,37 years), 6 old samples (61,67,69 years)
-5. **Data retention 100%:** All 12 samples included (meets ≥66% threshold)
+5. **Compartments kept separate:** Tissue column contains "Kidney_Glomerular" and "Kidney_Tubulointerstitial" (not combined into "Kidney")
 
 **✅ TIER 2: QUALITY (ALL required - impacts data reliability)**
 
@@ -652,7 +662,7 @@ print(f"✅ Metadata exported: {metadata_file}")
 7. **Known markers present:** COL1A1, COL1A2, FN1 found and correctly annotated
 8. **Species consistency:** All genes follow human nomenclature (uppercase: COL1A1, FN1)
 9. **Schema compliance:** All 17 columns present with correct data types
-10. **Abundance values valid:** No negative values, reasonable range (check log scale)
+10. **Compartment validation:** Each Tissue value matches one compartment (15,666 Glomerular rows + 15,666 Tubulointerstitial rows = 31,332 total)
 
 **✅ TIER 3: DOCUMENTATION (ALL required - ensures reproducibility)**
 
