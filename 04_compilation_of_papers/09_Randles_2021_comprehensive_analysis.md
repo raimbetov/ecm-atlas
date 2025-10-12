@@ -26,7 +26,7 @@
 
 ---
 
-## 3. Column Mapping (13 Schema Columns)
+## 3. Column Mapping (14 Schema Columns)
 **Source:** `ASN.2020101442-File027.xlsx`, sheet "Human data matrix fraction" (2,611 × 31)
 
 | Column | Source | Notes |
@@ -34,16 +34,19 @@
 | Protein_ID | "Accession" | UniProt from Mascot |
 | Protein_Name | "Description" | ✅ Complete |
 | Gene_Symbol | "Gene name" | ✅ |
-| Tissue | Column prefix G/T | G=Glomerular, T=Tubulointerstitial |
+| Tissue | Constant "Kidney" | Parent organ |
+| Tissue_Compartment | Column prefix G/T | **✅ REQUIRED** - G=Glomerular, T=Tubulointerstitial |
 | Species | Constant "Homo sapiens" | |
 | Age | Column suffix number | G15→15yr, T67→67yr |
 | Age_Unit | "years" | |
 | Abundance | Gxx/Txx columns | Hi-N LFQ intensities |
 | Abundance_Unit | "HiN_LFQ_intensity" | Top-3 peptide normalization |
 | Method | "Label-free LC-MS/MS (Progenesis)" | |
+| Study_ID | "Randles_2021" | PMID: 34049963 |
 | Sample_ID | "{compartment}_{age}" | E.g., "G_15", "T_61" |
+| Parsing_Notes | Generated | Document compartment separation, age groups |
 
-**Mapping quality:** ✅ All 13 columns complete; ⚠️ Filter .1 suffix columns (binary detection flags, not quant)
+**Mapping quality:** ✅ All 14 columns complete (including Tissue_Compartment); ⚠️ Filter .1 suffix columns (binary detection flags, not quant)
 
 ---
 

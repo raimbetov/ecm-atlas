@@ -1,0 +1,10 @@
+{
+  "dataset_id": "Randles_2021_zscore",
+  "normalization_timestamp": "2025-10-12T15:14:46.102945",
+  "source_file": "../05_Randles_paper_to_csv/claude_code/Randles_2021_wide_format.csv",
+  "method": "Z-score normalization (compartment-specific)",
+  "rationale": "Compartment-specific normalization preserves biological differences between Glomerular and Tubulointerstitial tissues",
+  "reference": "01_TASK_DATA_STANDARDIZATION.md section 3.0",
+  "glomerular": {
+    "protein_count": 2610,
+    "log2_transformed": 

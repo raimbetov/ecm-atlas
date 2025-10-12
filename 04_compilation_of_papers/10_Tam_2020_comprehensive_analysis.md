@@ -27,7 +27,7 @@
 
 ---
 
-## 3. Column Mapping (13 Schema Columns)
+## 3. Column Mapping (14 Schema Columns)
 **Source:** `elife-64940-supp1-v3.xlsx`
 - Sheet: "Raw data" (3,158 × 80)
 - Metadata: "Sample information" (profile names, disc levels, ages, compartments)
@@ -37,16 +37,19 @@
 | Protein_ID | "T: Majority protein IDs" | MaxQuant UniProt accessions |
 | Protein_Name | "T: Protein names" | ✅ Complete |
 | Gene_Symbol | "T: Gene names" | ✅ |
-| Tissue | Sample information "Compartment" | NP, IAF, OAF, NP/IAF transitions |
+| Tissue | Constant "Intervertebral disc" | Lumbar spine IVD |
+| Tissue_Compartment | Sample information "Compartment" | **✅ REQUIRED** - NP (nucleus pulposus), IAF (inner annulus), OAF (outer annulus), NP/IAF transitions |
 | Species | Constant "Homo sapiens" | |
 | Age | Sample information "age-group" | young→16yr, old→59yr |
 | Age_Unit | "years" | |
 | Abundance | "LFQ intensity ..." columns | Each column = one spatial profile |
 | Abundance_Unit | "LFQ_intensity" | MaxQuant normalized |
 | Method | "Label-free LC-MS/MS (MaxQuant)" | |
+| Study_ID | "Tam_2020" | PMID: 33382035 |
 | Sample_ID | Profile name | E.g., "L3/4_old_L_OAF" (disc level_age_direction_compartment) |
+| Parsing_Notes | Generated | Document spatial profiling, 66 profiles, compartment mapping |
 
-**Mapping quality:** ✅ All 13 columns complete; metadata join required for age/compartment annotation
+**Mapping quality:** ✅ All 14 columns complete (including Tissue_Compartment); metadata join required for age/compartment annotation
 
 ---
 

@@ -1,0 +1,81 @@
+{
+  "input_file": "05_Randles_paper_to_csv/claude_code/Randles_2021_wide_format.csv",
+  "generated_utc": "2025-10-12T22:12:48.887857Z",
+  "compartments": {
+    "Glomerular": {
+      "compartment": "Glomerular",
+      "row_count": 2610,
+      "needs_log2": true,
+      "stats": {
+        "Abundance_Young": {
+          "raw_mean": 111515.89079384507,
+          "raw_std": 634966.6021209238,
+          "raw_skew": 11.574564531649717
+        },
+        "Abundance_Old": {
+          "raw_mean": 112777.38938803368,
+          "raw_std": 642130.3948833256,
+          "raw_skew": 11.38353160221925
+        }
+      },
+      "zscore": {
+        "mean_young_basis": 12.972959531507446,
+        "std_young_basis": 3.274402711351678,
+        "mean_old_basis": 13.192967800545853,
+        "std_old_basis": 3.0594490818407625,
+        "zscore_mean_young": 4.981966308203002e-16,
+        "zscore_std_young": 1.0,
+        "zscore_mean_old": -1.7831628043021672e-16,
+        "zscore_std_old": 1.0000000000000002,
+        "zscore_skew_young": -0.1486650696607338,
+        "zscore_skew_old": 0.03039040444334778,
+        "outlier_count_abs_gt_3": 39
+      },
+      "marker_presence": {
+        "COL1A1": true,
+        "COL1A2": true,
+        "FN1": true
+      }
+    },
+    "Tubulointerstitial": {
+      "compartment": "Tubulointerstitial",
+      "row_count": 2610,
+      "needs_log2": true,
+      "stats": {
+        "Abundance_Young": {
+          "raw_mean": 128980.957665166,
+          "raw_std": 881840.7320800788,
+          "raw_skew": 16.81218135527729
+        },
+        "Abundance_Old": {
+          "raw_mean": 114627.66480938123,
+          "raw_std": 655627.0664437284,
+          "raw_skew": 13.871863554391785
+        }
+      },
+      "zscore": {
+        "mean_young_basis": 13.252445887802374,
+        "std_young_basis": 3.158510570958158,
+        "mean_old_basis": 13.552316098823923,
+        "std_old_basis": 2.923612069654908,
+        "zscore_mean_young": 1.3611929803833336e-17,
+        "zscore_std_young": 1.0,
+        "zscore_mean_old": -2.0009536811635005e-16,
+        "zscore_std_old": 0.9999999999999999,
+        "zscore_skew_young": -0.144968321729967,
+        "zscore_skew_old": -0.07389880293303111,
+        "outlier_count_abs_gt_3": 45
+      },
+      "marker_presence": {
+        "COL1A1": true,
+        "COL1A2": true,
+        "FN1": true
+      }
+    }
+  },
+  "success_criteria": {
+    "zscore_mean_target": 0.0,
+    "zscore_std_target": 1.0,
+    "tolerance": 0.01
+  }
+}

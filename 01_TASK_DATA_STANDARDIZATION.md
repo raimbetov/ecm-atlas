@@ -24,20 +24,24 @@ graph LR
 
 **¶1 Ordering principle:** Existing schema → dataset coverage → gap identification. Start with proposed structure, validate against reality, then refine.
 
-**¶2 Proposed unified schema (12 columns - long-format):**
+**¶2 Proposed unified schema (13 columns - long-format):**
 ```
-Protein_ID        - Standard identifier (UniProt/Gene symbol)
-Protein_Name      - Full protein name
-Gene_Symbol       - Gene nomenclature
-Tissue            - Organ/tissue type (lung, skin, heart, kidney, etc.)
-Species           - Organism (Mus musculus, Homo sapiens, Bos taurus)
-Age               - Numeric age value
-Age_Unit          - Time unit (years, months, weeks)
-Abundance         - Quantitative protein measurement
-Abundance_Unit    - Measurement unit (ppm, intensity, LFQ, etc.)
-Method            - Proteomic technique (LC-MS/MS, DIA, etc.)
-Study_ID          - Publication identifier (PMID, DOI)
-Sample_ID         - Biological/technical replicate ID
+Protein_ID           - Standard identifier (UniProt/Gene symbol)
+Protein_Name         - Full protein name
+Gene_Symbol          - Gene nomenclature
+Tissue               - Organ/tissue type (lung, skin, heart, kidney, etc.)
+Tissue_Compartment   - ⚠️ OPTIONAL: Sub-tissue region (e.g., Glomerular, Tubulointerstitial, NP, IAF, OAF)
+                       Only populate if study provides compartment-specific data
+                       Examples: Randles 2021 (kidney G/T), Tam 2020 (spine NP/IAF/OAF)
+Species              - Organism (Mus musculus, Homo sapiens, Bos taurus)
+Age                  - Numeric age value
+Age_Unit             - Time unit (years, months, weeks)
+Abundance            - Quantitative protein measurement
+Abundance_Unit       - Measurement unit (ppm, intensity, LFQ, etc.)
+Method               - Proteomic technique (LC-MS/MS, DIA, etc.)
+Study_ID             - Publication identifier (PMID, DOI)
+Sample_ID            - Biological/technical replicate ID
+Parsing_Notes        - Metadata about mapping decisions, age ranges, normalization details
 ```
 
 **¶2.1 Wide-format schema variant (recommended for binary age comparisons):**
@@ -395,7 +399,7 @@ For each dataset, create `[dataset]_annotation_report.md`:
 
 **¶7 Integration with unified schema:**
 
-Updated schema (14 columns - added 2 annotation columns):
+Updated schema (16 columns - added Tissue_Compartment + 2 annotation columns):
 ```
 Protein_ID              - Original identifier from study
 Protein_Name            - Full protein name
@@ -403,6 +407,7 @@ Gene_Symbol             - Gene nomenclature
 Canonical_Gene_Symbol   - ✨ NEW: Standardized gene symbol from matrisome reference
 Matrisome_Category      - ✨ NEW: Matrisome classification (ECM Glycoproteins, Collagens, etc.)
 Tissue                  - Organ/tissue type
+Tissue_Compartment      - ⚠️ OPTIONAL: Sub-tissue region (G/T, NP/IAF/OAF, etc.)
 Species                 - Organism
 Age                     - Numeric age value
 Age_Unit                - Time unit
@@ -411,6 +416,7 @@ Abundance_Unit          - Measurement unit
 Method                  - Proteomic technique
 Study_ID                - Publication identifier
 Sample_ID               - Replicate ID
+Parsing_Notes           - Mapping decisions, age ranges, normalization details
 ```
 
 **¶8 Resources:**
@@ -529,7 +535,7 @@ Sample_ID               - Replicate ID
 **🔴 CRITICAL NEW REQUIREMENT: Every column must be traceable to source paper**
 
 **Criterion 3.1: Column mapping documentation**
-- ✅ **Required:** For EACH of 12 schema columns, document where data comes from in source paper
+- ✅ **Required:** For EACH of 14 schema columns (13 required + 1 optional), document where data comes from in source paper
 - **Template per study:**
   ```markdown
   ## Study: [Author] et al. [Year]
@@ -541,6 +547,7 @@ Sample_ID               - Replicate ID
   | Protein_Name | MOESM5_ESM.xlsx | "Protein names" | - | Full names |
   | Gene_Symbol | MOESM5_ESM.xlsx | "Gene names" | - | Mouse gene symbols |
   | Tissue | Paper title | "lung aging" | Title | Not in data file |
+  | Tissue_Compartment | - | N/A | - | **OPTIONAL** - Not applicable for whole lung |
   | Species | Paper Methods | "C57BL/6 mice" | Methods, para 1 | Mouse |
   | Age | Column headers | "old_1" → 24mo | Methods, para 2 | "24-month-old" |
   | Age_Unit | Paper Methods | "months" | Methods, para 2 | - |
@@ -549,6 +556,7 @@ Sample_ID               - Replicate ID
   | Method | Paper Methods | "LC-MS/MS" | Methods, para 1 | Orbitrap Fusion |
   | Study_ID | Paper | Angelidis_2019 | - | PMID: 31160495 |
   | Sample_ID | Column headers | "old_1", "young_2", etc. | Methods, para 2 | 4 reps per group |
+  | Parsing_Notes | Generated | - | - | Document age mapping, preprocessing, etc. |
   ```
 - **Evidence required:** Complete mapping table for all 13 studies in `column_mappings_documentation.md`
 

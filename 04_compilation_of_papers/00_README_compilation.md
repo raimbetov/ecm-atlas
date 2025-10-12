@@ -19,16 +19,18 @@ This folder contains **comprehensive analyses** for all 11 ECM Atlas papers, syn
 
 ## 📊 Column Mapping Completeness
 
-**Schema Requirements:** All studies need 13 columns mapped: Protein_ID, Protein_Name, Gene_Symbol, Tissue, Species, Age, Age_Unit, Abundance, Abundance_Unit, Method, Study_ID, Sample_ID, Parsing_Notes
+**Schema Requirements:** All studies need 14 columns mapped (13 required + 1 optional):
+- **Required (13):** Protein_ID, Protein_Name, Gene_Symbol, Tissue, Species, Age, Age_Unit, Abundance, Abundance_Unit, Method, Study_ID, Sample_ID, Parsing_Notes
+- **Optional (1):** Tissue_Compartment (only for compartmentalized studies like Randles kidney G/T, Tam spine NP/IAF/OAF)
 
 ### Mapping Success by Study (Sorted by % Completeness)
 
 | Study | Required | Mapped | % Complete | Status | Notes |
 |-------|----------|--------|------------|--------|-------|
-| **01_Angelidis_2019** | 13 | **13/13** | **100%** ✅ | Phase 1 Ready | All columns complete, binary design |
-| **05_Dipali_2023** | 13 | **13/13** | **100%** ✅ | Phase 1 Ready | All columns complete (Codex found better source file) |
-| **09_Randles_2021** | 13 | **13/13** | **100%** ✅ | Phase 1 Ready | All columns complete, binary design |
-| **10_Tam_2020** | 13 | **13/13** | **100%** ✅ | Phase 1 Ready | All columns complete, spatially resolved |
+| **09_Randles_2021** | 14 | **14/14** | **100%** ✅ | Phase 1 Ready | All columns + Tissue_Compartment (kidney G/T), binary design |
+| **10_Tam_2020** | 14 | **14/14** | **100%** ✅ | Phase 1 Ready | All columns + Tissue_Compartment (spine NP/IAF/OAF), spatially resolved |
+| **01_Angelidis_2019** | 13 | **13/13** | **100%** ✅ | Phase 1 Ready | All required columns, binary design (no compartments) |
+| **05_Dipali_2023** | 13 | **13/13** | **100%** ✅ | Phase 1 Ready | All required columns (Codex found better source file) |
 | **06_LiDermis_2021** | 13 | **12/13** | **92%** ⚠️ | Phase 1 (preprocessing needed) | Protein_Name requires UniProt lookup or Table S3 join |
 | **02_Ariosa_2021** | 13 | 8/13 | 62% | Phase 3 Deferred | SILAC - labeled method, mapping preview only |
 | **03_Caldeira_2017** | 13 | 9/13 | 69% | Phase 3 Deferred | iTRAQ - labeled method, mapping preview only |
@@ -40,8 +42,9 @@ This folder contains **comprehensive analyses** for all 11 ECM Atlas papers, syn
 ### Summary Statistics
 
 **Phase 1 (LFQ Proteomics):**
-- ✅ **4 studies with 100% mapping** (Angelidis, Dipali, Randles, Tam) - **Ready for immediate parsing**
-- ⚠️ **1 study with 92% mapping** (LiDermis) - **Needs Protein_Name preprocessing before parsing**
+- ✅ **2 studies with 14/14 columns (100%)** (Randles, Tam) - **Includes Tissue_Compartment - Ready for immediate parsing**
+- ✅ **2 studies with 13/13 columns (100%)** (Angelidis, Dipali) - **No compartments - Ready for immediate parsing**
+- ⚠️ **1 study with 12/13 columns (92%)** (LiDermis) - **Needs Protein_Name preprocessing before parsing**
 
 **Phase 3 (Labeled Methods):**
 - **5 studies with 69% mapping** (partial preview) - Deferred to Phase 3 with different schema requirements
