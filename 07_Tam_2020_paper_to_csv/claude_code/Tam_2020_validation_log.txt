@@ -1,0 +1,40 @@
+================================================================================
+TAM 2020 DATASET - VALIDATION LOG
+================================================================================
+Generated: 2025-10-12 16:29:56
+
+VALIDATION CHECKS:
+--------------------------------------------------------------------------------
+PASS: Long-format row count
+FAIL: Wide-format row count
+PASS: Unique proteins
+PASS: Compartment count
+PASS: No null Protein_ID
+PASS: Compartments present
+PASS: Z-score files created
+
+VALIDATION METRICS:
+--------------------------------------------------------------------------------
+long_format_rows: 48961
+expected_long_rows: 48961
+wide_format_rows: 6809
+expected_wide_rows: 12404
+unique_proteins: 3101
+expected_proteins: 3101
+compartments: 4
+expected_compartments: 4
+annotation_coverage: 19.38610662358643
+null_protein_id: 0
+null_abundance_young: 2158
+null_abundance_old: 843
+
+Z-SCORE VALIDATION:
+--------------------------------------------------------------------------------
+compartment  z_young_mean  z_young_std    z_old_mean  z_old_std  outliers_young  outliers_old
+        IAF  1.356365e-15          1.0 -3.549736e-15        1.0              19            12
+        OAF -2.113940e-15          1.0  3.053752e-16        1.0              28            37
+         NP -1.917590e-15          1.0  6.363069e-16        1.0               8             5
+
+================================================================================
+OVERALL STATUS: FAIL
+================================================================================

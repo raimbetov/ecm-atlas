@@ -27,6 +27,50 @@ streamlit run app.py
 # Streamlit will typically start at http://localhost:8501
 ```
 
+### Running the Randles 2021 Z-Score Dashboard
+
+The `06_Randles_z_score_by_tissue_compartment/` directory contains an interactive visualization dashboard for kidney aging data.
+
+**Requirements:**
+```bash
+pip install flask flask-cors pandas numpy plotly playwright
+```
+
+**Starting the servers:**
+
+1. Start the API server (port 5001):
+```bash
+cd 06_Randles_z_score_by_tissue_compartment
+python3 api_server.py
+```
+
+2. In another terminal, start the HTTP server (port 8080):
+```bash
+cd 06_Randles_z_score_by_tissue_compartment
+python3 00_start_server.py
+```
+
+3. Open the dashboard in your browser:
+```bash
+open http://localhost:8080/dashboard.html
+```
+
+Or visit: http://localhost:8080/dashboard.html
+
+**Available visualizations:**
+- Heatmaps: Top 100 aging-associated proteins with color gradients
+- Volcano plots: Differential expression analysis
+- Scatter plots: Young vs Old comparison with ECM protein highlighting
+- Bar charts: Top 20 aging markers
+- Histograms: Distribution of z-score changes
+- Compartment comparison: Glomerular vs Tubulointerstitial
+
+**Screenshot validation:**
+```bash
+python3 01_capture_screenshots.py
+```
+This captures headless browser screenshots to validate all visualizations render correctly.
+
 ### Working with Jupyter Notebooks
 ```bash
 # Start Jupyter notebook server

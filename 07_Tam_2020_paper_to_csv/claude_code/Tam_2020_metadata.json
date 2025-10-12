@@ -1,0 +1,64 @@
+{
+  "dataset_id": "Tam_2020",
+  "parsing_timestamp": "2025-10-12T16:29:56.853748",
+  "paper_pmid": "33382035",
+  "species": "Homo sapiens",
+  "tissue": "Intervertebral disc (IVD)",
+  "compartments": [
+    "NP",
+    "IAF",
+    "OAF",
+    "NP/IAF"
+  ],
+  "spatial_resolution": "66 profiles across 3 disc levels (L3/4, L4/5, L5/S1)",
+  "age_groups": {
+    "young": 16,
+    "aged": 59
+  },
+  "age_gap_years": 43,
+  "method": "Label-free LC-MS/MS (MaxQuant LFQ)",
+  "source_file": "data_raw/Tam et al. - 2020/elife-64940-supp1-v3.xlsx",
+  "source_sheets": [
+    "Raw data",
+    "Sample information"
+  ],
+  "parsing_results": {
+    "long_format_rows": 48961,
+    "wide_format_rows": 6809,
+    "unique_proteins": 3101,
+    "spatial_profiles": 66,
+    "annotation_coverage_percent": 19.39,
+    "note": "Low annotation coverage is expected - dataset contains all detected proteins, not just ECM"
+  },
+  "z_score_normalization": {
+    "method": "Compartment-specific z-score (Young and Old calculated separately per compartment)",
+    "log2_transformed": "Applied if skewness > 1",
+    "compartments": [
+      {
+        "name": "NP",
+        "file": "Tam_2020_NP_zscore.csv",
+        "proteins": 1190
+      },
+      {
+        "name": "IAF",
+        "file": "Tam_2020_IAF_zscore.csv",
+        "proteins": 1374
+      },
+      {
+        "name": "OAF",
+        "file": "Tam_2020_OAF_zscore.csv",
+        "proteins": 2803
+      }
+    ]
+  },
+  "reference_list": "references/human_matrisome_v2.csv",
+  "reference_version": "Matrisome_v2.0",
+  "output_files": [
+    "Tam_2020_wide_format.csv",
+    "Tam_2020_NP_zscore.csv",
+    "Tam_2020_IAF_zscore.csv",
+    "Tam_2020_OAF_zscore.csv",
+    "Tam_2020_annotation_report.md",
+    "Tam_2020_metadata.json"
+  ]
+}

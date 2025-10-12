@@ -10,8 +10,9 @@ import os
 
 PORT = 8080
 
-# Change to dashboard directory
-os.chdir('/Users/Kravtsovd/projects/ecm-atlas/06_Randles_z_score_by_tissue_compartment')
+# Get the directory where this script is located
+script_dir = os.path.dirname(os.path.abspath(__file__))
+os.chdir(script_dir)
 
 Handler = http.server.SimpleHTTPRequestHandler
 

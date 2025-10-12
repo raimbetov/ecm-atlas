@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randles 2021 - Z-Score Analysis Dashboard</title>
+    <script src="https://cdn.plot.ly/plotly-2.26.0.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .header p {
+            margin: 10px 0 0 0;
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .stat-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .stat-card .number {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #667eea;
+        }
+        .stat-card .label {
+            color: #666;
+            margin-top: 10px;
+        }
+        .section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .section h2 {
+            margin-top: 0;
+            color: #333;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        .compartment-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .tab {
+            padding: 10px 20px;
+            background: #f0f0f0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: all 0.3s;
+        }
+        .tab.active {
+            background: #667eea;
+            color: white;
+        }
+        .tab:hover {
+            background: #764ba2;
+            color: white;
+        }
+        .chart-container {
+            width: 100%;
+            height: 600px;
+            margin-bottom: 20px;
+        }
+        .chart-container.tall {
+            height: 1200px;
+        }
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+        .error {
+            background: #ffebee;
+            color: #c62828;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        @media (max-width: 1200px) {
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Randles 2021 - Kidney Aging Z-Score Analysis</h1>
+        <p>Interactive visualization of protein expression changes between young and old kidney compartments</p>
+    </div>
+
+    <div class="stats-container" id="stats-container">
+        <div class="loading">Loading statistics...</div>
+    </div>
+
+    <div class="section">
+        <h2>1. Heatmaps: Top Aging-Associated Proteins</h2>
+        <p>Top 100 proteins with largest absolute z-score changes. Color gradient: Blue (low) → White (neutral) → Red (high)</p>
+        <div class="compartment-tabs">
+            <button class="tab active" onclick="loadHeatmap('glomerular')">Glomerular</button>
+            <button class="tab" onclick="loadHeatmap('tubulointerstitial')">Tubulointerstitial</button>
+        </div>
+        <div id="heatmap-chart" class="chart-container tall">
+            <div class="loading">Loading heatmap...</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>2. Volcano Plots: Differential Expression</h2>
+        <p>X-axis: Z-Score Change (Old - Young), Y-axis: -log10(Average Abundance)</p>
+        <div class="compartment-tabs">
+            <button class="tab active" onclick="loadVolcano('glomerular')">Glomerular</button>
+            <button class="tab" onclick="loadVolcano('tubulointerstitial')">Tubulointerstitial</button>
+        </div>
+        <div id="volcano-chart" class="chart-container">
+            <div class="loading">Loading volcano plot...</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>3. Scatter Plots: Young vs Old Comparison</h2>
+        <p>Direct comparison of z-scores between age groups. ECM proteins highlighted in red.</p>
+        <div class="compartment-tabs">
+            <button class="tab active" onclick="loadScatter('glomerular')">Glomerular</button>
+            <button class="tab" onclick="loadScatter('tubulointerstitial')">Tubulointerstitial</button>
+        </div>
+        <div id="scatter-chart" class="chart-container">
+            <div class="loading">Loading scatter plot...</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>4. Bar Charts: Top 20 Aging Markers</h2>
+        <p>Top 10 increases and top 10 decreases with aging</p>
+        <div class="compartment-tabs">
+            <button class="tab active" onclick="loadBars('glomerular')">Glomerular</button>
+            <button class="tab" onclick="loadBars('tubulointerstitial')">Tubulointerstitial</button>
+        </div>
+        <div id="bars-chart" class="chart-container">
+            <div class="loading">Loading bar chart...</div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>5. Histograms: Distribution of Z-Score Changes</h2>
+        <p>Overall distribution of aging-related changes</p>
+        <div class="grid-2">
+            <div>
+                <h3 style="text-align: center; color: #667eea;">Glomerular</h3>
+                <div id="histogram-glom" class="chart-container">
+                    <div class="loading">Loading histogram...</div>
+                </div>
+            </div>
+            <div>
+                <h3 style="text-align: center; color: #764ba2;">Tubulointerstitial</h3>
+                <div id="histogram-tubu" class="chart-container">
+                    <div class="loading">Loading histogram...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>6. Compartment Comparison</h2>
+        <p>Correlation of aging changes between glomerular and tubulointerstitial compartments</p>
+        <div id="comparison-chart" class="chart-container">
+            <div class="loading">Loading comparison chart...</div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = 'http://localhost:5001';
+        let currentCompartment = {
+            heatmap: 'glomerular',
+            volcano: 'glomerular',
+            scatter: 'glomerular',
+            bars: 'glomerular'
+        };
+
+        // Load statistics on page load
+        async function loadStats() {
+            try {
+                const response = await fetch(`${API_BASE}/api/stats`);
+                const data = await response.json();
+
+                document.getElementById('stats-container').innerHTML = `
+                    <div class="stat-card">
+                        <div class="number">${data.glomerular_proteins}</div>
+                        <div class="label">Glomerular Proteins</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="number">${data.tubulointerstitial_proteins}</div>
+                        <div class="label">Tubulointerstitial Proteins</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="number">${data.glomerular_ecm}</div>
+                        <div class="label">Glomerular ECM</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="number">${data.tubulointerstitial_ecm}</div>
+                        <div class="label">Tubulointerstitial ECM</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="number">${data.total_proteins}</div>
+                        <div class="label">Total Proteins</div>
+                    </div>
+                `;
+            } catch (error) {
+                document.getElementById('stats-container').innerHTML = `
+                    <div class="error">Failed to load statistics: ${error.message}</div>
+                `;
+            }
+        }
+
+        // Load heatmap
+        async function loadHeatmap(compartment) {
+            currentCompartment.heatmap = compartment;
+            updateActiveTab(event);
+
+            const container = document.getElementById('heatmap-chart');
+            container.innerHTML = '<div class="loading">Loading heatmap...</div>';
+
+            try {
+                const response = await fetch(`${API_BASE}/api/heatmap/${compartment}?n=100`);
+                const data = await response.json();
+
+                // Transpose data for heatmap (genes as rows, age groups as columns)
+                const trace = {
+                    type: 'heatmap',
+                    z: data.genes.map((gene, i) => [data.zscore_young[i], data.zscore_old[i]]),
+                    y: data.genes,
+                    x: ['Young', 'Old'],
+                    colorscale: 'RdBu',
+                    reversescale: true,
+                    zmid: 0,
+                    zmin: -5,
+                    zmax: 5,
+                    colorbar: {
+                        title: {
+                            text: 'Z-Score',
+                            side: 'right'
+                        },
+                        thickness: 20,
+                        len: 0.8
+                    },
+                    hovertemplate: 'Gene: %{y}<br>Age: %{x}<br>Z-Score: %{z:.2f}<extra></extra>'
+                };
+
+                const layout = {
+                    title: {
+                        text: `${data.compartment}: Top 100 Aging-Associated Proteins`,
+                        font: { size: 20 }
+                    },
+                    xaxis: {
+                        title: 'Age Group',
+                        side: 'bottom'
+                    },
+                    yaxis: {
+                        title: 'Gene Symbol',
+                        tickfont: { size: 8 }
+                    },
+                    height: 1200,
+                    margin: { l: 100, r: 100, t: 80, b: 80 }
+                };
+
+                Plotly.newPlot('heatmap-chart', [trace], layout, {responsive: true});
+            } catch (error) {
+                container.innerHTML = `<div class="error">Failed to load heatmap: ${error.message}</div>`;
+            }
+        }
+
+        // Load volcano plot
+        async function loadVolcano(compartment) {
+            currentCompartment.volcano = compartment;
+            updateActiveTab(event);
+
+            const container = document.getElementById('volcano-chart');
+            container.innerHTML = '<div class="loading">Loading volcano plot...</div>';
+
+            try {
+                const response = await fetch(`${API_BASE}/api/volcano/${compartment}`);
+                const data = await response.json();
+
+                const trace = {
+                    type: 'scatter',
+                    mode: 'markers',
+                    x: data.zscore_delta,
+                    y: data.neglog_abundance,
+                    text: data.genes,
+                    marker: {
+                        size: 6,
+                        color: data.zscore_delta,
+                        colorscale: 'RdBu',
+                        reversescale: true,
+                        showscale: true,
+                        colorbar: {
+                            title: 'ΔZ-Score',
+                            thickness: 15
+                        }
+                    },
+                    hovertemplate: '<b>%{text}</b><br>ΔZ-Score: %{x:.2f}<br>-log10(Abundance): %{y:.2f}<extra></extra>'
+                };
+
+                const layout = {
+                    title: {
+                        text: `${compartment.charAt(0).toUpperCase() + compartment.slice(1)}: Volcano Plot`,
+                        font: { size: 20 }
+                    },
+                    xaxis: {
+                        title: 'Z-Score Change (Old - Young)',
+                        zeroline: true,
+                        zerolinewidth: 2,
+                        zerolinecolor: 'gray'
+                    },
+                    yaxis: {
+                        title: '-log10(Average Abundance + 1)'
+                    },
+                    height: 600,
+                    hovermode: 'closest'
+                };
+
+                Plotly.newPlot('volcano-chart', [trace], layout, {responsive: true});
+            } catch (error) {
+                container.innerHTML = `<div class="error">Failed to load volcano plot: ${error.message}</div>`;
+            }
+        }
+
+        // Load scatter plot
+        async function loadScatter(compartment) {
+            currentCompartment.scatter = compartment;
+            updateActiveTab(event);
+
+            const container = document.getElementById('scatter-chart');
+            container.innerHTML = '<div class="loading">Loading scatter plot...</div>';
+
+            try {
+                const response = await fetch(`${API_BASE}/api/scatter/${compartment}`);
+                const data = await response.json();
+
+                // Separate ECM and non-ECM proteins
+                const ecmIndices = data.is_ecm.map((isEcm, i) => isEcm ? i : -1).filter(i => i !== -1);
+                const nonEcmIndices = data.is_ecm.map((isEcm, i) => !isEcm ? i : -1).filter(i => i !== -1);
+
+                const traces = [
+                    {
+                        type: 'scatter',
+                        mode: 'markers',
+                        name: 'Non-ECM',
+                        x: nonEcmIndices.map(i => data.zscore_young[i]),
+                        y: nonEcmIndices.map(i => data.zscore_old[i]),
+                        text: nonEcmIndices.map(i => data.genes[i]),
+                        marker: {
+                            size: 6,
+                            color: 'lightblue',
+                            opacity: 0.6
+                        },
+                        hovertemplate: '<b>%{text}</b><br>Young: %{x:.2f}<br>Old: %{y:.2f}<extra></extra>'
+                    },
+                    {
+                        type: 'scatter',
+                        mode: 'markers',
+                        name: 'ECM Proteins',
+                        x: ecmIndices.map(i => data.zscore_young[i]),
+                        y: ecmIndices.map(i => data.zscore_old[i]),
+                        text: ecmIndices.map(i => `${data.genes[i]} (${data.matrisome_category[i]})`),
+                        marker: {
+                            size: 8,
+                            color: 'red',
+                            opacity: 0.8
+                        },
+                        hovertemplate: '<b>%{text}</b><br>Young: %{x:.2f}<br>Old: %{y:.2f}<extra></extra>'
+                    }
+                ];
+
+                // Add diagonal reference line
+                const minVal = Math.min(...data.zscore_young, ...data.zscore_old);
+                const maxVal = Math.max(...data.zscore_young, ...data.zscore_old);
+                traces.push({
+                    type: 'scatter',
+                    mode: 'lines',
+                    name: 'No Change',
+                    x: [minVal, maxVal],
+                    y: [minVal, maxVal],
+                    line: {
+                        color: 'gray',
+                        dash: 'dash',
+                        width: 2
+                    },
+                    hoverinfo: 'skip',
+                    showlegend: true
+                });
+
+                const layout = {
+                    title: {
+                        text: `${compartment.charAt(0).toUpperCase() + compartment.slice(1)}: Young vs Old Z-Scores`,
+                        font: { size: 20 }
+                    },
+                    xaxis: {
+                        title: 'Z-Score Young',
+                        zeroline: true
+                    },
+                    yaxis: {
+                        title: 'Z-Score Old',
+                        zeroline: true
+                    },
+                    height: 600,
+                    hovermode: 'closest'
+                };
+
+                Plotly.newPlot('scatter-chart', traces, layout, {responsive: true});
+            } catch (error) {
+                container.innerHTML = `<div class="error">Failed to load scatter plot: ${error.message}</div>`;
+            }
+        }
+
+        // Load bar chart
+        async function loadBars(compartment) {
+            currentCompartment.bars = compartment;
+            updateActiveTab(event);
+
+            const container = document.getElementById('bars-chart');
+            container.innerHTML = '<div class="loading">Loading bar chart...</div>';
+
+            try {
+                const response = await fetch(`${API_BASE}/api/bars/${compartment}`);
+                const data = await response.json();
+
+                const colors = data.zscore_delta.map(val => val > 0 ? '#d32f2f' : '#1976d2');
+
+                const trace = {
+                    type: 'bar',
+                    orientation: 'h',
+                    y: data.genes,
+                    x: data.zscore_delta,
+                    marker: {
+                        color: colors
+                    },
+                    text: data.zscore_delta.map(v => v.toFixed(2)),
+                    textposition: 'auto',
+                    hovertemplate: '<b>%{y}</b><br>ΔZ-Score: %{x:.2f}<br>Category: %{customdata}<extra></extra>',
+                    customdata: data.matrisome_category
+                };
+
+                const layout = {
+                    title: {
+                        text: `${compartment.charAt(0).toUpperCase() + compartment.slice(1)}: Top 20 Aging Markers`,
+                        font: { size: 20 }
+                    },
+                    xaxis: {
+                        title: 'Z-Score Change (Old - Young)',
+                        zeroline: true,
+                        zerolinewidth: 2,
+                        zerolinecolor: 'gray'
+                    },
+                    yaxis: {
+                        title: 'Gene Symbol'
+                    },
+                    height: 600,
+                    margin: { l: 100 }
+                };
+
+                Plotly.newPlot('bars-chart', [trace], layout, {responsive: true});
+            } catch (error) {
+                container.innerHTML = `<div class="error">Failed to load bar chart: ${error.message}</div>`;
+            }
+        }
+
+        // Load histograms
+        async function loadHistogram(compartment, containerId) {
+            try {
+                const response = await fetch(`${API_BASE}/api/histogram/${compartment}`);
+                const data = await response.json();
+
+                const trace = {
+                    type: 'histogram',
+                    x: data.zscore_delta,
+                    nbinsx: 50,
+                    marker: {
+                        color: compartment === 'glomerular' ? '#667eea' : '#764ba2',
+                        line: {
+                            color: 'white',
+                            width: 1
+                        }
+                    },
+                    hovertemplate: 'ΔZ-Score Range: %{x}<br>Count: %{y}<extra></extra>'
+                };
+
+                const layout = {
+                    title: {
+                        text: `${compartment.charAt(0).toUpperCase() + compartment.slice(1)}: Distribution of Z-Score Changes`,
+                        font: { size: 16 }
+                    },
+                    xaxis: {
+                        title: 'Z-Score Change (Old - Young)',
+                        zeroline: true
+                    },
+                    yaxis: {
+                        title: 'Frequency'
+                    },
+                    height: 500,
+                    shapes: [{
+                        type: 'line',
+                        x0: data.mean_delta,
+                        x1: data.mean_delta,
+                        y0: 0,
+                        y1: 1,
+                        yref: 'paper',
+                        line: {
+                            color: 'red',
+                            width: 2,
+                            dash: 'dash'
+                        }
+                    }],
+                    annotations: [{
+                        x: data.mean_delta,
+                        y: 0.95,
+                        yref: 'paper',
+                        text: `Mean: ${data.mean_delta.toFixed(3)}`,
+                        showarrow: false,
+                        bgcolor: 'rgba(255, 255, 255, 0.8)',
+                        bordercolor: 'red',
+                        borderwidth: 1
+                    }]
+                };
+
+                Plotly.newPlot(containerId, [trace], layout, {responsive: true});
+            } catch (error) {
+                document.getElementById(containerId).innerHTML = `<div class="error">Failed to load histogram: ${error.message}</div>`;
+            }
+        }
+
+        // Load comparison chart
+        async function loadComparison() {
+            const container = document.getElementById('comparison-chart');
+
+            try {
+                const response = await fetch(`${API_BASE}/api/comparison`);
+                const data = await response.json();
+
+                // Group by matrisome category
+                const categories = [...new Set(data.matrisome_category)];
+                const colors = {
+                    'Non-ECM': 'lightgray',
+                    'Core matrisome': '#e53935',
+                    'Matrisome-associated': '#1e88e5',
+                    'ECM Glycoproteins': '#43a047',
+                    'Collagens': '#fdd835',
+                    'Proteoglycans': '#8e24aa'
+                };
+
+                const traces = categories.map(cat => {
+                    const indices = data.matrisome_category.map((c, i) => c === cat ? i : -1).filter(i => i !== -1);
+                    return {
+                        type: 'scatter',
+                        mode: 'markers',
+                        name: cat,
+                        x: indices.map(i => data.zscore_delta_glom[i]),
+                        y: indices.map(i => data.zscore_delta_tubu[i]),
+                        text: indices.map(i => data.genes[i]),
+                        marker: {
+                            size: cat === 'Non-ECM' ? 4 : 8,
+                            color: colors[cat] || 'gray',
+                            opacity: cat === 'Non-ECM' ? 0.3 : 0.7
+                        },
+                        hovertemplate: '<b>%{text}</b><br>Glomerular: %{x:.2f}<br>Tubulointerstitial: %{y:.2f}<extra></extra>'
+                    };
+                });
+
+                // Add diagonal reference line
+                const minVal = Math.min(...data.zscore_delta_glom, ...data.zscore_delta_tubu);
+                const maxVal = Math.max(...data.zscore_delta_glom, ...data.zscore_delta_tubu);
+                traces.push({
+                    type: 'scatter',
+                    mode: 'lines',
+                    name: 'Perfect Correlation',
+                    x: [minVal, maxVal],
+                    y: [minVal, maxVal],
+                    line: {
+                        color: 'black',
+                        dash: 'dash',
+                        width: 2
+                    },
+                    hoverinfo: 'skip',
+                    showlegend: true
+                });
+
+                const layout = {
+                    title: {
+                        text: 'Compartment Comparison: Glomerular vs Tubulointerstitial Aging Changes',
+                        font: { size: 20 }
+                    },
+                    xaxis: {
+                        title: 'Glomerular ΔZ-Score',
+                        zeroline: true,
+                        zerolinewidth: 2,
+                        zerolinecolor: 'gray'
+                    },
+                    yaxis: {
+                        title: 'Tubulointerstitial ΔZ-Score',
+                        zeroline: true,
+                        zerolinewidth: 2,
+                        zerolinecolor: 'gray'
+                    },
+                    height: 600,
+                    hovermode: 'closest'
+                };
+
+                Plotly.newPlot('comparison-chart', traces, layout, {responsive: true});
+            } catch (error) {
+                container.innerHTML = `<div class="error">Failed to load comparison chart: ${error.message}</div>`;
+            }
+        }
+
+        // Update active tab styling
+        function updateActiveTab(event) {
+            if (event && event.target) {
+                const tabs = event.target.parentElement.querySelectorAll('.tab');
+                tabs.forEach(tab => tab.classList.remove('active'));
+                event.target.classList.add('active');
+            }
+        }
+
+        // Initialize dashboard
+        window.addEventListener('DOMContentLoaded', async () => {
+            await loadStats();
+            await loadHeatmap('glomerular');
+            await loadVolcano('glomerular');
+            await loadScatter('glomerular');
+            await loadBars('glomerular');
+            await loadHistogram('glomerular', 'histogram-glom');
+            await loadHistogram('tubulointerstitial', 'histogram-tubu');
+            await loadComparison();
+        });
+    </script>
+</body>
+</html>

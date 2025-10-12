@@ -34,7 +34,7 @@ async def capture_dashboard_screenshots():
 
         try:
             # Navigate to dashboard
-            dashboard_url = 'http://localhost:8080/zscore_dashboard.html'
+            dashboard_url = 'http://localhost:8080/dashboard.html'
             print(f"📊 Loading dashboard: {dashboard_url}")
 
             response = await page.goto(dashboard_url, wait_until='networkidle', timeout=30000)
@@ -50,8 +50,8 @@ async def capture_dashboard_screenshots():
             print("✅ Plotly library loaded")
 
             # Wait for all charts to render (longer wait for Plotly)
-            print("⏳ Waiting for charts to render (15 seconds)...")
-            await asyncio.sleep(15)
+            print("⏳ Waiting for charts to render (20 seconds)...")
+            await asyncio.sleep(20)
 
             # Scroll to top
             await page.evaluate("window.scrollTo(0, 0)")
@@ -76,40 +76,110 @@ async def capture_dashboard_screenshots():
 
             # 3. Stats cards
             print("\n3️⃣  Capturing stats cards...")
-            stats = await page.query_selector('.stats-box')
+            stats = await page.query_selector('.stats-container')
             if stats:
                 await stats.screenshot(path=f"{screenshot_dir}/02_stats_{timestamp}.png")
                 print(f"✅ Saved: {screenshot_dir}/02_stats_{timestamp}.png")
 
-            # 4. Individual chart screenshots
-            chart_ids = [
-                ('heatmap-glom', 'Glomerular Heatmap'),
-                ('heatmap-tubu', 'Tubulointerstitial Heatmap'),
-                ('volcano-glom', 'Glomerular Volcano Plot'),
-                ('volcano-tubu', 'Tubulointerstitial Volcano Plot'),
-                ('scatter-glom', 'Glomerular Scatter'),
-                ('scatter-tubu', 'Tubulointerstitial Scatter'),
-                ('bar-glom', 'Glomerular Bar Chart'),
-                ('bar-tubu', 'Tubulointerstitial Bar Chart'),
-                ('hist-glom', 'Glomerular Histogram'),
-                ('hist-tubu', 'Tubulointerstitial Histogram'),
-                ('comparison', 'Compartment Comparison')
-            ]
-
+            # 4. Individual chart screenshots with tab navigation
             print("\n4️⃣  Capturing individual charts...")
-            for idx, (chart_id, chart_name) in enumerate(chart_ids, start=3):
-                # Scroll to chart
-                await page.evaluate(f"document.getElementById('{chart_id}').scrollIntoView({{behavior: 'smooth', block: 'center'}})")
-                await asyncio.sleep(1)
 
-                chart_element = await page.query_selector(f'#{chart_id}')
-                if chart_element:
-                    await chart_element.screenshot(
-                        path=f"{screenshot_dir}/{idx:02d}_{chart_id}_{timestamp}.png"
-                    )
-                    print(f"✅ Saved: {screenshot_dir}/{idx:02d}_{chart_id}_{timestamp}.png - {chart_name}")
-                else:
-                    print(f"⚠️  Chart not found: {chart_id} ({chart_name})")
+            idx = 3
+            # Heatmap - Glomerular (default)
+            await page.evaluate("document.getElementById('heatmap-chart').scrollIntoView({behavior: 'smooth', block: 'center'})")
+            await asyncio.sleep(2)
+            chart = await page.query_selector('#heatmap-chart')
+            if chart:
+                await chart.screenshot(path=f"{screenshot_dir}/{idx:02d}_heatmap-glom_{timestamp}.png")
+                print(f"✅ Saved: {screenshot_dir}/{idx:02d}_heatmap-glom_{timestamp}.png - Glomerular Heatmap")
+                idx += 1
+
+            # Heatmap - Tubulointerstitial (click tab)
+            await page.evaluate("window.loadHeatmap('tubulointerstitial')")
+            await asyncio.sleep(3)
+            chart = await page.query_selector('#heatmap-chart')
+            if chart:
+                await chart.screenshot(path=f"{screenshot_dir}/{idx:02d}_heatmap-tubu_{timestamp}.png")
+                print(f"✅ Saved: {screenshot_dir}/{idx:02d}_heatmap-tubu_{timestamp}.png - Tubulointerstitial Heatmap")
+                idx += 1
+
+            # Volcano - Glomerular (default)
+            await page.evaluate("document.getElementById('volcano-chart').scrollIntoView({behavior: 'smooth', block: 'center'})")
+            await asyncio.sleep(2)
+            chart = await page.query_selector('#volcano-chart')
+            if chart:
+                await chart.screenshot(path=f"{screenshot_dir}/{idx:02d}_volcano-glom_{timestamp}.png")
+                print(f"✅ Saved: {screenshot_dir}/{idx:02d}_volcano-glom_{timestamp}.png - Glomerular Volcano")
+                idx += 1
+
+            # Volcano - Tubulointerstitial
+            await page.evaluate("window.loadVolcano('tubulointerstitial')")
+            await asyncio.sleep(2)
+            chart = await page.query_selector('#volcano-chart')
+            if chart:
+                await chart.screenshot(path=f"{screenshot_dir}/{idx:02d}_volcano-tubu_{timestamp}.png")
+                print(f"✅ Saved: {screenshot_dir}/{idx:02d}_volcano-tubu_{timestamp}.png - Tubulointerstitial Volcano")
+                idx += 1
+
+            # Scatter - Glomerular (default)
+            await page.evaluate("document.getElementById('scatter-chart').scrollIntoView({behavior: 'smooth', block: 'center'})")
+            await asyncio.sleep(2)
+            chart = await page.query_selector('#scatter-chart')
+            if chart:
+                await chart.screenshot(path=f"{screenshot_dir}/{idx:02d}_scatter-glom_{timestamp}.png")
+                print(f"✅ Saved: {screenshot_dir}/{idx:02d}_scatter-glom_{timestamp}.png - Glomerular Scatter")
+                idx += 1
+
+            # Scatter - Tubulointerstitial
+            await page.evaluate("window.loadScatter('tubulointerstitial')")
+            await asyncio.sleep(2)
+            chart = await page.query_selector('#scatter-chart')
+            if chart:
+                await chart.screenshot(path=f"{screenshot_dir}/{idx:02d}_scatter-tubu_{timestamp}.png")
+                print(f"✅ Saved: {screenshot_dir}/{idx:02d}_scatter-tubu_{timestamp}.png - Tubulointerstitial Scatter")
+                idx += 1
+
+            # Bars - Glomerular (default)
+            await page.evaluate("document.getElementById('bars-chart').scrollIntoView({behavior: 'smooth', block: 'center'})")
+            await asyncio.sleep(2)
+            chart = await page.query_selector('#bars-chart')
+            if chart:
+                await chart.screenshot(path=f"{screenshot_dir}/{idx:02d}_bars-glom_{timestamp}.png")
+                print(f"✅ Saved: {screenshot_dir}/{idx:02d}_bars-glom_{timestamp}.png - Glomerular Bars")
+                idx += 1
+
+            # Bars - Tubulointerstitial
+            await page.evaluate("window.loadBars('tubulointerstitial')")
+            await asyncio.sleep(2)
+            chart = await page.query_selector('#bars-chart')
+            if chart:
+                await chart.screenshot(path=f"{screenshot_dir}/{idx:02d}_bars-tubu_{timestamp}.png")
+                print(f"✅ Saved: {screenshot_dir}/{idx:02d}_bars-tubu_{timestamp}.png - Tubulointerstitial Bars")
+                idx += 1
+
+            # Histograms (both visible)
+            await page.evaluate("document.getElementById('histogram-glom').scrollIntoView({behavior: 'smooth', block: 'center'})")
+            await asyncio.sleep(2)
+            chart = await page.query_selector('#histogram-glom')
+            if chart:
+                await chart.screenshot(path=f"{screenshot_dir}/{idx:02d}_hist-glom_{timestamp}.png")
+                print(f"✅ Saved: {screenshot_dir}/{idx:02d}_hist-glom_{timestamp}.png - Glomerular Histogram")
+                idx += 1
+
+            chart = await page.query_selector('#histogram-tubu')
+            if chart:
+                await chart.screenshot(path=f"{screenshot_dir}/{idx:02d}_hist-tubu_{timestamp}.png")
+                print(f"✅ Saved: {screenshot_dir}/{idx:02d}_hist-tubu_{timestamp}.png - Tubulointerstitial Histogram")
+                idx += 1
+
+            # Comparison
+            await page.evaluate("document.getElementById('comparison-chart').scrollIntoView({behavior: 'smooth', block: 'center'})")
+            await asyncio.sleep(2)
+            chart = await page.query_selector('#comparison-chart')
+            if chart:
+                await chart.screenshot(path=f"{screenshot_dir}/{idx:02d}_comparison_{timestamp}.png")
+                print(f"✅ Saved: {screenshot_dir}/{idx:02d}_comparison_{timestamp}.png - Compartment Comparison")
+                idx += 1
 
             # 5. Viewport screenshots at different scroll positions
             print("\n5️⃣  Capturing viewport screenshots...")
@@ -128,9 +198,8 @@ async def capture_dashboard_screenshots():
                 () => {
                     const errors = [];
                     // Check if Plotly rendered all charts
-                    const chartIds = ['heatmap-glom', 'heatmap-tubu', 'volcano-glom', 'volcano-tubu',
-                                     'scatter-glom', 'scatter-tubu', 'bar-glom', 'bar-tubu',
-                                     'hist-glom', 'hist-tubu', 'comparison'];
+                    const chartIds = ['heatmap-chart', 'volcano-chart', 'scatter-chart', 'bars-chart',
+                                     'histogram-glom', 'histogram-tubu', 'comparison-chart'];
 
                     chartIds.forEach(id => {
                         const element = document.getElementById(id);

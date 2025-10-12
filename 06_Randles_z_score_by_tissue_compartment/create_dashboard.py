@@ -40,18 +40,20 @@ print("\n1. Creating heatmap with color gradient (-5 to +5)...")
 def create_heatmap(df_comp, title, compartment_name):
     """Create heatmap for z-scores with color gradient."""
 
-    # Select top 50 proteins with largest absolute Zscore_Delta for better visibility
-    df_top = df_comp.nlargest(50, 'Zscore_Delta', keep='all')
+    # Select top 100 proteins with largest absolute Zscore_Delta for better visibility
+    df_comp_copy = df_comp.copy()
+    df_comp_copy['Abs_Zscore_Delta'] = df_comp_copy['Zscore_Delta'].abs()
+    df_top = df_comp_copy.nlargest(100, 'Abs_Zscore_Delta', keep='all').sort_values('Zscore_Delta', ascending=False)
 
-    # Prepare data matrix
-    z_matrix = df_top[['Zscore_Young', 'Zscore_Old']].values.T
+    # Prepare data matrix (proteins as rows, age groups as columns)
+    z_matrix = df_top[['Zscore_Young', 'Zscore_Old']].values
     gene_labels = df_top['Gene_Symbol'].tolist()
 
     # Create heatmap
     fig = go.Figure(data=go.Heatmap(
         z=z_matrix,
-        x=gene_labels,
-        y=['Young', 'Old'],
+        y=gene_labels,
+        x=['Young', 'Old'],
         colorscale='RdBu_r',  # Red (high) to Blue (low)
         zmid=0,  # Center at 0
         zmin=-5,
@@ -62,16 +64,18 @@ def create_heatmap(df_comp, title, compartment_name):
             tick0=-5,
             dtick=1
         ),
-        hovertemplate='Gene: %{x}<br>Age: %{y}<br>Z-Score: %{z:.2f}<extra></extra>'
+        hovertemplate='Gene: %{y}<br>Age: %{x}<br>Z-Score: %{z:.2f}<extra></extra>',
+        showscale=True
     ))
 
     fig.update_layout(
-        title=f"{title}<br><sub>Top 50 proteins with largest aging changes</sub>",
-        xaxis_title="Gene Symbol",
-        yaxis_title="Age Group",
-        height=400,
-        xaxis={'tickangle': -45, 'tickfont': {'size': 10}},
-        template='plotly_white'
+        title=f"{title}<br><sub>Top 100 proteins with largest aging changes</sub>",
+        yaxis_title="Gene Symbol",
+        xaxis_title="Age Group",
+        height=1200,  # Tall enough to show 100 proteins
+        yaxis={'tickfont': {'size': 8}},
+        template='plotly_white',
+        margin=dict(l=150, r=50, t=80, b=50)
     )
 
     return fig
@@ -505,37 +509,37 @@ html_content = f"""
 
     <script>
         // Render all plots
-        var heatmapGlomData = {fig_heatmap_glom.to_json()};
+        var heatmapGlomData = JSON.parse('{fig_heatmap_glom.to_json()}');
         Plotly.newPlot('heatmap-glom', heatmapGlomData.data, heatmapGlomData.layout);
 
-        var heatmapTubuData = {fig_heatmap_tubu.to_json()};
+        var heatmapTubuData = JSON.parse('{fig_heatmap_tubu.to_json()}');
         Plotly.newPlot('heatmap-tubu', heatmapTubuData.data, heatmapTubuData.layout);
 
-        var volcanoGlomData = {fig_volcano_glom.to_json()};
+        var volcanoGlomData = JSON.parse('{fig_volcano_glom.to_json()}');
         Plotly.newPlot('volcano-glom', volcanoGlomData.data, volcanoGlomData.layout);
 
-        var volcanoTubuData = {fig_volcano_tubu.to_json()};
+        var volcanoTubuData = JSON.parse('{fig_volcano_tubu.to_json()}');
         Plotly.newPlot('volcano-tubu', volcanoTubuData.data, volcanoTubuData.layout);
 
-        var scatterGlomData = {fig_scatter_glom.to_json()};
+        var scatterGlomData = JSON.parse('{fig_scatter_glom.to_json()}');
         Plotly.newPlot('scatter-glom', scatterGlomData.data, scatterGlomData.layout);
 
-        var scatterTubuData = {fig_scatter_tubu.to_json()};
+        var scatterTubuData = JSON.parse('{fig_scatter_tubu.to_json()}');
         Plotly.newPlot('scatter-tubu', scatterTubuData.data, scatterTubuData.layout);
 
-        var barGlomData = {fig_bar_glom.to_json()};
+        var barGlomData = JSON.parse('{fig_bar_glom.to_json()}');
         Plotly.newPlot('bar-glom', barGlomData.data, barGlomData.layout);
 
-        var barTubuData = {fig_bar_tubu.to_json()};
+        var barTubuData = JSON.parse('{fig_bar_tubu.to_json()}');
         Plotly.newPlot('bar-tubu', barTubuData.data, barTubuData.layout);
 
-        var histGlomData = {fig_hist_glom.to_json()};
+        var histGlomData = JSON.parse('{fig_hist_glom.to_json()}');
         Plotly.newPlot('hist-glom', histGlomData.data, histGlomData.layout);
 
-        var histTubuData = {fig_hist_tubu.to_json()};
+        var histTubuData = JSON.parse('{fig_hist_tubu.to_json()}');
         Plotly.newPlot('hist-tubu', histTubuData.data, histTubuData.layout);
 
-        var comparisonData = {fig_comparison.to_json()};
+        var comparisonData = JSON.parse('{fig_comparison.to_json()}');
         Plotly.newPlot('comparison', comparisonData.data, comparisonData.layout);
     </script>
 </body>
