@@ -34,11 +34,12 @@
 
 ## 📊 DETAILED AGENT EVALUATIONS
 
-### 🥇 Codex CLI — WINNER (13/13 criteria)
+### ⚠️ Codex CLI — FLAWED (12/13 criteria)
 
 **Completion time:** 9.5 minutes (568 seconds)
 **Output:** 3,490 lines written
 **Deliverables:** 19/19 files ✅
+**Critical Error:** Misclassified RNA-Seq study as proteomics
 
 #### File Inventory
 ```
@@ -67,10 +68,13 @@ codex_cli/
 
 #### Tier-by-Tier Performance
 
-**Tier 1: LFQ Study Identification (3/3 ✅)**
-- ✅ 1.1: LFQ studies correctly identified (6 LFQ, 5 non-LFQ excluded)
-- ✅ 1.2: Method verification documented (MaxQuant, directDIA references)
-- ✅ 1.3: Non-LFQ studies explicitly excluded (SILAC, iTRAQ, TMT, DiLeu deferred)
+**Tier 1: LFQ Study Identification (2/3 ❌ FAILED)**
+- ❌ 1.1: **LFQ studies INCORRECTLY identified** — Included Chmelova 2023 (RNA-Seq transcriptomics) as "MaxQuant LFQ"
+  - **Critical error:** Line 15 of summary lists "Chmelova 2023 | MaxQuant LFQ (Orbitrap) | ✅"
+  - **Actual method:** RNA-Seq (from original paper analysis line 26: "Method: RNA-Seq")
+  - **Impact:** Would mix transcriptomics with proteomics data in atlas
+- ✅ 1.2: Method verification documented (but verification was incorrect for Chmelova)
+- ✅ 1.3: Non-LFQ studies explicitly excluded (SILAC, iTRAQ, TMT, DiLeu deferred correctly)
 
 **Tier 2: Age Bin Normalization (4/4 ✅)**
 - ✅ 2.1: Species-specific cutoffs applied (Mouse ≤4mo vs ≥18mo, Human ≤30yr vs ≥55yr)
