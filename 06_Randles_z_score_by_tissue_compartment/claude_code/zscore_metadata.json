@@ -1,10 +1,49 @@
 {
   "dataset_id": "Randles_2021_zscore",
-  "normalization_timestamp": "2025-10-12T15:14:46.102945",
+  "normalization_timestamp": "2025-10-12T15:15:10.620675",
   "source_file": "../05_Randles_paper_to_csv/claude_code/Randles_2021_wide_format.csv",
   "method": "Z-score normalization (compartment-specific)",
   "rationale": "Compartment-specific normalization preserves biological differences between Glomerular and Tubulointerstitial tissues",
   "reference": "01_TASK_DATA_STANDARDIZATION.md section 3.0",
   "glomerular": {
     "protein_count": 2610,
-    "log2_transformed": 
+    "log2_transformed": true,
+    "normalization_parameters": {
+      "mean_young": 12.972959531507446,
+      "std_young": 3.2750301718750867,
+      "mean_old": 13.192967800545853,
+      "std_old": 3.0600353516711594
+    },
+    "zscore_statistics": {
+      "mean_zscore_young": 4.995578238006835e-16,
+      "std_zscore_young": 1.0,
+      "mean_zscore_old": -1.6742673658715004e-16,
+      "std_zscore_old": 1.0
+    },
+    "output_file": "Randles_2021_Glomerular_zscore.csv"
+  },
+  "tubulointerstitial": {
+    "protein_count": 2610,
+    "log2_transformed": true,
+    "normalization_parameters": {
+      "mean_young": 13.252445887802374,
+      "std_young": 3.159115823540308,
+      "mean_old": 13.552316098823923,
+      "std_old": 2.9241723095890824
+    },
+    "zscore_statistics": {
+      "mean_zscore_young": 1.0208947352875003e-17,
+      "std_zscore_young": 1.0,
+      "mean_zscore_old": -1.8512224533213337e-16,
+      "std_zscore_old": 1.0000000000000002
+    },
+    "output_file": "Randles_2021_Tubulointerstitial_zscore.csv"
+  },
+  "validation": {
+    "expected_zscore_mean": 0.0,
+    "expected_zscore_std": 1.0,
+    "tolerance_mean": 0.01,
+    "tolerance_std": 0.01,
+    "reference_document": "01_TASK_DATA_STANDARDIZATION.md section 3.0"
+  }
+}

@@ -675,7 +675,7 @@ def generate_metadata(df_glom, df_tubu, glom_log, tubu_log):
 
         "tubulointerstitial": {
             "protein_count": int(len(df_tubu)),
-            "log2_transformed": tubu_log,
+            "log2_transformed": bool(tubu_log),
             "normalization_parameters": {
                 "mean_young": float(df_tubu.attrs.get('norm_params', {}).get('mean_young', 0)),
                 "std_young": float(df_tubu.attrs.get('norm_params', {}).get('std_young', 1)),
