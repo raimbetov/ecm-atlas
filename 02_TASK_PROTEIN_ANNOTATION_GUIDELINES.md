@@ -115,17 +115,29 @@ Core matrisome,ECM Glycoproteins,Fn1,fibronectin 1,CIG|Fn|LETS,MGI:95566,MGI:955
 
 **¶6 Data access methods:**
 
-**Option 1: Manual download (simplest for batch processing)**
+**Option 1: Local files (recommended - already downloaded)**
 ```bash
-# Download as CSV from Google Sheets
-# File → Download → Comma-separated values (.csv)
+# Files are available in the repository:
+references/human_matrisome_v2.csv  # 164KB, 1,026 genes
+references/mouse_matrisome_v2.csv  # 197KB, 1,109 genes
 
-# Save as:
-# - human_matrisome_v2.csv
-# - mouse_matrisome_v2.csv
+# Load in Python:
+import pandas as pd
+human_ref = pd.read_csv('references/human_matrisome_v2.csv')
+mouse_ref = pd.read_csv('references/mouse_matrisome_v2.csv')
 ```
 
-**Option 2: R package (programmatic access)**
+**Option 2: Manual download from Google Sheets**
+```bash
+# Download fresh copies:
+curl -L "https://docs.google.com/spreadsheets/d/1GwwV3pFvsp7DKBbCgr8kLpf8Eh_xV8ks/export?format=csv" -o human_matrisome_v2.csv
+curl -L "https://docs.google.com/spreadsheets/d/1Te6n2q_cisXeirzBClK-VzA6T-zioOB5/export?format=csv" -o mouse_matrisome_v2.csv
+
+# Or via browser:
+# File → Download → Comma-separated values (.csv)
+```
+
+**Option 3: R package (programmatic access)**
 ```r
 # Install MatrisomeAnalyzeR package
 install.packages("devtools")
@@ -137,7 +149,7 @@ human_matrisome <- getMatrisomeData("Homo_sapiens")
 mouse_matrisome <- getMatrisomeData("Mus_musculus")
 ```
 
-**Option 3: Web application (no coding required)**
+**Option 4: Web application (no coding required)**
 ```
 1. Navigate to: https://sites.google.com/uic.edu/matrisome/tools/matrisome-analyzer
 2. Upload dataset (CSV/Excel)
@@ -741,8 +753,12 @@ Dipali_2023_annotation_log.json
 - **Reference resources:**
   - Matrisome project: https://sites.google.com/uic.edu/matrisome
   - Matrisome AnalyzeR: https://sites.google.com/uic.edu/matrisome/tools/matrisome-analyzer
-  - Human reference list: https://docs.google.com/spreadsheets/d/1GwwV3pFvsp7DKBbCgr8kLpf8Eh_xV8ks/edit
-  - Mouse reference list: https://docs.google.com/spreadsheets/d/1Te6n2q_cisXeirzBClK-VzA6T-zioOB5/edit
+  - **Human reference list:** `references/human_matrisome_v2.csv` (1,026 genes, 164KB)
+    - Online: https://docs.google.com/spreadsheets/d/1GwwV3pFvsp7DKBbCgr8kLpf8Eh_xV8ks/edit
+  - **Mouse reference list:** `references/mouse_matrisome_v2.csv` (1,109 genes, 197KB)
+    - Online: https://docs.google.com/spreadsheets/d/1Te6n2q_cisXeirzBClK-VzA6T-zioOB5/edit
+  - **Reference documentation:** `references/README.md` (download instructions, structure, citations)
   - UniProt API: https://www.uniprot.org/help/api_idmapping
 - **Knowledge framework source:** /Users/Kravtsovd/projects/chrome-extension-tcs/How to organize documents_knowladge_framework.md
 - **Created:** 2024-10-12
+- **Last updated:** 2024-10-12 (added local reference files and data examples)
