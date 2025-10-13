@@ -4,6 +4,9 @@ This directory contains species-specific matrisome reference lists used for prot
 
 ## Files
 
+1. [Delocalized entropy aging theorem](./Delocalized%20entropy%20aging%20theorem.pdf)
+https://chatgpt.com/c/68ed24b6-d04c-8326-b462-5933fd725398
+
 ### Human Matrisome (Homo sapiens)
 - **File:** `human_matrisome_v2.csv`
 - **Source:** [Google Sheets](https://docs.google.com/spreadsheets/d/1GwwV3pFvsp7DKBbCgr8kLpf8Eh_xV8ks/edit)
