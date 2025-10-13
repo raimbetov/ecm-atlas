@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECM Atlas - Unified Multi-Tissue Aging Dashboard</title>
+    <script src="https://cdn.plot.ly/plotly-2.26.0.min.js"></script>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <h1>ECM Atlas - Unified Multi-Tissue Aging Dashboard</h1>
+            <div class="stats-summary" id="stats-summary">
+                Loading...
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Layout -->
+    <div class="main-layout">
+        <!-- Filters Sidebar -->
+        <aside class="filters-panel">
+            <h2>Filters</h2>
+
+            <!-- Search -->
+            <div class="filter-group">
+                <h3>🔍 Search Protein</h3>
+                <input type="text" id="search-input" placeholder="COL1A1, Collagen..." />
+            </div>
+
+            <!-- Organs -->
+            <div class="filter-group">
+                <h3>🫀 Organs</h3>
+                <div id="organ-filters"></div>
+            </div>
+
+            <!-- Compartments -->
+            <div class="filter-group">
+                <h3>🔬 Compartments</h3>
+                <div id="compartment-filters"></div>
+            </div>
+
+            <!-- Categories -->
+            <div class="filter-group">
+                <h3>🧬 Matrisome Categories</h3>
+                <div id="category-filters"></div>
+            </div>
+
+            <!-- Studies -->
+            <div class="filter-group">
+                <h3>📚 Studies</h3>
+                <div id="study-filters"></div>
+            </div>
+
+            <!-- Trend -->
+            <div class="filter-group">
+                <h3>📈 Aging Trend</h3>
+                <div id="trend-filters">
+                    <label><input type="checkbox" value="up" class="trend-checkbox" /> Increased (&gt;+0.5)</label>
+                    <label><input type="checkbox" value="down" class="trend-checkbox" /> Decreased (&lt;-0.5)</label>
+                    <label><input type="checkbox" value="stable" class="trend-checkbox" /> Stable (±0.5)</label>
+                </div>
+            </div>
+
+            <div class="filter-actions">
+                <button id="apply-filters" class="btn-primary">Apply Filters</button>
+                <button id="clear-filters" class="btn-secondary">Clear All</button>
+            </div>
+
+            <div class="results-count" id="results-count">
+                Showing: <span id="protein-count">-</span> proteins
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="heatmap-container">
+                <div class="heatmap-header">
+                    <h2>Multi-Compartment ECM Protein Expression</h2>
+                    <div class="heatmap-controls">
+                        <label>
+                            Sort by:
+                            <select id="sort-by">
+                                <option value="magnitude">Magnitude</option>
+                                <option value="category">Category</option>
+                                <option value="name">Protein Name</option>
+                            </select>
+                        </label>
+                    </div>
+                </div>
+
+                <div id="heatmap" class="heatmap"></div>
+
+                <div class="legend">
+                    <h3>Z-Score Delta Color Scale</h3>
+                    <div class="legend-gradient">
+                        <span class="legend-label">-3 (Decreased)</span>
+                        <div class="gradient-bar"></div>
+                        <span class="legend-label">+3 (Increased)</span>
+                    </div>
+                    <p class="legend-note">⬜ = No data available in this compartment</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Detail Panel -->
+        <aside class="detail-panel" id="detail-panel" style="display: none;">
+            <div class="detail-header">
+                <h2>Protein Details</h2>
+                <button id="close-details" class="btn-close">✕</button>
+            </div>
+            <div id="detail-content">
+                <!-- Content loaded dynamically -->
+            </div>
+        </aside>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="spinner"></div>
+        <p>Loading data...</p>
+    </div>
+
+    <script src="static/app.js"></script>
+</body>
+</html>

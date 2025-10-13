@@ -1,0 +1,396 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: #f5f7fa;
+    color: #2c3e50;
+    line-height: 1.6;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.header-content h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.stats-summary {
+    display: flex;
+    gap: 2rem;
+    font-size: 0.9rem;
+    opacity: 0.95;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Main Layout - 3 Column Grid */
+.main-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr 350px;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    min-height: calc(100vh - 120px);
+}
+
+/* Filters Panel */
+.filters-panel {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    overflow-y: auto;
+    max-height: calc(100vh - 150px);
+}
+
+.filters-panel h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    color: #667eea;
+}
+
+.filter-group {
+    margin-bottom: 1.5rem;
+}
+
+.filter-group h3 {
+    font-size: 0.95rem;
+    margin-bottom: 0.75rem;
+    color: #34495e;
+    font-weight: 600;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    padding: 0.25rem 0;
+}
+
+.filter-group input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+#search-input {
+    width: 100%;
+    padding: 0.6rem;
+    border: 2px solid #e1e8ed;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: border-color 0.3s;
+}
+
+#search-input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.filter-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 0.7rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background: #667eea;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #5568d3;
+}
+
+.btn-secondary {
+    background: #e1e8ed;
+    color: #34495e;
+}
+
+.btn-secondary:hover {
+    background: #d0d7de;
+}
+
+.results-count {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    background: #f8f9fa;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+#protein-count {
+    font-weight: bold;
+    color: #667eea;
+}
+
+/* Main Content - Heatmap */
+.main-content {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.heatmap-container {
+    height: 100%;
+}
+
+.heatmap-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.heatmap-header h2 {
+    font-size: 1.3rem;
+    color: #2c3e50;
+}
+
+.heatmap-controls select {
+    padding: 0.5rem;
+    border: 2px solid #e1e8ed;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+#heatmap {
+    min-height: 600px;
+}
+
+/* Legend */
+.legend {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 6px;
+}
+
+.legend h3 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #34495e;
+}
+
+.legend-gradient {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.gradient-bar {
+    flex: 1;
+    height: 30px;
+    background: linear-gradient(to right,
+        #3b82f6 0%,    /* Blue (-3) */
+        #60a5fa 25%,   /* Light blue (-1) */
+        #f3f4f6 50%,   /* Gray (0) */
+        #fbbf24 75%,   /* Yellow (+1) */
+        #ef4444 100%   /* Red (+3) */
+    );
+    border-radius: 4px;
+    border: 1px solid #d1d5db;
+}
+
+.legend-label {
+    font-size: 0.85rem;
+    color: #6b7280;
+}
+
+.legend-note {
+    margin-top: 0.75rem;
+    font-size: 0.85rem;
+    color: #6b7280;
+    font-style: italic;
+}
+
+/* Detail Panel */
+.detail-panel {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    overflow-y: auto;
+    max-height: calc(100vh - 150px);
+}
+
+.detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #e1e8ed;
+}
+
+.detail-header h2 {
+    font-size: 1.2rem;
+    color: #667eea;
+}
+
+.btn-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #6b7280;
+    transition: color 0.3s;
+}
+
+.btn-close:hover {
+    color: #ef4444;
+}
+
+/* Loading Overlay */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255,255,255,0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loading-overlay.hidden {
+    display: none;
+}
+
+.spinner {
+    border: 4px solid #e1e8ed;
+    border-top: 4px solid #667eea;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-overlay p {
+    margin-top: 1rem;
+    color: #6b7280;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .main-layout {
+        grid-template-columns: 250px 1fr;
+    }
+
+    .detail-panel {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .filters-panel {
+        max-height: none;
+    }
+
+    .header-content h1 {
+        font-size: 1.3rem;
+    }
+
+    .stats-summary {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* Protein Detail Styles */
+.protein-info {
+    margin-bottom: 2rem;
+}
+
+.protein-info h3 {
+    font-size: 1.1rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.protein-info p {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 0.5rem;
+}
+
+.protein-info .protein-id {
+    font-family: monospace;
+    background: #f3f4f6;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+}
+
+.compartment-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-size: 0.85rem;
+}
+
+.compartment-table th,
+.compartment-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #e1e8ed;
+}
+
+.compartment-table th {
+    background: #f8f9fa;
+    font-weight: 600;
+    color: #34495e;
+}
+
+.compartment-table tr:hover {
+    background: #f9fafb;
+}
+
+.trend-up {
+    color: #ef4444;
+}
+
+.trend-down {
+    color: #3b82f6;
+}
+
+.trend-stable {
+    color: #6b7280;
+}
