@@ -1,0 +1,11 @@
+# Ignore all call transcripts (contain confidential information)
+*.json
+*.md
+
+# But track README and download script
+!README.md
+!download_calls.py
+!.gitignore
+
+# Ignore all date folders
+20*/
