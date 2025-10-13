@@ -145,4 +145,4 @@ if __name__ == '__main__':
     print("\nStarting server on http://localhost:5001")
     print("="*60 + "\n")
 
-    app.run(host='0.0.0.0', port=5001, debug=False)
+    app.run(host='0.0.0.0', port=5002, debug=False)
