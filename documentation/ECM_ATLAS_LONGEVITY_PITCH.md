@@ -1,8 +1,8 @@
 # ECM-Atlas: The Matrix of Aging – Longevity Hackathon Pitch
 
-**Thesis:** Extracellular matrix glycation represents top-tier, irreversible aging hallmark constraining tissue function across all organs, yet 13+ proteomic studies remain fragmented; ECM-Atlas unifies this data to identify 2-3 universal protein targets for interventions extending lifespan by 10-20 years, with engineered enzyme pathway to 50+ year extension.
+**Thesis:** Extracellular matrix glycation represents top-tier, irreversible aging hallmark constraining tissue function across all organs, yet 13+ proteomic studies remain fragmented; ECM-Atlas unifies this data to identify 2-3 universal protein targets for interventions extending lifespan by 10-20 years.
 
-**Overview:** This pitch deck tells the story of why ECM aging is humanity's most fundamental biological constraint and how we're building the first unified database to solve it. Section 1.0 establishes the aging crisis (8 billion people, zero solutions for matrix stiffening). Section 2.0 reveals ECM as highest-priority hallmark through Rakhan's theoretical framework. Section 3.0 exposes the fragmented data problem (128 files, 13 journals, impossible to meta-analyze). Section 4.0 presents ECM-Atlas solution (unified database, cross-organ analysis, chatbot interface). Section 5.0 shows discovery potential (universal protein biomarkers, therapeutic targets, commercial pathway). Section 6.0 outlines directed evolution endgame (enzyme engineering for complete matrix remodeling).
+**Overview:** This pitch deck tells the story of why ECM aging is humanity's most fundamental biological constraint and how we're building the first unified database to solve it. Section 1.0 establishes the aging crisis (8 billion people, zero solutions for matrix stiffening). Section 2.0 reveals ECM as highest-priority hallmark through Rakhan's theoretical framework. Section 3.0 exposes the fragmented data problem (128 files, 13 journals, impossible to meta-analyze). Section 4.0 presents ECM-Atlas solution (unified database, cross-organ analysis, chatbot interface). Section 5.0 shows discovery potential (universal protein biomarkers, therapeutic targets, commercial pathway).
 
 ```mermaid
 graph TD
@@ -10,14 +10,12 @@ graph TD
     B --> C[The Gap:<br/>Fragmented Data]
     C --> D[The Solution:<br/>ECM-Atlas]
     D --> E[The Discovery:<br/>Universal Proteins]
-    E --> F[The Endgame:<br/>Enzyme Remodeling]
 
     style A fill:#ff4444,stroke:#333,stroke-width:3px
     style B fill:#ff8844,stroke:#333,stroke-width:2px
     style C fill:#ffaa44,stroke:#333,stroke-width:2px
     style D fill:#44ff44,stroke:#333,stroke-width:3px
     style E fill:#4444ff,stroke:#333,stroke-width:2px
-    style F fill:#ff44ff,stroke:#333,stroke-width:2px
 ```
 
 ---
@@ -743,7 +741,7 @@ PATHWAY C: Enhance degradation
 ├──────────────────────────────────────────────────┤
 │ • Acquisition by longevity biotech ($50-150M)    │
 │ • Partnership with pharma (Roche, Novartis)      │
-│ • Spin-out enzyme engineering company            │
+│ • IPO after Phase II trial success               │
 └──────────────────────────────────────────────────┘
 ```
 
@@ -751,193 +749,11 @@ PATHWAY C: Enhance degradation
 
 ---
 
-## 6.0 THE ENDGAME: ENZYME ENGINEERING
-
-**¶1 Ordering principle:** Problem recap → revolutionary solution → technical pathway → timeline. Shows limitation then breakthrough.
-
-### 6.1 The Limitation of Protein Targeting
-
-**Reality check:**
-
-```
-Targeting COL1A1 or FN1 = Incremental improvement
-                        = Slow progression of aging
-                        = +10-20 year lifespan extension
-
-WHY LIMITED?
-├─ Protein suppression ≠ Reversing existing damage
-├─ AGE crosslinks already formed still present
-├─ 40 years of accumulated stiffness remains
-└─ You're building on damaged foundation
-```
-
-**Quote (Rakhan, Call 18:45, 40:00):**
-> "Если есть разработать фермент, который сможет обеспечить ремоделирование матрикса, даже когда он сшит, это решит на самом деле очень много проблем. Это вполне способно продлить жизнь человека не на 10 лет, а на 50."
-
-### 6.2 The Revolutionary Solution: Directed Evolution
-
-**Goal:** Engineer enzyme that cleaves AGE-crosslinked collagen
-
-```
-┌───────────────────────────────────────────────────────┐
-│ DIRECTED EVOLUTION + AI HYBRID APPROACH               │
-├───────────────────────────────────────────────────────┤
-│                                                       │
-│  CYCLE 1: Random Mutagenesis                          │
-│  ├─ Start with MMP2 (native collagenase)              │
-│  ├─ Generate 10,000 variants (random mutations)       │
-│  ├─ Screen against AGE-crosslinked collagen substrate │
-│  └─ Select top 1% (100 variants with improved activity│
-│                                                       │
-│  CYCLE 2: AI-Guided Design                            │
-│  ├─ Train ML model on Cycle 1 data                    │
-│  │   (sequence → activity relationship)               │
-│  ├─ AlphaFold structure prediction                    │
-│  ├─ Design 5,000 rational variants                    │
-│  └─ Screen → Select top 50                            │
-│                                                       │
-│  CYCLE 3: Combinatorial Optimization                  │
-│  ├─ Combine best mutations from Cycles 1-2            │
-│  ├─ Optimize substrate specificity                    │
-│  ├─ Reduce off-target activity                        │
-│  └─ Select LEAD ENZYME                                │
-│                                                       │
-│  VALIDATION:                                          │
-│  ├─ Tissue explants (aged mouse skin, vessels)        │
-│  ├─ Measure stiffness reduction                       │
-│  ├─ Confirm cell function restoration                 │
-│  └─ Safety testing (no DNA/protein damage)            │
-│                                                       │
-└───────────────────────────────────────────────────────┘
-```
-
-**Technical Details:**
-
-```
-SUBSTRATE: AGE-crosslinked collagen
-┌────────────────────────────────────────┐
-│  Native MMP2: Cannot cleave            │
-│  ├─ Active site too small              │
-│  └─ No binding to AGE-modified sites   │
-│                                        │
-│  ENGINEERED MMP2-v3.0:                 │
-│  ├─ Expanded active site (3 mutations) │
-│  ├─ AGE-binding domain added           │
-│  ├─ 50x higher activity on crosslinked │
-│  │   vs native collagen                │
-│  └─ Same safety profile                │
-└────────────────────────────────────────┘
-```
-
-**AI Role:**
-- **Sequence-to-function prediction** (ESMFold, AlphaFold)
-- **Molecular docking simulation** (substrate binding)
-- **Directed evolution acceleration** (10x faster than random alone)
-
-**Quote (Rakhan, 42:00-46:50):**
-> "Можно взять какой-то фермент, и изменять его, и проводить селекцию этого фермента, опираясь на заданную функцию... когда мы заменяем какие-то аминокислоты и проводим исследования лабораторные, то есть эти данные, полученные от первого цикла, мы можем передать модели AI."
-
-### 6.3 Complete Matrix Remodeling
-
-**What engineered enzyme enables:**
-
-```
-┌──────────────────────────────────────────────────┐
-│ BEFORE: Aged Tissue (60-year-old)               │
-├──────────────────────────────────────────────────┤
-│  ○═══○═══○═══○ ← Crosslinked collagen (rigid)   │
-│    [Cells trapped]                               │
-│    [Blood flow limited]                          │
-│    [Inflammation stuck]                          │
-│                                                  │
-│  ↓ ↓ ↓ Inject Engineered MMP2-v3.0 ↓ ↓ ↓        │
-│                                                  │
-│ DURING: Remodeling (Months 1-6)                  │
-├──────────────────────────────────────────────────┤
-│  ○─X─○═══○─X─○ ← Enzyme cleaves crosslinks      │
-│    [Cells start migrating]                       │
-│    [Vessels regrow]                              │
-│    [New ECM deposited (young collagen)]          │
-│                                                  │
-│  ↓ ↓ ↓ Complete Turnover ↓ ↓ ↓                  │
-│                                                  │
-│ AFTER: Rejuvenated Tissue (biological age 30)    │
-├──────────────────────────────────────────────────┤
-│  ○───○───○───○ ← Flexible, young collagen       │
-│    [Stem cells active]                           │
-│    [Blood flow restored]                         │
-│    [Tissue function = young]                     │
-└──────────────────────────────────────────────────┘
-```
-
-**Outcome:**
-- **Tissue stiffness:** Reduced by 60-80% (returns to young baseline)
-- **Cell function:** Stem cell niches restored
-- **Organ function:** Kidney GFR +40%, lung FEV1 +35%, heart ejection fraction +20%
-- **Lifespan extension:** Estimated +50-60 years (Rakhan's hypothesis)
-
-### 6.4 Implementation Pathway
-
-**15-20 year roadmap:**
-
-```
-YEARS 1-3: Enzyme Discovery (CRO partnership)
-├─ 3 cycles directed evolution
-├─ Lead enzyme optimization
-├─ Safety/toxicity in vitro
-└─ Cost: $10M (contract research)
-
-YEARS 3-5: Preclinical Studies (Mouse models)
-├─ Aged mouse treatment (18-month-old)
-├─ Measure tissue stiffness, function restoration
-├─ Lifespan extension trial (N=200 mice)
-└─ Cost: $20M (academic collaboration)
-
-YEARS 5-8: IND-Enabling Studies
-├─ GLP toxicology (rat, monkey)
-├─ Pharmacokinetics, biodistribution
-├─ Manufacturing scale-up (CHO cells)
-└─ Cost: $50M (VC funding required)
-
-YEARS 8-10: Phase I Clinical Trial
-├─ Safety in 30 healthy volunteers
-├─ Dosing, PK/PD studies
-├─ Biomarker changes (skin elasticity, etc.)
-└─ Cost: $30M
-
-YEARS 10-13: Phase II Efficacy Trial
-├─ 200 patients with age-related organ decline
-├─ Primary endpoint: Tissue stiffness reduction
-├─ Secondary: Functional improvement, biomarkers
-└─ Cost: $100M (partnered with pharma)
-
-YEARS 13-15: Phase III Pivotal Trial
-├─ 1000+ patients, multi-center
-├─ Regulatory approval (FDA, EMA)
-└─ Cost: $300M+ (Big Pharma partner)
-
-YEARS 15-20: Market Launch & Expansion
-├─ First indication: Age-related kidney disease
-├─ Expand to: Heart failure, COPD, liver fibrosis
-└─ Revenue: $5-10B peak sales (blockbuster)
-```
-
-**Comparison to protein targeting:**
-
-| Approach | Timeline | Lifespan Extension | Technical Risk | Cost |
-|----------|----------|-------------------|---------------|------|
-| **Protein targeting (COL1A1 ASO)** | 10 years | +10-20 years | Low | $50M |
-| **Enzyme engineering (MMP2-v3.0)** | 15-20 years | +50-60 years | High | $500M+ |
-
-**Speaker Note:** *This is the difference between slowing aging and REVERSING it. One is incremental, the other is transformative. Both are necessary – protein targeting funds enzyme development.*
-
----
-
-## 7.0 SUMMARY: WHY THIS MATTERS
+## 6.0 SUMMARY: WHY THIS MATTERS
 
 **¶1 Ordering principle:** Recap core message → impact scale → call to action. Ties narrative back to human experience.
 
-### 7.1 The Core Message
+### 6.1 The Core Message
 
 ```
 ┌──────────────────────────────────────────────────────────┐
@@ -956,13 +772,10 @@ YEARS 15-20: Market Launch & Expansion
 │                          ↓                               │
 │ THE DISCOVERY: 2-3 universal protein targets identified  │
 │                Foundation for therapeutic development    │
-│                          ↓                               │
-│ THE ENDGAME: Enzyme engineering reverses crosslinking   │
-│              Complete tissue rejuvenation possible       │
 └──────────────────────────────────────────────────────────┘
 ```
 
-### 7.2 Impact Scale
+### 6.2 Impact Scale
 
 **If we succeed:**
 
@@ -980,10 +793,10 @@ MEDIUM-TERM (3-5 years)
 └─ Pharma partnerships for ASO development
 
 LONG-TERM (5-15 years)
-├─ Phase I trials for protein targeting (+10yr lifespan)
-├─ Enzyme engineering lead identified
-├─ Preclinical efficacy demonstrated
-└─ Blockbuster therapeutic (+50yr lifespan)
+├─ Phase I trials for protein targeting (+10-20yr lifespan)
+├─ Therapeutic validation in human cohorts
+├─ Market expansion to multiple indications
+└─ Foundation for next-generation interventions
 
 ULTIMATE IMPACT
 ├─ 8 billion people live healthier, longer lives
@@ -992,7 +805,7 @@ ULTIMATE IMPACT
 └─ Human potential maximized (100+ year healthspan)
 ```
 
-### 7.3 Why Now?
+### 6.3 Why Now?
 
 **Three converging factors:**
 
@@ -1014,7 +827,7 @@ ULTIMATE IMPACT
 **Quote (Daniel, Call 18:45, 34:40):**
 > "Я хочу оказаться там через квартал-другой где-то в longevity space... Я бы хотел что-то более практичное, что может, к примеру, в ближайшие 10 лет максимально остановить моё старение и моей семьи."
 
-### 7.4 The Ask
+### 6.4 The Ask
 
 **Hackathon Demo (Hyundai Track):**
 ```
@@ -1040,7 +853,7 @@ SEEKING:
 ├─ Academic collaborators (validate findings)
 ├─ Funding partners ($500K seed for database expansion)
 ├─ Pharma connections (licensing discussions)
-└─ CRO partnerships (enzyme engineering feasibility)
+└─ Technical advisors (proteomics, aging biology)
 
 OFFERING:
 ├─ Co-authorship on preprint (bioRxiv Q1 2026)
@@ -1078,11 +891,6 @@ OFFERING:
 - Reveal universal proteins dramatically: "COL1A1. In 12 out of 13 studies. Same direction every time."
 - Connect to therapy: "This isn't just data. This is a DRUG TARGET."
 
-**Slide 6 (Endgame):**
-- Vision tone: "But we can go further..."
-- Use progression visual: "Slow aging → Stop aging → REVERSE aging"
-- End with Rakhan quote: "50-60 years. Not 10. Fifty."
-
 **Closing:**
 - Callback to opening: "Remember when I asked why I can't run? Now we know. And now we can FIX it."
 - Urgency: "For ourselves. For our families. For 8 billion people."
@@ -1117,9 +925,6 @@ OFFERING:
 **On Commercial Potential (Rakhan):**
 > "Если мы скажем, что вот мы нашли как бы два белка, которые меняют свой профиль во всех органах, и это незаменимое звено в матриксе. Да, это big deal, это может стать сердцем новой компании, сердцем новой технологии."
 
-**On Enzyme Engineering (Rakhan):**
-> "Если есть разработать фермент, который сможет обеспечить ремоделирование матрикса, даже когда он сшит, это решит на самом деле очень много проблем. Это вполне способно продлить жизнь человека не на 10 лет, а на 50."
-
 **On Personal Motivation (Daniel):**
 > "Я бы хотел что-то более практичное, что может, к примеру, в ближайшие 10 лет максимально остановить моё старение и моей семьи."
 
@@ -1129,10 +934,11 @@ OFFERING:
 - [x] Thesis (1 sentence) present and previews sections
 - [x] Overview (1 paragraph)
 - [x] Mermaid overview diagram (TD for hierarchy)
-- [x] Numbered sections (1.0-7.0); each has ¶1 with ordering principle
-- [x] MECE verified (Problem / Science / Gap / Solution / Discovery / Endgame)
+- [x] Numbered sections (1.0-6.0); each has ¶1 with ordering principle
+- [x] MECE verified (Problem / Science / Gap / Solution / Discovery / Summary)
 - [x] DRY verified (references source docs, call timestamps)
 - [x] Pseudographics present (ASCII art for visualizations)
 - [x] Speaker notes included (delivery guidance)
 - [x] Narrative flow (story arc from problem to solution)
 - [x] Quotes integrated (Rakhan + Daniel voice)
+- [x] Enzyme engineering separated to dedicated file
