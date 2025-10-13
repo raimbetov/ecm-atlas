@@ -71,11 +71,13 @@ graph LR
 
 **¶5 Expected output:**
 - **Long-format (intermediate):** 3,158 proteins × 66 profiles = 208,428 rows
-- **Wide-format (final deliverable):** ~9,474 rows (3,158 proteins × 3 compartments)
+- **Wide-format (final deliverable):** ~1,320 rows (~426 ECM proteins × 3 compartments)
+  - ⚠️ **IMPORTANT:** Final output contains ONLY ECM proteins (Match_Confidence > 0)
+  - Non-ECM proteins (~2,675) filtered out after annotation
 - **Format:** Wide-format CSV with separate Abundance_Young and Abundance_Old columns per compartment
 - **Annotation target:** ≥90% coverage using human matrisome reference (1,026 genes)
-- **Z-score normalization:** 3 separate files (NP, IAF, OAF) with compartment-specific z-scores
-- **Key benefit:** Preserves spatial resolution while enabling statistical comparison
+- **Z-score normalization:** 3 separate files (NP, IAF, OAF) with compartment-specific z-scores (ECM proteins only)
+- **Key benefit:** Preserves spatial resolution while enabling statistical comparison of ECM-specific aging changes
 
 ---
 
@@ -680,13 +682,24 @@ for marker, expected_cat in EXPECTED_MARKERS.items():
 
 **¶1 Ordering principle:** Wide-format conversion → compartment splitting → z-score calculation per compartment → validation. Follow methodology from `06_Randles_z_score_by_tissue_compartment`.
 
-**¶2 Wide-format conversion:**
+**¶2 ECM protein filtering and wide-format conversion:**
 
 ```python
+# ⚠️ CRITICAL: Filter to keep ONLY ECM proteins (Match_Confidence > 0)
+# Remove non-ECM proteins from dataset before aggregation
+print(f"\n🔍 Filtering ECM proteins...")
+print(f"Before filtering: {df_standardized['Protein_ID'].nunique()} unique proteins")
+
+df_ecm = df_standardized[df_standardized['Match_Confidence'] > 0].copy()
+
+print(f"After filtering: {df_ecm['Protein_ID'].nunique()} ECM proteins")
+print(f"Removed: {df_standardized['Protein_ID'].nunique() - df_ecm['Protein_ID'].nunique()} non-ECM proteins")
+print(f"✅ Dataset now contains ONLY ECM proteins from matrisome reference")
+
 # Aggregate spatial profiles by compartment and age
 # Calculate mean LFQ intensity across spatial profiles within each compartment-age combination
 
-df_wide = df_standardized.groupby(
+df_wide = df_ecm.groupby(
     ['Protein_ID', 'Protein_Name', 'Gene_Symbol', 'Tissue', 'Tissue_Compartment',
      'Species', 'Method', 'Study_ID',
      'Canonical_Gene_Symbol', 'Matrisome_Category', 'Matrisome_Division',
@@ -700,7 +713,8 @@ df_wide = df_standardized.groupby(
 })).reset_index()
 
 print(f"Wide-format shape: {df_wide.shape}")
-print(f"Expected: ~{3158 * 3} rows (3,158 proteins × 3 compartments)")
+print(f"Expected: ~{426 * 3} rows (~426 ECM proteins × 3 compartments = ~1,278 rows)")
+print(f"Note: Row count reflects ONLY ECM proteins, not total proteome")
 
 # Validate compartment structure
 print(f"\nCompartment distribution:")
@@ -1010,7 +1024,7 @@ print(f"✅ Metadata exported: {metadata_file}")
 **✅ TIER 1: CRITICAL (ALL required - task fails if any missing)**
 
 1. **File parsing successful:** Excel file loaded, both sheets extracted, 3,158 proteins identified
-2. **Row count reasonable:** Long-format ≥100,000 rows, Wide-format ≥9,000 rows (3 compartments × ~3,000 proteins)
+2. **Row count reasonable:** Long-format ≥40,000 rows (after null removal), Wide-format ≥1,000 rows (ECM proteins only, ~426 × 3 compartments)
 3. **Zero null critical fields:** No nulls in Protein_ID, Study_ID
 4. **Age bins correct:** Young=16yr, Old=59yr
 5. **Compartments kept separate:** Tissue column contains "Intervertebral_disc_NP", "Intervertebral_disc_IAF", "Intervertebral_disc_OAF" (not combined)
@@ -1022,7 +1036,7 @@ print(f"✅ Metadata exported: {metadata_file}")
 8. **Known markers present:** COL1A1, COL2A1, FN1, ACAN found and correctly annotated
 9. **Species consistency:** All genes follow human nomenclature (uppercase)
 10. **Schema compliance:** All 15 wide-format columns present with correct data types
-11. **Compartment validation:** Each compartment has ~3,158 proteins (NP + IAF + OAF = ~9,474 total rows)
+11. **Compartment validation:** Each compartment has ECM proteins (NP ~300, IAF ~317, OAF ~376, total ~993 ECM protein-compartment pairs)
 12. **Z-score validation:** All 3 compartments have z-score mean ≈ 0, std ≈ 1
 
 **✅ TIER 3: DOCUMENTATION (ALL required - ensures reproducibility)**
@@ -1086,20 +1100,21 @@ print(f"✅ Metadata exported: {metadata_file}")
 - **Success metric:** ≥90% coverage achieved
 
 ## Phase 5: Wide-Format Conversion (Est: 10 min)
+- [ ] Filter to keep ONLY ECM proteins (Match_Confidence > 0)
 - [ ] Aggregate spatial profiles by compartment and age
 - [ ] Calculate mean abundances (Young and Old per compartment)
-- [ ] Validate row count (~9,474 rows = 3,158 proteins × 3 compartments)
-- [ ] Export wide-format CSV
-- **Success metric:** Wide-format CSV created
+- [ ] Validate row count (~1,320 rows = ~426 ECM proteins × 3 compartments)
+- [ ] Export wide-format CSV (ECM proteins only)
+- **Success metric:** Wide-format CSV created with ECM proteins only
 
 ## Phase 6: Z-Score Normalization (Est: 20 min)
-- [ ] Split by compartment (NP, IAF, OAF)
+- [ ] Split by compartment (NP, IAF, OAF) - ECM proteins only
 - [ ] Check skewness for each compartment
 - [ ] Apply log2-transformation if needed
 - [ ] Calculate z-scores (Young and Old separately per compartment)
 - [ ] Validate z-score normalization (mean ≈ 0, std ≈ 1)
-- [ ] Export 3 z-score CSVs
-- **Success metric:** 3 z-score files with validated normalization
+- [ ] Export 3 z-score CSVs (NP ~300 rows, IAF ~317 rows, OAF ~376 rows)
+- **Success metric:** 3 z-score files with validated normalization (ECM proteins only)
 
 ## Phase 7: Quality & Export (Est: 10 min)
 - [ ] Run validation checks (17 criteria)
@@ -1156,10 +1171,10 @@ if len(unmatched_profiles) > 5:
 - **Repository:** https://github.com/raimbetov/ecm-atlas
 - **Input file:** `data_raw/Tam et al. - 2020/elife-64940-supp1-v3.xlsx`
 - **Expected outputs:**
-  - `Tam_2020_wide_format.csv` (~9,474 rows)
-  - `Tam_2020_NP_zscore.csv` (~3,158 rows)
-  - `Tam_2020_IAF_zscore.csv` (~3,158 rows)
-  - `Tam_2020_OAF_zscore.csv` (~3,158 rows)
+  - `Tam_2020_wide_format.csv` (~1,320 rows - ECM proteins only)
+  - `Tam_2020_NP_zscore.csv` (~300 rows - ECM proteins only)
+  - `Tam_2020_IAF_zscore.csv` (~317 rows - ECM proteins only)
+  - `Tam_2020_OAF_zscore.csv` (~376 rows - ECM proteins only)
   - `Tam_2020_metadata.json`
   - `Tam_2020_annotation_report.md`
   - `Tam_2020_validation_log.txt`
