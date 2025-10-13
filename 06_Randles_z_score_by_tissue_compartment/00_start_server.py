@@ -18,7 +18,7 @@ Handler = http.server.SimpleHTTPRequestHandler
 
 with socketserver.TCPServer(("", PORT), Handler) as httpd:
     print(f"🚀 Server started at http://localhost:{PORT}")
-    print(f"📊 Dashboard URL: http://localhost:{PORT}/zscore_dashboard.html")
+    print(f"📊 Dashboard URL: http://localhost:{PORT}/dashboard.html")
     print("\nPress Ctrl+C to stop server...")
 
     try:
