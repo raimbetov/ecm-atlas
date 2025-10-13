@@ -1,23 +1,27 @@
 # Task: Tam 2020 Dataset Conversion to Standardized CSV
 
-**Thesis:** Convert Tam et al. 2020 intervertebral disc (IVD) aging proteomics dataset into standardized CSV format by parsing spatially-resolved Excel data file, applying schema mapping with compartment-specific structure, executing age bin normalization (young vs old), performing matrisome annotation using human reference list, calculating z-scores per tissue compartment, validating data quality, and generating complete documentation for multi-agent execution.
+**Thesis:** Convert Tam et al. 2020 intervertebral disc (IVD) aging proteomics dataset into standardized wide-format (mapped) CSV file by parsing spatially-resolved Excel data, applying schema mapping, performing ECM annotation, and validating data quality for cross-study integration into ECM Atlas.
 
-**Overview:** Task transforms spatially-resolved single-study raw data into unified database format through six execution phases: (1.0) File reconnaissance validates data availability and structure, (2.0) Data parsing extracts protein abundances from Excel into long-format table with spatial profiling metadata, (3.0) Schema standardization maps columns to unified 14-column format with tissue compartment enrichment, (4.0) Protein annotation harmonizes identifiers using human matrisome reference list (≥90% coverage target), (5.0) Z-score normalization calculates compartment-specific z-scores for statistical comparison, (6.0) Quality validation verifies completeness, accuracy, and biological sanity checks before final CSV export.
+**Overview:** Task transforms spatially-resolved single-study raw data into mapped wide-format file (PHASE 1 of ECM Atlas pipeline) through five execution phases: (1.0) File reconnaissance validates data availability and structure, (2.0) Data parsing extracts protein abundances from Excel into long-format table with spatial profiling metadata, (3.0) Schema standardization maps columns to unified 15-column format with tissue compartment enrichment, (4.0) Protein annotation harmonizes identifiers using human matrisome reference list and filters to ECM proteins only, (5.0) Wide-format conversion aggregates spatial profiles by compartment and age, (6.0) Quality validation verifies completeness and accuracy.
+
+**⚠️ IMPORTANT:** This task produces **MAPPED FILES ONLY** (no z-scores). Z-score normalization is performed separately on unified atlas file containing all studies. See `00_ECM_ATLAS_PIPELINE_OVERVIEW.md` for complete pipeline architecture.
 
 ```mermaid
 graph LR
     A[Excel File<br/>3,158×80 matrix] --> B[Data Parsing<br/>Extract LFQ intensities]
-    B --> C[Schema Mapping<br/>14 columns + spatial metadata]
+    B --> C[Schema Mapping<br/>15 columns + spatial metadata]
     C --> D[Age Binning<br/>Young 16yr vs Old 59yr]
-    D --> E[Protein Annotation<br/>Matrisome ref]
-    E --> F[Z-score per Compartment<br/>NP/IAF/OAF]
-    F --> G[Quality Validation<br/>Coverage ≥90%]
-    G --> H[CSV Export<br/>Tam_2020.csv]
-    H --> I[Documentation<br/>Report + metadata]
+    D --> E[Protein Annotation<br/>Matrisome ref + ECM filter]
+    E --> F[Wide-Format Aggregation<br/>By compartment + age]
+    F --> G[Quality Validation<br/>ECM proteins only]
+    G --> H[MAPPED FILE<br/>Tam_2020_wide_format.csv]
+    H --> I[PHASE 2<br/>Unified Atlas Integration]
+    I --> J[PHASE 3<br/>Z-Score Normalization]
 
     style A fill:#f9f,stroke:#333
-    style F fill:#ff9,stroke:#333
     style H fill:#9f9,stroke:#333
+    style I fill:#fc9,stroke:#333
+    style J fill:#cff,stroke:#333
 ```
 
 ---
@@ -69,15 +73,20 @@ graph LR
   - Profile metadata: `profile-name`, `age-group` (young/old), `Compartment` (NP/IAF/OAF)
   - Spatial metadata: `disc-level` (L3/4, L4/5, L5/S1), `anatomical-direction`, `distance-from-centre-mm`
 
-**¶5 Expected output:**
+**¶5 Expected output (PHASE 1 only - Mapped File):**
 - **Long-format (intermediate):** 3,158 proteins × 66 profiles = 208,428 rows
-- **Wide-format (final deliverable):** ~1,320 rows (~426 ECM proteins × 3 compartments)
+- **Wide-format (FINAL DELIVERABLE for PHASE 1):** ~1,320 rows (~426 ECM proteins × 3 compartments)
   - ⚠️ **IMPORTANT:** Final output contains ONLY ECM proteins (Match_Confidence > 0)
   - Non-ECM proteins (~2,675) filtered out after annotation
 - **Format:** Wide-format CSV with separate Abundance_Young and Abundance_Old columns per compartment
 - **Annotation target:** ≥90% coverage using human matrisome reference (1,026 genes)
-- **Z-score normalization:** 3 separate files (NP, IAF, OAF) with compartment-specific z-scores (ECM proteins only)
-- **Key benefit:** Preserves spatial resolution while enabling statistical comparison of ECM-specific aging changes
+- **NO Z-scores at this stage** - Z-scores calculated later on unified atlas (PHASE 3)
+- **Key benefit:** Preserves spatial resolution and provides mapped file ready for cross-study integration
+
+**¶6 Downstream processing (PHASE 2 & 3 - Not part of this task):**
+- **PHASE 2:** Unification - Combine Tam_2020_wide_format.csv with other studies → ECM_Atlas_Unified.csv
+- **PHASE 3:** Z-Score Normalization - Calculate compartment-specific z-scores on unified file
+- **See:** `00_ECM_ATLAS_PIPELINE_OVERVIEW.md` for complete pipeline
 
 ---
 
@@ -678,9 +687,9 @@ for marker, expected_cat in EXPECTED_MARKERS.items():
 
 ---
 
-## 5.0 Z-SCORE NORMALIZATION (Compartment-Specific Statistical Transformation)
+## 5.0 WIDE-FORMAT CONVERSION (Aggregation by Compartment and Age)
 
-**¶1 Ordering principle:** Wide-format conversion → compartment splitting → z-score calculation per compartment → validation. Follow methodology from `06_Randles_z_score_by_tissue_compartment`.
+**¶1 Ordering principle:** ECM protein filtering → spatial profile aggregation by compartment and age → wide-format export. Create mapped file ready for unified atlas integration.
 
 **¶2 ECM protein filtering and wide-format conversion:**
 
