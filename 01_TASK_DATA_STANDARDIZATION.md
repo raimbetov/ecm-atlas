@@ -20,6 +20,8 @@ graph LR
 
 ---
 
+GPT pro reearhc https://chatgpt.com/c/68ec55fa-f468-8320-8607-1cb41f1a381e
+
 ## 1.0 SCHEMA MAPPING (Column Structure Analysis)
 
 **¶1 Ordering principle:** Existing schema → dataset coverage → gap identification. Start with proposed structure, validate against reality, then refine.
