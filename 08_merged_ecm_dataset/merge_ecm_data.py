@@ -101,21 +101,37 @@ def validate_data(df):
 
     issues = []
 
-    # Check for required columns
-    required_cols = ['Protein_ID', 'Gene_Symbol', 'Zscore_Young', 'Zscore_Old', 'Zscore_Delta']
-    for col in required_cols:
+    # Check for required columns (but allow NaN in z-scores - biologically meaningful)
+    required_cols_strict = ['Protein_ID', 'Gene_Symbol']  # Must have no NaN
+    required_cols_allow_nan = ['Zscore_Young', 'Zscore_Old', 'Zscore_Delta']  # NaN allowed (protein not detected)
+
+    for col in required_cols_strict:
         if col not in df.columns:
             issues.append(f"Missing required column: {col}")
         elif df[col].isna().sum() > 0:
             issues.append(f"Column {col} has {df[col].isna().sum()} missing values")
 
-    # Check z-score ranges
+    for col in required_cols_allow_nan:
+        if col not in df.columns:
+            issues.append(f"Missing required column: {col}")
+
+    # Check z-score ranges (on non-NaN values)
     for col in ['Zscore_Young', 'Zscore_Old', 'Zscore_Delta']:
         if col in df.columns:
-            min_val = df[col].min()
-            max_val = df[col].max()
-            if min_val < -10 or max_val > 10:
-                issues.append(f"{col} has unusual range: [{min_val:.2f}, {max_val:.2f}]")
+            valid_values = df[col].dropna()
+            if len(valid_values) > 0:
+                min_val = valid_values.min()
+                max_val = valid_values.max()
+                if min_val < -10 or max_val > 10:
+                    issues.append(f"{col} has unusual range: [{min_val:.2f}, {max_val:.2f}]")
+
+    # Report missing z-scores (informational, not an issue)
+    print(f"\n   ℹ️  Missing z-scores (biologically meaningful - protein not detected):")
+    for col in required_cols_allow_nan:
+        if col in df.columns:
+            n_missing = df[col].isna().sum()
+            pct_missing = (n_missing / len(df)) * 100
+            print(f"      {col}: {n_missing}/{len(df)} ({pct_missing:.1f}%)")
 
     # Check for duplicates
     duplicate_mask = df.duplicated(subset=['Protein_ID', 'Compartment'], keep=False)

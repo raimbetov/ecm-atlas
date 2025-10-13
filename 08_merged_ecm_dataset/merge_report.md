@@ -1,6 +1,6 @@
 # ECM Dataset Merge Report
 
-**Generated:** 2025-10-12 17:20:50
+**Generated:** 2025-10-12 18:05:38
 
 ## Summary
 
@@ -61,22 +61,20 @@
 ## Z-Score Statistics
 
 ### Young
-- Mean: 0.525
-- Std Dev: 1.248
+- Mean: 0.131
+- Std Dev: 1.096
 
 ### Old
-- Mean: 0.565
-- Std Dev: 1.168
+- Mean: 0.145
+- Std Dev: 1.103
 
 ### Delta (Old - Young)
-- Mean: 0.127
-- Std Dev: 0.712
+- Mean: 0.116
+- Std Dev: 0.595
 
-## ⚠️  Data Quality Issues
+## ✅ Data Quality
 
-- Column Zscore_Young has 188 missing values
-- Column Zscore_Old has 66 missing values
-- Column Zscore_Delta has 254 missing values
+All validation checks passed successfully!
 
 ## Column Schema
 
