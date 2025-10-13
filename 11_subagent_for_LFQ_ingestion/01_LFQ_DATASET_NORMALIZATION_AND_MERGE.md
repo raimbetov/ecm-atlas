@@ -4,7 +4,9 @@
 
 **Target audience:** Sub-agent or human researcher processing new study
 
-**Output:** Study added to `/Users/Kravtsovd/projects/ecm-atlas/08_merged_ecm_dataset/ECM_Atlas_Unified.csv`
+**Output:** Study added to `08_merged_ecm_dataset/ECM_Atlas_Unified.csv`
+
+**Configuration:** Use `study_config_template.py` to define study-specific parameters
 
 ---
 
@@ -113,40 +115,106 @@ Match_Confidence        - Annotation confidence (0-100)
 
 **Goal:** Convert wide protein matrix to long-format table.
 
+**Prerequisites:**
+1. Fill in `study_config_template.py` with your study parameters
+2. Run validation: `python study_config_template.py`
+
 **Algorithm:**
 ```python
 import pandas as pd
+import re
+from study_config_template import STUDY_CONFIG
 
-# 1. Load Excel file
-excel_file = "data_raw/Study et al. - YYYY/file.xlsx"
-df_raw = pd.read_excel(excel_file, sheet_name="Data matrix sheet name")
+# 1. Load configuration
+config = STUDY_CONFIG  # or load from your custom config
+excel_file = config['data_file']
+df_raw = pd.read_excel(excel_file, sheet_name=config['data_sheet'])
 
-# 2. Identify columns
-id_cols = ['Accession', 'Description', 'Gene name']  # Protein identifiers
-intensity_cols = ['Sample1', 'Sample2', ...]  # LFQ intensity columns
+print(f"Loaded {len(df_raw)} proteins from {config['data_sheet']}")
 
-# 3. Filter and reshape
+# 2. Extract column names from config
+id_cols = [
+    config['column_mapping']['protein_id'],
+    config['column_mapping']['protein_name'],
+    config['column_mapping']['gene_symbol']
+]
+intensity_cols = config['column_mapping']['intensity_columns']
+
+# Auto-detect LFQ columns if not specified
+if intensity_cols is None:
+    # Find all columns with intensity-like names
+    intensity_cols = [col for col in df_raw.columns
+                      if 'LFQ' in col or 'intensity' in col.lower()
+                      or re.match(r'^[A-Z]\d+', col)]  # e.g., G15, T29
+    print(f"Auto-detected {len(intensity_cols)} intensity columns")
+
+# 3. Filter and reshape to long format
 df_filtered = df_raw[id_cols + intensity_cols].copy()
+
+# Rename to standard names for easier processing
+df_filtered = df_filtered.rename(columns={
+    config['column_mapping']['protein_id']: 'Protein_ID',
+    config['column_mapping']['protein_name']: 'Protein_Name',
+    config['column_mapping']['gene_symbol']: 'Gene_Symbol'
+})
+
 df_long = df_filtered.melt(
-    id_vars=id_cols,
+    id_vars=['Protein_ID', 'Protein_Name', 'Gene_Symbol'],
     value_vars=intensity_cols,
     var_name='Sample_Column',
     value_name='Abundance'
 )
 
-# 4. Join with metadata (if separate sheet exists)
-if has_metadata_sheet:
-    df_metadata = pd.read_excel(excel_file, sheet_name="Sample information")
-    df_long = df_long.merge(df_metadata, left_on='Sample_Column', right_on='Profile_Name')
-else:
-    # Parse sample info from column names
-    df_long['Age'] = df_long['Sample_Column'].apply(parse_age_from_name)
-    df_long['Compartment'] = df_long['Sample_Column'].apply(parse_compartment_from_name)
+print(f"Long-format created: {len(df_long)} rows")
 
-# 5. Expected output
-# Rows: N_proteins × N_samples (e.g., 2,610 × 12 = 31,320)
-# Columns: Protein_ID, Gene_Symbol, Abundance, Age, Compartment, Sample_ID, etc.
+# 4. Parse sample metadata
+if config.get('metadata_sheet'):
+    # Strategy A: Use metadata sheet
+    df_metadata = pd.read_excel(excel_file, sheet_name=config['metadata_sheet'])
+    join_col = config['column_mapping']['metadata_join_column']
+    df_long = df_long.merge(df_metadata, left_on='Sample_Column', right_on=join_col, how='left')
+    print(f"Joined with metadata sheet on '{join_col}'")
+else:
+    # Strategy B: Parse from column names
+    parse_config = config['parse_sample_info']
+
+    if parse_config['method'] == 'regex':
+        # Extract compartment
+        if 'compartment_pattern' in parse_config:
+            df_long['Compartment_Code'] = df_long['Sample_Column'].str.extract(
+                parse_config['compartment_pattern']
+            )[0]
+            # Map to full compartment name
+            if config.get('compartments'):
+                df_long['Compartment'] = df_long['Compartment_Code'].map(config['compartments'])
+
+        # Extract age
+        if 'age_pattern' in parse_config:
+            df_long['Age'] = df_long['Sample_Column'].str.extract(
+                parse_config['age_pattern']
+            )[0].astype(int)
+
+    print(f"Parsed metadata from column names")
+
+# 5. Create Sample_ID
+if 'Compartment' in df_long.columns:
+    df_long['Sample_ID'] = df_long['Compartment'] + '_' + df_long['Age'].astype(str)
+else:
+    df_long['Sample_ID'] = df_long['Sample_Column']
+
+# 6. Validation
+print(f"\nParsing validation:")
+print(f"  Total rows: {len(df_long)}")
+print(f"  Unique proteins: {df_long['Protein_ID'].nunique()}")
+print(f"  Unique samples: {df_long['Sample_ID'].nunique()}")
+print(f"  Null abundances: {df_long['Abundance'].isna().sum()} ({df_long['Abundance'].isna().sum()/len(df_long)*100:.1f}%)")
+
+# Expected output columns:
+# Protein_ID, Protein_Name, Gene_Symbol, Sample_Column, Abundance,
+# Age, Compartment (if applicable), Sample_ID
 ```
+
+**Complete example script:** See `examples/step1_data_parsing.py` for a ready-to-run implementation.
 
 **⚠️ Missing Values:**
 - 50-80% null abundances are **NORMAL** for LFQ proteomics
@@ -571,7 +639,7 @@ from pathlib import Path
 
 def merge_study_to_unified(
     study_csv: str,
-    unified_csv: str = '/Users/Kravtsovd/projects/ecm-atlas/08_merged_ecm_dataset/ECM_Atlas_Unified.csv'
+    unified_csv: str = '08_merged_ecm_dataset/ECM_Atlas_Unified.csv'
 ):
     """
     Add new study to unified CSV.
@@ -687,9 +755,11 @@ if __name__ == '__main__':
     # Example: Add Randles 2021 to unified
     merge_study_to_unified(
         study_csv='05_Randles_paper_to_csv/Randles_2021_wide_format.csv',
-        unified_csv='/Users/Kravtsovd/projects/ecm-atlas/08_merged_ecm_dataset/ECM_Atlas_Unified.csv'
+        unified_csv='08_merged_ecm_dataset/ECM_Atlas_Unified.csv'  # Relative path
     )
 ```
+
+**Complete merge script:** See `merge_to_unified.py` for ready-to-use implementation.
 
 ---
 

@@ -6,24 +6,49 @@ This directory contains universal algorithms and documentation for processing an
 
 ## Contents
 
+### 🤖 Autonomous Agent
+
+1. **`autonomous_agent.py`** ⭐ **NEW**
+   - Fully automated pipeline orchestrator
+   - Takes paper folder/file as input
+   - Creates dedicated output folder per dataset
+   - Logs every step sequentially
+   - Real-time activity tracking
+   - Debuggable output on errors
+
 ### 📖 Documentation
 
-1. **`01_LFQ_DATASET_NORMALIZATION_AND_MERGE.md`**
+2. **`01_LFQ_DATASET_NORMALIZATION_AND_MERGE.md`**
    - How to process a new LFQ dataset (PHASE 1)
    - How to merge it into unified CSV (PHASE 2)
    - Complete step-by-step algorithm
    - Missing value handling guidelines
    - Compartment separation requirements
 
-2. **`02_ZSCORE_CALCULATION_UNIVERSAL_FUNCTION.md`**
+3. **`02_ZSCORE_CALCULATION_UNIVERSAL_FUNCTION.md`**
    - How z-scores are calculated (PHASE 3)
    - Universal function documentation
    - Grouping strategies
    - Validation procedures
 
-### 🔧 Code
+4. **`00_PIPELINE_FLOWCHART.md`**
+   - Complete mermaid visualization of 3-phase pipeline
+   - Shows all critical decision points
 
-3. **`universal_zscore_function.py`**
+### 🔧 Code & Scripts
+
+5. **`study_config_template.py`**
+   - Configuration template for new studies
+   - Pre-filled examples (Randles, Tam, Mouse)
+   - Built-in validation function
+
+6. **`merge_to_unified.py`**
+   - Ready-to-use merge script
+   - Auto-detects project root
+   - Command-line interface
+   - Automatic backup creation
+
+7. **`universal_zscore_function.py`**
    - Ready-to-use Python function
    - Command-line interface
    - Automatic backup creation
@@ -33,20 +58,57 @@ This directory contains universal algorithms and documentation for processing an
 
 ## Quick Start
 
-### Scenario: Adding a new study to ECM Atlas
+### Option 1: Autonomous Agent (Fully Automated) ⭐ **RECOMMENDED**
 
 ```bash
-# Step 1: Process new study (PHASE 1)
+# Single command to process entire pipeline
+python autonomous_agent.py "data_raw/Author et al. - Year/"
+
+# Or specify exact data file
+python autonomous_agent.py "data_raw/Author et al. - Year/data_file.xlsx"
+
+# Agent will:
+# 1. Identify paper folder and data files
+# 2. Create dedicated output folder (XX_Author_Year_paper_to_csv/)
+# 3. Generate configuration template
+# 4. Log every step to agent_log.md
+# 5. Execute PHASE 1, 2, 3 sequentially
+# 6. Create debuggable output (agent_state.json)
+```
+
+**Real-time tracking:**
+```bash
+# Open in another terminal while agent runs
+tail -f XX_Author_Year_paper_to_csv/agent_log.md
+```
+
+**Debug if something fails:**
+```bash
+# Check agent state
+cat XX_Author_Year_paper_to_csv/agent_state.json
+
+# Review full log
+less XX_Author_Year_paper_to_csv/agent_log.md
+```
+
+### Option 2: Manual Step-by-Step
+
+```bash
+# Step 1: Configure study
+cp study_config_template.py my_study_config.py
+nano my_study_config.py  # Fill in parameters
+python my_study_config.py  # Validate
+
+# Step 2: Process new study (PHASE 1)
 # Follow instructions in 01_LFQ_DATASET_NORMALIZATION_AND_MERGE.md
 # Output: Study_YYYY_wide_format.csv
 
-# Step 2: Merge to unified CSV (PHASE 2)
-python merge_study.py Study_YYYY_wide_format.csv
+# Step 3: Merge to unified CSV (PHASE 2)
+python merge_to_unified.py 05_Randles_paper_to_csv/Randles_2021_wide_format.csv
 # Output: ECM_Atlas_Unified.csv updated
 
-# Step 3: Calculate z-scores (PHASE 3)
-cd /Users/Kravtsovd/projects/ecm-atlas/11_subagent_for_LFQ_ingestion
-python universal_zscore_function.py Study_YYYY Tissue
+# Step 4: Calculate z-scores (PHASE 3)
+python universal_zscore_function.py Randles_2021 Tissue
 # Output: ECM_Atlas_Unified.csv with z-scores
 ```
 
@@ -236,10 +298,21 @@ XX_Study_YYYY_paper_to_csv/
 
 ## Version History
 
-- **2025-10-13:** Initial documentation created
-  - Document 01: LFQ Dataset Normalization and Merge
-  - Document 02: Z-Score Calculation Universal Function
-  - Python function: universal_zscore_function.py
+### 2025-10-13 (Evening) - Autonomous Agent Release ⭐
+- **autonomous_agent.py** - Fully automated pipeline orchestrator
+- **AUTONOMOUS_AGENT_GUIDE.md** - Complete user guide
+- **EXAMPLE_agent_log.md** - Sample log output
+- **EXAMPLE_agent_state.json** - Sample state file
+- Updated README with autonomous agent instructions
+
+### 2025-10-13 (Morning) - Documentation & Scripts
+- **Document 01:** LFQ Dataset Normalization and Merge
+- **Document 02:** Z-Score Calculation Universal Function
+- **study_config_template.py** - Configuration template with examples
+- **merge_to_unified.py** - Ready-to-use merge script
+- **universal_zscore_function.py** - Z-score calculation function
+- **00_PIPELINE_FLOWCHART.md** - Complete mermaid visualization
+- **IMPROVEMENTS_SUMMARY.md** - Change log
 
 ---
 
