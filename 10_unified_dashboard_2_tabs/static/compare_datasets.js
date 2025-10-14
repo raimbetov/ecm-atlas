@@ -272,11 +272,14 @@ const CompareDatasets = (function() {
 
                 if (compartmentData && compartmentData.zscore_delta !== null) {
                     row.push(compartmentData.zscore_delta);
+                    const isoformText = compartmentData.isoforms > 1
+                        ? `<br><i>(${compartmentData.isoforms} isoforms - showing max)</i>`
+                        : '';
                     hoverRow.push(
                         `<b>${protein}</b><br>` +
                         `Compartment: ${compartment}<br>` +
                         `Dataset: ${compartmentData.dataset}<br>` +
-                        `Organ: ${compartmentData.organ}<br><br>` +
+                        `Organ: ${compartmentData.organ}${isoformText}<br><br>` +
                         `Zscore Young: ${compartmentData.zscore_young?.toFixed(2) || 'N/A'}<br>` +
                         `Zscore Old: ${compartmentData.zscore_old?.toFixed(2) || 'N/A'}<br>` +
                         `<b>Zscore Delta: ${compartmentData.zscore_delta.toFixed(2)}</b>`

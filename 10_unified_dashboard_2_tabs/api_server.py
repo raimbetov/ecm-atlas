@@ -329,12 +329,14 @@ def get_compare_heatmap():
 
     for protein in proteins:
         protein_data = filtered_df[filtered_df['Gene_Symbol'] == protein]
-        protein_id = protein_data.iloc[0]['Protein_ID']
+
+        # Take first row for metadata (if multiple isoforms, pick first)
+        first_row = protein_data.iloc[0]
 
         protein_metadata[protein] = {
-            "protein_id": protein_id,
-            "protein_name": protein_data.iloc[0]['Protein_Name'],
-            "matrisome_category": protein_data.iloc[0]['Matrisome_Category'] if pd.notna(protein_data.iloc[0]['Matrisome_Category']) else None
+            "protein_id": first_row['Protein_ID'],
+            "protein_name": first_row['Protein_Name'],
+            "matrisome_category": first_row['Matrisome_Category'] if pd.notna(first_row['Matrisome_Category']) else None
         }
 
         heatmap_data[protein] = {}
@@ -342,13 +344,21 @@ def get_compare_heatmap():
             compartment_data = protein_data[protein_data['Compartment'] == compartment]
 
             if len(compartment_data) > 0:
-                row = compartment_data.iloc[0]
+                # If multiple isoforms, take the one with largest abs(Zscore_Delta)
+                if len(compartment_data) > 1:
+                    compartment_data = compartment_data.copy()
+                    compartment_data['Abs_Zscore_Delta'] = compartment_data['Zscore_Delta'].abs()
+                    row = compartment_data.nlargest(1, 'Abs_Zscore_Delta').iloc[0]
+                else:
+                    row = compartment_data.iloc[0]
+
                 heatmap_data[protein][compartment] = {
                     "zscore_delta": float(row['Zscore_Delta']) if pd.notna(row['Zscore_Delta']) else None,
                     "zscore_young": float(row['Zscore_Young']) if pd.notna(row['Zscore_Young']) else None,
                     "zscore_old": float(row['Zscore_Old']) if pd.notna(row['Zscore_Old']) else None,
                     "dataset": row['Dataset_Name'],
-                    "organ": row['Organ']
+                    "organ": row['Organ'],
+                    "isoforms": int(len(compartment_data))  # Show how many isoforms
                 }
             else:
                 heatmap_data[protein][compartment] = None
