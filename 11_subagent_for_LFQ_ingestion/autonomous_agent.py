@@ -425,7 +425,7 @@ class LFQProcessingAgent:
             # Step 2.2: Execute merge
             self._log("\n### Step 2.2: Execute merge")
 
-            unified_csv_path = '08_merged_ecm_dataset/ECM_Atlas_Unified.csv'
+            unified_csv_path = '08_merged_ecm_dataset/merged_ecm_aging_zscore.csv'
 
             self._log(f"Merging {wide_format_file.name} to {unified_csv_path}")
 
@@ -476,7 +476,7 @@ class LFQProcessingAgent:
             df_updated = calculate_study_zscores(
                 study_id=self.config['study_id'],
                 groupby_columns=groupby_columns,
-                csv_path='08_merged_ecm_dataset/ECM_Atlas_Unified.csv',
+                csv_path='08_merged_ecm_dataset/merged_ecm_aging_zscore.csv',
                 backup=True
             )
 

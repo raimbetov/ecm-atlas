@@ -26,7 +26,7 @@ import json
 def calculate_study_zscores(
     study_id: str,
     groupby_columns: list,
-    csv_path: str = '/Users/Kravtsovd/projects/ecm-atlas/08_merged_ecm_dataset/ECM_Atlas_Unified.csv',
+    csv_path: str = None,
     backup: bool = True
 ):
     """
@@ -81,6 +81,20 @@ def calculate_study_zscores(
     print(f"Z-SCORE CALCULATION FOR: {study_id}")
     print(f"Grouping by: {groupby_columns}")
     print(f"{'='*70}")
+
+    # Auto-detect csv_path if not provided
+    if csv_path is None:
+        # Try to find project root
+        current_dir = Path.cwd()
+        for parent in [current_dir] + list(current_dir.parents):
+            if (parent / 'references' / 'human_matrisome_v2.csv').exists():
+                project_root = parent
+                break
+        else:
+            project_root = Path.cwd()
+
+        csv_path = str(project_root / '08_merged_ecm_dataset' / 'merged_ecm_aging_zscore.csv')
+        print(f"Auto-detected csv_path: {csv_path}")
 
     # === STEP 1: Load and filter ===
     print(f"\nStep 1: Loading unified dataset...")
@@ -246,7 +260,7 @@ def calculate_study_zscores(
         backup_dir.mkdir(exist_ok=True)
 
         timestamp = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
-        backup_path = backup_dir / f"ECM_Atlas_Unified_{timestamp}.csv"
+        backup_path = backup_dir / f"merged_ecm_aging_zscore_{timestamp}.csv"
         shutil.copy(csv_path, backup_path)
         print(f"\n✅ Backup created: {backup_path}")
 
@@ -327,6 +341,6 @@ if __name__ == '__main__':
 
     print("\n✅ Done!")
     print(f"\nNext steps:")
-    print(f"1. Check unified CSV: 08_merged_ecm_dataset/ECM_Atlas_Unified.csv")
+    print(f"1. Check unified CSV: 08_merged_ecm_dataset/merged_ecm_aging_zscore.csv")
     print(f"2. Review metadata: 08_merged_ecm_dataset/zscore_metadata_{study_id}.json")
     print(f"3. Verify backup created: 08_merged_ecm_dataset/backups/")

@@ -22,7 +22,7 @@ import sys
 
 def merge_study_to_unified(
     study_csv: str,
-    unified_csv: str = '08_merged_ecm_dataset/ECM_Atlas_Unified.csv',
+    unified_csv: str = '08_merged_ecm_dataset/merged_ecm_aging_zscore.csv',
     project_root: Path = None
 ):
     """
@@ -77,7 +77,7 @@ def merge_study_to_unified(
         backup_dir = unified_path.parent / 'backups'
         backup_dir.mkdir(exist_ok=True)
         timestamp = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
-        backup_path = backup_dir / f"ECM_Atlas_Unified_{timestamp}.csv"
+        backup_path = backup_dir / f"merged_ecm_aging_zscore_{timestamp}.csv"
         shutil.copy(unified_path, backup_path)
         print(f"✅ Backup created: {backup_path.relative_to(project_root)}")
     else:
@@ -181,7 +181,7 @@ if __name__ == '__main__':
     study_csv = sys.argv[1]
 
     # Optional: specify unified CSV path
-    unified_csv = sys.argv[2] if len(sys.argv) > 2 else '08_merged_ecm_dataset/ECM_Atlas_Unified.csv'
+    unified_csv = sys.argv[2] if len(sys.argv) > 2 else '08_merged_ecm_dataset/merged_ecm_aging_zscore.csv'
 
     try:
         df_merged = merge_study_to_unified(
