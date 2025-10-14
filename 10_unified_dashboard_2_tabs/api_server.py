@@ -336,8 +336,8 @@ def get_compare_heatmap():
         ]
 
     # Build heatmap data structure
-    compartments = sorted(filtered_df['Compartment'].unique())
-    proteins = filtered_df['Gene_Symbol'].unique()
+    compartments = sorted([c for c in filtered_df['Compartment'].unique() if pd.notna(c)])
+    proteins = [p for p in filtered_df['Gene_Symbol'].unique() if pd.notna(p)]
 
     heatmap_data = {}
     protein_metadata = {}
@@ -345,13 +345,17 @@ def get_compare_heatmap():
     for protein in proteins:
         protein_data = filtered_df[filtered_df['Gene_Symbol'] == protein]
 
+        # Skip if no data for this protein after filtering
+        if len(protein_data) == 0:
+            continue
+
         # Take first row for metadata (if multiple isoforms, pick first)
         first_row = protein_data.iloc[0]
 
         protein_metadata[protein] = {
-            "protein_id": first_row['Protein_ID'],
-            "protein_name": first_row['Protein_Name'],
-            "matrisome_category": first_row['Matrisome_Category'] if pd.notna(first_row['Matrisome_Category']) else None
+            "protein_id": to_json_safe(first_row['Protein_ID']),
+            "protein_name": to_json_safe(first_row['Protein_Name']),
+            "matrisome_category": to_json_safe(first_row['Matrisome_Category'])
         }
 
         heatmap_data[protein] = {}
@@ -368,11 +372,11 @@ def get_compare_heatmap():
                     row = compartment_data.iloc[0]
 
                 heatmap_data[protein][compartment] = {
-                    "zscore_delta": float(row['Zscore_Delta']) if pd.notna(row['Zscore_Delta']) else None,
-                    "zscore_young": float(row['Zscore_Young']) if pd.notna(row['Zscore_Young']) else None,
-                    "zscore_old": float(row['Zscore_Old']) if pd.notna(row['Zscore_Old']) else None,
-                    "dataset": row['Dataset_Name'],
-                    "organ": row['Organ'],
+                    "zscore_delta": to_json_safe(row['Zscore_Delta']),
+                    "zscore_young": to_json_safe(row['Zscore_Young']),
+                    "zscore_old": to_json_safe(row['Zscore_Old']),
+                    "dataset": to_json_safe(row['Dataset_Name']),
+                    "organ": to_json_safe(row['Organ']),
                     "isoforms": int(len(compartment_data))  # Show how many isoforms
                 }
             else:
