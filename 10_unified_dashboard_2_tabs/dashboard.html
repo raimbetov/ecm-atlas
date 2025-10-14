@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECM Atlas - Unified Analysis Dashboard</title>
+    <script src="https://cdn.plot.ly/plotly-2.26.0.min.js"></script>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <h1>🧬 ECM Atlas - Unified Analysis Dashboard</h1>
+            <p>Comprehensive analysis of extracellular matrix protein changes across aging tissues</p>
+            <div class="stats-summary" id="global-stats">
+                Loading...
+            </div>
+        </div>
+    </header>
+
+    <!-- Tab Navigation -->
+    <nav class="tab-navigation">
+        <button class="tab-button active" data-tab="individual">
+            🔬 Individual Dataset Analysis
+        </button>
+        <button class="tab-button" data-tab="compare">
+            📊 Compare Datasets
+        </button>
+    </nav>
+
+    <!-- Tab Content: Individual Dataset Analysis -->
+    <div id="tab-individual" class="tab-content active">
+        <div class="dataset-selector">
+            <label for="dataset-select">
+                <strong>Select Dataset:</strong>
+            </label>
+            <select id="dataset-select">
+                <option value="">Loading datasets...</option>
+            </select>
+            <div id="dataset-info" class="dataset-info"></div>
+        </div>
+
+        <div id="individual-content">
+            <!-- Content loaded by individual_dataset.js -->
+        </div>
+    </div>
+
+    <!-- Tab Content: Compare Datasets -->
+    <div id="tab-compare" class="tab-content">
+        <div id="compare-content">
+            <!-- Content loaded by compare_datasets.js -->
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay hidden">
+        <div class="spinner"></div>
+        <p>Loading data...</p>
+    </div>
+
+    <!-- Scripts -->
+    <script src="static/main.js"></script>
+    <script src="static/individual_dataset.js"></script>
+    <script src="static/compare_datasets.js"></script>
+</body>
+</html>

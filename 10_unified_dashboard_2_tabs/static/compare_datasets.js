@@ -1,0 +1,399 @@
+// Compare Datasets Module
+
+const CompareDatasets = (function() {
+    let allFilters = {};
+    let currentHeatmapData = null;
+
+    function init() {
+        console.log('Compare Datasets module initialized');
+        loadCompareTab();
+    }
+
+    async function loadCompareTab() {
+        try {
+            window.ECMAtlas.showLoading(true);
+
+            // Load filters
+            const filters = await window.ECMAtlas.fetchAPI('/api/compare/filters');
+            allFilters = filters;
+
+            renderCompareContent();
+            renderFilters(filters);
+
+            // Load initial heatmap
+            await loadHeatmap();
+
+            window.ECMAtlas.showLoading(false);
+        } catch (error) {
+            console.error('Error loading compare tab:', error);
+            window.ECMAtlas.showLoading(false);
+        }
+    }
+
+    function renderCompareContent() {
+        const content = document.getElementById('compare-content');
+        content.innerHTML = `
+            <div class="grid-2" style="grid-template-columns: 300px 1fr; gap: 20px;">
+                <!-- Filters Panel -->
+                <aside class="filters-panel">
+                    <h2 style="margin-top: 0;">Filters</h2>
+
+                    <!-- Search -->
+                    <div class="filter-group">
+                        <h3>🔍 Search Protein</h3>
+                        <input type="text" id="search-input" placeholder="COL1A1, Collagen..."
+                               style="width: 100%; padding: 8px; border: 2px solid #e0e0e0; border-radius: 5px;" />
+                    </div>
+
+                    <!-- Organs -->
+                    <div class="filter-group">
+                        <h3>🫀 Organs</h3>
+                        <div id="organ-filters"></div>
+                    </div>
+
+                    <!-- Compartments -->
+                    <div class="filter-group">
+                        <h3>🔬 Compartments</h3>
+                        <div id="compartment-filters"></div>
+                    </div>
+
+                    <!-- Categories -->
+                    <div class="filter-group">
+                        <h3>🧬 Matrisome Categories</h3>
+                        <div id="category-filters"></div>
+                    </div>
+
+                    <!-- Studies -->
+                    <div class="filter-group">
+                        <h3>📚 Studies</h3>
+                        <div id="study-filters"></div>
+                    </div>
+
+                    <!-- Trend -->
+                    <div class="filter-group">
+                        <h3>📈 Aging Trend</h3>
+                        <div id="trend-filters">
+                            <label><input type="checkbox" value="up" class="trend-checkbox" /> Increased (&gt;+0.5)</label>
+                            <label><input type="checkbox" value="down" class="trend-checkbox" /> Decreased (&lt;-0.5)</label>
+                            <label><input type="checkbox" value="stable" class="trend-checkbox" /> Stable (±0.5)</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-actions">
+                        <button id="apply-filters" class="btn-primary" style="width: 100%;">Apply Filters</button>
+                        <button id="clear-filters" class="btn-secondary" style="width: 100%;">Clear All</button>
+                    </div>
+
+                    <div style="margin-top: 15px; padding: 10px; background: #f5f7fa; border-radius: 5px; text-align: center;">
+                        <strong>Showing:</strong> <span id="protein-count">-</span> proteins
+                    </div>
+                </aside>
+
+                <!-- Main Heatmap -->
+                <main>
+                    <div class="section" style="margin: 0;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                            <h2 style="margin: 0; border: none; padding: 0;">Multi-Compartment ECM Protein Expression</h2>
+                            <div>
+                                <label>
+                                    Sort by:
+                                    <select id="sort-by" style="padding: 8px; border: 2px solid #e0e0e0; border-radius: 5px;">
+                                        <option value="magnitude">Magnitude</option>
+                                        <option value="category">Category</option>
+                                        <option value="name">Protein Name</option>
+                                    </select>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="legend">
+                            <h3>Z-Score Delta Color Scale</h3>
+                            <div class="legend-gradient">
+                                <span class="legend-label">-3 (Decreased)</span>
+                                <div class="gradient-bar"></div>
+                                <span class="legend-label">+3 (Increased)</span>
+                            </div>
+                            <p class="legend-note">⬜ = No data available in this compartment</p>
+                        </div>
+
+                        <div id="heatmap" class="chart-container tall">
+                            <div class="loading">Loading heatmap...</div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        `;
+
+        setupEventListeners();
+    }
+
+    function renderFilters(filters) {
+        // Organs
+        const organFilters = document.getElementById('organ-filters');
+        organFilters.innerHTML = filters.organs.map(organ => `
+            <label style="display: block; padding: 5px 0; cursor: pointer;">
+                <input type="checkbox" class="organ-checkbox" value="${organ.name}" checked />
+                ${organ.name} (${organ.count})
+            </label>
+        `).join('');
+
+        // Compartments
+        const compartmentFilters = document.getElementById('compartment-filters');
+        compartmentFilters.innerHTML = filters.compartments.map(comp => `
+            <label style="display: block; padding: 5px 0; cursor: pointer;">
+                <input type="checkbox" class="compartment-checkbox" value="${comp.name}" checked />
+                ${comp.name} (${comp.count})
+            </label>
+        `).join('');
+
+        // Categories
+        const categoryFilters = document.getElementById('category-filters');
+        categoryFilters.innerHTML = filters.categories.map(cat => `
+            <label style="display: block; padding: 5px 0; cursor: pointer;">
+                <input type="checkbox" class="category-checkbox" value="${cat.name}" checked />
+                ${cat.name} (${cat.count})
+            </label>
+        `).join('');
+
+        // Studies
+        const studyFilters = document.getElementById('study-filters');
+        studyFilters.innerHTML = filters.studies.map(study => `
+            <label style="display: block; padding: 5px 0; cursor: pointer;">
+                <input type="checkbox" class="study-checkbox" value="${study.name}" checked />
+                ${study.name.replace('_', ' ')} (${study.count})
+            </label>
+        `).join('');
+    }
+
+    function setupEventListeners() {
+        // Apply filters
+        document.getElementById('apply-filters').addEventListener('click', loadHeatmap);
+
+        // Clear filters
+        document.getElementById('clear-filters').addEventListener('click', () => {
+            document.querySelectorAll('.filters-panel input[type="checkbox"]').forEach(cb => {
+                cb.checked = false;
+            });
+            document.getElementById('search-input').value = '';
+        });
+
+        // Search on Enter
+        document.getElementById('search-input').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                loadHeatmap();
+            }
+        });
+
+        // Sort selector
+        document.getElementById('sort-by').addEventListener('change', (e) => {
+            if (currentHeatmapData) {
+                sortAndRenderHeatmap(e.target.value);
+            }
+        });
+    }
+
+    function getSelectedFilters() {
+        const filters = {};
+
+        // Organs
+        const organs = Array.from(document.querySelectorAll('.organ-checkbox:checked'))
+            .map(cb => cb.value);
+        if (organs.length > 0) filters.organs = organs.join(',');
+
+        // Compartments
+        const compartments = Array.from(document.querySelectorAll('.compartment-checkbox:checked'))
+            .map(cb => cb.value);
+        if (compartments.length > 0) filters.compartments = compartments.join(',');
+
+        // Categories
+        const categories = Array.from(document.querySelectorAll('.category-checkbox:checked'))
+            .map(cb => cb.value);
+        if (categories.length > 0) filters.categories = categories.join(',');
+
+        // Studies
+        const studies = Array.from(document.querySelectorAll('.study-checkbox:checked'))
+            .map(cb => cb.value);
+        if (studies.length > 0) filters.studies = studies.join(',');
+
+        // Trend
+        const trends = Array.from(document.querySelectorAll('.trend-checkbox:checked'))
+            .map(cb => cb.value);
+        if (trends.length === 1) filters.trend = trends[0];
+
+        // Search
+        const search = document.getElementById('search-input').value.trim();
+        if (search) filters.search = search;
+
+        return filters;
+    }
+
+    async function loadHeatmap() {
+        try {
+            window.ECMAtlas.showLoading(true);
+
+            const filters = getSelectedFilters();
+            const queryString = new URLSearchParams(filters).toString();
+            const endpoint = `/api/compare/heatmap${queryString ? '?' + queryString : ''}`;
+
+            const data = await window.ECMAtlas.fetchAPI(endpoint);
+            currentHeatmapData = data;
+
+            renderHeatmap(data);
+            updateProteinCount(data.summary.total_proteins);
+
+            window.ECMAtlas.showLoading(false);
+        } catch (error) {
+            console.error('Error loading heatmap:', error);
+            window.ECMAtlas.showLoading(false);
+        }
+    }
+
+    function renderHeatmap(data) {
+        const container = document.getElementById('heatmap');
+
+        if (!data.proteins || data.proteins.length === 0) {
+            container.innerHTML = '<p style="text-align: center; padding: 2rem;">No proteins match the selected filters.</p>';
+            return;
+        }
+
+        const proteins = data.proteins;
+        const compartments = data.compartments;
+
+        // Create z-values matrix
+        const zValues = [];
+        const hoverText = [];
+
+        for (const protein of proteins) {
+            const row = [];
+            const hoverRow = [];
+
+            for (const compartment of compartments) {
+                const compartmentData = data.data[protein][compartment];
+
+                if (compartmentData && compartmentData.zscore_delta !== null) {
+                    row.push(compartmentData.zscore_delta);
+                    hoverRow.push(
+                        `<b>${protein}</b><br>` +
+                        `Compartment: ${compartment}<br>` +
+                        `Dataset: ${compartmentData.dataset}<br>` +
+                        `Organ: ${compartmentData.organ}<br><br>` +
+                        `Zscore Young: ${compartmentData.zscore_young?.toFixed(2) || 'N/A'}<br>` +
+                        `Zscore Old: ${compartmentData.zscore_old?.toFixed(2) || 'N/A'}<br>` +
+                        `<b>Zscore Delta: ${compartmentData.zscore_delta.toFixed(2)}</b>`
+                    );
+                } else {
+                    row.push(null);
+                    hoverRow.push(`<b>${protein}</b><br>Compartment: ${compartment}<br>No data available`);
+                }
+            }
+
+            zValues.push(row);
+            hoverText.push(hoverRow);
+        }
+
+        // Create Plotly heatmap
+        const trace = {
+            z: zValues,
+            x: compartments,
+            y: proteins,
+            type: 'heatmap',
+            colorscale: [
+                [0, '#3b82f6'],    // Blue (-3)
+                [0.25, '#60a5fa'], // Light blue (-1)
+                [0.5, '#f3f4f6'],  // Gray (0)
+                [0.75, '#fbbf24'], // Yellow (+1)
+                [1, '#ef4444']     // Red (+3)
+            ],
+            zmin: -3,
+            zmax: 3,
+            hovertemplate: '%{text}<extra></extra>',
+            text: hoverText,
+            colorbar: {
+                title: 'Δ Z-Score',
+                titleside: 'right',
+                tickmode: 'linear',
+                tick0: -3,
+                dtick: 1
+            }
+        };
+
+        const layout = {
+            xaxis: {
+                title: 'Compartment',
+                side: 'bottom',
+                tickangle: -45
+            },
+            yaxis: {
+                title: 'Protein',
+                autorange: 'reversed',
+                tickfont: { size: 10 }
+            },
+            margin: { l: 100, r: 100, t: 50, b: 150 },
+            height: Math.max(600, proteins.length * 20),
+            paper_bgcolor: '#ffffff',
+            plot_bgcolor: '#ffffff'
+        };
+
+        const config = {
+            responsive: true,
+            displayModeBar: true,
+            modeBarButtonsToRemove: ['lasso2d', 'select2d'],
+            toImageButtonOptions: {
+                format: 'png',
+                filename: 'ecm_comparison_heatmap',
+                height: layout.height,
+                width: 1200,
+                scale: 2
+            }
+        };
+
+        Plotly.newPlot('heatmap', [trace], layout, config);
+    }
+
+    function sortAndRenderHeatmap(sortBy) {
+        if (!currentHeatmapData) return;
+
+        const data = { ...currentHeatmapData };
+        let proteins = [...data.proteins];
+
+        if (sortBy === 'magnitude') {
+            // Sort by sum of absolute z-scores
+            proteins.sort((a, b) => {
+                const sumA = Object.values(data.data[a])
+                    .filter(v => v && v.zscore_delta !== null)
+                    .reduce((sum, v) => sum + Math.abs(v.zscore_delta), 0);
+                const sumB = Object.values(data.data[b])
+                    .filter(v => v && v.zscore_delta !== null)
+                    .reduce((sum, v) => sum + Math.abs(v.zscore_delta), 0);
+                return sumB - sumA;
+            });
+        } else if (sortBy === 'category') {
+            // Sort by matrisome category
+            proteins.sort((a, b) => {
+                const catA = data.metadata[a].matrisome_category || 'ZZZ';
+                const catB = data.metadata[b].matrisome_category || 'ZZZ';
+                return catA.localeCompare(catB);
+            });
+        } else if (sortBy === 'name') {
+            // Sort alphabetically
+            proteins.sort((a, b) => a.localeCompare(b));
+        }
+
+        data.proteins = proteins;
+        renderHeatmap(data);
+    }
+
+    function updateProteinCount(count) {
+        const countElem = document.getElementById('protein-count');
+        if (countElem) {
+            countElem.textContent = count;
+        }
+    }
+
+    return {
+        init
+    };
+})();
+
+// Make available globally
+window.CompareDatasets = CompareDatasets;

@@ -15,6 +15,21 @@ This folder contains **comprehensive analyses** for all 11 ECM Atlas papers, syn
 4. **Claude Code updated papers** (`03_age_bin_paper_focus/claude_code/paper_analyses_updated/`)
 5. **Codex CLI updated papers** (`03_age_bin_paper_focus/codex_cli/paper_analyses_updated/`)
 
+## ✅ Processing Status (Updated 2025-10-13)
+
+**All 5 LFQ datasets successfully processed and merged!**
+
+- **Unified dataset**: `08_merged_ecm_dataset/merged_ecm_aging_zscore.csv`
+- **Total rows**: 2,177 ECM proteins
+- **Studies processed**:
+  1. ✅ Randles_2021 (458 rows) - Human kidney, 2 compartments
+  2. ✅ Tam_2020 (993 rows) - Human spine, 3 compartments
+  3. ✅ Angelidis_2019 (291 rows) - Mouse lung
+  4. ✅ Dipali_2023 (173 rows) - Mouse ovary
+  5. ✅ LiDermis_2021 (262 rows) - Human skin dermis
+- **Z-scores**: Calculated for all datasets (96.9-100% coverage)
+- **Status**: Ready for downstream analysis and visualization
+
 ---
 
 ## 📊 Column Mapping Completeness
@@ -27,11 +42,11 @@ This folder contains **comprehensive analyses** for all 11 ECM Atlas papers, syn
 
 | Study | Required | Mapped | % Complete | Status | Notes |
 |-------|----------|--------|------------|--------|-------|
-| **09_Randles_2021** | 14 | **14/14** | **100%** ✅ | Phase 1 Ready | All columns + Tissue_Compartment (kidney G/T), binary design |
-| **10_Tam_2020** | 14 | **14/14** | **100%** ✅ | Phase 1 Ready | All columns + Tissue_Compartment (spine NP/IAF/OAF), spatially resolved |
-| **01_Angelidis_2019** | 13 | **13/13** | **100%** ✅ | Phase 1 Ready | All required columns, binary design (no compartments) |
-| **05_Dipali_2023** | 13 | **13/13** | **100%** ✅ | Phase 1 Ready | All required columns (Codex found better source file) |
-| **06_LiDermis_2021** | 13 | **12/13** | **92%** ⚠️ | Phase 1 (preprocessing needed) | Protein_Name requires UniProt lookup or Table S3 join |
+| **09_Randles_2021** | 14 | **14/14** | **100%** ✅ | ✅ **PROCESSED** | All columns + Tissue_Compartment (kidney G/T), binary design |
+| **10_Tam_2020** | 14 | **14/14** | **100%** ✅ | ✅ **PROCESSED** | All columns + Tissue_Compartment (spine NP/IAF/OAF), spatially resolved |
+| **01_Angelidis_2019** | 13 | **13/13** | **100%** ✅ | ✅ **PROCESSED** | All required columns, binary design (no compartments) |
+| **05_Dipali_2023** | 13 | **13/13** | **100%** ✅ | ✅ **PROCESSED** | All required columns (Codex found better source file) |
+| **06_LiDermis_2021** | 13 | **13/13** | **100%** ✅ | ✅ **PROCESSED** | UniProt API used for Protein_Name enrichment (100% success) |
 | **02_Ariosa_2021** | 13 | 8/13 | 62% | Phase 3 Deferred | SILAC - labeled method, mapping preview only |
 | **03_Caldeira_2017** | 13 | 9/13 | 69% | Phase 3 Deferred | iTRAQ - labeled method, mapping preview only |
 | **07_LiPancreas_2021** | 13 | 9/13 | 69% | Phase 3 Deferred | DiLeu - labeled method, mapping preview only |
@@ -41,10 +56,12 @@ This folder contains **comprehensive analyses** for all 11 ECM Atlas papers, syn
 
 ### Summary Statistics
 
-**Phase 1 (LFQ Proteomics):**
-- ✅ **2 studies with 14/14 columns (100%)** (Randles, Tam) - **Includes Tissue_Compartment - Ready for immediate parsing**
-- ✅ **2 studies with 13/13 columns (100%)** (Angelidis, Dipali) - **No compartments - Ready for immediate parsing**
-- ⚠️ **1 study with 12/13 columns (92%)** (LiDermis) - **Needs Protein_Name preprocessing before parsing**
+**Phase 1 (LFQ Proteomics) - ALL PROCESSED ✅:**
+- ✅ **5/5 studies successfully processed and merged** (100% completion!)
+- ✅ **2 studies with compartments** (Randles kidney 2×, Tam spine 3×) - 1,451 rows
+- ✅ **3 studies without compartments** (Angelidis lung, Dipali ovary, LiDermis dermis) - 726 rows
+- ✅ **Z-scores calculated** for all 5 studies (96.9-100% coverage)
+- ✅ **Unified dataset ready**: 2,177 ECM protein entries across 5 tissues
 
 **Phase 3 (Labeled Methods):**
 - **5 studies with 69% mapping** (partial preview) - Deferred to Phase 3 with different schema requirements

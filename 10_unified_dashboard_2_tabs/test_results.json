@@ -1,0 +1,93 @@
+{
+  "timestamp": "2025-10-13T21:35:25.917652",
+  "datasets": [
+    {
+      "name": "Angelidis_2019",
+      "organ": "Lung",
+      "compartments": [
+        "Lung"
+      ],
+      "status": "success",
+      "charts": {
+        "heatmap": "OK",
+        "volcano": "OK",
+        "scatter": "OK",
+        "bars": "OK",
+        "histograms": "Lung:OK",
+        "comparison": "N/A (single compartment)"
+      },
+      "screenshot": "test_screenshots/Angelidis_2019_full.png"
+    },
+    {
+      "name": "Dipali_2023",
+      "organ": "Ovary",
+      "compartments": [
+        "Ovary"
+      ],
+      "status": "success",
+      "charts": {
+        "heatmap": "OK",
+        "volcano": "OK",
+        "scatter": "OK",
+        "bars": "OK",
+        "histograms": "Ovary:OK",
+        "comparison": "N/A (single compartment)"
+      },
+      "screenshot": "test_screenshots/Dipali_2023_full.png"
+    },
+    {
+      "name": "LiDermis_2021",
+      "organ": "Skin dermis",
+      "compartments": [
+        "Skin dermis"
+      ],
+      "status": "success",
+      "charts": {
+        "heatmap": "OK",
+        "volcano": "OK",
+        "scatter": "OK",
+        "bars": "OK",
+        "histograms": "",
+        "comparison": "N/A (single compartment)"
+      },
+      "screenshot": "test_screenshots/LiDermis_2021_full.png"
+    },
+    {
+      "name": "Randles_2021",
+      "organ": "Kidney",
+      "compartments": [
+        "Glomerular",
+        "Tubulointerstitial"
+      ],
+      "status": "success",
+      "charts": {
+        "heatmap": "OK",
+        "volcano": "OK",
+        "scatter": "OK",
+        "bars": "OK",
+        "histograms": "Glomerular:OK, Tubulointerstitial:OK",
+        "comparison": "OK"
+      },
+      "screenshot": "test_screenshots/Randles_2021_full.png"
+    },
+    {
+      "name": "Tam_2020",
+      "organ": "Intervertebral_disc",
+      "compartments": [
+        "NP",
+        "IAF",
+        "OAF"
+      ],
+      "status": "success",
+      "charts": {
+        "heatmap": "OK",
+        "volcano": "OK",
+        "scatter": "OK",
+        "bars": "OK",
+        "histograms": "NP:OK, IAF:OK, OAF:OK",
+        "comparison": "OK"
+      },
+      "screenshot": "test_screenshots/Tam_2020_full.png"
+    }
+  ]
+}

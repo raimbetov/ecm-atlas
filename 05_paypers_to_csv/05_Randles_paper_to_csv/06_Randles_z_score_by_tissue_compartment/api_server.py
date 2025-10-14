@@ -142,7 +142,7 @@ if __name__ == '__main__':
     print("  GET /api/bars/<compartment> - Top 20 aging markers")
     print("  GET /api/histogram/<compartment> - Histogram data")
     print("  GET /api/comparison - Compartment comparison data")
-    print("\nStarting server on http://localhost:5001")
+    print("\nStarting server on http://localhost:5003")
     print("="*60 + "\n")
 
-    app.run(host='0.0.0.0', port=5002, debug=False)
+    app.run(host='0.0.0.0', port=5003, debug=False)

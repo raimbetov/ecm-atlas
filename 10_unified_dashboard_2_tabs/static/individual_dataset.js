@@ -1,0 +1,557 @@
+// Individual Dataset Analysis Module
+
+const IndividualDataset = (function() {
+    let currentDataset = null;
+    let currentCompartment = {};
+    let datasetStats = null;
+
+    function init() {
+        console.log('Individual Dataset module initialized');
+    }
+
+    async function loadDataset(datasetName) {
+        try {
+            window.ECMAtlas.showLoading(true);
+
+            currentDataset = datasetName;
+
+            // Load dataset stats
+            const stats = await window.ECMAtlas.fetchAPI(`/api/dataset/${datasetName}/stats`);
+            datasetStats = stats;
+
+            // Display dataset info
+            displayDatasetInfo(stats);
+
+            // Render content
+            renderContent(stats);
+
+            // Load initial visualizations for first compartment
+            const firstCompartment = Object.keys(stats.compartments)[0];
+            if (firstCompartment) {
+                await loadAllVisualizations(firstCompartment);
+            }
+
+            window.ECMAtlas.showLoading(false);
+        } catch (error) {
+            console.error('Error loading dataset:', error);
+            window.ECMAtlas.showLoading(false);
+            alert(`Error loading dataset: ${error.message}`);
+        }
+    }
+
+    function displayDatasetInfo(stats) {
+        const infoDiv = document.getElementById('dataset-info');
+        const compartmentList = Object.keys(stats.compartments).map(comp => {
+            const compStats = stats.compartments[comp];
+            return `${comp} (${compStats.protein_count} proteins, ${compStats.ecm_count} ECM)`;
+        }).join(', ');
+
+        infoDiv.innerHTML = `
+            <strong>Organ:</strong> ${stats.organ} |
+            <strong>Total Proteins:</strong> ${stats.total_proteins} |
+            <strong>ECM Proteins:</strong> ${stats.ecm_proteins}<br>
+            <strong>Compartments:</strong> ${compartmentList}
+        `;
+    }
+
+    function renderContent(stats) {
+        const content = document.getElementById('individual-content');
+        const compartments = Object.keys(stats.compartments);
+        const hasMultipleCompartments = compartments.length > 1;
+
+        content.innerHTML = `
+            <!-- Statistics -->
+            <div class="stats-container" id="dataset-stats"></div>
+
+            <!-- Heatmap -->
+            <div class="section">
+                <h2>1. Heatmap: Top Aging-Associated Proteins</h2>
+                <p>Top 100 proteins with largest absolute z-score changes. Color gradient: Blue (low) → White (neutral) → Red (high)</p>
+                ${renderCompartmentTabs(compartments, 'heatmap')}
+                <div id="heatmap-chart" class="chart-container tall">
+                    <div class="loading">Select a compartment to view heatmap...</div>
+                </div>
+            </div>
+
+            <!-- Volcano Plot -->
+            <div class="section">
+                <h2>2. Volcano Plot: Differential Expression</h2>
+                <p>X-axis: Z-Score Change (Old - Young), Y-axis: -log10(Average Abundance)</p>
+                ${renderCompartmentTabs(compartments, 'volcano')}
+                <div id="volcano-chart" class="chart-container">
+                    <div class="loading">Select a compartment to view volcano plot...</div>
+                </div>
+            </div>
+
+            <!-- Scatter Plot -->
+            <div class="section">
+                <h2>3. Scatter Plot: Young vs Old Comparison</h2>
+                <p>Direct comparison of z-scores between age groups. ECM proteins highlighted in red.</p>
+                ${renderCompartmentTabs(compartments, 'scatter')}
+                <div id="scatter-chart" class="chart-container">
+                    <div class="loading">Select a compartment to view scatter plot...</div>
+                </div>
+            </div>
+
+            <!-- Bar Chart -->
+            <div class="section">
+                <h2>4. Bar Chart: Top 20 Aging Markers</h2>
+                <p>Top 10 increases and top 10 decreases with aging</p>
+                ${renderCompartmentTabs(compartments, 'bars')}
+                <div id="bars-chart" class="chart-container">
+                    <div class="loading">Select a compartment to view bar chart...</div>
+                </div>
+            </div>
+
+            <!-- Histograms -->
+            <div class="section">
+                <h2>5. Histograms: Distribution of Z-Score Changes</h2>
+                <p>Overall distribution of aging-related changes</p>
+                <div class="grid-${Math.min(compartments.length, 3)}">
+                    ${compartments.map(comp => `
+                        <div>
+                            <h3 style="text-align: center; color: #667eea;">${comp}</h3>
+                            <div id="histogram-${comp}" class="chart-container">
+                                <div class="loading">Loading...</div>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+
+            ${hasMultipleCompartments ? `
+            <!-- Compartment Comparison -->
+            <div class="section">
+                <h2>6. Compartment Comparison</h2>
+                <p>Correlation of aging changes between compartments</p>
+                <div id="comparison-chart" class="chart-container">
+                    <div class="loading">Loading comparison...</div>
+                </div>
+            </div>
+            ` : ''}
+        `;
+
+        renderDatasetStats(stats);
+        setupCompartmentTabs();
+    }
+
+    function renderCompartmentTabs(compartments, chartType) {
+        return `
+            <div class="compartment-tabs" data-chart="${chartType}">
+                ${compartments.map((comp, idx) => `
+                    <button class="tab ${idx === 0 ? 'active' : ''}"
+                            data-compartment="${comp}"
+                            data-chart="${chartType}">
+                        ${comp}
+                    </button>
+                `).join('')}
+            </div>
+        `;
+    }
+
+    function setupCompartmentTabs() {
+        document.querySelectorAll('.compartment-tabs .tab').forEach(button => {
+            button.addEventListener('click', (e) => {
+                const compartment = e.target.dataset.compartment;
+                const chartType = e.target.dataset.chart;
+
+                // Update active state
+                window.ECMAtlas.updateActiveTab(e, 'tab');
+
+                // Load visualization
+                loadVisualization(chartType, compartment);
+            });
+        });
+    }
+
+    function renderDatasetStats(stats) {
+        const container = document.getElementById('dataset-stats');
+        const compartments = Object.keys(stats.compartments);
+
+        container.innerHTML = compartments.map(comp => {
+            const compStats = stats.compartments[comp];
+            return `
+                <div class="stat-card">
+                    <div class="number">${compStats.protein_count}</div>
+                    <div class="label">${comp} Proteins</div>
+                </div>
+                <div class="stat-card">
+                    <div class="number">${compStats.ecm_count}</div>
+                    <div class="label">${comp} ECM</div>
+                </div>
+            `;
+        }).join('');
+    }
+
+    async function loadAllVisualizations(compartment) {
+        currentCompartment = {
+            heatmap: compartment,
+            volcano: compartment,
+            scatter: compartment,
+            bars: compartment
+        };
+
+        await Promise.all([
+            loadHeatmap(compartment),
+            loadVolcano(compartment),
+            loadScatter(compartment),
+            loadBars(compartment)
+        ]);
+
+        // Load histograms for all compartments
+        const compartments = Object.keys(datasetStats.compartments);
+        await Promise.all(
+            compartments.map(comp => loadHistogram(comp))
+        );
+
+        // Load comparison if multiple compartments
+        if (compartments.length > 1) {
+            await loadComparison();
+        }
+    }
+
+    async function loadVisualization(type, compartment) {
+        switch (type) {
+            case 'heatmap':
+                await loadHeatmap(compartment);
+                break;
+            case 'volcano':
+                await loadVolcano(compartment);
+                break;
+            case 'scatter':
+                await loadScatter(compartment);
+                break;
+            case 'bars':
+                await loadBars(compartment);
+                break;
+        }
+    }
+
+    async function loadHeatmap(compartment) {
+        const container = document.getElementById('heatmap-chart');
+        container.innerHTML = '<div class="loading">Loading heatmap...</div>';
+
+        try {
+            const data = await window.ECMAtlas.fetchAPI(
+                `/api/dataset/${currentDataset}/heatmap/${compartment}?n=100`
+            );
+
+            const trace = {
+                type: 'heatmap',
+                z: data.genes.map((gene, i) => [data.zscore_young[i], data.zscore_old[i]]),
+                y: data.genes,
+                x: ['Young', 'Old'],
+                colorscale: 'RdBu',
+                reversescale: true,
+                zmid: 0,
+                zmin: -5,
+                zmax: 5,
+                colorbar: {
+                    title: { text: 'Z-Score', side: 'right' },
+                    thickness: 20
+                },
+                hovertemplate: '<b>%{y}</b><br>Age: %{x}<br>Z-Score: %{z:.2f}<extra></extra>'
+            };
+
+            const layout = {
+                title: `${data.compartment}: Top 100 Aging-Associated Proteins`,
+                xaxis: { title: 'Age Group', side: 'bottom' },
+                yaxis: { title: 'Gene Symbol', tickfont: { size: 8 } },
+                height: 1200,
+                margin: { l: 100, r: 100, t: 80, b: 80 }
+            };
+
+            Plotly.newPlot('heatmap-chart', [trace], layout, { responsive: true });
+        } catch (error) {
+            container.innerHTML = `<div class="error">Failed to load heatmap: ${error.message}</div>`;
+        }
+    }
+
+    async function loadVolcano(compartment) {
+        const container = document.getElementById('volcano-chart');
+        container.innerHTML = '<div class="loading">Loading volcano plot...</div>';
+
+        try {
+            const data = await window.ECMAtlas.fetchAPI(
+                `/api/dataset/${currentDataset}/volcano/${compartment}`
+            );
+
+            const trace = {
+                type: 'scatter',
+                mode: 'markers',
+                x: data.zscore_delta,
+                y: data.neglog_abundance,
+                text: data.genes,
+                marker: {
+                    size: 6,
+                    color: data.zscore_delta,
+                    colorscale: 'RdBu',
+                    reversescale: true,
+                    showscale: true,
+                    colorbar: { title: 'ΔZ-Score', thickness: 15 }
+                },
+                hovertemplate: '<b>%{text}</b><br>ΔZ-Score: %{x:.2f}<br>-log10(Abundance): %{y:.2f}<extra></extra>'
+            };
+
+            const layout = {
+                title: `${compartment}: Volcano Plot`,
+                xaxis: {
+                    title: 'Z-Score Change (Old - Young)',
+                    zeroline: true,
+                    zerolinewidth: 2,
+                    zerolinecolor: 'gray'
+                },
+                yaxis: { title: '-log10(Average Abundance + 1)' },
+                height: 600,
+                hovermode: 'closest'
+            };
+
+            Plotly.newPlot('volcano-chart', [trace], layout, { responsive: true });
+        } catch (error) {
+            container.innerHTML = `<div class="error">Failed to load volcano plot: ${error.message}</div>`;
+        }
+    }
+
+    async function loadScatter(compartment) {
+        const container = document.getElementById('scatter-chart');
+        container.innerHTML = '<div class="loading">Loading scatter plot...</div>';
+
+        try {
+            const data = await window.ECMAtlas.fetchAPI(
+                `/api/dataset/${currentDataset}/scatter/${compartment}`
+            );
+
+            // Separate ECM and non-ECM
+            const ecmIndices = data.is_ecm.map((isEcm, i) => isEcm ? i : -1).filter(i => i !== -1);
+            const nonEcmIndices = data.is_ecm.map((isEcm, i) => !isEcm ? i : -1).filter(i => i !== -1);
+
+            const traces = [
+                {
+                    type: 'scatter',
+                    mode: 'markers',
+                    name: 'Non-ECM',
+                    x: nonEcmIndices.map(i => data.zscore_young[i]),
+                    y: nonEcmIndices.map(i => data.zscore_old[i]),
+                    text: nonEcmIndices.map(i => data.genes[i]),
+                    marker: { size: 6, color: 'lightblue', opacity: 0.6 },
+                    hovertemplate: '<b>%{text}</b><br>Young: %{x:.2f}<br>Old: %{y:.2f}<extra></extra>'
+                },
+                {
+                    type: 'scatter',
+                    mode: 'markers',
+                    name: 'ECM Proteins',
+                    x: ecmIndices.map(i => data.zscore_young[i]),
+                    y: ecmIndices.map(i => data.zscore_old[i]),
+                    text: ecmIndices.map(i => `${data.genes[i]} (${data.matrisome_category[i]})`),
+                    marker: { size: 8, color: 'red', opacity: 0.8 },
+                    hovertemplate: '<b>%{text}</b><br>Young: %{x:.2f}<br>Old: %{y:.2f}<extra></extra>'
+                }
+            ];
+
+            // Diagonal reference line
+            const minVal = Math.min(...data.zscore_young, ...data.zscore_old);
+            const maxVal = Math.max(...data.zscore_young, ...data.zscore_old);
+            traces.push({
+                type: 'scatter',
+                mode: 'lines',
+                name: 'No Change',
+                x: [minVal, maxVal],
+                y: [minVal, maxVal],
+                line: { color: 'gray', dash: 'dash', width: 2 },
+                hoverinfo: 'skip'
+            });
+
+            const layout = {
+                title: `${compartment}: Young vs Old Z-Scores`,
+                xaxis: { title: 'Z-Score Young', zeroline: true },
+                yaxis: { title: 'Z-Score Old', zeroline: true },
+                height: 600,
+                hovermode: 'closest'
+            };
+
+            Plotly.newPlot('scatter-chart', traces, layout, { responsive: true });
+        } catch (error) {
+            container.innerHTML = `<div class="error">Failed to load scatter plot: ${error.message}</div>`;
+        }
+    }
+
+    async function loadBars(compartment) {
+        const container = document.getElementById('bars-chart');
+        container.innerHTML = '<div class="loading">Loading bar chart...</div>';
+
+        try {
+            const data = await window.ECMAtlas.fetchAPI(
+                `/api/dataset/${currentDataset}/bars/${compartment}`
+            );
+
+            const colors = data.zscore_delta.map(val => val > 0 ? '#d32f2f' : '#1976d2');
+
+            const trace = {
+                type: 'bar',
+                orientation: 'h',
+                y: data.genes,
+                x: data.zscore_delta,
+                marker: { color: colors },
+                text: data.zscore_delta.map(v => v.toFixed(2)),
+                textposition: 'auto',
+                hovertemplate: '<b>%{y}</b><br>ΔZ-Score: %{x:.2f}<br>Category: %{customdata}<extra></extra>',
+                customdata: data.matrisome_category
+            };
+
+            const layout = {
+                title: `${compartment}: Top 20 Aging Markers`,
+                xaxis: {
+                    title: 'Z-Score Change (Old - Young)',
+                    zeroline: true,
+                    zerolinewidth: 2,
+                    zerolinecolor: 'gray'
+                },
+                yaxis: { title: 'Gene Symbol' },
+                height: 600,
+                margin: { l: 100 }
+            };
+
+            Plotly.newPlot('bars-chart', [trace], layout, { responsive: true });
+        } catch (error) {
+            container.innerHTML = `<div class="error">Failed to load bar chart: ${error.message}</div>`;
+        }
+    }
+
+    async function loadHistogram(compartment) {
+        const containerId = `histogram-${compartment}`;
+        const container = document.getElementById(containerId);
+
+        if (!container) return;
+
+        try {
+            const data = await window.ECMAtlas.fetchAPI(
+                `/api/dataset/${currentDataset}/histogram/${compartment}`
+            );
+
+            const trace = {
+                type: 'histogram',
+                x: data.zscore_delta,
+                nbinsx: 50,
+                marker: {
+                    color: '#667eea',
+                    line: { color: 'white', width: 1 }
+                },
+                hovertemplate: 'ΔZ-Score Range: %{x}<br>Count: %{y}<extra></extra>'
+            };
+
+            const layout = {
+                title: `${compartment}: Distribution`,
+                xaxis: { title: 'Z-Score Change', zeroline: true },
+                yaxis: { title: 'Frequency' },
+                height: 500,
+                shapes: [{
+                    type: 'line',
+                    x0: data.mean_delta,
+                    x1: data.mean_delta,
+                    y0: 0,
+                    y1: 1,
+                    yref: 'paper',
+                    line: { color: 'red', width: 2, dash: 'dash' }
+                }],
+                annotations: [{
+                    x: data.mean_delta,
+                    y: 0.95,
+                    yref: 'paper',
+                    text: `Mean: ${data.mean_delta.toFixed(3)}`,
+                    showarrow: false,
+                    bgcolor: 'rgba(255, 255, 255, 0.8)',
+                    bordercolor: 'red',
+                    borderwidth: 1
+                }]
+            };
+
+            Plotly.newPlot(containerId, [trace], layout, { responsive: true });
+        } catch (error) {
+            container.innerHTML = `<div class="error">Failed to load histogram: ${error.message}</div>`;
+        }
+    }
+
+    async function loadComparison() {
+        const container = document.getElementById('comparison-chart');
+        if (!container) return;
+
+        try {
+            const data = await window.ECMAtlas.fetchAPI(
+                `/api/dataset/${currentDataset}/comparison`
+            );
+
+            // Group by matrisome category
+            const categories = [...new Set(data.matrisome_category)];
+            const colors = {
+                'Non-ECM': 'lightgray',
+                'Core matrisome': '#e53935',
+                'Matrisome-associated': '#1e88e5',
+                'ECM Glycoproteins': '#43a047',
+                'Collagens': '#fdd835',
+                'Proteoglycans': '#8e24aa'
+            };
+
+            const traces = categories.map(cat => {
+                const indices = data.matrisome_category.map((c, i) => c === cat ? i : -1).filter(i => i !== -1);
+                return {
+                    type: 'scatter',
+                    mode: 'markers',
+                    name: cat,
+                    x: indices.map(i => data.zscore_delta_comp1[i]),
+                    y: indices.map(i => data.zscore_delta_comp2[i]),
+                    text: indices.map(i => data.genes[i]),
+                    marker: {
+                        size: cat === 'Non-ECM' ? 4 : 8,
+                        color: colors[cat] || 'gray',
+                        opacity: cat === 'Non-ECM' ? 0.3 : 0.7
+                    },
+                    hovertemplate: `<b>%{text}</b><br>${data.compartment1}: %{x:.2f}<br>${data.compartment2}: %{y:.2f}<extra></extra>`
+                };
+            });
+
+            // Diagonal reference line
+            const allValues = [...data.zscore_delta_comp1, ...data.zscore_delta_comp2];
+            const minVal = Math.min(...allValues);
+            const maxVal = Math.max(...allValues);
+            traces.push({
+                type: 'scatter',
+                mode: 'lines',
+                name: 'Perfect Correlation',
+                x: [minVal, maxVal],
+                y: [minVal, maxVal],
+                line: { color: 'black', dash: 'dash', width: 2 },
+                hoverinfo: 'skip'
+            });
+
+            const layout = {
+                title: `Compartment Comparison: ${data.compartment1} vs ${data.compartment2}`,
+                xaxis: {
+                    title: `${data.compartment1} ΔZ-Score`,
+                    zeroline: true,
+                    zerolinewidth: 2,
+                    zerolinecolor: 'gray'
+                },
+                yaxis: {
+                    title: `${data.compartment2} ΔZ-Score`,
+                    zeroline: true,
+                    zerolinewidth: 2,
+                    zerolinecolor: 'gray'
+                },
+                height: 600,
+                hovermode: 'closest'
+            };
+
+            Plotly.newPlot('comparison-chart', traces, layout, { responsive: true });
+        } catch (error) {
+            container.innerHTML = `<div class="error">Failed to load comparison: ${error.message}</div>`;
+        }
+    }
+
+    return {
+        init,
+        loadDataset
+    };
+})();
+
+// Make available globally
+window.IndividualDataset = IndividualDataset;
