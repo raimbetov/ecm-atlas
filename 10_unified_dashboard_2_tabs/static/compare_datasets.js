@@ -215,10 +215,10 @@ const CompareDatasets = (function() {
             .map(cb => cb.value);
         if (studies.length > 0) filters.studies = studies.join(',');
 
-        // Trend
+        // Trend (allow multiple selections)
         const trends = Array.from(document.querySelectorAll('.trend-checkbox:checked'))
             .map(cb => cb.value);
-        if (trends.length === 1) filters.trend = trends[0];
+        if (trends.length > 0) filters.trends = trends.join(',');
 
         // Search
         const search = document.getElementById('search-input').value.trim();

@@ -294,14 +294,23 @@ def get_compare_heatmap():
         studies = request.args.get('studies').split(',')
         filtered_df = filtered_df[filtered_df['Dataset_Name'].isin(studies)]
 
-    if 'trend' in request.args:
-        trend = request.args.get('trend')
-        if trend == 'up':
-            filtered_df = filtered_df[filtered_df['Zscore_Delta'] > 0.5]
-        elif trend == 'down':
-            filtered_df = filtered_df[filtered_df['Zscore_Delta'] < -0.5]
-        elif trend == 'stable':
-            filtered_df = filtered_df[filtered_df['Zscore_Delta'].abs() <= 0.5]
+    if 'trends' in request.args:
+        trends = request.args.get('trends').split(',')
+        trend_conditions = []
+
+        if 'up' in trends:
+            trend_conditions.append(filtered_df['Zscore_Delta'] > 0.5)
+        if 'down' in trends:
+            trend_conditions.append(filtered_df['Zscore_Delta'] < -0.5)
+        if 'stable' in trends:
+            trend_conditions.append(filtered_df['Zscore_Delta'].abs() <= 0.5)
+
+        if trend_conditions:
+            # Combine conditions with OR
+            combined_condition = trend_conditions[0]
+            for condition in trend_conditions[1:]:
+                combined_condition = combined_condition | condition
+            filtered_df = filtered_df[combined_condition]
 
     if 'search' in request.args:
         search_query = request.args.get('search').lower()
