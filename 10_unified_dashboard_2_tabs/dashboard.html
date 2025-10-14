@@ -11,7 +11,12 @@
     <!-- Header -->
     <header class="header">
         <div class="header-content">
-            <h1>🧬 ECM Atlas - Unified Analysis Dashboard</h1>
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h1>🧬 ECM Atlas - Unified Analysis Dashboard</h1>
+                <div id="version-badge" style="background: rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 600;">
+                    v<span id="version-number">loading...</span>
+                </div>
+            </div>
             <p>Comprehensive analysis of extracellular matrix protein changes across aging tissues</p>
             <div class="stats-summary" id="global-stats">
                 Loading...

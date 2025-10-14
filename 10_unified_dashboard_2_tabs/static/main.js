@@ -12,6 +12,7 @@ let globalData = {
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', async () => {
     await loadGlobalData();
+    await loadVersion();
     setupTabNavigation();
 
     // Initialize first tab
@@ -39,6 +40,35 @@ async function loadGlobalData() {
         console.error('Error loading global data:', error);
         showLoading(false);
         alert('Error loading data. Please check if API server is running on port 5004.');
+    }
+}
+
+// Load version information
+async function loadVersion() {
+    try {
+        const versionData = await fetchAPI('/api/version');
+        const versionElement = document.getElementById('version-number');
+        const badgeElement = document.getElementById('version-badge');
+
+        if (versionElement) {
+            versionElement.textContent = versionData.version;
+        }
+
+        // Add hover tooltip with changelog
+        if (badgeElement && versionData.changelog && versionData.changelog.length > 0) {
+            const latestChanges = versionData.changelog[0];
+            const tooltip = `Version ${latestChanges.version} (${latestChanges.date})\n\n${latestChanges.changes.join('\n')}`;
+            badgeElement.title = tooltip;
+            badgeElement.style.cursor = 'help';
+        }
+
+        console.log(`ECM Atlas Dashboard v${versionData.version}`);
+    } catch (error) {
+        console.error('Error loading version:', error);
+        const versionElement = document.getElementById('version-number');
+        if (versionElement) {
+            versionElement.textContent = 'unknown';
+        }
     }
 }
 

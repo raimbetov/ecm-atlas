@@ -1,6 +1,10 @@
-# ECM Atlas - Unified Analysis Dashboard v2
+# ECM Atlas - Unified Analysis Dashboard
+
+**Current Version:** v1.2.0 (2025-10-13)
 
 Comprehensive interactive dashboard for analyzing extracellular matrix (ECM) protein changes across aging tissues.
+
+> 📝 **Version Management:** See [VERSION_GUIDE.md](VERSION_GUIDE.md) for how to update version numbers
 
 ## Features
 
@@ -177,6 +181,25 @@ If ports 5004 or 8083 are already in use, modify `start_servers.sh` and update:
 1. Ensure Plotly.js CDN is accessible
 2. Check browser console for errors
 3. Try refreshing the page
+
+## Version History
+
+### v1.2.0 (2025-10-13) - Current
+- **Fixed:** Normalize Gene_Symbol to uppercase (merged 247 duplicates)
+- **Fixed:** Aggregate multiple isoforms per protein
+- **Fixed:** Aging Trend filters now support multiple selections
+- **Added:** Isoform count in tooltips
+- **Added:** Version badge in dashboard header
+
+### v1.1.0 (2025-10-13)
+- **Added:** Multi-dataset comparison heatmap
+- **Added:** Advanced filtering (organs, compartments, categories, trends)
+- **Added:** Protein search functionality
+
+### v1.0.0 (2025-10-12)
+- Initial release
+- Individual dataset analysis with 6 visualization types
+- Support for 5 LFQ proteomics datasets
 
 ## Future Enhancements
 

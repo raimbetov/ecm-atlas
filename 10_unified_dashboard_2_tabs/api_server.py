@@ -46,6 +46,21 @@ def health():
         "port": 5004
     })
 
+@app.route('/api/version')
+def get_version():
+    """Get dashboard version information"""
+    import json
+    version_file = os.path.join(script_dir, 'version.json')
+    try:
+        with open(version_file, 'r') as f:
+            version_data = json.load(f)
+        return jsonify(version_data)
+    except Exception as e:
+        return jsonify({
+            "version": "unknown",
+            "error": str(e)
+        }), 500
+
 @app.route('/api/global_stats')
 def get_global_stats():
     """Get overall statistics across all datasets"""

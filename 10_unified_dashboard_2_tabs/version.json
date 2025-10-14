@@ -1,0 +1,34 @@
+{
+  "version": "1.2.0",
+  "date": "2025-10-13",
+  "changelog": [
+    {
+      "version": "1.2.0",
+      "date": "2025-10-13",
+      "changes": [
+        "Fixed: Normalize Gene_Symbol to uppercase (merged 247 duplicates)",
+        "Fixed: Aggregate multiple isoforms per protein",
+        "Fixed: Aging Trend filters now support multiple selections",
+        "Added: Isoform count in tooltips"
+      ]
+    },
+    {
+      "version": "1.1.0",
+      "date": "2025-10-13",
+      "changes": [
+        "Added: Multi-dataset comparison heatmap",
+        "Added: Advanced filtering (organs, compartments, categories, trends)",
+        "Added: Protein search functionality"
+      ]
+    },
+    {
+      "version": "1.0.0",
+      "date": "2025-10-12",
+      "changes": [
+        "Initial release",
+        "Individual dataset analysis with 6 visualization types",
+        "Support for 5 LFQ proteomics datasets"
+      ]
+    }
+  ]
+}
