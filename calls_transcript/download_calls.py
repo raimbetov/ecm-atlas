@@ -167,9 +167,11 @@ def main():
     print("=" * 50)
     print()
 
-    # Setup paths
+    # Setup paths - create folder with yesterday's date
     script_dir = Path(__file__).parent
-    output_dir = script_dir / "calls_transcript"
+    yesterday = datetime.now() - timedelta(days=1)
+    folder_name = f"biology_{yesterday.strftime('%Y%m%d')}"
+    output_dir = script_dir / folder_name
     output_dir.mkdir(exist_ok=True)
 
     # Initialize Fireflies client
@@ -184,14 +186,14 @@ def main():
         print("or in .env file at chrome-extension-tcs directory")
         sys.exit(1)
 
-    # Get today's date range
+    # Get yesterday's date range
     today = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
-    tomorrow = today + timedelta(days=1)
+    yesterday = today - timedelta(days=1)
 
-    date_from = today.strftime('%Y-%m-%d')
-    date_to = tomorrow.strftime('%Y-%m-%d')
+    date_from = yesterday.strftime('%Y-%m-%d')
+    date_to = today.strftime('%Y-%m-%d')
 
-    print(f"📅 Searching for calls from {date_from}")
+    print(f"📅 Searching for calls from {date_from} (biology/longevity topics)")
     print()
 
     # Search for today's meetings
@@ -203,14 +205,41 @@ def main():
         )
 
         if not meetings:
-            print("ℹ️  No calls found for today")
+            print("ℹ️  No calls found for yesterday")
             return
 
-        print(f"✓ Found {len(meetings)} call(s)")
+        # Filter meetings by biology/longevity topics
+        biology_keywords = [
+            'biolog', 'longevity', 'aging', 'долголет', 'биолог', 'старен',
+            'protein', 'ecm', 'matrisome', 'proteomic', 'tissue',
+            'cell', 'gene', 'research', 'science', 'lab', 'experiment',
+            'clinical', 'medical', 'health', 'disease', 'therapy'
+        ]
+
+        relevant_meetings = []
+        for meeting in meetings:
+            title = meeting.get('title', '').lower()
+            summary = meeting.get('summary', {})
+            overview = summary.get('overview', '').lower() if summary else ''
+            keywords = summary.get('keywords', []) if summary else []
+            keywords_str = ' '.join([str(k).lower() for k in keywords])
+
+            # Check if any biology keyword is in title, overview, or keywords
+            full_text = f"{title} {overview} {keywords_str}"
+            if any(keyword in full_text for keyword in biology_keywords):
+                relevant_meetings.append(meeting)
+                print(f"   ✓ Match: {meeting.get('title', 'Untitled')}")
+
+        if not relevant_meetings:
+            print(f"ℹ️  Found {len(meetings)} call(s) but none about biology/longevity")
+            return
+
+        print()
+        print(f"✓ Found {len(relevant_meetings)} relevant call(s) (out of {len(meetings)} total)")
         print()
 
         # Download each meeting with full transcript
-        for i, meeting_summary in enumerate(meetings, 1):
+        for i, meeting_summary in enumerate(relevant_meetings, 1):
             meeting_id = meeting_summary.get('id')
             title = meeting_summary.get('title', 'Untitled')
 
@@ -233,7 +262,7 @@ def main():
                 continue
 
         print("=" * 50)
-        print(f"✅ Downloaded {len(meetings)} transcript(s) to: {output_dir}")
+        print(f"✅ Downloaded {len(relevant_meetings)} transcript(s) to: {output_dir}")
 
     except Exception as e:
         print(f"❌ Search failed: {e}")
