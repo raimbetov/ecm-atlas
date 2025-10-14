@@ -1,0 +1,13 @@
+{
+  "study_id": "Schuler_2021",
+  "paper_folder": "data_raw/Schuler et al. - 2021",
+  "data_file": "data_raw/Schuler et al. - 2021/mmc4.xls",
+  "data_sheet": "description",
+  "species": "Homo sapiens",
+  "tissue": "Unknown",
+  "method": "Label-free LC-MS/MS",
+  "young_ages": [],
+  "old_ages": [],
+  "compartments": null,
+  "output_dir": "XX_Schuler_2021_paper_to_csv"
+}
