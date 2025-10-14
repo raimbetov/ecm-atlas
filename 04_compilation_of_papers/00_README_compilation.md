@@ -7,7 +7,7 @@
 
 ## 📋 Overview
 
-This folder contains **comprehensive analyses** for all 11 ECM Atlas papers, synthesizing information from:
+This folder contains **comprehensive analyses** for all 16 ECM Atlas papers (+ 1 excluded), synthesizing information from:
 
 1. **Original paper analyses** (`knowledge_base/01_paper_analysis/`)
 2. **Claude Code age bin analyses** (`03_age_bin_paper_focus/claude_code/`)
@@ -47,24 +47,31 @@ This folder contains **comprehensive analyses** for all 11 ECM Atlas papers, syn
 | **01_Angelidis_2019** | 13 | **13/13** | **100%** ✅ | ✅ **PROCESSED** | All required columns, binary design (no compartments) |
 | **05_Dipali_2023** | 13 | **13/13** | **100%** ✅ | ✅ **PROCESSED** | All required columns (Codex found better source file) |
 | **06_LiDermis_2021** | 13 | **13/13** | **100%** ✅ | ✅ **PROCESSED** | UniProt API used for Protein_Name enrichment (100% success) |
+| **12_Lofaro_2021** | 13 | **13/13** | **100%** ✅ | Phase 1 Ready | All required columns, binary design (12mo, 24mo) - PDF tables require extraction |
+| **13_Schuler_2021** | 13 | **13/13** | **100%** ✅ | Phase 1 Ready | All required columns, binary design - DIA method, MuSC niche proteomics |
 | **02_Ariosa_2021** | 13 | 8/13 | 62% | Phase 3 Deferred | SILAC - labeled method, mapping preview only |
 | **03_Caldeira_2017** | 13 | 9/13 | 69% | Phase 3 Deferred | iTRAQ - labeled method, mapping preview only |
 | **07_LiPancreas_2021** | 13 | 9/13 | 69% | Phase 3 Deferred | DiLeu - labeled method, mapping preview only |
 | **08_Ouni_2022** | 13 | 9/13 | 69% | Phase 3 Deferred | TMTpro - labeled method, mapping preview only |
 | **11_Tsumagari_2023** | 13 | 9/13 | 69% | Phase 3 Deferred | TMT - labeled method, mapping preview only |
+| **14_Santinha_2024** | 13 | **13/13** | **100%** ✅ | Phase 3 Deferred | TMT - dual-species cardiac aging (mouse + human), HGPS model |
+| **15_Sun_2025** | 13 | **13/13** | **100%** ✅ | Phase 3 Deferred | TMT - cardiac dECM, biomaterial context (non-physiological) |
+| **16_McCabe_2020** | 13 | **13/13** | **100%** ✅ | Phase 3 Deferred | QconCAT - absolute quantification, intrinsic vs photoaging dermis |
 | **04_Chmelova_2023** | 13 | **0/13** | **0%** ❌ | **EXCLUDED** | **RNA-Seq (transcriptomics) - NOT proteomics** |
 
 ### Summary Statistics
 
-**Phase 1 (LFQ Proteomics) - ALL PROCESSED ✅:**
-- ✅ **5/5 studies successfully processed and merged** (100% completion!)
+**Phase 1 (LFQ Proteomics):**
+- ✅ **5/7 LFQ studies successfully processed and merged** (100% completion for initial batch!)
 - ✅ **2 studies with compartments** (Randles kidney 2×, Tam spine 3×) - 1,451 rows
 - ✅ **3 studies without compartments** (Angelidis lung, Dipali ovary, LiDermis dermis) - 726 rows
 - ✅ **Z-scores calculated** for all 5 studies (96.9-100% coverage)
 - ✅ **Unified dataset ready**: 2,177 ECM protein entries across 5 tissues
+- ⏳ **2 LFQ studies ready for processing** (Lofaro 2021 skeletal muscle, Schüler 2021 MuSC niche)
 
 **Phase 3 (Labeled Methods):**
 - **5 studies with 69% mapping** (partial preview) - Deferred to Phase 3 with different schema requirements
+- ✅ **4 new comprehensive analyses added** (Santinha 2024 cardiac TMT, Sun 2025 cardiac dECM, McCabe 2020 QconCAT intrinsic/photoaging)
 
 **Excluded:**
 - ❌ **1 study with 0% mapping** (Chmelova) - Permanently excluded (RNA-Seq, not proteomics)
@@ -91,18 +98,20 @@ This folder contains **comprehensive analyses** for all 11 ECM Atlas papers, syn
 
 ---
 
-## 📁 File Inventory (11 Papers)
+## 📁 File Inventory (16 Papers)
 
-### LFQ Studies (5 papers - Phase 1 Ready)
-| # | Study | Species | Tissue | Method | Age Normalization |
-|---|-------|---------|--------|--------|-------------------|
-| 01 | Angelidis 2019 | Mouse | Lung | MaxQuant LFQ | Already binary (3mo, 24mo) |
-| 05 | Dipali 2023 | Mouse | Ovary | DirectDIA | Already binary (6-12wk, 10-12mo) |
-| 06 | LiDermis 2021 | Human | Dermis | Label-free LC-MS/MS | 4→2 groups (exclude 40yr) |
-| 09 | Randles 2021 | Human | Kidney | Progenesis Hi-N | Already binary (young, old) |
-| 10 | Tam 2020 | Human | Spine | MaxQuant LFQ | Already binary (16yr, 59yr) |
+### LFQ Studies (7 papers - Phase 1)
+| # | Study | Species | Tissue | Method | Status | Age Normalization |
+|---|-------|---------|--------|--------|--------|-------------------|
+| 01 | Angelidis 2019 | Mouse | Lung | MaxQuant LFQ | ✅ PROCESSED | Already binary (3mo, 24mo) |
+| 05 | Dipali 2023 | Mouse | Ovary | DirectDIA | ✅ PROCESSED | Already binary (6-12wk, 10-12mo) |
+| 06 | LiDermis 2021 | Human | Dermis | Label-free LC-MS/MS | ✅ PROCESSED | 4→2 groups (exclude 40yr) |
+| 09 | Randles 2021 | Human | Kidney | Progenesis Hi-N | ✅ PROCESSED | Already binary (young, old) |
+| 10 | Tam 2020 | Human | Spine | MaxQuant LFQ | ✅ PROCESSED | Already binary (16yr, 59yr) |
+| 12 | **Lofaro 2021** | Mouse | Skeletal muscle (gastrocnemius) | Label-free LC-MS/MS | ⏳ READY | Already binary (12mo, 24mo) |
+| 13 | **Schüler 2021** | Mouse | Skeletal muscle (MuSC niche) | DIA-LFQ | ⏳ READY | Already binary (est. 3mo, 24mo) |
 
-### Non-LFQ Studies (5 papers - Deferred to Phase 3)
+### Non-LFQ Studies (9 papers - Deferred to Phase 3)
 | # | Study | Species | Tissue | Method | Status |
 |---|-------|---------|--------|--------|--------|
 | 02 | Ariosa 2021 | Mouse | Brain | SILAC (isotope) | Deferred |
@@ -110,6 +119,9 @@ This folder contains **comprehensive analyses** for all 11 ECM Atlas papers, syn
 | 07 | LiPancreas 2021 | Human | Pancreas | DiLeu (isobaric) | Deferred |
 | 08 | Ouni 2022 | Mouse | Adipose | TMTpro (isobaric) | Deferred |
 | 11 | Tsumagari 2023 | Mouse | Brain | TMTpro (isobaric) | Deferred |
+| 14 | **Santinha 2024** | Mouse + Human | Cardiac (left ventricle) | TMT | ✅ Comprehensive analysis complete |
+| 15 | **Sun 2025** | Mouse | Cardiac (dECM) | TMT (isobaric) | ✅ Comprehensive analysis complete |
+| 16 | **McCabe 2020** | Human | Skin (dermis - buttock/forearm) | QconCAT (targeted) | ✅ Comprehensive analysis complete |
 
 ### RNA-Seq Study (1 paper - Permanently Excluded)
 | # | Study | Species | Tissue | Method | Status |
