@@ -1,0 +1,30 @@
+{
+  "study_id": "Santinha_2024_Mouse_DT",
+  "groupby_columns": [
+    "Tissue"
+  ],
+  "timestamp": "2025-10-14T23:57:26.822940",
+  "n_groups": 1,
+  "total_rows_processed": 155,
+  "groups": {
+    "Heart_Decellularized_Tissue": {
+      "n_rows": 155,
+      "missing_young_%": 0.0,
+      "missing_old_%": 0.0,
+      "skew_young": 0.011,
+      "skew_old": -0.059,
+      "log2_transformed": false,
+      "mean_young": 16.6542,
+      "std_young": 0.9937,
+      "mean_old": 16.8195,
+      "std_old": 1.0483,
+      "z_mean_young": 0.0,
+      "z_std_young": 1.0,
+      "z_mean_old": -0.0,
+      "z_std_old": 1.0,
+      "outliers_young": 1,
+      "outliers_old": 0,
+      "validation_passed": true
+    }
+  }
+}

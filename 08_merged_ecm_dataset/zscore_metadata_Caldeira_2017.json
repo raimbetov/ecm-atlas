@@ -1,0 +1,30 @@
+{
+  "study_id": "Caldeira_2017",
+  "groupby_columns": [
+    "Tissue"
+  ],
+  "timestamp": "2025-10-14T23:52:40.241100",
+  "n_groups": 1,
+  "total_rows_processed": 43,
+  "groups": {
+    "Intervertebral_disc_Nucleus_pulposus": {
+      "n_rows": 43,
+      "missing_young_%": 9.3,
+      "missing_old_%": 9.3,
+      "skew_young": 2.426,
+      "skew_old": 1.384,
+      "log2_transformed": true,
+      "mean_young": 1.4721,
+      "std_young": 0.707,
+      "mean_old": 1.7602,
+      "std_old": 1.0457,
+      "z_mean_young": -0.0,
+      "z_std_young": 1.0,
+      "z_mean_old": 0.0,
+      "z_std_old": 1.0,
+      "outliers_young": 0,
+      "outliers_old": 0,
+      "validation_passed": true
+    }
+  }
+}

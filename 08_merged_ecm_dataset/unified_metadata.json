@@ -1,7 +1,7 @@
 {
-  "last_updated": "2025-10-14T23:22:46.581085",
-  "total_rows": 3565,
-  "total_studies": 7,
+  "last_updated": "2025-10-14T23:55:21.989545",
+  "total_rows": 4584,
+  "total_studies": 12,
   "studies": [
     "Randles_2021",
     "Tam_2020",
@@ -9,9 +9,14 @@
     "Dipali_2023",
     "LiDermis_2021",
     "Schuler_2021",
-    "Ouni_2022"
+    "Ouni_2022",
+    "Tsumagari_2023",
+    "Caldeira_2017",
+    "Santinha_2024_Mouse_NT",
+    "Santinha_2024_Mouse_DT",
+    "Santinha_2024_Human"
   ],
-  "total_proteins": 1210,
+  "total_proteins": 1376,
   "compartments": [
     "Kidney_Glomerular",
     "Kidney_Tubulointerstitial",
@@ -25,19 +30,30 @@
     "Skeletal_muscle_Gastrocnemius",
     "Skeletal_muscle_TA",
     "Skeletal_muscle_EDL",
-    "Ovary_Cortex"
+    "Ovary_Cortex",
+    "Brain_Cortex",
+    "Brain_Hippocampus",
+    "Intervertebral_disc_Nucleus_pulposus",
+    "Heart_Native_Tissue",
+    "Heart_Decellularized_Tissue"
   ],
   "species": [
     "Homo sapiens",
-    "Mus musculus"
+    "Mus musculus",
+    "Bos taurus"
   ],
   "rows_per_study": {
     "Angelidis_2019": 291,
+    "Caldeira_2017": 43,
     "Dipali_2023": 173,
     "LiDermis_2021": 262,
     "Ouni_2022": 98,
     "Randles_2021": 458,
+    "Santinha_2024_Human": 207,
+    "Santinha_2024_Mouse_DT": 155,
+    "Santinha_2024_Mouse_NT": 191,
     "Schuler_2021": 1290,
-    "Tam_2020": 993
+    "Tam_2020": 993,
+    "Tsumagari_2023": 423
   }
 }
