@@ -5,7 +5,7 @@ ECM-Atlas aggregates 13 proteomic studies (128 files, 15 papers) tracking age-re
 
 ## Overview
 This repository contains raw proteomic datasets (1.0), processing infrastructure with autonomous agents (2.0), unified database outputs and visualizations (3.0), and development workflows (4.0). Data flows from published studies through normalization agents into merged CSV files, displayed via interactive web dashboards for cross-study comparison of ECM aging signatures.
-/Users/Kravtsovd/projects/chrome-extension-tcs/How to organize documents_knowladge_framework.md
+
 ```mermaid
 graph LR
     A[Raw Data] --> B[Agent Pipeline]
