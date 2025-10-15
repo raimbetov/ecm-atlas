@@ -31,6 +31,16 @@ graph LR
 
 ---
 
+## Documentation Standard
+
+**For AI Agent:** When creating `.md` files or technical descriptions, follow Knowledge Framework:
+- Structure: Thesis (1 sentence) → Overview (1 paragraph) → Mermaid diagrams → MECE sections
+- Diagrams: TD for structure (Continuants), LR for processes (Occurrents)
+- Format: Number sections (1.0, 2.0), paragraphs (¶1, ¶2), state ordering principle in ¶1
+- Reference: `/Users/Kravtsovd/projects/chrome-extension-tcs/How to organize documents_knowladge_framework.md`
+
+---
+
 ## 1.0 Data Sources
 
 ¶1 Ordering: Raw inputs → Processed outputs
