@@ -1,6 +1,6 @@
 {
-  "last_updated": "2025-10-15T03:37:01.448240",
-  "total_rows": 2575,
+  "last_updated": "2025-10-14T21:40:19.492246",
+  "total_rows": 3467,
   "total_studies": 6,
   "studies": [
     "Randles_2021",
@@ -20,7 +20,10 @@
     "Lung",
     "Ovary",
     "Skin dermis",
-    "Skeletal muscle"
+    "Skeletal_muscle_Soleus",
+    "Skeletal_muscle_Gastrocnemius",
+    "Skeletal_muscle_TA",
+    "Skeletal_muscle_EDL"
   ],
   "species": [
     "Homo sapiens",
@@ -31,7 +34,7 @@
     "Dipali_2023": 173,
     "LiDermis_2021": 262,
     "Randles_2021": 458,
-    "Schuler_2021": 398,
+    "Schuler_2021": 1290,
     "Tam_2020": 993
   }
 }

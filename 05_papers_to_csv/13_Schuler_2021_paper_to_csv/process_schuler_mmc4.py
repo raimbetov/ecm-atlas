@@ -27,7 +27,7 @@ def main():
 
     # Find project root
     script_dir = Path(__file__).parent
-    project_root = script_dir.parent
+    project_root = script_dir.parent.parent  # Up two levels to ecm-atlas root
 
     # Paths
     data_file = project_root / "data_raw" / "Schuler et al. - 2021" / "mmc4.xls"
@@ -93,7 +93,7 @@ def main():
             'Abundance_Young': df_sheet['sample1_abundance'],
             'Abundance_Old': df_sheet['sample2_abundance'],
             'Tissue_Compartment': f"Skeletal_muscle_{muscle_type}",
-            'Tissue': 'Skeletal muscle',
+            'Tissue': f'Skeletal_muscle_{muscle_type}',  # FIX: Must be unique per compartment
             'Species': 'Mus musculus',
             'Method': 'LFQ',
             'Study_ID': 'Schuler_2021',

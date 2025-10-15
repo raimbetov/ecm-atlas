@@ -1,6 +1,6 @@
-# Step 7.5: Protein Metadata Enrichment (Post-Merge)
+# Step 3.5: Protein Metadata Enrichment (Pre-Annotation)
 
-**When to use:** After merging all studies to unified CSV (`ECM_Atlas_Unified.csv`)
+**When to use:** After schema standardization (Step 3), BEFORE matrisome annotation (Step 4)
 
 **Purpose:** Fill missing `Protein_Name` and `Gene_Symbol` fields by fetching metadata from UniProt REST API
 
@@ -257,30 +257,35 @@ python3 enrich_missing_metadata.py
 
 ```mermaid
 graph LR
-    A[PHASE 1:<br/>Process Study] --> B[Study_YYYY_wide.csv]
-    B --> C[PHASE 2:<br/>Merge to Unified]
-    C --> D[merged_ecm_aging_zscore.csv]
-    D --> E[🔄 ENRICHMENT<br/>Step 7.5]
-    E --> F[merged_ecm_aging_zscore_enriched.csv]
-    F --> G[PHASE 3:<br/>Z-score Calculation]
+    A[Step 1-2:<br/>Parse & Age Bin] --> B[Long-format data]
+    B --> C[Step 3:<br/>Schema Standardization]
+    C --> D[Standardized data<br/>with NaN metadata]
+    D --> E[🔄 ENRICHMENT<br/>Step 3.5]
+    E --> F[Enriched data<br/>Gene_Symbol filled]
+    F --> G[Step 4:<br/>Matrisome Annotation]
+    G --> H[Annotated data]
 
     style E fill:#FFD700
     style F fill:#90EE90
+    style G fill:#87CEEB
 ```
 
-**Recommendation:** Run enrichment **ONCE** after merging multiple studies, not after each individual study.
+**Recommendation:** Run enrichment **PER STUDY** during PHASE 1 processing, BEFORE annotation.
 
 **Why?**
-- More efficient (batch API calls)
-- Easier to track enrichment source
-- Prevents duplicate API requests
+- Better annotation quality (Gene_Symbol match is most reliable)
+- Validates data quality early in pipeline
+- Prevents annotation mismatches from missing metadata
+- Proper data engineering flow: normalize → enrich → annotate
 
-### Pipeline Checklist
+### Pipeline Checklist (Per Study)
 
-- [ ] Step 1-7: Process all studies
+- [ ] Step 1-2: Parse data and assign age bins
+- [ ] Step 3: Schema standardization
+- [ ] **Step 3.5: Run enrichment** ← Fetch missing metadata from UniProt
+- [ ] Step 4: Matrisome annotation (uses enriched Gene_Symbol)
+- [ ] Step 5-7: Wide-format conversion, validation, export
 - [ ] PHASE 2: Merge to unified CSV
-- [ ] **Step 7.5: Run enrichment** ← NEW!
-- [ ] Update api_server.py to use enriched CSV
 - [ ] PHASE 3: Calculate z-scores
 - [ ] Test dashboard
 
@@ -403,4 +408,6 @@ This creates **3 layers of protection** against NaN bugs.
 
 ---
 
-**Next document:** Return to `01_LFQ_DATASET_NORMALIZATION_AND_MERGE.md` (PHASE 2 or proceed to `02_ZSCORE_CALCULATION_UNIVERSAL_FUNCTION.md`)
+**Next step:** Continue to Step 4 (Matrisome Annotation) in `01_LFQ_DATASET_NORMALIZATION_AND_MERGE.md`
+
+**Note:** This enrichment step is now integrated into PHASE 1 study processing, not a separate post-merge operation.

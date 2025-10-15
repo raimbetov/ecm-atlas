@@ -127,11 +127,12 @@ def merge_study_to_unified(
     print(f"   Studies: {df_merged['Study_ID'].unique().tolist()}")
 
     # 6. Check for duplicates
-    duplicates = df_merged.duplicated(subset=['Protein_ID', 'Tissue', 'Study_ID']).sum()
+    # NOTE: Use Tissue_Compartment instead of Tissue to preserve proteins in multiple compartments
+    duplicates = df_merged.duplicated(subset=['Protein_ID', 'Tissue_Compartment', 'Study_ID']).sum()
     if duplicates > 0:
         print(f"   ⚠️  WARNING: {duplicates} duplicate rows detected!")
         # Remove duplicates, keeping last occurrence
-        df_merged = df_merged.drop_duplicates(subset=['Protein_ID', 'Tissue', 'Study_ID'], keep='last')
+        df_merged = df_merged.drop_duplicates(subset=['Protein_ID', 'Tissue_Compartment', 'Study_ID'], keep='last')
         print(f"   ✅ Duplicates removed")
 
     # 7. Save updated unified CSV

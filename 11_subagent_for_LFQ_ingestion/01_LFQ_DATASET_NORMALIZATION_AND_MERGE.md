@@ -314,15 +314,25 @@ df_standardized = df_standardized[df_standardized['Protein_ID'].notna()]  # Remo
 
 **⚠️ CRITICAL: Tissue Column Format**
 
-Multiple compartments MUST remain separate:
+Multiple compartments MUST remain separate and Tissue column MUST be unique per compartment:
 
 ```python
 # ❌ WRONG - merged compartments
 Tissue = "Kidney"  # Lost compartment information!
 
-# ✅ CORRECT - separate compartments
+# ❌ WRONG - same Tissue for all compartments
+Tissue = "Skeletal muscle"  # Same for Soleus, Gastrocnemius, TA, EDL
+# This causes SEVERE DATA LOSS during merge deduplication!
+
+# ✅ CORRECT - separate compartments with unique Tissue values
 Tissue = "Kidney_Glomerular"
 Tissue = "Kidney_Tubulointerstitial"
+
+# ✅ CORRECT - each muscle type has unique Tissue value
+Tissue = "Skeletal_muscle_Soleus"
+Tissue = "Skeletal_muscle_Gastrocnemius"
+Tissue = "Skeletal_muscle_TA"
+Tissue = "Skeletal_muscle_EDL"
 
 # ✅ CORRECT - multiple disc compartments
 Tissue = "Intervertebral_disc_NP"
@@ -330,7 +340,90 @@ Tissue = "Intervertebral_disc_IAF"
 Tissue = "Intervertebral_disc_OAF"
 ```
 
-This ensures z-score normalization is done per-compartment, not averaged across compartments.
+**Why this matters:**
+1. Z-score normalization is done per-compartment, not averaged across compartments
+2. Merge deduplication uses `Tissue_Compartment` to preserve proteins appearing in multiple compartments
+3. If Tissue is identical across compartments, proteins will be lost during merge
+
+---
+
+### Step 3.5: Protein Metadata Enrichment (UniProt API)
+
+**Goal:** Fill missing `Protein_Name` and `Gene_Symbol` fields by fetching from UniProt REST API.
+
+**Why do this BEFORE annotation:**
+- Step 4 (annotation) relies on Gene_Symbol for best matching quality
+- Enriching metadata first improves annotation coverage
+- Validates data quality early in pipeline
+
+**When to run:**
+```python
+# Check if enrichment needed
+missing_gene = df_standardized['Gene_Symbol'].isna().sum()
+missing_name = df_standardized['Protein_Name'].isna().sum()
+
+if missing_gene > 0 or missing_name > 0:
+    print(f"⚠️  Enrichment recommended:")
+    print(f"   Missing Gene_Symbol: {missing_gene}")
+    print(f"   Missing Protein_Name: {missing_name}")
+```
+
+**Quick enrichment algorithm:**
+```python
+import requests
+from time import sleep
+
+UNIPROT_API = "https://rest.uniprot.org/uniprotkb/{}.json"
+
+def enrich_protein_metadata(protein_id):
+    """Fetch metadata from UniProt API."""
+    try:
+        response = requests.get(UNIPROT_API.format(protein_id), timeout=5)
+        if response.status_code == 200:
+            data = response.json()
+
+            # Extract protein name
+            protein_desc = data.get('proteinDescription', {})
+            name = None
+            if 'recommendedName' in protein_desc:
+                name = protein_desc['recommendedName'].get('fullName', {}).get('value')
+
+            # Extract gene symbol
+            genes = data.get('genes', [])
+            gene_symbol = genes[0].get('geneName', {}).get('value') if genes else None
+
+            return {'name': name, 'gene': gene_symbol}
+    except:
+        return None
+
+# Apply enrichment to missing values only
+needs_enrichment = df_standardized[
+    df_standardized['Gene_Symbol'].isna() | df_standardized['Protein_Name'].isna()
+]['Protein_ID'].unique()
+
+for protein_id in needs_enrichment:
+    metadata = enrich_protein_metadata(protein_id)
+    if metadata:
+        # Fill missing Gene_Symbol
+        df_standardized.loc[
+            (df_standardized['Protein_ID'] == protein_id) &
+            (df_standardized['Gene_Symbol'].isna()),
+            'Gene_Symbol'
+        ] = metadata['gene']
+
+        # Fill missing Protein_Name
+        df_standardized.loc[
+            (df_standardized['Protein_ID'] == protein_id) &
+            (df_standardized['Protein_Name'].isna()),
+            'Protein_Name'
+        ] = metadata['name']
+
+    sleep(0.1)  # Rate limiting (10 req/sec)
+
+print(f"✅ Enrichment complete")
+```
+
+**For detailed enrichment implementation:** See `07_PROTEIN_METADATA_ENRICHMENT.md`
 
 ---
 
@@ -717,11 +810,12 @@ def merge_study_to_unified(
     print(f"   Studies: {df_merged['Study_ID'].unique().tolist()}")
 
     # 6. Check for duplicates
-    duplicates = df_merged.duplicated(subset=['Protein_ID', 'Tissue', 'Study_ID']).sum()
+    # NOTE: Use Tissue_Compartment instead of Tissue to preserve proteins in multiple compartments
+    duplicates = df_merged.duplicated(subset=['Protein_ID', 'Tissue_Compartment', 'Study_ID']).sum()
     if duplicates > 0:
         print(f"   ⚠️  WARNING: {duplicates} duplicate rows detected!")
-        # Optionally remove duplicates
-        df_merged = df_merged.drop_duplicates(subset=['Protein_ID', 'Tissue', 'Study_ID'], keep='last')
+        # Remove duplicates, keeping last occurrence
+        df_merged = df_merged.drop_duplicates(subset=['Protein_ID', 'Tissue_Compartment', 'Study_ID'], keep='last')
         print(f"   ✅ Duplicates removed")
 
     # 7. Save updated unified CSV
@@ -776,6 +870,8 @@ if __name__ == '__main__':
 
 ### ❌ DO NOT
 - Merge compartments into generic tissue names (e.g., "Kidney" instead of "Kidney_Glomerular")
+- Use identical Tissue values for different compartments (e.g., "Skeletal muscle" for all muscle types)
+- Use `Tissue` column for deduplication - always use `Tissue_Compartment` instead
 - Impute or fill missing values (NaN should stay NaN)
 - Remove proteins with missing abundances (only remove null Protein_IDs)
 - Include non-ECM proteins in final wide-format output
@@ -823,7 +919,9 @@ project/
 
 ### Problem: Duplicate rows in unified CSV
 **Diagnosis:** Study was merged twice
-**Action:** Remove duplicates using `drop_duplicates(subset=['Protein_ID', 'Tissue', 'Study_ID'])`
+**Action:** Remove duplicates using `drop_duplicates(subset=['Protein_ID', 'Tissue_Compartment', 'Study_ID'])`
+
+**⚠️ WARNING:** Do NOT use `Tissue` for deduplication - this will cause data loss for multi-compartment studies!
 
 ### Problem: Compartments accidentally merged
 **Diagnosis:** Tissue column used generic name

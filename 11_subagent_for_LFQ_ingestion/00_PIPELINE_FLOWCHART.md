@@ -10,7 +10,8 @@ graph TB
     P1_0 --> P1_1[Step 1: Data Parsing<br/>Excel → Long-format<br/>Join with metadata if needed]
     P1_1 --> P1_2[Step 2: Age Binning<br/>Assign Young vs Old<br/>≥66% retention required]
     P1_2 --> P1_3[Step 3: Schema Standardization<br/>Map to 17-column unified schema<br/>⚠️ Keep compartments SEPARATE]
-    P1_3 --> P1_4[Step 4: Protein Annotation<br/>Match to matrisome reference<br/>4-level hierarchy]
+    P1_3 --> P1_3_5[Step 3.5: Protein Enrichment<br/>Fill missing metadata from UniProt API<br/>⚠️ BEFORE annotation]
+    P1_3_5 --> P1_4[Step 4: Protein Annotation<br/>Match to matrisome reference<br/>Uses enriched Gene_Symbol]
     P1_4 --> P1_5[Step 5: Wide-Format Conversion<br/>⚠️ Filter ECM ONLY<br/>Aggregate by Age_Bin]
     P1_5 --> P1_6[Step 6: Quality Validation<br/>Check completeness, compartments<br/>Validate known markers]
     P1_6 --> P1Output[📦 PHASE 1 OUTPUT<br/>Study_YYYY_wide_format.csv<br/>NO z-scores yet]
@@ -57,6 +58,7 @@ graph TB
     style Phase2 fill:#ffd6cc
     style Phase3 fill:#ccffcc
     style P1_3 fill:#ff6b6b,color:#fff
+    style P1_3_5 fill:#FFD700,color:#000
     style P1_5 fill:#ff6b6b,color:#fff
     style P3_5 fill:#ff9999
     style P3_6 fill:#ff9999
@@ -79,18 +81,24 @@ graph TB
    - Before wide-format: Match_Confidence > 0
    - Remove non-ECM proteins
 
+### 🟡 Enrichment Step (Gold)
+3. **Enrich BEFORE annotation** (P1_3_5)
+   - Fetch missing Gene_Symbol and Protein_Name from UniProt API
+   - Do this BEFORE Step 4 (annotation) for better match quality
+   - Annotation uses Gene_Symbol as primary match key
+
 ### 🟠 Missing Value Handling (Orange)
-3. **Count missing values** (P3_5)
+4. **Count missing values** (P3_5)
    - Report % missing (expected: 0-30%)
    - Do NOT remove or impute
 
-4. **Exclude NaN from statistics** (P3_6, P3_10, P3_11)
+5. **Exclude NaN from statistics** (P3_6, P3_10, P3_11)
    - Skewness: `skew(Abundance.dropna())`
    - Mean/Std: `.mean(skipna=True)`, `.std(skipna=True)`
    - Z-score calculation: NaN input → NaN output
 
 ### 🟢 Update Strategy (Green)
-5. **Update ONLY new study** (P3_16)
+6. **Update ONLY new study** (P3_16)
    - Filter to Study_ID
    - Update z-score columns
    - Other studies unchanged
