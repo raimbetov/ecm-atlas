@@ -106,16 +106,6 @@ const CompareDatasets = (function() {
                             </div>
                         </div>
 
-                        <div class="legend">
-                            <h3>Z-Score Delta Color Scale</h3>
-                            <div class="legend-gradient">
-                                <span class="legend-label">-3 (Decreased)</span>
-                                <div class="gradient-bar"></div>
-                                <span class="legend-label">+3 (Increased)</span>
-                            </div>
-                            <p class="legend-note">⬜ = No data available in this compartment</p>
-                        </div>
-
                         <div id="heatmap" class="chart-container tall">
                             <div class="loading">Loading heatmap...</div>
                         </div>
@@ -294,29 +284,34 @@ const CompareDatasets = (function() {
             hoverText.push(hoverRow);
         }
 
-        // Create Plotly heatmap
+        // Create Plotly heatmap with scientific diverging color scheme (RdBu-like)
+        // Best practice: Use perceptually uniform diverging colormap for easy interpretation
         const trace = {
             z: zValues,
             x: compartments,
             y: proteins,
             type: 'heatmap',
             colorscale: [
-                [0, '#3b82f6'],    // Blue (-3)
-                [0.25, '#60a5fa'], // Light blue (-1)
-                [0.5, '#f3f4f6'],  // Gray (0)
-                [0.75, '#fbbf24'], // Yellow (+1)
-                [1, '#ef4444']     // Red (+3)
+                [0.0, '#08519c'],  // Deep blue (-3, low abundance/downregulated)
+                [0.2, '#3182bd'],  // Blue (-2)
+                [0.35, '#9ecae1'], // Light blue (-1)
+                [0.5, '#f7f7f7'],  // Off-white (0, no change)
+                [0.65, '#fc8d59'], // Light orange (+1)
+                [0.8, '#e34a33'],  // Orange-red (+2)
+                [1.0, '#b30000']   // Deep red (+3, high abundance/upregulated)
             ],
             zmin: -3,
             zmax: 3,
             hovertemplate: '%{text}<extra></extra>',
             text: hoverText,
             colorbar: {
-                title: 'Δ Z-Score',
+                title: 'Δ Z-Score<br><span style="font-size:11px">Down ← → Up</span>',
                 titleside: 'right',
                 tickmode: 'linear',
                 tick0: -3,
-                dtick: 1
+                dtick: 1,
+                thickness: 20,
+                len: 0.7
             }
         };
 
