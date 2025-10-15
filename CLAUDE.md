@@ -68,12 +68,19 @@ graph LR
 - **Start**:
   ```bash
   cd 10_unified_dashboard_2_tabs
-  python3 api_server.py  # Port 5001
-  python3 00_start_server.py  # Port 8080
-  open http://localhost:8080/dashboard.html
+  ./start_servers.sh  # Starts API (port 5004) + HTTP (port 8083)
+  # Dashboard URL: http://localhost:8083/dashboard.html
   ```
-- **Features**: Heatmaps, volcano plots, scatter plots, bar charts, histograms, compartment comparisons
-- **Test**: `python3 01_capture_screenshots.py` (headless browser validation)
+- **Features**:
+  - Individual dataset analysis (heatmaps, volcano plots, scatter plots, bar charts, histograms)
+  - Cross-dataset comparison with filters (organs, compartments, matrisome categories, studies)
+- **API Endpoints**:
+  - GET /api/health - Health check
+  - GET /api/global_stats - Overall statistics
+  - GET /api/datasets - List all datasets
+  - GET /api/dataset/<name>/* - Individual dataset analysis
+  - GET /api/compare/* - Cross-dataset comparison
+- **Test**: `python3 capture_version_screenshot.py` (headless browser validation)
 
 ### 3.3 Knowledge Base
 - **`knowledge_base/`**: Reference materials
@@ -132,7 +139,7 @@ streamlit run app.py  # http://localhost:8501
 | Task | Command |
 |------|---------|
 | Process dataset | `python 11_subagent_for_LFQ_ingestion/autonomous_agent.py "data_raw/Study/"` |
-| Start dashboard | `cd 10_unified_dashboard_2_tabs && python3 api_server.py` (5001) + `python3 00_start_server.py` (8080) |
+| Start dashboard | `cd 10_unified_dashboard_2_tabs && ./start_servers.sh` → http://localhost:8083/dashboard.html |
 | Run app | `streamlit run app.py` |
 | Main DB | `08_merged_ecm_dataset/merged_ecm_aging_zscore.csv` |
 | Agent docs | `11_subagent_for_LFQ_ingestion/00_START_HERE.md` |
