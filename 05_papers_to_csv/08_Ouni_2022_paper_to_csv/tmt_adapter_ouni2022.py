@@ -30,8 +30,12 @@ def process_ouni2022():
         sheet_name='Matrisome Proteins'
     )
 
-    print(f"   ✓ Loaded {len(df)} matrisome proteins")
+    print(f"   ✓ Loaded {len(df)} rows")
     print(f"   ✓ Shape: {df.shape}")
+
+    # Filter out empty rows (missing Accession)
+    df = df[df['Accession'].notna()].copy()
+    print(f"   ✓ After filtering empty rows: {len(df)} matrisome proteins")
 
     # 2. Define sample columns for each age group
     print("\n[2/6] Identifying TMT sample columns...")

@@ -17,17 +17,19 @@ This dataset was processed using the **TMT adapter pipeline** (lightweight trans
 - ✅ Pre-normalized data (quantile normalization by authors)
 - ✅ ECM classification pre-annotated (Category/Division columns)
 - ✅ Simple column mapping (no complex parsing required)
+- ✅ Empty rows filtered (4 blank rows at end of Excel table)
 - ✅ Processing time: ~15 minutes
 
 ## Files
 
 ### Input
 - `../../data_raw/Ouni et al. - 2022/Supp Table 3.xlsx`
-  - Sheet: `Matrisome Proteins` (102 proteins × 33 columns)
+  - Sheet: `Matrisome Proteins` (102 rows × 33 columns)
   - Contains quantile-normalized TMT reporter intensities
+  - Note: 4 empty rows at end filtered out during processing
 
 ### Output
-- `Ouni_2022_wide_format.csv` - **102 ECM proteins** in unified schema
+- `Ouni_2022_wide_format.csv` - **98 ECM proteins** in unified schema
   - 15 columns: Protein_ID, Gene_Symbol, Tissue, Abundance_Young, Abundance_Old, etc.
   - Ready for Phase 2 merge and Phase 3 z-score normalization
 
@@ -43,8 +45,8 @@ This dataset was processed using the **TMT adapter pipeline** (lightweight trans
 - `README.md` - This file
 
 ## Data Quality
-- **ECM proteins:** 102 (all pre-annotated by authors)
-- **Missing values:** Young=4, Old=4 (3.9% - acceptable for proteomics)
+- **ECM proteins:** 98 (all pre-annotated by authors)
+- **Missing values:** Young=0, Old=0 (100% data completeness)
 - **Matrisome categories:**
   - ECM Glycoproteins: 27
   - ECM Regulators: 22
