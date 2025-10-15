@@ -51,6 +51,9 @@ documentation/
 │   └─> 03a_Data_Processing_Pipeline.md    [LEVEL 3 - To be created]
 │   └─> 03b_Visualization_Dashboards.md    [LEVEL 3 - To be created]
 │
+├── Technical_Issues_NaN_Serialization.md   [TECHNICAL DOC - COMPLETE]
+│   └─> Bug report: Compare tab JSON serialization (Oct 2025)
+│
 ├── 04_Research_Insights.md                 [LEVEL 2 - COMPLETE]
 │   ├─> Biomarker evaluation framework
 │   ├─> Key protein discovery hypothesis
@@ -87,6 +90,9 @@ documentation/
 
 ✅ **Level 3:**
 - [04a_Biomarker_Framework.md](./04a_Biomarker_Framework.md) - Statistical methods for biomarker validation
+
+✅ **Technical Issues:**
+- [Technical_Issues_NaN_Serialization.md](./Technical_Issues_NaN_Serialization.md) - Bug report: Compare tab JSON serialization (Oct 2025)
 
 ---
 
