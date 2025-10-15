@@ -15,20 +15,24 @@ This folder contains **comprehensive analyses** for all 16 ECM Atlas papers (+ 1
 4. **Claude Code updated papers** (`03_age_bin_paper_focus/claude_code/paper_analyses_updated/`)
 5. **Codex CLI updated papers** (`03_age_bin_paper_focus/codex_cli/paper_analyses_updated/`)
 
-## ✅ Processing Status (Updated 2025-10-13)
+## ✅ Processing Status (Updated 2025-10-14)
 
-**All 5 LFQ datasets successfully processed and merged!**
+**6 LFQ datasets + 1 TMT dataset successfully processed and merged!**
 
 - **Unified dataset**: `08_merged_ecm_dataset/merged_ecm_aging_zscore.csv`
-- **Total rows**: 2,177 ECM proteins
+- **Total rows**: 3,565 ECM proteins
 - **Studies processed**:
   1. ✅ Randles_2021 (458 rows) - Human kidney, 2 compartments
   2. ✅ Tam_2020 (993 rows) - Human spine, 3 compartments
   3. ✅ Angelidis_2019 (291 rows) - Mouse lung
   4. ✅ Dipali_2023 (173 rows) - Mouse ovary
   5. ✅ LiDermis_2021 (262 rows) - Human skin dermis
+  6. ✅ Schuler_2021 (1,290 rows) - Mouse skeletal muscle, 4 muscles
+  7. ✅ **Ouni_2022 (98 rows)** - **Human ovarian cortex (TMTpro 16-plex)** 🆕
 - **Z-scores**: Calculated for all datasets (96.9-100% coverage)
 - **Status**: Ready for downstream analysis and visualization
+- **Total studies**: 7 (6 LFQ + 1 TMT)
+- **Database size**: 1.12 MB
 
 ---
 
@@ -52,7 +56,7 @@ This folder contains **comprehensive analyses** for all 16 ECM Atlas papers (+ 1
 | **02_Ariosa_2021** | 13 | 8/13 | 62% | Phase 3 Deferred | SILAC - labeled method, mapping preview only |
 | **03_Caldeira_2017** | 13 | 9/13 | 69% | Phase 3 Deferred | iTRAQ - labeled method, mapping preview only |
 | **07_LiPancreas_2021** | 13 | 9/13 | 69% | Phase 3 Deferred | DiLeu - labeled method, mapping preview only |
-| **08_Ouni_2022** | 13 | 9/13 | 69% | Phase 3 Deferred | TMTpro - labeled method, mapping preview only |
+| **08_Ouni_2022** | 13 | **13/13** | **100%** ✅ | ✅ **PROCESSED** | TMTpro 16-plex - First TMT dataset, human ovarian cortex, 100% pre-annotated |
 | **11_Tsumagari_2023** | 13 | 9/13 | 69% | Phase 3 Deferred | TMT - labeled method, mapping preview only |
 | **14_Santinha_2024** | 13 | **13/13** | **100%** ✅ | Phase 3 Deferred | TMT - dual-species cardiac aging (mouse + human), HGPS model |
 | **15_Sun_2025** | 13 | **13/13** | **100%** ✅ | Phase 3 Deferred | TMT - cardiac dECM, biomaterial context (non-physiological) |
@@ -62,15 +66,17 @@ This folder contains **comprehensive analyses** for all 16 ECM Atlas papers (+ 1
 ### Summary Statistics
 
 **Phase 1 (LFQ Proteomics):**
-- ✅ **5/7 LFQ studies successfully processed and merged** (100% completion for initial batch!)
+- ✅ **6/7 LFQ studies successfully processed and merged**
 - ✅ **2 studies with compartments** (Randles kidney 2×, Tam spine 3×) - 1,451 rows
-- ✅ **3 studies without compartments** (Angelidis lung, Dipali ovary, LiDermis dermis) - 726 rows
-- ✅ **Z-scores calculated** for all 5 studies (96.9-100% coverage)
-- ✅ **Unified dataset ready**: 2,177 ECM protein entries across 5 tissues
-- ⏳ **2 LFQ studies ready for processing** (Lofaro 2021 skeletal muscle, Schüler 2021 MuSC niche)
+- ✅ **4 studies without compartments** (Angelidis lung, Dipali ovary, LiDermis dermis, Schuler skeletal muscle) - 1,016 rows
+- ✅ **Z-scores calculated** for all 6 studies (96.9-100% coverage)
+- ✅ **Unified dataset**: 2,467 ECM protein entries across 6 tissues
+- ⏳ **1 LFQ study ready for processing** (Lofaro 2021 skeletal muscle)
 
-**Phase 3 (Labeled Methods):**
-- **5 studies with 69% mapping** (partial preview) - Deferred to Phase 3 with different schema requirements
+**Phase 3 (TMT/Labeled Methods):**
+- ✅ **1 TMT study successfully processed** (Ouni 2022 - human ovarian cortex, TMTpro 16-plex) - 98 rows
+- ✅ **First TMT dataset integrated** - Demonstrated lightweight TMT processing pipeline
+- **4 studies with 69% mapping** (partial preview) - Deferred with different schema requirements
 - ✅ **4 new comprehensive analyses added** (Santinha 2024 cardiac TMT, Sun 2025 cardiac dECM, McCabe 2020 QconCAT intrinsic/photoaging)
 
 **Excluded:**
@@ -117,7 +123,7 @@ This folder contains **comprehensive analyses** for all 16 ECM Atlas papers (+ 1
 | 02 | Ariosa 2021 | Mouse | Brain | SILAC (isotope) | Deferred |
 | 03 | Caldeira 2017 | Cow | Multiple | iTRAQ (isobaric) | Deferred |
 | 07 | LiPancreas 2021 | Human | Pancreas | DiLeu (isobaric) | Deferred |
-| 08 | Ouni 2022 | Mouse | Adipose | TMTpro (isobaric) | Deferred |
+| 08 | **Ouni 2022** | Human | Ovarian cortex | TMTpro 16-plex (isobaric) | ✅ **PROCESSED** |
 | 11 | Tsumagari 2023 | Mouse | Brain | TMTpro (isobaric) | Deferred |
 | 14 | **Santinha 2024** | Mouse + Human | Cardiac (left ventricle) | TMT | ✅ Comprehensive analysis complete |
 | 15 | **Sun 2025** | Mouse | Cardiac (dECM) | TMT (isobaric) | ✅ Comprehensive analysis complete |

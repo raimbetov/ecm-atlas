@@ -1,16 +1,17 @@
 {
-  "last_updated": "2025-10-14T21:40:19.492246",
-  "total_rows": 3467,
-  "total_studies": 6,
+  "last_updated": "2025-10-14T23:01:41.345650",
+  "total_rows": 3565,
+  "total_studies": 7,
   "studies": [
     "Randles_2021",
     "Tam_2020",
     "Angelidis_2019",
     "Dipali_2023",
     "LiDermis_2021",
-    "Schuler_2021"
+    "Schuler_2021",
+    "Ouni_2022"
   ],
-  "total_proteins": 1195,
+  "total_proteins": 1210,
   "compartments": [
     "Kidney_Glomerular",
     "Kidney_Tubulointerstitial",
@@ -23,7 +24,8 @@
     "Skeletal_muscle_Soleus",
     "Skeletal_muscle_Gastrocnemius",
     "Skeletal_muscle_TA",
-    "Skeletal_muscle_EDL"
+    "Skeletal_muscle_EDL",
+    "Ovary_Cortex"
   ],
   "species": [
     "Homo sapiens",
@@ -33,6 +35,7 @@
     "Angelidis_2019": 291,
     "Dipali_2023": 173,
     "LiDermis_2021": 262,
+    "Ouni_2022": 98,
     "Randles_2021": 458,
     "Schuler_2021": 1290,
     "Tam_2020": 993
