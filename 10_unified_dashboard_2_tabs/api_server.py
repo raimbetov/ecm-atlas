@@ -107,8 +107,9 @@ def get_datasets():
 
     for dataset_name in df['Dataset_Name'].unique():
         dataset_df = df[df['Dataset_Name'] == dataset_name]
-        organ = dataset_df['Organ'].iloc[0]
-        compartments = dataset_df['Compartment'].unique().tolist()
+        organ = to_json_safe(dataset_df['Organ'].iloc[0])
+        # Filter out NaN from compartments list
+        compartments = [c for c in dataset_df['Compartment'].unique() if pd.notna(c)]
 
         datasets.append({
             "name": dataset_name,

@@ -78,6 +78,9 @@ def process_ouni2022():
         'Canonical_Gene_Symbol': df['EntryGeneSymbol'],  # Already canonical
         'Matrisome_Category': df['Category'],
         'Matrisome_Division': df['Division'],
+        'Dataset_Name': 'Ouni_2022',  # For dashboard display
+        'Organ': 'Ovary',  # Extracted from Tissue
+        'Compartment': 'Cortex',  # Tissue compartment
         'Tissue': 'Ovary_Cortex',
         'Tissue_Compartment': 'Cortex',
         'Species': 'Homo sapiens',
