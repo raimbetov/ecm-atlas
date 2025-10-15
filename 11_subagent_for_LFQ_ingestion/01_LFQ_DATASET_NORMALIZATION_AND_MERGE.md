@@ -4,7 +4,7 @@
 
 **Target audience:** Sub-agent or human researcher processing new study
 
-**Output:** Study added to `08_merged_ecm_dataset/ECM_Atlas_Unified.csv`
+**Output:** Study added to `08_merged_ecm_dataset/merged_ecm_aging_zscore.csv`
 
 **Configuration:** Use `study_config_template.py` to define study-specific parameters
 
@@ -17,7 +17,7 @@ graph LR
     A[New LFQ Dataset<br/>Excel/CSV] --> B[PHASE 1:<br/>Study Processing]
     B --> C[Study_YYYY_wide_format.csv]
     C --> D[PHASE 2:<br/>Merge to Unified]
-    D --> E[ECM_Atlas_Unified.csv<br/>UPDATED]
+    D --> E[merged_ecm_aging_zscore.csv<br/>UPDATED]
 
     style B fill:#ffe6e6
     style D fill:#ffd6cc
@@ -715,10 +715,10 @@ Add processed study to unified ECM Atlas CSV file.
 
 ### Input
 - `Study_YYYY_wide_format.csv` (from Phase 1)
-- Existing `ECM_Atlas_Unified.csv` (if any)
+- Existing `merged_ecm_aging_zscore.csv` (if any)
 
 ### Output
-- Updated `ECM_Atlas_Unified.csv` with new study rows
+- Updated `merged_ecm_aging_zscore.csv` with new study rows
 - Backup of previous version
 - `unified_metadata.json` updated
 
@@ -732,7 +732,7 @@ from pathlib import Path
 
 def merge_study_to_unified(
     study_csv: str,
-    unified_csv: str = '08_merged_ecm_dataset/ECM_Atlas_Unified.csv'
+    unified_csv: str = '08_merged_ecm_dataset/merged_ecm_aging_zscore.csv'
 ):
     """
     Add new study to unified CSV.
@@ -760,7 +760,7 @@ def merge_study_to_unified(
         backup_dir = unified_path.parent / 'backups'
         backup_dir.mkdir(exist_ok=True)
         timestamp = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
-        backup_path = backup_dir / f"ECM_Atlas_Unified_{timestamp}.csv"
+        backup_path = backup_dir / f"merged_ecm_aging_zscore_{timestamp}.csv"
         shutil.copy(unified_csv, backup_path)
         print(f"✅ Backup created: {backup_path}")
     else:
@@ -849,7 +849,7 @@ if __name__ == '__main__':
     # Example: Add Randles 2021 to unified
     merge_study_to_unified(
         study_csv='05_Randles_paper_to_csv/Randles_2021_wide_format.csv',
-        unified_csv='08_merged_ecm_dataset/ECM_Atlas_Unified.csv'  # Relative path
+        unified_csv='08_merged_ecm_dataset/merged_ecm_aging_zscore.csv'  # Relative path
     )
 ```
 
@@ -895,10 +895,10 @@ project/
 │   ├── Study_YYYY_annotation_report.md
 │   └── Study_YYYY_validation_log.txt
 └── 08_merged_ecm_dataset/
-    ├── ECM_Atlas_Unified.csv                ← PHASE 2 OUTPUT
+    ├── merged_ecm_aging_zscore.csv          ← PHASE 2 OUTPUT
     ├── unified_metadata.json
     └── backups/
-        └── ECM_Atlas_Unified_2025-10-13.csv
+        └── merged_ecm_aging_zscore_2025-10-13.csv
 ```
 
 ---

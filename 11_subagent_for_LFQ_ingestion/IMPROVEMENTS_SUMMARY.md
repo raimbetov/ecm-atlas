@@ -46,7 +46,7 @@ XX_Author_Year_paper_to_csv/
 
 ### ✅ **Removed Absolute Paths**
 - Changed all `/Users/Kravtsovd/projects/ecm-atlas/...` to relative paths
-- Examples now use: `08_merged_ecm_dataset/ECM_Atlas_Unified.csv`
+- Examples now use: `08_merged_ecm_dataset/merged_ecm_aging_zscore.csv`
 - Works on any machine, not just Daniel's
 
 ### ✅ **Added Configuration Template**

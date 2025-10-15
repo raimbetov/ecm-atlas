@@ -18,18 +18,18 @@ graph TB
 
     P1Output --> Phase2[🔄 PHASE 2: MERGE TO UNIFIED]
 
-    Phase2 --> P2_1[Load ECM_Atlas_Unified.csv<br/>or create if first study]
+    Phase2 --> P2_1[Load merged_ecm_aging_zscore.csv<br/>or create if first study]
     P2_1 --> P2_2[Load new study CSV<br/>Study_YYYY_wide_format.csv]
     P2_2 --> P2_3[Validate schema match<br/>Add missing columns as NaN]
     P2_3 --> P2_4[Concatenate dataframes<br/>pd.concat with ignore_index]
     P2_4 --> P2_5[Check for duplicates<br/>Study_ID + Protein_ID + Tissue]
-    P2_5 --> P2_6[Create backup<br/>backups/ECM_Atlas_Unified_<timestamp>.csv]
+    P2_5 --> P2_6[Create backup<br/>backups/merged_ecm_aging_zscore_<timestamp>.csv]
     P2_6 --> P2_7[Save updated unified CSV<br/>⚠️ New study added WITHOUT z-scores]
-    P2_7 --> P2Output[📦 PHASE 2 OUTPUT<br/>ECM_Atlas_Unified.csv<br/>Z-score columns = NaN for new study]
+    P2_7 --> P2Output[📦 PHASE 2 OUTPUT<br/>merged_ecm_aging_zscore.csv<br/>Z-score columns = NaN for new study]
 
     P2Output --> Phase3[📊 PHASE 3: Z-SCORE CALCULATION]
 
-    Phase3 --> P3_1[Load ECM_Atlas_Unified.csv]
+    Phase3 --> P3_1[Load merged_ecm_aging_zscore.csv]
     P3_1 --> P3_2[Filter to NEW study only<br/>df WHERE Study_ID == 'Study_YYYY']
     P3_2 --> P3_3[Group by specified columns<br/>groupby groupby_columns]
     P3_3 --> P3_4[For each group...]
@@ -49,10 +49,10 @@ graph TB
     P3_13 -->|Yes| P3_4
     P3_13 -->|No| P3_14[Concatenate all groups<br/>df_study_with_zscores]
 
-    P3_14 --> P3_15[Create backup<br/>backups/ECM_Atlas_Unified_<timestamp>.csv]
+    P3_14 --> P3_15[Create backup<br/>backups/merged_ecm_aging_zscore_<timestamp>.csv]
     P3_15 --> P3_16[Update unified CSV IN-PLACE<br/>⚠️ ONLY rows WHERE Study_ID == 'Study_YYYY'<br/>Other studies UNCHANGED]
     P3_16 --> P3_17[Save zscore_metadata_Study_YYYY.json<br/>Parameters per group]
-    P3_17 --> FinalOutput[📦 FINAL OUTPUT<br/>ECM_Atlas_Unified.csv<br/>✅ With z-scores for new study]
+    P3_17 --> FinalOutput[📦 FINAL OUTPUT<br/>merged_ecm_aging_zscore.csv<br/>✅ With z-scores for new study]
 
     style Phase1 fill:#ffe6e6
     style Phase2 fill:#ffd6cc
@@ -112,9 +112,9 @@ RAW DATA (Excel/CSV, ~2-3K proteins, 6-66 samples)
     ↓ PHASE 1: Study Processing
 WIDE-FORMAT CSV (ECM only, ~200-500 proteins, Young/Old columns)
     ↓ PHASE 2: Merge
-UNIFIED CSV (All studies, NO z-scores for new study yet)
+merged_ecm_aging_zscore.csv (All studies, NO z-scores for new study yet)
     ↓ PHASE 3: Z-Score Calculation
-UNIFIED CSV (All studies, z-scores added for new study)
+merged_ecm_aging_zscore.csv (All studies, z-scores added for new study)
 ```
 
 ---
@@ -129,8 +129,8 @@ UNIFIED CSV (All studies, z-scores added for new study)
 - `XX_Study_YYYY_paper_to_csv/Study_YYYY_wide_format.csv` (PHASE 1 output)
 
 ### Output
-- `08_merged_ecm_dataset/ECM_Atlas_Unified.csv` (PHASE 2 & 3 output)
-- `08_merged_ecm_dataset/backups/ECM_Atlas_Unified_*.csv` (automatic backups)
+- `08_merged_ecm_dataset/merged_ecm_aging_zscore.csv` (PHASE 2 & 3 output)
+- `08_merged_ecm_dataset/backups/merged_ecm_aging_zscore_*.csv` (automatic backups)
 - `08_merged_ecm_dataset/zscore_metadata_Study_YYYY.json` (PHASE 3 metadata)
 
 ---
@@ -168,12 +168,12 @@ UNIFIED CSV (All studies, z-scores added for new study)
 
 # PHASE 2: Merge to unified
 python merge_study.py Study_YYYY_wide_format.csv
-# → Updates ECM_Atlas_Unified.csv
+# → Updates merged_ecm_aging_zscore.csv
 
 # PHASE 3: Calculate z-scores
 cd /Users/Kravtsovd/projects/ecm-atlas/11_subagent_for_LFQ_ingestion
 python universal_zscore_function.py Study_YYYY Tissue
-# → Adds z-scores to ECM_Atlas_Unified.csv
+# → Adds z-scores to merged_ecm_aging_zscore.csv
 ```
 
 ### Python API

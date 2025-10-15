@@ -4,9 +4,9 @@
 
 **Target audience:** Sub-agent or researcher after completing Phase 1 & 2 (study added to unified CSV)
 
-**Input:** `ECM_Atlas_Unified.csv` with new study (without z-scores yet)
+**Input:** `merged_ecm_aging_zscore.csv` with new study (without z-scores yet)
 
-**Output:** `ECM_Atlas_Unified.csv` updated with z-scores for new study only
+**Output:** `merged_ecm_aging_zscore.csv` updated with z-scores for new study only
 
 ---
 
@@ -14,9 +14,9 @@
 
 ```mermaid
 graph LR
-    A[ECM_Atlas_Unified.csv<br/>New study added] --> B[calculate_study_zscores<br/>study_id, groupby_columns]
+    A[merged_ecm_aging_zscore.csv<br/>New study added] --> B[calculate_study_zscores<br/>study_id, groupby_columns]
     B --> C[Z-scores calculated<br/>per compartment]
-    C --> D[ECM_Atlas_Unified.csv<br/>UPDATED]
+    C --> D[merged_ecm_aging_zscore.csv<br/>UPDATED]
 
     style B fill:#99ccff,color:#000
     style D fill:#ccffcc
@@ -125,7 +125,7 @@ assert abs(z_old_valid.std() - 1.0) < 0.01
 def calculate_study_zscores(
     study_id: str,
     groupby_columns: list,
-    csv_path: str = '/Users/Kravtsovd/projects/ecm-atlas/08_merged_ecm_dataset/ECM_Atlas_Unified.csv',
+    csv_path: str = '/Users/Kravtsovd/projects/ecm-atlas/08_merged_ecm_dataset/merged_ecm_aging_zscore.csv',
     backup: bool = True
 ):
     """
@@ -532,7 +532,7 @@ After running function:
 
 ```
 08_merged_ecm_dataset/
-├── ECM_Atlas_Unified.csv              ← UPDATED with z-scores for new study
+├── merged_ecm_aging_zscore.csv        ← UPDATED with z-scores for new study
 ├── zscore_metadata_Randles_2021.json  ← Z-score calculation metadata
 ├── zscore_metadata_Tam_2020.json
 └── backups/
@@ -611,7 +611,7 @@ After running function, verify:
 
 ```python
 # 1. Load updated unified CSV
-df = pd.read_csv('08_merged_ecm_dataset/ECM_Atlas_Unified.csv')
+df = pd.read_csv('08_merged_ecm_dataset/merged_ecm_aging_zscore.csv')
 
 # 2. Check z-scores exist for new study
 study_rows = df[df['Study_ID'] == 'Randles_2021']
@@ -659,4 +659,4 @@ After z-score calculation:
 2. ✅ Ready for downstream analysis
 3. ✅ Can add another study using same pipeline (docs 01 + 02)
 
-**For analysis:** Use `ECM_Atlas_Unified.csv` with z-score columns for cross-study comparisons
+**For analysis:** Use `merged_ecm_aging_zscore.csv` with z-score columns for cross-study comparisons

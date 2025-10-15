@@ -300,7 +300,7 @@ The autonomous agent calls:
    from merge_to_unified import merge_study_to_unified
    df_merged = merge_study_to_unified(
        study_csv="XX_Study/Study_wide_format.csv",
-       unified_csv="08_merged_ecm_dataset/ECM_Atlas_Unified.csv"
+       unified_csv="08_merged_ecm_dataset/merged_ecm_aging_zscore.csv"
    )
    ```
 

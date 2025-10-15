@@ -70,7 +70,7 @@ PHASE 1: Data Normalization
 └─> Excel → Long format → ECM filtering → Wide format
 
 PHASE 2: Merge to Unified CSV
-└─> Add study to 08_merged_ecm_dataset/ECM_Atlas_Unified.csv
+└─> Add study to 08_merged_ecm_dataset/merged_ecm_aging_zscore.csv
 
 PHASE 3: Z-Score Calculation
 └─> Calculate z-scores for new study only
@@ -128,7 +128,7 @@ XX_Author_Year_paper_to_csv/
 └── Author_Year_wide_format.csv       # ✅ Final dataset
 
 08_merged_ecm_dataset/
-├── ECM_Atlas_Unified.csv             # ✅ UPDATED with new study
+├── merged_ecm_aging_zscore.csv       # ✅ UPDATED with new study
 ├── unified_metadata.json             # ✅ UPDATED metadata
 └── backups/
     └── ECM_Atlas_Unified_*.csv       # ✅ Automatic backups

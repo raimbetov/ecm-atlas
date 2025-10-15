@@ -154,7 +154,7 @@ ValueError: Missing required config fields
 [2025-10-13 15:35:12] ✅ Loaded merge_to_unified function
 [2025-10-13 15:35:12]
 ### Step 2.2: Execute merge
-[2025-10-13 15:35:12] Merging Randles_2021_wide_format.csv to 08_merged_ecm_dataset/ECM_Atlas_Unified.csv
+[2025-10-13 15:35:12] Merging Randles_2021_wide_format.csv to 08_merged_ecm_dataset/merged_ecm_aging_zscore.csv
 [2025-10-13 15:35:15] ✅ Merge complete: 3542 total rows in unified CSV
 [2025-10-13 15:35:15] ✅ Completed: Merge to unified CSV
 

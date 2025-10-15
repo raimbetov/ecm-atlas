@@ -105,11 +105,11 @@ python my_study_config.py  # Validate
 
 # Step 3: Merge to unified CSV (PHASE 2)
 python merge_to_unified.py 05_Randles_paper_to_csv/Randles_2021_wide_format.csv
-# Output: ECM_Atlas_Unified.csv updated
+# Output: merged_ecm_aging_zscore.csv updated
 
 # Step 4: Calculate z-scores (PHASE 3)
 python universal_zscore_function.py Randles_2021 Tissue
-# Output: ECM_Atlas_Unified.csv with z-scores
+# Output: merged_ecm_aging_zscore.csv with z-scores
 ```
 
 ---
@@ -130,10 +130,10 @@ python universal_zscore_function.py Randles_2021 Tissue
   - `Study_YYYY_validation_log.txt`
 
 - Unified database: `/Users/Kravtsovd/projects/ecm-atlas/08_merged_ecm_dataset/`
-  - `ECM_Atlas_Unified.csv`
+  - `merged_ecm_aging_zscore.csv`
   - `unified_metadata.json`
   - `zscore_metadata_*.json`
-  - `backups/ECM_Atlas_Unified_*.csv`
+  - `backups/merged_ecm_aging_zscore_*.csv`
 
 ---
 
@@ -184,19 +184,19 @@ XX_Study_YYYY_paper_to_csv/
 ### PHASE 2 Output (Merge)
 ```
 08_merged_ecm_dataset/
-├── ECM_Atlas_Unified.csv               (UPDATED)
+├── merged_ecm_aging_zscore.csv         (UPDATED)
 ├── unified_metadata.json               (UPDATED)
 └── backups/
-    └── ECM_Atlas_Unified_TIMESTAMP.csv
+    └── merged_ecm_aging_zscore_TIMESTAMP.csv
 ```
 
 ### PHASE 3 Output (Z-Scores)
 ```
 08_merged_ecm_dataset/
-├── ECM_Atlas_Unified.csv               (UPDATED with z-scores)
+├── merged_ecm_aging_zscore.csv         (UPDATED with z-scores)
 ├── zscore_metadata_Study_YYYY.json     (NEW)
 └── backups/
-    └── ECM_Atlas_Unified_TIMESTAMP.csv
+    └── merged_ecm_aging_zscore_TIMESTAMP.csv
 ```
 
 **Z-score columns added:**
