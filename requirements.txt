@@ -1,17 +1,23 @@
-langgraph
-langgraph-prebuilt
-langgraph-sdk
-langgraph-checkpoint-sqlite
-langsmith
-langchain-community
-langchain-core
-langchain-openai
-langchain-groq
-notebook
-tavily-python
-wikipedia
-trustcall
-langgraph-cli[inmem]
-streamlit
-pandas
-numpy
+# ECM-Atlas Core Dependencies
+# Minimal set of libraries required for the complete workflow
+
+# Data Processing & Analysis
+pandas>=2.0.0
+numpy>=1.24.0
+scipy>=1.10.0
+
+# Web Framework & Dashboard
+flask>=3.0.0
+flask-cors>=4.0.0
+
+# Optional: Interactive Notebooks
+jupyter>=1.0.0
+notebook>=7.0.0
+
+# Streamlit (keep as requested)
+streamlit>=1.28.0
+
+# Note: Removed unused dependencies
+# - langgraph, langgraph-prebuilt, langgraph-sdk, langgraph-checkpoint-sqlite (unused)
+# - langsmith, langchain-community, langchain-core, langchain-openai, langchain-groq (unused)
+# - tavily-python, wikipedia, trustcall, langgraph-cli (unused)
