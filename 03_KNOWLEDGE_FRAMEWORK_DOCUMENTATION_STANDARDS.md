@@ -1,4 +1,4 @@
-## 📋 Documentation = Code (Minto + MECE + DRY)
+# 📋 Knowledge Framework: Documentation Standards (Minto + MECE + DRY)
 
 **Core Principle:** Write documentation like code - fractal structure where each abstraction level is complete, MECE-organized, with zero redundancy.
 
