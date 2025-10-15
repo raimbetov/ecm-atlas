@@ -66,7 +66,42 @@ const IndividualDataset = (function() {
             <!-- Heatmap -->
             <div class="section">
                 <h2>1. Heatmap: Top Aging-Associated Proteins</h2>
-                <p>Top 100 proteins with largest absolute z-score changes. Color gradient: Blue (low) → White (neutral) → Red (high)</p>
+                <p>Top 100 proteins with largest absolute z-score changes</p>
+
+                <!-- Z-Score Color Scale Legend -->
+                <div style="margin: 30px 0; padding: 25px; background: linear-gradient(135deg, #f5f7fa 0%, #eef2f7 100%); border-radius: 12px; border-left: 6px solid #3b82f6; box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);">
+                    <strong style="display: block; margin-bottom: 20px; font-size: 18px; color: #1a1a1a;">Z-Score Color Scale</strong>
+                    <div style="display: flex; flex-direction: column; gap: 20px;">
+                        <!-- Color Bar -->
+                        <div style="display: flex; align-items: center; gap: 15px;">
+                            <span style="display: inline-block; width: 100%; height: 50px; background: linear-gradient(to right, #0033ff, #0066ff, #66b3ff, #f7f7f7, #ffcc00, #ff6600, #ff0000); border-radius: 6px; border: 2px solid #ccc;"></span>
+                        </div>
+                        <!-- Legend Labels -->
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; padding: 0 10px;">
+                            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                                <strong style="color: #0033ff; font-size: 18px;">-5</strong>
+                                <span style="font-size: 13px; color: #555; font-weight: 600;">Decreased</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                                <strong style="color: #0066ff; font-size: 18px;">-2</strong>
+                                <span style="font-size: 13px; color: #555;">Reduced</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                                <strong style="color: #808080; font-size: 18px;">0</strong>
+                                <span style="font-size: 13px; color: #555; font-weight: 600;">No change</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                                <strong style="color: #ff6600; font-size: 18px;">+2</strong>
+                                <span style="font-size: 13px; color: #555;">Increased</span>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                                <strong style="color: #ff0000; font-size: 18px;">+5</strong>
+                                <span style="font-size: 13px; color: #555; font-weight: 600;">Highly Increased</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 ${renderCompartmentTabs(compartments, 'heatmap')}
                 <div id="heatmap-chart" class="chart-container tall">
                     <div class="loading">Select a compartment to view heatmap...</div>
@@ -241,15 +276,19 @@ const IndividualDataset = (function() {
                 z: data.genes.map((gene, i) => [data.zscore_young[i], data.zscore_old[i]]),
                 y: data.genes,
                 x: ['Young', 'Old'],
-                colorscale: 'RdBu',
-                reversescale: true,
+                colorscale: [
+                    [0.0, '#0033ff'],  // Vivid blue (-5, downregulated)
+                    [0.2, '#0066ff'],  // Bright blue (-3)
+                    [0.35, '#66b3ff'], // Light blue (-1)
+                    [0.5, '#f7f7f7'],  // Off-white (0, no change)
+                    [0.65, '#ffcc00'], // Bright yellow (+1)
+                    [0.8, '#ff6600'],  // Vibrant orange (+3)
+                    [1.0, '#ff0000']   // Vivid red (+5, upregulated)
+                ],
                 zmid: 0,
                 zmin: -5,
                 zmax: 5,
-                colorbar: {
-                    title: { text: 'Z-Score', side: 'right' },
-                    thickness: 20
-                },
+                showscale: false,  // Remove side colorbar; use top legend instead
                 hovertemplate: '<b>%{y}</b><br>Age: %{x}<br>Z-Score: %{z:.2f}<extra></extra>'
             };
 
@@ -285,10 +324,16 @@ const IndividualDataset = (function() {
                 marker: {
                     size: 6,
                     color: data.zscore_delta,
-                    colorscale: 'RdBu',
-                    reversescale: true,
-                    showscale: true,
-                    colorbar: { title: 'ΔZ-Score', thickness: 15 }
+                    colorscale: [
+                        [0.0, '#0033ff'],  // Vivid blue (downregulated)
+                        [0.2, '#0066ff'],  // Bright blue
+                        [0.35, '#66b3ff'], // Light blue
+                        [0.5, '#f7f7f7'],  // Off-white (neutral)
+                        [0.65, '#ffcc00'], // Bright yellow
+                        [0.8, '#ff6600'],  // Vibrant orange
+                        [1.0, '#ff0000']   // Vivid red (upregulated)
+                    ],
+                    showscale: false  // Remove side colorbar
                 },
                 hovertemplate: '<b>%{text}</b><br>ΔZ-Score: %{x:.2f}<br>-log10(Abundance): %{y:.2f}<extra></extra>'
             };

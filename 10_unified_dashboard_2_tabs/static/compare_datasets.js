@@ -106,6 +106,40 @@ const CompareDatasets = (function() {
                             </div>
                         </div>
 
+                        <!-- Z-Score Color Scale Legend -->
+                        <div style="margin: 30px 0; padding: 25px; background: linear-gradient(135deg, #f5f7fa 0%, #eef2f7 100%); border-radius: 12px; border-left: 6px solid #3b82f6; box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);">
+                            <strong style="display: block; margin-bottom: 20px; font-size: 18px; color: #1a1a1a;">Z-Score Delta Color Scale</strong>
+                            <div style="display: flex; flex-direction: column; gap: 20px;">
+                                <!-- Color Bar -->
+                                <div style="display: flex; align-items: center; gap: 15px;">
+                                    <span style="display: inline-block; width: 100%; height: 50px; background: linear-gradient(to right, #0033ff, #0066ff, #66b3ff, #f7f7f7, #ffcc00, #ff6600, #ff0000); border-radius: 6px; border: 2px solid #ccc;"></span>
+                                </div>
+                                <!-- Legend Labels -->
+                                <div style="display: flex; justify-content: space-between; align-items: flex-start; padding: 0 10px;">
+                                    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                                        <strong style="color: #0033ff; font-size: 18px;">-3</strong>
+                                        <span style="font-size: 13px; color: #555; font-weight: 600;">Decreased</span>
+                                    </div>
+                                    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                                        <strong style="color: #0066ff; font-size: 18px;">-1</strong>
+                                        <span style="font-size: 13px; color: #555;">Reduced</span>
+                                    </div>
+                                    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                                        <strong style="color: #808080; font-size: 18px;">0</strong>
+                                        <span style="font-size: 13px; color: #555; font-weight: 600;">No change</span>
+                                    </div>
+                                    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                                        <strong style="color: #ff6600; font-size: 18px;">+1</strong>
+                                        <span style="font-size: 13px; color: #555;">Increased</span>
+                                    </div>
+                                    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                                        <strong style="color: #ff0000; font-size: 18px;">+3</strong>
+                                        <span style="font-size: 13px; color: #555; font-weight: 600;">Highly Increased</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                         <div id="heatmap" class="chart-container tall">
                             <div class="loading">Loading heatmap...</div>
                         </div>
@@ -292,27 +326,19 @@ const CompareDatasets = (function() {
             y: proteins,
             type: 'heatmap',
             colorscale: [
-                [0.0, '#08519c'],  // Deep blue (-3, low abundance/downregulated)
-                [0.2, '#3182bd'],  // Blue (-2)
-                [0.35, '#9ecae1'], // Light blue (-1)
+                [0.0, '#0033ff'],  // Vivid blue (-3, downregulated)
+                [0.2, '#0066ff'],  // Bright blue (-2)
+                [0.35, '#66b3ff'], // Light blue (-1)
                 [0.5, '#f7f7f7'],  // Off-white (0, no change)
-                [0.65, '#fc8d59'], // Light orange (+1)
-                [0.8, '#e34a33'],  // Orange-red (+2)
-                [1.0, '#b30000']   // Deep red (+3, high abundance/upregulated)
+                [0.65, '#ffcc00'], // Bright yellow (+1)
+                [0.8, '#ff6600'],  // Vibrant orange (+2)
+                [1.0, '#ff0000']   // Vivid red (+3, upregulated)
             ],
             zmin: -3,
             zmax: 3,
             hovertemplate: '%{text}<extra></extra>',
             text: hoverText,
-            colorbar: {
-                title: 'Δ Z-Score<br><span style="font-size:11px">Down ← → Up</span>',
-                titleside: 'right',
-                tickmode: 'linear',
-                tick0: -3,
-                dtick: 1,
-                thickness: 20,
-                len: 0.7
-            }
+            showscale: false  // Remove side colorbar legend; use top legend instead
         };
 
         const layout = {
