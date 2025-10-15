@@ -141,16 +141,23 @@ def calculate_study_zscores(
         # Copy to avoid warnings
         df_group = df_group.copy()
 
-        # --- Substep 4.1: Count missing values ---
+        # --- Substep 4.1: Count missing and zero values ---
         n_missing_young = df_group['Abundance_Young'].isna().sum()
         n_missing_old = df_group['Abundance_Old'].isna().sum()
+        n_zero_young = (df_group['Abundance_Young'] == 0).sum()
+        n_zero_old = (df_group['Abundance_Old'] == 0).sum()
 
         pct_missing_young = n_missing_young / len(df_group) * 100
         pct_missing_old = n_missing_old / len(df_group) * 100
+        pct_zero_young = n_zero_young / len(df_group) * 100
+        pct_zero_old = n_zero_old / len(df_group) * 100
 
-        print(f"  Missing values:")
+        print(f"  Missing values (NaN):")
         print(f"    Abundance_Young: {n_missing_young}/{len(df_group)} ({pct_missing_young:.1f}%)")
         print(f"    Abundance_Old: {n_missing_old}/{len(df_group)} ({pct_missing_old:.1f}%)")
+        print(f"  Zero abundances (0.0 = detected absence):")
+        print(f"    Abundance_Young: {n_zero_young}/{len(df_group)} ({pct_zero_young:.1f}%)")
+        print(f"    Abundance_Old: {n_zero_old}/{len(df_group)} ({pct_zero_old:.1f}%)")
 
         # --- Substep 4.2: Calculate skewness (on non-NaN) ---
         young_notna = df_group['Abundance_Young'].notna().sum()
@@ -168,8 +175,8 @@ def calculate_study_zscores(
 
         if needs_log:
             print(f"  ✅ Applying log2(x + 1) transformation")
-            young_values = np.log2(df_group['Abundance_Young'] + 1)  # NaN preserved
-            old_values = np.log2(df_group['Abundance_Old'] + 1)      # NaN preserved
+            young_values = np.log2(df_group['Abundance_Young'] + 1)  # NaN→NaN; 0→log2(1)=0.0 (not NaN)
+            old_values = np.log2(df_group['Abundance_Old'] + 1)      # NaN→NaN; 0→log2(1)=0.0 (not NaN)
         else:
             print(f"  ℹ️  No log-transformation needed")
             young_values = df_group['Abundance_Young']
@@ -228,6 +235,8 @@ def calculate_study_zscores(
             'n_rows': len(df_group),
             'missing_young_%': round(pct_missing_young, 1),
             'missing_old_%': round(pct_missing_old, 1),
+            'zero_young_%': round(pct_zero_young, 1),
+            'zero_old_%': round(pct_zero_old, 1),
             'skew_young': round(skew_young, 3),
             'skew_old': round(skew_old, 3),
             'log2_transformed': bool(needs_log),

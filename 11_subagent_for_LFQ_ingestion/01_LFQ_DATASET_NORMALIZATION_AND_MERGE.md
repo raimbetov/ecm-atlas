@@ -579,15 +579,26 @@ df_wide = df_ecm.groupby(groupby_cols, dropna=False).apply(
 # Abundance_Young/Old = mean across samples (NaN if all samples were NaN)
 ```
 
-**⚠️ Missing Value Handling:**
+**⚠️ Missing Value and Zero Value Handling:**
 ```python
 # Example: Protein X in Glomerular compartment
-# Young samples: [25.3, NaN, 27.1]  → mean = 26.2 (NaN excluded automatically by pandas)
-# Old samples: [NaN, NaN, NaN]      → mean = NaN (all NaN preserved)
+
+# Case 1: Mixed values and NaN
+# Young samples: [25.3, NaN, 27.1]  → mean = 26.2 (NaN excluded by pandas.mean(skipna=True))
+# Old samples: [NaN, NaN, NaN]      → mean = NaN (all NaN → aggregate NaN)
+
+# Case 2: All zeros (NOT the same as all NaN!)
+# Young samples: [0.0, 0.0, 0.0]    → mean = 0.0 (NOT NaN - indicates detected absence)
+# Old samples: [0.0]                → mean = 0.0 (NOT NaN - indicates detected absence)
+
+# Critical distinction:
+# - NaN = "not measured" (missing data) → excluded from calculations
+# - 0.0 = "measured as zero" (detected absence) → included in calculations
 
 # This is CORRECT behavior:
-# - NaN = protein not detected in ANY old sample
-# - Later z-score calculation will also preserve this NaN
+# - NaN in → NaN out (later z-score will also be NaN)
+# - 0.0 in → 0.0 out (later z-score will be valid non-NaN value)
+# - Later z-score calculation: zero abundances produce valid z-scores indicating extreme absence
 ```
 
 **Expected output dimensions:**

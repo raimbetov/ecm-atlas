@@ -90,19 +90,19 @@ skew_old = skew(Abundance_Old.dropna())
 
 # Step 2: Transform if needed
 if (skew_young > 1) OR (skew_old > 1):
-    young_values = log2(Abundance_Young + 1)  # NaN preserved
-    old_values = log2(Abundance_Old + 1)      # NaN preserved
+    young_values = log2(Abundance_Young + 1)  # NaN→NaN; 0→0.0 (not NaN)
+    old_values = log2(Abundance_Old + 1)      # NaN→NaN; 0→0.0 (not NaN)
 else:
-    young_values = Abundance_Young  # NaN preserved
-    old_values = Abundance_Old      # NaN preserved
+    young_values = Abundance_Young  # NaN preserved; 0 preserved
+    old_values = Abundance_Old      # NaN preserved; 0 preserved
 
-# Step 3: Calculate mean and std (EXCLUDING NaN)
-mean_young = young_values.mean(skipna=True)
+# Step 3: Calculate mean and std (EXCLUDING NaN, but INCLUDING zeros)
+mean_young = young_values.mean(skipna=True)  # Includes 0.0 values
 std_young = young_values.std(skipna=True)
-mean_old = old_values.mean(skipna=True)
+mean_old = old_values.mean(skipna=True)      # Includes 0.0 values
 std_old = old_values.std(skipna=True)
 
-# Step 4: Calculate z-scores (NaN input → NaN output)
+# Step 4: Calculate z-scores (NaN input → NaN output; 0 → valid z-score)
 Zscore_Young = (young_values - mean_young) / std_young
 Zscore_Old = (old_values - mean_old) / std_old
 Zscore_Delta = Zscore_Old - Zscore_Young
@@ -116,6 +116,90 @@ assert abs(z_young_valid.std() - 1.0) < 0.01  # std ≈ 1
 assert abs(z_old_valid.mean()) < 0.01
 assert abs(z_old_valid.std() - 1.0) < 0.01
 ```
+
+---
+
+## Zero Value Handling
+
+### ⚠️ Important: Zero ≠ NaN
+
+In LFQ proteomics data, it is crucial to understand the difference:
+
+| Type | Meaning | Pandas | Z-Score |
+|------|---------|--------|---------|
+| **NaN** | Missing data (protein not measured) | `NaN` | `NaN` (excluded from calculations) |
+| **0.0** | Detected absence (protein measured at zero abundance) | `0.0` | Valid z-score (included in calculations) |
+
+### When Do Zero Values Appear?
+
+Zero abundances arise during the **wide-format conversion step** when:
+- Individual samples are aggregated by age group
+- If all samples in Young group have zero abundance: `mean([0, 0, 0]) = 0.0` ✅ Included
+- If all samples in Young group are NaN: `mean([NaN, NaN]) = NaN` ✅ Excluded
+
+### Example: COL5A2 in Young Kidney Glomerular
+
+```
+Randles 2021 data:
+┌─────────────┬──────────────┬────────────────┬────────────┐
+│ Gene        │ Abundance    │ Log2-Transform │ Z-Score    │
+├─────────────┼──────────────┼────────────────┼────────────┤
+│ COL5A2      │ 0.0          │ log2(0+1)=0.0  │ -3.9612    │
+└─────────────┴──────────────┴────────────────┴────────────┘
+
+Interpretation:
+- Young samples: No COL5A2 detected (0 abundance)
+- Group mean (Young, Kidney_Glomerular): ~3.0 on log2 scale
+- Z-score: (0 - 3.0) / σ = -3.96
+- Meaning: COL5A2 is 3.96 standard deviations BELOW group mean
+- Biological: Protein absent/very low in young kidney
+```
+
+### Why Z-Scores From Zero Are Correct
+
+```python
+# Mathematical validation
+young_group = [0.0, 2.63, 3.22, 3.71]  # After log2 transform
+
+mean = 2.39
+std = 1.44
+
+# Z-score for the 0 value:
+z = (0.0 - 2.39) / 1.44 = -1.66  ✅ Valid and informative
+
+# Interpretation: 1.66 standard deviations below mean = significant absence
+```
+
+### Data Quality Impact
+
+✅ **CORRECT BEHAVIOR:**
+- 0 values are included in mean/std calculations
+- Z-scores calculated from 0s are valid and non-NaN
+- Biological signal is preserved (absence = information)
+
+❌ **WRONG INTERPRETATIONS TO AVOID:**
+- "Zero z-score = missing data" (Wrong! 0 is measured absence)
+- "Zero abundance = data error" (Wrong! This is valid LFQ output)
+- "Zero should be treated like NaN" (Wrong! They are different)
+
+### Metadata Output
+
+The z-score calculation now tracks both separately:
+
+```json
+{
+  "Kidney_Glomerular": {
+    "missing_young_%": 0.0,
+    "zero_young_%": 5.2,
+    "missing_old_%": 2.1,
+    "zero_old_%": 3.8,
+    ...
+  }
+}
+```
+
+- `missing_*_%`: Proteins not measured (NaN) → excluded from calculations
+- `zero_*_%`: Proteins measured at zero abundance → included in calculations
 
 ---
 

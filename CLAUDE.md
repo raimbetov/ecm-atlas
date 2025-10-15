@@ -113,8 +113,11 @@ python find_common_signatures.py
 **Scientific Context**:
 - Goal: Identify ECM aging signatures across tissues/organisms
 - Methods: LFQ, TMT, SILAC, iTRAQ, DiLeu
-- NaN handling: 50-80% missing is normal (preserve, don't impute)
-- Normalization: Within-study z-scores, cross-study percentiles
+- **Data Handling:**
+  - **NaN (missing data):** 50-80% is normal in LFQ, preserve don't impute (excluded from mean/std calculations)
+  - **Zero values (detected absence):** 0.0 abundance = protein measured as undetectable/absent (included in mean/std, produces valid z-scores)
+  - See: `11_subagent_for_LFQ_ingestion/02_ZSCORE_CALCULATION_UNIVERSAL_FUNCTION.md` → "Zero Value Handling" section
+- Normalization: Within-study z-scores (per compartment), cross-study percentiles
 - **⚠️ After adding new dataset:** Update `04_compilation_of_papers/00_README_compilation.md` (processing status, study counts, tables)
 
 ---
