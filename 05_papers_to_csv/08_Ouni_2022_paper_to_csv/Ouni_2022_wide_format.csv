@@ -1,0 +1,103 @@
+Protein_ID,Protein_Name,Gene_Symbol,Canonical_Gene_Symbol,Matrisome_Category,Matrisome_Division,Tissue,Tissue_Compartment,Species,Abundance_Young,Abundance_Old,Method,Study_ID,Match_Level,Match_Confidence
+P01023,Alpha-2-macroglobulin,A2M,A2M,ECM Regulators,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,98.29866666666666,120.17333333333333,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+D3YTG3,Target of Nesh-SH3,ABI3BP,ABI3BP,ECM Glycoproteins,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,111.32933333333332,113.85733333333333,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+Q8IUX7,Adipocyte enhancer-binding protein 1,AEBP1,AEBP1,ECM Glycoproteins,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,109.75999999999999,100.30133333333333,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+O00468,Agrin,AGRN,AGRN,ECM Glycoproteins,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,87.93466666666667,42.67066666666666,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P01019,Angiotensinogen,AGT,AGT,ECM Regulators,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,367.9493333333333,214.6,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P02760,Protein AMBP,AMBP,AMBP,ECM Regulators,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,50.276,50.348,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P04083,Annexin A1,ANXA1,ANXA1,ECM-affiliated Proteins,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,192.88666666666668,195.69733333333335,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P50995,Annexin A11,ANXA11,ANXA11,ECM-affiliated Proteins,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,105.52266666666667,112.79333333333334,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P07355,Annexin A2,ANXA2,ANXA2,ECM-affiliated Proteins,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,150.14133333333334,154.19733333333335,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P09525,Annexin A4,ANXA4,ANXA4,ECM-affiliated Proteins,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,111.79733333333334,160.58133333333333,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P08758,Annexin A5,ANXA5,ANXA5,ECM-affiliated Proteins,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,187.24399999999997,279.3773333333333,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P08133,Annexin A6,ANXA6,ANXA6,ECM-affiliated Proteins,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,163.09066666666666,224.09066666666666,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+B4DT77,Annexin,ANXA7,ANXA7,ECM-affiliated Proteins,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,169.47733333333338,192.98533333333336,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P21810,Biglycan,BGN,BGN,Proteoglycans,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,137.12533333333334,132.36533333333335,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+E9PHK0,Tetranectin,CLEC3B,CLEC3B,ECM-affiliated Proteins,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,252.50000000000006,224.76800000000003,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+Q99715,Collagen alpha-1(XII) chain,COL12A1,COL12A1,Collagens,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,194.98933333333335,168.748,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+Q05707,Collagen alpha-1(XIV) chain,COL14A1,COL14A1,Collagens,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,185.16133333333332,160.48933333333335,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+A6NDR9,Collagen alpha-1(XVI) chain,COL16A1,COL16A1,Collagens,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,167.99733333333333,138.47466666666668,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P39060,Collagen alpha-1(XVIII) chain,COL18A1,COL18A1,Collagens,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,193.32533333333328,228.468,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P02452,Collagen alpha-1(I) chain,COL1A1,COL1A1,Collagens,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,172.33066666666664,130.42666666666668,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P08123,Collagen alpha-2(I) chain,COL1A2,COL1A2,Collagens,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,217.196,173.15466666666666,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P02458,Collagen alpha-1(II) chain,COL2A1,COL2A1,Collagens,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,101.504,189.44266666666664,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P02461,Collagen alpha-1(III) chain,COL3A1,COL3A1,Collagens,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,169.3733333333333,128.916,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P02462,Collagen alpha-1(IV) chain,COL4A1,COL4A1,Collagens,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,103.54133333333334,97.42266666666666,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P08572,Collagen alpha-2(IV) chain,COL4A2,COL4A2,Collagens,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,388.05199999999996,323.104,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P20908,Collagen alpha-1(V) chain,COL5A1,COL5A1,Collagens,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,201.06133333333332,165.63866666666664,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P05997,Collagen alpha-2(V) chain,COL5A2,COL5A2,Collagens,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,174.916,129.07466666666667,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P12109,Collagen alpha-1(VI) chain,COL6A1,COL6A1,Collagens,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,137.92800000000003,110.44933333333333,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P12110,Collagen alpha-2(VI) chain,COL6A2,COL6A2,Collagens,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,155.0746666666667,142.73066666666665,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P12111,Collagen alpha-3(VI) chain,COL6A3,COL6A3,Collagens,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,148.04000000000002,137.14266666666666,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+A6NMZ7,Collagen alpha-6(VI) chain,COL6A6,COL6A6,Collagens,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,132.41333333333336,152.5786666666667,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P04080,Cystatin-B,CSTB,CSTB,ECM Regulators,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,254.85066666666663,366.0413333333332,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P07339,Cathepsin D,CTSD,CTSD,ECM Regulators,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,127.82666666666667,157.91066666666663,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+Q9UBR2,Cathepsin Z,CTSZ,CTSZ,ECM Regulators,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,53.220000000000006,74.536,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P07585,Decorin,DCN,DCN,Proteoglycans,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,76.42666666666666,44.461333333333336,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+Q07507,Dermatopontin,DPT,DPT,ECM Glycoproteins,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,210.8733333333333,227.81466666666665,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+Q12805,EGF-containing fibulin-like extracellular matrix protein 1,EFEMP1,EFEMP1,ECM Glycoproteins,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,208.516,228.70933333333332,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+Q9Y6C2,EMILIN-1,EMILIN1,EMILIN1,ECM Glycoproteins,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,188.27733333333336,189.58666666666667,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P00734,Prothrombin,F2,F2,ECM Regulators,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,159.56266666666664,203.05066666666667,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P23142,Fibulin-1,FBLN1,FBLN1,ECM Glycoproteins,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,66.26533333333334,86.964,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+G3V4U0,Fibulin-5,FBLN5,FBLN5,ECM Glycoproteins,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,125.45333333333333,103.36533333333333,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P35555,Fibrillin-1,FBN1,FBN1,ECM Glycoproteins,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,176.63466666666667,178.28133333333335,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P02671,Fibrinogen alpha chain,FGA,FGA,ECM Glycoproteins,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,173.44533333333334,176.43733333333336,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P02675,Fibrinogen beta chain,FGB,FGB,ECM Glycoproteins,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,174.54533333333333,171.68799999999996,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+C9JEU5,Fibrinogen gamma chain,FGG,FGG,ECM Glycoproteins,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,138.84266666666667,165.53333333333333,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P20930,Filaggrin,FLG,FLG,Secreted Factors,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,110.08533333333332,118.12,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+Q06828,Fibromodulin,FMOD,FMOD,Proteoglycans,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,203.1333333333333,160.95733333333337,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+E9PE77,Ugl-Y3,FN1,FN1,ECM Glycoproteins,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,255.44400000000002,227.06799999999998,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P35052,Glypican-1,GPC1,GPC1,ECM-affiliated Proteins,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,163.5426666666667,143.856,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+Q9Y625,Glypican-6,GPC6,GPC6,ECM-affiliated Proteins,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,325.732,184.88933333333335,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P02790,Hemopexin,HPX,HPX,ECM-affiliated Proteins,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,229.256,265.61199999999997,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P04196,Histidine-rich glycoprotein,HRG,HRG,ECM Regulators,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,171.9253333333333,206.36399999999998,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+Q86YZ3,Hornerin,HRNR,HRNR,Secreted Factors,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,136.28666666666666,135.704,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P98160,Basement membrane-specific heparan sulfate proteoglycan core protein,HSPG2,HSPG2,Proteoglycans,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,156.53866666666667,163.54933333333335,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+F5H7E1,Inter-alpha-trypsin inhibitor heavy chain H1,ITIH1,ITIH1,ECM Regulators,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,79.136,104.75333333333333,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+Q14624-2,Isoform 2 of Inter-alpha-trypsin inhibitor heavy chain H4,ITIH4,ITIH4,ECM Regulators,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,193.53333333333336,227.16133333333332,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+C9JEX1,Lysyl-bradykinin,KNG1,KNG1,ECM Regulators,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,142.67333333333332,140.66666666666666,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+Q16363,Laminin subunit alpha-4,LAMA4,LAMA4,ECM Glycoproteins,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,64.63466666666667,67.39066666666668,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+O15230,Laminin subunit alpha-5,LAMA5,LAMA5,ECM Glycoproteins,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,123.74133333333332,148.94266666666667,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P07942,Laminin subunit beta-1,LAMB1,LAMB1,ECM Glycoproteins,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,324.40933333333334,181.40533333333332,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P55268,Laminin subunit beta-2,LAMB2,LAMB2,ECM Glycoproteins,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,170.9973333333333,175.36533333333333,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P11047,Laminin subunit gamma-1,LAMC1,LAMC1,ECM Glycoproteins,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,204.88133333333334,188.58133333333333,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P09382,Galectin-1,LGALS1,LGALS1,ECM-affiliated Proteins,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,181.74666666666667,205.204,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P17931,Galectin-3,LGALS3,LGALS3,ECM-affiliated Proteins,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,202.9346666666667,252.24133333333333,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P49257,Protein ERGIC-53,LMAN1,LMAN1,ECM-affiliated Proteins,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,109.85199999999998,126.41199999999999,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P51884,Lumican,LUM,LUM,Proteoglycans,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,117.44666666666667,117.34266666666667,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P14543,Nidogen-1,NID1,NID1,ECM Glycoproteins,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,72.84266666666666,88.64533333333333,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+Q14112,Nidogen-2,NID2,NID2,ECM Glycoproteins,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,79.30666666666667,50.76533333333333,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P20774,Mimecan,OGN,OGN,Proteoglycans,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,154.60666666666665,163.42000000000002,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P00747,Plasminogen,PLG,PLG,ECM Regulators,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,121.37733333333335,130.65466666666666,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+O15031,Plexin-B2,PLXNB2,PLXNB2,ECM-affiliated Proteins,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,212.2866666666667,226.504,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+Q15063,Periostin,POSTN,POSTN,ECM Glycoproteins,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,44.368,45.12666666666667,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P51888,Prolargin,PRELP,PRELP,Proteoglycans,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,140.82933333333335,150.44133333333335,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P60903,Protein S100-A10,S100A10,S100A10,Secreted Factors,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,165.252,203.984,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+Q99584,Protein S100-A13,S100A13,S100A13,Secreted Factors,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,202.69733333333332,166.08666666666664,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+Q96FQ6,Protein S100-A16,S100A16,S100A16,Secreted Factors,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,226.65466666666666,222.40799999999996,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P06703,Protein S100-A6,S100A6,S100A6,Secreted Factors,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,197.14933333333337,206.4586666666666,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P31151,Protein S100-A7,S100A7,S100A7,Secreted Factors,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,147.916,148.588,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P05109,Protein S100-A8,S100A8,S100A8,Secreted Factors,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,204.57333333333332,156.74533333333335,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P06702,Protein S100-A9,S100A9,S100A9,Secreted Factors,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,115.43733333333334,96.20266666666667,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+E7ESK6,Syndecan,SDC2,SDC2,ECM-affiliated Proteins,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,110.50399999999999,131.70533333333333,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P01009,Alpha-1-antitrypsin,SERPINA1,SERPINA1,ECM Regulators,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,217.00666666666666,256.0013333333333,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+G3V5I3,Alpha-1-antichymotrypsin,SERPINA3,SERPINA3,ECM Regulators,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,42.59999999999999,67.80133333333333,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P30740,Leukocyte elastase inhibitor,SERPINB1,SERPINB1,ECM Regulators,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,124.71599999999998,152.47066666666666,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P35237,Serpin B6,SERPINB6,SERPINB6,ECM Regulators,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,185.53733333333335,240.62266666666665,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P01008,Antithrombin-III,SERPINC1,SERPINC1,ECM Regulators,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,240.27200000000002,176.11333333333334,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P05546,Heparin cofactor 2,SERPIND1,SERPIND1,ECM Regulators,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,120.6186666666667,122.92666666666666,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P36955,Pigment epithelium-derived factor,SERPINF1,SERPINF1,ECM Regulators,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,86.34133333333334,78.69866666666665,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P08697,Alpha-2-antiplasmin,SERPINF2,SERPINF2,ECM Regulators,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,124.59866666666667,165.36133333333333,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+E9PGN7,Plasma protease C1 inhibitor,SERPING1,SERPING1,ECM Regulators,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,60.37866666666666,93.75999999999999,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P50454,Serpin H1,SERPINH1,SERPINH1,ECM Regulators,Matrisome-associated,Ovary_Cortex,Cortex,Homo sapiens,122.24533333333333,109.65599999999999,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+F5GY03,SPARC (Fragment),SPARC,SPARC,ECM Glycoproteins,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,148.56400000000002,140.7613333333333,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+Q15582,Transforming growth factor-beta-induced protein ig-h3,TGFBI,TGFBI,ECM Glycoproteins,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,85.82533333333335,103.06933333333333,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P07996,Thrombospondin-1,THBS1,THBS1,ECM Glycoproteins,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,128.12399999999997,90.90666666666667,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P22105,Tenascin-X,TNXB,TNXB,ECM Glycoproteins,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,137.42000000000002,112.76133333333334,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+E9PF17,Versican core protein,VCAN,VCAN,Proteoglycans,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,167.58933333333334,144.14266666666668,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P04004,Vitronectin,VTN,VTN,ECM Glycoproteins,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,137.98533333333336,246.93200000000002,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+Q12836,Zona pellucida sperm-binding protein 4,ZP4,ZP4,ECM Glycoproteins,Core matrisome,Ovary_Cortex,Cortex,Homo sapiens,61.69066666666667,23.830666666666666,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+,,,,,,Ovary_Cortex,Cortex,Homo sapiens,,,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+,,,,,,Ovary_Cortex,Cortex,Homo sapiens,,,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+,,,,,,Ovary_Cortex,Cortex,Homo sapiens,,,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+,,,,,,Ovary_Cortex,Cortex,Homo sapiens,,,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
