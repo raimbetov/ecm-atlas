@@ -6,11 +6,35 @@ Supports both individual dataset analysis and cross-dataset comparison
 
 from flask import Flask, jsonify, request
 from flask_cors import CORS
+from flask.json.provider import DefaultJSONProvider
 import pandas as pd
 import numpy as np
 import os
 
+# Custom JSON provider for safe NaN handling
+class NaNSafeJSONProvider(DefaultJSONProvider):
+    """
+    Custom JSON encoder that handles pandas/numpy NaN values
+
+    Converts NaN, None, and infinity values to JSON null instead of
+    invalid JavaScript NaN. This prevents JSON parse errors in the browser.
+    """
+    def default(self, obj):
+        # Handle pandas/numpy NaN
+        if pd.isna(obj):
+            return None
+
+        # Handle numpy numeric types
+        if isinstance(obj, (np.integer, np.floating)):
+            if np.isnan(obj) or np.isinf(obj):
+                return None
+            return float(obj) if isinstance(obj, np.floating) else int(obj)
+
+        # Fallback to default Flask JSON encoding
+        return super().default(obj)
+
 app = Flask(__name__)
+app.json = NaNSafeJSONProvider(app)  # Apply custom JSON encoder globally
 CORS(app)
 
 # Helper function to convert pandas values to JSON-safe format
@@ -34,6 +58,9 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 data_path = os.path.join(script_dir, '../08_merged_ecm_dataset/merged_ecm_aging_zscore.csv')
 df = pd.read_csv(data_path)
 print(f"Loaded {len(df)} entries ({df['Protein_ID'].nunique()} unique proteins)")
+# Check if enriched version is loaded (has Data_Quality column)
+if 'Data_Quality' in df.columns:
+    print(f"  ✅ Using enriched dataset: {(df['Data_Quality'] == 'Enriched_UniProt').sum()} records from UniProt")
 
 # ===== GLOBAL ENDPOINTS =====
 

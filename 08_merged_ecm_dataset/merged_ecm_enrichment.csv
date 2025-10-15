@@ -1,0 +1,423 @@
+Protein_ID,Enriched_Name,Enriched_Gene,Organism,Source,Confidence
+A0A087WSN6,Fibronectin,Fn1,Mus musculus,UniProt,1.0
+D3YXG0,Hemicentin-1,Hmcn1,Mus musculus,UniProt,1.0
+D3Z689,,Adamtsl5,Mus musculus,UniProt,1.0
+D3Z7H8,Cartilage intermediate layer protein 2,Cilp2,Mus musculus,UniProt,1.0
+E9PWQ3,Collagen alpha-3(VI) chain,Col6a3,Mus musculus,UniProt,1.0
+G3UXC7,,Adamtsl3,Mus musculus,UniProt,1.0
+G3X8T9,,Serpina3n,Mus musculus,UniProt,1.0
+G5E837,Host cell factor 2,Hcfc2,Mus musculus,UniProt,1.0
+G5E874,Laminin subunit gamma-2,Lamc2,Mus musculus,UniProt,1.0
+M0QWP1,Agrin,Agrn,Mus musculus,UniProt,1.0
+O08797,Leukocyte elastase inhibitor,Serpinb9,Mus musculus,UniProt,1.0
+O08804,,Serpinb6b,Mus musculus,UniProt,1.0
+O35452,,Tnxb,Mus musculus,UniProt,1.0
+Q3KQQ4,,Serpina1b,Mus musculus,UniProt,1.0
+Q3TAF9,Biglycan,Bgn,Mus musculus,UniProt,1.0
+Q3TJ69,Serpin domain-containing protein,Serpinb9b,Mus musculus,UniProt,1.0
+Q3TVE3,Protein S100-A16,S100a16,Mus musculus,UniProt,1.0
+Q3U4U1,Periostin,Postn,Mus musculus,UniProt,1.0
+Q3UGY5,Fibronectin,Fn1,Mus musculus,UniProt,1.0
+Q3UU65,Laminin subunit alpha-3,Lama3,Mus musculus,UniProt,1.0
+Q59IW6,,Abi3bp,Mus musculus,UniProt,1.0
+Q63ZW6,,Col4a5,Mus musculus,UniProt,1.0
+Q6S9I0,,Kng2,Mus musculus,UniProt,1.0
+Q9ESQ1,,Col4a6,Mus musculus,UniProt,1.0
+Q9WUR0,Tubulointerstitial nephritis antigen-like,Tinag,Mus musculus,UniProt,1.0
+P70124,Serpin B5,Serpinb5,Mus musculus,UniProt,1.0
+P25318,Collagen alpha-2(VIII) chain,Col8a2,Mus musculus,UniProt,1.0
+Q03350,Thrombospondin-2,Thbs2,Mus musculus,UniProt,1.0
+O70456,14-3-3 protein sigma,Sfn,Mus musculus,UniProt,1.0
+Q9QWK4,CD5 antigen-like,Cd5l,Mus musculus,UniProt,1.0
+Q9QZS0,Collagen alpha-3(IV) chain,Col4a3,Mus musculus,UniProt,1.0
+Q8R422,CD109 antigen,Cd109,Mus musculus,UniProt,1.0
+Q02105,Complement C1q subcomponent subunit C,C1qc,Mus musculus,UniProt,1.0
+E9Q414,Apolipoprotein B-100,Apob,Mus musculus,UniProt,1.0
+Q9QZJ6,Microfibrillar-associated protein 5,Mfap5,Mus musculus,UniProt,1.0
+O08573,Galectin-9,Lgals9,Mus musculus,UniProt,1.0
+O35074,Prostacyclin synthase,Ptgis,Mus musculus,UniProt,1.0
+Q80W21,Glutathione S-transferase Mu 7,Gstm7,Mus musculus,UniProt,1.0
+Q8VCG4,Complement component C8 gamma chain,C8g,Mus musculus,UniProt,1.0
+O08800,Serpin B8,Serpinb8,Mus musculus,UniProt,1.0
+Q9WVJ9,EGF-containing fibulin-like extracellular matrix protein 2,Efemp2,Mus musculus,UniProt,1.0
+O88668,Protein CREG1,Creg1,Mus musculus,UniProt,1.0
+Q8BV57,Soluble scavenger receptor cysteine-rich domain-containing protein SSC5D,Ssc5d,Mus musculus,UniProt,1.0
+Q9BCZ4,Selenoprotein S,Selenos,Mus musculus,UniProt,1.0
+Q9WVJ3,Carboxypeptidase Q,Cpq,Mus musculus,UniProt,1.0
+P13597,Intercellular adhesion molecule 1,Icam1,Mus musculus,UniProt,1.0
+Q8K482,EMILIN-2,Emilin2,Mus musculus,UniProt,1.0
+Q8R121,Protein Z-dependent protease inhibitor,Serpina10,Mus musculus,UniProt,1.0
+P12265,Beta-glucuronidase,Gusb,Mus musculus,UniProt,1.0
+O88947,Coagulation factor X,F10,Mus musculus,UniProt,1.0
+P33434,72 kDa type IV collagenase,Mmp2,Mus musculus,UniProt,1.0
+P42703,Leukemia inhibitory factor receptor,Lifr,Mus musculus,UniProt,1.0
+O70589,Peripheral plasma membrane protein CASK,Cask,Mus musculus,UniProt,1.0
+Q9D1N2,Glycosylphosphatidylinositol-anchored high density lipoprotein-binding protein 1,Gpihbp1,Mus musculus,UniProt,1.0
+P15655,Fibroblast growth factor 2,Fgf2,Mus musculus,UniProt,1.0
+P15306,Thrombomodulin,Thbd,Mus musculus,UniProt,1.0
+P01898,"H-2 class I histocompatibility antigen, Q10 alpha chain",H2-Q10,Mus musculus,UniProt,1.0
+Q9JIA1,Leucine-rich glioma-inactivated protein 1,Lgi1,Mus musculus,UniProt,1.0
+Q8VEB4,Lysosomal phospholipase A and acyltransferase,Pla2g15,Mus musculus,UniProt,1.0
+Q8VCS0,N-acetylmuramoyl-L-alanine amidase,Pglyrp2,Mus musculus,UniProt,1.0
+Q6DFW0,Guanine nucleotide exchange factor C9orf72 homolog,C9orf72,Mus musculus,UniProt,1.0
+Q5SS80,Dehydrogenase/reductase SDR family member 13,Dhrs13,Mus musculus,UniProt,1.0
+P18406,CCN family member 1,Ccn1,Mus musculus,UniProt,1.0
+Q9D6X6,Serine protease 23,Prss23,Mus musculus,UniProt,1.0
+O70514,Fibroblast growth factor-binding protein 1,Fgfbp1,Mus musculus,UniProt,1.0
+O70370,Cathepsin S,Ctss,Mus musculus,UniProt,1.0
+Q8K4G1,Latent-transforming growth factor beta-binding protein 4,Ltbp4,Mus musculus,UniProt,1.0
+A6H6E2,Multimerin-2,Mmrn2,Mus musculus,UniProt,1.0
+Q61072,Disintegrin and metalloproteinase domain-containing protein 9,Adam9,Mus musculus,UniProt,1.0
+Q922Q9,Chitinase domain-containing protein 1,Chid1,Mus musculus,UniProt,1.0
+Q7TQ62,Podocan,Podn,Mus musculus,UniProt,1.0
+P31725,Protein S100-A9,S100a9,Mus musculus,UniProt,1.0
+Q00724,Retinol-binding protein 4,Rbp4,Mus musculus,UniProt,1.0
+P70158,Cyclic GMP-AMP phosphodiesterase SMPDL3A,Smpdl3a,Mus musculus,UniProt,1.0
+Q8BND5,Sulfhydryl oxidase 1,Qsox1,Mus musculus,UniProt,1.0
+P58242,Acid sphingomyelinase-like phosphodiesterase 3b,Smpdl3b,Mus musculus,UniProt,1.0
+Q9JJN5,Carboxypeptidase N catalytic chain,Cpn1,Mus musculus,UniProt,1.0
+Q07968,Coagulation factor XIII B chain,F13b,Mus musculus,UniProt,1.0
+Q920A5,Retinoid-inducible serine carboxypeptidase,Scpep1,Mus musculus,UniProt,1.0
+Q9JHH6,Carboxypeptidase B2,Cpb2,Mus musculus,UniProt,1.0
+Q8R1Q3,Angiopoietin-related protein 7,Angptl7,Mus musculus,UniProt,1.0
+Q9R013,Cathepsin F,Ctsf,Mus musculus,UniProt,1.0
+Q64739,Collagen alpha-2(XI) chain,Col11a2,Mus musculus,UniProt,1.0
+Q61245,Collagen alpha-1(XI) chain,Col11a1,Mus musculus,UniProt,1.0
+Q9ERT9,Protein phosphatase 1 regulatory subunit 1A,Ppp1r1a,Mus musculus,UniProt,1.0
+Q07456,Protein AMBP,Ambp,Mus musculus,UniProt,1.0
+P34928,Apolipoprotein C-I,Apoc1,Mus musculus,UniProt,1.0
+O55226,Chondroadherin,Chad,Mus musculus,UniProt,1.0
+Q9Z0J0,NPC intracellular cholesterol transporter 2,Npc2,Mus musculus,UniProt,1.0
+P97821,Dipeptidyl peptidase 1,Ctsc,Mus musculus,UniProt,1.0
+P98086,Complement C1q subcomponent subunit A,C1qa,Mus musculus,UniProt,1.0
+Q8K182,Complement component C8 alpha chain,C8a,Mus musculus,UniProt,1.0
+P63260,"Actin, cytoplasmic 2",Actg1,Mus musculus,UniProt,1.0
+Q9R045,Angiopoietin-related protein 2,Angptl2,Mus musculus,UniProt,1.0
+Q4ZJN1,Complement C1q and tumor necrosis factor-related protein 9,C1qtnf9,Mus musculus,UniProt,1.0
+A2AJ76,Hemicentin-2,Hmcn2,Mus musculus,UniProt,1.0
+Q8BJD1,Inter-alpha-trypsin inhibitor heavy chain H5,Itih5,Mus musculus,UniProt,1.0
+Q99K41,EMILIN-1,Emilin1,Mus musculus,UniProt,1.0
+Q9CQF9,Prenylcysteine oxidase 1,Pcyox1,Mus musculus,UniProt,1.0
+Q06770,Corticosteroid-binding globulin,Serpina6,Mus musculus,UniProt,1.0
+Q07797,Galectin-3-binding protein,Lgals3bp,Mus musculus,UniProt,1.0
+P41317,Mannose-binding protein C,Mbl2,Mus musculus,UniProt,1.0
+O70503,Very-long-chain 3-oxoacyl-CoA reductase,Hsd17b12,Mus musculus,UniProt,1.0
+Q3U213,Protein SERAC1,Serac1,Mus musculus,UniProt,1.0
+O09159,Lysosomal alpha-mannosidase,Man2b1,Mus musculus,UniProt,1.0
+Q8BH35,Complement component C8 beta chain,C8b,Mus musculus,UniProt,1.0
+Q91VM5,"RNA binding motif protein, X-linked-like-1",Rbmxl1,Mus musculus,UniProt,1.0
+P49935,Pro-cathepsin H,Ctsh,Mus musculus,UniProt,1.0
+Q61730,Interleukin-1 receptor accessory protein,Il1rap,Mus musculus,UniProt,1.0
+Q5SSH8,Neuferricin,Cyb5d2,Mus musculus,UniProt,1.0
+P70663,SPARC-like protein 1,Sparcl1,Mus musculus,UniProt,1.0
+P55065,Phospholipid transfer protein,Pltp,Mus musculus,UniProt,1.0
+O89017,Legumain,Lgmn,Mus musculus,UniProt,1.0
+Q9EPX2,Papilin,Papln,Mus musculus,UniProt,1.0
+P62960,Y-box-binding protein 1,Ybx1,Mus musculus,UniProt,1.0
+Q9CXF4,TBC1 domain family member 15,Tbc1d15,Mus musculus,UniProt,1.0
+Q3UQ28,Peroxidasin homolog,Pxdn,Mus musculus,UniProt,1.0
+Q80V42,Carboxypeptidase M,Cpm,Mus musculus,UniProt,1.0
+P35762,CD81 antigen,Cd81,Mus musculus,UniProt,1.0
+Q9DBB9,Carboxypeptidase N subunit 2,Cpn2,Mus musculus,UniProt,1.0
+P51655,Glypican-4,Gpc4,Mus musculus,UniProt,1.0
+P97290,Plasma protease C1 inhibitor,Serping1,Mus musculus,UniProt,1.0
+Q6PB93,Polypeptide N-acetylgalactosaminyltransferase 2,Galnt2,Mus musculus,UniProt,1.0
+Q640N1,Adipocyte enhancer-binding protein 1,Aebp1,Mus musculus,UniProt,1.0
+Q62086,Serum paraoxonase/arylesterase 2,Pon2,Mus musculus,UniProt,1.0
+Q9QZ85,Interferon-inducible GTPase 1,Iigp1,Mus musculus,UniProt,1.0
+O08689,Growth/differentiation factor 8,Mstn,Mus musculus,UniProt,1.0
+Q64314,Hematopoietic progenitor cell antigen CD34,Cd34,Mus musculus,UniProt,1.0
+P01635,Immunoglobulin kappa chain variable 12-41,Igkv12-41,Mus musculus,UniProt,1.0
+Q91WN1,DnaJ homolog subfamily C member 9,Dnajc9,Mus musculus,UniProt,1.0
+P14106,Complement C1q subcomponent subunit B,C1qb,Mus musculus,UniProt,1.0
+Q63961,Endoglin,Eng,Mus musculus,UniProt,1.0
+Q99P87,Resistin,Retn,Mus musculus,UniProt,1.0
+P70274,Selenoprotein P,Selenop,Mus musculus,UniProt,1.0
+P61148,Fibroblast growth factor 1,Fgf1,Mus musculus,UniProt,1.0
+O35604,NPC intracellular cholesterol transporter 1,Npc1,Mus musculus,UniProt,1.0
+P30681,High mobility group protein B2,Hmgb2,Mus musculus,UniProt,1.0
+P52430,Serum paraoxonase/arylesterase 1,Pon1,Mus musculus,UniProt,1.0
+P70377,Fibroblast growth factor 13,Fgf13,Mus musculus,UniProt,1.0
+Q80YC5,Coagulation factor XII,F12,Mus musculus,UniProt,1.0
+P03953,Complement factor D,Cfd,Mus musculus,UniProt,1.0
+O89051,Integral membrane protein 2B,Itm2b,Mus musculus,UniProt,1.0
+A2ASQ1,Agrin,Agrn,Mus musculus,UniProt,1.0
+Q9EPR2,Group XIIA secretory phospholipase A2,Pla2g12a,Mus musculus,UniProt,1.0
+Q61646,Haptoglobin,Hp,Mus musculus,UniProt,1.0
+Q61398,Procollagen C-endopeptidase enhancer 1,Pcolce,Mus musculus,UniProt,1.0
+P49290,Eosinophil peroxidase,Epx,Mus musculus,UniProt,1.0
+P97298,Pigment epithelium-derived factor,Serpinf1,Mus musculus,UniProt,1.0
+Q80X19,Collagen alpha-1(XIV) chain,Col14a1,Mus musculus,UniProt,1.0
+P19324,Serpin H1,Serpinh1,Mus musculus,UniProt,1.0
+Q99MQ4,Asporin,Aspn,Mus musculus,UniProt,1.0
+P54320,Elastin,Eln,Mus musculus,UniProt,1.0
+Q8CD91,SPARC-related modular calcium-binding protein 2,Smoc2,Mus musculus,UniProt,1.0
+O70624,Myocilin,Myoc,Mus musculus,UniProt,1.0
+Q9WVH9,Fibulin-5,Fbln5,Mus musculus,UniProt,1.0
+Q62351,Transferrin receptor protein 1,Tfrc,Mus musculus,UniProt,1.0
+Q62188,Dihydropyrimidinase-related protein 3,Dpysl3,Mus musculus,UniProt,1.0
+P00687,Alpha-amylase 1,Amy1,Mus musculus,UniProt,1.0
+Q62009,Periostin,Postn,Mus musculus,UniProt,1.0
+P28843,Dipeptidyl peptidase 4,Dpp4,Mus musculus,UniProt,1.0
+Q61702,Inter-alpha-trypsin inhibitor heavy chain H1,Itih1,Mus musculus,UniProt,1.0
+O88531,Palmitoyl-protein thioesterase 1,Ppt1,Mus musculus,UniProt,1.0
+O35367,Keratocan,Kera,Mus musculus,UniProt,1.0
+P28653,Biglycan,Bgn,Mus musculus,UniProt,1.0
+Q6GU68,Immunoglobulin superfamily containing leucine-rich repeat protein,Islr,Mus musculus,UniProt,1.0
+P15626,Glutathione S-transferase Mu 2,Gstm2,Mus musculus,UniProt,1.0
+O08807,Peroxiredoxin-4,Prdx4,Mus musculus,UniProt,1.0
+P09528,Ferritin heavy chain,Fth1,Mus musculus,UniProt,1.0
+Q60854,Serpin B6,Serpinb6,Mus musculus,UniProt,1.0
+Q61704,Inter-alpha-trypsin inhibitor heavy chain H3,Itih3,Mus musculus,UniProt,1.0
+P08121,Collagen alpha-1(III) chain,Col3a1,Mus musculus,UniProt,1.0
+Q8VCT4,Carboxylesterase 1D,Ces1d,Mus musculus,UniProt,1.0
+P09242,"Alkaline phosphatase, tissue-nonspecific isozyme",Alpl,Mus musculus,UniProt,1.0
+P07214,SPARC,Sparc,Mus musculus,UniProt,1.0
+O88207,Collagen alpha-1(V) chain,Col5a1,Mus musculus,UniProt,1.0
+Q64444,Carbonic anhydrase 4,Ca4,Mus musculus,UniProt,1.0
+P45376,Aldo-keto reductase family 1 member B1,Akr1b1,Mus musculus,UniProt,1.0
+Q9CYH2,Peroxiredoxin-like 2A,Prxl2a,Mus musculus,UniProt,1.0
+P18242,Cathepsin D,Ctsd,Mus musculus,UniProt,1.0
+Q8CG19,Latent-transforming growth factor beta-binding protein 1,Ltbp1,Mus musculus,UniProt,1.0
+P22599,Alpha-1-antitrypsin 1-2,Serpina1b,Mus musculus,UniProt,1.0
+P37889,Fibulin-2,Fbln2,Mus musculus,UniProt,1.0
+Q9DCZ4,MICOS complex subunit Mic26,Apoo,Mus musculus,UniProt,1.0
+Q62181,Semaphorin-3C,Sema3c,Mus musculus,UniProt,1.0
+P07309,Transthyretin,Ttr,Mus musculus,UniProt,1.0
+P31786,Acyl-CoA-binding protein,Dbi,Mus musculus,UniProt,1.0
+Q60963,Platelet-activating factor acetylhydrolase,Pla2g7,Mus musculus,UniProt,1.0
+Q61555,Fibrillin-2,Fbn2,Mus musculus,UniProt,1.0
+Q9Z1Q5,Chloride intracellular channel protein 1,Clic1,Mus musculus,UniProt,1.0
+P07758,Alpha-1-antitrypsin 1-1,Serpina1a,Mus musculus,UniProt,1.0
+P10107,Annexin A1,Anxa1,Mus musculus,UniProt,1.0
+P02463,Collagen alpha-1(IV) chain,Col4a1,Mus musculus,UniProt,1.0
+Q8BPB5,EGF-containing fibulin-like extracellular matrix protein 1,Efemp1,Mus musculus,UniProt,1.0
+Q61554,Fibrillin-1,Fbn1,Mus musculus,UniProt,1.0
+P09470,Angiotensin-converting enzyme,Ace,Mus musculus,UniProt,1.0
+P63028,Translationally-controlled tumor protein,Tpt1,Mus musculus,UniProt,1.0
+P46412,Glutathione peroxidase 3,Gpx3,Mus musculus,UniProt,1.0
+Q61543,Golgi apparatus protein 1,Glg1,Mus musculus,UniProt,1.0
+Q61699,Heat shock protein 105 kDa,Hsph1,Mus musculus,UniProt,1.0
+P40124,Adenylyl cyclase-associated protein 1,Cap1,Mus musculus,UniProt,1.0
+P11276,Fibronectin,Fn1,Mus musculus,UniProt,1.0
+Q8VDJ3,Vigilin,Hdlbp,Mus musculus,UniProt,1.0
+O09164,Extracellular superoxide dismutase [Cu-Zn],Sod3,Mus musculus,UniProt,1.0
+Q62087,Serum paraoxonase/lactonase 3,Pon3,Mus musculus,UniProt,1.0
+P54310,Hormone-sensitive lipase,Lipe,Mus musculus,UniProt,1.0
+P51910,Apolipoprotein D,Apod,Mus musculus,UniProt,1.0
+P04938,Major urinary protein 11,Mup11,Mus musculus,UniProt,1.0
+Q3U0B3,Dehydrogenase/reductase SDR family member 11,Dhrs11,Mus musculus,UniProt,1.0
+P17439,Lysosomal acid glucosylceramidase,Gba1,Mus musculus,UniProt,1.0
+P01027,Complement C3,C3,Mus musculus,UniProt,1.0
+P70296,Phosphatidylethanolamine-binding protein 1,Pebp1,Mus musculus,UniProt,1.0
+Q61292,Laminin subunit beta-2,Lamb2,Mus musculus,UniProt,1.0
+P28481,Collagen alpha-1(II) chain,Col2a1,Mus musculus,UniProt,1.0
+Q9JK53,Prolargin,Prelp,Mus musculus,UniProt,1.0
+P05132,cAMP-dependent protein kinase catalytic subunit alpha,Prkaca,Mus musculus,UniProt,1.0
+Q9R0G6,Cartilage oligomeric matrix protein,Comp,Mus musculus,UniProt,1.0
+Q02013,Aquaporin-1,Aqp1,Mus musculus,UniProt,1.0
+O08677,Kininogen-1,Kng1,Mus musculus,UniProt,1.0
+P06728,Apolipoprotein A-IV,Apoa4,Mus musculus,UniProt,1.0
+P16045,Galectin-1,Lgals1,Mus musculus,UniProt,1.0
+Q8C7V8,Coiled-coil domain-containing protein 134,Ccdc134,Mus musculus,UniProt,1.0
+P97449,Aminopeptidase N,Anpep,Mus musculus,UniProt,1.0
+O35206,Collagen alpha-1(XV) chain,Col15a1,Mus musculus,UniProt,1.0
+P15089,Mast cell carboxypeptidase A,Cpa3,Mus musculus,UniProt,1.0
+O70423,Amine oxidase [copper-containing] 3,Aoc3,Mus musculus,UniProt,1.0
+Q8VCM7,Fibrinogen gamma chain,Fgg,Mus musculus,UniProt,1.0
+Q91X72,Hemopexin,Hpx,Mus musculus,UniProt,1.0
+P11404,"Fatty acid-binding protein, heart",Fabp3,Mus musculus,UniProt,1.0
+Q8CC36,Cerebral dopamine neurotrophic factor,Cdnf,Mus musculus,UniProt,1.0
+P01029,Complement C4-B,C4b,Mus musculus,UniProt,1.0
+Q921I1,Serotransferrin,Tf,Mus musculus,UniProt,1.0
+P55772,Ectonucleoside triphosphate diphosphohydrolase 1,Entpd1,Mus musculus,UniProt,1.0
+P10649,Glutathione S-transferase Mu 1,Gstm1,Mus musculus,UniProt,1.0
+Q9QZF2,Glypican-1,Gpc1,Mus musculus,UniProt,1.0
+P09813,Apolipoprotein A-II,Apoa2,Mus musculus,UniProt,1.0
+O55026,Ectonucleoside triphosphate diphosphohydrolase 2,Entpd2,Mus musculus,UniProt,1.0
+P20029,Endoplasmic reticulum chaperone BiP,Hspa5,Mus musculus,UniProt,1.0
+Q62426,Cystatin-B,Cstb,Mus musculus,UniProt,1.0
+P23953,Carboxylesterase 1C,Ces1c,Mus musculus,UniProt,1.0
+Q9WUU7,Cathepsin Z,Ctsz,Mus musculus,UniProt,1.0
+P21844,Chymase,Cma1,Mus musculus,UniProt,1.0
+P07356,Annexin A2,Anxa2,Mus musculus,UniProt,1.0
+P17742,Peptidyl-prolyl cis-trans isomerase A,Ppia,Mus musculus,UniProt,1.0
+Q5EBG6,Heat shock protein beta-6,Hspb6,Mus musculus,UniProt,1.0
+Q8K4Z3,NAD(P)H-hydrate epimerase,Naxe,Mus musculus,UniProt,1.0
+P21956,Lactadherin,Mfge8,Mus musculus,UniProt,1.0
+P51885,Lumican,Lum,Mus musculus,UniProt,1.0
+Q07235,Glia-derived nexin,Serpine2,Mus musculus,UniProt,1.0
+Q06890,Clusterin,Clu,Mus musculus,UniProt,1.0
+Q61129,Complement factor I,Cfi,Mus musculus,UniProt,1.0
+Q60847,Collagen alpha-1(XII) chain,Col12a1,Mus musculus,UniProt,1.0
+Q60994,Adiponectin,Adipoq,Mus musculus,UniProt,1.0
+P34884,Macrophage migration inhibitory factor,Mif,Mus musculus,UniProt,1.0
+P08228,Superoxide dismutase [Cu-Zn],Sod1,Mus musculus,UniProt,1.0
+Q91VI7,Ribonuclease inhibitor,Rnh1,Mus musculus,UniProt,1.0
+P14142,"Solute carrier family 2, facilitated glucose transporter member 4",Slc2a4,Mus musculus,UniProt,1.0
+P48774,Glutathione S-transferase Mu 5,Gstm5,Mus musculus,UniProt,1.0
+Q2VLH6,Scavenger receptor cysteine-rich type 1 protein M130,Cd163,Mus musculus,UniProt,1.0
+A2A863,Integrin beta-4,Itgb4,Mus musculus,UniProt,1.0
+Q9QZZ6,Dermatopontin,Dpt,Mus musculus,UniProt,1.0
+Q60590,Alpha-1-acid glycoprotein 1,Orm1,Mus musculus,UniProt,1.0
+P02469,Laminin subunit beta-1,Lamb1,Mus musculus,UniProt,1.0
+P06797,Procathepsin L,Ctsl,Mus musculus,UniProt,1.0
+P10605,Cathepsin B,Ctsb,Mus musculus,UniProt,1.0
+Q8BH61,Coagulation factor XIII A chain,F13a1,Mus musculus,UniProt,1.0
+P50608,Fibromodulin,Fmod,Mus musculus,UniProt,1.0
+P08226,Apolipoprotein E,Apoe,Mus musculus,UniProt,1.0
+P32261,Antithrombin-III,Serpinc1,Mus musculus,UniProt,1.0
+P04186,Complement factor B,Cfb,Mus musculus,UniProt,1.0
+P56213,FAD-linked sulfhydryl oxidase ALR,Gfer,Mus musculus,UniProt,1.0
+A6X935,"Inter alpha-trypsin inhibitor, heavy chain 4",Itih4,Mus musculus,UniProt,1.0
+P14211,Calreticulin,Calr,Mus musculus,UniProt,1.0
+Q00493,Carboxypeptidase E,Cpe,Mus musculus,UniProt,1.0
+Q9ET22,Dipeptidyl peptidase 2,Dpp7,Mus musculus,UniProt,1.0
+P11152,Lipoprotein lipase,Lpl,Mus musculus,UniProt,1.0
+Q8CIE6,Coatomer subunit alpha,Copa,Mus musculus,UniProt,1.0
+Q8K0E8,Fibrinogen beta chain,Fgb,Mus musculus,UniProt,1.0
+P13020,Gelsolin,Gsn,Mus musculus,UniProt,1.0
+Q9DBH5,Vesicular integral-membrane protein VIP36,Lman2,Mus musculus,UniProt,1.0
+Q99LJ6,Glutathione peroxidase 7,Gpx7,Mus musculus,UniProt,1.0
+Q80YX1,Tenascin,Tnc,Mus musculus,UniProt,1.0
+Q08481,Platelet endothelial cell adhesion molecule,Pecam1,Mus musculus,UniProt,1.0
+E9PV24,Fibrinogen alpha chain,Fga,Mus musculus,UniProt,1.0
+P07724,Albumin,Alb,Mus musculus,UniProt,1.0
+Q00623,Apolipoprotein A-I,Apoa1,Mus musculus,UniProt,1.0
+O35566,CD151 antigen,Cd151,Mus musculus,UniProt,1.0
+Q03734,Serine protease inhibitor A3M,Serpina3m,Mus musculus,UniProt,1.0
+Q9D0L4,AarF domain-containing protein kinase 1,Adck1,Mus musculus,UniProt,1.0
+Q9WV02,"RNA-binding motif protein, X chromosome",Rbmx,Mus musculus,UniProt,1.0
+Q80VJ2,Steroid receptor RNA activator 1,Sra1,Mus musculus,UniProt,1.0
+Q04857,Collagen alpha-1(VI) chain,Col6a1,Mus musculus,UniProt,1.0
+O88569,Heterogeneous nuclear ribonucleoproteins A2/B1,Hnrnpa2b1,Mus musculus,UniProt,1.0
+Q00898,Alpha-1-antitrypsin 1-5,Serpina1e,Mus musculus,UniProt,1.0
+Q62000,Mimecan,Ogn,Mus musculus,UniProt,1.0
+Q9WU84,Copper chaperone for superoxide dismutase,Ccs,Mus musculus,UniProt,1.0
+Q9WV54,Acid ceramidase,Asah1,Mus musculus,UniProt,1.0
+P08122,Collagen alpha-2(IV) chain,Col4a2,Mus musculus,UniProt,1.0
+Q00897,Alpha-1-antitrypsin 1-4,Serpina1d,Mus musculus,UniProt,1.0
+P68181,cAMP-dependent protein kinase catalytic subunit beta,Prkacb,Mus musculus,UniProt,1.0
+P63038,"60 kDa heat shock protein, mitochondrial",Hspd1,Mus musculus,UniProt,1.0
+P19221,Prothrombin,F2,Mus musculus,UniProt,1.0
+Q61247,Alpha-2-antiplasmin,Serpinf2,Mus musculus,UniProt,1.0
+P61226,Ras-related protein Rap-2b,Rap2b,Mus musculus,UniProt,1.0
+Q8R2Y2,Cell surface glycoprotein MUC18,Mcam,Mus musculus,UniProt,1.0
+P55302,Alpha-2-macroglobulin receptor-associated protein,Lrpap1,Mus musculus,UniProt,1.0
+Q99PT1,Rho GDP-dissociation inhibitor 1,Arhgdia,Mus musculus,UniProt,1.0
+P10639,Thioredoxin,Txn,Mus musculus,UniProt,1.0
+Q8R2H9,Phosphoethanolamine/phosphocholine phosphatase,Phospho1,Mus musculus,UniProt,1.0
+P18760,Cofilin-1,Cfl1,Mus musculus,UniProt,1.0
+P08113,Endoplasmin,Hsp90b1,Mus musculus,UniProt,1.0
+Q9D154,Leukocyte elastase inhibitor A,Serpinb1a,Mus musculus,UniProt,1.0
+Q99M71,Mammalian ependymin-related protein 1,Epdr1,Mus musculus,UniProt,1.0
+Q61508,Extracellular matrix protein 1,Ecm1,Mus musculus,UniProt,1.0
+P51859,Hepatoma-derived growth factor,Hdgf,Mus musculus,UniProt,1.0
+Q61735,Leukocyte surface antigen CD47,Cd47,Mus musculus,UniProt,1.0
+P11499,Heat shock protein HSP 90-beta,Hsp90ab1,Mus musculus,UniProt,1.0
+O09131,Glutathione S-transferase omega-1,Gsto1,Mus musculus,UniProt,1.0
+P20060,Beta-hexosaminidase subunit beta,Hexb,Mus musculus,UniProt,1.0
+Q9D0E1,Heterogeneous nuclear ribonucleoprotein M,Hnrnpm,Mus musculus,UniProt,1.0
+Q9CX00,IST1 homolog,Ist1,Mus musculus,UniProt,1.0
+Q64191,N(4)-(beta-N-acetylglucosaminyl)-L-asparaginase,Aga,Mus musculus,UniProt,1.0
+P62962,Profilin-1,Pfn1,Mus musculus,UniProt,1.0
+Q8QZR5,Alanine aminotransferase 1,Gpt,Mus musculus,UniProt,1.0
+Q99KV1,DnaJ homolog subfamily B member 11,Dnajb11,Mus musculus,UniProt,1.0
+Q8C6K9,Collagen alpha-6(VI) chain,Col6a6,Mus musculus,UniProt,1.0
+Q9CW03,Structural maintenance of chromosomes protein 3,Smc3,Mus musculus,UniProt,1.0
+Q02819,Nucleobindin-1,Nucb1,Mus musculus,UniProt,1.0
+Q8R2Z5,von Willebrand factor A domain-containing protein 1,Vwa1,Mus musculus,UniProt,1.0
+Q61187,Tumor susceptibility gene 101 protein,Tsg101,Mus musculus,UniProt,1.0
+Q3U962,Collagen alpha-2(V) chain,Col5a2,Mus musculus,UniProt,1.0
+P52480,Pyruvate kinase PKM,Pkm,Mus musculus,UniProt,1.0
+Q08879,Fibulin-1,Fbln1,Mus musculus,UniProt,1.0
+Q61147,Ceruloplasmin,Cp,Mus musculus,UniProt,1.0
+Q61739,Integrin alpha-6,Itga6,Mus musculus,UniProt,1.0
+Q05816,Fatty acid-binding protein 5,Fabp5,Mus musculus,UniProt,1.0
+Q99JR5,Tubulointerstitial nephritis antigen-like,Tinagl1,Mus musculus,UniProt,1.0
+P01887,Beta-2-microglobulin,B2m,Mus musculus,UniProt,1.0
+P63158,High mobility group protein B1,Hmgb1,Mus musculus,UniProt,1.0
+Q9QXC1,Fetuin-B,Fetub,Mus musculus,UniProt,1.0
+Q8CHS7,Dehydrogenase/reductase SDR family member 7C,Dhrs7c,Mus musculus,UniProt,1.0
+P70452,Syntaxin-4,Stx4,Mus musculus,UniProt,1.0
+Q01339,Beta-2-glycoprotein 1,Apoh,Mus musculus,UniProt,1.0
+Q3UHX2,28 kDa heat- and acid-stable phosphoprotein,Pdap1,Mus musculus,UniProt,1.0
+Q811D0,Disks large homolog 1,Dlg1,Mus musculus,UniProt,1.0
+Q07113,Cation-independent mannose-6-phosphate receptor,Igf2r,Mus musculus,UniProt,1.0
+P17047,Lysosome-associated membrane glycoprotein 2,Lamp2,Mus musculus,UniProt,1.0
+P28665,Murinoglobulin-1,Mug1,Mus musculus,UniProt,1.0
+O35215,D-dopachrome decarboxylase,Ddt,Mus musculus,UniProt,1.0
+Q9CPT4,Myeloid-derived growth factor,Mydgf,Mus musculus,UniProt,1.0
+P31428,Dipeptidase 1,Dpep1,Mus musculus,UniProt,1.0
+Q99KQ4,Nicotinamide phosphoribosyltransferase,Nampt,Mus musculus,UniProt,1.0
+O55042,Alpha-synuclein,Snca,Mus musculus,UniProt,1.0
+P26262,Plasma kallikrein,Klkb1,Mus musculus,UniProt,1.0
+Q9Z2W0,Aspartyl aminopeptidase,Dnpep,Mus musculus,UniProt,1.0
+O89020,Afamin,Afm,Mus musculus,UniProt,1.0
+Q9CZD3,Glycine--tRNA ligase,Gars1,Mus musculus,UniProt,1.0
+P06684,Complement C5,C5,Mus musculus,UniProt,1.0
+Q6PHN9,Ras-related protein Rab-35,Rab35,Mus musculus,UniProt,1.0
+P98156,Very low-density lipoprotein receptor,Vldlr,Mus musculus,UniProt,1.0
+Q3URD3,Sarcolemmal membrane-associated protein,Slmap,Mus musculus,UniProt,1.0
+Q9DBD0,Inhibitor of carbonic anhydrase,Inhca,Mus musculus,UniProt,1.0
+Q80ZW2,Protein THEM6,Them6,Mus musculus,UniProt,1.0
+P09411,Phosphoglycerate kinase 1,Pgk1,Mus musculus,UniProt,1.0
+Q9JKR6,Hypoxia up-regulated protein 1,Hyou1,Mus musculus,UniProt,1.0
+Q9CQ45,Neudesin,Nenf,Mus musculus,UniProt,1.0
+P05064,Fructose-bisphosphate aldolase A,Aldoa,Mus musculus,UniProt,1.0
+Q9EQ06,Estradiol 17-beta-dehydrogenase 11,Hsd17b11,Mus musculus,UniProt,1.0
+P10518,Delta-aminolevulinic acid dehydratase,Alad,Mus musculus,UniProt,1.0
+P16330,"2',3'-cyclic-nucleotide 3'-phosphodiesterase",Cnp,Mus musculus,UniProt,1.0
+Q99MN1,Lysine--tRNA ligase,Kars1,Mus musculus,UniProt,1.0
+P10493,Nidogen-1,Nid1,Mus musculus,UniProt,1.0
+P48036,Annexin A5,Anxa5,Mus musculus,UniProt,1.0
+P20918,Plasminogen,Plg,Mus musculus,UniProt,1.0
+P06909,Complement factor H,Cfh,Mus musculus,UniProt,1.0
+Q61838,Pregnancy zone protein,Pzp,Mus musculus,UniProt,1.0
+Q8BH64,EH domain-containing protein 2,Ehd2,Mus musculus,UniProt,1.0
+Q6P069,Sorcin,Sri,Mus musculus,UniProt,1.0
+O35598,Disintegrin and metalloproteinase domain-containing protein 10,Adam10,Mus musculus,UniProt,1.0
+P00920,Carbonic anhydrase 2,Ca2,Mus musculus,UniProt,1.0
+P07310,Creatine kinase M-type,Ckm,Mus musculus,UniProt,1.0
+Q9Z1T2,Thrombospondin-4,Thbs4,Mus musculus,UniProt,1.0
+Q9WTR5,Cadherin-13,Cdh13,Mus musculus,UniProt,1.0
+Q02788,Collagen alpha-2(VI) chain,Col6a2,Mus musculus,UniProt,1.0
+Q64442,Sorbitol dehydrogenase,Sord,Mus musculus,UniProt,1.0
+Q9EQH2,Endoplasmic reticulum aminopeptidase 1,Erap1,Mus musculus,UniProt,1.0
+P97927,Laminin subunit alpha-4,Lama4,Mus musculus,UniProt,1.0
+P21836,Acetylcholinesterase,Ache,Mus musculus,UniProt,1.0
+Q62165,Dystroglycan 1,Dag1,Mus musculus,UniProt,1.0
+P49182,Heparin cofactor 2,Serpind1,Mus musculus,UniProt,1.0
+P82198,Transforming growth factor-beta-induced protein ig-h3,Tgfbi,Mus musculus,UniProt,1.0
+P06745,Glucose-6-phosphate isomerase,Gpi,Mus musculus,UniProt,1.0
+O88322,Nidogen-2,Nid2,Mus musculus,UniProt,1.0
+P29788,Vitronectin,Vtn,Mus musculus,UniProt,1.0
+Q60675,Laminin subunit alpha-2,Lama2,Mus musculus,UniProt,1.0
+P21460,Cystatin-C,Cst3,Mus musculus,UniProt,1.0
+Q00519,Xanthine dehydrogenase/oxidase,Xdh,Mus musculus,UniProt,1.0
+P14206,Small ribosomal subunit protein uS2,Rpsa,Mus musculus,UniProt,1.0
+P63017,Heat shock cognate 71 kDa protein,Hspa8,Mus musculus,UniProt,1.0
+Q922E6,"FAST kinase domain-containing protein 2, mitochondrial",Fastkd2,Mus musculus,UniProt,1.0
+P09055,Integrin beta-1,Itgb1,Mus musculus,UniProt,1.0
+P21981,Protein-glutamine gamma-glutamyltransferase 2,Tgm2,Mus musculus,UniProt,1.0
+Q9Z1R2,Large proline-rich protein BAG6,Bag6,Mus musculus,UniProt,1.0
+P28654,Decorin,Dcn,Mus musculus,UniProt,1.0
+O35887,Calumenin,Calu,Mus musculus,UniProt,1.0
+P61021,Ras-related protein Rab-5B,Rab5b,Mus musculus,UniProt,1.0
+Q07079,Insulin-like growth factor-binding protein 5,Igfbp5,Mus musculus,UniProt,1.0
+P27612,Phospholipase A-2-activating protein,Plaa,Mus musculus,UniProt,1.0
+Q01149,Collagen alpha-2(I) chain,Col1a2,Mus musculus,UniProt,1.0
+P24270,Catalase,Cat,Mus musculus,UniProt,1.0
+P11087,Collagen alpha-1(I) chain,Col1a1,Mus musculus,UniProt,1.0
+Q9WU78,Programmed cell death 6-interacting protein,Pdcd6ip,Mus musculus,UniProt,1.0
+Q6NZB0,DnaJ homolog subfamily C member 8,Dnajc8,Mus musculus,UniProt,1.0
+P39061,Collagen alpha-1(XVIII) chain,Col18a1,Mus musculus,UniProt,1.0
+Q9Z0E6,Guanylate-binding protein 2,Gbp2,Mus musculus,UniProt,1.0
+Q8CJG0,Protein argonaute-2,Ago2,Mus musculus,UniProt,1.0
+Q61207,Prosaposin,Psap,Mus musculus,UniProt,1.0
+Q8VCT3,Aminopeptidase B,Rnpep,Mus musculus,UniProt,1.0
+P21614,Vitamin D-binding protein,Gc,Mus musculus,UniProt,1.0
+P27773,Protein disulfide-isomerase A3,Pdia3,Mus musculus,UniProt,1.0
+Q61001,Laminin subunit alpha-5,Lama5,Mus musculus,UniProt,1.0
+Q64726,Zinc-alpha-2-glycoprotein,Azgp1,Mus musculus,UniProt,1.0
+P29699,Alpha-2-HS-glycoprotein,Ahsg,Mus musculus,UniProt,1.0
