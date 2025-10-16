@@ -59,17 +59,15 @@ def analyze_category_statistics(df):
     ]).round(3)
 
     # Directionality: % upregulated vs downregulated
-    category_direction = df.groupby('Category')['Zscore_Delta'].apply(
-        lambda x: pd.Series({
-            'pct_upregulated': (x > 0.3).sum() / len(x) * 100,
-            'pct_downregulated': (x < -0.3).sum() / len(x) * 100,
-            'pct_stable': ((x >= -0.3) & (x <= 0.3)).sum() / len(x) * 100
-        })
+    category_stats['pct_upregulated'] = df.groupby('Category')['Zscore_Delta'].apply(
+        lambda x: (x > 0.3).sum() / len(x) * 100
     ).round(1)
-
-    # Flatten and merge percentage data
-    for pct_col in ['pct_upregulated', 'pct_downregulated', 'pct_stable']:
-        category_stats[pct_col] = category_direction[pct_col]
+    category_stats['pct_downregulated'] = df.groupby('Category')['Zscore_Delta'].apply(
+        lambda x: (x < -0.3).sum() / len(x) * 100
+    ).round(1)
+    category_stats['pct_stable'] = df.groupby('Category')['Zscore_Delta'].apply(
+        lambda x: ((x >= -0.3) & (x <= 0.3)).sum() / len(x) * 100
+    ).round(1)
 
     print("Category Statistics:")
     print(category_stats)
@@ -84,17 +82,16 @@ def analyze_category_statistics(df):
         ('variance', 'var')
     ]).round(3)
 
-    division_direction = df.groupby('Division')['Zscore_Delta'].apply(
-        lambda x: pd.Series({
-            'pct_upregulated': (x > 0.3).sum() / len(x) * 100,
-            'pct_downregulated': (x < -0.3).sum() / len(x) * 100,
-            'pct_stable': ((x >= -0.3) & (x <= 0.3)).sum() / len(x) * 100
-        })
+    # Directionality: % upregulated vs downregulated
+    division_stats['pct_upregulated'] = df.groupby('Division')['Zscore_Delta'].apply(
+        lambda x: (x > 0.3).sum() / len(x) * 100
     ).round(1)
-
-    # Flatten and merge percentage data
-    for pct_col in ['pct_upregulated', 'pct_downregulated', 'pct_stable']:
-        division_stats[pct_col] = division_direction[pct_col]
+    division_stats['pct_downregulated'] = df.groupby('Division')['Zscore_Delta'].apply(
+        lambda x: (x < -0.3).sum() / len(x) * 100
+    ).round(1)
+    division_stats['pct_stable'] = df.groupby('Division')['Zscore_Delta'].apply(
+        lambda x: ((x >= -0.3) & (x <= 0.3)).sum() / len(x) * 100
+    ).round(1)
 
     print("Division Statistics:")
     print(division_stats)
