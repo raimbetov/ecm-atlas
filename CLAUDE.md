@@ -5,6 +5,8 @@ ECM-Atlas aggregates 13 proteomic studies (128 files, 15 papers) tracking age-re
 
 YOU MUST before creating new files, search if solution already exist, like if you want to test dashbord, look if we alrady ahve code for this etc. and reuse existing code and documents and folders. 
 
+you must use 03_KNOWLEDGE_FRAMEWORK_DOCUMENTATION_STANDARDS.md for every docuemnt .md file you create!! read it before creating a documents. 
+
 ## Overview
 Repository contains data sources (1.0), processing pipelines (2.0), outputs (3.0), and workflows (4.0). Raw proteomic datasets flow through autonomous normalization agents into merged CSV database, visualized via web dashboard with cross-study comparison capabilities.
 
@@ -130,6 +132,9 @@ python find_common_signatures.py
 | Start dashboard | `cd 10_unified_dashboard_2_tabs && ./start_servers.sh` |
 | Main DB | `08_merged_ecm_dataset/merged_ecm_aging_zscore.csv` |
 | Agent docs | `11_subagent_for_LFQ_ingestion/00_START_HERE.md` |
+
+you must use 03_KNOWLEDGE_FRAMEWORK_DOCUMENTATION_STANDARDS.md for every docuemnt .md file you create!! read it before creating a documents. 
+
 
 ---
 
