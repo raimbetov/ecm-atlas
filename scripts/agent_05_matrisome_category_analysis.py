@@ -351,7 +351,7 @@ def generate_markdown_report(df, category_stats, division_stats, stat_tests, top
         md.append("| Gene | Division | Δz | Tissue |")
         md.append("|------|----------|-------|--------|")
         for _, row in proteins['top_up'].iterrows():
-            md.append(f"| {row['Gene_Symbol']} | {row['Matrisome_Division']} | {row['Zscore_Delta']:.3f} | {row['Tissue']} |")
+            md.append(f"| {row['Gene_Symbol']} | {row['Division']} | {row['Zscore_Delta']:.3f} | {row['Tissue']} |")
         md.append("")
 
         md.append("**Top 5 DOWNREGULATED (Decreased with Aging):**")
@@ -359,7 +359,7 @@ def generate_markdown_report(df, category_stats, division_stats, stat_tests, top
         md.append("| Gene | Division | Δz | Tissue |")
         md.append("|------|----------|-------|--------|")
         for _, row in proteins['top_down'].iterrows():
-            md.append(f"| {row['Gene_Symbol']} | {row['Matrisome_Division']} | {row['Zscore_Delta']:.3f} | {row['Tissue']} |")
+            md.append(f"| {row['Gene_Symbol']} | {row['Division']} | {row['Zscore_Delta']:.3f} | {row['Tissue']} |")
         md.append("")
 
     md.append("---")
