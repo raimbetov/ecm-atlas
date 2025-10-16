@@ -1,18 +1,18 @@
 Protein,Human_Delta,Mouse_Delta,Direction_Human,Direction_Mouse,Conserved,Translatability_Index
-TIMP3,,,Not found,Not found,False,0.0
-BGN,,,Not found,Not found,False,0.0
+COL1A1,-0.05940191925367057,-0.059684066908149404,Stable,Stable,True,0.9997424320382862
+COL3A1,-0.24409723861614108,-0.23311206576227192,Stable,Stable,True,0.9961936951568379
+FN1,0.22887931114768018,-0.15823022522173855,Stable,Stable,True,0.9709925260537859
+DCN,0.03162510678876691,-0.0689222858644474,Stable,Stable,True,0.9628046233040042
+BGN,0.06494913831333936,0.13789025893583065,Stable,Stable,True,0.9518285128784107
+ACAN,0.04174398552878804,0.1179114095380627,Stable,Stable,True,0.9413319149485305
+LUM,-0.13042318426503624,-0.014859645458889459,Stable,Stable,True,0.905771195695828
+VCAN,-0.17802976312669833,-0.002673110899252563,Stable,Stable,True,0.875058883642756
+COMP,0.2967765920416349,0.7606552753374543,Stable,Up,False,0.3
+MMP2,0.5809673122778218,-0.02154012049846966,Up,Stable,False,0.3
+MMP3,,,Not found,Not found,False,0.0
 ADAMTS4,,,Not found,Not found,False,0.0
 MMP9,,,Not found,Not found,False,0.0
-MMP3,,,Not found,Not found,False,0.0
-MMP2,,,Not found,Not found,False,0.0
-LUM,,,Not found,Not found,False,0.0
-DCN,,,Not found,Not found,False,0.0
-ACAN,,,Not found,Not found,False,0.0
+TIMP3,,,Not found,Not found,False,0.0
 FRZB,,,Not found,Not found,False,0.0
 CILP,,,Not found,Not found,False,0.0
-COMP,,,Not found,Not found,False,0.0
-COL3A1,,,Not found,Not found,False,0.0
-COL1A1,,,Not found,Not found,False,0.0
-FN1,,,Not found,Not found,False,0.0
-VCAN,,,Not found,Not found,False,0.0
 ADAMTS5,,,Not found,Not found,False,0.0

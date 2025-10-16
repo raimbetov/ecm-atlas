@@ -271,8 +271,8 @@ def analyze_therapeutic_targets(conserved, comparison):
     target_analysis = []
 
     for target in key_targets:
-        if target.upper() in comparison['Protein'].str.upper().values:
-            row = comparison[comparison['Protein'] == target].iloc[0]
+        if target.upper() in comparison['Protein'].values:
+            row = comparison[comparison['Protein'] == target.upper()].iloc[0]
 
             # Calculate translatability index
             if row['Direction_Match']:

@@ -213,6 +213,8 @@ graph LR
 
 ¶1 Hypothesis: Long-lived species show slower ECM aging rates (lower |Δz|)
 
+**Figure 3:** Lifespan vs aging rate scatterplot (see `agent_11_fig3_lifespan_correlation.png`)
+
 ### 6.1 Species Aging Rates
 
 | Species | Max Lifespan (years) | Mean |Δz| | Rank |
@@ -318,6 +320,8 @@ Species-specific: 1,071 (99.3%)
 ## 9.0 Conservation Rankings (Most to Least Conserved)
 
 ¶1 Ordering: By conservation evidence strength
+
+**Figure 4:** Conservation heatmap for orthologous proteins (see `agent_11_fig4_conservation_heatmap.png`)
 
 ### Tier 1: Universal Aging Signatures (1 protein)
 1. **CILP** - Upregulated in human + cow (Δz=+1.23)
