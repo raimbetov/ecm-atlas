@@ -1,0 +1,53 @@
+{
+  "study_id": "Randles_2021",
+  "groupby_columns": [
+    "Tissue_Compartment"
+  ],
+  "timestamp": "2025-10-15T22:23:16.421630",
+  "n_groups": 2,
+  "total_rows_processed": 5217,
+  "groups": {
+    "Glomerular": {
+      "n_rows": 2608,
+      "missing_young_%": 0.3,
+      "missing_old_%": 0.0,
+      "zero_young_%": 0.0,
+      "zero_old_%": 0.0,
+      "skew_young": 11.548,
+      "skew_old": 11.37,
+      "log2_transformed": true,
+      "mean_young": 13.0544,
+      "std_young": 3.1219,
+      "mean_old": 13.2287,
+      "std_old": 2.9886,
+      "z_mean_young": -0.0,
+      "z_std_young": 1.0,
+      "z_mean_old": -0.0,
+      "z_std_old": 1.0,
+      "outliers_young": 15,
+      "outliers_old": 17,
+      "validation_passed": true
+    },
+    "Tubulointerstitial": {
+      "n_rows": 2609,
+      "missing_young_%": 0.3,
+      "missing_old_%": 0.1,
+      "zero_young_%": 0.0,
+      "zero_old_%": 0.0,
+      "skew_young": 16.774,
+      "skew_old": 13.854,
+      "log2_transformed": true,
+      "mean_young": 13.3221,
+      "std_young": 3.023,
+      "mean_old": 13.5923,
+      "std_old": 2.8426,
+      "z_mean_young": -0.0,
+      "z_std_young": 1.0,
+      "z_mean_old": -0.0,
+      "z_std_old": 1.0,
+      "outliers_young": 19,
+      "outliers_old": 18,
+      "validation_passed": true
+    }
+  }
+}

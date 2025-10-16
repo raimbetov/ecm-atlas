@@ -37,6 +37,21 @@ def process_ouni2022():
     df = df[df['Accession'].notna()].copy()
     print(f"   ✓ After filtering empty rows: {len(df)} matrisome proteins")
 
+    # Convert zeros to NaN in TMT intensity columns
+    # Zero in proteomics = not detected (missing), not true zero abundance
+    print(f"\n[1.5/6] Converting zeros to NaN in TMT intensity columns...")
+    tmt_cols = [c for c in df.columns if c.startswith('Q. Norm. of TOT_')]
+
+    zeros_before = sum((df[col] == 0).sum() for col in tmt_cols)
+    print(f"   ✓ Found {zeros_before} zeros across {len(tmt_cols)} TMT columns")
+
+    for col in tmt_cols:
+        df[col] = df[col].replace(0, np.nan)
+
+    zeros_after = sum((df[col] == 0).sum() for col in tmt_cols)
+    print(f"   ✓ Converted {zeros_before} zeros to NaN")
+    print(f"   ✓ Remaining zeros: {zeros_after} (should be 0)")
+
     # 2. Define sample columns for each age group
     print("\n[2/6] Identifying TMT sample columns...")
 
@@ -51,9 +66,9 @@ def process_ouni2022():
     # 3. Calculate means per age group
     print("\n[3/6] Calculating mean abundances per age group...")
 
-    df['Abundance_Prepubertal'] = df[prepub_cols].mean(axis=1)
-    df['Abundance_Reproductive'] = df[repro_cols].mean(axis=1)
-    df['Abundance_Menopausal'] = df[meno_cols].mean(axis=1)
+    df['Abundance_Prepubertal'] = df[prepub_cols].mean(axis=1, skipna=True)
+    df['Abundance_Reproductive'] = df[repro_cols].mean(axis=1, skipna=True)
+    df['Abundance_Menopausal'] = df[meno_cols].mean(axis=1, skipna=True)
 
     print(f"   ✓ Prepubertal mean: {df['Abundance_Prepubertal'].mean():.2f} (range: {df['Abundance_Prepubertal'].min():.2f}-{df['Abundance_Prepubertal'].max():.2f})")
     print(f"   ✓ Reproductive mean: {df['Abundance_Reproductive'].mean():.2f} (range: {df['Abundance_Reproductive'].min():.2f}-{df['Abundance_Reproductive'].max():.2f})")

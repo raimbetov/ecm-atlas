@@ -5,15 +5,17 @@ Converts kidney aging proteomics data to standardized CSV format
 """
 
 import pandas as pd
+import numpy as np
 import json
 from datetime import datetime
 from pathlib import Path
 
 # Configuration
-EXCEL_FILE = "data_raw/Randles et al. - 2021/ASN.2020101442-File027.xlsx"
+SCRIPT_DIR = Path(__file__).parent.parent.parent.parent  # Go up to ecm-atlas root
+EXCEL_FILE = SCRIPT_DIR / "data_raw/Randles et al. - 2021/ASN.2020101442-File027.xlsx"
 SHEET_NAME = "Human data matrix fraction"
-REF_FILE = "references/human_matrisome_v2.csv"
-OUTPUT_DIR = Path("data_processed")
+REF_FILE = SCRIPT_DIR / "references/human_matrisome_v2.csv"
+OUTPUT_DIR = Path(__file__).parent  # Output to claude_code folder (same location as before)
 OUTPUT_DIR.mkdir(exist_ok=True)
 
 print("=" * 80)
@@ -37,6 +39,27 @@ print(f"✅ Sheet loaded: {SHEET_NAME}")
 print(f"   Shape: {df_wide.shape} (rows × columns)")
 print(f"   Columns: {list(df_wide.columns)}")
 
+# ============================================================================
+# ZERO-TO-NAN CONVERSION (Data Quality Fix)
+# ============================================================================
+# Convert zero values to NaN in abundance columns
+# Zero in proteomics = not detected (missing), not true zero abundance
+# This fix prevents zero-inflation bias in statistical analyses
+intensity_cols = ['G15', 'T15', 'G29', 'T29', 'G37', 'T37', 'G61', 'T61', 'G67', 'T67', 'G69', 'T69']
+zeros_before = sum((df_wide[col] == 0).sum() for col in intensity_cols)
+print(f"\n[DATA QUALITY FIX] Converting zeros to NaN in abundance columns")
+print(f"   - Zero values before conversion: {zeros_before} ({zeros_before/(df_wide.shape[0]*len(intensity_cols))*100:.2f}% of measurements)")
+
+for col in intensity_cols:
+    df_wide[col] = df_wide[col].replace(0, np.nan)
+
+zeros_after = sum((df_wide[col] == 0).sum() for col in intensity_cols)
+nan_count = sum(df_wide[col].isna().sum() for col in intensity_cols)
+print(f"   - Zero values after conversion: {zeros_after}")
+print(f"   - NaN values after conversion: {nan_count}")
+print(f"   ✅ Zero-to-NaN conversion complete (aligns with proteomics standards)")
+# ============================================================================
+
 # Validate structure (actual file has 2610 proteins, task doc said 2611)
 expected_rows_min = 2600  # Allow for small variance
 expected_rows_max = 2615
@@ -45,8 +68,7 @@ if expected_rows_min <= df_wide.shape[0] <= expected_rows_max:
 else:
     print(f"⚠️  Row count mismatch: expected ~2611, got {df_wide.shape[0]}")
 
-# Check for intensity columns
-intensity_cols = ['G15', 'T15', 'G29', 'T29', 'G37', 'T37', 'G61', 'T61', 'G67', 'T67', 'G69', 'T69']
+# Check for intensity columns (already defined above for zero conversion)
 missing_cols = [col for col in intensity_cols if col not in df_wide.columns]
 if not missing_cols:
     print(f"✅ All 12 intensity columns present")

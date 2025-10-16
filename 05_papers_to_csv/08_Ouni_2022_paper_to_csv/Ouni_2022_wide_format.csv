@@ -68,7 +68,7 @@ P51884,Lumican,LUM,LUM,Proteoglycans,Core matrisome,Ouni_2022,Ovary,Cortex,Ovary
 P14543,Nidogen-1,NID1,NID1,ECM Glycoproteins,Core matrisome,Ouni_2022,Ovary,Cortex,Ovary_Cortex,Cortex,Homo sapiens,72.84266666666666,88.64533333333333,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
 Q14112,Nidogen-2,NID2,NID2,ECM Glycoproteins,Core matrisome,Ouni_2022,Ovary,Cortex,Ovary_Cortex,Cortex,Homo sapiens,79.30666666666667,50.76533333333333,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
 P20774,Mimecan,OGN,OGN,Proteoglycans,Core matrisome,Ouni_2022,Ovary,Cortex,Ovary_Cortex,Cortex,Homo sapiens,154.60666666666665,163.42000000000002,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
-P00747,Plasminogen,PLG,PLG,ECM Regulators,Matrisome-associated,Ouni_2022,Ovary,Cortex,Ovary_Cortex,Cortex,Homo sapiens,121.37733333333335,130.65466666666666,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+P00747,Plasminogen,PLG,PLG,ECM Regulators,Matrisome-associated,Ouni_2022,Ovary,Cortex,Ovary_Cortex,Cortex,Homo sapiens,202.29555555555558,217.75777777777776,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
 O15031,Plexin-B2,PLXNB2,PLXNB2,ECM-affiliated Proteins,Matrisome-associated,Ouni_2022,Ovary,Cortex,Ovary_Cortex,Cortex,Homo sapiens,212.2866666666667,226.504,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
 Q15063,Periostin,POSTN,POSTN,ECM Glycoproteins,Core matrisome,Ouni_2022,Ovary,Cortex,Ovary_Cortex,Cortex,Homo sapiens,44.368,45.12666666666667,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
 P51888,Prolargin,PRELP,PRELP,Proteoglycans,Core matrisome,Ouni_2022,Ovary,Cortex,Ovary_Cortex,Cortex,Homo sapiens,140.82933333333335,150.44133333333335,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
@@ -96,4 +96,4 @@ P07996,Thrombospondin-1,THBS1,THBS1,ECM Glycoproteins,Core matrisome,Ouni_2022,O
 P22105,Tenascin-X,TNXB,TNXB,ECM Glycoproteins,Core matrisome,Ouni_2022,Ovary,Cortex,Ovary_Cortex,Cortex,Homo sapiens,137.42000000000002,112.76133333333334,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
 E9PF17,Versican core protein,VCAN,VCAN,Proteoglycans,Core matrisome,Ouni_2022,Ovary,Cortex,Ovary_Cortex,Cortex,Homo sapiens,167.58933333333334,144.14266666666668,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
 P04004,Vitronectin,VTN,VTN,ECM Glycoproteins,Core matrisome,Ouni_2022,Ovary,Cortex,Ovary_Cortex,Cortex,Homo sapiens,137.98533333333336,246.93200000000002,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
-Q12836,Zona pellucida sperm-binding protein 4,ZP4,ZP4,ECM Glycoproteins,Core matrisome,Ouni_2022,Ovary,Cortex,Ovary_Cortex,Cortex,Homo sapiens,61.69066666666667,23.830666666666666,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0
+Q12836,Zona pellucida sperm-binding protein 4,ZP4,ZP4,ECM Glycoproteins,Core matrisome,Ouni_2022,Ovary,Cortex,Ovary_Cortex,Cortex,Homo sapiens,102.81777777777779,59.57666666666667,DC-MaP + TMTpro 16-plex,Ouni_2022,1,100.0

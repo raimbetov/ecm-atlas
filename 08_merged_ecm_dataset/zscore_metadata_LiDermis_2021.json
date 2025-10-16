@@ -1,0 +1,32 @@
+{
+  "study_id": "LiDermis_2021",
+  "groupby_columns": [
+    "Tissue"
+  ],
+  "timestamp": "2025-10-15T22:23:04.235741",
+  "n_groups": 1,
+  "total_rows_processed": 262,
+  "groups": {
+    "Skin dermis": {
+      "n_rows": 262,
+      "missing_young_%": 8.4,
+      "missing_old_%": 31.3,
+      "zero_young_%": 0.0,
+      "zero_old_%": 0.0,
+      "skew_young": 0.373,
+      "skew_old": 0.508,
+      "log2_transformed": false,
+      "mean_young": 9.661,
+      "std_young": 3.4425,
+      "mean_old": 10.1218,
+      "std_old": 3.6882,
+      "z_mean_young": 0.0,
+      "z_std_young": 1.0,
+      "z_mean_old": -0.0,
+      "z_std_old": 1.0,
+      "outliers_young": 0,
+      "outliers_old": 0,
+      "validation_passed": true
+    }
+  }
+}

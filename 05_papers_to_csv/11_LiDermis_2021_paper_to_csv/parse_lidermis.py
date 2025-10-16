@@ -47,6 +47,24 @@ def log(message, log_file="agent_log.md"):
         f.write(f"\n[{timestamp}] {message}\n")
     print(f"[{timestamp}] {message}")
 
+def convert_zeros_to_nan(df, abundance_columns):
+    """
+    Convert zero values to NaN in abundance columns.
+    Zero in proteomics = not detected (missing), not true zero abundance.
+
+    Args:
+        df: DataFrame with abundance data
+        abundance_columns: List of column names containing abundance values
+
+    Returns:
+        DataFrame with zeros converted to NaN
+    """
+    df_copy = df.copy()
+    for col in abundance_columns:
+        if col in df_copy.columns:
+            df_copy[col] = df_copy[col].replace(0, np.nan)
+    return df_copy
+
 def fetch_protein_name_from_uniprot(protein_id, retry=3):
     """Fetch protein name from UniProt API."""
     import requests
@@ -121,6 +139,31 @@ def main():
         if col_idx < len(new_columns):
             new_columns[col_idx] = sample_name
     df.columns = new_columns
+
+    log("\n### Step 1.1b: Convert zeros to NaN (proteomics not-detected convention)")
+
+    # Identify abundance columns (Sample columns, not Ave_ averages)
+    abundance_cols = [col for col in df.columns
+                     if any(x in str(col) for x in ['Toddler-Sample', 'Teenager-Sample',
+                                                     'Adult-Sample', 'Elderly-Sample'])]
+
+    # Count zeros before conversion
+    zeros_before = sum((df[col] == 0).sum() for col in abundance_cols)
+    total_values = sum(df[col].notna().sum() for col in abundance_cols)
+
+    log(f"Abundance columns identified: {len(abundance_cols)}")
+    log(f"Zeros before conversion: {zeros_before}/{total_values} ({zeros_before/total_values*100:.1f}%)")
+
+    # Convert zeros to NaN
+    df = convert_zeros_to_nan(df, abundance_cols)
+
+    # Count zeros after conversion
+    zeros_after = sum((df[col] == 0).sum() for col in abundance_cols)
+    nans_total = sum(df[col].isna().sum() for col in abundance_cols)
+
+    log(f"Zeros after conversion: {zeros_after}/{total_values} ({zeros_after/total_values*100:.1f}%)")
+    log(f"NaN values now: {nans_total}/{total_values} ({nans_total/total_values*100:.1f}%)")
+    log(f"✅ Converted {zeros_before - zeros_after} zeros to NaN")
 
     log(f"\nColumns (first 10):")
     for i, col in enumerate(df.columns[:10]):

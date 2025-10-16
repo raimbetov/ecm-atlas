@@ -68,7 +68,7 @@ df_aggregated = df_long.groupby(
     ['Protein_ID', 'Gene_Symbol', 'Tissue', 'Tissue_Compartment', 'Age_Bin'],
     dropna=False  # Keep rows with NaN values in grouping columns
 ).agg({
-    'Abundance': 'mean',  # Average across replicates
+    'Abundance': lambda x: x.mean(skipna=True),  # Average across replicates, excluding NaN (zeros converted to NaN)
     'Protein_Name': 'first',
     'Species': 'first',
     'Method': 'first',
