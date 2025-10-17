@@ -1,0 +1,13 @@
+Study_ID,Species,Tissue,N_Proteins,Young_Samples,Old_Samples,Mean_Zscore_Delta,Std_Zscore_Delta
+Tam_2020,Homo sapiens,Intervertebral_disc_NP,739,5.0,6.0,0.1415604942215567,0.6997885611820667
+Angelidis_2019,Mus musculus,Lung,269,4.0,4.0,-0.020209503037507202,0.23205805501366636
+Dipali_2023,Mus musculus,Ovary,173,5.0,5.0,-1.6993471498308755e-15,0.1975353862330622
+Schuler_2021,Mus musculus,Skeletal_muscle_Soleus,1290,3.0,3.0,-6.095038341391751e-16,0.42376617308314196
+Tsumagari_2023,Mus musculus,Brain_Cortex,423,,,1.3169790973552907e-15,0.10603765153617148
+Caldeira_2017,Bos taurus,Intervertebral_disc_Nucleus_pulposus,39,,,3.75767792950053e-16,1.4907201920051933
+Santinha_2024_Mouse_NT,Mus musculus,Heart_Native_Tissue,191,,,5.208166649550472e-16,0.22438611224915814
+Santinha_2024_Mouse_DT,Mus musculus,Heart_Decellularized_Tissue,155,,,-1.9482623399873713e-15,0.571012660950508
+Santinha_2024_Human,Homo sapiens,Heart_Native_Tissue,207,,,-6.178632484870436e-15,0.6400051037845724
+LiDermis_2021,Homo sapiens,Skin dermis,166,5.0,3.0,-0.2938250415010409,0.6406478051331284
+Randles_2021,Homo sapiens,Kidney_Glomerular,5198,,,0.004659775789053368,0.3814796597454568
+Ouni_2022,Homo sapiens,Ovary_Cortex,98,,,-6.117555441812086e-17,0.6768886895193647

@@ -1,0 +1,267 @@
+Gene_Symbol,Tissue_Compartment,Organ,Species,Study_ID,Zscore_Delta,Zscore_Young,Zscore_Old,Matrisome_Category,Protein_Name
+F13A1,NP,Intervertebral_disc,Homo sapiens,Tam_2020,1.1277934102539335,-0.7404209763653393,0.3873724338885942,ECM Regulators,Coagulation factor XIII A chain
+F2,NP,Intervertebral_disc,Homo sapiens,Tam_2020,2.2662605809177805,-1.4388790093524055,0.8273815715653748,ECM Regulators,Prothrombin;Activation peptide fragment 1;Activation peptide fragment 2;Thrombin light chain;Thrombin heavy chain
+PLG,NP,Intervertebral_disc,Homo sapiens,Tam_2020,2.5741242986134667,-1.2346500439404466,1.3394742546730198,ECM Regulators,"Plasminogen;Plasmin heavy chain A;Activation peptide;Angiostatin;Plasmin heavy chain A, short form;Plasmin light chain B"
+F12,NP,Intervertebral_disc,Homo sapiens,Tam_2020,1.135517732236518,-0.8871563854720595,0.2483613467644584,ECM Regulators,Coagulation factor XII;Coagulation factor XIIa heavy chain;Beta-factor XIIa part 1;Coagulation factor XIIa light chain
+SERPINC1,NP,Intervertebral_disc,Homo sapiens,Tam_2020,3.0125885630073665,-1.442933416329651,1.5696551466777156,ECM Regulators,Antithrombin-III
+SERPINA1,NP,Intervertebral_disc,Homo sapiens,Tam_2020,0.8997898525825043,1.4918106852463828,2.391600537828887,ECM Regulators,Alpha-1-antitrypsin;Short peptide from AAT
+SERPINA3,NP,Intervertebral_disc,Homo sapiens,Tam_2020,0.8252830577780692,0.9016452789306256,1.726928336708695,ECM Regulators,Alpha-1-antichymotrypsin;Alpha-1-antichymotrypsin His-Pro-less
+A2M,NP,Intervertebral_disc,Homo sapiens,Tam_2020,1.237346148377939,1.1107952078498486,2.348141356227788,ECM Regulators,Alpha-2-macroglobulin
+FGA,NP,Intervertebral_disc,Homo sapiens,Tam_2020,2.904223006672848,-1.3358845003257844,1.5683385063470638,ECM Glycoproteins,Fibrinogen alpha chain;Fibrinopeptide A;Fibrinogen alpha chain
+FGB,NP,Intervertebral_disc,Homo sapiens,Tam_2020,2.600559644634628,-0.8301118221875544,1.7704478224470737,ECM Glycoproteins,Fibrinogen beta chain;Fibrinopeptide B;Fibrinogen beta chain
+FGG,NP,Intervertebral_disc,Homo sapiens,Tam_2020,2.890338500031436,-0.972658126410807,1.9176803736206287,ECM Glycoproteins,Fibrinogen gamma chain
+HPX,NP,Intervertebral_disc,Homo sapiens,Tam_2020,2.716973940858929,-0.9822261676826912,1.7347477731762375,ECM-affiliated Proteins,Hemopexin
+VTN,NP,Intervertebral_disc,Homo sapiens,Tam_2020,2.9147790715506203,-1.647458717135295,1.267320354415325,ECM Glycoproteins,Vitronectin;Vitronectin V65 subunit;Vitronectin V10 subunit;Somatomedin-B
+THBS1,NP,Intervertebral_disc,Homo sapiens,Tam_2020,-0.0466852714828034,0.8609305918102869,0.8142453203274834,ECM Glycoproteins,Thrombospondin-1
+SERPINF2,NP,Intervertebral_disc,Homo sapiens,Tam_2020,1.9497515823107792,-1.1972174958016892,0.7525340865090899,ECM Regulators,Alpha-2-antiplasmin
+THBS2,NP,Intervertebral_disc,Homo sapiens,Tam_2020,0.0647528696580755,0.1686731524395852,0.2334260220976608,ECM Glycoproteins,Thrombospondin-2
+F13A1,IAF,Intervertebral_disc,Homo sapiens,Tam_2020,0.961026525995513,-0.3896287739089018,0.5713977520866111,ECM Regulators,Coagulation factor XIII A chain
+F2,IAF,Intervertebral_disc,Homo sapiens,Tam_2020,2.089382287446438,-1.6422861567683908,0.447096130678047,ECM Regulators,Prothrombin;Activation peptide fragment 1;Activation peptide fragment 2;Thrombin light chain;Thrombin heavy chain
+PLG,IAF,Intervertebral_disc,Homo sapiens,Tam_2020,2.66376640893791,-1.7024861308798778,0.9612802780580324,ECM Regulators,"Plasminogen;Plasmin heavy chain A;Activation peptide;Angiostatin;Plasmin heavy chain A, short form;Plasmin light chain B"
+SERPINC1,IAF,Intervertebral_disc,Homo sapiens,Tam_2020,2.497594082720548,-1.3951730742709365,1.1024210084496116,ECM Regulators,Antithrombin-III
+SERPINA1,IAF,Intervertebral_disc,Homo sapiens,Tam_2020,0.7094964886191832,1.4095356230113028,2.119032111630486,ECM Regulators,Alpha-1-antitrypsin;Short peptide from AAT
+SERPINA3,IAF,Intervertebral_disc,Homo sapiens,Tam_2020,0.5175504260240947,0.925636154013919,1.4431865800380137,ECM Regulators,Alpha-1-antichymotrypsin;Alpha-1-antichymotrypsin His-Pro-less
+A2M,IAF,Intervertebral_disc,Homo sapiens,Tam_2020,1.0001868834310166,0.7425359246613192,1.7427228080923358,ECM Regulators,Alpha-2-macroglobulin
+FGA,IAF,Intervertebral_disc,Homo sapiens,Tam_2020,2.352679305821766,-0.8107887272870714,1.5418905785346944,ECM Glycoproteins,Fibrinogen alpha chain;Fibrinopeptide A;Fibrinogen alpha chain
+FGB,IAF,Intervertebral_disc,Homo sapiens,Tam_2020,2.083182129127694,-0.5290494243444028,1.5541327047832916,ECM Glycoproteins,Fibrinogen beta chain;Fibrinopeptide B;Fibrinogen beta chain
+FGG,IAF,Intervertebral_disc,Homo sapiens,Tam_2020,2.2223187273005296,-0.4838316750969584,1.7384870522035714,ECM Glycoproteins,Fibrinogen gamma chain
+HPX,IAF,Intervertebral_disc,Homo sapiens,Tam_2020,2.3556691905136984,-0.9530092935702752,1.402659896943423,ECM-affiliated Proteins,Hemopexin
+VTN,IAF,Intervertebral_disc,Homo sapiens,Tam_2020,2.700568719284795,-1.2730089115560264,1.4275598077287686,ECM Glycoproteins,Vitronectin;Vitronectin V65 subunit;Vitronectin V10 subunit;Somatomedin-B
+VWF,IAF,Intervertebral_disc,Homo sapiens,Tam_2020,1.0107729476516771,-0.9948876527382154,0.0158852949134616,ECM Glycoproteins,von Willebrand factor;von Willebrand antigen 2
+THBS1,IAF,Intervertebral_disc,Homo sapiens,Tam_2020,0.4125368320122298,1.0407492547652295,1.4532860867774593,ECM Glycoproteins,Thrombospondin-1
+SERPINF2,IAF,Intervertebral_disc,Homo sapiens,Tam_2020,1.394018439909521,-1.4474886993616014,-0.0534702594520803,ECM Regulators,Alpha-2-antiplasmin
+THBS2,IAF,Intervertebral_disc,Homo sapiens,Tam_2020,0.2264169864741549,0.2154339324724818,0.4418509189466367,ECM Glycoproteins,Thrombospondin-2
+F13A1,OAF,Intervertebral_disc,Homo sapiens,Tam_2020,0.8273720166758178,0.0097863212548014,0.8371583379306192,ECM Regulators,Coagulation factor XIII A chain
+F2,OAF,Intervertebral_disc,Homo sapiens,Tam_2020,1.3440608826566112,-0.6783779540170347,0.6656829286395763,ECM Regulators,Prothrombin;Activation peptide fragment 1;Activation peptide fragment 2;Thrombin light chain;Thrombin heavy chain
+F9,OAF,Intervertebral_disc,Homo sapiens,Tam_2020,0.0917230896237119,-0.3882184775720864,-0.2964953879483744,ECM Regulators,Coagulation factor IX;Coagulation factor IXa light chain;Coagulation factor IXa heavy chain
+F10,OAF,Intervertebral_disc,Homo sapiens,Tam_2020,-0.017785604779105,-0.3606378802473215,-0.3784234850264266,ECM Regulators,Coagulation factor X;Factor X light chain;Factor X heavy chain;Activated factor Xa heavy chain
+PLG,OAF,Intervertebral_disc,Homo sapiens,Tam_2020,1.867780712776438,-0.593012366090815,1.2747683466856232,ECM Regulators,"Plasminogen;Plasmin heavy chain A;Activation peptide;Angiostatin;Plasmin heavy chain A, short form;Plasmin light chain B"
+F12,OAF,Intervertebral_disc,Homo sapiens,Tam_2020,0.8249384690243117,-0.683083354746151,0.1418551142781606,ECM Regulators,Coagulation factor XII;Coagulation factor XIIa heavy chain;Beta-factor XIIa part 1;Coagulation factor XIIa light chain
+SERPINC1,OAF,Intervertebral_disc,Homo sapiens,Tam_2020,0.8722177335094984,0.1842130870762098,1.0564308205857085,ECM Regulators,Antithrombin-III
+SERPINA1,OAF,Intervertebral_disc,Homo sapiens,Tam_2020,0.5841250786336067,1.3955711097098158,1.9796961883434223,ECM Regulators,Alpha-1-antitrypsin;Short peptide from AAT
+SERPINA3,OAF,Intervertebral_disc,Homo sapiens,Tam_2020,0.5413081840297604,0.8581674522400127,1.3994756362697731,ECM Regulators,Alpha-1-antichymotrypsin;Alpha-1-antichymotrypsin His-Pro-less
+A2M,OAF,Intervertebral_disc,Homo sapiens,Tam_2020,0.8269960110757956,0.7846833586792722,1.6116793697550678,ECM Regulators,Alpha-2-macroglobulin
+FGA,OAF,Intervertebral_disc,Homo sapiens,Tam_2020,1.3621161344017438,0.3775687936427045,1.7396849280444484,ECM Glycoproteins,Fibrinogen alpha chain;Fibrinopeptide A;Fibrinogen alpha chain
+FGB,OAF,Intervertebral_disc,Homo sapiens,Tam_2020,1.2802741874221053,0.5756943474216512,1.8559685348437565,ECM Glycoproteins,Fibrinogen beta chain;Fibrinopeptide B;Fibrinogen beta chain
+FGG,OAF,Intervertebral_disc,Homo sapiens,Tam_2020,1.3490565064585789,0.5512835738147182,1.900340080273297,ECM Glycoproteins,Fibrinogen gamma chain
+HPX,OAF,Intervertebral_disc,Homo sapiens,Tam_2020,0.9874802816704592,0.4844728971261154,1.4719531787965745,ECM-affiliated Proteins,Hemopexin
+VTN,OAF,Intervertebral_disc,Homo sapiens,Tam_2020,1.4034545904930198,0.4436235789836297,1.8470781694766496,ECM Glycoproteins,Vitronectin;Vitronectin V65 subunit;Vitronectin V10 subunit;Somatomedin-B
+VWF,OAF,Intervertebral_disc,Homo sapiens,Tam_2020,0.619890326000263,-0.6901283158400844,-0.0702379898398214,ECM Glycoproteins,von Willebrand factor;von Willebrand antigen 2
+F13B,OAF,Intervertebral_disc,Homo sapiens,Tam_2020,0.1605833254842287,-0.7916519959301623,-0.6310686704459336,ECM Regulators,Coagulation factor XIII B chain
+THBS1,OAF,Intervertebral_disc,Homo sapiens,Tam_2020,0.0652514317912784,1.973262540894628,2.038513972685906,ECM Glycoproteins,Thrombospondin-1
+SERPINF2,OAF,Intervertebral_disc,Homo sapiens,Tam_2020,1.36849903749794,-1.2567954628904867,0.1117035746074532,ECM Regulators,Alpha-2-antiplasmin
+THBS2,OAF,Intervertebral_disc,Homo sapiens,Tam_2020,0.0827044126452168,0.9238875160418806,1.0065919286870977,ECM Glycoproteins,Thrombospondin-2
+FGA,Lung,Lung,Mus musculus,Angelidis_2019,0.0355849509779742,1.5255480272173516,1.5611329781953258,ECM Glycoproteins,Fibrinogen alpha chain;Fibrinopeptide A;Fibrinogen alpha chain
+PLAT,Lung,Lung,Mus musculus,Angelidis_2019,0.2621862381857784,-0.6099429604770803,-0.3477567222913018,ECM Regulators,Tissue-type plasminogen activator;Tissue-type plasminogen activator chain A;Tissue-type plasminogen activator chain B
+F2,Lung,Lung,Mus musculus,Angelidis_2019,0.1532132584987627,-0.9733926466291426,-0.8201793881303798,ECM Regulators,Prothrombin;Activation peptide fragment 1;Activation peptide fragment 2;Thrombin light chain;Thrombin heavy chain;Prothrombin
+VTN,Lung,Lung,Mus musculus,Angelidis_2019,0.3512190704726974,0.6149373483680067,0.966156418840704,ECM Glycoproteins,Vitronectin
+SERPINC1,Lung,Lung,Mus musculus,Angelidis_2019,0.0947286313865971,0.8358340042718863,0.9305626356584834,ECM Regulators,Antithrombin-III
+PLAU,Lung,Lung,Mus musculus,Angelidis_2019,-0.12198193914372,-0.9893163232174008,-1.1112982623611207,ECM Regulators,Urokinase-type plasminogen activator;Urokinase-type plasminogen activator long chain A;Urokinase-type plasminogen activator short chain A;Urokinase-type plasminogen activator chain B
+VWF,Lung,Lung,Mus musculus,Angelidis_2019,0.0868865065386179,1.2801616454543356,1.3670481519929536,ECM Glycoproteins,von Willebrand factor;von Willebrand antigen 2
+THBS1,Lung,Lung,Mus musculus,Angelidis_2019,0.1941587534701739,0.3977522741784356,0.5919110276486096,ECM Glycoproteins,Thrombospondin-1
+PLG,Lung,Lung,Mus musculus,Angelidis_2019,0.1016681249067136,0.249028459602912,0.3506965845096256,ECM Regulators,"Plasminogen;Plasmin heavy chain A;Activation peptide;Angiostatin;Plasmin heavy chain A, short form;Plasmin light chain B"
+F13A1,Lung,Lung,Mus musculus,Angelidis_2019,0.1964622687009002,0.2784166101663958,0.4748788788672961,ECM Regulators,Coagulation factor XIII A chain
+SERPINF2,Lung,Lung,Mus musculus,Angelidis_2019,0.2062660584540852,-0.3299655002952519,-0.1236994418411667,ECM Regulators,Alpha-2-antiplasmin
+A2M,Lung,Lung,Mus musculus,Angelidis_2019,0.2170709350567347,0.9447150601002766,1.1617859951570113,ECM Regulators,Alpha-2-macroglobulin;Alpha-2-macroglobulin 165 kDa subunit;Alpha-2-macroglobulin 35 kDa subunit
+FGB,Lung,Lung,Mus musculus,Angelidis_2019,0.046077303425194,1.445259897188074,1.491337200613268,ECM Glycoproteins,Fibrinogen beta chain;Fibrinopeptide B;Fibrinogen beta chain
+FGG,Lung,Lung,Mus musculus,Angelidis_2019,0.051599326360834,1.393680579983876,1.4452799063447102,ECM Glycoproteins,Fibrinogen gamma chain
+HPX,Lung,Lung,Mus musculus,Angelidis_2019,0.4318387724131534,0.4893573717087038,0.9211961441218572,ECM-affiliated Proteins,Hemopexin
+FGA,Ovary,Ovary,Mus musculus,Dipali_2023,0.1758118202345415,0.8329891719328018,1.008800992167343,ECM Glycoproteins,Fibrinogen alpha chain;Isoform 2 of Fibrinogen alpha chain
+F10,Ovary,Ovary,Mus musculus,Dipali_2023,0.0600589053753417,-0.9057188786197872,-0.8456599732444455,ECM Regulators,Coagulation factor X
+F9,Ovary,Ovary,Mus musculus,Dipali_2023,0.4173314089513842,-1.981002601097144,-1.56367119214576,ECM Regulators,Coagulation factor IX
+PLG,Ovary,Ovary,Mus musculus,Dipali_2023,-0.0351140508547458,0.4516041852384747,0.4164901343837288,ECM Regulators,Plasminogen
+VTN,Ovary,Ovary,Mus musculus,Dipali_2023,-0.121961579750117,0.4484799134555473,0.3265183337054302,ECM Glycoproteins,Vitronectin
+SERPINC1,Ovary,Ovary,Mus musculus,Dipali_2023,0.0655333698499168,-0.9332527272239968,-0.8677193573740798,ECM Regulators,Antithrombin-III
+THBS1,Ovary,Ovary,Mus musculus,Dipali_2023,-0.4769551140771677,0.7205576457502207,0.243602531673053,ECM Glycoproteins,Thrombospondin-1
+FGG,Ovary,Ovary,Mus musculus,Dipali_2023,0.1625512664605102,0.7881191713891106,0.9506704378496208,ECM Glycoproteins,Fibrinogen gamma chain
+SERPINF2,Ovary,Ovary,Mus musculus,Dipali_2023,-0.0481038428730089,-1.4460774487107293,-1.4941812915837382,ECM Regulators,Alpha-2-antiplasmin (Fragment);Alpha-2-antiplasmin
+F12,Ovary,Ovary,Mus musculus,Dipali_2023,0.0709206348898363,-1.6630412980765297,-1.592120663186693,ECM Regulators,Coagulation factor XII
+F13A1,Ovary,Ovary,Mus musculus,Dipali_2023,0.0990994039599248,-1.2406364967620829,-1.1415370928021578,ECM Regulators,Coagulation factor XIII A chain
+FGB,Ovary,Ovary,Mus musculus,Dipali_2023,0.1803570771894951,0.9046114599160424,1.0849685371055375,ECM Glycoproteins,Fibrinogen beta chain
+F12,Skeletal_muscle_Soleus,Skeletal muscle,Mus musculus,Schuler_2021,-0.0090780486118839,-2.218754933725458,-2.227832982337342,ECM Regulators,
+F10,Skeletal_muscle_Soleus,Skeletal muscle,Mus musculus,Schuler_2021,-0.0872861416451153,-0.5178999939680624,-0.6051861356131778,ECM Regulators,
+F2,Skeletal_muscle_Soleus,Skeletal muscle,Mus musculus,Schuler_2021,-0.1151071413615128,0.1879753887145674,0.0728682473530545,ECM Regulators,
+F2,Skeletal_muscle_Gastrocnemius,Skeletal muscle,Mus musculus,Schuler_2021,0.070950279694108,-0.4469296207455805,-0.3759793410514725,ECM Regulators,
+F2,Skeletal_muscle_TA,Skeletal muscle,Mus musculus,Schuler_2021,0.3352042861426409,0.079627760233706,0.4148320463763469,ECM Regulators,
+F12,Skeletal_muscle_TA,Skeletal muscle,Mus musculus,Schuler_2021,0.1120230543586575,-1.4296155950135974,-1.3175925406549398,ECM Regulators,
+F2,Skeletal_muscle_EDL,Skeletal muscle,Mus musculus,Schuler_2021,0.1874263329035564,-0.2680148325850444,-0.0805884996814879,ECM Regulators,
+F12,Native_Tissue,Heart,Mus musculus,Santinha_2024_Mouse_NT,0.1170466823190659,-1.6408182139601977,-1.5237715316411318,ECM Regulators,Coagulation factor XII (EC 3.4.21.38) (Hageman factor) (HAF) [Cleaved into: Coagulation factor XIIa heavy chain; Coagulation factor XIIa light chain]
+F10,Native_Tissue,Heart,Mus musculus,Santinha_2024_Mouse_NT,0.1740141543473663,-0.2320438523270716,-0.0580296979797053,ECM Regulators,Coagulation factor X (EC 3.4.21.6) (Stuart factor) [Cleaved into: Factor X light chain; Factor X heavy chain; Activated factor Xa heavy chain]
+F9,Native_Tissue,Heart,Mus musculus,Santinha_2024_Mouse_NT,0.0572346483328197,-0.4214172402758636,-0.3641825919430438,ECM Regulators,Coagulation factor IX (EC 3.4.21.22) (Christmas factor) [Cleaved into: Coagulation factor IXa light chain; Coagulation factor IXa heavy chain]
+F2,Native_Tissue,Heart,Mus musculus,Santinha_2024_Mouse_NT,0.0702868957779327,0.0722687401837403,0.1425556359616731,ECM Regulators,Prothrombin (EC 3.4.21.5) (Coagulation factor II) [Cleaved into: Activation peptide fragment 1; Activation peptide fragment 2; Thrombin light chain; Thrombin heavy chain]
+F10,Decellularized_Tissue,Heart,Mus musculus,Santinha_2024_Mouse_DT,0.0975274331124691,0.2517125318756913,0.3492399649881604,ECM Regulators,Coagulation factor X (EC 3.4.21.6) (Stuart factor) [Cleaved into: Factor X light chain; Factor X heavy chain; Activated factor Xa heavy chain]
+HPX,Native_Tissue,Heart,Homo sapiens,Santinha_2024_Human,1.5096337114795673,-0.2880279540200658,1.2216057574595014,ECM-affiliated Proteins,Hemopexin (Beta-1B-glycoprotein)
+SERPINA1,Native_Tissue,Heart,Homo sapiens,Santinha_2024_Human,1.297053814821043,0.5414676396461306,1.838521454467174,ECM Regulators,Alpha-1-antitrypsin (Alpha-1 protease inhibitor) (Alpha-1-antiproteinase) (Serpin A1) [Cleaved into: Short peptide from AAT (SPAAT)]
+VTN,Native_Tissue,Heart,Homo sapiens,Santinha_2024_Human,1.18184154195977,-0.1357261451353865,1.0461153968243837,ECM Glycoproteins,Vitronectin (VN) (S-protein) (Serum-spreading factor) (V75) [Cleaved into: Vitronectin V65 subunit; Vitronectin V10 subunit; Somatomedin-B]
+SERPINC1,Native_Tissue,Heart,Homo sapiens,Santinha_2024_Human,0.8594336702945197,-0.4683128102361191,0.3911208600584006,ECM Regulators,Antithrombin-III (ATIII) (Serpin C1)
+FGB,Native_Tissue,Heart,Homo sapiens,Santinha_2024_Human,0.7531559820111289,-0.0889649190801332,0.6641910629309957,ECM Glycoproteins,Fibrinogen beta chain [Cleaved into: Fibrinopeptide B; Fibrinogen beta chain]
+A2M,Native_Tissue,Heart,Homo sapiens,Santinha_2024_Human,0.7689343006693377,-0.683977302555473,0.0849569981138647,ECM Regulators,Alpha-2-macroglobulin (Alpha-2-M) (C3 and PZP-like alpha-2-macroglobulin domain-containing protein 5)
+SERPINA3,Native_Tissue,Heart,Homo sapiens,Santinha_2024_Human,0.6273658534528908,0.1339212625956295,0.7612871160485203,ECM Regulators,Alpha-1-antichymotrypsin (ACT) (Cell growth-inhibiting gene 24/25 protein) (Serpin A3) [Cleaved into: Alpha-1-antichymotrypsin His-Pro-less]
+FGG,Native_Tissue,Heart,Homo sapiens,Santinha_2024_Human,0.55213664417412,1.068829304883024,1.620965949057144,ECM Glycoproteins,Fibrinogen gamma chain
+F10,Native_Tissue,Heart,Homo sapiens,Santinha_2024_Human,0.5860133182310887,-0.8809598975585301,-0.2949465793274414,ECM Regulators,Coagulation factor X (EC 3.4.21.6) (Stuart factor) (Stuart-Prower factor) [Cleaved into: Factor X light chain; Factor X heavy chain; Activated factor Xa heavy chain]
+F2,Native_Tissue,Heart,Homo sapiens,Santinha_2024_Human,0.5312870067890659,-0.3028980324554866,0.2283889743335793,ECM Regulators,Prothrombin (EC 3.4.21.5) (Coagulation factor II) [Cleaved into: Activation peptide fragment 1; Activation peptide fragment 2; Thrombin light chain; Thrombin heavy chain]
+FGA,Native_Tissue,Heart,Homo sapiens,Santinha_2024_Human,0.4907371115520871,-0.2723632624182303,0.2183738491338567,ECM Glycoproteins,Fibrinogen alpha chain [Cleaved into: Fibrinopeptide A; Fibrinogen alpha chain]
+F12,Native_Tissue,Heart,Homo sapiens,Santinha_2024_Human,0.1643719176165987,-0.9028982485048052,-0.7385263308882065,ECM Regulators,Coagulation factor XII (EC 3.4.21.38) (Hageman factor) (HAF) [Cleaved into: Coagulation factor XIIa heavy chain; Beta-factor XIIa part 1; Coagulation factor XIIa light chain (Beta-factor XIIa part 2)]
+SERPINF2,Native_Tissue,Heart,Homo sapiens,Santinha_2024_Human,-0.0001394121127209,1.0713457906234338,1.0712063785107129,ECM Regulators,Alpha-2-antiplasmin (Alpha-2-AP) (Alpha-2-plasmin inhibitor) (Alpha-2-PI) (Serpin F2)
+PLG,Native_Tissue,Heart,Homo sapiens,Santinha_2024_Human,-0.1936952123649446,0.0831737047803955,-0.110521507584549,ECM Regulators,"Plasminogen (EC 3.4.21.7) [Cleaved into: Plasmin heavy chain A; Activation peptide; Angiostatin; Plasmin heavy chain A, short form; Plasmin light chain B]"
+F13A1,Native_Tissue,Heart,Homo sapiens,Santinha_2024_Human,-0.3664448675169733,0.6954556480716382,0.3290107805546649,ECM Regulators,Coagulation factor XIII A chain (Coagulation factor XIIIa) (EC 2.3.2.13) (Protein-glutamine gamma-glutamyltransferase A chain) (Transglutaminase A chain)
+F9,Native_Tissue,Heart,Homo sapiens,Santinha_2024_Human,-0.3736457190927874,0.4166706378098289,0.0430249187170415,ECM Regulators,Coagulation factor IX (EC 3.4.21.22) (Christmas factor) (Plasma thromboplastin component) (PTC) [Cleaved into: Coagulation factor IXa light chain; Coagulation factor IXa heavy chain]
+THBS1,Native_Tissue,Heart,Homo sapiens,Santinha_2024_Human,-0.3625201192571007,-0.5496763458744043,-0.912196465131505,ECM Glycoproteins,Thrombospondin-1 (Glycoprotein G)
+VWF,Native_Tissue,Heart,Homo sapiens,Santinha_2024_Human,-0.6071110908193149,0.5782121368520836,-0.0288989539672312,ECM Glycoproteins,von Willebrand factor (vWF) [Cleaved into: von Willebrand antigen 2 (von Willebrand antigen II)]
+F13A1,Skin dermis,Skin dermis,Homo sapiens,LiDermis_2021,-1.1585126738020426,1.2847568980485635,0.1262442242465211,ECM Regulators,Coagulation factor XIII A chain
+F2,Skin dermis,Skin dermis,Homo sapiens,LiDermis_2021,-1.0411413062513342,0.0574979118560469,-0.9836433943952874,ECM Regulators,Prothrombin
+F10,Skin dermis,Skin dermis,Homo sapiens,LiDermis_2021,0.2597386241508963,-1.3376014075589566,-1.0778627834080603,ECM Regulators,Coagulation factor X
+PLG,Skin dermis,Skin dermis,Homo sapiens,LiDermis_2021,-0.2370964608840878,0.3722079083859959,0.135111447501908,ECM Regulators,Plasminogen {ECO:0000303|PubMed:2318848}
+SERPINC1,Skin dermis,Skin dermis,Homo sapiens,LiDermis_2021,-0.3818156854818711,0.4087196177264262,0.0269039322445551,ECM Regulators,Antithrombin-III
+SERPINA1,Skin dermis,Skin dermis,Homo sapiens,LiDermis_2021,-0.2961388359578816,1.5041475504452144,1.2080087144873328,ECM Regulators,Alpha-1-antitrypsin {ECO:0000305}
+SERPINA3,Skin dermis,Skin dermis,Homo sapiens,LiDermis_2021,0.1872741802030443,0.3211341098352908,0.5084082900383352,ECM Regulators,Alpha-1-antichymotrypsin
+A2M,Skin dermis,Skin dermis,Homo sapiens,LiDermis_2021,-0.4351895415972805,1.0938415835159514,0.6586520419186709,ECM Regulators,Alpha-2-macroglobulin
+FGA,Skin dermis,Skin dermis,Homo sapiens,LiDermis_2021,-0.5987056467640957,1.3526784136705583,0.7539727669064626,ECM Glycoproteins,Fibrinogen alpha chain
+FGB,Skin dermis,Skin dermis,Homo sapiens,LiDermis_2021,0.1262066609658161,1.6158952044745474,1.7421018654403635,ECM Glycoproteins,Fibrinogen beta chain
+FGG,Skin dermis,Skin dermis,Homo sapiens,LiDermis_2021,-0.1616484052814364,1.5625175072891706,1.4008691020077342,ECM Glycoproteins,Fibrinogen gamma chain
+HPX,Skin dermis,Skin dermis,Homo sapiens,LiDermis_2021,-0.4467961688780865,0.9046673505451992,0.4578711816671126,ECM-affiliated Proteins,Hemopexin
+VTN,Skin dermis,Skin dermis,Homo sapiens,LiDermis_2021,0.5977770670716107,0.6519246558914713,1.249701722963082,ECM Glycoproteins,Vitronectin
+VWF,Skin dermis,Skin dermis,Homo sapiens,LiDermis_2021,-0.4827861944284496,-0.2980240887586476,-0.7808102831870972,ECM Glycoproteins,von Willebrand factor
+SERPINF2,Skin dermis,Skin dermis,Homo sapiens,LiDermis_2021,-0.4293993144286291,0.0680487388536338,-0.3613505755749952,ECM Regulators,Alpha-2-antiplasmin
+THBS2,Skin dermis,Skin dermis,Homo sapiens,LiDermis_2021,-0.4905307434181514,-1.0912048854241247,-1.581735628842276,ECM Glycoproteins,Thrombospondin-2
+SERPINA1,Glomerular,,Homo sapiens,Randles_2021,-0.034454166045038,-0.9207551839812086,-0.9552093500262466,ECM Regulators,Alpha-1-antitrypsin OS=Homo sapiens GN=SERPINA1 PE=1 SV=1
+SERPINA1,Tubulointerstitial,,Homo sapiens,Randles_2021,0.1030654322931132,0.5665857392344206,0.6696511715275338,ECM Regulators,Alpha-1-antitrypsin OS=Homo sapiens GN=SERPINA1 PE=1 SV=1
+HP,Glomerular,,Homo sapiens,Randles_2021,-0.1188836939391959,1.6094325289892968,1.4905488350501008,,Haptoglobin OS=Homo sapiens GN=HP PE=1 SV=1
+HP,Tubulointerstitial,,Homo sapiens,Randles_2021,0.015039566958554,0.5277209749464845,0.5427605419050385,,Haptoglobin OS=Homo sapiens GN=HP PE=1 SV=1
+FGA,Glomerular,,Homo sapiens,Randles_2021,0.3065322066893199,-0.1804909394685772,0.1260412672207427,ECM Glycoproteins,Fibrinogen alpha chain OS=Homo sapiens GN=FGA PE=1 SV=1
+FGA,Tubulointerstitial,,Homo sapiens,Randles_2021,-0.2764570726700072,0.87004582364478,0.5935887509747728,ECM Glycoproteins,Fibrinogen alpha chain OS=Homo sapiens GN=FGA PE=1 SV=1
+TF,Glomerular,,Homo sapiens,Randles_2021,0.0285889660153164,1.077290661682529,1.1058796276978455,,Serotransferrin (Fragment) OS=Homo sapiens GN=TF PE=1 SV=6
+TF,Tubulointerstitial,,Homo sapiens,Randles_2021,0.2109252030245163,-0.9090964969298212,-0.698171293905305,,Serotransferrin (Fragment) OS=Homo sapiens GN=TF PE=1 SV=6
+F2,Glomerular,,Homo sapiens,Randles_2021,0.1423668649914931,-0.5990323953289274,-0.4566655303374342,ECM Regulators,Prothrombin OS=Homo sapiens GN=F2 PE=1 SV=1
+F2,Tubulointerstitial,,Homo sapiens,Randles_2021,-0.0498626485175967,0.5765179746118104,0.5266553260942137,ECM Regulators,Prothrombin OS=Homo sapiens GN=F2 PE=1 SV=1
+SERPINA3,Glomerular,,Homo sapiens,Randles_2021,0.2269824720027329,0.2021450451624075,0.4291275171651405,ECM Regulators,Alpha-1-antichymotrypsin OS=Homo sapiens GN=SERPINA3 PE=1 SV=1
+SERPINA3,Tubulointerstitial,,Homo sapiens,Randles_2021,-0.1423376875621788,0.1310892944850026,-0.0112483930771761,ECM Regulators,Alpha-1-antichymotrypsin OS=Homo sapiens GN=SERPINA3 PE=1 SV=1
+F13A1,Glomerular,,Homo sapiens,Randles_2021,-0.1634606965921707,0.914731645761636,0.7512709491694652,ECM Regulators,Coagulation factor XIII A chain OS=Homo sapiens GN=F13A1 PE=1 SV=4
+F13A1,Tubulointerstitial,,Homo sapiens,Randles_2021,0.1161552003303691,-0.568950847712952,-0.4527956473825829,ECM Regulators,Coagulation factor XIII A chain OS=Homo sapiens GN=F13A1 PE=1 SV=4
+F9,Glomerular,,Homo sapiens,Randles_2021,-0.3470323335568271,-0.4950957806665015,-0.8421281142233287,ECM Regulators,Coagulation factor IX OS=Homo sapiens GN=F9 PE=1 SV=2
+F9,Tubulointerstitial,,Homo sapiens,Randles_2021,0.0280335145463703,-0.2692987059727903,-0.2412651914264199,ECM Regulators,Coagulation factor IX OS=Homo sapiens GN=F9 PE=1 SV=2
+PLG,Glomerular,,Homo sapiens,Randles_2021,-0.1010911231709834,1.515998548803998,1.4149074256330143,ECM Regulators,Plasminogen OS=Homo sapiens GN=PLG PE=1 SV=2
+PLG,Tubulointerstitial,,Homo sapiens,Randles_2021,-0.1913602311477608,0.9472375893015776,0.7558773581538167,ECM Regulators,Plasminogen OS=Homo sapiens GN=PLG PE=1 SV=2
+SERPINC1,Glomerular,,Homo sapiens,Randles_2021,0.0787183043655028,-0.1010159482297903,-0.0222976438642874,ECM Regulators,Antithrombin-III OS=Homo sapiens GN=SERPINC1 PE=1 SV=1
+SERPINC1,Tubulointerstitial,,Homo sapiens,Randles_2021,-0.4233930393857361,-0.6297012120922054,-1.0530942514779416,ECM Regulators,Antithrombin-III OS=Homo sapiens GN=SERPINC1 PE=1 SV=1
+SERPINA1,Glomerular,,Homo sapiens,Randles_2021,-0.0242209288737644,1.4753746301223514,1.451153701248587,ECM Regulators,Alpha-1-antitrypsin OS=Homo sapiens GN=SERPINA1 PE=1 SV=3
+SERPINA1,Tubulointerstitial,,Homo sapiens,Randles_2021,-0.0252799882904629,-0.027046701783407,-0.05232669007387,ECM Regulators,Alpha-1-antitrypsin OS=Homo sapiens GN=SERPINA1 PE=1 SV=3
+SERPINA3,Glomerular,,Homo sapiens,Randles_2021,-0.811728070951061,-0.3397519913360174,-1.1514800622870784,ECM Regulators,Alpha-1-antichymotrypsin OS=Homo sapiens GN=SERPINA3 PE=1 SV=2
+SERPINA3,Tubulointerstitial,,Homo sapiens,Randles_2021,0.4610367819047883,0.8552300575414887,1.316266839446277,ECM Regulators,Alpha-1-antichymotrypsin OS=Homo sapiens GN=SERPINA3 PE=1 SV=2
+A2M,Glomerular,,Homo sapiens,Randles_2021,-0.1380746108989994,-1.5437111712029836,-1.681785782101983,ECM Regulators,Alpha-2-macroglobulin OS=Homo sapiens GN=A2M PE=1 SV=3
+A2M,Tubulointerstitial,,Homo sapiens,Randles_2021,0.0518506895811432,-0.0904800934373067,-0.0386294038561634,ECM Regulators,Alpha-2-macroglobulin OS=Homo sapiens GN=A2M PE=1 SV=3
+FGA,Glomerular,,Homo sapiens,Randles_2021,0.2613962486586265,-0.9325137260321028,-0.6711174773734763,ECM Glycoproteins,Fibrinogen alpha chain OS=Homo sapiens GN=FGA PE=1 SV=2
+FGA,Tubulointerstitial,,Homo sapiens,Randles_2021,0.2102240757011203,-0.9755630421607532,-0.7653389664596328,ECM Glycoproteins,Fibrinogen alpha chain OS=Homo sapiens GN=FGA PE=1 SV=2
+FGB,Glomerular,,Homo sapiens,Randles_2021,0.0576800282848828,-0.7778311249252319,-0.720151096640349,ECM Glycoproteins,Fibrinogen beta chain OS=Homo sapiens GN=FGB PE=1 SV=2
+FGB,Tubulointerstitial,,Homo sapiens,Randles_2021,0.2883359185917086,-0.2704479501469123,0.0178879684447962,ECM Glycoproteins,Fibrinogen beta chain OS=Homo sapiens GN=FGB PE=1 SV=2
+FGG,Glomerular,,Homo sapiens,Randles_2021,0.0408306808553275,1.0302902371072749,1.0711209179626024,ECM Glycoproteins,Fibrinogen gamma chain OS=Homo sapiens GN=FGG PE=1 SV=3
+FGG,Tubulointerstitial,,Homo sapiens,Randles_2021,-0.3016536039523329,-0.1250744096520396,-0.4267280136043725,ECM Glycoproteins,Fibrinogen gamma chain OS=Homo sapiens GN=FGG PE=1 SV=3
+ALB,Glomerular,,Homo sapiens,Randles_2021,0.4307445622822485,0.7283356926751501,1.1590802549573986,,Serum albumin OS=Homo sapiens GN=ALB PE=1 SV=2
+ALB,Tubulointerstitial,,Homo sapiens,Randles_2021,-0.1674154410610789,0.9941116796518166,0.8266962385907376,,Serum albumin OS=Homo sapiens GN=ALB PE=1 SV=2
+TF,Glomerular,,Homo sapiens,Randles_2021,-0.1761253378493897,0.2607489413815816,0.0846236035321919,,Serotransferrin OS=Homo sapiens GN=TF PE=1 SV=3
+TF,Tubulointerstitial,,Homo sapiens,Randles_2021,0.8337333856840359,-0.932576787226885,-0.0988434015428491,,Serotransferrin OS=Homo sapiens GN=TF PE=1 SV=3
+HPX,Glomerular,,Homo sapiens,Randles_2021,-0.1185419426774426,0.9717200089581436,0.853178066280701,ECM-affiliated Proteins,Hemopexin OS=Homo sapiens GN=HPX PE=1 SV=2
+HPX,Tubulointerstitial,,Homo sapiens,Randles_2021,0.38233128366972,-0.7666227241129033,-0.3842914404431833,ECM-affiliated Proteins,Hemopexin OS=Homo sapiens GN=HPX PE=1 SV=2
+VTN,Glomerular,,Homo sapiens,Randles_2021,0.4171460700207978,-1.3534551220109845,-0.9363090519901864,ECM Glycoproteins,Vitronectin OS=Homo sapiens GN=VTN PE=1 SV=1
+VTN,Tubulointerstitial,,Homo sapiens,Randles_2021,-0.4304180663457554,-0.7786683225298826,-1.209086388875638,ECM Glycoproteins,Vitronectin OS=Homo sapiens GN=VTN PE=1 SV=1
+VWF,Glomerular,,Homo sapiens,Randles_2021,-0.3136242217509848,1.468748163567837,1.1551239418168522,ECM Glycoproteins,von Willebrand factor OS=Homo sapiens GN=VWF PE=1 SV=4
+VWF,Tubulointerstitial,,Homo sapiens,Randles_2021,0.2466156966280969,0.1222292430556633,0.3688449396837602,ECM Glycoproteins,von Willebrand factor OS=Homo sapiens GN=VWF PE=1 SV=4
+SERPINF2,Glomerular,,Homo sapiens,Randles_2021,0.1880437592662553,0.8845375353907725,1.072581294657028,ECM Regulators,Alpha-2-antiplasmin OS=Homo sapiens GN=SERPINF2 PE=1 SV=3
+SERPINF2,Tubulointerstitial,,Homo sapiens,Randles_2021,-0.0589087164935024,0.6599702586316134,0.6010615421381109,ECM Regulators,Alpha-2-antiplasmin OS=Homo sapiens GN=SERPINF2 PE=1 SV=3
+A2M,Cortex,Ovary,Homo sapiens,Ouni_2022,0.3095212670882152,-0.9220694439760906,-0.6125481768878753,ECM Regulators,Alpha-2-macroglobulin
+F2,Cortex,Ovary,Homo sapiens,Ouni_2022,0.7132780720863754,0.0296218377267331,0.7428999098131086,ECM Regulators,Prothrombin
+FGA,Cortex,Ovary,Homo sapiens,Ouni_2022,0.062363402424954,0.2452788766640062,0.3076422790889602,ECM Glycoproteins,Fibrinogen alpha chain
+FGB,Cortex,Ovary,Homo sapiens,Ouni_2022,-0.0323990238442088,0.2623665694341992,0.2299675455899904,ECM Glycoproteins,Fibrinogen beta chain
+FGG,Cortex,Ovary,Homo sapiens,Ouni_2022,0.4215569238604847,-0.2922481569990843,0.1293087668614003,ECM Glycoproteins,Fibrinogen gamma chain
+HPX,Cortex,Ovary,Homo sapiens,Ouni_2022,0.6538258124963177,1.1122566269364187,1.7660824394327364,ECM-affiliated Proteins,Hemopexin
+PLG,Cortex,Ovary,Homo sapiens,Ouni_2022,0.2899869059713602,0.6934459072868517,0.983432813258212,ECM Regulators,Plasminogen
+SERPINA1,Cortex,Ovary,Homo sapiens,Ouni_2022,0.6869290041761544,0.921972222718523,1.6089012268946774,ECM Regulators,Alpha-1-antitrypsin
+SERPINA3,Cortex,Ovary,Homo sapiens,Ouni_2022,0.3182218810936921,-1.7873073564391742,-1.469085475345482,ECM Regulators,Alpha-1-antichymotrypsin
+SERPINC1,Cortex,Ovary,Homo sapiens,Ouni_2022,-0.981038801977502,1.2833821028968244,0.3023433009193224,ECM Regulators,Antithrombin-III
+SERPINF2,Cortex,Ovary,Homo sapiens,Ouni_2022,0.6400139731745711,-0.5135182441069295,0.1264957290676416,ECM Regulators,Alpha-2-antiplasmin
+THBS1,Cortex,Ovary,Homo sapiens,Ouni_2022,-0.6324459538944665,-0.4587547778228205,-1.091200731717287,ECM Glycoproteins,Thrombospondin-1
+VTN,Cortex,Ovary,Homo sapiens,Ouni_2022,1.766139652316271,-0.3055662011823981,1.4605734511338728,ECM Glycoproteins,Vitronectin
+Fga,Skeletal_muscle_Soleus,Skeletal muscle,Mus musculus,Schuler_2021,-0.2792922201128309,0.9645038618213156,0.6852116417084847,ECM Glycoproteins,
+Fga,Skeletal_muscle_Gastrocnemius,Skeletal muscle,Mus musculus,Schuler_2021,-0.2226011693739287,0.7831841300089202,0.5605829606349915,ECM Glycoproteins,
+Fga,Skeletal_muscle_TA,Skeletal muscle,Mus musculus,Schuler_2021,-0.2792284789537861,0.6018555497475745,0.3226270707937883,ECM Glycoproteins,
+Fga,Skeletal_muscle_EDL,Skeletal muscle,Mus musculus,Schuler_2021,-0.2295821622687378,0.3239680784846639,0.0943859162159261,ECM Glycoproteins,
+Fga,Cortex,Brain,Mus musculus,Tsumagari_2023,0.0280223781219943,-0.0482171703615259,-0.0201947922395316,ECM Glycoproteins,
+Fga,Hippocampus,Brain,Mus musculus,Tsumagari_2023,0.0653377052270332,-0.1671793936796502,-0.101841688452617,ECM Glycoproteins,
+Fga,Native_Tissue,Heart,Mus musculus,Santinha_2024_Mouse_NT,-0.2391337309548928,0.8735433675071533,0.6344096365522605,ECM Glycoproteins,Fibrinogen alpha chain [Cleaved into: Fibrinopeptide A; Fibrinogen alpha chain]
+Fga,Decellularized_Tissue,Heart,Mus musculus,Santinha_2024_Mouse_DT,0.210257316385376,1.0351467020944176,1.2454040184797937,ECM Glycoproteins,Fibrinogen alpha chain [Cleaved into: Fibrinopeptide A; Fibrinogen alpha chain]
+Fgb,Skeletal_muscle_Soleus,Skeletal muscle,Mus musculus,Schuler_2021,0.024304252273107,-0.2162908129082107,-0.1919865606351037,ECM Glycoproteins,
+Fgb,Skeletal_muscle_Gastrocnemius,Skeletal muscle,Mus musculus,Schuler_2021,-0.3476487212776254,-0.0699899960636802,-0.4176387173413056,ECM Glycoproteins,
+Fgb,Skeletal_muscle_TA,Skeletal muscle,Mus musculus,Schuler_2021,-0.1655066454429838,0.7568852600588549,0.591378614615871,ECM Glycoproteins,
+Fgb,Skeletal_muscle_EDL,Skeletal muscle,Mus musculus,Schuler_2021,-0.2955496131571641,0.965823696766709,0.6702740836095449,ECM Glycoproteins,
+Fgb,Cortex,Brain,Mus musculus,Tsumagari_2023,0.037884959423312,0.700910871410452,0.7387958308337641,ECM Glycoproteins,
+Fgb,Hippocampus,Brain,Mus musculus,Tsumagari_2023,0.05019369172459,0.5559526178250969,0.606146309549687,ECM Glycoproteins,
+Fgb,Native_Tissue,Heart,Mus musculus,Santinha_2024_Mouse_NT,-0.2872962133647567,0.4008286902928342,0.1135324769280774,ECM Glycoproteins,Fibrinogen beta chain [Cleaved into: Fibrinopeptide B; Fibrinogen beta chain]
+Fgb,Decellularized_Tissue,Heart,Mus musculus,Santinha_2024_Mouse_DT,0.6018526887242698,0.1134772029632718,0.7153298916875416,ECM Glycoproteins,Fibrinogen beta chain [Cleaved into: Fibrinopeptide B; Fibrinogen beta chain]
+Fgg,Skeletal_muscle_Soleus,Skeletal muscle,Mus musculus,Schuler_2021,-0.3012555883258836,2.2577779287992437,1.95652234047336,ECM Glycoproteins,
+Fgg,Skeletal_muscle_Gastrocnemius,Skeletal muscle,Mus musculus,Schuler_2021,-0.1928146551351846,1.504938037236665,1.3121233821014804,ECM Glycoproteins,
+Fgg,Skeletal_muscle_TA,Skeletal muscle,Mus musculus,Schuler_2021,-0.1502336917102884,0.9569053767854384,0.8066716850751501,ECM Glycoproteins,
+Fgg,Skeletal_muscle_EDL,Skeletal muscle,Mus musculus,Schuler_2021,-0.4057900502222858,0.9944376251287096,0.5886475749064236,ECM Glycoproteins,
+Fgg,Cortex,Brain,Mus musculus,Tsumagari_2023,0.5198338134230798,-1.04947066248636,-0.5296368490632803,ECM Glycoproteins,
+Fgg,Hippocampus,Brain,Mus musculus,Tsumagari_2023,0.3402183770333302,-0.9101848993994224,-0.5699665223660922,ECM Glycoproteins,
+Fgg,Native_Tissue,Heart,Mus musculus,Santinha_2024_Mouse_NT,-0.0810061670527579,0.66035917398033,0.579353006927572,ECM Glycoproteins,Fibrinogen gamma chain
+Fgg,Decellularized_Tissue,Heart,Mus musculus,Santinha_2024_Mouse_DT,0.2898518349531147,0.3246658361534477,0.6145176711065624,ECM Glycoproteins,Fibrinogen gamma chain
+F13a1,Skeletal_muscle_Soleus,Skeletal muscle,Mus musculus,Schuler_2021,-0.4516727601704593,0.6833541613912304,0.231681401220771,ECM Regulators,
+F13a1,Skeletal_muscle_Gastrocnemius,Skeletal muscle,Mus musculus,Schuler_2021,-0.1654537501264992,-0.2581029573867869,-0.4235567075132861,ECM Regulators,
+F13a1,Skeletal_muscle_TA,Skeletal muscle,Mus musculus,Schuler_2021,-0.2675162576014377,1.0290716489195326,0.7615553913180949,ECM Regulators,
+F13a1,Skeletal_muscle_EDL,Skeletal muscle,Mus musculus,Schuler_2021,-0.3138275490222679,0.8504061914814144,0.5365786424591464,ECM Regulators,
+F13a1,Cortex,Brain,Mus musculus,Tsumagari_2023,-0.0828471399146426,-1.6426125111928775,-1.7254596511075202,ECM Regulators,
+F13a1,Hippocampus,Brain,Mus musculus,Tsumagari_2023,0.0810664013611899,-1.6519986765996904,-1.5709322752385004,ECM Regulators,
+F13a1,Native_Tissue,Heart,Mus musculus,Santinha_2024_Mouse_NT,-0.0912414575437111,0.9765381199764998,0.8852966624327886,ECM Regulators,Coagulation factor XIII A chain (Coagulation factor XIIIa) (EC 2.3.2.13) (Protein-glutamine gamma-glutamyltransferase A chain) (Transglutaminase A chain)
+F13b,Skeletal_muscle_Soleus,Skeletal muscle,Mus musculus,Schuler_2021,-0.3837883925033059,-2.517009159514939,-2.9007975520182447,ECM Regulators,
+F13b,Skeletal_muscle_Gastrocnemius,Skeletal muscle,Mus musculus,Schuler_2021,0.1616772262326546,-1.7555623144370067,-1.593885088204352,ECM Regulators,
+F13b,Native_Tissue,Heart,Mus musculus,Santinha_2024_Mouse_NT,-0.1739886150031921,-1.9152294360157336,-2.0892180510189258,ECM Regulators,Coagulation factor XIII B chain (Protein-glutamine gamma-glutamyltransferase B chain) (Transglutaminase B chain)
+F13b,Decellularized_Tissue,Heart,Mus musculus,Santinha_2024_Mouse_DT,-0.1138135658999758,0.2599805224072897,0.1461669565073139,ECM Regulators,Coagulation factor XIII B chain (Protein-glutamine gamma-glutamyltransferase B chain) (Transglutaminase B chain)
+Plg,Skeletal_muscle_Soleus,Skeletal muscle,Mus musculus,Schuler_2021,-0.0425504645463176,0.724736483296812,0.6821860187504943,ECM Regulators,
+Plg,Skeletal_muscle_Gastrocnemius,Skeletal muscle,Mus musculus,Schuler_2021,0.1103477180432894,-0.0796077854525597,0.0307399325907296,ECM Regulators,
+Plg,Skeletal_muscle_TA,Skeletal muscle,Mus musculus,Schuler_2021,-0.0441471864951616,0.3734331982648687,0.329286011769707,ECM Regulators,
+Plg,Skeletal_muscle_EDL,Skeletal muscle,Mus musculus,Schuler_2021,0.0519780004269862,0.0951988177478797,0.147176818174866,ECM Regulators,
+Plg,Native_Tissue,Heart,Mus musculus,Santinha_2024_Mouse_NT,0.0970929292006361,0.5637517279863571,0.6608446571869933,ECM Regulators,"Plasminogen (EC 3.4.21.7) [Cleaved into: Plasmin heavy chain A; Activation peptide; Angiostatin; Plasmin heavy chain A, short form; Plasmin light chain B]"
+Plg,Decellularized_Tissue,Heart,Mus musculus,Santinha_2024_Mouse_DT,-0.0109586148786131,0.7393317061357962,0.7283730912571831,ECM Regulators,"Plasminogen (EC 3.4.21.7) [Cleaved into: Plasmin heavy chain A; Activation peptide; Angiostatin; Plasmin heavy chain A, short form; Plasmin light chain B]"
+Serpinf2,Skeletal_muscle_Soleus,Skeletal muscle,Mus musculus,Schuler_2021,-0.2271616382866768,1.194435180473435,0.9672735421867582,ECM Regulators,
+Serpinf2,Skeletal_muscle_Gastrocnemius,Skeletal muscle,Mus musculus,Schuler_2021,0.0107189082814264,0.8616752868723104,0.8723941951537368,ECM Regulators,
+Serpinf2,Skeletal_muscle_TA,Skeletal muscle,Mus musculus,Schuler_2021,0.8053488962580848,-1.1832541463188408,-0.3779052500607561,ECM Regulators,
+Serpinf2,Skeletal_muscle_EDL,Skeletal muscle,Mus musculus,Schuler_2021,0.1477216823451579,0.1367324923551861,0.284454174700344,ECM Regulators,
+Serpinf2,Native_Tissue,Heart,Mus musculus,Santinha_2024_Mouse_NT,0.0358809854418722,0.4956533755043144,0.5315343609461867,ECM Regulators,Alpha-2-antiplasmin (Alpha-2-AP) (Alpha-2-plasmin inhibitor) (Alpha-2-PI) (Serpin F2)
+Serpinf2,Decellularized_Tissue,Heart,Mus musculus,Santinha_2024_Mouse_DT,-0.1646746055098464,1.375182609928969,1.2105080044191223,ECM Regulators,Alpha-2-antiplasmin (Alpha-2-AP) (Alpha-2-plasmin inhibitor) (Alpha-2-PI) (Serpin F2)
+Vtn,Skeletal_muscle_Soleus,Skeletal muscle,Mus musculus,Schuler_2021,0.3522403979522197,-0.3195134844130967,0.0327269135391229,ECM Glycoproteins,
+Vtn,Skeletal_muscle_Gastrocnemius,Skeletal muscle,Mus musculus,Schuler_2021,0.1647881681594193,-0.922546761763377,-0.7577585936039577,ECM Glycoproteins,
+Vtn,Skeletal_muscle_TA,Skeletal muscle,Mus musculus,Schuler_2021,0.1792651666802897,-0.1512235167232384,0.0280416499570512,ECM Glycoproteins,
+Vtn,Skeletal_muscle_EDL,Skeletal muscle,Mus musculus,Schuler_2021,0.1470010147119753,-1.2098791982833927,-1.0628781835714174,ECM Glycoproteins,
+Vtn,Native_Tissue,Heart,Mus musculus,Santinha_2024_Mouse_NT,0.3043482936641918,-0.205220135654066,0.0991281580101258,ECM Glycoproteins,Vitronectin (VN) (S-protein) (Serum-spreading factor)
+Vtn,Decellularized_Tissue,Heart,Mus musculus,Santinha_2024_Mouse_DT,0.6530299995937485,-0.7727339407264912,-0.1197039411327426,ECM Glycoproteins,Vitronectin (VN) (S-protein) (Serum-spreading factor)
+Vwf,Cortex,Brain,Mus musculus,Tsumagari_2023,-0.0807611313289702,-1.65491206697203,-1.735673198301,ECM Glycoproteins,
+Vwf,Hippocampus,Brain,Mus musculus,Tsumagari_2023,-0.0777041625395296,-1.7014778279716805,-1.77918199051121,ECM Glycoproteins,
+Vwf,Native_Tissue,Heart,Mus musculus,Santinha_2024_Mouse_NT,-0.0248987346910374,-0.47314574071454,-0.4980444754055775,ECM Glycoproteins,von Willebrand factor (vWF) [Cleaved into: von Willebrand antigen 2 (von Willebrand antigen II)]
+Vwf,Decellularized_Tissue,Heart,Mus musculus,Santinha_2024_Mouse_DT,0.4483438434345435,-0.0416590439171723,0.4066847995173712,ECM Glycoproteins,von Willebrand factor (vWF) [Cleaved into: von Willebrand antigen 2 (von Willebrand antigen II)]
+Thbs1,Native_Tissue,Heart,Mus musculus,Santinha_2024_Mouse_NT,0.4230681941669189,-0.8773979990736985,-0.4543298049067796,ECM Glycoproteins,Thrombospondin-1 (Glycoprotein G)
+Thbs1,Decellularized_Tissue,Heart,Mus musculus,Santinha_2024_Mouse_DT,1.4209201161770966,-1.2330044902396815,0.1879156259374149,ECM Glycoproteins,Thrombospondin-1 (Glycoprotein G)
+Thbs2,Skeletal_muscle_Soleus,Skeletal muscle,Mus musculus,Schuler_2021,0.8575983456943836,-1.2093491432092962,-0.3517507975149126,ECM Glycoproteins,
+Serpinc1,Skeletal_muscle_Soleus,Skeletal muscle,Mus musculus,Schuler_2021,0.2585968720252535,0.2959255992199127,0.5545224712451662,ECM Regulators,
+Serpinc1,Skeletal_muscle_Gastrocnemius,Skeletal muscle,Mus musculus,Schuler_2021,0.3372206685058928,-0.178660314343323,0.1585603541625697,ECM Regulators,
+Serpinc1,Skeletal_muscle_TA,Skeletal muscle,Mus musculus,Schuler_2021,0.3579567834368494,-0.6236536169559579,-0.2656968335191085,ECM Regulators,
+Serpinc1,Skeletal_muscle_EDL,Skeletal muscle,Mus musculus,Schuler_2021,0.2483100152627415,-0.2566256326849173,-0.0083156174221757,ECM Regulators,
+Serpinc1,Cortex,Brain,Mus musculus,Tsumagari_2023,-0.0948163767852596,-0.1416755412436084,-0.2364919180288681,ECM Regulators,
+Serpinc1,Hippocampus,Brain,Mus musculus,Tsumagari_2023,0.0832920310251133,-0.1865787841968575,-0.1032867531717442,ECM Regulators,
+Serpinc1,Native_Tissue,Heart,Mus musculus,Santinha_2024_Mouse_NT,0.140641718562458,0.6369258911786125,0.7775676097410705,ECM Regulators,Antithrombin-III (ATIII) (Serpin C1)
+Serpinc1,Decellularized_Tissue,Heart,Mus musculus,Santinha_2024_Mouse_DT,-0.0057797944383047,0.2168500562607086,0.2110702618224038,ECM Regulators,Antithrombin-III (ATIII) (Serpin C1)
+Alb,Skeletal_muscle_Soleus,Skeletal muscle,Mus musculus,Schuler_2021,-0.3234994421572791,0.5736602162184412,0.2501607740611621,Non-ECM,
+Alb,Skeletal_muscle_Gastrocnemius,Skeletal muscle,Mus musculus,Schuler_2021,0.0342494188976992,0.5763390112600675,0.6105884301577668,Non-ECM,
+Alb,Skeletal_muscle_TA,Skeletal muscle,Mus musculus,Schuler_2021,0.3758321010165454,0.4832985965554035,0.8591306975719489,Non-ECM,
+Alb,Skeletal_muscle_EDL,Skeletal muscle,Mus musculus,Schuler_2021,0.0930681246686391,1.055340560867412,1.1484086855360511,Non-ECM,
+A2m,Cortex,Brain,Mus musculus,Tsumagari_2023,0.1462414154545734,-0.2725450631738661,-0.1263036477192926,ECM Regulators,
+A2m,Hippocampus,Brain,Mus musculus,Tsumagari_2023,0.0880577670937569,-0.1928417844809292,-0.1047840173871723,ECM Regulators,
+Hp,Skeletal_muscle_Soleus,Skeletal muscle,Mus musculus,Schuler_2021,1.560133339735402,-0.7367839156796285,0.8233494240557735,Non-ECM,
+Hp,Skeletal_muscle_Gastrocnemius,Skeletal muscle,Mus musculus,Schuler_2021,1.4205773618473794,-0.3498485381605103,1.070728823686869,Non-ECM,
+Hp,Skeletal_muscle_TA,Skeletal muscle,Mus musculus,Schuler_2021,2.010694841319192,-1.0291340580330584,0.9815607832861338,Non-ECM,
+Hp,Skeletal_muscle_EDL,Skeletal muscle,Mus musculus,Schuler_2021,2.1475601905932407,-1.9248446517288265,0.2227155388644144,Non-ECM,
+Hpx,Skeletal_muscle_Soleus,Skeletal muscle,Mus musculus,Schuler_2021,0.023143086304866,1.1935853928194615,1.2167284791243278,ECM-affiliated Proteins,
+Hpx,Skeletal_muscle_Gastrocnemius,Skeletal muscle,Mus musculus,Schuler_2021,0.1768415856388715,0.9486765437001156,1.125518129338987,ECM-affiliated Proteins,
+Hpx,Skeletal_muscle_TA,Skeletal muscle,Mus musculus,Schuler_2021,0.4720087349748593,-0.1128366372861695,0.3591720976886897,ECM-affiliated Proteins,
+Hpx,Skeletal_muscle_EDL,Skeletal muscle,Mus musculus,Schuler_2021,0.3231820689939467,-0.154991754703495,0.1681903142904517,ECM-affiliated Proteins,
+Hpx,Native_Tissue,Heart,Mus musculus,Santinha_2024_Mouse_NT,0.0574379016692012,0.6112015621245847,0.6686394637937859,ECM-affiliated Proteins,Hemopexin
+Hpx,Decellularized_Tissue,Heart,Mus musculus,Santinha_2024_Mouse_DT,0.2985453979677495,-0.3894742365720557,-0.0909288386043062,ECM-affiliated Proteins,Hemopexin
