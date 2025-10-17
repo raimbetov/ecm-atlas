@@ -639,7 +639,10 @@ class CategoryCrosstalkAnalyzer:
 
         # Add category table
         report += "\n**Category Statistics:**\n\n"
-        report += self.category_profiles.to_markdown(index=False)
+        report += "| Category | N_Proteins | Mean_Delta_Z | Median_Delta_Z | Pct_UP | Pct_DOWN | Directional_Bias | Classification |\n"
+        report += "|----------|------------|--------------|----------------|--------|----------|------------------|----------------|\n"
+        for _, row in self.category_profiles.iterrows():
+            report += f"| {row['Category']} | {row['N_Proteins']} | {row['Mean_Delta_Z']:.3f} | {row['Median_Delta_Z']:.3f} | {row['Pct_UP']:.1f} | {row['Pct_DOWN']:.1f} | {row['Directional_Bias']:.3f} | {row['Classification']} |\n"
 
         # Add correlation findings
         report += "\n\n### Cross-Category Correlations\n\n"
@@ -794,6 +797,22 @@ class CategoryCrosstalkAnalyzer:
 - **Proteins analyzed:** {len(self.universal)}
 - **Categories:** {len(self.category_profiles)}
 - **Significant correlations (p<0.05):** {np.sum(self.p_df.values < 0.05) // 2}
+- **Primary depletion categories:** {len(primary_down)}
+- **Primary accumulation categories:** {len(primary_up)}
+- **Mixed categories:** {len(mixed)}"""
+
+        # Add statistical summary with actual values
+        n_sig_corr = np.sum(self.p_df.values < 0.05) // 2
+
+        report += f"""
+
+---
+
+## Statistical Summary
+
+- **Proteins analyzed:** {len(self.universal)}
+- **Categories:** {len(self.category_profiles)}
+- **Significant correlations (p<0.05):** {n_sig_corr}
 - **Primary depletion categories:** {len(primary_down)}
 - **Primary accumulation categories:** {len(primary_up)}
 - **Mixed categories:** {len(mixed)}

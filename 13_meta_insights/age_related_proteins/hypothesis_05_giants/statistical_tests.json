@@ -1,0 +1,17 @@
+{
+  "Effect_Size_Test": {
+    "t_statistic": 22.63670594007893,
+    "p_value": 1.2940026419755194e-105,
+    "significant": true
+  },
+  "Consistency_Test": {
+    "t_statistic": 2.152117653744059,
+    "p_value": 0.031460078974883204,
+    "significant": true
+  },
+  "Universality_Test": {
+    "t_statistic": -2.1096166311042417,
+    "p_value": 0.034966160352773494,
+    "significant": true
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "total_proteins": 3317,
+  "n_giants": 5,
+  "n_non_giants": 3312,
+  "giants_percentage": 0.1507386192342478,
+  "giants_mean_effect_size": 2.452982546472827,
+  "non_giants_mean_effect_size": 0.2755417642539857,
+  "effect_size_ratio": 8.90239834645083,
+  "giants_mean_tissues": 1.0,
+  "non_giants_mean_tissues": 2.5766908212560384
+}

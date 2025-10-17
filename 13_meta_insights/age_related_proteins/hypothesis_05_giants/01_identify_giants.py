@@ -228,9 +228,9 @@ def statistical_analysis(df, giants, non_giants):
         non_giants['Abs_Mean_Zscore_Delta']
     )
     results['Effect_Size_Test'] = {
-        't_statistic': t_stat,
-        'p_value': p_value,
-        'significant': p_value < 0.001
+        't_statistic': float(t_stat),
+        'p_value': float(p_value),
+        'significant': bool(p_value < 0.001)
     }
     print(f"\n1️⃣ Effect Size Comparison (Giants vs Non-Giants):")
     print(f"   T-statistic: {t_stat:.4f}")
@@ -243,9 +243,9 @@ def statistical_analysis(df, giants, non_giants):
         non_giants['Direction_Consistency']
     )
     results['Consistency_Test'] = {
-        't_statistic': t_stat,
-        'p_value': p_value,
-        'significant': p_value < 0.05
+        't_statistic': float(t_stat),
+        'p_value': float(p_value),
+        'significant': bool(p_value < 0.05)
     }
     print(f"\n2️⃣ Consistency Comparison:")
     print(f"   T-statistic: {t_stat:.4f}")
@@ -258,9 +258,9 @@ def statistical_analysis(df, giants, non_giants):
         non_giants['N_Tissues']
     )
     results['Universality_Test'] = {
-        't_statistic': t_stat,
-        'p_value': p_value,
-        'significant': p_value < 0.05
+        't_statistic': float(t_stat),
+        'p_value': float(p_value),
+        'significant': bool(p_value < 0.05)
     }
     print(f"\n3️⃣ Universality Comparison (N_Tissues):")
     print(f"   T-statistic: {t_stat:.4f}")

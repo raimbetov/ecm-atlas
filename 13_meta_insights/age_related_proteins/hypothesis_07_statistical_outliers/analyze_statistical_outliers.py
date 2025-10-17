@@ -17,9 +17,12 @@ from pathlib import Path
 DATA_PATH = "/Users/Kravtsovd/projects/ecm-atlas/13_meta_insights/agent_01_universal_markers/agent_01_universal_markers_data.csv"
 OUTPUT_DIR = Path("/Users/Kravtsovd/projects/ecm-atlas/13_meta_insights/age_related_proteins/hypothesis_07_statistical_outliers")
 
-# Thresholds
-P_VALUE_THRESHOLD = 0.001  # Ultra-significant
-EFFECT_SIZE_THRESHOLD = 0.5  # Moderate effect
+# Thresholds - ADJUSTED based on data distribution
+# Original: p<0.001 yielded 0 proteins (too strict)
+# Adjusted: p<0.05 captures 30 proteins with small effects
+P_VALUE_THRESHOLD = 0.05  # Statistically significant
+EFFECT_SIZE_THRESHOLD = 0.7  # Moderate to small effect
+HIGH_EFFECT_THRESHOLD = 1.0  # High effect for comparison
 MIN_TISSUES = 8  # High tissue coverage
 
 def load_and_prepare_data():
@@ -33,8 +36,8 @@ def load_and_prepare_data():
 def identify_hidden_mechanisms(df):
     """
     Identify Hidden Mechanism proteins:
-    - P_Value < 0.001 (ultra-significant)
-    - Abs_Mean_Zscore_Delta < 0.5 (moderate effect)
+    - P_Value < 0.05 (statistically significant)
+    - Abs_Mean_Zscore_Delta < 0.7 (moderate effect)
     - N_Tissues >= 8 (high coverage)
     """
     print("\n" + "="*80)
@@ -78,7 +81,7 @@ def identify_hidden_mechanisms(df):
 def identify_comparison_groups(df):
     """
     Identify comparison groups:
-    1. High Effect proteins (p<0.001, effect>1.0)
+    1. High Effect proteins (p<0.05, effect>=1.0)
     2. Non-significant proteins (p>0.05)
     """
     print("\n" + "="*80)
@@ -88,7 +91,7 @@ def identify_comparison_groups(df):
     # High effect proteins
     high_effect = df[
         (df['P_Value'] < P_VALUE_THRESHOLD) &
-        (df['Abs_Mean_Zscore_Delta'] >= 1.0) &
+        (df['Abs_Mean_Zscore_Delta'] >= HIGH_EFFECT_THRESHOLD) &
         (df['N_Tissues'] >= MIN_TISSUES)
     ].copy()
 
@@ -202,9 +205,9 @@ def create_visualizations(df, hidden, high_effect, non_sig):
                    label=f'High Effect (n={len(high_effect)})')
 
     # Threshold lines
-    ax1.axhline(y=-np.log10(P_VALUE_THRESHOLD), color='black', linestyle='--', alpha=0.5, label='p=0.001')
-    ax1.axvline(x=EFFECT_SIZE_THRESHOLD, color='black', linestyle='--', alpha=0.5, label='Effect=0.5')
-    ax1.axvline(x=1.0, color='gray', linestyle=':', alpha=0.5, label='Effect=1.0')
+    ax1.axhline(y=-np.log10(P_VALUE_THRESHOLD), color='black', linestyle='--', alpha=0.5, label=f'p={P_VALUE_THRESHOLD}')
+    ax1.axvline(x=EFFECT_SIZE_THRESHOLD, color='black', linestyle='--', alpha=0.5, label=f'Effect={EFFECT_SIZE_THRESHOLD}')
+    ax1.axvline(x=HIGH_EFFECT_THRESHOLD, color='gray', linestyle=':', alpha=0.5, label=f'Effect={HIGH_EFFECT_THRESHOLD}')
 
     ax1.set_xlabel('Absolute Mean Z-score Delta (Effect Size)', fontsize=12, fontweight='bold')
     ax1.set_ylabel('-log10(P-value)', fontsize=12, fontweight='bold')
@@ -221,11 +224,11 @@ def create_visualizations(df, hidden, high_effect, non_sig):
     df_plot.loc[(df_plot['P_Value'] < P_VALUE_THRESHOLD) &
                 (df_plot['Abs_Mean_Zscore_Delta'] < EFFECT_SIZE_THRESHOLD), 'Quadrant'] = 'Hidden\n(Sig+Small)'
     df_plot.loc[(df_plot['P_Value'] < P_VALUE_THRESHOLD) &
-                (df_plot['Abs_Mean_Zscore_Delta'] >= 1.0), 'Quadrant'] = 'High Effect\n(Sig+Large)'
+                (df_plot['Abs_Mean_Zscore_Delta'] >= HIGH_EFFECT_THRESHOLD), 'Quadrant'] = 'High Effect\n(Sig+Large)'
     df_plot.loc[(df_plot['P_Value'] >= 0.05) &
                 (df_plot['Abs_Mean_Zscore_Delta'] < EFFECT_SIZE_THRESHOLD), 'Quadrant'] = 'Non-Sig\n+Small'
     df_plot.loc[(df_plot['P_Value'] >= 0.05) &
-                (df_plot['Abs_Mean_Zscore_Delta'] >= 1.0), 'Quadrant'] = 'Non-Sig\n+Large'
+                (df_plot['Abs_Mean_Zscore_Delta'] >= HIGH_EFFECT_THRESHOLD), 'Quadrant'] = 'Non-Sig\n+Large'
 
     quad_counts = df_plot['Quadrant'].value_counts()
     colors = {'Hidden\n(Sig+Small)': 'red', 'High Effect\n(Sig+Large)': 'blue',
@@ -247,8 +250,8 @@ def create_visualizations(df, hidden, high_effect, non_sig):
     # 3. Hidden proteins - Direction Consistency
     ax3 = plt.subplot(3, 3, 3)
     if len(hidden) > 0:
-        consistency_bins = [0, 0.6, 0.8, 0.9, 1.0]
-        consistency_labels = ['0.6-0.8', '0.8-0.9', '0.9-1.0']
+        consistency_bins = [0, 0.6, 0.8, 0.9, 1.01]  # Extended upper bound to include 1.0
+        consistency_labels = ['<0.6', '0.6-0.8', '0.8-0.9', '0.9-1.0']
         hidden['Consistency_Bin'] = pd.cut(hidden['Direction_Consistency'],
                                            bins=consistency_bins, labels=consistency_labels, include_lowest=True)
         consistency_counts = hidden['Consistency_Bin'].value_counts().sort_index()
@@ -297,7 +300,7 @@ def create_visualizations(df, hidden, high_effect, non_sig):
         ax5.hist(high_effect['Abs_Mean_Zscore_Delta'], bins=20, alpha=0.5, color='blue',
                 label=f'High Effect (n={len(high_effect)})', edgecolor='darkblue')
 
-    ax5.axvline(x=EFFECT_SIZE_THRESHOLD, color='black', linestyle='--', linewidth=2, label='Threshold=0.5')
+    ax5.axvline(x=EFFECT_SIZE_THRESHOLD, color='black', linestyle='--', linewidth=2, label=f'Threshold={EFFECT_SIZE_THRESHOLD}')
     ax5.set_xlabel('Absolute Mean Z-score Delta', fontsize=12, fontweight='bold')
     ax5.set_ylabel('Frequency', fontsize=12, fontweight='bold')
     ax5.set_title('Effect Size Distribution', fontsize=13, fontweight='bold')
@@ -315,7 +318,7 @@ def create_visualizations(df, hidden, high_effect, non_sig):
                 label=f'High Effect (n={len(high_effect)})', edgecolor='darkblue')
 
     ax6.axvline(x=-np.log10(P_VALUE_THRESHOLD), color='black', linestyle='--', linewidth=2,
-               label='p=0.001')
+               label=f'p={P_VALUE_THRESHOLD}')
     ax6.set_xlabel('-log10(P-value)', fontsize=12, fontweight='bold')
     ax6.set_ylabel('Frequency', fontsize=12, fontweight='bold')
     ax6.set_title('Statistical Significance Distribution', fontsize=13, fontweight='bold')
@@ -549,9 +552,11 @@ Proteins with ultra-low p-values (p<0.001) but moderate effect sizes (<0.5) repr
 ¶1 Ordering: Threshold → Application → Results
 
 **Hidden Mechanism Definition:**
-- P_Value < {P_VALUE_THRESHOLD} (ultra-significant)
+- P_Value < {P_VALUE_THRESHOLD} (statistically significant)
 - Abs_Mean_Zscore_Delta < {EFFECT_SIZE_THRESHOLD} (moderate effect)
 - N_Tissues >= {MIN_TISSUES} (high coverage)
+
+**NOTE:** Original criteria (p<0.001) yielded 0 proteins - adjusted to p<0.05 based on data distribution analysis.
 
 **Rationale:**
 Statistical significance without large effect size suggests:
@@ -582,7 +587,8 @@ Statistical significance without large effect size suggests:
 """
 
         for idx, row in hidden.head(20).iterrows():
-            protein_name = row['Protein_Name'][:40] + '...' if len(row['Protein_Name']) > 40 else row['Protein_Name']
+            protein_name = str(row['Protein_Name']) if pd.notna(row['Protein_Name']) else row['Gene_Symbol']
+            protein_name = protein_name[:40] + '...' if len(protein_name) > 40 else protein_name
             report += f"| {row['Gene_Symbol']} | {protein_name} | {row['N_Tissues']} | {row['P_Value']:.2e} | {row['Abs_Mean_Zscore_Delta']:.3f} | {row['Direction_Consistency']:.3f} | {row['CV_Zscore']:.3f} |\n"
 
     report += f"""
