@@ -333,3 +333,33 @@ graph LR
 **Analysis:** Agent 19 - Species Conservation Analyzer
 **Dataset:** merged_ecm_aging_zscore.csv (9,343 records, 3 species)
 **Contact:** daniel@improvado.io
+
+
+---
+
+## Visualizations
+
+### Figure 1: Direction Agreement
+
+![Direction Agreement](direction_agreement.png)
+
+**Direction Agreement** - Generated visualization showing direction agreement analysis results.
+
+---
+
+### Figure 2: Human Vs Mouse Scatter
+
+![Human Vs Mouse Scatter](human_vs_mouse_scatter.png)
+
+**Human Vs Mouse Scatter** - Generated visualization showing human vs mouse scatter analysis results.
+
+---
+
+### Figure 3: Species Distribution Venn
+
+![Species Distribution Venn](species_distribution_venn.png)
+
+**Species Distribution Venn** - Generated visualization showing species distribution venn analysis results.
+
+---
+

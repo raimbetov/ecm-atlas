@@ -503,3 +503,17 @@ FRZB loss emerges as disc-specific master dysregulation in ECM aging, exhibiting
 **Dataset:** `/08_merged_ecm_dataset/merged_ecm_aging_zscore.csv` (9,343 records, 1,167 proteins)
 **Code:** `/scripts/agent_14_frzb_wnt_analysis.py`
 **Outputs:** `/10_insights/agent_14_*` (4 CSV files + 1 PNG visualization)
+
+
+---
+
+## Visualizations
+
+### Figure 1: Agent 14 Frzb Wnt Visualizations
+
+![Agent 14 Frzb Wnt Visualizations](agent_14_frzb_wnt_visualizations.png)
+
+**Agent 14 Frzb Wnt Visualizations** - Generated visualization showing agent 14 frzb wnt visualizations analysis results.
+
+---
+

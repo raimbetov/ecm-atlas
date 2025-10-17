@@ -104,6 +104,19 @@ graph LR
 - **Collagens:** 23 proteins
 - **Proteoglycans:** 14 proteins
 
+**Visual: Category Direction Distribution**
+
+![Category Direction Barplot](barplot_category_direction.png)
+
+**Figure 1:** Distribution of aging directions (up/down) across matrisome categories for 405 universal candidates. Non-ECM proteins show balanced up/down regulation (143 total). ECM Glycoproteins (80) predominantly upregulate. Collagens (23) show stronger downregulation trend. ECM Regulators (75) split evenly. Proteoglycans (14) and Secreted Factors (33) show category-specific patterns. Bar heights represent protein counts, colors indicate direction (red=up, blue=down).
+
+---
+
+**Visual: Tissue Consistency Landscape**
+
+![Tissue Consistency Scatter](scatter_tissue_consistency.png)
+
+**Figure 2:** Scatter plot of 3,317 proteins showing relationship between tissue breadth (N tissues detected, x-axis) and directional consistency (% same direction, y-axis). Color intensity represents effect size (mean |Δz|). Top-right quadrant (≥3 tissues, ≥70% consistency) contains 405 universal candidates highlighted. Diagonal trend shows proteins detected in more tissues tend toward higher consistency. Rare outliers with perfect consistency (100%) but few tissues (2-4) represent "dark horse" candidates. Bubble size scaled by universality score.
 
 ---
 
@@ -111,6 +124,13 @@ graph LR
 
 ¶1 **Ordering principle:** Ranked by universality score (highest first), showing tissue-by-tissue breakdown of aging changes.
 
+**Visual: Top 20 Universal Markers Heatmap**
+
+![Top 20 Universal Markers Heatmap](heatmap_top20_universal_markers.png)
+
+**Figure 3:** Heatmap showing z-score changes (Δz) for top 20 universal aging markers across 17 tissue compartments. Rows = proteins ranked by universality score (Hp, VTN, Col14a1 at top). Columns = tissues grouped by organ system. Red = upregulation with age, blue = downregulation. White/gray = not detected. Key patterns: (1) Hp shows strong upregulation (red) across all 4 skeletal muscles. (2) VTN upregulates in 8/10 tissues (disc, heart, skin). (3) Col14a1 universally downregulates (blue) in heart + all muscles. (4) F2, FGB show disc-specific massive upregulation. Hierarchical clustering reveals tissue-specific vs truly universal patterns.
+
+---
 
 ### 3.1 Hp - nan
 

@@ -569,3 +569,17 @@ Higher score = more aggressive fibrotic remodeling
 **Agent**: AGENT 16 - TGF-β Fibrosis Pathway Dissector
 **Dataset**: merged_ecm_aging_zscore.csv (9,343 rows, 1,167 proteins, 18 tissues)
 **Status**: Complete - Mechanistic map validated, drug targets prioritized, clinical translation roadmap delivered
+
+
+---
+
+## Visualizations
+
+### Figure 1: Agent 16 Tgfb Pathway Analysis
+
+![Agent 16 Tgfb Pathway Analysis](agent_16_tgfb_pathway_analysis.png)
+
+**Agent 16 Tgfb Pathway Analysis** - Generated visualization showing agent 16 tgfb pathway analysis analysis results.
+
+---
+

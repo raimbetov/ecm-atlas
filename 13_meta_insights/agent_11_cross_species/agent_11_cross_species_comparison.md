@@ -408,3 +408,89 @@ Species-specific: 1,071 (99.3%)
 - No adjustment for tissue type differences
 - No phylogenetic distance correction
 - Assumes linear aging trajectories
+
+
+---
+
+## Visualizations
+
+### Figure 1: Agent 11 Fig1 Human Mouse Correlation
+
+![Agent 11 Fig1 Human Mouse Correlation](agent_11_fig1_human_mouse_correlation.png)
+
+**Agent 11 Fig1 Human Mouse Correlation** - Generated visualization showing agent 11 fig1 human mouse correlation analysis results.
+
+---
+
+### Figure 2: Agent 11 Fig2 Species Venn
+
+![Agent 11 Fig2 Species Venn](agent_11_fig2_species_venn.png)
+
+**Agent 11 Fig2 Species Venn** - Generated visualization showing agent 11 fig2 species venn analysis results.
+
+---
+
+### Figure 3: Agent 11 Fig3 Lifespan Correlation
+
+![Agent 11 Fig3 Lifespan Correlation](agent_11_fig3_lifespan_correlation.png)
+
+**Agent 11 Fig3 Lifespan Correlation** - Generated visualization showing agent 11 fig3 lifespan correlation analysis results.
+
+---
+
+### Figure 4: Agent 11 Fig4 Conservation Heatmap
+
+![Agent 11 Fig4 Conservation Heatmap](agent_11_fig4_conservation_heatmap.png)
+
+**Agent 11 Fig4 Conservation Heatmap** - Generated visualization showing agent 11 fig4 conservation heatmap analysis results.
+
+---
+
+### Figure 5: Fig1 Bm Protein Ranking
+
+![Fig1 Bm Protein Ranking](fig1_bm_protein_ranking.png)
+
+**Fig1 Bm Protein Ranking** - Generated visualization showing fig1 bm protein ranking analysis results.
+
+---
+
+### Figure 6: Fig2 Bm Tissue Heatmap
+
+![Fig2 Bm Tissue Heatmap](fig2_bm_tissue_heatmap.png)
+
+**Fig2 Bm Tissue Heatmap** - Generated visualization showing fig2 bm tissue heatmap analysis results.
+
+---
+
+### Figure 7: Fig3 Col4A3 Analysis
+
+![Fig3 Col4A3 Analysis](fig3_col4a3_analysis.png)
+
+**Fig3 Col4A3 Analysis** - Generated visualization showing fig3 col4a3 analysis analysis results.
+
+---
+
+### Figure 8: Fig4 Breach Correlation
+
+![Fig4 Breach Correlation](fig4_breach_correlation.png)
+
+**Fig4 Breach Correlation** - Generated visualization showing fig4 breach correlation analysis results.
+
+---
+
+### Figure 9: Fig5 Therapeutic Targets
+
+![Fig5 Therapeutic Targets](fig5_therapeutic_targets.png)
+
+**Fig5 Therapeutic Targets** - Generated visualization showing fig5 therapeutic targets analysis results.
+
+---
+
+### Figure 10: Fig6 Family Comparison
+
+![Fig6 Family Comparison](fig6_family_comparison.png)
+
+**Fig6 Family Comparison** - Generated visualization showing fig6 family comparison analysis results.
+
+---
+

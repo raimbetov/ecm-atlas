@@ -122,7 +122,4 @@ node_modules/
 
 # Screenshots from dashboard validation
 **/01_screenshots/
-*.png
-*.jpg
-*.jpeg
 08_merged_ecm_dataset/backups/

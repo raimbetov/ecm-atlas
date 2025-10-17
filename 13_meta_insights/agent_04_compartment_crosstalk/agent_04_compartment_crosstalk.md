@@ -409,3 +409,57 @@ Negative correlations between compartments suggest:
 **Generated:** 2025-10-15 22:58:02
 **Dataset:** merged_ecm_aging_zscore.csv (9,343 measurements)
 **Analysis:** Compartment Cross-talk Analyzer (Agent 04)
+
+
+---
+
+## Visualizations
+
+### Figure 1: Brain Heatmap
+
+![Brain Heatmap](Brain_heatmap.png)
+
+**Brain Heatmap** - Generated visualization showing brain heatmap analysis results.
+
+---
+
+### Figure 2: Heart Heatmap
+
+![Heart Heatmap](Heart_heatmap.png)
+
+**Heart Heatmap** - Generated visualization showing heart heatmap analysis results.
+
+---
+
+### Figure 3: Intervertebral Disc Heatmap
+
+![Intervertebral Disc Heatmap](Intervertebral_disc_heatmap.png)
+
+**Intervertebral Disc Heatmap** - Generated visualization showing intervertebral disc heatmap analysis results.
+
+---
+
+### Figure 4: Skeletal Muscle Heatmap
+
+![Skeletal Muscle Heatmap](Skeletal_muscle_heatmap.png)
+
+**Skeletal Muscle Heatmap** - Generated visualization showing skeletal muscle heatmap analysis results.
+
+---
+
+### Figure 5: Compartment Crosstalk Summary
+
+![Compartment Crosstalk Summary](compartment_crosstalk_summary.png)
+
+**Compartment Crosstalk Summary** - Generated visualization showing compartment crosstalk summary analysis results.
+
+---
+
+### Figure 6: Compartment Network
+
+![Compartment Network](compartment_network.png)
+
+**Compartment Network** - Generated visualization showing compartment network analysis results.
+
+---
+

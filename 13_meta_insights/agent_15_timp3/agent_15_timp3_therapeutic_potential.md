@@ -278,3 +278,17 @@ TIMP3 demonstrates robust age-associated upregulation (+0.94 z-score, 8.5× > ot
 - `agent_15_ecm_protection_analysis.csv` (7 tissue health metrics)
 - `agent_15_timp_family_comparison.csv` (TIMP1/2/3/4 stats)
 - `agent_15_longevity_correlations.csv` (34 IGF-pathway pairs)
+
+
+---
+
+## Visualizations
+
+### Figure 1: Agent 15 Timp3 Therapeutic Analysis
+
+![Agent 15 Timp3 Therapeutic Analysis](agent_15_timp3_therapeutic_analysis.png)
+
+**Agent 15 Timp3 Therapeutic Analysis** - Generated visualization showing agent 15 timp3 therapeutic analysis analysis results.
+
+---
+

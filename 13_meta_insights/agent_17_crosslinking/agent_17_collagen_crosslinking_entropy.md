@@ -222,3 +222,33 @@ graph LR
 **Analyst:** Agent 17 (Autonomous ECM Analysis Pipeline)
 **Dataset:** merged_ecm_aging_zscore.csv (12 studies, 18 tissues, 1,167 proteins)
 **Code:** `/scripts/agent_17_collagen_crosslinking_entropy.py`
+
+
+---
+
+## Visualizations
+
+### Figure 1: Agent 17 Correlations
+
+![Agent 17 Correlations](agent_17_correlations.png)
+
+**Agent 17 Correlations** - Generated visualization showing agent 17 correlations analysis results.
+
+---
+
+### Figure 2: Agent 17 Crosslinking Index
+
+![Agent 17 Crosslinking Index](agent_17_crosslinking_index.png)
+
+**Agent 17 Crosslinking Index** - Generated visualization showing agent 17 crosslinking index analysis results.
+
+---
+
+### Figure 3: Agent 17 Enzyme Trajectories
+
+![Agent 17 Enzyme Trajectories](agent_17_enzyme_trajectories.png)
+
+**Agent 17 Enzyme Trajectories** - Generated visualization showing agent 17 enzyme trajectories analysis results.
+
+---
+

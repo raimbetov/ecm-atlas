@@ -338,3 +338,49 @@ Proteins classified into 4 intervention strategies based on temporal pattern:
 **Dataset:** `/Users/Kravtsovd/projects/ecm-atlas/08_merged_ecm_dataset/merged_ecm_aging_zscore.csv`
 **Entries Analyzed:** 8,948 valid z-scores (12 studies, 936 proteins)
 **Contact:** daniel@improvado.io
+
+
+---
+
+## Visualizations
+
+### Figure 1: Agent 12 Correlation Matrix
+
+![Agent 12 Correlation Matrix](agent_12_correlation_matrix.png)
+
+**Agent 12 Correlation Matrix** - Generated visualization showing agent 12 correlation matrix analysis results.
+
+---
+
+### Figure 2: Agent 12 Ha Metabolism
+
+![Agent 12 Ha Metabolism](agent_12_ha_metabolism.png)
+
+**Agent 12 Ha Metabolism** - Generated visualization showing agent 12 ha metabolism analysis results.
+
+---
+
+### Figure 3: Agent 12 Temporal Cascade
+
+![Agent 12 Temporal Cascade](agent_12_temporal_cascade.png)
+
+**Agent 12 Temporal Cascade** - Generated visualization showing agent 12 temporal cascade analysis results.
+
+---
+
+### Figure 4: Agent 12 Temporal Dynamics Visualizations
+
+![Agent 12 Temporal Dynamics Visualizations](agent_12_temporal_dynamics_visualizations.png)
+
+**Agent 12 Temporal Dynamics Visualizations** - Generated visualization showing agent 12 temporal dynamics visualizations analysis results.
+
+---
+
+### Figure 5: Agent 12 Tissue Protein Heatmap
+
+![Agent 12 Tissue Protein Heatmap](agent_12_tissue_protein_heatmap.png)
+
+**Agent 12 Tissue Protein Heatmap** - Generated visualization showing agent 12 tissue protein heatmap analysis results.
+
+---
+
