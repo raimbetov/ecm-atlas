@@ -313,6 +313,20 @@ Cluster 4: ███████████████████████
            "Baseline ECM"
 ```
 
+**Visual: Entropy Distributions Across All Proteins**
+
+![Entropy Distributions](entropy_distributions.png)
+
+**Figure 1:** Distribution of four entropy metrics across 532 ECM proteins. Shannon entropy (H) shows bimodal distribution with peaks at 1.5 and 2.5 bits. CV distribution is right-skewed (most proteins stable, some highly variable). Predictability clusters around 0.75 (most proteins have consistent aging direction). Entropy transition shows exponential decay (most proteins stable, rare high-transition outliers).
+
+---
+
+**Visual: Hierarchical Clustering Dendrogram**
+
+![Entropy Dendrogram](entropy_dendrogram.png)
+
+**Figure 2:** Ward linkage hierarchical clustering dendrogram of 532 proteins based on 4 entropy metrics. Four distinct clusters identified (colored branches). Cluster 3 (red, entropy switchers) shows highest within-cluster similarity. Cluster 4 (purple, baseline) is largest and most heterogeneous. Clear separation between regulated responders (Cluster 2, green) and tissue-specific architects (Cluster 1, blue).
+
 ---
 
 ### 2.2 Cluster 1: Tissue-Specific Architects (n=153, 29%)
@@ -582,6 +596,20 @@ Legend:
 - **Bottom-left:** Low entropy, low predictability → Tissue-specific, context-dependent
 - **Bottom-right:** Moderate, moderate → Baseline aging
 
+**Visual: Entropy-Predictability Space**
+
+![Entropy Predictability Space](entropy_predictability_space.png)
+
+**Figure 3:** Scatter plot of 532 proteins in entropy-predictability space. X-axis: Shannon H (0-4 bits). Y-axis: Predictability score (0-1). Colors represent four clusters. Cluster 2 (green) occupies top-left quadrant (high P, moderate H) - regulated responders with perfect aging consistency. Cluster 3 (red) shows high entropy transition values (bubble size) - entropy switchers losing control. Cluster 1 (blue) at low H, variable P - tissue-specific. Cluster 4 (purple) fills center - baseline.
+
+---
+
+**Visual: Entropy Cluster Profiles**
+
+![Entropy Clusters Profiles](entropy_clusters_profiles.png)
+
+**Figure 4:** Radar plots showing mean values of four entropy metrics for each cluster (normalized 0-1 scale). Cluster 1 (blue): Low H, extreme high CV, low transition. Cluster 2 (green): High H, low CV, perfect P=1.00, minimal transition - most regulated. Cluster 3 (red): Moderate H/CV but MAXIMUM transition score - diagnostic feature. Cluster 4 (purple): Moderate across all metrics - "average" ECM behavior. Clear visual separation validates clustering quality.
+
 ---
 
 ## 3.0 DEATH THEOREM VALIDATION: Collagens as Deterministic Agers
@@ -696,6 +724,12 @@ Core structural proteins MORE variable
 - Structural proteins are NOT lower entropy
 - They are MORE variable (tissue-specific architecture)
 - BUT... let's check predictability for collagens specifically
+
+**Visual: DEATh Theorem Statistical Comparison**
+
+![DEATh Theorem Comparison](death_theorem_comparison.png)
+
+**Figure 5:** Box plots comparing entropy metrics between Core Matrisome (n=254) and Matrisome-Associated (n=278) proteins. Top-left: Shannon entropy (H) - no significant difference (p=0.27), distributions overlap. Top-right: Variance CV - **significant** difference (p<0.05), Core shows higher variability. Bottom-left: Predictability - no difference (p=0.21). Bottom-right: Entropy transition - no difference. Key finding: Core proteins are MORE variable (not less), contradicting original DEATh prediction. Refined model focuses on predictability (collagens) not Shannon H.
 
 ---
 
