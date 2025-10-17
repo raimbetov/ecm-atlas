@@ -81,6 +81,7 @@ graph LR
 
 **Artifacts folder:** `13_meta_insights/agent_06_outlier_proteins/`
 - Report: `agent_06_outlier_proteins.md` (24 KB)
+- updated report: 13_meta_insights/agent_06_outlier_proteins/PCOLCE_QUALITY_PARADIGM_DISCOVERY.md
 - Discovery ranking: `agent_06_discovery_ranking.csv` (443 outliers)
 - Paradoxical fibrotic: `agent_06_paradoxical_fibrotic.csv` (6 proteins)
 - Sleeping giants: `agent_06_sleeping_giants.csv` (13 proteins)
