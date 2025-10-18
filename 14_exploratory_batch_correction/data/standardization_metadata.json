@@ -1,26 +1,26 @@
 {
-  "timestamp": "2025-10-18 09:21:47",
+  "timestamp": "2025-10-18 15:22:15",
   "input_file": "../../08_merged_ecm_dataset/merged_ecm_aging_zscore.csv",
   "output_file": "../data/merged_ecm_standardized_log2.csv",
-  "n_rows": 9343,
-  "n_proteins": 3757,
-  "n_studies": 12,
+  "n_rows": 9300,
+  "n_proteins": 3736,
+  "n_studies": 11,
   "original_scale_distribution": {
-    "LINEAR": 10799,
-    "LOG2": 315,
-    "AMBIGUOUS": 7163,
-    "NaN": 409
+    "LINEAR": 0,
+    "LOG2": 1861,
+    "AMBIGUOUS": 16737,
+    "NaN": 2
   },
   "standardized_range": [
-    0.0404276214540004,
-    27.586441614250873
+    0.1065093528087324,
+    9.99888288689122
   ],
-  "standardized_median": 10.352817373327262,
-  "standardized_mean": 9.800748754655316,
-  "standardized_std": 5.073870008089177,
+  "standardized_median": 4.022178068620873,
+  "standardized_mean": 4.43266309274159,
+  "standardized_std": 1.2980086737086096,
   "validation": {
     "in_expected_range": true,
-    "typical_lfq_percentage": 51.57848662253105,
+    "typical_lfq_percentage": 0.0,
     "nan_preserved": true
   }
 }
