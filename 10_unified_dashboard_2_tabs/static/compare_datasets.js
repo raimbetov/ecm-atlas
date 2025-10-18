@@ -45,13 +45,7 @@ const CompareDatasets = (function() {
                                style="width: 100%; padding: 8px; border: 2px solid #e0e0e0; border-radius: 5px;" />
                     </div>
 
-                    <!-- Organs -->
-                    <div class="filter-group">
-                        <h3>🫀 Organs</h3>
-                        <div id="organ-filters"></div>
-                    </div>
-
-                    <!-- Compartments -->
+                    <!-- Compartments by Organ -->
                     <div class="filter-group">
                         <h3>🔬 Compartments</h3>
                         <div id="compartment-filters"></div>
@@ -122,22 +116,29 @@ const CompareDatasets = (function() {
     }
 
     function renderFilters(filters) {
-        // Organs
-        const organFilters = document.getElementById('organ-filters');
-        organFilters.innerHTML = filters.organs.map(organ => `
-            <label style="display: block; padding: 5px 0; cursor: pointer;">
-                <input type="checkbox" class="organ-checkbox" value="${organ.name}" checked />
-                ${organ.name} (${organ.count})
-            </label>
-        `).join('');
-
-        // Compartments
+        // Compartments grouped by organ with organ checkbox
         const compartmentFilters = document.getElementById('compartment-filters');
-        compartmentFilters.innerHTML = filters.compartments.map(comp => `
-            <label style="display: block; padding: 5px 0; cursor: pointer;">
-                <input type="checkbox" class="compartment-checkbox" value="${comp.name}" checked />
-                ${comp.name} (${comp.count})
-            </label>
+        const compartmentsByOrgan = {};
+        filters.compartments.forEach(comp => {
+            if (!compartmentsByOrgan[comp.organ]) {
+                compartmentsByOrgan[comp.organ] = [];
+            }
+            compartmentsByOrgan[comp.organ].push(comp);
+        });
+        
+        compartmentFilters.innerHTML = Object.keys(compartmentsByOrgan).sort().map(organ => `
+            <div style="margin-bottom: 12px;">
+                <label style="display: block; cursor: pointer; margin-bottom: 5px;">
+                    <input type="checkbox" class="organ-checkbox" data-organ="${organ}" checked />
+                    <strong style="color: #3b82f6;">${organ}</strong>
+                </label>
+                ${compartmentsByOrgan[organ].map(comp => `
+                    <label style="display: block; padding: 3px 0 3px 25px; cursor: pointer;">
+                        <input type="checkbox" class="compartment-checkbox" data-organ="${organ}" value="${comp.name}" checked />
+                        ${comp.name} (${comp.count})
+                    </label>
+                `).join('')}
+            </div>
         `).join('');
 
         // Categories
@@ -184,15 +185,21 @@ const CompareDatasets = (function() {
                 sortAndRenderHeatmap(e.target.value);
             }
         });
+
+        // Organ checkbox toggle all compartments
+        document.getElementById('compartment-filters').addEventListener('change', (e) => {
+            if (e.target.classList.contains('organ-checkbox')) {
+                const organ = e.target.dataset.organ;
+                const checked = e.target.checked;
+                document.querySelectorAll(`.compartment-checkbox[data-organ="${organ}"]`).forEach(cb => {
+                    cb.checked = checked;
+                });
+            }
+        });
     }
 
     function getSelectedFilters() {
         const filters = {};
-
-        // Organs
-        const organs = Array.from(document.querySelectorAll('.organ-checkbox:checked'))
-            .map(cb => cb.value);
-        if (organs.length > 0) filters.organs = organs.join(',');
 
         // Compartments
         const compartments = Array.from(document.querySelectorAll('.compartment-checkbox:checked'))
