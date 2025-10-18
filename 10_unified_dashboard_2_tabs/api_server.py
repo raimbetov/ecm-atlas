@@ -119,23 +119,38 @@ def get_datasets():
 
     for dataset_name in df['Dataset_Name'].dropna().unique():
         dataset_df = df[df['Dataset_Name'] == dataset_name]
-        
+
         if len(dataset_df) == 0:
             continue
-            
-        organ = to_json_safe(dataset_df['Organ'].iloc[0])
+
+        # Get basic info from first row
+        study_id = to_json_safe(dataset_df['Study_ID'].iloc[0])
+        species = to_json_safe(dataset_df['Species'].iloc[0])
+        tissue = to_json_safe(dataset_df['Organ'].iloc[0])  # Use Organ as tissue name
+
+        # Get compartments
         compartments = [c for c in dataset_df['Compartment'].unique() if pd.notna(c)]
 
+        # Count total samples (young + old profiles)
+        total_samples = None
+        if 'N_Profiles_Young' in dataset_df.columns and 'N_Profiles_Old' in dataset_df.columns:
+            n_young = dataset_df['N_Profiles_Young'].iloc[0] if pd.notna(dataset_df['N_Profiles_Young'].iloc[0]) else 0
+            n_old = dataset_df['N_Profiles_Old'].iloc[0] if pd.notna(dataset_df['N_Profiles_Old'].iloc[0]) else 0
+            total_samples = int(n_young + n_old) if (n_young + n_old) > 0 else None
+
         datasets.append({
-            "name": dataset_name,
+            "study_id": study_id,
+            "name": dataset_name,  # Keep for backward compatibility
             "display_name": dataset_name.replace('_', ' '),
-            "organ": organ,
+            "tissue": tissue,
+            "species": species,
             "compartments": compartments,
+            "total_samples": total_samples,
             "protein_count": int(dataset_df['Protein_ID'].nunique()),
             "ecm_count": int(dataset_df[dataset_df['Matrisome_Category'].notna()]['Protein_ID'].nunique())
         })
 
-    return jsonify({"datasets": sorted(datasets, key=lambda x: x['name'])})
+    return jsonify({"datasets": sorted(datasets, key=lambda x: x['study_id'])})
 
 # ===== INDIVIDUAL DATASET ENDPOINTS =====
 
