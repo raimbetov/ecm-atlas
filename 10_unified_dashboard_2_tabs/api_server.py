@@ -464,6 +464,10 @@ def index():
 def dashboard():
     return send_from_directory('.', 'dashboard.html')
 
+@app.route('/datasets/<path:filename>')
+def serve_datasets(filename):
+    return send_from_directory('datasets', filename)
+
 @app.route('/static/<path:filename>')
 def serve_static(filename):
     return send_from_directory('static', filename)
