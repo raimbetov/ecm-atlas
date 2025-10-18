@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tsumagari_2023 - ECM-Atlas Dataset</title>
+    <link rel="stylesheet" href="../static/styles.css">
+    <style>
+        body {
+            background-color: #f5f7fa;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .header-bar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        .header-bar h1 {
+            margin: 0 0 10px 0;
+            font-size: 2em;
+        }
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .stat-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        .stat-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 5px;
+        }
+        .stat-label {
+            color: #666;
+            font-size: 0.9em;
+        }
+        .section {
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        .section h2 {
+            color: #667eea;
+            margin-top: 0;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+        .badge {
+            display: inline-block;
+            padding: 5px 15px;
+            background: #667eea;
+            color: white;
+            border-radius: 20px;
+            font-size: 0.9em;
+            margin: 5px;
+        }
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            transition: background 0.3s;
+        }
+        .back-button:hover {
+            background: #764ba2;
+        }
+        .publication-info {
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #2196f3;
+        }
+        .publication-info h3 {
+            margin-top: 0;
+            color: #1565c0;
+        }
+        pre {
+            background: #263238;
+            color: #aed581;
+            padding: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../dashboard.html" class="back-button">← Back to Dashboard</a>
+
+        <div class="header-bar">
+            <h1>📊 Tsumagari_2023</h1>
+            <p style="margin: 0; opacity: 0.9; font-size: 1.1em;">
+                Age-associated proteome and secretome of mouse mammary tissue
+            </p>
+        </div>
+
+        <!-- Publication Information -->
+        <div class="publication-info">
+            <h3>📄 Original Publication</h3>
+            <p><strong>Authors:</strong> Tsumagari et al.</p>
+            <p><strong>Journal:</strong> Aging Cell (2023)</p>
+            
+            
+        </div>
+
+        <!-- Dataset Statistics -->
+        <h2>📈 Dataset Statistics</h2>
+        <div class="stat-grid">
+            <div class="stat-card">
+                <div class="stat-value">423</div>
+                <div class="stat-label">Total Measurements</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">224</div>
+                <div class="stat-label">Unique Proteins</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">0</div>
+                <div class="stat-label">ECM Proteins</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">Mus musculus</div>
+                <div class="stat-label">Species</div>
+            </div>
+            
+        </div>
+
+        <!-- Tissue & Compartments -->
+        <div class="section">
+            <h2>🧬 Tissue Information</h2>
+            <div>
+                <strong>Tissues:</strong>
+                <span class="badge">Brain_Cortex</span> <span class="badge">Brain_Hippocampus</span>
+            </div>
+            <div style="margin-top: 10px;">
+                <strong>Compartments:</strong>
+                <span class="badge">Cortex</span> <span class="badge">Hippocampus</span>
+            </div>
+        </div>
+
+        <!-- Data Processing -->
+        <div class="section">
+            <h2>⚙️ Data Processing</h2>
+            <h3>Pipeline Steps</h3>
+            <ol>
+                <li><strong>Raw Data Extraction:</strong> Original proteomic data extracted from supplementary materials</li>
+                <li><strong>Normalization:</strong> Converted to long format, filtered for ECM proteins (Match_Confidence > 0)</li>
+                <li><strong>Wide Format Transformation:</strong> Pivoted to sample × protein abundance matrix</li>
+                <li><strong>Merge to Unified Database:</strong> Added to <code>merged_ecm_aging_zscore.csv</code></li>
+                <li><strong>Z-score Calculation:</strong> Calculated per-compartment z-scores for cross-study comparison</li>
+            </ol>
+
+            <h3>Key Processing Parameters</h3>
+            <ul>
+                <li><strong>Study ID:</strong> <code>Tsumagari_2023</code></li>
+                <li><strong>Missing Values:</strong> Preserved (NaN = protein not detected)</li>
+                <li><strong>Zero Values:</strong> Included (0.0 = detected but absent)</li>
+                <li><strong>Normalization:</strong> Within-study z-scores per compartment</li>
+            </ul>
+        </div>
+
+        <!-- README Content (if available) -->
+        <div class="section">
+            <h2>📝 Processing Notes</h2>
+            <div style="background: white; padding: 20px; border-radius: 5px;">
+                # Tsumagari et al. 2023 - TMT Processing
+
+## Study Information
+- **Title:** Age-related proteomic changes in mouse brain (Cortex and Hippocampus)
+- **PMID:** 38086838
+- **DOI:** 10.1038/s41598-023-45570-8
+- **Tissue:** Mouse brain (Cortex and Hippocampus)
+- **Species:** Mus musculus
+- **Method:** TMT 6-plex LC-MS/MS
+
+## Age Groups
+- **Young:** 3 months (adult, n=6 per region)
+- **Old:** 24 months (aged, n=6 per region)
+- **Age gap:** 21 months
+- **Excluded:** 15 months (middle age) - not included for binary Young/Old comparison
+
+## Processing Summary
+This dataset was processed using the **TMT adapter pipeline** (lightweight transformation):
+- Pre-normalized data (TMT reporter ion intensities)
+- Two brain regions processed separately: Cortex and Hippocampus
+- Simple column mapping and averaging across replicates
+- ECM annotation using mouse matrisome reference (v2)
+- Processing time: ~5 minutes
+
+## Files
+
+### Input
+- `../../data_raw/Tsumagari et al. - 2023/41598_2023_45570_MOESM3_ESM.xlsx`
+  - Sheet: `expression` (6,821 proteins)
+  - Cortex samples: Cx_3mo_1-6, Cx_15mo_1-6, Cx_24mo_1-6
+- `../../data_raw/Tsumagari et al. - 2023/41598_2023_45570_MOESM4_ESM.xlsx`
+  - Sheet: `expression` (6,910 proteins)
+  - Hippocampus samples: Hipp_3mo_1-6, Hipp_15mo_1-6, Hipp_24mo_1-6
+
+### Output
+- `Tsumagari_2023_wide_format.csv` - **423 ECM proteins** in unified schema
+  - 18 columns: Protein_ID, Gene_Symbol, Tissue, Abundance_Young, Abundance_Old, etc.
+  - 209 proteins in Cortex, 214 proteins in Hippocampus
+  - Ready for Phase 2 merge and Phase 3 z-score normalization
+
+### Scripts
+- `tmt_adapter_tsumagari2023.py` - TMT adapter script
+  - Loads TMT data from both brain regions
+  - Calculates mean abundances per age group (3mo, 15mo, 24mo)
+  - Maps to Young (3mo) and Old (24mo) binary groups
+  - Annotates with mouse matrisome reference
+  - Filters to ECM proteins only
+  - Exports wide-format CSV
+
+### Documentation
+- `00_TASK_TSUMAGARI_2023_TMT_PROCESSING.md` - Complete task specification (to be created)
+- `README.md` - This file
+
+### Metadata
+- `zscore_metadata_Tsumagari_2023.json` - Z-score normalization metadata
+  - Normalization parameters (mean, std) per brain region
+  - Validation results (mean ≈ 0, std ≈ 1)
+  - Outlier statistics (|z| > 3)
+  - Generated: 2025-10-14
+
+## Data Quality
+- **ECM proteins:** 423 total (209 Cortex + 214 Hippocampus)
+  - Unique proteins: 224 (some proteins appear in both regions)
+- **Missing values:** Young=0%, Old=0% (100% data completeness - typical for TMT)
+- **Annotation coverage:** 3.1% (ECM proteins out of whole proteome)
+  - This is CORRECT - brain tissue contains mostly non-ECM proteins
+- **Matrisome categories:**
+  - ECM Regulators: 105
+  - ECM Glycoproteins: 96
+  - ECM-affiliated Proteins: 94
+  - Secreted Factors: 65
+  - Proteoglycans: 40
+  - Collagens: 23
+- **Match confidence:** 100% (all ECM proteins matched via matrisome reference)
+
+## Processing Pipeline (Completed)
+
+### Phase 1: TMT Adapter
+```bash
+cd /Users/Kravtsovd/projects/ecm-atlas/05_papers_to_csv/11_Tsumagari_2023_paper_to_csv
+python tmt_adapter_tsumagari2023.py
+```
+
+**Results:**
+- Processed 6,821 proteins (Cortex) and 6,910 proteins (Hippocampus)
+- Annotated 209 ECM proteins (Cortex) and 214 ECM proteins (Hippocampus)
+- Combined to 423 total rows in wide format
+- Created `Tsumagari_2023_wide_format.csv`
+- Validation: ALL 6 checks PASSED
+
+### Phase 2: Merge to Unified Database
+```bash
+cd ../../
+python 11_subagent_for_LFQ_ingestion/merge_to_unified.py \
+    05_papers_to_csv/11_Tsumagari_2023_paper_to_csv/Tsumagari_2023_wide_format.csv
+```
+
+**Results:**
+- Merged to `08_merged_ecm_dataset/merged_ecm_aging_zscore.csv`
+- Added 423 rows to unified database
+- Added metadata columns: Dataset_Name, Organ, Compartment
+- Backup created: `backups/merged_ecm_aging_zscore_2025-10-14_23-51-06.csv`
+- Total studies in database: 9 (including Tsumagari_2023)
+
+### Phase 3: Calculate Z-scores
+```bash
+python 11_subagent_for_LFQ_ingestion/universal_zscore_function.py \
+    'Tsumagari_2023' 'Tissue'
+```
+
+**Results:**
+- Grouped by: Tissue (Brain_Cortex and Brain_Hippocampus)
+- No log-transformation needed (skewness < 1 for both regions)
+- Normalization parameters:
+  - **Brain_Cortex:**
+    - Young: μ=27.89, σ=2.88
+    - Old: μ=28.01, σ=2.90
+  - **Brain_Hippocampus:**
+    - Young: μ=27.67, σ=2.95
+    - Old: μ=27.82, σ=2.98
+- Validation: PASSED (μ ≈ 0, σ ≈ 1) for both regions
+- Outliers:
+  - Cortex: Young=1 (0.5%), Old=1 (0.5%)
+  - Hippocampus: Young=1 (0.5%), Old=1 (0.5%)
+- Results saved to `zscore_metadata_Tsumagari_2023.json`
+
+## Validation
+
+All quality checks passed:
+
+Phase 1 (TMT Adapter):
+- [x] No null Protein_ID
+- [x] No null Organ
+- [x] No null Compartment
+- [x] No null Dataset_Name
+- [x] All rows are ECM proteins (Match_Confidence > 0)
+- [x] Both brain regions present (Cortex and Hippocampus)
+
+Phase 2 (Merge):
+- [x] 423 rows added to unified database
+- [x] No duplicate rows
+- [x] Schema compliance maintained
+- [x] Backup created successfully
+
+Phase 3 (Z-scores):
+- [x] Z-score calculation completed for both regions
+- [x] Validation passed (mean ≈ 0, std ≈ 1)
+- [x] Low outlier rate (<1%)
+- [x] Metadata JSON saved
+
+## Technical Notes
+
+### TMT vs LFQ Processing
+- TMT data is pre-normalized by authors (reporter ion intensities)
+- No complex parsing required - simple column mapping
+- 100% data completeness (no missing values)
+- Processing is much faster than LFQ datasets (~5 min vs 2-4 hours)
+- See `11_subagent_for_LFQ_ingestion/03_TMT_vs_LFQ_PROCESSING_GUIDE.md` for methodology differences
+
+### Age Group Mapping Decision
+The study included 3 age groups (3mo, 15mo, 24mo). For binary Young/Old comparison:
+- **Young:** 3 months (adult mice, sexually mature)
+- **Old:** 24 months (aged mice, ~80% of maximum lifespan)
+- **Excluded:** 15 months (middle age)
+
+This mapping ensures:
+1. Clear biological separation (21-month gap)
+2. Comparability with other aging studies in ECM Atlas
+3. Adult vs aged comparison (not developmental changes)
+
+### Brain Region Compartments
+Both regions are kept **separate** in the database:
+- `Brain_Cortex` - 209 ECM proteins
+- `Brain_Hippocampus` - 214 ECM proteins
+
+This preserves region-specific ECM aging signatures and enables:
+- Regional comparison of ECM changes
+- Independent z-score normalization per region
+- No data loss from averaging different compartments
+
+### ECM Annotation
+Used **mouse matrisome reference v2** (1,110 proteins):
+- Level 1 match (Gene Symbol): Primary method
+- Level 2 match (UniProt ID): Fallback
+- Level 3 match (Synonyms): Alternative gene names
+- 3.1% annotation rate is EXPECTED - brain is not ECM-rich tissue
+
+## Scientific Context
+
+### Why Brain ECM Aging Matters
+The brain extracellular matrix (ECM) undergoes significant changes with aging:
+- Perineuronal nets (PNNs) degrade, affecting synaptic plasticity
+- ECM remodeling enzymes (MMPs, ADAMTs) alter activity
+- Proteoglycan composition shifts
+- Changes contribute to cognitive decline and neurodegeneration
+
+### Key ECM Components in Brain
+- **Collagens:** Structural support, basement membrane
+- **Proteoglycans:** Aggrecan, versican, brevican (PNN components)
+- **Glycoproteins:** Tenascins, laminins
+- **ECM Regulators:** Matrix metalloproteinases (MMPs), TIMPs
+
+### Study Significance
+- First whole-proteome TMT analysis of brain ECM aging
+- Covers two distinct regions (cortex vs hippocampus)
+- Enables regional comparison of ECM aging signatures
+- Contributes mouse brain data to ECM Atlas (previously human-dominated)
+
+---
+
+**Created:** 2025-10-14
+**Updated:** 2025-10-14
+**Status:** Complete - All Phases Done (Phase 1-3)
+**Processing Time:** ~10 minutes total
+**Next Steps:** Data ready for dashboard visualization and cross-study comparison
+
+            </div>
+        </div>
+
+        <!-- Data Access -->
+        <div class="section">
+            <h2>💾 Data Access</h2>
+            <p>This dataset is included in the unified ECM-Atlas database. You can access it through:</p>
+            <ul>
+                <li><strong>Dashboard:</strong> Select "Tsumagari_2023" from the Individual Dataset Analysis tab</li>
+                <li><strong>CSV File:</strong> <code>08_merged_ecm_dataset/merged_ecm_aging_zscore.csv</code></li>
+                <li><strong>Filter:</strong> <code>df[df['Study_ID'] == 'Tsumagari_2023']</code></li>
+            </ul>
+
+            <h3>Quick Start (Python)</h3>
+            <pre>import pandas as pd
+
+# Load unified database
+df = pd.read_csv('merged_ecm_aging_zscore.csv')
+
+# Filter for this study
+study_df = df[df['Study_ID'] == 'Tsumagari_2023']
+
+# View ECM proteins only
+ecm_df = study_df[study_df['ECM_Class'].notna()]
+
+print(f"Total proteins: {len(study_df['Protein_ID'].unique())}")
+print(f"ECM proteins: {len(ecm_df['Protein_ID'].unique())}")</pre>
+        </div>
+
+        <!-- Metadata -->
+        <div class="section">
+            <h2>🔧 Metadata</h2>
+            <div style="background: white; padding: 15px; border-radius: 5px;">
+                <pre style="background: #263238; color: #aed581; padding: 15px; border-radius: 5px; overflow-x: auto; margin: 0;">{}</pre>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #e0e0e0; text-align: center; color: #666;">
+            <p>
+                <strong>Generated:</strong> 2025-10-18 &nbsp;|&nbsp;
+                <strong>ECM-Atlas Version:</strong> 2.0
+            </p>
+            <p style="margin-top: 15px;">
+                <a href="../dashboard.html" class="back-button">← Back to Dashboard</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

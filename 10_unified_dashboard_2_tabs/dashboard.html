@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ECM Atlas - Unified Analysis Dashboard</title>
     <script src="https://cdn.plot.ly/plotly-2.26.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
     <link rel="stylesheet" href="static/styles.css">
     <script>
         window.API_BASE = (() => {
@@ -36,7 +37,10 @@
 
     <!-- Tab Navigation -->
     <nav class="tab-navigation">
-        <button class="tab-button active" data-tab="individual">
+        <button class="tab-button active" data-tab="about">
+            📖 About
+        </button>
+        <button class="tab-button" data-tab="individual">
             🔬 Individual Dataset Analysis
         </button>
         <button class="tab-button" data-tab="compare">
@@ -44,8 +48,15 @@
         </button>
     </nav>
 
+    <!-- Tab Content: About -->
+    <div id="tab-about" class="tab-content active">
+        <div id="about-content">
+            <!-- Content will be loaded dynamically -->
+        </div>
+    </div>
+
     <!-- Tab Content: Individual Dataset Analysis -->
-    <div id="tab-individual" class="tab-content active">
+    <div id="tab-individual" class="tab-content">
         <div class="dataset-selector">
             <label for="dataset-select">
                 <strong>Select Dataset:</strong>
@@ -75,6 +86,7 @@
     </div>
 
     <!-- Scripts (with cache-busting version param) -->
+    <script src="static/about_tab.js?v=20251018-1"></script>
     <script src="static/main.js?v=20251015-1"></script>
     <script src="static/individual_dataset.js?v=20251015-3"></script>
     <script src="static/compare_datasets.js?v=20251018-FIX4"></script>

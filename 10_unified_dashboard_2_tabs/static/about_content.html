@@ -1,0 +1,398 @@
+<!-- About Tab Content -->
+<div class="section">
+    <h2>📖 About ECM-Atlas</h2>
+
+    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 25px; border-radius: 10px; margin-bottom: 30px;">
+        <h3 style="margin-top: 0; color: white; border: none; font-size: 1.5em;">🎯 Mission</h3>
+        <p style="font-size: 1.1em; line-height: 1.8; margin: 0; color: white;">
+            ECM-Atlas is a unified database aggregating 13+ proteomic studies to track age-related changes
+            in the extracellular matrix (ECM) across tissues and organisms. Our goal is to identify universal
+            aging biomarkers and therapeutic targets by analyzing cross-tissue ECM signatures.
+        </p>
+    </div>
+
+    <!-- Scientific Background -->
+    <h3>🔬 Why ECM Matters for Aging</h3>
+    <p>
+        The <strong>extracellular matrix (ECM)</strong> is the structural scaffolding surrounding cells in all tissues.
+        Unlike intracellular components that can be repaired or replaced, ECM proteins accumulate <strong>irreversible
+        crosslinks</strong> (AGEs - Advanced Glycation End-products) over decades, creating a fundamental constraint on tissue function.
+    </p>
+
+    <div style="background: #f8f9fa; padding: 20px; border-left: 4px solid #667eea; margin: 20px 0;">
+        <h4 style="margin-top: 0; color: #667eea;">🧬 DEATh Framework (Delocalized Entropy Aging Theorem)</h4>
+        <p style="margin-bottom: 10px;">
+            ECM and cells form a unified thermodynamic system. As ECM becomes more rigid through crosslinking
+            (entropy decreases), cellular disorder must increase to satisfy the Second Law of Thermodynamics.
+            This positions <strong>ECM dysfunction as a primary aging hallmark</strong>, causally upstream of
+            genomic instability, mitochondrial dysfunction, and cellular senescence.
+        </p>
+        <ul style="margin: 10px 0; padding-left: 25px;">
+            <li><strong>Young tissue:</strong> Flexible ECM → low cellular entropy → healthy function</li>
+            <li><strong>Aged tissue:</strong> Crosslinked ECM → high cellular entropy → aging hallmarks</li>
+            <li><strong>Key insight:</strong> Fixing cells without addressing ECM stiffness is insufficient</li>
+        </ul>
+    </div>
+
+    <!-- Data Processing Pipeline -->
+    <h3>⚙️ Data Processing Pipeline</h3>
+    <p>
+        Raw proteomic datasets flow through an autonomous normalization pipeline into a unified database with
+        standardized z-scores for cross-study comparison.
+    </p>
+
+    <div style="margin: 30px 0;">
+        <pre class="mermaid" style="background: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px;">
+graph LR
+    A[Raw Excel/TSV Files] --> B[Autonomous Agent<br/>Normalization]
+    B --> C[Long Format]
+    C --> D[ECM Filtering<br/>Match_Confidence > 0]
+    D --> E[Wide Format CSV]
+    E --> F[Merge to Unified DB]
+    F --> G[Z-score Calculation<br/>Per Compartment]
+    G --> H[Dashboard Visualization]
+
+    style A fill:#ffebee
+    style H fill:#e8f5e9
+    style G fill:#fff3e0
+    style F fill:#e3f2fd
+        </pre>
+    </div>
+
+    <!-- Database Structure -->
+    <h3>🗄️ Database Structure</h3>
+    <div class="grid-2" style="margin: 20px 0;">
+        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px;">
+            <h4 style="color: #667eea; margin-top: 0;">Main Database</h4>
+            <p><code>merged_ecm_aging_zscore.csv</code></p>
+            <ul style="font-size: 0.95em;">
+                <li><strong>13+ studies</strong> from 2017-2023</li>
+                <li><strong>~200,000 rows</strong> of protein measurements</li>
+                <li><strong>Key columns:</strong> Protein_ID, Gene_Symbol, Tissue, Compartment, Age, Abundance, Z_score, Study_ID</li>
+                <li><strong>Tissues:</strong> Kidney, Lung, Heart, Skin, Disc, Pancreas, Brain, Muscle</li>
+                <li><strong>Species:</strong> Human, Mouse, Cow, Rat</li>
+            </ul>
+        </div>
+        <div style="background: #f8f9fa; padding: 20px; border-radius: 8px;">
+            <h4 style="color: #667eea; margin-top: 0;">Key Features</h4>
+            <ul style="font-size: 0.95em;">
+                <li>✅ <strong>Standardized z-scores</strong> for cross-study comparison</li>
+                <li>✅ <strong>Compartment-level resolution</strong> (e.g., Glomerular vs Tubulointerstitial)</li>
+                <li>✅ <strong>NaN preservation</strong> (50-80% missing is normal in LFQ)</li>
+                <li>✅ <strong>UniProt ID mapping</strong> for protein standardization</li>
+                <li>✅ <strong>Matrisome classification</strong> (Core ECM vs Associated)</li>
+                <li>✅ <strong>Automatic backups</strong> on every update</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Dashboard Features -->
+    <h3>📊 Dashboard Features</h3>
+
+    <div style="background: #e8f5e9; padding: 20px; border-radius: 8px; margin: 20px 0;">
+        <h4 style="margin-top: 0; color: #2e7d32;">🔬 Tab 1: Individual Dataset Analysis</h4>
+        <p>
+            Explore single datasets in depth with compartment-specific visualizations. Select any dataset to view:
+        </p>
+        <ul>
+            <li><strong>Heatmaps:</strong> Top aging-associated proteins ranked by z-score</li>
+            <li><strong>Volcano plots:</strong> Statistical significance vs fold-change</li>
+            <li><strong>Scatter plots:</strong> Young vs aged abundance patterns</li>
+            <li><strong>Compartment filters:</strong> Drill down into specific tissue regions (e.g., Kidney Glomerular vs Tubulointerstitial)</li>
+            <li><strong>Interactive tooltips:</strong> Protein details, gene symbols, statistical values</li>
+        </ul>
+        <p style="margin-bottom: 0; font-style: italic; color: #555;">
+            💡 Use this tab to understand aging signatures within individual studies and validate findings from specific papers.
+        </p>
+    </div>
+
+    <div style="background: #e3f2fd; padding: 20px; border-radius: 8px; margin: 20px 0;">
+        <h4 style="margin-top: 0; color: #1565c0;">📈 Tab 2: Compare Datasets</h4>
+        <p>
+            Perform cross-study meta-analysis to identify universal aging markers. Features include:
+        </p>
+        <ul>
+            <li><strong>Multi-dataset selection:</strong> Compare 2-13 studies simultaneously</li>
+            <li><strong>Protein overlap analysis:</strong> Find proteins detected across multiple studies</li>
+            <li><strong>Z-score distributions:</strong> Compare aging patterns across tissues/species</li>
+            <li><strong>Consensus signatures:</strong> Identify proteins with consistent directional changes</li>
+            <li><strong>Heterogeneity metrics:</strong> I² statistics for cross-study variability</li>
+        </ul>
+        <p style="margin-bottom: 0; font-style: italic; color: #555;">
+            💡 Use this tab to discover universal biomarkers (e.g., COL1A1 upregulated in 12/13 studies) and prioritize therapeutic targets.
+        </p>
+    </div>
+
+    <!-- Contributing Data -->
+    <h3>➕ Contributing New Datasets</h3>
+    <p>
+        ECM-Atlas uses an <strong>autonomous agent</strong> to process and integrate new proteomic datasets automatically.
+    </p>
+
+    <div style="background: #fff3e0; padding: 20px; border-radius: 8px; margin: 20px 0;">
+        <h4 style="margin-top: 0; color: #e65100;">🤖 How to Add Your Dataset</h4>
+        <ol style="line-height: 1.8;">
+            <li>Place your raw proteomic data (Excel/TSV) in <code>data_raw/Author et al. - Year/</code></li>
+            <li>Run the autonomous agent:
+                <pre style="background: #263238; color: #aed581; padding: 15px; border-radius: 5px; overflow-x: auto; margin: 10px 0;">python autonomous_agent.py "data_raw/Author et al. - Year/"</pre>
+            </li>
+            <li>The agent will:
+                <ul style="margin-top: 10px;">
+                    <li>✅ Identify data files and extract Study ID</li>
+                    <li>✅ Normalize to long format → filter ECM proteins → create wide format</li>
+                    <li>✅ Merge into unified database with z-score calculation</li>
+                    <li>✅ Create detailed logs (<code>agent_log.md</code>) for debugging</li>
+                </ul>
+            </li>
+            <li>Submit a pull request to <a href="https://github.com/yourusername/ecm-atlas" target="_blank" style="color: #667eea; font-weight: 600;">GitHub repository</a></li>
+            <li>After approval, your dataset automatically appears in this dashboard! 🎉</li>
+        </ol>
+        <p style="margin: 15px 0 0 0; padding: 15px; background: white; border-left: 4px solid #ff9800; border-radius: 4px;">
+            <strong>📖 Full instructions:</strong> See
+            <a href="https://github.com/yourusername/ecm-atlas/tree/main/11_subagent_for_LFQ_ingestion" target="_blank" style="color: #667eea;">
+                11_subagent_for_LFQ_ingestion/
+            </a>
+            for complete documentation, examples, and troubleshooting.
+        </p>
+    </div>
+
+    <!-- Data Handling -->
+    <h3>📐 Data Handling Principles</h3>
+    <div class="grid-2" style="margin: 20px 0;">
+        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px;">
+            <h4 style="color: #667eea; margin-top: 0; font-size: 1em;">Missing Values (NaN)</h4>
+            <p style="font-size: 0.95em; margin-bottom: 0;">
+                <strong>50-80% NaN is normal</strong> in LFQ proteomics and represents proteins not detected in a sample.
+                We preserve NaN values and exclude them from statistics (<code>skipna=True</code>). Never impute or remove.
+            </p>
+        </div>
+        <div style="background: #f8f9fa; padding: 15px; border-radius: 8px;">
+            <h4 style="color: #667eea; margin-top: 0; font-size: 1em;">Zero Values</h4>
+            <p style="font-size: 0.95em; margin-bottom: 0;">
+                <strong>0.0 abundance</strong> means protein was detected but measured as absent/undetectable.
+                These are valid measurements included in mean/std calculations and produce valid z-scores.
+            </p>
+        </div>
+    </div>
+
+    <!-- System Architecture -->
+    <h3>🏗️ System Architecture</h3>
+    <div style="margin: 30px 0;">
+        <pre class="mermaid" style="background: white; border: 1px solid #e0e0e0; border-radius: 8px; padding: 20px;">
+graph TD
+    A[ECM-Atlas Repository] --> B[Data Layer]
+    A --> C[Processing Layer]
+    A --> D[Output Layer]
+
+    B --> B1[data_raw: 19 studies]
+    B --> B2[pdf: 15 papers]
+    B --> B3[05_papers_to_csv: Processed]
+
+    C --> C1[Autonomous Agent]
+    C --> C2[Merge Scripts]
+    C --> C3[Z-score Functions]
+
+    D --> D1[08_merged_ecm_dataset<br/>Unified Database]
+    D --> D2[10_unified_dashboard_2_tabs<br/>This Dashboard]
+
+    D1 --> E[merged_ecm_aging_zscore.csv<br/>~200k rows]
+    D2 --> F[Interactive Visualizations]
+
+    style A fill:#667eea,color:#fff
+    style D1 fill:#4caf50,color:#fff
+    style D2 fill:#2196f3,color:#fff
+    style E fill:#ff9800,color:#fff
+        </pre>
+    </div>
+
+    <!-- Links & Resources -->
+    <h3>🔗 Links & Resources</h3>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin: 20px 0;">
+        <a href="https://github.com/yourusername/ecm-atlas" target="_blank"
+           style="background: #24292e; color: white; padding: 20px; border-radius: 8px; text-decoration: none; display: block; transition: transform 0.2s;">
+            <h4 style="margin: 0 0 10px 0; color: white;">📂 GitHub Repository</h4>
+            <p style="margin: 0; opacity: 0.9; font-size: 0.9em;">Source code, raw data, and documentation</p>
+        </a>
+
+        <a href="../11_subagent_for_LFQ_ingestion/00_START_HERE.md" target="_blank"
+           style="background: #667eea; color: white; padding: 20px; border-radius: 8px; text-decoration: none; display: block; transition: transform 0.2s;">
+            <h4 style="margin: 0 0 10px 0; color: white;">🤖 Agent Documentation</h4>
+            <p style="margin: 0; opacity: 0.9; font-size: 0.9em;">How to add datasets using autonomous agent</p>
+        </a>
+
+        <a href="../documentation/01_Scientific_Foundation.md" target="_blank"
+           style="background: #764ba2; color: white; padding: 20px; border-radius: 8px; text-decoration: none; display: block; transition: transform 0.2s;">
+            <h4 style="margin: 0 0 10px 0; color: white;">📚 Scientific Documentation</h4>
+            <p style="margin: 0; opacity: 0.9; font-size: 0.9em;">Theory, research insights, and methodology</p>
+        </a>
+
+        <a href="datasets/Randles_2021.html" target="_blank"
+           style="background: #2196f3; color: white; padding: 20px; border-radius: 8px; text-decoration: none; display: block; transition: transform 0.2s;">
+            <h4 style="margin: 0 0 10px 0; color: white;">📄 Example: Randles 2021</h4>
+            <p style="margin: 0; opacity: 0.9; font-size: 0.9em;">See example of dataset detail page</p>
+        </a>
+    </div>
+
+    <!-- All Datasets - Direct Links -->
+    <div class="section" style="margin-top: 30px;">
+        <h2>📚 All Datasets - Click to View Details</h2>
+        <p>Click on any dataset below to see detailed information about processing, statistics, and original publication:</p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; margin-top: 20px;">
+            <!-- Dataset 1 -->
+            <a href="datasets/Randles_2021.html" target="_blank" class="dataset-card" style="background: white; border: 2px solid #e0e0e0; border-radius: 10px; padding: 20px; text-decoration: none; color: inherit; transition: all 0.3s; display: block;">
+                <h3 style="margin: 0 0 10px 0; color: #667eea; font-size: 1.2em;">Randles_2021</h3>
+                <p style="margin: 5px 0; font-size: 0.9em;"><strong>Tissue:</strong> Kidney</p>
+                <p style="margin: 5px 0; font-size: 0.9em;"><strong>Species:</strong> Homo sapiens</p>
+                <p style="margin: 5px 0; font-size: 0.9em;"><strong>Compartments:</strong> Glomerular, Tubulointerstitial</p>
+                <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid #e0e0e0; color: #667eea; font-weight: 600; font-size: 0.9em;">
+                    View Details →
+                </div>
+            </a>
+
+            <!-- Dataset 2 -->
+            <a href="datasets/Tam_2020.html" target="_blank" class="dataset-card" style="background: white; border: 2px solid #e0e0e0; border-radius: 10px; padding: 20px; text-decoration: none; color: inherit; transition: all 0.3s; display: block;">
+                <h3 style="margin: 0 0 10px 0; color: #667eea; font-size: 1.2em;">Tam_2020</h3>
+                <p style="margin: 5px 0; font-size: 0.9em;"><strong>Tissue:</strong> Intervertebral Disc</p>
+                <p style="margin: 5px 0; font-size: 0.9em;"><strong>Species:</strong> Homo sapiens</p>
+                <p style="margin: 5px 0; font-size: 0.9em;"><strong>Compartments:</strong> NP, IAF, OAF</p>
+                <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid #e0e0e0; color: #667eea; font-weight: 600; font-size: 0.9em;">
+                    View Details →
+                </div>
+            </a>
+
+            <!-- Dataset 3 -->
+            <a href="datasets/Ouni_2022.html" target="_blank" class="dataset-card" style="background: white; border: 2px solid #e0e0e0; border-radius: 10px; padding: 20px; text-decoration: none; color: inherit; transition: all 0.3s; display: block;">
+                <h3 style="margin: 0 0 10px 0; color: #667eea; font-size: 1.2em;">Ouni_2022</h3>
+                <p style="margin: 5px 0; font-size: 0.9em;"><strong>Tissue:</strong> Pancreatic Islets</p>
+                <p style="margin: 5px 0; font-size: 0.9em;"><strong>Species:</strong> Mus musculus</p>
+                <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid #e0e0e0; color: #667eea; font-weight: 600; font-size: 0.9em;">
+                    View Details →
+                </div>
+            </a>
+
+            <!-- Dataset 4 -->
+            <a href="datasets/Tsumagari_2023.html" target="_blank" class="dataset-card" style="background: white; border: 2px solid #e0e0e0; border-radius: 10px; padding: 20px; text-decoration: none; color: inherit; transition: all 0.3s; display: block;">
+                <h3 style="margin: 0 0 10px 0; color: #667eea; font-size: 1.2em;">Tsumagari_2023</h3>
+                <p style="margin: 5px 0; font-size: 0.9em;"><strong>Tissue:</strong> Mammary Gland</p>
+                <p style="margin: 5px 0; font-size: 0.9em;"><strong>Species:</strong> Mus musculus</p>
+                <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid #e0e0e0; color: #667eea; font-weight: 600; font-size: 0.9em;">
+                    View Details →
+                </div>
+            </a>
+
+            <!-- Dataset 5 -->
+            <a href="datasets/LiDermis_2021.html" target="_blank" class="dataset-card" style="background: white; border: 2px solid #e0e0e0; border-radius: 10px; padding: 20px; text-decoration: none; color: inherit; transition: all 0.3s; display: block;">
+                <h3 style="margin: 0 0 10px 0; color: #667eea; font-size: 1.2em;">LiDermis_2021</h3>
+                <p style="margin: 5px 0; font-size: 0.9em;"><strong>Tissue:</strong> Skin (Dermis)</p>
+                <p style="margin: 5px 0; font-size: 0.9em;"><strong>Species:</strong> Homo sapiens</p>
+                <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid #e0e0e0; color: #667eea; font-weight: 600; font-size: 0.9em;">
+                    View Details →
+                </div>
+            </a>
+
+            <!-- Dataset 6 -->
+            <a href="datasets/Santinha_2024_Human.html" target="_blank" class="dataset-card" style="background: white; border: 2px solid #e0e0e0; border-radius: 10px; padding: 20px; text-decoration: none; color: inherit; transition: all 0.3s; display: block;">
+                <h3 style="margin: 0 0 10px 0; color: #667eea; font-size: 1.2em;">Santinha_2024_Human</h3>
+                <p style="margin: 5px 0; font-size: 0.9em;"><strong>Tissue:</strong> Skeletal Muscle</p>
+                <p style="margin: 5px 0; font-size: 0.9em;"><strong>Species:</strong> Homo sapiens</p>
+                <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid #e0e0e0; color: #667eea; font-weight: 600; font-size: 0.9em;">
+                    View Details →
+                </div>
+            </a>
+
+            <!-- Dataset 7 -->
+            <a href="datasets/Santinha_2024_Mouse_NT.html" target="_blank" class="dataset-card" style="background: white; border: 2px solid #e0e0e0; border-radius: 10px; padding: 20px; text-decoration: none; color: inherit; transition: all 0.3s; display: block;">
+                <h3 style="margin: 0 0 10px 0; color: #667eea; font-size: 1.2em;">Santinha_2024_Mouse_NT</h3>
+                <p style="margin: 5px 0; font-size: 0.9em;"><strong>Tissue:</strong> Muscle (Native Tibialis)</p>
+                <p style="margin: 5px 0; font-size: 0.9em;"><strong>Species:</strong> Mus musculus</p>
+                <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid #e0e0e0; color: #667eea; font-weight: 600; font-size: 0.9em;">
+                    View Details →
+                </div>
+            </a>
+
+            <!-- Dataset 8 -->
+            <a href="datasets/Santinha_2024_Mouse_DT.html" target="_blank" class="dataset-card" style="background: white; border: 2px solid #e0e0e0; border-radius: 10px; padding: 20px; text-decoration: none; color: inherit; transition: all 0.3s; display: block;">
+                <h3 style="margin: 0 0 10px 0; color: #667eea; font-size: 1.2em;">Santinha_2024_Mouse_DT</h3>
+                <p style="margin: 5px 0; font-size: 0.9em;"><strong>Tissue:</strong> Muscle (Denervated Tibialis)</p>
+                <p style="margin: 5px 0; font-size: 0.9em;"><strong>Species:</strong> Mus musculus</p>
+                <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid #e0e0e0; color: #667eea; font-weight: 600; font-size: 0.9em;">
+                    View Details →
+                </div>
+            </a>
+
+            <!-- Dataset 9 -->
+            <a href="datasets/Angelidis_2019.html" target="_blank" class="dataset-card" style="background: white; border: 2px solid #e0e0e0; border-radius: 10px; padding: 20px; text-decoration: none; color: inherit; transition: all 0.3s; display: block;">
+                <h3 style="margin: 0 0 10px 0; color: #667eea; font-size: 1.2em;">Angelidis_2019</h3>
+                <p style="margin: 5px 0; font-size: 0.9em;"><strong>Tissue:</strong> Lung</p>
+                <p style="margin: 5px 0; font-size: 0.9em;"><strong>Species:</strong> Mus musculus</p>
+                <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid #e0e0e0; color: #667eea; font-weight: 600; font-size: 0.9em;">
+                    View Details →
+                </div>
+            </a>
+
+            <!-- Dataset 10 -->
+            <a href="datasets/Dipali_2023.html" target="_blank" class="dataset-card" style="background: white; border: 2px solid #e0e0e0; border-radius: 10px; padding: 20px; text-decoration: none; color: inherit; transition: all 0.3s; display: block;">
+                <h3 style="margin: 0 0 10px 0; color: #667eea; font-size: 1.2em;">Dipali_2023</h3>
+                <p style="margin: 5px 0; font-size: 0.9em;"><strong>Tissue:</strong> Various</p>
+                <p style="margin: 5px 0; font-size: 0.9em;"><strong>Species:</strong> Mus musculus</p>
+                <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid #e0e0e0; color: #667eea; font-weight: 600; font-size: 0.9em;">
+                    View Details →
+                </div>
+            </a>
+
+            <!-- Dataset 11 -->
+            <a href="datasets/Schuler_2021.html" target="_blank" class="dataset-card" style="background: white; border: 2px solid #e0e0e0; border-radius: 10px; padding: 20px; text-decoration: none; color: inherit; transition: all 0.3s; display: block;">
+                <h3 style="margin: 0 0 10px 0; color: #667eea; font-size: 1.2em;">Schuler_2021</h3>
+                <p style="margin: 5px 0; font-size: 0.9em;"><strong>Tissue:</strong> Various</p>
+                <p style="margin: 5px 0; font-size: 0.9em;"><strong>Species:</strong> Mus musculus</p>
+                <div style="margin-top: 15px; padding-top: 15px; border-top: 1px solid #e0e0e0; color: #667eea; font-weight: 600; font-size: 0.9em;">
+                    View Details →
+                </div>
+            </a>
+        </div>
+
+        <style>
+            .dataset-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 16px rgba(102, 126, 234, 0.2);
+                border-color: #667eea !important;
+            }
+        </style>
+    </div>
+
+    <!-- Stats Summary -->
+    <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 25px; border-radius: 10px; margin-top: 30px;">
+        <h3 style="margin-top: 0; color: white; border: none;">📊 Current Database Status</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; margin-top: 20px;">
+            <div style="text-align: center;">
+                <div style="font-size: 2.5em; font-weight: bold;">13+</div>
+                <div style="opacity: 0.9;">Studies</div>
+            </div>
+            <div style="text-align: center;">
+                <div style="font-size: 2.5em; font-weight: bold;">200k+</div>
+                <div style="opacity: 0.9;">Protein Measurements</div>
+            </div>
+            <div style="text-align: center;">
+                <div style="font-size: 2.5em; font-weight: bold;">8+</div>
+                <div style="opacity: 0.9;">Tissues</div>
+            </div>
+            <div style="text-align: center;">
+                <div style="font-size: 2.5em; font-weight: bold;">4</div>
+                <div style="opacity: 0.9;">Species</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #e0e0e0; text-align: center; color: #666;">
+        <p>
+            <strong>Contact:</strong> daniel@improvado.io &nbsp;|&nbsp;
+            <strong>Last updated:</strong> 2025-10-18 &nbsp;|&nbsp;
+            <strong>Version:</strong> 2.0
+        </p>
+        <p style="font-size: 0.9em; margin-top: 15px;">
+            Built with Claude Code, Python, Plotly, and ❤️ for longevity research
+        </p>
+    </div>
+</div>
