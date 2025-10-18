@@ -15,7 +15,7 @@ warnings.filterwarnings('ignore')
 
 # Constants
 DATA_PATH = '/Users/Kravtsovd/projects/ecm-atlas/08_merged_ecm_dataset/merged_ecm_aging_zscore.csv'
-OUTPUT_DIR = '/Users/Kravtsovd/projects/ecm-atlas/10_insights/'
+OUTPUT_DIR = './visualizations/'
 
 def load_data():
     """Load and prepare dataset"""

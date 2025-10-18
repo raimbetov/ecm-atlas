@@ -806,7 +806,7 @@ def main():
     comp_df = compare_with_competing_pathways(df)
 
     # Generate visualizations
-    output_dir = '/Users/Kravtsovd/projects/ecm-atlas/10_insights'
+    output_dir = './visualizations'
     create_visualizations(df, activity_df, delta_df, corr_matrix, pred_df,
                          causality_df, comp_df, output_dir)
 

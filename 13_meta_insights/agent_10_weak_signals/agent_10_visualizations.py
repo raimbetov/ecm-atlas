@@ -11,7 +11,7 @@ from scipy import stats
 
 # Load results
 df_proteins = pd.read_csv('/Users/Kravtsovd/projects/ecm-atlas/all_protein_statistics.csv')
-weak_signals = pd.read_csv('/Users/Kravtsovd/projects/ecm-atlas/weak_signal_proteins.csv')
+weak_signals = pd.read_csv('./visualizations/weak_signal_proteins.csv')
 df_full = pd.read_csv('/Users/Kravtsovd/projects/ecm-atlas/08_merged_ecm_dataset/merged_ecm_aging_zscore.csv')
 df_full = df_full[df_full['Zscore_Delta'].notna()]
 
@@ -56,7 +56,7 @@ for idx, gene in enumerate(top_proteins[:4]):
     ax.grid(True, alpha=0.3)
 
 plt.tight_layout()
-plt.savefig('/Users/Kravtsovd/projects/ecm-atlas/weak_signal_forest_plots.png', dpi=300, bbox_inches='tight')
+plt.savefig('./visualizations/weak_signal_forest_plots.png', dpi=300, bbox_inches='tight')
 print("Saved: weak_signal_forest_plots.png")
 plt.close()
 
@@ -107,7 +107,7 @@ ax.legend(fontsize=10)
 ax.grid(True, alpha=0.3)
 
 plt.tight_layout()
-plt.savefig('/Users/Kravtsovd/projects/ecm-atlas/weak_signal_landscape.png', dpi=300, bbox_inches='tight')
+plt.savefig('./visualizations/weak_signal_landscape.png', dpi=300, bbox_inches='tight')
 print("Saved: weak_signal_landscape.png")
 plt.close()
 
@@ -188,7 +188,7 @@ ax.set_title('Cumulative Effect Distribution\n(Sum of all Z-score deltas per pro
 ax.legend()
 
 plt.tight_layout()
-plt.savefig('/Users/Kravtsovd/projects/ecm-atlas/weak_signal_statistical_analysis.png', dpi=300, bbox_inches='tight')
+plt.savefig('./visualizations/weak_signal_statistical_analysis.png', dpi=300, bbox_inches='tight')
 print("Saved: weak_signal_statistical_analysis.png")
 plt.close()
 
@@ -236,7 +236,7 @@ ax2.legend()
 ax2.grid(True, axis='x', alpha=0.3)
 
 plt.tight_layout()
-plt.savefig('/Users/Kravtsovd/projects/ecm-atlas/weak_signal_matrisome_enrichment.png', dpi=300, bbox_inches='tight')
+plt.savefig('./visualizations/weak_signal_matrisome_enrichment.png', dpi=300, bbox_inches='tight')
 print("Saved: weak_signal_matrisome_enrichment.png")
 plt.close()
 
@@ -277,7 +277,7 @@ ax.set_xlabel('Tissue', fontsize=11)
 ax.set_ylabel('Gene Symbol', fontsize=11)
 
 plt.tight_layout()
-plt.savefig('/Users/Kravtsovd/projects/ecm-atlas/weak_signal_tissue_heatmap.png', dpi=300, bbox_inches='tight')
+plt.savefig('./visualizations/weak_signal_tissue_heatmap.png', dpi=300, bbox_inches='tight')
 print("Saved: weak_signal_tissue_heatmap.png")
 plt.close()
 

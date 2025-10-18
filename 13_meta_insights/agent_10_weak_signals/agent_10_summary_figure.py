@@ -187,7 +187,7 @@ ax4.text(0.05, 0.95, insights_text,
 fig.suptitle('WEAK SIGNAL AMPLIFIER: ECM AGING WHISPERS\n14 Proteins with Small but Consistent Changes',
             fontsize=16, fontweight='bold', y=0.98)
 
-plt.savefig('/Users/Kravtsovd/projects/ecm-atlas/weak_signal_summary.png',
+plt.savefig('./visualizations/weak_signal_summary.png',
            dpi=300, bbox_inches='tight', facecolor='white')
 print("Saved: weak_signal_summary.png")
 plt.close()

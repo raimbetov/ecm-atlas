@@ -386,7 +386,7 @@ detected_proteins = [p for p in scaffold_genes if p in scaffold_df['Canonical_Ge
 if len(detected_proteins) >= 2:
     corr_matrix, tissue_protein_matrix = create_correlation_matrix(
         scaffold_df, detected_proteins,
-        '/Users/Kravtsovd/projects/ecm-atlas/10_insights/agent_12_correlation_matrix.png'
+        './visualizations/agent_12_correlation_matrix.png'
     )
     print("\nCorrelation matrix created successfully")
     print(f"Strong positive correlations (r > 0.6):")
@@ -405,7 +405,7 @@ print("\nTop 10 tissues by inflammatory scaffold score:")
 print(scaffold_scores.head(10).to_string())
 
 # Save scores
-scaffold_scores.to_csv('/Users/Kravtsovd/projects/ecm-atlas/10_insights/agent_12_scaffold_scores.csv', index=False)
+scaffold_scores.to_csv('./visualizations/agent_12_scaffold_scores.csv', index=False)
 
 # 4. Identify protective (VCAN-negative) tissues
 print("\n4. Identifying VCAN-negative (protective) tissues...")
@@ -417,7 +417,7 @@ print(protective_tissues.to_string())
 print("\n5. Analyzing temporal cascade: VCAN vs TGF-β pathway...")
 temporal_df = analyze_temporal_cascade(
     df,
-    '/Users/Kravtsovd/projects/ecm-atlas/10_insights/agent_12_temporal_cascade.png'
+    './visualizations/agent_12_temporal_cascade.png'
 )
 print("\nTemporal analysis completed")
 if len(temporal_df) > 0:
@@ -430,14 +430,14 @@ if len(temporal_df) > 0:
 print("\n6. Creating comprehensive tissue x protein heatmap...")
 heatmap_df = create_comprehensive_heatmap(
     scaffold_df, detected_proteins,
-    '/Users/Kravtsovd/projects/ecm-atlas/10_insights/agent_12_tissue_protein_heatmap.png'
+    './visualizations/agent_12_tissue_protein_heatmap.png'
 )
 
 # 7. Hyaluronan metabolism analysis
 print("\n7. Analyzing hyaluronan metabolism balance...")
 ha_balance = analyze_ha_metabolism(
     df,
-    '/Users/Kravtsovd/projects/ecm-atlas/10_insights/agent_12_ha_metabolism.png'
+    './visualizations/agent_12_ha_metabolism.png'
 )
 if len(ha_balance) > 0:
     print("\nHA metabolism balance (top 5 tissues with highest synthesis):")
@@ -490,7 +490,7 @@ for category, proteins_dict in [
             summary_data['Pct_Increasing'].append((gene_data > 0).sum() / len(gene_data) * 100)
 
 summary_df = pd.DataFrame(summary_data).sort_values(['Category', 'Mean_Zscore_Delta'], ascending=[True, False])
-summary_df.to_csv('/Users/Kravtsovd/projects/ecm-atlas/10_insights/agent_12_summary_statistics.csv', index=False)
+summary_df.to_csv('./visualizations/agent_12_summary_statistics.csv', index=False)
 
 print("\nSummary statistics saved")
 print("\n" + "="*80)

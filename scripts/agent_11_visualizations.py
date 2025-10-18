@@ -296,7 +296,7 @@ def main():
     print("="*80)
 
     df = load_data()
-    output_dir = "/Users/Kravtsovd/projects/ecm-atlas/10_insights/"
+    output_dir = "./visualizations/"
 
     # Generate figures
     plot_human_vs_mouse_correlation(df, f"{output_dir}agent_11_fig1_human_mouse_correlation.png")

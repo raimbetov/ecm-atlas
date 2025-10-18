@@ -473,7 +473,7 @@ for i, v in enumerate(timing_summary.values):
     ax10.text(v + 5, i, str(v), va='center')
 
 plt.tight_layout()
-plt.savefig('/Users/Kravtsovd/projects/ecm-atlas/10_insights/agent_12_temporal_dynamics_visualizations.png',
+plt.savefig('./visualizations/agent_12_temporal_dynamics_visualizations.png',
             dpi=300, bbox_inches='tight')
 print("✓ Saved visualizations")
 
@@ -485,28 +485,28 @@ print("7. SAVING RESULTS")
 print("="*80)
 
 # Save all tables
-temporal_df.to_csv('/Users/Kravtsovd/projects/ecm-atlas/10_insights/agent_12_temporal_ordering.csv', index=False)
+temporal_df.to_csv('./visualizations/agent_12_temporal_ordering.csv', index=False)
 print("✓ Saved temporal_ordering.csv")
 
 if len(precedence_df) > 0:
-    precedence_df.to_csv('/Users/Kravtsovd/projects/ecm-atlas/10_insights/agent_12_causal_precedence.csv', index=False)
+    precedence_df.to_csv('./visualizations/agent_12_causal_precedence.csv', index=False)
     print("✓ Saved causal_precedence.csv")
 
 if len(tipping_df) > 0:
-    tipping_df.to_csv('/Users/Kravtsovd/projects/ecm-atlas/10_insights/agent_12_phase_transitions.csv', index=False)
+    tipping_df.to_csv('./visualizations/agent_12_phase_transitions.csv', index=False)
     print("✓ Saved phase_transitions.csv")
 
-trajectory_df.to_csv('/Users/Kravtsovd/projects/ecm-atlas/10_insights/agent_12_aging_trajectories.csv', index=False)
+trajectory_df.to_csv('./visualizations/agent_12_aging_trajectories.csv', index=False)
 print("✓ Saved aging_trajectories.csv")
 
-intervention_df.to_csv('/Users/Kravtsovd/projects/ecm-atlas/10_insights/agent_12_intervention_windows.csv', index=False)
+intervention_df.to_csv('./visualizations/agent_12_intervention_windows.csv', index=False)
 print("✓ Saved intervention_windows.csv")
 
-age_df.to_csv('/Users/Kravtsovd/projects/ecm-atlas/10_insights/agent_12_study_age_info.csv', index=False)
+age_df.to_csv('./visualizations/agent_12_study_age_info.csv', index=False)
 print("✓ Saved study_age_info.csv")
 
 # Save protein loadings
-protein_loadings.to_csv('/Users/Kravtsovd/projects/ecm-atlas/10_insights/agent_12_pc1_loadings.csv', index=False)
+protein_loadings.to_csv('./visualizations/agent_12_pc1_loadings.csv', index=False)
 print("✓ Saved pc1_loadings.csv")
 
 print("\n" + "="*80)

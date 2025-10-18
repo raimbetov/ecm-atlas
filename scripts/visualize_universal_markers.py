@@ -10,9 +10,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # File paths
-DATA_FILE = "/Users/Kravtsovd/projects/ecm-atlas/10_insights/agent_01_universal_markers_data.csv"
-MERGED_CSV = "/Users/Kravtsovd/projects/ecm-atlas/08_merged_ecm_dataset/merged_ecm_aging_zscore.csv"
-OUTPUT_DIR = "/Users/Kravtsovd/projects/ecm-atlas/10_insights/"
+DATA_FILE = "../../10_insights/agent_01_universal_markers_data.csv"
+MERGED_CSV = "../../08_merged_ecm_dataset/merged_ecm_aging_zscore.csv"
+OUTPUT_DIR = "./visualizations/"
 
 def create_heatmap_top_candidates(merged_df, results_df, top_n=20):
     """Create heatmap for top N universal candidates across all tissues"""

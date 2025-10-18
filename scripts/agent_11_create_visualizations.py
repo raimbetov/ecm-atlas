@@ -76,7 +76,7 @@ def create_figure1_protein_ranking(protein_stats):
     ax.legend(handles=legend_elements, loc='lower right', fontsize=10)
 
     plt.tight_layout()
-    plt.savefig('/Users/Kravtsovd/projects/ecm-atlas/10_insights/fig1_bm_protein_ranking.png', dpi=300, bbox_inches='tight')
+    plt.savefig('./visualizations/fig1_bm_protein_ranking.png', dpi=300, bbox_inches='tight')
     print("✓ Saved: fig1_bm_protein_ranking.png")
     plt.close()
 
@@ -105,7 +105,7 @@ def create_figure2_heatmap(heatmap_data):
     plt.xticks(rotation=45, ha='right')
     plt.yticks(rotation=0)
     plt.tight_layout()
-    plt.savefig('/Users/Kravtsovd/projects/ecm-atlas/10_insights/fig2_bm_tissue_heatmap.png', dpi=300, bbox_inches='tight')
+    plt.savefig('./visualizations/fig2_bm_tissue_heatmap.png', dpi=300, bbox_inches='tight')
     print("✓ Saved: fig2_bm_tissue_heatmap.png")
     plt.close()
 
@@ -139,7 +139,7 @@ def create_figure3_col4a3_analysis(protein_stats):
 
     plt.suptitle('COL4A3 Analysis (red = COL4A3)', fontsize=14, fontweight='bold', y=1.02)
     plt.tight_layout()
-    plt.savefig('/Users/Kravtsovd/projects/ecm-atlas/10_insights/fig3_col4a3_analysis.png', dpi=300, bbox_inches='tight')
+    plt.savefig('./visualizations/fig3_col4a3_analysis.png', dpi=300, bbox_inches='tight')
     print("✓ Saved: fig3_col4a3_analysis.png")
     plt.close()
 
@@ -183,7 +183,7 @@ def create_figure4_breach_correlation(breach_correlation):
     ax.legend(loc='best', fontsize=10)
 
     plt.tight_layout()
-    plt.savefig('/Users/Kravtsovd/projects/ecm-atlas/10_insights/fig4_breach_correlation.png', dpi=300, bbox_inches='tight')
+    plt.savefig('./visualizations/fig4_breach_correlation.png', dpi=300, bbox_inches='tight')
     print("✓ Saved: fig4_breach_correlation.png")
     plt.close()
 
@@ -225,7 +225,7 @@ def create_figure5_therapeutic_targets(therapeutic_targets):
         ax.text(score + 0.01, i, f'{score:.3f}', va='center', fontsize=8)
 
     plt.tight_layout()
-    plt.savefig('/Users/Kravtsovd/projects/ecm-atlas/10_insights/fig5_therapeutic_targets.png', dpi=300, bbox_inches='tight')
+    plt.savefig('./visualizations/fig5_therapeutic_targets.png', dpi=300, bbox_inches='tight')
     print("✓ Saved: fig5_therapeutic_targets.png")
     plt.close()
 
@@ -264,7 +264,7 @@ def create_figure6_family_comparison(protein_stats):
     ax2.grid(axis='x', alpha=0.3)
 
     plt.tight_layout()
-    plt.savefig('/Users/Kravtsovd/projects/ecm-atlas/10_insights/fig6_family_comparison.png', dpi=300, bbox_inches='tight')
+    plt.savefig('./visualizations/fig6_family_comparison.png', dpi=300, bbox_inches='tight')
     print("✓ Saved: fig6_family_comparison.png")
     plt.close()
 

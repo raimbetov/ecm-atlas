@@ -17,7 +17,7 @@ warnings.filterwarnings('ignore')
 
 # Configuration
 DATA_PATH = "/Users/Kravtsovd/projects/ecm-atlas/08_merged_ecm_dataset/merged_ecm_aging_zscore.csv"
-OUTPUT_DIR = Path("/Users/Kravtsovd/projects/ecm-atlas/10_insights")
+OUTPUT_DIR = Path("./visualizations")
 OUTPUT_DIR.mkdir(exist_ok=True)
 
 # Define target proteins

@@ -14,7 +14,7 @@ from pathlib import Path
 
 # Configuration
 DATA_PATH = Path("/Users/Kravtsovd/projects/ecm-atlas/08_merged_ecm_dataset/merged_ecm_aging_zscore.csv")
-OUTPUT_PATH = Path("/Users/Kravtsovd/projects/ecm-atlas/10_insights")
+OUTPUT_PATH = Path("./visualizations")
 OUTPUT_PATH.mkdir(exist_ok=True)
 
 # WNT Pathway Components (comprehensive)
