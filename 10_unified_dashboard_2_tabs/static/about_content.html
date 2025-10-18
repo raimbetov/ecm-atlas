@@ -69,8 +69,8 @@ graph LR
                 <li><strong>13+ studies</strong> from 2017-2023</li>
                 <li><strong>~200,000 rows</strong> of protein measurements</li>
                 <li><strong>Key columns:</strong> Protein_ID, Gene_Symbol, Tissue, Compartment, Age, Abundance, Z_score, Study_ID</li>
-                <li><strong>Tissues:</strong> Kidney, Lung, Heart, Skin, Disc, Pancreas, Brain, Muscle</li>
-                <li><strong>Species:</strong> Human, Mouse, Cow, Rat</li>
+                <li><strong>Tissues:</strong> Kidney, Lung, Heart, Skin, Intervertebral Disc, Brain, Skeletal Muscle, Ovary</li>
+                <li><strong>Species:</strong> Human (Homo sapiens), Mouse (Mus musculus)</li>
             </ul>
         </div>
         <div style="background: #f8f9fa; padding: 20px; border-radius: 8px;">
@@ -167,10 +167,11 @@ graph LR
             </p>
         </div>
         <div style="background: #f8f9fa; padding: 15px; border-radius: 8px;">
-            <h4 style="color: #667eea; margin-top: 0; font-size: 1em;">Zero Values</h4>
+            <h4 style="color: #667eea; margin-top: 0; font-size: 1em;">Zero Values → NaN Conversion</h4>
             <p style="font-size: 0.95em; margin-bottom: 0;">
-                <strong>0.0 abundance</strong> means protein was detected but measured as absent/undetectable.
-                These are valid measurements included in mean/std calculations and produce valid z-scores.
+                <strong>All zeros are converted to NaN</strong> during processing. True zero abundance is biologically
+                impossible in proteomics (instruments cannot measure absolute zero). Reported zeros are artifacts from
+                imputation or background subtraction, so we transform them to NaN (missing values) using <code>.replace(0, np.nan)</code>.
             </p>
         </div>
     </div>
