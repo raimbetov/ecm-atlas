@@ -466,7 +466,12 @@ def dashboard():
 
 @app.route('/datasets/<path:filename>')
 def serve_datasets(filename):
-    return send_from_directory('datasets', filename)
+    import os
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    datasets_dir = os.path.join(base_dir, 'datasets')
+    if not os.path.exists(datasets_dir):
+        datasets_dir = '/app/10_unified_dashboard_2_tabs/datasets'
+    return send_from_directory(datasets_dir, filename)
 
 @app.route('/static/<path:filename>')
 def serve_static(filename):
