@@ -5,6 +5,8 @@ ECM-Atlas aggregates 13 proteomic studies (128 files, 15 papers) tracking age-re
 
 YOU MUST before creating new files, search if solution already exist, like if you want to test dashbord, look if we alrady ahve code for this etc. and reuse existing code and documents and folders. 
 
+YOU MUST If I ask you to do some work with multiple objects, analyze a lot of papers or different data set, always suggest me to run it in parallel in sub-agents. 
+
 you must use 03_KNOWLEDGE_FRAMEWORK_DOCUMENTATION_STANDARDS.md for every docuemnt .md file you create!! read it before creating a documents. 
 
 ## Overview
