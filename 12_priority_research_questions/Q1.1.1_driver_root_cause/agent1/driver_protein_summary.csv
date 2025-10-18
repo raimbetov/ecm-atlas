@@ -1,0 +1,5 @@
+Canonical_Gene_Symbol,Mean_Zscore_Delta,Std_Zscore_Delta,N_Measurements,N_Studies,N_Tissues,Mean_Zscore_Old,Mean_Zscore_Young,Directional_Consistency_%
+COL6A5,-1.419,,1,1,1,-1.14,0.28,100.0
+COL21A1,-0.566,0.538,4,3,4,-0.259,0.307,75.0
+COL14A1,-0.381,0.355,8,5,8,-0.101,0.28,87.5
+PCOLCE,-0.287,0.469,4,2,4,0.72,1.006,75.0

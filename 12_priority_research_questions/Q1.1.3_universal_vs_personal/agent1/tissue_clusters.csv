@@ -1,0 +1,19 @@
+Tissue,Cluster_2,Cluster_3,Cluster_4
+Brain_Cortex,2,2,3
+Brain_Hippocampus,2,2,3
+Heart_Decellularized_Tissue,2,2,3
+Heart_Native_Tissue,1,1,1
+Intervertebral_disc_IAF,2,2,3
+Intervertebral_disc_NP,2,2,3
+Intervertebral_disc_Nucleus_pulposus,1,1,2
+Intervertebral_disc_OAF,2,2,3
+Kidney_Glomerular,2,3,4
+Kidney_Tubulointerstitial,1,1,1
+Lung,2,2,3
+Ovary,2,2,3
+Ovary_Cortex,2,2,3
+Skeletal_muscle_EDL,2,2,3
+Skeletal_muscle_Gastrocnemius,2,2,3
+Skeletal_muscle_Soleus,2,2,3
+Skeletal_muscle_TA,2,2,3
+Skin dermis,1,1,1

@@ -1,0 +1,5 @@
+Protein,Name,ATP_Cost,Synthesis_Threshold,Limiting_Age,Observed_Delta_Z
+Col14a1,Collagen XIV,15000.0,-50.0,,-0.927
+TNXB,Tenascin-XB,9600.0,4.0,,-0.752
+LAMB1,Laminin β1,9600.0,4.0,,-0.594
+SERPINH1,HSP47,3000.0,70.0,65.0,-0.497

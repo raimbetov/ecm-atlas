@@ -1,0 +1,9 @@
+Tissue,Mean_Delta_Z,Std_Delta_Z,Records,Studies
+Skin dermis,-0.356,0.696,4,1
+Kidney_Tubulointerstitial,-0.042,0.336,3,1
+Heart_Native_Tissue,0.107,0.967,3,1
+Intervertebral_disc_NP,0.135,1.577,5,1
+Kidney_Glomerular,0.173,0.251,3,1
+Intervertebral_disc_OAF,0.304,0.701,5,1
+Intervertebral_disc_IAF,0.326,1.607,4,1
+Ovary_Cortex,0.693,1.518,2,1

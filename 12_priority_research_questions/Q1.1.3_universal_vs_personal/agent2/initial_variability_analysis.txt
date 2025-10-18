@@ -1,0 +1,30 @@
+=== INTER-INDIVIDUAL VARIABILITY ANALYSIS ===
+
+Total measurements: 9343
+Measurements with ≥3 replicates per group: 2352 (25.2%)
+Unique studies: 12
+Unique proteins: 1167
+
+=== SAMPLE SIZES BY STUDY ===
+                        Median_N_Old  Median_N_Young  N_Proteins
+Study_ID                                                        
+Angelidis_2019                   4.0             4.0         283
+Caldeira_2017                    NaN             NaN           4
+Dipali_2023                      5.0             5.0         169
+LiDermis_2021                    2.0             5.0         262
+Ouni_2022                        NaN             NaN          98
+Randles_2021                     NaN             NaN         202
+Santinha_2024_Human              NaN             NaN         203
+Santinha_2024_Mouse_DT           NaN             NaN         155
+Santinha_2024_Mouse_NT           NaN             NaN         190
+Schuler_2021                     3.0             3.0         397
+Tam_2020                         3.0             3.0         406
+Tsumagari_2023                   NaN             NaN         216
+
+=== Z-SCORE VARIABILITY ===
+Mean |Zscore_Delta|: 0.291
+Std |Zscore_Delta|: 0.332
+Proteins with |Zscore_Delta| > 2: 52 (0.6%)
+
+=== OUTPUT SAVED ===
+{'total_measurements': 9343, 'sufficient_replicates': 2352, 'unique_studies': 12, 'unique_proteins': 1167}

@@ -1,0 +1,13 @@
+INTER-INDIVIDUAL VARIABILITY SUMMARY
+============================================================
+
+Total measurements: 9,343
+Studies: 12
+Proteins: 1167
+Tissues: 18
+Measurements with ≥3 replicates: 2,352 (25.2%)
+
+KEY FINDINGS:
+- Only 25.2% of measurements have ≥3 biological replicates
+- 532 proteins found in multiple studies (potential universal markers)
+- Mean |Δz-score|: 0.291 ± 0.332

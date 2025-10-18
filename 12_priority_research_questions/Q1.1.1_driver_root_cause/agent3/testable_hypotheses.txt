@@ -1,0 +1,43 @@
+
+TESTABLE HYPOTHESES FROM SENESCENCE ANALYSIS:
+
+H1: TEMPORAL HYPOTHESIS
+   Senescent fibroblast burden increases linearly from age 30-50 and correlates
+   inversely with PCOLCE, COL14A1, and COL15A1 protein abundance.
+
+   Test: Longitudinal biopsy study measuring p16+ cells and driver proteins
+
+H2: TISSUE SUSCEPTIBILITY HYPOTHESIS
+   Tissues with highest metabolic demand and mechanical stress (skin, IVD, cartilage)
+   accumulate senescent cells earliest and show strongest driver protein decline.
+
+   Test: Multi-tissue senescence burden quantification in age-matched cohorts
+
+H3: SASP CAUSALITY HYPOTHESIS
+   SASP-secreted MMPs directly degrade driver proteins while SASP cytokines
+   (IL-6, IL-8) suppress fibroblast collagen synthesis genes.
+
+   Test: In vitro conditioned media from senescent → young fibroblasts;
+         measure driver protein expression and MMP activity
+
+H4: SENOLYTIC REVERSAL HYPOTHESIS
+   Dasatinib + Quercetin treatment in age 40-60 cohort will:
+   • Reduce senescent cell burden (↓p16, ↓SA-β-Gal)
+   • Restore collagen synthesis (↑COL1A1, ↑PCOLCE)
+   • Improve tissue ECM organization
+
+   Test: Phase 2 clinical trial with tissue biopsies pre/post treatment
+
+H5: p21-SMAD3-ECM PATHWAY HYPOTHESIS
+   p21 activation → Rb hypophosphorylation → Rb-SMAD3 interaction →
+   aberrant ECM gene expression (paradoxical fibrosis with poor quality)
+
+   Test: ChIP-seq for Rb-SMAD3 binding at COL14A1, PCOLCE promoters in
+         senescent vs. proliferative fibroblasts
+
+H6: BIPHASIC ECM REMODELING HYPOTHESIS
+   Early senescence (age 30-40): Synthesis decline dominates
+   Late senescence (age 50+): Degradation increase dominates
+   Both phases mediated by increasing senescent cell burden
+
+   Test: Age-stratified analysis of synthesis/degradation enzyme ratios

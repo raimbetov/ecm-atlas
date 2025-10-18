@@ -1,0 +1,9 @@
+{
+  "sample_sizes": {
+    "total_measurements": 9343,
+    "studies_analyzed": 12,
+    "unique_proteins": 1167,
+    "tissues_analyzed": 18
+  },
+  "replicate_distribution": {
+    

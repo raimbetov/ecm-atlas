@@ -1,0 +1,9 @@
+Gene,N_Methods,Methods
+IL17B,3,"Current_ZScore, Rank_Spearman, Global_Standard"
+MATN3,3,"Current_ZScore, Rank_Spearman, Global_Standard"
+Angptl7,3,"Current_ZScore, Rank_Spearman, Global_Standard"
+VTN,2,"Current_ZScore, Percentile_Norm"
+Myoc,2,"Current_ZScore, Global_Standard"
+Epx,2,"Current_ZScore, Global_Standard"
+CHAD,2,"Rank_Spearman, Global_Standard"
+Col14a1,2,"Current_ZScore, Percentile_Norm"

@@ -1,0 +1,26 @@
+HYPOTHESIS GENERATION CANDIDATES
+======================================================================
+
+HIGH VARIABILITY (Personalized markers):
+- PRG2: CV=2003360%
+- PLXNB2: CV=15592%
+- Serpina1d: CV=11798%
+- LMAN1: CV=8383%
+- Prelp: CV=7600%
+- Adam17: CV=7567%
+- Ctsh: CV=5649%
+- COL7A1: CV=5542%
+- Vcan: CV=5328%
+- Col1a2: CV=4952%
+
+LOW VARIABILITY (Universal markers):
+- HCFC1: CV=10%, mean Δz=-0.58
+- COL10A1: CV=15%, mean Δz=0.43
+- Plod1: CV=16%, mean Δz=-0.20
+- ANXA3: CV=22%, mean Δz=-0.42
+- Col4a3: CV=22%, mean Δz=0.55
+- EMILIN2: CV=27%, mean Δz=-0.55
+- ANGPTL2: CV=28%, mean Δz=0.50
+- Angptl2: CV=30%, mean Δz=0.61
+- S100a1: CV=34%, mean Δz=0.07
+- SERPINB8: CV=35%, mean Δz=-0.40

@@ -1,0 +1,5 @@
+Method,Significant_Proteins,Known_Marker_Recovery,Q1_Driver_Recovery,Strong_Decliner_Recovery,Biological_Validity
+Current_ZScore,120,0.0%,33.3%,40.0%,Low
+Percentile_Norm,26,15.0%,66.7%,20.0%,Low
+Rank_Spearman,23,15.0%,0.0%,0.0%,Low
+Global_Standard,17,17.6%,0.0%,0.0%,Medium

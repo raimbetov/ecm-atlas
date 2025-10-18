@@ -1,0 +1,5 @@
+Method,Top_20_Proteins,Known_Marker_Matches,Precision,Recall,F1_Score,Matched_Genes
+Current_ZScore,20,0,0.0%,0.0%,0.0%,[]
+Percentile_Norm,20,3,15.0%,5.4%,7.9%,"['MATN2', 'TNXB', 'VTN']"
+Rank_Spearman,20,3,15.0%,5.4%,7.9%,"['HAPLN3', 'MATN3', 'PRG4']"
+Global_Standard,17,3,17.6%,5.4%,8.2%,"['CHAD', 'HAPLN3', 'MATN3']"

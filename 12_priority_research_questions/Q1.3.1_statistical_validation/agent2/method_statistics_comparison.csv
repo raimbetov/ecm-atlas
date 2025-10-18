@@ -1,0 +1,6 @@
+Method,N_Proteins_Analyzed,N_Significant_p005,Pct_Significant,Most_Conservative,Strongest_Signal
+Current_ZScore,679,120,17.7%,No,Yes
+Percentile_Norm,341,26,7.6%,No,No
+Rank_Spearman,679,23,3.4%,No,No
+Mixed_Effects,51,0,0.0%,Yes,No
+Global_Standard,679,17,2.5%,No,No

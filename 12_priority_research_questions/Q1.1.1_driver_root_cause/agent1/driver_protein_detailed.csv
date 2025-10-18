@@ -1,0 +1,18 @@
+Canonical_Gene_Symbol,Study_ID,Tissue,Zscore_Delta,Zscore_Old,Zscore_Young,Species,Method
+COL14A1,LiDermis_2021,Skin dermis,-0.776,0.676,1.452,Homo sapiens,Label-free LC-MS/MS
+COL14A1,Tam_2020,Intervertebral_disc_IAF,-0.762,-0.235,0.527,Homo sapiens,Label-free LC-MS/MS (MaxQuant LFQ)
+COL14A1,Tam_2020,Intervertebral_disc_NP,-0.757,-0.18,0.577,Homo sapiens,Label-free LC-MS/MS (MaxQuant LFQ)
+COL14A1,Ouni_2022,Ovary_Cortex,-0.38,0.047,0.427,Homo sapiens,DC-MaP + TMTpro 16-plex
+COL14A1,Tam_2020,Intervertebral_disc_OAF,-0.281,1.211,1.492,Homo sapiens,Label-free LC-MS/MS (MaxQuant LFQ)
+COL14A1,Santinha_2024_Human,Heart_Native_Tissue,-0.167,-0.997,-0.83,Homo sapiens,TMT-10plex LC-MS/MS
+COL14A1,Randles_2021,Kidney_Glomerular,-0.084,-0.416,-0.332,Homo sapiens,Label-free LC-MS/MS (Progenesis + Mascot)
+COL14A1,Randles_2021,Kidney_Tubulointerstitial,0.162,-0.914,-1.076,Homo sapiens,Label-free LC-MS/MS (Progenesis + Mascot)
+COL21A1,Santinha_2024_Human,Heart_Native_Tissue,-1.129,0.768,1.897,Homo sapiens,TMT-10plex LC-MS/MS
+COL21A1,LiDermis_2021,Skin dermis,-0.902,-0.867,0.036,Homo sapiens,Label-free LC-MS/MS
+COL21A1,Randles_2021,Kidney_Tubulointerstitial,-0.251,-0.906,-0.655,Homo sapiens,Label-free LC-MS/MS (Progenesis + Mascot)
+COL21A1,Randles_2021,Kidney_Glomerular,0.017,-0.033,-0.05,Homo sapiens,Label-free LC-MS/MS (Progenesis + Mascot)
+COL6A5,LiDermis_2021,Skin dermis,-1.419,-1.14,0.28,Homo sapiens,Label-free LC-MS/MS
+PCOLCE,LiDermis_2021,Skin dermis,-0.957,-0.276,0.681,Homo sapiens,Label-free LC-MS/MS
+PCOLCE,Tam_2020,Intervertebral_disc_NP,-0.219,0.898,1.117,Homo sapiens,Label-free LC-MS/MS (MaxQuant LFQ)
+PCOLCE,Tam_2020,Intervertebral_disc_IAF,-0.095,1.058,1.153,Homo sapiens,Label-free LC-MS/MS (MaxQuant LFQ)
+PCOLCE,Tam_2020,Intervertebral_disc_OAF,0.124,1.198,1.075,Homo sapiens,Label-free LC-MS/MS (MaxQuant LFQ)

@@ -1,0 +1,5 @@
+Method,Strong_Decliners_Found,Total_Strong_Decliners,Recovery_Rate,Recovered_Genes
+Current_ZScore,2,5,40.0%,"['COL14A1', 'TNXB']"
+Percentile_Norm,1,5,20.0%,['TNXB']
+Rank_Spearman,0,5,0.0%,[]
+Global_Standard,0,5,0.0%,[]

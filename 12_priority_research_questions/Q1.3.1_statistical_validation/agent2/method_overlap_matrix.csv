@@ -1,0 +1,5 @@
+,Current_ZScore,Percentile_Norm,Rank_Spearman,Global_Standard
+Current_ZScore,10.0,2.0,3.0,5.0
+Percentile_Norm,2.0,10.0,0.0,0.0
+Rank_Spearman,3.0,0.0,10.0,4.0
+Global_Standard,5.0,0.0,4.0,10.0

@@ -1,0 +1,126 @@
+================================================================================
+DEEP VERIFICATION: REPRODUCING KEY CLAIMS INDEPENDENTLY
+================================================================================
+
+🔴 CRITICAL FINDING 1: PROTEIN COUNT DISCREPANCY
+================================================================================
+Agent claim: 3,317 unique proteins
+My count (Protein_ID): 3757 proteins
+My count (Gene_Symbol): 3396 gene symbols
+DISCREPANCY: 440 more proteins than claimed (13.3% difference)
+
+Matrisome-annotated only: 1376 proteins
+Non-matrisome proteins: 2381
+
+================================================================================
+VERIFYING: '405 universal proteins (12.2%)'
+================================================================================
+
+MY CALCULATION: 405 universal proteins (≥3 tissues, ≥70% consistency)
+AGENT CLAIM: 405 universal proteins
+DISCREPANCY: 0 proteins (0.0% difference)
+
+Top 10 universal proteins by my calculation:
+    Gene_Symbol  N_Tissues  Consistency Direction  Mean_Abs_Delta
+153          Hp          4   100.000000        UP        1.784741
+107        PRG4          5   100.000000        UP        1.549276
+120       IL17B          3   100.000000      DOWN        1.421826
+152     Angptl7          3   100.000000        UP        1.356908
+359       Smoc2          4    75.000000        UP        1.268876
+154     Col14a1          6   100.000000      DOWN        1.232739
+30          VTN         10    80.000000        UP        1.188531
+164      Pcolce          6   100.000000      DOWN        1.082679
+29          HPX          9    77.777778        UP        1.067010
+56        ITIH2          7    71.428571        UP        1.062881
+
+================================================================================
+VERIFYING: TOP 5 UNIVERSAL MARKERS
+================================================================================
+Claimed top 5: ['Hp', 'VTN', 'Col14a1', 'F2', 'FGB']
+
+Checking if these proteins appear in my universal list:
+✓ Hp: 4 tissues, 100.0% consistency, Δz=1.785
+✓ VTN: 10 tissues, 80.0% consistency, Δz=1.078
+✓ Col14a1: 6 tissues, 100.0% consistency, Δz=-1.233
+✓ F2: 13 tissues, 78.6% consistency, Δz=0.478
+✓ FGB: 10 tissues, 90.0% consistency, Δz=0.738
+
+================================================================================
+VERIFYING: '7 GOLD-TIER PROTEINS (≥5 studies, >80% consistency)'
+================================================================================
+
+MY CALCULATION: 20 GOLD-tier proteins (≥5 studies, >80% consistency)
+AGENT CLAIM: 7 GOLD-tier proteins
+
+My GOLD-tier proteins:
+Gene_Symbol  N_Studies  Consistency  Mean_Delta
+      PLOD3          5   100.000000   -0.158839
+        F12          6    85.714286    0.345106
+        FGA          7    83.333333    0.607209
+        FGB          7    90.000000    0.738343
+       LRG1          5   100.000000    0.662124
+   SERPIND1          6    87.500000    0.563041
+     COL5A2          7    83.333333   -0.318888
+   SERPINE2          5    83.333333    0.230130
+     COL6A3          7   100.000000   -0.236938
+       TNXB          6    87.500000   -0.640098
+     COL8A1          5    85.714286   -0.044760
+      TIMP3          5    87.500000    0.857137
+    COL14A1          6    88.888889   -0.397184
+       VWA1          6   100.000000   -0.258133
+      ITIH5          6    87.500000   -0.214328
+      ANXA3          5   100.000000   -0.287914
+   SERPINB9          5   100.000000   -0.278754
+      HCFC1          5   100.000000   -0.319082
+    S100A16          7    83.333333   -0.101955
+    EMILIN2          5   100.000000   -0.476041
+
+Checking claimed GOLD-tier proteins:
+✗ VTN: Only 7 studies, 80.0% consistency (DOESN'T MEET GOLD CRITERIA)
+✓ FGB: 7 studies, 90.0% consistency
+✓ FGA: 7 studies, 83.3% consistency
+✗ PCOLCE: Only 4 studies, 66.7% consistency (DOESN'T MEET GOLD CRITERIA)
+✗ CTSF: Only 2 studies, 66.7% consistency (DOESN'T MEET GOLD CRITERIA)
+✗ SERPINH1: Only 7 studies, 70.0% consistency (DOESN'T MEET GOLD CRITERIA)
+✗ MFGE8: Only 6 studies, 55.6% consistency (DOESN'T MEET GOLD CRITERIA)
+
+================================================================================
+VERIFYING: 'Perfect protein correlations (r=1.000)'
+================================================================================
+RED FLAG WARNING: Perfect correlations (r=1.000) are statistically suspicious
+- Could indicate: Data duplication, analysis error, or extremely small sample
+- In biology, r=1.000 is virtually impossible with n>5
+
+CTGF ↔ IGFALS:
+  My calculation: r=1.0000, n=3 shared tissues
+  Agent claim: r=1.000
+  🔴 WARNING: Nearly perfect correlation with small n=3 - likely spurious!
+
+Asah1 ↔ Lman2:
+  My calculation: r=-1.0000, n=3 shared tissues
+  Agent claim: r=1.000
+  ✗ MAJOR DISCREPANCY: My r=-1.0000 vs claimed r=1.000
+
+CTSD ↔ TIMP2:
+  My calculation: r=0.5072, n=6 shared tissues
+  Agent claim: r=1.000
+  ✗ MAJOR DISCREPANCY: My r=0.5072 vs claimed r=1.000
+
+================================================================================
+SUMMARY OF VERIFICATION
+================================================================================
+
+✓ VERIFIED:
+  - Dataset size: 9,343 rows
+
+🟡 DISCREPANCIES FOUND:
+  - Protein count: 3757 vs claimed 3,317 (440 difference)
+  - Universal proteins: 405 vs claimed 405 (0 difference)
+  - GOLD-tier proteins: 20 vs claimed 7
+
+🔴 RED FLAGS:
+  - Perfect correlations (r=1.000) are statistically implausible
+  - Lifespan extension claims (+20-30 years) lack clear justification
+  - 'Nobel Prize potential' is subjective hype, not scientific assessment
+
+================================================================================
