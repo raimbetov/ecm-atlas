@@ -1,0 +1,13 @@
+Insight_ID,Tier,Original_Metric,V2_Metric,Change_Percent,Classification,Notes
+G1,GOLD,12.2% universal (405/3317),15.6% universal (182/1167),+27.8%,CONFIRMED,"182 universal proteins, top-5 overlap: 2/5, top-5: ['Hp', 'LRG1', 'FCN2']"
+G2,GOLD,"PCOLCE Δz=-0.82, 88% consistency","PCOLCE Δz=-0.36, 100% consistency",+56.2%,REJECTED,"2 studies, 100% consistency (depletion)"
+G3,GOLD,"Study_ID PC1=0.674, Age PC1=-0.051",PC1 variance=0.139 (batch-corrected),N/A (different metric),MODIFIED,"PC1 variance: 13.9%, 1166 proteins × 18 samples"
+G4,GOLD,"14 proteins (|Δz|=0.3-0.8, consistency≥65%)",394 proteins (same criteria),+2714.3%,CONFIRMED,"394 proteins in weak signal range, top: ['Angptl1', 'Sfrp4', 'Col4a1']"
+G5,GOLD,52 entropy transition proteins,426 high-entropy proteins (CV>1.5),+719.2%,MODIFIED,"426 high-entropy proteins (CV>1.5), median CV: 1.40"
+G6,GOLD,11 antagonistic events,INSUFFICIENT_DATA,N/A,INSUFFICIENT_DATA,No multi-compartment tissues found
+G7,GOLD,"8/1167 shared (0.7%), R=-0.71","5/1168 shared (0.4%), R=0.95",-0.3pp,MODIFIED,"5/1168 shared (0.4%), R=0.95"
+S1,SILVER,"FGA=0.88, FGB=0.89, SERPINC1=3.01","FGA: 0.80, FGB: 0.98, SERPINC1: 0.56",N/A (multi-protein),CONFIRMED,All coagulation proteins upregulated
+S2,SILVER,"3 temporal windows (40-50, 50-65, 65+)",Age stratification present,N/A (temporal analysis),MODIFIED,Age stratification preserved in V2
+S3,SILVER,"TIMP3 Δz=3.14, 81% consistency","TIMP3 Δz=1.53, 86% consistency",-51.2%,REJECTED,86% consistency (accumulation)
+S4,SILVER,"13 proteins TSI>3.0, top: KDM5C (TSI=32.7)",386 proteins TSI>3.0,+2869.2%,CONFIRMED,"386 proteins TSI>3.0, top: CLEC14A"
+S5,SILVER,"7-protein panel: ['Hp', 'VTN', 'FGB', 'F2']",2/4 proteins remain in top-20,50% stability,MODIFIED,2/4 panel proteins in V2 top-20

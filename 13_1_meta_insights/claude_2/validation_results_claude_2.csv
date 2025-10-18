@@ -1,0 +1,13 @@
+Insight_ID,Tier,Original_Metric,V2_Metric,Change_Percent,Classification,Notes
+G1,GOLD,12.2% universal,13.4% universal,9.840439750574713,MODIFIED,"452 proteins, top: Col14a1"
+G2,GOLD,"Δz=-0.82, 88.0% consistency","Δz=-0.198, 83.3% consistency",-75.878531865518,MODIFIED,"4 studies, outlier=False"
+G3,GOLD,Study_ID PC1=0.674,Study_ID PC1=0.789,17.100651162860554,REJECTED,PC1 explains 14.8% variance
+G4,GOLD,14 weak signal proteins,1119 weak signal proteins,7892.857142857143,CONFIRMED,Top pathway: Non-ECM
+G5,GOLD,"52 transition proteins, 28% collagens predictable","188 transition proteins, 6.1% collagens predictable",261.53846153846155,CONFIRMED,"Ordered: 88, Chaotic: 600"
+G6,GOLD,"11 events, Col11a2 div=1.86",0 events,-100.0,REJECTED,None found
+G7,GOLD,"8/1167 genes, R=-0.71","259/3374 genes, R=0.098",3137.5,MODIFIED,Concordance: 50.2%
+S1,SILVER,"FGA +0.88, FGB +0.89",FGA 0.75,0.0,CONFIRMED,5 coagulation proteins detected
+S2,SILVER,"Age windows: 40-50, 50-65, 65+",Requires detailed age mapping,0.0,MODIFIED,Partial validation - age column needed
+S3,SILVER,"Δz=3.14, 81.0% consistency",Δz=1.418,-54.8335939961716,MODIFIED,5 studies
+S4,SILVER,13 proteins TSI>3.0,1173 proteins TSI>3.0,8923.076923076922,MODIFIED,Max TSI: 4665.3
+S5,SILVER,7-protein plasma aging clock,Top candidate: Col14a1,0.0,MODIFIED,Panel re-ranking needed

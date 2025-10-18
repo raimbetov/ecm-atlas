@@ -1,0 +1,14 @@
+Discovery_Type,Protein_Pattern,Metric,Description
+New_Universal_Marker,Pcolce,Universality=0.927,"Tissues=6, Consistency=100.0%"
+New_Universal_Marker,Serpinh1,Universality=0.781,"Tissues=8, Consistency=100.0%"
+New_Universal_Marker,LRG1,Universality=0.760,"Tissues=8, Consistency=100.0%"
+New_Universal_Marker,Serpinf1,Universality=0.736,"Tissues=7, Consistency=100.0%"
+New_Universal_Marker,FMOD,Universality=0.661,"Tissues=7, Consistency=100.0%"
+Extreme_Effect,PTX3,Δz=5.106,Outlier effect size
+Extreme_Effect,ASTL,Δz=-4.880,Outlier effect size
+Extreme_Effect,PNPLA4,Δz=4.706,Outlier effect size
+Emergent_Weak_Signal,ACAD9,Δz=0.768,"Consistency=100.0%, Category=None"
+Emergent_Weak_Signal,ACADM,Δz=0.458,"Consistency=100.0%, Category=None"
+Emergent_Weak_Signal,ACADSB,Δz=0.359,"Consistency=100.0%, Category=None"
+Emergent_Weak_Signal,ACADVL,Δz=-0.438,"Consistency=100.0%, Category=None"
+Emergent_Weak_Signal,ACAN,Δz=0.442,"Consistency=66.7%, Category=Proteoglycans"

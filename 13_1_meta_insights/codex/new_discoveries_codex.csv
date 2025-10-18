@@ -1,0 +1,31 @@
+Discovery_Type,Gene_Symbol,Metric_Value,Context
+Universal Marker,ADAM10,0.4556490622769783,Emerges as universal in V2
+Universal Marker,ADAMTSL4,0.564863428491891,Emerges as universal in V2
+Universal Marker,AEBP1,0.6477828186499764,Emerges as universal in V2
+Universal Marker,AGRN,0.7332029500667665,Emerges as universal in V2
+Universal Marker,ANGPTL5,0.4557489626276599,Emerges as universal in V2
+Universal Marker,ANGPTL7,0.579230634390063,Emerges as universal in V2
+Universal Marker,ANXA11,0.6209533516485995,Emerges as universal in V2
+Universal Marker,ANXA2;ANXA2P2,0.597583228799135,Emerges as universal in V2
+Universal Marker,ANXA5,0.582604424879418,Emerges as universal in V2
+Universal Marker,ARG1,0.6856944937456878,Emerges as universal in V2
+Universal Marker,BCAN,0.5513528577552026,Emerges as universal in V2
+Universal Marker,BMP1,0.5454979850688064,Emerges as universal in V2
+Universal Marker,BMP3,0.4206406492899291,Emerges as universal in V2
+Universal Marker,CCL18,0.5991676492399923,Emerges as universal in V2
+Universal Marker,CCL21,0.4641462776652364,Emerges as universal in V2
+Universal Marker,CHADL,0.5712528699921376,Emerges as universal in V2
+Universal Marker,CLEC3B,0.5287769259555091,Emerges as universal in V2
+Universal Marker,COL16A1,0.6384331564811838,Emerges as universal in V2
+Universal Marker,COL18A1,0.6393668525800311,Emerges as universal in V2
+Universal Marker,COL1A1,0.6377490779087376,Emerges as universal in V2
+Antagonistic Pair,LMAN1,4.031843549331862,Intervertebral_disc: IAF↑3.37 vs OAF↓-0.67
+Antagonistic Pair,LMAN1,3.726363815554453,Intervertebral_disc: NP↑3.06 vs OAF↓-0.67
+Antagonistic Pair,CPN2,3.6399300570024806,Intervertebral_disc: NP↑2.89 vs OAF↓-0.75
+Antagonistic Pair,F9,3.4546444048230907,Intervertebral_disc: IAF↑3.24 vs OAF↓-0.21
+Antagonistic Pair,MFAP4,3.375727057498467,Intervertebral_disc: IAF↑3.17 vs OAF↓-0.20
+Tissue-Specific Marker,S100a5,33.32591302987466,Brain_Hippocampus | Δz=3.72
+Tissue-Specific Marker,Col6a4,27.46347473104584,Lung | Δz=3.30
+Tissue-Specific Marker,PLOD1,24.49385367491953,Skin dermis | Δz=2.51
+Tissue-Specific Marker,Vwa9,23.583668511149778,Ovary | Δz=2.36
+Tissue-Specific Marker,PLXDC2,23.407606808082576,Skin dermis | Δz=2.34
