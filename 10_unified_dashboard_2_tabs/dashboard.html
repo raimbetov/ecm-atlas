@@ -6,6 +6,20 @@
     <title>ECM Atlas - Unified Analysis Dashboard</title>
     <script src="https://cdn.plot.ly/plotly-2.26.0.min.js"></script>
     <link rel="stylesheet" href="static/styles.css">
+    <script>
+        window.API_BASE = (() => {
+            const protocol = window.location.protocol;
+            const hostname = window.location.hostname;
+            const port = window.location.port;
+            
+            if (hostname === 'localhost' || hostname === '127.0.0.1') {
+                return `${protocol}//localhost:5004`;
+            }
+            
+            const baseUrl = `${protocol}//${hostname}${port ? ':' + port : ''}`;
+            return baseUrl;
+        })();
+    </script>
 </head>
 <body>
     <!-- Header -->

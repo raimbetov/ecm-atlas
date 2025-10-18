@@ -10,6 +10,9 @@ scipy>=1.10.0
 flask>=3.0.0
 flask-cors>=4.0.0
 
+# Environment Configuration
+python-dotenv>=1.0.0
+
 # Optional: Interactive Notebooks
 jupyter>=1.0.0
 notebook>=7.0.0

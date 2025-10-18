@@ -1,6 +1,6 @@
 // Main.js - Core functionality and tab navigation
 
-const API_BASE = 'http://localhost:5004';
+const API_BASE = window.API_BASE || 'http://localhost:5004';
 
 // Global state
 let globalData = {
@@ -39,7 +39,7 @@ async function loadGlobalData() {
     } catch (error) {
         console.error('Error loading global data:', error);
         showLoading(false);
-        alert('Error loading data. Please check if API server is running on port 5004.');
+        alert(`Error loading data. API is not responding at ${API_BASE}`);
     }
 }
 

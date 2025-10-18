@@ -4,12 +4,16 @@ Unified Flask API Server for ECM Atlas Dashboard
 Supports both individual dataset analysis and cross-dataset comparison
 """
 
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, send_from_directory
 from flask_cors import CORS
 from flask.json.provider import DefaultJSONProvider
 import pandas as pd
 import numpy as np
 import os
+from dotenv import load_dotenv
+import sys
+
+load_dotenv()
 
 # Custom JSON provider for safe NaN handling
 class NaNSafeJSONProvider(DefaultJSONProvider):
@@ -55,12 +59,20 @@ def series_to_json_safe(series):
 # Load merged data on startup
 print("Loading ECM Atlas data...")
 script_dir = os.path.dirname(os.path.abspath(__file__))
-data_path = os.path.join(script_dir, '../08_merged_ecm_dataset/merged_ecm_aging_zscore.csv')
+
+data_path = os.getenv('DATA_PATH', '08_merged_ecm_dataset/merged_ecm_aging_zscore.csv')
+if not os.path.isabs(data_path):
+    data_path = os.path.join(script_dir, '..', data_path)
+
+if not os.path.exists(data_path):
+    print(f"❌ ERROR: Data file not found at {data_path}")
+    sys.exit(1)
+
 df = pd.read_csv(data_path)
-print(f"Loaded {len(df)} entries ({df['Protein_ID'].nunique()} unique proteins)")
+print(f"✓ Loaded {len(df)} entries ({df['Protein_ID'].nunique()} unique proteins)")
 # Check if enriched version is loaded (has Data_Quality column)
 if 'Data_Quality' in df.columns:
-    print(f"  ✅ Using enriched dataset: {(df['Data_Quality'] == 'Enriched_UniProt').sum()} records from UniProt")
+    print(f"  ✓ Using enriched dataset: {(df['Data_Quality'] == 'Enriched_UniProt').sum()} records from UniProt")
 
 # ===== GLOBAL ENDPOINTS =====
 
@@ -105,10 +117,13 @@ def get_datasets():
     """Get list of available datasets with metadata"""
     datasets = []
 
-    for dataset_name in df['Dataset_Name'].unique():
+    for dataset_name in df['Dataset_Name'].dropna().unique():
         dataset_df = df[df['Dataset_Name'] == dataset_name]
+        
+        if len(dataset_df) == 0:
+            continue
+            
         organ = to_json_safe(dataset_df['Organ'].iloc[0])
-        # Filter out NaN from compartments list
         compartments = [c for c in dataset_df['Compartment'].unique() if pd.notna(c)]
 
         datasets.append({
@@ -278,15 +293,19 @@ def get_compare_filters():
     """Get available filter options for cross-dataset comparison"""
 
     organs = []
-    for organ in df['Organ'].unique():
+    for organ in df['Organ'].dropna().unique():
         organs.append({
             "name": organ,
             "count": int(df[df['Organ'] == organ]['Protein_ID'].nunique())
         })
 
     compartments = []
-    for compartment in df['Compartment'].unique():
+    for compartment in df['Compartment'].dropna().unique():
         compartment_data = df[df['Compartment'] == compartment]
+        
+        if len(compartment_data) == 0:
+            continue
+            
         compartments.append({
             "name": compartment,
             "count": int(compartment_data['Protein_ID'].nunique()),
@@ -301,7 +320,7 @@ def get_compare_filters():
         })
 
     studies = []
-    for study in df['Dataset_Name'].unique():
+    for study in df['Dataset_Name'].dropna().unique():
         studies.append({
             "name": study,
             "count": int(df[df['Dataset_Name'] == study]['Protein_ID'].nunique())
@@ -422,6 +441,18 @@ def get_compare_heatmap():
         }
     })
 
+@app.route('/')
+def index():
+    return send_from_directory('.', 'dashboard.html')
+
+@app.route('/dashboard.html')
+def dashboard():
+    return send_from_directory('.', 'dashboard.html')
+
+@app.route('/static/<path:filename>')
+def serve_static(filename):
+    return send_from_directory('static', filename)
+
 if __name__ == '__main__':
     print("\n" + "="*70)
     print("ECM Atlas - Unified API Server")
@@ -447,7 +478,12 @@ if __name__ == '__main__':
     print(f"  {df['Dataset_Name'].nunique()} datasets")
     print(f"  {df['Organ'].nunique()} organs")
     print(f"  {df['Compartment'].nunique()} compartments")
-    print("\nStarting server on http://localhost:5004")
+    
+    port = int(os.getenv('PORT', 5004))
+    host = os.getenv('HOST', '0.0.0.0')
+    debug = os.getenv('DEBUG', 'False').lower() == 'true'
+    
+    print(f"\nStarting server on http://{host}:{port}")
     print("="*70 + "\n")
 
-    app.run(host='0.0.0.0', port=5004, debug=False)
+    app.run(host=host, port=port, debug=debug)
