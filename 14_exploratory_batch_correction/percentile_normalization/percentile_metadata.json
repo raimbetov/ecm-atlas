@@ -1,0 +1,16 @@
+{
+  "timestamp": "2025-10-18 08:27:09",
+  "runtime_seconds": 9.302356719970703,
+  "n_proteins_tested": 326,
+  "n_significant_p": 29,
+  "n_significant_fdr": 1,
+  "driver_recovery_rate": 20.0,
+  "drivers_recovered": [
+    "TNXB"
+  ],
+  "percentile_range": [
+    0.009601536245799328,
+    100.0
+  ],
+  "percentile_mean": 50.03282814466269
+}

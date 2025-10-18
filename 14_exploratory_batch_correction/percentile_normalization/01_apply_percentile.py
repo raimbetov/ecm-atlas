@@ -46,7 +46,7 @@ print("✓ Environment ready\n")
 
 print("Loading merged ECM dataset...")
 
-data_path = "../../08_merged_ecm_dataset/merged_ecm_aging_zscore.csv"
+data_path = "../data/merged_ecm_aging_long_format.csv"
 
 if not Path(data_path).exists():
     raise FileNotFoundError(f"Data file not found: {data_path}")
