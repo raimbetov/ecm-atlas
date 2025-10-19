@@ -66,10 +66,10 @@ graph LR
             <h4 style="color: #667eea; margin-top: 0;">Main Database</h4>
             <p><code>merged_ecm_aging_zscore.csv</code></p>
             <ul style="font-size: 0.95em;">
-                <li><strong>13+ studies</strong> from 2017-2023</li>
-                <li><strong>~200,000 rows</strong> of protein measurements</li>
+                <li><strong>14 datasets</strong> from 2017-2023</li>
+                <li><strong>3,715 measurements</strong> (1,106 unique ECM proteins)</li>
                 <li><strong>Key columns:</strong> Protein_ID, Gene_Symbol, Tissue, Compartment, Age, Abundance, Z_score, Study_ID</li>
-                <li><strong>Tissues:</strong> Kidney, Lung, Heart, Skin, Intervertebral Disc, Brain, Skeletal Muscle, Ovary</li>
+                <li><strong>Tissues:</strong> Kidney, Lung, Heart, Skin dermis, Intervertebral disc, Brain, Skeletal muscle, Ovary</li>
                 <li><strong>Species:</strong> Human (Homo sapiens), Mouse (Mus musculus)</li>
             </ul>
         </div>
@@ -214,7 +214,7 @@ graph TD
     D --> D1[08_merged_ecm_dataset<br/>Unified Database]
     D --> D2[10_unified_dashboard_2_tabs<br/>This Dashboard]
 
-    D1 --> E[merged_ecm_aging_zscore.csv<br/>~200k rows]
+    D1 --> E[merged_ecm_aging_zscore.csv<br/>3,715 measurements<br/>1,106 ECM proteins]
     D2 --> F[Interactive Visualizations]
 
     style A fill:#667eea,color:#fff
@@ -259,20 +259,20 @@ graph TD
         <h3 style="margin-top: 0; color: white; border: none;">📊 Current Database Status</h3>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; margin-top: 20px;">
             <div style="text-align: center;">
-                <div style="font-size: 2.5em; font-weight: bold;">13+</div>
-                <div style="opacity: 0.9;">Studies</div>
+                <div style="font-size: 2.5em; font-weight: bold;">14</div>
+                <div style="opacity: 0.9;">Datasets</div>
             </div>
             <div style="text-align: center;">
-                <div style="font-size: 2.5em; font-weight: bold;">200k+</div>
-                <div style="opacity: 0.9;">Protein Measurements</div>
+                <div style="font-size: 2.5em; font-weight: bold;">1,106</div>
+                <div style="opacity: 0.9;">ECM Proteins</div>
             </div>
             <div style="text-align: center;">
-                <div style="font-size: 2.5em; font-weight: bold;">8+</div>
-                <div style="opacity: 0.9;">Tissues</div>
+                <div style="font-size: 2.5em; font-weight: bold;">8</div>
+                <div style="opacity: 0.9;">Organs</div>
             </div>
             <div style="text-align: center;">
-                <div style="font-size: 2.5em; font-weight: bold;">2</div>
-                <div style="opacity: 0.9;">Species</div>
+                <div style="font-size: 2.5em; font-weight: bold;">16</div>
+                <div style="opacity: 0.9;">Compartments</div>
             </div>
         </div>
     </div>

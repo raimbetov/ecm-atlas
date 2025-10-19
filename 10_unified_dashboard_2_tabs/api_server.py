@@ -142,7 +142,8 @@ def get_datasets():
             "study_id": study_id,
             "name": dataset_name,  # Keep for backward compatibility
             "display_name": dataset_name.replace('_', ' '),
-            "tissue": tissue,
+            "organ": tissue,  # Main field used by frontend
+            "tissue": tissue,  # Keep for backward compatibility
             "species": species,
             "compartments": compartments,
             "total_samples": total_samples,
@@ -216,7 +217,7 @@ def get_dataset_volcano(dataset_name, compartment):
     dataset_df['NegLog_Abundance'] = -np.log10(dataset_df['Avg_Abundance'] + 1)
 
     return jsonify({
-        "genes": dataset_df['Gene_Symbol'].tolist(),
+        "genes": dataset_df['Gene_Symbol'].fillna('Unknown').tolist(),
         "zscore_delta": series_to_json_safe(dataset_df['Zscore_Delta']),
         "neglog_abundance": series_to_json_safe(dataset_df['NegLog_Abundance']),
         "zscore_young": series_to_json_safe(dataset_df['Zscore_Young']),
@@ -232,7 +233,7 @@ def get_dataset_scatter(dataset_name, compartment):
         return jsonify({"error": "Dataset/compartment not found"}), 404
 
     return jsonify({
-        "genes": dataset_df['Gene_Symbol'].tolist(),
+        "genes": dataset_df['Gene_Symbol'].fillna('Unknown').tolist(),
         "zscore_young": series_to_json_safe(dataset_df['Zscore_Young']),
         "zscore_old": series_to_json_safe(dataset_df['Zscore_Old']),
         "zscore_delta": series_to_json_safe(dataset_df['Zscore_Delta']),

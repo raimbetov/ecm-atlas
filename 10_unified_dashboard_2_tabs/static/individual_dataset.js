@@ -394,8 +394,10 @@ const IndividualDataset = (function() {
             ];
 
             // Diagonal reference line
-            const minVal = Math.min(...data.zscore_young, ...data.zscore_old);
-            const maxVal = Math.max(...data.zscore_young, ...data.zscore_old);
+            // Filter out null values before calculating min/max
+            const allValues = [...data.zscore_young, ...data.zscore_old].filter(v => v !== null && v !== undefined && !isNaN(v));
+            const minVal = Math.min(...allValues);
+            const maxVal = Math.max(...allValues);
             traces.push({
                 type: 'scatter',
                 mode: 'lines',
@@ -555,7 +557,8 @@ const IndividualDataset = (function() {
             });
 
             // Diagonal reference line
-            const allValues = [...data.zscore_delta_comp1, ...data.zscore_delta_comp2];
+            // Filter out null values before calculating min/max
+            const allValues = [...data.zscore_delta_comp1, ...data.zscore_delta_comp2].filter(v => v !== null && v !== undefined && !isNaN(v));
             const minVal = Math.min(...allValues);
             const maxVal = Math.max(...allValues);
             traces.push({
