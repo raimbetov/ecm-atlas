@@ -6,3 +6,5 @@
 
 12_priority_research_questions/Q2.1.1_AAV_delivery/agent1/AGENT1_AAV_DELIVERY_STRATEGY.md
 12_priority_research_questions/Q2.1.1_AAV_delivery/agent1/PATENT_LANDSCAPE_ANALYSIS.md
+
+что Это не связано, как бы нестиоремы не с термодинамикой, что это связано на самом деле с значением этого белка в правильной сборке Матрица и применением лечения фиброза
