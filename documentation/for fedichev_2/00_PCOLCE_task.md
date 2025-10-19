@@ -1,0 +1,8 @@
+
+
+сделай двух старничку докуметн октоырй обеденит эти два докумнта 
+про PCOLCE Ну как бы, что невропатия это как бы не та, это не целевой indication, что нужно, как бы смотреть эту технологию в отрыве от на самом деле? это
+Что это один из возможных механизмов для терапии фиброза?
+
+12_priority_research_questions/Q2.1.1_AAV_delivery/agent1/AGENT1_AAV_DELIVERY_STRATEGY.md
+12_priority_research_questions/Q2.1.1_AAV_delivery/agent1/PATENT_LANDSCAPE_ANALYSIS.md
