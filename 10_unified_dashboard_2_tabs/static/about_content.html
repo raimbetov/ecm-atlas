@@ -1,30 +1,30 @@
         <section class="section" id="mission">
-            <h2><span class="science-icon"></span>Mission</h2>
+            <h2><span class="science-icon" data-number="1"></span>Mission</h2>
             <p>ECM-Atlas is a unified database aggregating 13+ proteomic studies to track age-related changes in the extracellular matrix (ECM) across tissues and organisms. Our goal is to identify universal aging biomarkers and therapeutic targets by analyzing cross-tissue ECM signatures.</p>
         </section>
 
         <section class="section" id="why-ecm">
-            <h2><span class="science-icon"></span>Why ECM Matters for Aging</h2>
+            <h2><span class="science-icon" data-number="2"></span>Why ECM Matters for Aging</h2>
             <p>The extracellular matrix (ECM) is a complex biological scaffold that provides structural foundation to all tissues and organs. Beyond anchoring cells, the ECM creates a mechanical and biochemical environment that directs cellular functions through various stimuli, influencing gene expression and tissue homeostasis.</p>
         </section>
 
         <section class="section" id="matrisome">
-            <h2><span class="science-icon"></span>The Matrisome and Temporal Dynamics</h2>
+            <h2><span class="science-icon" data-number="3"></span>The Matrisome and Temporal Dynamics</h2>
             <p>The matrisome comprises all proteins that constitute the ECM—1,027 genes in humans and 1,110 genes in mice. Each tissue contains over 150 ECM and ECM-associated proteins with characteristic compositional differences. As a dynamic structure, the ECM composition changes as a function of age.</p>
             <table class="matrisome-table">
-                <tr>
+                <tr class="category-challenge">
                     <td><strong>Challenge:</strong></td>
                     <td>Limited knowledge of temporal matrisome changes across life stages</td>
                 </tr>
-                <tr>
+                <tr class="category-gap">
                     <td><strong>Gap:</strong></td>
                     <td>Proteomic data better reflects ECM reality than transcriptomic signatures</td>
                 </tr>
-                <tr>
+                <tr class="category-opportunity">
                     <td><strong>Opportunity:</strong></td>
                     <td>Recent proteomic studies (2017-2024) provide time-resolved ECM data</td>
                 </tr>
-                <tr>
+                <tr class="category-solution">
                     <td><strong>Solution:</strong></td>
                     <td>Integrate public datasets to understand ECM aging signatures and identify intervention targets</td>
                 </tr>
@@ -32,7 +32,7 @@
         </section>
 
         <section class="section" id="pipeline">
-            <h2><span class="science-icon"></span>Data Processing Pipeline</h2>
+            <h2><span class="science-icon" data-number="4"></span>Data Processing Pipeline</h2>
             <p>Raw proteomic datasets flow through an autonomous normalization pipeline into a unified database with standardized z-scores for cross-study comparison.</p>
             <figure>
                 <div class="mermaid">
@@ -55,24 +55,27 @@ graph LR
         </section>
 
         <section class="section" id="structure">
-            <h2><span class="science-icon"></span>Database Structure</h2>
+            <h2><span class="science-icon" data-number="5"></span>Database Structure</h2>
             <div class="structure-grid">
                 <div class="structure-block">
                     <h3>Overview <code>merged_ecm_aging_zscore.csv</code></h3>
                     <ul class="features-list">
                         <li>14 datasets from 2017-2023</li>
                         <li>3,715 measurements (1,106 unique ECM proteins)</li>
-                        <li class="structure-item">
-                            <div class="structure-label"><strong>Key columns:</strong></div>
-                            <div class="structure-data">Protein_ID, Gene_Symbol, Tissue, Compartment, Age, Abundance, Z_score, Study_ID</div>
-                        </li>
-                        <li class="structure-item">
-                            <div class="structure-label"><strong>Tissues:</strong></div>
-                            <div class="structure-data">Kidney, Lung, Heart, Skin dermis, Intervertebral disc, Brain, Skeletal muscle, Ovary</div>
-                        </li>
-                <li><strong>Species:</strong> Human (Homo sapiens), Mouse (Mus musculus)</li>
-            </ul>
-        </div>
+                        <li><strong>Species:</strong> Human (Homo sapiens), Mouse (Mus musculus)</li>
+                    </ul>
+                    <div class="structure-item">
+                        <div class="structure-label">Key columns:</div>
+                        <div class="structure-data">
+                            Protein_ID, Gene_Symbol, Tissue, Compartment,<br>
+                            Age, Abundance, Z_score, Study_ID
+                        </div>
+                    </div>
+                    <div class="structure-item">
+                        <div class="structure-label">Tissues:</div>
+                        <div class="structure-data">Kidney, Lung, Heart, Skin dermis, Intervertebral disc, Brain, Skeletal muscle, Ovary</div>
+                    </div>
+                </div>
                 <div class="structure-block">
                     <h3>Features</h3>
                     <ul class="features-list">
@@ -82,13 +85,13 @@ graph LR
                         <li>UniProt ID mapping for protein standardization</li>
                         <li>Matrisome classification (Core ECM vs Associated)</li>
                         <li>Automatic backups on every update</li>
-            </ul>
-        </div>
-    </div>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <section class="section" id="datasets">
-            <h2><span class="science-icon"></span>Available Datasets <span class="dataset-counter">(14)</span></h2>
+            <h2><span class="science-icon" data-number="6"></span>Available Datasets <span class="dataset-counter">(14)</span></h2>
             <table>
                 <thead>
                     <tr>
@@ -107,61 +110,68 @@ graph LR
         </section>
 
         <section class="section" id="dashboard">
-            <h2><span class="science-icon"></span>Dashboard Features</h2>
-            <h3>Tab 1: Individual Dataset Analysis</h3>
-            <p>Explore single datasets in depth with compartment-specific visualizations. Select any dataset to view:</p>
-            <ul>
-                <li>Heatmaps: Top aging-associated proteins ranked by z-score</li>
-                <li>Volcano plots: Statistical significance vs fold-change</li>
-                <li>Scatter plots: Young vs aged abundance patterns</li>
-                <li>Compartment filters: Drill down into specific tissue regions (e.g., Kidney Glomerular vs Tubulointerstitial)</li>
-                <li>Interactive tooltips: Protein details, gene symbols, statistical values</li>
-        </ul>
-            <div class="tip">
-                Use this tab to understand aging signatures within individual studies and validate findings from specific papers.
-    </div>
-
-            <h3>Tab 2: Compare Datasets</h3>
-            <p>Perform cross-study meta-analysis to identify universal aging markers. Features include:</p>
-            <ul>
-                <li>Multi-dataset selection: Compare 2-13 studies simultaneously</li>
-                <li>Protein overlap analysis: Find proteins detected across multiple studies</li>
-                <li>Z-score distributions: Compare aging patterns across tissues/species</li>
-                <li>Consensus signatures: Identify proteins with consistent directional changes</li>
-                <li>Heterogeneity metrics: I² statistics for cross-study variability</li>
-        </ul>
-            <div class="tip">
-                Use this tab to discover universal biomarkers (e.g., COL1A1 upregulated in 12/13 studies) and prioritize therapeutic targets.
-    </div>
+            <h2><span class="science-icon" data-number="7"></span>Dashboard Features</h2>
+            <div class="structure-grid">
+                <div class="structure-block">
+                    <h3>Tab 1: Individual Dataset Analysis</h3>
+                    <p>Explore single datasets in depth with compartment-specific visualizations. Select any dataset to view:</p>
+                    <ul class="features-list">
+                        <li>Heatmaps: Top aging-associated proteins ranked by z-score</li>
+                        <li>Volcano plots: Statistical significance vs fold-change</li>
+                        <li>Scatter plots: Young vs aged abundance patterns</li>
+                        <li>Compartment filters: Drill down into specific tissue regions</li>
+                        <li>Interactive tooltips: Protein details, gene symbols, statistical values</li>
+                    </ul>
+                    <div class="tip">
+                        Use this tab to understand aging signatures within individual studies and validate findings from specific papers.
+                    </div>
+                </div>
+                <div class="structure-block">
+                    <h3>Tab 2: Compare Datasets</h3>
+                    <p>Perform cross-study meta-analysis to identify universal aging markers. Features include:</p>
+                    <ul class="features-list">
+                        <li>Multi-dataset selection: Compare 2-13 studies simultaneously</li>
+                        <li>Protein overlap analysis: Find proteins detected across multiple studies</li>
+                        <li>Z-score distributions: Compare aging patterns across tissues/species</li>
+                        <li>Consensus signatures: Identify proteins with consistent directional changes</li>
+                        <li>Heterogeneity metrics: I² statistics for cross-study variability</li>
+                    </ul>
+                    <div class="tip">
+                        Use this tab to discover universal biomarkers (e.g., COL1A1 upregulated in 12/13 studies) and prioritize therapeutic targets.
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="section" id="contributing">
-            <h2><span class="science-icon"></span>Contributing New Datasets</h2>
+            <h2><span class="science-icon" data-number="8"></span>Contributing New Datasets</h2>
             <p>ECM-Atlas uses an autonomous agent to process and integrate new proteomic datasets automatically.</p>
             <h3>How to Add Your Dataset</h3>
             <ol>
             <li>Place your raw proteomic data (Excel/TSV) in <code>data_raw/Author et al. - Year/</code></li>
             <li>Run the autonomous agent:
+
                     <pre>python autonomous_agent.py "data_raw/Author et al. - Year/"</pre>
             </li>
             <li>The agent will:
-                    <ul class="features-list">
-                        <li>Identify data files and extract Study ID</li>
-                        <li>Normalize to long format → filter ECM proteins → create wide format</li>
-                        <li>Merge into unified database with z-score calculation</li>
-                        <li>Create detailed logs (<code>agent_log.md</code>) for debugging</li>
+                <ul>
+                    <li>Identify data files and extract Study ID</li>
+                    <li>Normalize to long format → filter ECM proteins → create wide format</li>
+                    <li>Merge into unified database with z-score calculation</li>
+                    <li>Create detailed logs (<code>agent_log.md</code>) for debugging</li>
                 </ul>
             </li>
                 <li>Submit a pull request to GitHub repository</li>
                 <li>After approval, your dataset automatically appears in this dashboard!</li>
         </ol>
             <div class="tip">
-                Full instructions: See <a href="#"><code>11_subagent_for_LFQ_ingestion/</code></a> for complete documentation, examples, and troubleshooting.
+                <strong>📚 Full Instructions:</strong><br>
+                See <a href="#"><code>11_subagent_for_LFQ_ingestion/</code></a> for complete documentation, examples, and troubleshooting.
     </div>
         </section>
 
         <section class="section" id="principles">
-            <h2><span class="science-icon"></span>Data Handling Principles</h2>
+            <h2><span class="science-icon" data-number="9"></span>Data Handling Principles</h2>
             <h3>Missing Values (NaN)</h3>
             <p>50-80% NaN is normal in LFQ proteomics and represents proteins not detected in a sample. We preserve NaN values and exclude them from statistics (<code>skipna=True</code>). Never impute or remove.</p>
 
@@ -180,7 +190,7 @@ graph LR
         </section>
 
         <section class="section" id="architecture">
-            <h2><span class="science-icon"></span>System Architecture</h2>
+            <h2><span class="science-icon" data-number="10"></span>System Architecture</h2>
             <figure>
                 <div class="mermaid">
 graph TD
@@ -212,7 +222,7 @@ graph TD
         </section>
 
         <section class="section" id="links">
-            <h2><span class="science-icon"></span>Links & Resources</h2>
+            <h2><span class="science-icon" data-number="11"></span>Links & Resources</h2>
             <div class="links">
                 <div class="link-item" onclick="window.open('https://github.com/ecm-atlas/ecm-atlas', '_blank')">
                     <h4>GitHub Repository</h4>
@@ -234,25 +244,25 @@ graph TD
         </section>
 
         <section class="section" id="contributors">
-            <h2><span class="science-icon"></span>Contributors</h2>
+            <h2><span class="science-icon" data-number="12"></span>Contributors</h2>
             <p>This project is developed and maintained by a team of researchers and developers passionate about ECM biology and aging research.</p>
             <div class="links">
-                <div class="link-item">
-                    <div class="contributor-avatar"></div>
+                <a href="https://www.linkedin.com/in/raimbetov/" target="_blank" class="link-item">
+                    <img src="static/assets/rakhan.png" alt="Rakhan Aimbetov" class="contributor-avatar">
+                    <h4>Rakhan Aimbetov</h4>
+                    <p>Data Scientist & Developer</p>
+                </a>
+                <a href="https://www.linkedin.com/in/danielkravtsov" target="_blank" class="link-item">
+                    <img src="static/assets/daniel.png" alt="Daniel Kravtsov" class="contributor-avatar">
                     <h4>Daniel Kravtsov</h4>
                     <p>CEO & Founder of Improvado</p>
                     <small>daniel@improvado.io</small>
-                </div>
-                <div class="link-item">
-                    <div class="contributor-avatar"></div>
-                    <h4>Rakhan Aimbetov</h4>
-                    <p>Data Scientist & Developer</p>
-            </div>
+                </a>
             </div>
         </section>
 
         <section class="section" id="status">
-            <h2><span class="science-icon"></span>Current Database Status</h2>
+            <h2><span class="science-icon" data-number="13"></span>Current Database Status</h2>
             <div class="stats-grid">
                 <div class="stat-item">
                     <span class="stat-number">14</span>

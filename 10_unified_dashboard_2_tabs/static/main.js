@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     await loadGlobalData();
     await loadVersion();
     setupTabNavigation();
+    setupGlassNavEffects();
 
     // Initialize first tab
     if (window.IndividualDataset) {
@@ -165,15 +166,14 @@ function populateDatasetSelector() {
         datasetItem.className = 'dataset-item';
         datasetItem.dataset.datasetName = dataset.name;
 
-        // Create compact single-line layout
+        // Create compact layout with organ as subtext and count on right
         datasetItem.innerHTML = `
             <div class="dataset-item-content">
                 <div class="dataset-item-primary">
                     <span class="dataset-item-name">${dataset.display_name}</span>
-                    <span class="dataset-item-indicator">•</span>
-                    <span class="dataset-item-count">${dataset.protein_count.toLocaleString()}</span>
+                    <div class="dataset-item-organ">${dataset.organ}</div>
                 </div>
-                <div class="dataset-item-secondary">${dataset.organ}</div>
+                <div class="dataset-item-count">${dataset.protein_count.toLocaleString()}</div>
             </div>
         `;
 
@@ -221,6 +221,31 @@ function setupTabNavigation() {
             const tabName = link.getAttribute('href').substring(1); // Remove the '#'
             switchTab(tabName);
         });
+    });
+}
+
+// Setup glassmorphic nav mouse effects
+function setupGlassNavEffects() {
+    const nav = document.querySelector('nav[aria-label="Main navigation"]');
+    if (!nav) return;
+
+    nav.addEventListener('mousemove', (e) => {
+        const rect = nav.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width; // 0-1
+        const y = (e.clientY - rect.top) / rect.height; // 0-1
+        const translateX = (x - 0.5) * 2; // -1 to +1px – very very little!
+        const translateY = (y - 0.5) * 2;
+        const pulse = 0.08 + Math.abs((x - 0.5) + (y - 0.5)) * 0.04; // Tiny opacity vary 0.08-0.12
+
+        nav.style.setProperty('--nav-mouse-x', `${translateX}px`);
+        nav.style.setProperty('--nav-mouse-y', `${translateY}px`);
+        nav.style.setProperty('--nav-blob-opacity', pulse);
+    });
+
+    nav.addEventListener('mouseleave', () => {
+        nav.style.setProperty('--nav-mouse-x', '0px');
+        nav.style.setProperty('--nav-mouse-y', '0px');
+        nav.style.setProperty('--nav-blob-opacity', '1');
     });
 }
 
