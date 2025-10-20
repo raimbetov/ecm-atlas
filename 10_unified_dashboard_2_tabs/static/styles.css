@@ -1587,7 +1587,7 @@ nav[aria-label="Main navigation"] li a:hover,nav[aria-label="Main navigation"] l
             rgba(255,255,255,.03) 100%
         );
     border: 1px solid rgba(255,255,255,.15);
-    box-shadow: 0 6px 20px rgba(0,0,0,.12);
+    box-shadow: none;
     border-radius: var(--radius-md);
     padding: var(--space-md);
     backdrop-filter: blur(12px) saturate(160%);
