@@ -11,7 +11,7 @@ const IndividualDataset = (function() {
 
     async function loadDataset(datasetName) {
         try {
-            window.ECMAtlas.showLoading(true);
+            // Use per-chart placeholders only; no global overlay
 
             currentDataset = datasetName;
 
@@ -20,7 +20,7 @@ const IndividualDataset = (function() {
             datasetStats = stats;
 
             // Display dataset info
-            displayDatasetInfo(stats);
+            displayDatasetInfo(datasetName, stats);
 
             // Render content
             renderContent(stats);
@@ -31,15 +31,14 @@ const IndividualDataset = (function() {
                 await loadAllVisualizations(firstCompartment);
             }
 
-            window.ECMAtlas.showLoading(false);
+            
         } catch (error) {
             console.error('Error loading dataset:', error);
-            window.ECMAtlas.showLoading(false);
             alert(`Error loading dataset: ${error.message}`);
         }
     }
 
-    function displayDatasetInfo(stats) {
+    function displayDatasetInfo(datasetName, stats) {
         const infoDiv = document.getElementById('dataset-info');
         const compartmentList = Object.keys(stats.compartments).map(comp => {
             const compStats = stats.compartments[comp];
@@ -47,10 +46,26 @@ const IndividualDataset = (function() {
         }).join(', ');
 
         infoDiv.innerHTML = `
-            <strong>Organ:</strong> ${stats.organ} |
-            <strong>Total Proteins:</strong> ${stats.total_proteins} |
-            <strong>ECM Proteins:</strong> ${stats.ecm_proteins}<br>
-            <strong>Compartments:</strong> ${compartmentList}
+            <div class="dataset-info-section">
+                <h3 class="dataset-title">${datasetName.replace(/_/g, ' ')}</h3>
+                <div class="dataset-info-cards">
+                    <div class="dataset-info-card">
+                        <div class="dataset-info-label">Organ</div>
+                        <div class="dataset-info-value">${stats.organ}</div>
+                    </div>
+                    <div class="dataset-info-card">
+                        <div class="dataset-info-label">Total Proteins</div>
+                        <div class="dataset-info-value">${stats.total_proteins.toLocaleString()}</div>
+                    </div>
+                    <div class="dataset-info-card">
+                        <div class="dataset-info-label">ECM Proteins</div>
+                        <div class="dataset-info-value">${stats.ecm_proteins.toLocaleString()}</div>
+                    </div>
+                </div>
+                <div class="dataset-compartments-note">
+                    <strong>Compartments:</strong> ${compartmentList}
+                </div>
+            </div>
         `;
     }
 
@@ -203,19 +218,23 @@ const IndividualDataset = (function() {
         const container = document.getElementById('dataset-stats');
         const compartments = Object.keys(stats.compartments);
 
-        container.innerHTML = compartments.map(comp => {
-            const compStats = stats.compartments[comp];
-            return `
-                <div class="stat-card">
-                    <div class="number">${compStats.protein_count}</div>
-                    <div class="label">${comp} Proteins</div>
-                </div>
-                <div class="stat-card">
-                    <div class="number">${compStats.ecm_count}</div>
-                    <div class="label">${comp} ECM</div>
-                </div>
-            `;
-        }).join('');
+        container.innerHTML = `
+            <div class="stats-grid">
+                ${compartments.map(comp => {
+                    const compStats = stats.compartments[comp];
+                    return `
+                        <div class="stat-item">
+                            <span class="stat-number">${compStats.protein_count.toLocaleString()}</span>
+                            <span class="stat-label">${comp} Proteins</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">${compStats.ecm_count.toLocaleString()}</span>
+                            <span class="stat-label">${comp} ECM</span>
+                        </div>
+                    `;
+                }).join('')}
+            </div>
+        `;
     }
 
     async function loadAllVisualizations(compartment) {
@@ -300,7 +319,9 @@ const IndividualDataset = (function() {
                 margin: { l: 100, r: 100, t: 80, b: 80 }
             };
 
-            Plotly.newPlot('heatmap-chart', [trace], layout, { responsive: true });
+            // Clear placeholder and render
+            container.innerHTML = '';
+            Plotly.newPlot(container, [trace], layout, { responsive: true });
         } catch (error) {
             container.innerHTML = `<div class="error">Failed to load heatmap: ${error.message}</div>`;
         }
@@ -351,7 +372,9 @@ const IndividualDataset = (function() {
                 hovermode: 'closest'
             };
 
-            Plotly.newPlot('volcano-chart', [trace], layout, { responsive: true });
+            // Clear placeholder and render
+            container.innerHTML = '';
+            Plotly.newPlot(container, [trace], layout, { responsive: true });
         } catch (error) {
             container.innerHTML = `<div class="error">Failed to load volcano plot: ${error.message}</div>`;
         }
@@ -416,7 +439,9 @@ const IndividualDataset = (function() {
                 hovermode: 'closest'
             };
 
-            Plotly.newPlot('scatter-chart', traces, layout, { responsive: true });
+            // Clear placeholder and render
+            container.innerHTML = '';
+            Plotly.newPlot(container, traces, layout, { responsive: true });
         } catch (error) {
             container.innerHTML = `<div class="error">Failed to load scatter plot: ${error.message}</div>`;
         }
@@ -458,7 +483,9 @@ const IndividualDataset = (function() {
                 margin: { l: 100 }
             };
 
-            Plotly.newPlot('bars-chart', [trace], layout, { responsive: true });
+            // Clear placeholder and render
+            container.innerHTML = '';
+            Plotly.newPlot(container, [trace], layout, { responsive: true });
         } catch (error) {
             container.innerHTML = `<div class="error">Failed to load bar chart: ${error.message}</div>`;
         }
@@ -512,7 +539,9 @@ const IndividualDataset = (function() {
                 }]
             };
 
-            Plotly.newPlot(containerId, [trace], layout, { responsive: true });
+            // Clear placeholder and render
+            container.innerHTML = '';
+            Plotly.newPlot(container, [trace], layout, { responsive: true });
         } catch (error) {
             container.innerHTML = `<div class="error">Failed to load histogram: ${error.message}</div>`;
         }
@@ -589,7 +618,9 @@ const IndividualDataset = (function() {
                 hovermode: 'closest'
             };
 
-            Plotly.newPlot('comparison-chart', traces, layout, { responsive: true });
+            // Clear placeholder and render
+            container.innerHTML = '';
+            Plotly.newPlot(container, traces, layout, { responsive: true });
         } catch (error) {
             container.innerHTML = `<div class="error">Failed to load comparison: ${error.message}</div>`;
         }

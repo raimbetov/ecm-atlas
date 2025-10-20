@@ -149,9 +149,21 @@ def read_readme(study_id):
 
 
 def generate_dataset_page(study_id, metadata, stats, publication_info):
-    """Generate HTML page for a single dataset."""
+    """Generate HTML page for a single dataset using shared styles from styles.css."""
 
     readme_content = read_readme(study_id)
+
+    # Build tissue/compartment lists using features-list style
+    tissues_html = '<ul class="features-list">' + ''.join([f'<li>{tissue}</li>' for tissue in stats['tissues']]) + '</ul>'
+    
+    compartments_html = ''
+    if stats['compartments']:
+        compartments_html = f'''<div style="margin-top: var(--space-sm);">
+            <strong>Compartments:</strong>
+            <ul class="features-list">
+                {''.join([f'<li>{comp}</li>' for comp in stats['compartments']])}
+            </ul>
+        </div>'''
 
     html = f"""<!DOCTYPE html>
 <html lang="en">
@@ -160,211 +172,107 @@ def generate_dataset_page(study_id, metadata, stats, publication_info):
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{study_id} - ECM-Atlas Dataset</title>
     <link rel="stylesheet" href="../static/styles.css">
-    <style>
-        body {{
-            background-color: #f5f7fa;
-            padding: 20px;
-        }}
-        .container {{
-            max-width: 1200px;
-            margin: 0 auto;
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }}
-        .header-bar {{
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 30px;
-            border-radius: 10px;
-            margin-bottom: 30px;
-        }}
-        .header-bar h1 {{
-            margin: 0 0 10px 0;
-            font-size: 2em;
-        }}
-        .stat-grid {{
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin: 30px 0;
-        }}
-        .stat-card {{
-            background: #f8f9fa;
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid #667eea;
-        }}
-        .stat-value {{
-            font-size: 2em;
-            font-weight: bold;
-            color: #667eea;
-            margin-bottom: 5px;
-        }}
-        .stat-label {{
-            color: #666;
-            font-size: 0.9em;
-        }}
-        .section {{
-            margin: 30px 0;
-            padding: 20px;
-            background: #f8f9fa;
-            border-radius: 8px;
-        }}
-        .section h2 {{
-            color: #667eea;
-            margin-top: 0;
-            border-bottom: 2px solid #667eea;
-            padding-bottom: 10px;
-        }}
-        .badge {{
-            display: inline-block;
-            padding: 5px 15px;
-            background: #667eea;
-            color: white;
-            border-radius: 20px;
-            font-size: 0.9em;
-            margin: 5px;
-        }}
-        .back-button {{
-            display: inline-block;
-            padding: 10px 20px;
-            background: #667eea;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-bottom: 20px;
-            transition: background 0.3s;
-        }}
-        .back-button:hover {{
-            background: #764ba2;
-        }}
-        .publication-info {{
-            background: #e3f2fd;
-            padding: 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-            border-left: 4px solid #2196f3;
-        }}
-        .publication-info h3 {{
-            margin-top: 0;
-            color: #1565c0;
-        }}
-        pre {{
-            background: #263238;
-            color: #aed581;
-            padding: 20px;
-            border-radius: 5px;
-            overflow-x: auto;
-        }}
-        code {{
-            background: #f4f4f4;
-            padding: 2px 6px;
-            border-radius: 3px;
-            font-family: 'Courier New', monospace;
-        }}
-    </style>
 </head>
 <body>
-    <div class="container">
-        <a href="../dashboard.html" class="back-button">← Back to Dashboard</a>
+    <a href="../dashboard.html" style="display: inline-block; margin-bottom: var(--space-md); color: var(--accent); text-decoration: none; font-weight: 500;">← Back to Dashboard</a>
 
-        <div class="header-bar">
-            <h1>📊 {study_id}</h1>
-            <p style="margin: 0; opacity: 0.9; font-size: 1.1em;">
-                {publication_info.get('title', 'Dataset Details')}
-            </p>
-        </div>
+    <!-- Header Section -->
+    <div class="section">
+        <h1>📊 {study_id.replace('_', ' ')}</h1>
+        <p style="margin: 0; opacity: 0.9; font-size: 1.1em; color: var(--text-light);">
+            {publication_info.get('title', 'Dataset Details')}
+        </p>
+    </div>
 
-        <!-- Publication Information -->
-        <div class="publication-info">
-            <h3>📄 Original Publication</h3>
+    <!-- Publication Information -->
+    <div class="section">
+        <div class="tip">
+            <h3 style="margin-top: 0;">📄 Original Publication</h3>
             <p><strong>Authors:</strong> {publication_info.get('authors', 'N/A')}</p>
             <p><strong>Journal:</strong> {publication_info.get('journal', 'N/A')} ({publication_info.get('year', 'N/A')})</p>
             {f'<p><strong>PubMed ID:</strong> <a href="{publication_info.get("url", "#")}" target="_blank">{publication_info.get("pmid", "N/A")}</a></p>' if publication_info.get('pmid') != 'TBD' else ''}
             {f'<p><strong>DOI:</strong> {publication_info.get("doi", "N/A")}</p>' if publication_info.get('doi') != 'TBD' else ''}
         </div>
+    </div>
 
-        <!-- Dataset Statistics -->
+    <!-- Dataset Statistics -->
+    <div class="section">
         <h2>📈 Dataset Statistics</h2>
-        <div class="stat-grid">
-            <div class="stat-card">
-                <div class="stat-value">{stats['total_rows']:,}</div>
-                <div class="stat-label">Total Measurements</div>
+        <div class="stats-grid">
+            <div class="stat-item">
+                <span class="stat-number">{stats['total_rows']:,}</span>
+                <span class="stat-label">Total Measurements</span>
             </div>
-            <div class="stat-card">
-                <div class="stat-value">{stats['unique_proteins']:,}</div>
-                <div class="stat-label">Unique Proteins</div>
+            <div class="stat-item">
+                <span class="stat-number">{stats['unique_proteins']:,}</span>
+                <span class="stat-label">Unique Proteins</span>
             </div>
-            <div class="stat-card">
-                <div class="stat-value">{stats['ecm_proteins']:,}</div>
-                <div class="stat-label">ECM Proteins</div>
+            <div class="stat-item">
+                <span class="stat-number">{stats['ecm_proteins']:,}</span>
+                <span class="stat-label">ECM Proteins</span>
             </div>
-            <div class="stat-card">
-                <div class="stat-value">{stats['species']}</div>
-                <div class="stat-label">Species</div>
+            <div class="stat-item">
+                <span class="stat-number">{stats['species']}</span>
+                <span class="stat-label">Species</span>
             </div>
-            {f'''<div class="stat-card">
-                <div class="stat-value">{stats['age_range']['min']:.0f}-{stats['age_range']['max']:.0f}</div>
-                <div class="stat-label">Age Range</div>
+            {f'''<div class="stat-item">
+                <span class="stat-number">{stats['age_range']['min']:.0f}-{stats['age_range']['max']:.0f}</span>
+                <span class="stat-label">Age Range</span>
             </div>''' if stats['age_range'] else ''}
         </div>
+    </div>
 
-        <!-- Tissue & Compartments -->
-        <div class="section">
-            <h2>🧬 Tissue Information</h2>
-            <div>
-                <strong>Tissues:</strong>
-                {' '.join([f'<span class="badge">{tissue}</span>' for tissue in stats['tissues']])}
-            </div>
-            {f'''<div style="margin-top: 10px;">
-                <strong>Compartments:</strong>
-                {' '.join([f'<span class="badge">{comp}</span>' for comp in stats['compartments']])}
-            </div>''' if stats['compartments'] else ''}
+    <!-- Tissue & Compartments -->
+    <div class="section">
+        <h2>🧬 Tissue Information</h2>
+        <div>
+            <strong>Tissues:</strong>
+            {tissues_html}
         </div>
+        {compartments_html}
+    </div>
 
-        <!-- Data Processing -->
-        <div class="section">
-            <h2>⚙️ Data Processing</h2>
-            <h3>Pipeline Steps</h3>
-            <ol>
-                <li><strong>Raw Data Extraction:</strong> Original proteomic data extracted from supplementary materials</li>
-                <li><strong>Normalization:</strong> Converted to long format, filtered for ECM proteins (Match_Confidence > 0)</li>
-                <li><strong>Wide Format Transformation:</strong> Pivoted to sample × protein abundance matrix</li>
-                <li><strong>Merge to Unified Database:</strong> Added to <code>merged_ecm_aging_zscore.csv</code></li>
-                <li><strong>Z-score Calculation:</strong> Calculated per-compartment z-scores for cross-study comparison</li>
-            </ol>
+    <!-- Data Processing -->
+    <div class="section">
+        <h2>⚙️ Data Processing</h2>
+        <h3>Pipeline Steps</h3>
+        <ol>
+            <li><strong>Raw Data Extraction:</strong> Original proteomic data extracted from supplementary materials</li>
+            <li><strong>Normalization:</strong> Converted to long format, filtered for ECM proteins (Match_Confidence &gt; 0)</li>
+            <li><strong>Wide Format Transformation:</strong> Pivoted to sample × protein abundance matrix</li>
+            <li><strong>Merge to Unified Database:</strong> Added to <code>merged_ecm_aging_zscore.csv</code></li>
+            <li><strong>Z-score Calculation:</strong> Calculated per-compartment z-scores for cross-study comparison</li>
+        </ol>
 
-            <h3>Key Processing Parameters</h3>
-            <ul>
-                <li><strong>Study ID:</strong> <code>{study_id}</code></li>
-                <li><strong>Missing Values:</strong> Preserved (NaN = protein not detected)</li>
-                <li><strong>Zero Values:</strong> Included (0.0 = detected but absent)</li>
-                <li><strong>Normalization:</strong> Within-study z-scores per compartment</li>
-            </ul>
+        <h3>Key Processing Parameters</h3>
+        <ul>
+            <li><strong>Study ID:</strong> <code>{study_id}</code></li>
+            <li><strong>Missing Values:</strong> Preserved (NaN = protein not detected)</li>
+            <li><strong>Zero Values:</strong> Included (0.0 = detected but absent)</li>
+            <li><strong>Normalization:</strong> Within-study z-scores per compartment</li>
+        </ul>
+    </div>
+
+    <!-- README Content (if available) -->
+    {f'''<div class="section">
+        <h2>📝 Processing Notes</h2>
+        <div style="background: var(--bg-color); padding: var(--space-md); border: 1px solid var(--border-color); border-radius: var(--radius-md);">
+            {readme_content if readme_content else '<p><em>No additional processing notes available.</em></p>'}
         </div>
+    </div>''' if readme_content else ''}
 
-        <!-- README Content (if available) -->
-        {f'''<div class="section">
-            <h2>📝 Processing Notes</h2>
-            <div style="background: white; padding: 20px; border-radius: 5px;">
-                {readme_content if readme_content else '<p><em>No additional processing notes available.</em></p>'}
-            </div>
-        </div>''' if readme_content else ''}
+    <!-- Data Access -->
+    <div class="section">
+        <h2>💾 Data Access</h2>
+        <p>This dataset is included in the unified ECM-Atlas database. You can access it through:</p>
+        <ul>
+            <li><strong>Dashboard:</strong> Select "{study_id}" from the Individual Dataset Analysis tab</li>
+            <li><strong>CSV File:</strong> <code>08_merged_ecm_dataset/merged_ecm_aging_zscore.csv</code></li>
+            <li><strong>Filter:</strong> <code>df[df['Study_ID'] == '{study_id}']</code></li>
+        </ul>
 
-        <!-- Data Access -->
-        <div class="section">
-            <h2>💾 Data Access</h2>
-            <p>This dataset is included in the unified ECM-Atlas database. You can access it through:</p>
-            <ul>
-                <li><strong>Dashboard:</strong> Select "{study_id}" from the Individual Dataset Analysis tab</li>
-                <li><strong>CSV File:</strong> <code>08_merged_ecm_dataset/merged_ecm_aging_zscore.csv</code></li>
-                <li><strong>Filter:</strong> <code>df[df['Study_ID'] == '{study_id}']</code></li>
-            </ul>
-
-            <h3>Quick Start (Python)</h3>
-            <pre>import pandas as pd
+        <h3>Quick Start (Python)</h3>
+        <pre>import pandas as pd
 
 # Load unified database
 df = pd.read_csv('merged_ecm_aging_zscore.csv')
@@ -377,27 +285,39 @@ ecm_df = study_df[study_df['ECM_Class'].notna()]
 
 print(f"Total proteins: {{len(study_df['Protein_ID'].unique())}}")
 print(f"ECM proteins: {{len(ecm_df['Protein_ID'].unique())}}")</pre>
-        </div>
+    </div>
 
-        <!-- Metadata -->
-        <div class="section">
-            <h2>🔧 Metadata</h2>
-            <div style="background: white; padding: 15px; border-radius: 5px;">
-                <pre style="background: #263238; color: #aed581; padding: 15px; border-radius: 5px; overflow-x: auto; margin: 0;">{json.dumps(metadata, indent=2)}</pre>
-            </div>
-        </div>
-
-        <!-- Footer -->
-        <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #e0e0e0; text-align: center; color: #666;">
-            <p>
-                <strong>Generated:</strong> {datetime.now().strftime('%Y-%m-%d')} &nbsp;|&nbsp;
-                <strong>ECM-Atlas Version:</strong> 2.0
-            </p>
-            <p style="margin-top: 15px;">
-                <a href="../dashboard.html" class="back-button">← Back to Dashboard</a>
-            </p>
+    <!-- Metadata -->
+    <div class="section">
+        <h2>🔧 Metadata</h2>
+        <div style="background: var(--code-bg); padding: var(--space-md); border: 1px solid var(--code-border); border-radius: var(--radius-md);">
+            <pre style="margin: 0;">{json.dumps(metadata, indent=2)}</pre>
         </div>
     </div>
+
+    <!-- Footer -->
+    <div class="section" style="text-align: center; color: var(--text-muted);">
+        <p>
+            <strong>Generated:</strong> {datetime.now().strftime('%Y-%m-%d')} &nbsp;|&nbsp;
+            <strong>ECM-Atlas Version:</strong> 2.0
+        </p>
+        <p style="margin-top: var(--space-sm);">
+            <a href="../dashboard.html" style="color: var(--accent); text-decoration: none; font-weight: 500;">← Back to Dashboard</a>
+        </p>
+    </div>
+
+    <!-- Theme sync script -->
+    <script>
+        // Sync theme with dashboard
+        (function() {{
+            try {{
+                var theme = localStorage.getItem('theme') || 'light';
+                document.documentElement.setAttribute('data-theme', theme);
+            }} catch (e) {{
+                console.warn('Could not load theme preference:', e);
+            }}
+        }})();
+    </script>
 </body>
 </html>
 """

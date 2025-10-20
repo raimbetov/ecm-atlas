@@ -20,70 +20,173 @@
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
+    <header class="header-awesome" id="mission">
         <div class="header-content">
-            <div style="display: flex; justify-content: space-between; align-items: center;">
-                <h1>🧬 ECM Atlas - Unified Analysis Dashboard</h1>
-                <div id="version-badge" style="background: rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 20px; font-size: 14px; font-weight: 600;">
-                    v<span id="version-number">loading...</span>
+            <div class="header-top">
+                <div class="header-brand">
+                    <h1 class="header-name">ECM Atlas</h1>
+                    <div class="header-description">
+                        <p>Analysis of extracellular matrix protein changes across aging tissues</p>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <div class="header-tag">Dashboard</div>
+                    <div class="header-version">v<span id="version-number">loading...</span></div>
                 </div>
             </div>
-            <p>Comprehensive analysis of extracellular matrix protein changes across aging tissues</p>
-            <div class="stats-summary" id="global-stats">
-                Loading...
+
+            <div class="header-bottom">
+                <div class="header-stats" id="global-stats">
+                    Loading...
+                </div>
             </div>
         </div>
     </header>
 
     <!-- Tab Navigation -->
-    <nav class="tab-navigation">
-        <button class="tab-button active" data-tab="about">
-            📖 About
-        </button>
-        <button class="tab-button" data-tab="individual">
-            🔬 Individual Dataset Analysis
-        </button>
-        <button class="tab-button" data-tab="compare">
-            📊 Compare Datasets
-        </button>
+    <nav role="navigation" aria-label="Main navigation">
+        <ul>
+            <li><a href="#about" class="nav-link active">About</a></li>
+            <li><a href="#individual" class="nav-link">Individual Dataset Analysis</a></li>
+            <li><a href="#compare" class="nav-link">Compare Datasets</a></li>
+        </ul>
     </nav>
+
+    <!-- Delicate theme switcher -->
+    <div class="theme-switcher-delicate">
+        <button id="light-theme-btn" class="theme-btn-delicate active" data-theme="light" title="Light Theme">☀️</button>
+        <button id="dark-theme-btn" class="theme-btn-delicate" data-theme="dark" title="Dark Theme">🌙</button>
+    </div>
 
     <!-- Tab Content: About -->
     <div id="tab-about" class="tab-content active">
-        <div id="about-content">
-            <!-- Content will be loaded dynamically -->
+        <div class="about-layout">
+            <!-- Main Content Area -->
+            <div class="about-main-content">
+                <div id="about-content">
+                    <!-- Content will be loaded dynamically -->
+                </div>
+            </div>
+
+            <!-- Right Sidebar -->
+            <aside class="about-sidebar">
+                <!-- Table of Contents -->
+                <section class="sidebar-section toc-section">
+                    <h4>Contents</h4>
+                    <nav class="toc-nav">
+                        <ul id="toc-list" class="toc-list">
+                            <!-- TOC will be generated dynamically -->
+                        </ul>
+                    </nav>
+                </section>
+
+                <!-- Quick Links -->
+                <section class="sidebar-section links-section">
+                    <h4>Links</h4>
+                    <div class="quick-links">
+                        <a href="https://github.com/ecm-atlas/ecm-atlas" target="_blank" class="quick-link nav-link">
+                            <span class="link-text">Repository</span>
+                            <span class="link-arrow">↗</span>
+                        </a>
+                        <a href="11_subagent_for_LFQ_ingestion/" target="_blank" class="quick-link nav-link">
+                            <span class="link-text">Agent Docs</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                        <a href="documentation/" target="_blank" class="quick-link nav-link">
+                            <span class="link-text">Documentation</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                        <a href="datasets/Randles_2021.html" target="_blank" class="quick-link nav-link">
+                            <span class="link-text">Example</span>
+                            <span class="link-arrow">→</span>
+                        </a>
+                    </div>
+                </section>
+
+
+                <!-- Contributors -->
+                <section class="sidebar-section contributors-section">
+                    <h4>Team</h4>
+                    <div class="team-list">
+                        <div class="team-member">
+                            <span class="member-initial">DK</span>
+                            <span class="member-name">Daniel</span>
+                        </div>
+                        <div class="team-member">
+                            <span class="member-initial">RA</span>
+                            <span class="member-name">Rakhan</span>
+                        </div>
+                    </div>
+                </section>
+            </aside>
         </div>
     </div>
 
     <!-- Tab Content: Individual Dataset Analysis -->
     <div id="tab-individual" class="tab-content">
-        <div class="dataset-selector">
-            <label for="dataset-select">
-                <strong>Select Dataset:</strong>
-            </label>
-            <select id="dataset-select">
-                <option value="">Loading datasets...</option>
-            </select>
-            <div id="dataset-info" class="dataset-info"></div>
-        </div>
+        <div class="individual-analysis-layout">
+            <!-- Left Panel: Dataset Selection -->
+            <div class="dataset-panel">
+                <div class="dataset-panel-header">
+                    <h3>Available Datasets</h3>
+                    <div class="dataset-count" id="dataset-count">Loading...</div>
+                </div>
+                <div class="dataset-list" id="dataset-list">
+                    <div class="dataset-loading">Loading datasets...</div>
+                </div>
+            </div>
 
-        <div id="individual-content">
-            <!-- Content loaded by individual_dataset.js -->
+            <!-- Right Panel: Charts and Analysis -->
+            <div class="analysis-panel">
+                <div id="dataset-info" class="dataset-info-panel"></div>
+                <div id="individual-content">
+                    <!-- Content loaded by individual_dataset.js -->
+                    <div class="no-dataset-selected">
+                        <div class="no-dataset-icon">📊</div>
+                        <h3>Select a Dataset</h3>
+                        <p>Choose a dataset from the left panel to view detailed analysis and visualizations.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <!-- Tab Content: Compare Datasets -->
     <div id="tab-compare" class="tab-content">
-        <div id="compare-content">
-            <!-- Content loaded by compare_datasets.js -->
+        <div class="compare-layout">
+            <!-- Main Content Area -->
+            <div class="compare-main-content">
+                <!-- Left Panel: Search + Filters -->
+                <div class="filters-panel">
+                    <!-- Search at top of filters panel -->
+                    <div id="search-container">
+                        <!-- Search bar loaded by compare_datasets.js -->
+                    </div>
+
+                    <!-- Filters Content -->
+                    <div id="filters-content">
+                        <!-- Filters loaded by compare_datasets.js -->
+                    </div>
+                </div>
+
+                <!-- Right Panel: Charts and Analysis -->
+                <div class="analysis-panel">
+                    <div id="compare-content">
+                        <!-- Content loaded by compare_datasets.js -->
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- Loading Overlay -->
-    <div id="loading-overlay" class="loading-overlay hidden">
-        <div class="spinner"></div>
-        <p>Loading data...</p>
-    </div>
+    
+
+    <!-- Footer -->
+    <footer class="footer-note">
+        <div class="footer-content">
+            <p>Built with Claude Code, Python, Plotly, and ❤️ for longevity research</p>
+        </div>
+    </footer>
 
     <!-- Scripts (with cache-busting version param) -->
     <script src="static/about_tab.js?v=20251018-1"></script>
