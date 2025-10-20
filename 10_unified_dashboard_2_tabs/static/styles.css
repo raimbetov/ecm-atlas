@@ -218,6 +218,17 @@
             padding: 0.5rem 0.75rem;
             width: 100%;
             margin: 0;
+            cursor: default; /* Disable pointer cursor for header stats */
+            transition: none; /* Neutralize hover transition in header */
+            pointer-events: none; /* Disable click interactions for header stats */
+        }
+
+        /* Prevent hover/focus effects on header stats */
+        .header-stats .stat-item:hover,
+        .header-stats .stat-item:focus {
+            box-shadow: var(--shadow-xs);
+            transform: none;
+            outline: none;
         }
 
         .header-stats .stat-number {
