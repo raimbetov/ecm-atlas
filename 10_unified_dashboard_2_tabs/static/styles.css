@@ -1875,10 +1875,32 @@ nav[aria-label="Main navigation"] li a:hover,nav[aria-label="Main navigation"] l
 }
 
 [data-theme="dark"] .compartment-tabs .tab.active {
-    color: #2d2d2d;
-    background: #e5e5e5;
+    color: #1f2937; /* dark text */
+    background: #f3f4f6; /* light background for contrast */
+    border-color: rgba(0,0,0,.2);
+    box-shadow: 0 2px 6px rgba(0,0,0,.08);
 }
 
 [data-theme="dark"] .compartment-tabs .tab {
     background: rgba(0,0,0,.2);
+}
+
+/* Keep active tab light on hover/focus in dark theme */
+[data-theme="dark"] .compartment-tabs .tab.active:hover,
+[data-theme="dark"] .compartment-tabs .tab.active:focus {
+    background: #f3f4f6;
+    color: #1f2937;
+}
+
+/* Ensure main nav active state is light in dark theme for visibility */
+[data-theme="dark"] nav[aria-label="Main navigation"] li a.active {
+    color: #1f2937;
+    background: #f3f4f6;
+    border-color: rgba(0,0,0,.2);
+}
+
+[data-theme="dark"] nav[aria-label="Main navigation"] li a.active:hover,
+[data-theme="dark"] nav[aria-label="Main navigation"] li a.active:focus {
+    background: #f3f4f6;
+    color: #1f2937;
 }
