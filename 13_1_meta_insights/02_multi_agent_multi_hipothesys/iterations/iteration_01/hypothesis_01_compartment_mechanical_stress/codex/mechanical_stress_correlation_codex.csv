@@ -1,0 +1,4 @@
+subset,test,statistic,p_value,n,n_high,n_low,effect_size
+Structural,Spearman,0.0672957765616194,0.07456406411295048,703,,,
+Regulatory,Spearman,-0.02643671667197367,0.46854423540613643,754,,,
+Structural,Mann-Whitney_U,63292.0,0.07461398700123748,703,272.0,431.0,0.06624843912355943

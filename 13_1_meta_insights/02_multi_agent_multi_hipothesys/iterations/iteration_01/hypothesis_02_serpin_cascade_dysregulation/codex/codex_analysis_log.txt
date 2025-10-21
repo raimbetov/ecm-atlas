@@ -1,0 +1,6 @@
+Total serpins: 44
+Total proteins: 619
+Network nodes: 332
+Network edges: 3874
+Mann-Whitney p-value: 0.0006394289356254633
+Serpin vs others mean |Δz| diff: 0.09590728493212375

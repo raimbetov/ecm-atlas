@@ -1,0 +1,4 @@
+test,comparison,n_high,n_low,mean_high,mean_low,median_high,median_low,U_statistic,p_value,effect_size_r,significant,Analysis,Protein_Type,n,Spearman_rho
+Mann-Whitney U,High-load vs Low-load (structural proteins),69.0,82.0,-0.5536743271287419,-0.38747624213470067,-0.6353630177655927,-0.41437471763810213,2273.0,0.9811798907337557,0.19653587840226228,False,Mann-Whitney U Test,,,
+,,,,,,,,,0.3672782405375994,,False,Spearman Correlation,Structural,272.0,-0.0548780448479027
+,,,,,,,,,0.7614624295558378,,False,Spearman Correlation,Regulatory,164.0,-0.023883423283441806

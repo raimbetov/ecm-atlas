@@ -1,0 +1,2 @@
+Mann-Whitney p-value: 0.0006394289356254633
+Mean |Δz| difference (serpin - others): 0.09590728493212375

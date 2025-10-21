@@ -1,0 +1,288 @@
+Gene_Symbol,Shared_Tissue_Count,Fast_Tissues,Mean_Zscore_Delta,Direction,Function_Category,Pathway_Annotation
+F2,6,"Lung, Ovary_Cortex, Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA, Skin dermis",0.3154055421069653,Upregulated,Regulatory,Other
+Smoc2,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",3.5306789391034488,Upregulated,Structural,Other
+Aspn,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",2.0327386899041184,Upregulated,Structural,Other
+Serpinb6a,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",1.7394277311549473,Upregulated,Regulatory,Coagulation
+Itih1,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",1.5635422567172652,Upregulated,Regulatory,Other
+Comp,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",1.3778816387562294,Upregulated,Structural,Other
+Sema3c,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",1.3674530288241824,Upregulated,Signaling,Other
+Itih3,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",1.3280560679910516,Upregulated,Regulatory,Other
+Ctsd,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",1.1383861612780828,Upregulated,Regulatory,Other
+CTSZ,3,"Lung, Ovary_Cortex, Skin dermis",1.0423101839406517,Upregulated,Regulatory,Other
+Col4a1,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",1.0193243691126164,Upregulated,Structural,Other
+Ctsb,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",0.9356498491229698,Upregulated,Regulatory,Other
+Serpine2,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",0.9252508678851741,Upregulated,Regulatory,Coagulation
+CSTB,3,"Lung, Ovary_Cortex, Skin dermis",0.9023350975471457,Upregulated,Regulatory,Other
+VTN,3,"Lung, Ovary_Cortex, Skin dermis",0.8703902071521048,Upregulated,Structural,Other
+Cstb,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",0.8607744959748245,Upregulated,Regulatory,Other
+Mfge8,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",0.8289170386662225,Upregulated,Structural,Other
+Hpx,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",0.7906462300414586,Upregulated,Signaling,Other
+Lgals1,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",0.747473139290811,Upregulated,Signaling,Other
+Bgn,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",0.7377253462532289,Upregulated,Structural,Other
+Serpinc1,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",0.733232040889085,Upregulated,Regulatory,Coagulation
+Serpina1a,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",0.7313536212651687,Upregulated,Regulatory,Coagulation
+Serpinf2,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",0.7243917087665737,Upregulated,Regulatory,Coagulation
+Serpina1b,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",0.7149475614556118,Upregulated,Regulatory,Coagulation
+Igfbp5,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",0.7008439875641898,Upregulated,Structural,Other
+Col4a2,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",0.697207832974836,Upregulated,Structural,Other
+SERPING1,3,"Lung, Ovary_Cortex, Skin dermis",0.6182367760183832,Upregulated,Regulatory,Coagulation
+Serpina3m,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",0.6055817849055828,Upregulated,Regulatory,Coagulation
+Itih4,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",0.5576617907049161,Upregulated,Regulatory,Other
+S100A6,3,"Lung, Ovary_Cortex, Skin dermis",0.555994301421723,Upregulated,Signaling,Inflammation
+Kng1,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",0.4865858110235896,Upregulated,Regulatory,Other
+Prelp,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",0.4571545039232315,Upregulated,Structural,Other
+Lamb2,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",0.43675437323074884,Upregulated,Structural,Other
+SERPINF2,3,"Lung, Ovary_Cortex, Skin dermis",0.3434235205620008,Upregulated,Regulatory,Coagulation
+ANXA5,3,"Lung, Ovary_Cortex, Skin dermis",0.3395529724319293,Upregulated,Signaling,Other
+Vtn,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",0.33666952131631894,Upregulated,Structural,Other
+LGALS3,3,"Lung, Ovary_Cortex, Skin dermis",0.3339276182575925,Upregulated,Signaling,Other
+Gpc1,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",0.3276814328632586,Upregulated,Signaling,Other
+ANXA4,3,"Lung, Ovary_Cortex, Skin dermis",0.3233813652847945,Upregulated,Signaling,Other
+NID1,3,"Lung, Ovary_Cortex, Skin dermis",0.3054262060282594,Upregulated,Structural,Other
+COL18A1,3,"Lung, Ovary_Cortex, Skin dermis",0.3034466806574354,Upregulated,Structural,Other
+Dpt,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",0.2905084033496316,Upregulated,Structural,Other
+ANXA6,3,"Lung, Ovary_Cortex, Skin dermis",0.278444669016932,Upregulated,Signaling,Other
+A2M,3,"Lung, Ovary_Cortex, Skin dermis",0.2631799651563784,Upregulated,Regulatory,Other
+TGFBI,3,"Lung, Ovary_Cortex, Skin dermis",0.24463042871883844,Upregulated,Structural,Other
+CTSD,3,"Lung, Ovary_Cortex, Skin dermis",0.2272649916272004,Upregulated,Regulatory,Other
+Lum,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",0.2213404888246869,Upregulated,Structural,Other
+LAMA5,3,"Lung, Ovary_Cortex, Skin dermis",0.21140486127258784,Upregulated,Structural,Other
+Lama5,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",0.20806963451932506,Upregulated,Structural,Other
+HRG,3,"Lung, Ovary_Cortex, Skin dermis",0.2007999425207775,Upregulated,Regulatory,Other
+HPX,3,"Lung, Ovary_Cortex, Skin dermis",0.16013526123808994,Upregulated,Signaling,Other
+S100A10,3,"Lung, Ovary_Cortex, Skin dermis",0.14809786324824534,Upregulated,Signaling,Inflammation
+Serpind1,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",0.14450932357060678,Upregulated,Regulatory,Coagulation
+Plg,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",0.1184229499209785,Upregulated,Regulatory,Coagulation
+ITIH4,3,"Lung, Ovary_Cortex, Skin dermis",0.1091757252547143,Upregulated,Regulatory,Other
+Pzp,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",0.09905775354734019,Upregulated,Regulatory,Other
+AMBP,3,"Lung, Ovary_Cortex, Skin dermis",0.07934195820642041,Upregulated,Regulatory,Other
+LGALS1,3,"Lung, Ovary_Cortex, Skin dermis",0.07718061124643504,Upregulated,Signaling,Other
+FGG,3,"Lung, Ovary_Cortex, Skin dermis",0.059508022238033385,Upregulated,Structural,Coagulation
+ITIH1,3,"Lung, Ovary_Cortex, Skin dermis",0.05672593582400248,Upregulated,Regulatory,Other
+S100A13,3,"Lung, Ovary_Cortex, Skin dermis",0.05168023472112123,Upregulated,Signaling,Inflammation
+LMAN1,3,"Lung, Ovary_Cortex, Skin dermis",0.03349357305852343,Upregulated,Signaling,Other
+EFEMP1,3,"Lung, Ovary_Cortex, Skin dermis",0.015794381056089157,Upregulated,Structural,Other
+Serpinb1a,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",0.009681064155085961,Upregulated,Regulatory,Coagulation
+Fbln1,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",0.009160638375323929,Upregulated,Structural,Other
+PRELP,3,"Lung, Ovary_Cortex, Skin dermis",0.0038229369261318555,Upregulated,Structural,Other
+Col12a1,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.0014064316077693206,Downregulated,Structural,Other
+ANXA11,3,"Lung, Ovary_Cortex, Skin dermis",-0.02812084058445352,Downregulated,Signaling,Other
+Tgfbi,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.04449688145272609,Downregulated,Structural,Other
+Col2a1,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.04926929218709971,Downregulated,Structural,Other
+KNG1,3,"Lung, Ovary_Cortex, Skin dermis",-0.049690021389636095,Downregulated,Regulatory,Other
+LAMB2,3,"Lung, Ovary_Cortex, Skin dermis",-0.05339743475715696,Downregulated,Structural,Other
+OGN,3,"Lung, Ovary_Cortex, Skin dermis",-0.05806337383510793,Downregulated,Structural,Other
+DPT,3,"Lung, Ovary_Cortex, Skin dermis",-0.06534504448057923,Downregulated,Structural,Other
+ANXA7,3,"Lung, Ovary_Cortex, Skin dermis",-0.07426151984653354,Downregulated,Signaling,Other
+Ctsz,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.08369539109391498,Downregulated,Regulatory,Other
+Anxa5,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.1160931967292686,Downregulated,Signaling,Other
+POSTN,3,"Lung, Ovary_Cortex, Skin dermis",-0.11619589864088714,Downregulated,Structural,Other
+Ogn,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.12645944309842488,Downregulated,Structural,Other
+ANXA1,3,"Lung, Ovary_Cortex, Skin dermis",-0.1292298665439131,Downregulated,Signaling,Other
+Ecm1,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.1357923846651125,Downregulated,Structural,Other
+PLG,3,"Lung, Ovary_Cortex, Skin dermis",-0.13622941184709544,Downregulated,Regulatory,Coagulation
+ANXA2,3,"Lung, Ovary_Cortex, Skin dermis",-0.140349886262337,Downregulated,Signaling,Other
+Vwa1,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.1423859356477031,Downregulated,Structural,Other
+LUM,3,"Lung, Ovary_Cortex, Skin dermis",-0.17818363309433796,Downregulated,Structural,Other
+FBN1,3,"Lung, Ovary_Cortex, Skin dermis",-0.1824609107790028,Downregulated,Structural,Other
+Col5a2,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.1854448013047604,Downregulated,Structural,Other
+EMILIN1,3,"Lung, Ovary_Cortex, Skin dermis",-0.1892939392068276,Downregulated,Structural,Other
+Tinagl1,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.1897858494342638,Downregulated,Structural,Other
+BGN,3,"Lung, Ovary_Cortex, Skin dermis",-0.20430383872207988,Downregulated,Structural,Other
+COL4A1,3,"Lung, Ovary_Cortex, Skin dermis",-0.20572243312531593,Downregulated,Structural,Other
+Fbln2,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.2191594760373393,Downregulated,Structural,Other
+Nid1,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.2302412750111067,Downregulated,Structural,Other
+LAMA4,3,"Lung, Ovary_Cortex, Skin dermis",-0.23483880199449092,Downregulated,Structural,Other
+Serpina1d,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.2374570723564395,Downregulated,Regulatory,Coagulation
+Thbs4,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.24499797777839963,Downregulated,Structural,Other
+Nid2,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.24947126438908518,Downregulated,Structural,Other
+COL6A6,3,"Lung, Ovary_Cortex, Skin dermis",-0.25035729865952655,Downregulated,Structural,Other
+S100A16,3,"Lung, Ovary_Cortex, Skin dermis",-0.25864764869970097,Downregulated,Signaling,Inflammation
+FGA,3,"Lung, Ovary_Cortex, Skin dermis",-0.26591923891256825,Downregulated,Structural,Coagulation
+SPARC,3,"Lung, Ovary_Cortex, Skin dermis",-0.26632352230802553,Downregulated,Structural,Other
+Lama2,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.2708396338127745,Downregulated,Structural,Other
+FGB,3,"Lung, Ovary_Cortex, Skin dermis",-0.2770595786614832,Downregulated,Structural,Coagulation
+VCAN,3,"Lung, Ovary_Cortex, Skin dermis",-0.28204923480052563,Downregulated,Structural,Other
+ABI3BP,3,"Lung, Ovary_Cortex, Skin dermis",-0.2871351348340363,Downregulated,Structural,Other
+COL6A2,3,"Lung, Ovary_Cortex, Skin dermis",-0.2955060757507066,Downregulated,Structural,Other
+HSPG2,3,"Lung, Ovary_Cortex, Skin dermis",-0.3044985019761419,Downregulated,Structural,Other
+FN1,3,"Lung, Ovary_Cortex, Skin dermis",-0.31392093560552087,Downregulated,Structural,Other
+Tgm2,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.316275189137947,Downregulated,Regulatory,Other
+COL6A3,3,"Lung, Ovary_Cortex, Skin dermis",-0.31685914481169536,Downregulated,Structural,Other
+SERPIND1,3,"Lung, Ovary_Cortex, Skin dermis",-0.34770508036776704,Downregulated,Regulatory,Coagulation
+LAMC1,3,"Lung, Ovary_Cortex, Skin dermis",-0.34949800761306116,Downregulated,Structural,Other
+AEBP1,3,"Lung, Ovary_Cortex, Skin dermis",-0.35941349655128824,Downregulated,Structural,Other
+Adipoq,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.36896919768460346,Downregulated,Structural,Other
+Dcn,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.3839138215496414,Downregulated,Structural,Other
+COL16A1,3,"Lung, Ovary_Cortex, Skin dermis",-0.39218289985723026,Downregulated,Structural,Other
+S100A9,3,"Lung, Ovary_Cortex, Skin dermis",-0.40039797291814105,Downregulated,Signaling,Inflammation
+SERPINF1,3,"Lung, Ovary_Cortex, Skin dermis",-0.40059651719193745,Downregulated,Regulatory,Coagulation
+COL12A1,3,"Lung, Ovary_Cortex, Skin dermis",-0.4172209049802118,Downregulated,Structural,Other
+Cst3,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.45148848146515963,Downregulated,Regulatory,Other
+TNXB,3,"Lung, Ovary_Cortex, Skin dermis",-0.4564144478443142,Downregulated,Structural,Other
+COL4A2,3,"Lung, Ovary_Cortex, Skin dermis",-0.464071873188645,Downregulated,Structural,Other
+FBLN5,3,"Lung, Ovary_Cortex, Skin dermis",-0.4827119332796772,Downregulated,Structural,Other
+Col6a6,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.48802706973463095,Downregulated,Structural,Other
+Lama4,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.4915716635226528,Downregulated,Structural,Other
+Fgg,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.4949858796260845,Downregulated,Structural,Coagulation
+Col6a2,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.5010972227404388,Downregulated,Structural,Other
+Fga,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.5349389416049076,Downregulated,Structural,Coagulation
+Col1a2,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.5435312340111585,Downregulated,Structural,Other
+F13a1,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.548006043507505,Downregulated,Regulatory,Other
+SERPINH1,3,"Lung, Ovary_Cortex, Skin dermis",-0.5499062542404792,Downregulated,Regulatory,Coagulation
+Anxa1,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.5499521987140719,Downregulated,Signaling,Other
+COL6A1,3,"Lung, Ovary_Cortex, Skin dermis",-0.6124554270148311,Downregulated,Structural,Other
+COL5A1,3,"Lung, Ovary_Cortex, Skin dermis",-0.6130879498274,Downregulated,Structural,Other
+COL1A2,3,"Lung, Ovary_Cortex, Skin dermis",-0.6187352690888857,Downregulated,Structural,Other
+Fgb,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.6217522261207716,Downregulated,Structural,Coagulation
+Col1a1,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.6217783908397153,Downregulated,Structural,Other
+SERPINC1,3,"Lung, Ovary_Cortex, Skin dermis",-0.6706419322251683,Downregulated,Regulatory,Coagulation
+Fbn1,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.6888081277096592,Downregulated,Structural,Other
+Col6a1,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.7265443706679547,Downregulated,Structural,Other
+COL14A1,3,"Lung, Ovary_Cortex, Skin dermis",-0.7440380550120694,Downregulated,Structural,Other
+COL5A2,3,"Lung, Ovary_Cortex, Skin dermis",-0.7668133241569666,Downregulated,Structural,Other
+Serpina1e,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.7776991023333082,Downregulated,Regulatory,Coagulation
+Ctsl,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.7833435879295857,Downregulated,Regulatory,Other
+S100A8,3,"Lung, Ovary_Cortex, Skin dermis",-0.7961903854612933,Downregulated,Signaling,Inflammation
+COL1A1,3,"Lung, Ovary_Cortex, Skin dermis",-0.8074364972498514,Downregulated,Structural,Other
+Anxa2,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.841837591475552,Downregulated,Signaling,Other
+COL3A1,3,"Lung, Ovary_Cortex, Skin dermis",-0.889272010437355,Downregulated,Structural,Other
+Fmod,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.9006646593720798,Downregulated,Structural,Other
+Col3a1,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.9225545973426232,Downregulated,Structural,Other
+Lamb1,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.922913642761677,Downregulated,Structural,Other
+Col15a1,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.9633629011508135,Downregulated,Structural,Other
+DCN,3,"Lung, Ovary_Cortex, Skin dermis",-0.9738182718030437,Downregulated,Structural,Other
+Fn1,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-1.0085402316722352,Downregulated,Structural,Other
+Tnc,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-1.1192269354975874,Downregulated,Structural,Other
+Sparc,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-1.1567394918707519,Downregulated,Structural,Other
+LAMB1,3,"Lung, Ovary_Cortex, Skin dermis",-1.3909596395026498,Downregulated,Structural,Other
+Fbln5,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-1.6710277120937365,Downregulated,Structural,Other
+Fbn2,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-1.8709249264607315,Downregulated,Structural,Other
+Postn,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-2.2777739157632713,Downregulated,Structural,Other
+AGRN,3,"Lung, Ovary_Cortex, Skin dermis",-2.3134954762253743,Downregulated,Structural,Other
+Kera,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-2.3168048132172068,Downregulated,Structural,Other
+Serpinh1,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-2.5204661080988253,Downregulated,Regulatory,Coagulation
+FMOD,3,"Lung, Ovary_Cortex, Skin dermis",-2.79242425931983,Downregulated,Structural,Other
+Serpinf1,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-2.81960378349681,Downregulated,Regulatory,Coagulation
+Col14a1,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-3.4700124224905884,Downregulated,Structural,Other
+Pcolce,3,"Skeletal_muscle_EDL, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-4.181686416413054,Downregulated,Structural,Other
+Angptl7,2,"Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",2.750599972545704,Upregulated,Signaling,Other
+ANGPTL2,2,"Lung, Skin dermis",1.6762304934411019,Upregulated,Signaling,Other
+SERPINE2,2,"Lung, Skin dermis",1.6201505232414384,Upregulated,Regulatory,Coagulation
+PLXDC2,2,"Lung, Skin dermis",1.326282872637357,Upregulated,Signaling,Other
+S100A4,2,"Lung, Skin dermis",1.28595132367398,Upregulated,Signaling,Inflammation
+PLOD1,2,"Lung, Skin dermis",1.1719924276026905,Upregulated,Regulatory,Matrix_Remodeling
+F12,2,"Skeletal_muscle_TA, Skin dermis",1.1597212508328019,Upregulated,Regulatory,Other
+CTSC,2,"Lung, Skin dermis",1.071379933708734,Upregulated,Regulatory,Other
+S100B,2,"Lung, Skin dermis",1.0441612879604378,Upregulated,Signaling,Inflammation
+SLIT3,2,"Lung, Skin dermis",0.9978614361680613,Upregulated,Structural,Other
+MATN4,2,"Lung, Skin dermis",0.952866532923434,Upregulated,Structural,Other
+COL4A5,2,"Lung, Skin dermis",0.9365794335830584,Upregulated,Structural,Other
+Ambp,2,"Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",0.849420103609756,Upregulated,Regulatory,Other
+Serpina6,2,"Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",0.8137863800710718,Upregulated,Regulatory,Coagulation
+PLOD3,2,"Lung, Skin dermis",0.758403539726324,Upregulated,Regulatory,Matrix_Remodeling
+Ctsc,2,"Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",0.723016703156625,Upregulated,Regulatory,Other
+FBLN1,2,"Lung, Ovary_Cortex",0.7054528596331368,Upregulated,Structural,Other
+FREM2,2,"Lung, Skin dermis",0.6199978072738973,Upregulated,Signaling,Other
+C1QTNF7,2,"Lung, Skin dermis",0.5525477588266655,Upregulated,Signaling,Other
+ITIH5,2,"Lung, Skin dermis",0.5504436166788814,Upregulated,Regulatory,Other
+LTBP1,2,"Lung, Skin dermis",0.5218014239529206,Upregulated,Structural,Other
+LRG1,2,"Lung, Skin dermis",0.5176651400242718,Upregulated,Structural,Other
+PLXNB2,2,"Ovary_Cortex, Skin dermis",0.48714709190427297,Upregulated,Signaling,Other
+SERPINB9,2,"Lung, Skin dermis",0.4770880482226417,Upregulated,Regulatory,Coagulation
+SERPINB6,2,"Ovary_Cortex, Skin dermis",0.47253291893566396,Upregulated,Regulatory,Coagulation
+ITIH3,2,"Lung, Skin dermis",0.47113052951250234,Upregulated,Regulatory,Other
+VWA5A,2,"Lung, Skin dermis",0.47055633382208223,Upregulated,Structural,Other
+NGLY1,2,"Lung, Skin dermis",0.43284624945275996,Upregulated,Regulatory,Other
+SERPINA3,2,"Ovary_Cortex, Skin dermis",0.4167827081945673,Upregulated,Regulatory,Coagulation
+SERPINB1,2,"Ovary_Cortex, Skin dermis",0.3576135144924699,Upregulated,Regulatory,Coagulation
+TGM1,2,"Lung, Skin dermis",0.35139911395055784,Upregulated,Regulatory,Other
+MFGE8,2,"Lung, Skin dermis",0.32023741274802303,Upregulated,Structural,Other
+CXCL12,2,"Lung, Skin dermis",0.27286266710563667,Upregulated,Signaling,Inflammation
+COL2A1,2,"Ovary_Cortex, Skin dermis",0.2481673677146865,Upregulated,Structural,Other
+CTSG,2,"Lung, Skin dermis",0.23936443732540288,Upregulated,Regulatory,Other
+FRAS1,2,"Lung, Skin dermis",0.226626391013399,Upregulated,Structural,Other
+LTBP4,2,"Lung, Skin dermis",0.1824378927172507,Upregulated,Structural,Other
+TIMP3,2,"Lung, Skin dermis",0.1737706241136536,Upregulated,Regulatory,Matrix_Remodeling
+GPC4,2,"Lung, Skin dermis",0.15708942576847074,Upregulated,Signaling,Other
+COL4A6,2,"Lung, Skin dermis",0.15375107620261708,Upregulated,Structural,Other
+NPNT,2,"Lung, Skin dermis",0.1525634649081784,Upregulated,Structural,Other
+HTRA1,2,"Lung, Skin dermis",0.12944978759535467,Upregulated,Regulatory,Other
+Gpc4,2,"Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",0.07738433182109461,Upregulated,Signaling,Other
+Col5a1,2,"Skeletal_muscle_EDL, Skeletal_muscle_TA",0.07008321675068119,Upregulated,Structural,Other
+SERPINA1,2,"Ovary_Cortex, Skin dermis",0.0404214988550424,Upregulated,Regulatory,Coagulation
+F13A1,2,"Lung, Skin dermis",0.03601963875535624,Upregulated,Regulatory,Other
+PRG2,2,"Lung, Skin dermis",0.03152766885701355,Upregulated,Structural,Other
+SRPX,2,"Lung, Skin dermis",-0.010064320744579691,Downregulated,Structural,Other
+VWF,2,"Lung, Skin dermis",-0.047051272058241694,Downregulated,Structural,Coagulation
+MMRN1,2,"Lung, Skin dermis",-0.04878772089360495,Downregulated,Structural,Other
+SDC1,2,"Lung, Skin dermis",-0.04916561918879825,Downregulated,Signaling,Other
+Aebp1,2,"Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.05603896539176004,Downregulated,Structural,Other
+Col18a1,2,"Skeletal_muscle_EDL, Skeletal_muscle_TA",-0.057766471092492756,Downregulated,Structural,Other
+Mstn,2,"Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.060538823019662555,Downregulated,Signaling,Other
+TINAGL1,2,"Lung, Skin dermis",-0.07063435575821381,Downregulated,Structural,Other
+COL7A1,2,"Lung, Skin dermis",-0.07384330524489464,Downregulated,Structural,Other
+PAPLN,2,"Lung, Skin dermis",-0.08155391546583929,Downregulated,Structural,Other
+MFAP4,2,"Lung, Skin dermis",-0.08324123346228479,Downregulated,Structural,Other
+ELN,2,"Lung, Skin dermis",-0.0930361816989712,Downregulated,Structural,Other
+FBLN2,2,"Lung, Skin dermis",-0.0969278436868266,Downregulated,Structural,Other
+PXDN,2,"Lung, Skin dermis",-0.1130072401762708,Downregulated,Structural,Other
+ITIH2,2,"Lung, Skin dermis",-0.13873589162856775,Downregulated,Regulatory,Other
+ADAMTSL1,2,"Lung, Skin dermis",-0.1444282240963149,Downregulated,Regulatory,Matrix_Remodeling
+ANXA3,2,"Lung, Skin dermis",-0.14571656147655387,Downregulated,Signaling,Other
+MMP19,2,"Lung, Skin dermis",-0.14802225863880258,Downregulated,Regulatory,Matrix_Remodeling
+COL15A1,2,"Lung, Skin dermis",-0.15165261717299724,Downregulated,Structural,Other
+HCFC1,2,"Lung, Skin dermis",-0.1586729794674613,Downregulated,Signaling,Other
+SRPX2,2,"Lung, Skin dermis",-0.160137172511045,Downregulated,Structural,Other
+LAMA3,2,"Lung, Skin dermis",-0.16491798045593503,Downregulated,Structural,Other
+S100A11,2,"Lung, Skin dermis",-0.16596732771598718,Downregulated,Signaling,Inflammation
+ECM2,2,"Lung, Skin dermis",-0.17396834829987518,Downregulated,Structural,Other
+C1QTNF2,2,"Lung, Skin dermis",-0.18141493400824585,Downregulated,Signaling,Other
+CTSB,2,"Lung, Skin dermis",-0.1896158737112216,Downregulated,Regulatory,Other
+VWA1,2,"Lung, Skin dermis",-0.1911647516696569,Downregulated,Structural,Other
+ECM1,2,"Lung, Skin dermis",-0.19219359669119015,Downregulated,Structural,Other
+PODN,2,"Lung, Skin dermis",-0.19236756204985114,Downregulated,Structural,Other
+MMRN2,2,"Lung, Skin dermis",-0.1943266601036577,Downregulated,Structural,Other
+Serping1,2,"Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.19798119611761178,Downregulated,Regulatory,Coagulation
+SERPINA6,2,"Lung, Skin dermis",-0.20224032127669214,Downregulated,Regulatory,Coagulation
+SERPINB8,2,"Lung, Skin dermis",-0.2063466551143532,Downregulated,Regulatory,Coagulation
+ANXA8,2,"Lung, Skin dermis",-0.20720666411539074,Downregulated,Signaling,Other
+ASPN,2,"Lung, Skin dermis",-0.2277157013615262,Downregulated,Structural,Other
+TNC,2,"Lung, Skin dermis",-0.22954279138748385,Downregulated,Structural,Other
+THBS3,2,"Lung, Skin dermis",-0.23643413697177285,Downregulated,Structural,Other
+TGM2,2,"Lung, Skin dermis",-0.23801391181971085,Downregulated,Regulatory,Other
+CSPG4,2,"Lung, Skin dermis",-0.24344584892921756,Downregulated,Signaling,Other
+MMP2,2,"Lung, Skin dermis",-0.24902501521594045,Downregulated,Regulatory,Matrix_Remodeling
+LAMB3,2,"Lung, Skin dermis",-0.25388492793536704,Downregulated,Structural,Other
+LOXL1,2,"Lung, Skin dermis",-0.2548936077587788,Downregulated,Regulatory,Matrix_Remodeling
+S100A7,2,"Ovary_Cortex, Skin dermis",-0.25636198797933807,Downregulated,Signaling,Inflammation
+P4HA1,2,"Lung, Skin dermis",-0.268776273281626,Downregulated,Regulatory,Other
+EMILIN2,2,"Lung, Skin dermis",-0.2695992128541921,Downregulated,Structural,Other
+LAMC2,2,"Lung, Skin dermis",-0.29159084769789295,Downregulated,Structural,Other
+PCOLCE,2,"Lung, Skin dermis",-0.2928906495202555,Downregulated,Structural,Other
+COL6A5,2,"Lung, Skin dermis",-0.30262851322224593,Downregulated,Structural,Other
+ADIPOQ,2,"Lung, Skin dermis",-0.3248750029714883,Downregulated,Structural,Other
+C1qtnf9,2,"Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.3463871167865601,Downregulated,Signaling,Other
+Itih5,2,"Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.3510764844336036,Downregulated,Regulatory,Other
+HAPLN1,2,"Lung, Skin dermis",-0.37796362757321267,Downregulated,Structural,Other
+HMCN1,2,"Lung, Skin dermis",-0.38342965625102077,Downregulated,Structural,Other
+LAMA2,2,"Lung, Skin dermis",-0.49009819144937017,Downregulated,Structural,Other
+LOX,2,"Lung, Skin dermis",-0.5577670735096067,Downregulated,Regulatory,Matrix_Remodeling
+MGP,2,"Lung, Skin dermis",-0.569096591372779,Downregulated,Structural,Other
+FREM1,2,"Lung, Skin dermis",-0.6245282270836325,Downregulated,Signaling,Other
+Ctsh,2,"Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.6572795629618964,Downregulated,Regulatory,Other
+Mbl2,2,"Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.6676830809588867,Downregulated,Signaling,Other
+C1QC,2,"Lung, Skin dermis",-0.7679346340135488,Downregulated,Signaling,Other
+Pxdn,2,"Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.7921900394021053,Downregulated,Structural,Other
+MFAP5,2,"Lung, Skin dermis",-0.8111671075907781,Downregulated,Structural,Other
+COL10A1,2,"Lung, Skin dermis",-0.8719647363176133,Downregulated,Structural,Other
+COL8A1,2,"Lung, Skin dermis",-0.8820904629137093,Downregulated,Structural,Other
+Sparcl1,2,"Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-0.8970502842541552,Downregulated,Structural,Other
+Efemp1,2,"Skeletal_muscle_EDL, Skeletal_muscle_TA",-0.9300233601990704,Downregulated,Structural,Other
+THBS1,2,"Lung, Ovary_Cortex",-0.9639417786581821,Downregulated,Structural,Other
+NID2,2,"Ovary_Cortex, Skin dermis",-1.5888416547293116,Downregulated,Structural,Other
+AGT,2,"Ovary_Cortex, Skin dermis",-1.656501221596925,Downregulated,Regulatory,Other
+Chad,2,"Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA",-1.794976381862707,Downregulated,Structural,Other
+Eln,2,"Skeletal_muscle_EDL, Skeletal_muscle_TA",-2.0621292241078275,Downregulated,Structural,Other
+ADAMTSL4,2,"Lung, Skin dermis",-2.5232077165934332,Downregulated,Regulatory,Matrix_Remodeling
+CILP,2,"Lung, Skin dermis",-4.7713727877044665,Downregulated,Structural,Other
