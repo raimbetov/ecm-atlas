@@ -1,0 +1,25 @@
+Tissue,Version,N_observations,N_studies,Mean_Zscore_Delta,SD_Zscore_Delta,T_statistic,P_value,Significant
+Skeletal_muscle_EDL,V1,1,1,-4.4983014621325434,,,,NO
+Skeletal_muscle_Gastrocnemius,V1,1,1,-4.056164301070654,,,,NO
+Skeletal_muscle_TA,V1,1,1,-3.9905934860359658,,,,NO
+Skeletal_muscle_Soleus,V1,1,1,-2.214168449049565,,,,NO
+Decellularized_Tissue,V1,1,1,-0.5789066522173667,,,,NO
+NP,V1,1,1,-0.4512346319661808,,,,NO
+Native_Tissue,V1,1,1,-0.4227780831791525,,,,NO
+Skin dermis,V1,1,1,-0.3920325153476731,,,,NO
+IAF,V1,1,1,-0.3444204436653202,,,,NO
+OAF,V1,1,1,-0.2498412795567696,,,,NO
+Lung,V1,1,1,-0.1937487836928379,,,,NO
+Ovary,V1,1,1,0.4445014220122675,,,,NO
+Skeletal_muscle_EDL,V2,1,1,-4.498301462132543,,,,NO
+Skeletal_muscle_Gastrocnemius,V2,1,1,-4.056164301070657,,,,NO
+Skeletal_muscle_TA,V2,1,1,-3.9905934860359658,,,,NO
+Skeletal_muscle_Soleus,V2,1,1,-2.214168449049565,,,,NO
+Decellularized_Tissue,V2,1,1,-0.5789066522173668,,,,NO
+NP,V2,1,1,-0.4512346319661807,,,,NO
+Native_Tissue,V2,1,1,-0.4308549078447796,,,,NO
+Skin dermis,V2,1,1,-0.3920325153476731,,,,NO
+IAF,V2,1,1,-0.3444204436653201,,,,NO
+OAF,V2,1,1,-0.2498412795567696,,,,NO
+Lung,V2,1,1,-0.1937487836928379,,,,NO
+Ovary,V2,1,1,0.4445014220122681,,,,NO

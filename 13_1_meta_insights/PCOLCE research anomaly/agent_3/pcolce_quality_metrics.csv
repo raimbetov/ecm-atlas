@@ -1,0 +1,3 @@
+Version,Total_observations,Missing_Abundance_Young,Missing_Abundance_Old,Missing_Zscore_Delta,Pct_Missing_Young,Pct_Missing_Old,N_Studies,N_Tissues,Total_Profiles_Young,Total_Profiles_Old,Zscore_Delta_Mean,Zscore_Delta_Median,Zscore_Delta_SD,Zscore_Delta_Min,Zscore_Delta_Max,N_Decrease,N_Increase,Directional_Consistency
+V1,12,0,0,0,0.0,0.0,7,12,47.0,44.0,-1.4123073888251465,-0.43700635757266665,1.7803615532912496,-4.4983014621325434,0.4445014220122675,11,1,0.9166666666666666
+V2,12,0,0,0,0.0,0.0,7,12,47.0,44.0,-1.4129804575472822,-0.44104476990548014,1.7799549318667944,-4.498301462132543,0.4445014220122681,11,1,0.9166666666666666

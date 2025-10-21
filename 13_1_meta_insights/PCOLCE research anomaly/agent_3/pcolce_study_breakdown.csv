@@ -1,0 +1,15 @@
+Study_ID,Version,N_observations,Mean_Zscore_Delta,SD_Zscore_Delta,SEM,CI_95_lower,CI_95_upper,Direction,Tissues,Species
+Tam_2020,V1,3,-0.34849878506275694,0.1007585988890817,0.05817300419178085,-0.4625178732786474,-0.23447969684686648,DECREASE,"Intervertebral_disc_NP, Intervertebral_disc_IAF, Intervertebral_disc_OAF",Homo sapiens
+Angelidis_2019,V1,1,-0.1937487836928379,,,,,DECREASE,Lung,Mus musculus
+Dipali_2023,V1,1,0.4445014220122675,,,,,INCREASE,Ovary,Mus musculus
+Schuler_2021,V1,4,-3.689806924572182,1.0092674918936184,0.5046337459468092,-4.678889066627928,-2.7007247825164358,DECREASE,"Skeletal_muscle_Soleus, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA, Skeletal_muscle_EDL",Mus musculus
+Santinha_2024_Mouse_NT,V1,1,-0.4227780831791525,,,,,DECREASE,Heart_Native_Tissue,Mus musculus
+Santinha_2024_Mouse_DT,V1,1,-0.5789066522173667,,,,,DECREASE,Heart_Decellularized_Tissue,Mus musculus
+LiDermis_2021,V1,1,-0.3920325153476731,,,,,DECREASE,Skin dermis,Homo sapiens
+Tam_2020,V2,3,-0.3484987850627568,0.10075859888908165,0.05817300419178082,-0.4625178732786472,-0.23447969684686637,DECREASE,"Intervertebral_disc_NP, Intervertebral_disc_IAF, Intervertebral_disc_OAF",Homo sapiens
+Angelidis_2019,V2,1,-0.1937487836928379,,,,,DECREASE,Lung,Mus musculus
+Dipali_2023,V2,1,0.4445014220122681,,,,,INCREASE,Ovary,Mus musculus
+Schuler_2021,V2,4,-3.6898069245721823,1.0092674918936186,0.5046337459468093,-4.678889066627929,-2.7007247825164358,DECREASE,"Skeletal_muscle_Soleus, Skeletal_muscle_Gastrocnemius, Skeletal_muscle_TA, Skeletal_muscle_EDL",Mus musculus
+Santinha_2024_Mouse_NT,V2,1,-0.4308549078447796,,,,,DECREASE,Heart_Native_Tissue,Mus musculus
+Santinha_2024_Mouse_DT,V2,1,-0.5789066522173668,,,,,DECREASE,Heart_Decellularized_Tissue,Mus musculus
+LiDermis_2021,V2,1,-0.3920325153476731,,,,,DECREASE,Skin dermis,Homo sapiens
