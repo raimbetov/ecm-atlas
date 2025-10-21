@@ -1,0 +1,25 @@
+{
+  "timestamp": "2025-10-18 08:22:26",
+  "input_file": "../../08_merged_ecm_dataset/merged_ecm_aging_zscore.csv",
+  "output_file": "../data/merged_ecm_aging_long_format.csv",
+  "input_rows": 9343,
+  "output_rows": 18277,
+  "expansion_ratio": 1.9562239109493738,
+  "n_proteins": 3754,
+  "n_studies": 12,
+  "n_tissues": 17,
+  "age_groups": {
+    "Old": 9172,
+    "Young": 9105
+  },
+  "missing_values": {
+    "Abundance": 0,
+    "Z_score": 19
+  },
+  "zscore_stats": {
+    "mean": -5.1476872972141664e-05,
+    "std": 0.9989395223006354,
+    "min": -4.715467251453899,
+    "max": 4.24230703919016
+  }
+}

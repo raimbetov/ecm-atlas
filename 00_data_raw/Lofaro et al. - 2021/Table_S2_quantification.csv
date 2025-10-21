@@ -1,0 +1,155 @@
+Extraction_Method,Category,Gene_Symbol,Log_Fold_Change,P_Value,Protein_Name
+PBS,ECM regulators,SPA3K,-0.172,0.4507,Serine protease inhibitor A3K
+PBS,ECM regulators,SPA3N,1.773,0.0284,Serine protease inhibitor A3N
+PBS,ECM regulators,A1AT3,0.296,0.2062,Alpha-1-antitrypsin 1-3
+PBS,ECM regulators,A1AT2,0.693,0.0056,Alpha-1-antitrypsin 1-2 (AAT)
+PBS,ECM regulators,A1AT4,0.746,0.1332,Alpha-1-antitrypsin 1-4
+PBS,ECM regulators,PZP,0.863,0.0123,Pregnancy zone protein (Alpha-2-macroglobulin)
+PBS,ECM regulators,KNG1,0.97,0.0435,Kininogen-1
+PBS,ECM regulators,ANT3,0.516,0.2097,Antithrombin-III
+PBS,ECM regulators,A2AP,1.037,0.0382,Alpha-2-antiplasmin
+PBS,ECM regulators,CBG,1.824,0.0492,Corticosteroid-binding globulin
+PBS,ECM regulators,ITIH2,2.002,0.0384,Inter-alpha-trypsin inhibitor heavy chain H2
+PBS,ECM regulators,PLMN,0.403,0.4787,Plasminogen
+PBS,ECM regulators,ITIH4,1.424,0.0176,"Inter alpha-trypsin inhibitor, heavy chain 4"
+PBS,ECM regulators,ILEUA,1.107,0.0083,Leukocyte elastase inhibitor A
+PBS,ECM regulators,CATD,0.578,0.0008,Cathepsin D
+PBS,ECM regulators,HEP2,1.277,0.0913,Heparin cofactor 2 (Heparin cofactor II) (HC-II)
+PBS,ECM regulators,CATB,0.712,0.0783,Cathepsin B
+PBS,ECM regulators,ITIH3,1.153,0.0598,Inter-alpha-trypsin inhibitor heavy chain H3
+PBS,ECM regulators,PEDF,1.113,0.0399,Pigment epithelium-derived factor
+PBS,ECM regulators,HRG,0.484,0.5714,Histidine-rich glycoprotein
+PBS,ECM regulators,IC1,0.514,0.3235,Plasma protease C1 inhibitor
+PBS,ECM regulators,THRB,0.53,0.5704,Prothrombin
+PBS,ECM regulators,AMBP,2.275,0.0785,Protein AMBP
+PBS,ECM regulators,ITIH1,0.819,0.1858,Inter-alpha-trypsin inhibitor heavy chain H1
+PBS,ECM regulators,CPN2,0.666,0.4728,Carboxypeptidase N subunit 2
+PBS,ECM regulators,CYTB,2.805,0.078,Cystatin-B
+PBS,ECM regulators,FIBG,1.138,0.0014,Fibrinogen gamma chain
+PBS,ECM Glycoproteins,FIBB,1.19,0.0015,Fibrinogen beta chain
+PBS,ECM Glycoproteins,FIBA,1.19,0.0009,Fibrinogen alpha chain
+PBS,ECM Glycoproteins,COMP,0.32,0.715,Cartilage oligomeric matrix protein
+PBS,ECM Glycoproteins,VMA5A,0.806,0.0002,von Willebrand factor A domain-containing protein 5A
+PBS,ECM Glycoproteins,ADIPO,0.071,0.8364,Adiponectin
+PBS,ECM Glycoproteins,LUM,0.484,0.0304,Lumican
+PBS,ECM Glycoproteins,PRELP,0.373,0.0007,Prolargin
+PBS,ECM Glycoproteins,MIME,0.398,0.1075,Mimecan
+PBS,Proteoglycans,PGS2,0.162,0.1598,Decorin
+PBS,Proteoglycans,ASPN,0.531,0.0036,Asporin
+PBS,Proteoglycans,FMOD,-0.023,0.9634,Fibromodulin
+PBS,Proteoglycans,ANXA6,-0.392,0.0079,Annexin A6
+PBS,Proteoglycans,ANX11,0.281,0.0209,Annexin A11
+PBS,Proteoglycans,ANXA4,0.635,0.002,Annexin A4
+PBS,Proteoglycans,ANXA3,0.273,0.247,Annexin A3
+PBS,Proteoglycans,HEMO,0.744,0.0176,Hemopexin
+PBS,ECM-affiliated Proteins,ANXA2,0.263,0.1759,Annexin A2
+PBS,ECM-affiliated Proteins,LEG1,-0.015,0.9281,Galectin-1
+PBS,ECM-affiliated Proteins,ANXA1,0.002,0.9973,Annexin A1
+PBS,ECM-affiliated Proteins,ANXA7,-0.077,0.3791,Annexin A7
+PBS,ECM-affiliated Proteins,LEGL,-0.956,0.1733,Galectin-related protein
+PBS,ECM-affiliated Proteins,S10A1,0.243,0.3729,Protein S100-A1
+PBS,Secreted Factors,S10A6,0.404,0.0627,Protein S100-A6
+PBS,Secreted Factors,CO6A1,0.614,0.0004,Collagen alpha-1(VI) chain
+PBS,Secreted Factors,CO6A2,0.592,0.0012,Collagen alpha-2(VI) chain
+PBS,Secreted Factors,CO1A2,0.007,0.9864,Collagen alpha-2(I) chain
+PBS,Collagens,CO6A6,0.09,0.4178,Collagen alpha-6(VI) chain
+PBS,Collagens,COFA1,0.356,0.3462,Collagen alpha-1(XV) chain
+PBS,Collagens,CO4A1,1.302,0.0163,Collagen alpha-1(IV) chain
+PBS,Collagens,SPA3K,0.104,0.8133,Serine protease inhibitor A3K
+PBS,Collagens,A1AT3,0.392,0.1245,Alpha-1-antitrypsin 1-3
+PBS,Collagens,A1AT2,0.868,0.0216,Alpha-1-antitrypsin 1-2
+PBS,Collagens,PZP,0.93,0.1287,Pregnancy zone protein (Alpha-2-macroglobulin)
+PBS,Collagens,KNG1,-0.57,0.8294,Kininogen-1
+PBS,ECM regulators,CATD,1.037,0.0002,Cathepsin D
+PBS,ECM regulators,CATB,1.054,0.0945,Cathepsin B
+PBS,ECM regulators,PEDF,-0.528,0.7054,Pigment epithelium-derived factor
+PBS,ECM regulators,TGM2,0.805,0.013,Protein-glutamine gamma-glutamyltransferase 2
+PBS,ECM regulators,SERPH,-0.547,0.1747,Serpin H1
+PBS,ECM regulators,FIBG,0.897,0.0872,Fibrinogen gamma chain
+PBS,ECM regulators,FIBB,0.714,0.1157,Fibrinogen beta chain
+PBS,ECM regulators,FIBA,0.846,0.2517,Fibrinogen alpha chain
+PBS,ECM regulators,TSP4,1.338,0.048,Thrombospondin-4
+PBS,ECM regulators,COMP,1.533,0.0515,Cartilage oligomeric matrix protein
+PBS,ECM regulators,LAMA2,0.454,0.0001,Laminin subunit alpha-2
+PBS,ECM regulators,LAMC1,0.561,0.0,Laminin subunit gamma-1
+PBS,ECM regulators,NID1,0.544,0.0,Nidogen-1
+PBS,ECM regulators,NID2,1.09,0.0004,Nidogen-2
+PBS,ECM regulators,LAMB2,0.526,0.0002,Laminin subunit beta-2
+PBS,ECM regulators,LAMB1,0.47,0.0102,Laminin subunit beta-1
+PBS,ECM Glycoproteins,BGH3,0.775,0.0158,Transforming growth factor-beta-induced protein ig-h3
+PBS,ECM Glycoproteins,POSTN,1.28,0.0034,Periostin
+PBS,ECM Glycoproteins,FINC,1.348,0.036,Fibronectin
+PBS,ECM Glycoproteins,DERM,0.508,0.0035,Dermatopontin
+PBS,ECM Glycoproteins,LAMA5,0.79,0.0019,Laminin subunit alpha-5
+PBS,ECM Glycoproteins,CILP1,1.468,0.0001,Cartilage intermediate layer protein 1
+PBS,ECM Glycoproteins,LAMA4,1.452,0.1224,Laminin subunit alpha-4
+PBS,ECM Glycoproteins,FBN1,0.385,0.46,Fibrillin-1
+PBS,ECM Glycoproteins,MFAP4,1.162,0.6121,Microfibril-associated glycoprotein 4
+PBS,ECM Glycoproteins,TENA,2.547,0.0219,Tenascin
+PBS,ECM Glycoproteins,VWA1,3.966,0.105,von Willebrand factor A domain-containing protein 1
+PBS,ECM Glycoproteins,LUM,0.806,0.001,Lumican
+PBS,ECM Glycoproteins,PRELP,0.865,0.0071,Prolargin
+PBS,ECM Glycoproteins,MIME,0.543,0.0084,Mimecan
+PBS,ECM Glycoproteins,PGS2,0.437,0.054,Decorin
+PBS,Proteoglycans,ASPN,0.791,0.0079,Asporin
+PBS,Proteoglycans,FMOD,0.728,0.0053,Fibromodulin
+PBS,Proteoglycans,PGS1,1.048,0.0024,Biglycan
+PBS,Proteoglycans,PGBM,0.133,0.0879,Basement membrane-specific heparan sulfate proteoglycan core protein
+PBS,Proteoglycans,ANXA6,0.26,0.1341,Annexin A6
+PBS,Proteoglycans,ANX11,0.904,0.0,Annexin A11
+PBS,Proteoglycans,HEMO,1.593,0.0074,Hemopexin
+PBS,Proteoglycans,ANXA5,2.283,0.0018,Annexin A5
+PBS,ECM-affiliated Proteins,ANXA2,0.42,0.0046,Annexin A2
+PBS,ECM-affiliated Proteins,LEG1,1.191,0.0209,Galectin-1
+PBS,ECM-affiliated Proteins,GPC1,0.835,0.1576,Glypican-1
+PBS,ECM-affiliated Proteins,LMAN1,0.517,0.7165,Protein ERGIC-53
+PBS,ECM-affiliated Proteins,ANGL7,1.14,0.0763,Angiopoietin-related protein 7
+PBS,Secreted Factors,S10AA,0.764,0.4253,Protein S100-A10
+PBS,Secreted Factors,CO6A1,0.126,0.416,Collagen alpha-1(VI) chain
+PBS,Secreted Factors,CO6A2,0.216,0.1564,Collagen alpha-2(VI) chain
+PBS,Secreted Factors,CO1A2,-0.114,0.8601,Collagen alpha-2(I) chain
+PBS,Secreted Factors,CO1A1,-0.205,0.7748,Collagen alpha-1(I) chain
+PBS,Secreted Factors,CO6A6,0.706,0.3562,Collagen alpha-6(VI) chain
+PBS,Collagens,CO4A1,0.694,0.0984,Collagen alpha-1(IV) chain
+PBS,Collagens,CO4A2,0.501,0.2004,Collagen alpha-2(IV) chain
+PBS,Collagens,CO3A1,1.231,0.4124,Collagen alpha-1(III) chain
+PBS,Collagens,CO5A1,-0.257,0.5889,Collagen alpha-1(V) chain
+PBS,Collagens,CO5A2,-0.39,0.7073,Collagen alpha-2(V) chain
+PBS,Collagens,SPA3K,-0.417,0.4127,Serine protease inhibitor A3K
+PBS,Collagens,A1AT3,0.084,0.8121,Alpha-1-antitrypsin 1-3
+PBS,Collagens,ITIH3,-0.007,0.9848,Inter-alpha-trypsin inhibitor heavy chain H3
+PBS,ECM regulators,ITIH1,0.21,0.8696,Inter-alpha-trypsin inhibitor heavy chain H1
+PBS,ECM regulators,TGM2,0.427,0.0127,Protein-glutamine gamma-glutamyltransferase 2
+PBS,ECM regulators,ITIH5,0.995,0.2585,Inter-alpha-trypsin inhibitor heavy chain H5
+PBS,ECM regulators,FIBG,-0.182,0.8531,Fibrinogen gamma chain
+PBS,ECM regulators,FIBB,0.779,0.333,Fibrinogen beta chain
+PBS,ECM regulators,FIBA,-0.874,0.1989,Fibrinogen alpha chain
+PBS,ECM regulators,TSP4,0.667,0.228,Thrombospondin-4
+PBS,ECM regulators,COMP,0.446,0.4315,Cartilage oligomeric matrix protein
+PBS,ECM regulators,ADIPO,2.916,0.0532,Adiponectin
+PBS,ECM regulators,LAMA2,0.373,0.028,Laminin subunit alpha-2
+PBS,ECM regulators,LAMC1,0.355,0.0124,Laminin subunit gamma-1
+PBS,ECM regulators,NID1,0.235,0.0452,Nidogen-1
+PBS,ECM regulators,NID2,0.457,0.4769,Nidogen-2
+PBS,ECM Glycoproteins,LAMB2,0.386,0.057,Laminin subunit beta-2
+PBS,ECM Glycoproteins,LAMB1,0.434,0.0049,Laminin subunit beta-1
+PBS,ECM Glycoproteins,BGH3,-0.141,0.7957,Transforming growth factor-beta-induced protein ig-h3
+PBS,ECM Glycoproteins,FINC,0.563,0.4324,Fibronectin
+PBS,ECM Glycoproteins,DERM,0.374,0.1918,Dermatopontin
+PBS,ECM Glycoproteins,LAMA5,0.81,0.0065,Laminin subunit alpha-5
+PBS,ECM Glycoproteins,CILP1,0.62,0.1852,Cartilage intermediate layer protein 1
+PBS,ECM Glycoproteins,FBN1,0.272,0.5764,Fibrillin-1
+PBS,ECM Glycoproteins,TENA,-0.319,0.5716,Tenascin
+PBS,ECM Glycoproteins,CILP2,0.25,0.6497,Cartilage intermediate layer protein 2
+PBS,ECM Glycoproteins,LUM,0.314,0.2667,Lumican
+PBS,ECM Glycoproteins,PRELP,0.515,0.3634,Prolargin
+PBS,ECM Glycoproteins,MIME,0.196,0.4148,Mimecan
+PBS,ECM Glycoproteins,PGS2,0.043,0.9052,Decorin
+PBS,Proteoglycans,FMOD,-0.171,0.5134,Fibromodulin
+PBS,Proteoglycans,PGS1,0.641,0.1162,Biglycan
+PBS,Proteoglycans,PGBM,0.552,0.0599,Basement membrane-specific heparan sulfate proteoglycan core protein
+PBS,Proteoglycans,PRG2,2.86,0.0796,Bone marrow proteoglycan
+PBS,Proteoglycans,ANXA6,0.326,0.3756,Annexin A6
+PBS,Proteoglycans,ANX11,0.966,0.0745,Annexin A11
+PBS,ECM-affiliated Proteins,ANXA2,0.67,0.046,Annexin A2
+PBS,ECM-affiliated Proteins,LEG1,0.323,0.3258,Galectin-1
