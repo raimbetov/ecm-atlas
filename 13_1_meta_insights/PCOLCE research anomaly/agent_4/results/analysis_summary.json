@@ -1,0 +1,14 @@
+{
+  "Dataset": "V2_Batch_Corrected",
+  "Total_Rows": 9300,
+  "Total_Proteins": 3375,
+  "Total_Studies": 11,
+  "PCOLCE_Mean_Delta": -1.4129804575472822,
+  "PCOLCE_Studies": 7,
+  "Fibrillar_Collagens_Analyzed": 15,
+  "Network_Collagens_Analyzed": 14,
+  "FACIT_Collagens_Analyzed": 7,
+  "Significant_Positive_Correlations": 5,
+  "Significant_Negative_Correlations": 0,
+  "Compensatory_Proteases_Found": 4,
+  "Inverse_Proteases": 

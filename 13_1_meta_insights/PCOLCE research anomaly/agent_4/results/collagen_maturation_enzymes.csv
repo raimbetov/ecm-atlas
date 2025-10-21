@@ -1,0 +1,12 @@
+Category,Enzyme,Mean_Delta_Z,N_Studies,N_Measurements
+Lysyl_hydroxylases,PLOD1,0.024672857638178197,6,8
+Lysyl_hydroxylases,PLOD2,-0.5311505857024188,2,4
+Lysyl_hydroxylases,PLOD3,0.08836717754347545,6,8
+Prolyl_hydroxylases,P4HA1,-0.3715261560682763,6,9
+Prolyl_hydroxylases,P4HA2,-0.31522728285355717,3,5
+Prolyl_hydroxylases,P4HB,0.08475154589819671,1,2
+Lysyl_oxidases,LOX,-0.27726173154538075,7,23
+Lysyl_oxidases,LOXL1,0.12145479875930461,4,4
+Lysyl_oxidases,LOXL2,-0.2895170987137047,5,7
+Lysyl_oxidases,LOXL3,-0.3095010324711387,2,4
+Lysyl_oxidases,LOXL4,-0.20519545463154001,1,3

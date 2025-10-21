@@ -1,0 +1,5 @@
+Category,Protease,Mean_Delta_Z,N_Studies,N_Measurements,Is_Inverse_to_PCOLCE,Inverse_Strength
+C-proteinases,BMP1,-0.25327802018958706,1,3,False,
+N-proteinases,ADAMTS2,-0.1175834778104222,1,1,False,
+General,PCSK5,-0.1175834778104222,1,1,False,
+General,PCSK6,-0.1382253936339485,1,1,False,
