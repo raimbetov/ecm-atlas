@@ -1,0 +1,13 @@
+Study_ID,Species,Tissue,Method,Zscore_Delta
+Tam_2020,Homo sapiens,Intervertebral_disc_NP,Label-free LC-MS/MS (MaxQuant LFQ),-0.4512346319661808
+Tam_2020,Homo sapiens,Intervertebral_disc_IAF,Label-free LC-MS/MS (MaxQuant LFQ),-0.3444204436653202
+Tam_2020,Homo sapiens,Intervertebral_disc_OAF,Label-free LC-MS/MS (MaxQuant LFQ),-0.2498412795567696
+Angelidis_2019,Mus musculus,Lung,Label-free LC-MS/MS (MaxQuant LFQ),-0.1937487836928379
+Dipali_2023,Mus musculus,Ovary,Label-free DIA (directDIA),0.4445014220122675
+Schuler_2021,Mus musculus,Skeletal_muscle_Soleus,LFQ,-2.214168449049565
+Schuler_2021,Mus musculus,Skeletal_muscle_Gastrocnemius,LFQ,-4.056164301070654
+Schuler_2021,Mus musculus,Skeletal_muscle_TA,LFQ,-3.9905934860359658
+Schuler_2021,Mus musculus,Skeletal_muscle_EDL,LFQ,-4.498301462132544
+Santinha_2024_Mouse_NT,Mus musculus,Heart_Native_Tissue,TMT-10plex LC-MS/MS,-0.4227780831791525
+Santinha_2024_Mouse_DT,Mus musculus,Heart_Decellularized_Tissue,TMT-10plex LC-MS/MS,-0.5789066522173667
+LiDermis_2021,Homo sapiens,Skin dermis,Label-free LC-MS/MS,-0.3920325153476731
