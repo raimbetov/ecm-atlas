@@ -41,6 +41,14 @@ app = Flask(__name__)
 app.json = NaNSafeJSONProvider(app)  # Apply custom JSON encoder globally
 CORS(app)
 
+# Disable caching for all API responses to ensure fresh data
+@app.after_request
+def add_cache_control(response):
+    response.headers['Cache-Control'] = 'no-cache, no-store, must-revalidate'
+    response.headers['Pragma'] = 'no-cache'
+    response.headers['Expires'] = '0'
+    return response
+
 # Helper function to convert pandas values to JSON-safe format
 def to_json_safe(value):
     """Convert pandas/numpy values to JSON-safe format (replace NaN with None)"""

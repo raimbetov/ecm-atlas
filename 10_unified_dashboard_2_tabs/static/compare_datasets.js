@@ -20,6 +20,11 @@ const CompareDatasets = (function() {
             renderCompareContent();
             renderFilters(filters);
 
+            // Setup event listeners after filters are rendered
+            setTimeout(() => {
+                setupEventListeners();
+            }, 100);
+
             // Load initial heatmap
             await loadHeatmap();
 
@@ -39,65 +44,80 @@ const CompareDatasets = (function() {
             </div>
         `;
 
-        // Render filters in the left panel with enhanced UX
+        // Render filters in the left panel as a single tree component
         const filtersContent = document.getElementById('filters-content');
         filtersContent.innerHTML = `
-            <!-- Active Filters Display -->
-            <div id="active-filters" class="active-filters-container collapsible collapsed" style="display: none;">
-                <div class="active-filters-header">
-                    <span class="active-filters-title">Active Filters</span>
-                    <div class="active-filters-actions">
-                        <button id="clear-all-active" class="clear-active-btn">Clear All</button>
-                        <button id="toggle-active-filters" class="toggle-active-btn">▶</button>
+            <!-- Unified Filter Tree -->
+            <div class="filter-tree">
+                <div class="tree-node root-node expanded">
+                    <div class="tree-node-header">
+                        <span class="tree-toggle">▼</span>
+                        <span class="tree-label">All Filters</span>
+                        <span class="filter-count" id="total-filter-count"></span>
                     </div>
-                </div>
-                <div id="active-filter-chips" class="active-filter-chips" style="display: none;"></div>
-            </div>
+                    <div class="tree-node-content">
 
-            <!-- Compartments by Organ -->
-            <div class="filter-group collapsible expanded">
-                <div class="filter-group-header">
-                    <h3>Compartments</h3>
-                    <span class="filter-count" id="compartment-count" style="display: none;"></span>
-                </div>
-                <div class="filter-group-content">
-                    <div id="compartment-filters"></div>
-                </div>
-            </div>
+                        <!-- Compartments Branch -->
+                        <div class="tree-node compartment-node expanded">
+                            <div class="tree-node-header">
+                                <span class="tree-toggle">▼</span>
+                                <span class="tree-label">Compartments</span>
+                                <span class="filter-count" id="compartment-count"></span>
+                            </div>
+                            <div class="tree-node-content">
+                                <div id="compartment-filters"></div>
+                            </div>
+                        </div>
 
-            <!-- Categories -->
-            <div class="filter-group collapsible expanded">
-                <div class="filter-group-header">
-                    <h3>Matrisome Categories</h3>
-                    <span class="filter-count" id="category-count" style="display: none;"></span>
-                </div>
-                <div class="filter-group-content">
-                    <div id="category-filters"></div>
-                </div>
-            </div>
+                        <!-- Categories Branch -->
+                        <div class="tree-node category-node expanded">
+                            <div class="tree-node-header">
+                                <span class="tree-toggle">▼</span>
+                                <span class="tree-label">Matrisome Categories</span>
+                                <span class="filter-count" id="category-count"></span>
+                            </div>
+                            <div class="tree-node-content">
+                                <div id="category-filters"></div>
+                            </div>
+                        </div>
 
-            <!-- Studies -->
-            <div class="filter-group collapsible">
-                <div class="filter-group-header">
-                    <h3>Studies</h3>
-                    <span class="filter-count" id="study-count" style="display: none;"></span>
-                </div>
-                <div class="filter-group-content">
-                    <div id="study-filters"></div>
-                </div>
-            </div>
+                        <!-- Studies Branch -->
+                        <div class="tree-node study-node">
+                            <div class="tree-node-header">
+                                <span class="tree-toggle">▶</span>
+                                <span class="tree-label">Studies</span>
+                                <span class="filter-count" id="study-count"></span>
+                            </div>
+                            <div class="tree-node-content" style="display: none;">
+                                <div id="study-filters"></div>
+                            </div>
+                        </div>
 
-            <!-- Trend -->
-            <div class="filter-group collapsible expanded">
-                <div class="filter-group-header">
-                    <h3>Aging Trend</h3>
-                    <span class="filter-count" id="trend-count" style="display: none;"></span>
-                </div>
-                <div class="filter-group-content">
-                    <div id="trend-filters">
-                        <label class="trend-option"><input type="checkbox" value="up" class="trend-checkbox" /> <span class="trend-label up">Increased (&gt;+0.5)</span></label>
-                        <label class="trend-option"><input type="checkbox" value="down" class="trend-checkbox" /> <span class="trend-label down">Decreased (&lt;-0.5)</span></label>
-                        <label class="trend-option"><input type="checkbox" value="stable" class="trend-checkbox" /> <span class="trend-label stable">Stable (±0.5)</span></label>
+                        <!-- Aging Trend Branch -->
+                        <div class="tree-node trend-node expanded">
+                            <div class="tree-node-header">
+                                <span class="tree-toggle">▼</span>
+                                <span class="tree-label">Aging Trend</span>
+                                <span class="filter-count" id="trend-count"></span>
+                            </div>
+                            <div class="tree-node-content">
+                                <div id="trend-filters">
+                                    <label class="tree-leaf filter-label">
+                                        <input type="checkbox" value="up" class="trend-checkbox filter-checkbox" />
+                                        <span class="trend-label up">Increased (>+0.5)</span>
+                                    </label>
+                                    <label class="tree-leaf filter-label">
+                                        <input type="checkbox" value="down" class="trend-checkbox filter-checkbox" />
+                                        <span class="trend-label down">Decreased (<-0.5)</span>
+                                    </label>
+                                    <label class="tree-leaf filter-label">
+                                        <input type="checkbox" value="stable" class="trend-checkbox filter-checkbox" />
+                                        <span class="trend-label stable">Stable (±0.5)</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -106,7 +126,7 @@ const CompareDatasets = (function() {
             <div class="filter-controls">
                 <div class="control-row">
                     <label class="control-option">
-                        <input type="checkbox" id="auto-apply-toggle" checked />
+                        <input type="checkbox" id="auto-apply-toggle" class="filter-checkbox" checked />
                         <span>Auto-apply filters</span>
                     </label>
                 </div>
@@ -148,12 +168,10 @@ const CompareDatasets = (function() {
                 </div>
             </div>
         `;
-
-        setupEventListeners();
     }
 
     function renderFilters(filters) {
-        // Compartments grouped by organ with organ checkbox
+        // Compartments grouped by organ as tree nodes
         const compartmentFilters = document.getElementById('compartment-filters');
         const compartmentsByOrgan = {};
         filters.compartments.forEach(comp => {
@@ -162,37 +180,43 @@ const CompareDatasets = (function() {
             }
             compartmentsByOrgan[comp.organ].push(comp);
         });
-        
-        compartmentFilters.innerHTML = Object.keys(compartmentsByOrgan).sort().map(organ => `
-            <div style="margin-bottom: 12px;">
-                <label style="display: block; cursor: pointer; margin-bottom: 5px;">
-                    <input type="checkbox" class="organ-checkbox" data-organ="${organ}" checked />
-                    <strong style="color: #3b82f6;">${organ}</strong>
-                </label>
-                ${compartmentsByOrgan[organ].map(comp => `
-                    <label style="display: block; padding: 3px 0 3px 25px; cursor: pointer;">
-                        <input type="checkbox" class="compartment-checkbox" data-organ="${organ}" value="${comp.name}" checked />
-                        ${comp.name} (${comp.count})
-                    </label>
-                `).join('')}
-            </div>
-        `).join('');
 
-        // Categories
+        compartmentFilters.innerHTML = Object.keys(compartmentsByOrgan).sort().map(organ => {
+            const organCount = compartmentsByOrgan[organ].reduce((sum, comp) => sum + comp.count, 0);
+            return `
+            <div class="tree-node organ-node expanded">
+                <div class="tree-node-header">
+                    <span class="tree-toggle">▼</span>
+                    <input type="checkbox" class="organ-checkbox filter-checkbox" data-organ="${organ}" checked />
+                    <span class="tree-label" style="color: #3b82f6; font-weight: 600;">${organ}<span class="dataset-item-count">(${organCount})</span></span>
+                </div>
+                <div class="tree-node-content">
+                    ${compartmentsByOrgan[organ].map(comp => `
+                        <label class="tree-leaf filter-label">
+                            <input type="checkbox" class="compartment-checkbox filter-checkbox" data-organ="${organ}" value="${comp.name}" checked />
+                            <span class="tree-label">${comp.name}<span class="dataset-item-count">(${comp.count})</span></span>
+                        </label>
+                    `).join('')}
+                </div>
+            </div>
+        `;
+        }).join('');
+
+        // Categories as tree leaves
         const categoryFilters = document.getElementById('category-filters');
         categoryFilters.innerHTML = filters.categories.map(cat => `
-            <label style="display: block; padding: 5px 0; cursor: pointer;">
-                <input type="checkbox" class="category-checkbox" value="${cat.name}" checked />
-                ${cat.name} (${cat.count})
+            <label class="tree-leaf filter-label">
+                <input type="checkbox" class="category-checkbox filter-checkbox" value="${cat.name}" checked />
+                <span class="tree-label">${cat.name}<span class="dataset-item-count">(${cat.count})</span></span>
             </label>
         `).join('');
 
-        // Studies
+        // Studies as tree leaves
         const studyFilters = document.getElementById('study-filters');
         studyFilters.innerHTML = filters.studies.map(study => `
-            <label style="display: block; padding: 5px 0; cursor: pointer;">
-                <input type="checkbox" class="study-checkbox" value="${study.name}" checked />
-                ${study.name.replace('_', ' ')} (${study.count})
+            <label class="tree-leaf filter-label">
+                <input type="checkbox" class="study-checkbox filter-checkbox" value="${study.name}" checked />
+                <span class="tree-label">${study.name.replace('_', ' ')}<span class="dataset-item-count">(${study.count})</span></span>
             </label>
         `).join('');
     }
@@ -206,21 +230,14 @@ const CompareDatasets = (function() {
             clearAllFilters();
         });
 
-        // Clear active filters
-        document.getElementById('clear-all-active')?.addEventListener('click', () => {
-            clearAllFilters();
-        });
 
-        // Toggle active filters
-        document.getElementById('toggle-active-filters')?.addEventListener('click', () => {
-            toggleActiveFilters();
-        });
 
         // Auto-apply toggle
         document.getElementById('auto-apply-toggle').addEventListener('change', (e) => {
             const autoApply = e.target.checked;
+
             if (autoApply) {
-                // Auto-apply immediately when changed
+                // Auto-apply immediately when enabled
                 loadHeatmap();
             }
         });
@@ -248,33 +265,36 @@ const CompareDatasets = (function() {
             }
         });
 
-        // Organ checkbox toggle all compartments
-        document.getElementById('compartment-filters').addEventListener('change', (e) => {
-            if (e.target.classList.contains('organ-checkbox')) {
+        // Attach event listeners to all filter checkboxes directly
+        // Organ checkboxes
+        document.querySelectorAll('.organ-checkbox').forEach(cb => {
+            cb.addEventListener('change', (e) => {
                 const organ = e.target.dataset.organ;
                 const checked = e.target.checked;
-                document.querySelectorAll(`.compartment-checkbox[data-organ="${organ}"]`).forEach(cb => {
-                    cb.checked = checked;
+                document.querySelectorAll(`.compartment-checkbox[data-organ="${organ}"]`).forEach(compCb => {
+                    compCb.checked = checked;
                 });
                 updateFilterDisplay();
                 autoApplyIfEnabled();
-            }
+            });
         });
 
-        // Individual filter changes
-        document.addEventListener('change', (e) => {
-            if (e.target.matches('.compartment-checkbox, .category-checkbox, .study-checkbox, .trend-checkbox')) {
+        // Individual filter checkboxes
+        document.querySelectorAll('.compartment-checkbox, .category-checkbox, .study-checkbox, .trend-checkbox').forEach(cb => {
+            cb.addEventListener('change', (e) => {
                 updateFilterDisplay();
                 autoApplyIfEnabled();
-            }
+            });
         });
 
-        // Collapsible filter groups
+        // Tree node toggling
         document.addEventListener('click', (e) => {
-            if (e.target.closest('.filter-group-header')) {
-                const header = e.target.closest('.filter-group-header');
-                const group = header.parentElement;
-                toggleFilterGroup(group);
+            if (e.target.classList.contains('tree-toggle') || e.target.closest('.tree-node-header')) {
+                const header = e.target.closest('.tree-node-header');
+                if (header) {
+                    const node = header.parentElement;
+                    toggleTreeNode(node);
+                }
             }
         });
     }
@@ -311,7 +331,6 @@ const CompareDatasets = (function() {
 
     async function loadHeatmap() {
         try {
-
             const filters = getSelectedFilters();
             const queryString = new URLSearchParams(filters).toString();
             const endpoint = `/api/compare/heatmap${queryString ? '?' + queryString : ''}`;
@@ -323,7 +342,6 @@ const CompareDatasets = (function() {
             updateProteinCount(data.summary.total_proteins);
             updateFilterDisplay();
 
-            
         } catch (error) {
             console.error('Error loading heatmap:', error);
         }
@@ -508,15 +526,13 @@ const CompareDatasets = (function() {
             clearTimeout(autoApplyIfEnabled.timeoutId);
             autoApplyIfEnabled.timeoutId = setTimeout(() => {
                 loadHeatmap();
-            }, 500);
+            }, 300);
         }
     }
 
     function updateFilterDisplay() {
         const activeFilters = getActiveFilters();
-        updateActiveFilterChips(activeFilters);
         updateFilterCounts(activeFilters);
-        updateActiveFiltersVisibility(activeFilters);
     }
 
     function getActiveFilters() {
@@ -552,95 +568,13 @@ const CompareDatasets = (function() {
         return labels[value] || value;
     }
 
-    function updateActiveFilterChips(filters) {
-        const chipsContainer = document.getElementById('active-filter-chips');
-        const chips = [];
-
-        // Search chip
-        if (filters.search) {
-            chips.push(createFilterChip('search', `${filters.search}`, 'search'));
-        }
-
-        // Compartment chips
-        filters.compartments.forEach(comp => {
-            chips.push(createFilterChip('compartment', `${comp.label} (${comp.organ})`, comp.value, comp.organ));
-        });
-
-        // Category chips
-        filters.categories.forEach(cat => {
-            chips.push(createFilterChip('category', cat.label, cat.value));
-        });
-
-        // Study chips
-        filters.studies.forEach(study => {
-            chips.push(createFilterChip('study', study.label, study.value));
-        });
-
-        // Trend chips
-        filters.trends.forEach(trend => {
-            chips.push(createFilterChip('trend', trend.label, trend.value));
-        });
-
-        chipsContainer.innerHTML = chips.join('');
-    }
-
-    function createFilterChip(type, label, value, organ = null) {
-        const colorClass = getChipColorClass(type);
-        const removeHandler = organ ?
-            `removeFilterChip('${type}', '${value}', '${organ}')` :
-            `removeFilterChip('${type}', '${value}')`;
-
-        return `
-            <div class="filter-chip ${colorClass}" data-type="${type}" data-value="${value}" ${organ ? `data-organ="${organ}"` : ''}>
-                <span class="chip-label">${label}</span>
-                <button class="chip-remove" onclick="${removeHandler}" aria-label="Remove filter">×</button>
-            </div>
-        `;
-    }
-
-    function getChipColorClass(type) {
-        const colors = {
-            search: 'chip-search',
-            compartment: 'chip-compartment',
-            category: 'chip-category',
-            study: 'chip-study',
-            trend: 'chip-trend'
-        };
-        return colors[type] || 'chip-default';
-    }
-
-    function removeFilterChip(type, value, organ = null) {
-        switch (type) {
-            case 'search':
-                document.getElementById('search-input').value = '';
-                break;
-            case 'compartment':
-                const compartmentCheckbox = document.querySelector(`.compartment-checkbox[value="${value}"][data-organ="${organ}"]`);
-                if (compartmentCheckbox) compartmentCheckbox.checked = false;
-                break;
-            case 'category':
-                const categoryCheckbox = document.querySelector(`.category-checkbox[value="${value}"]`);
-                if (categoryCheckbox) categoryCheckbox.checked = false;
-                break;
-            case 'study':
-                const studyCheckbox = document.querySelector(`.study-checkbox[value="${value}"]`);
-                if (studyCheckbox) studyCheckbox.checked = false;
-                break;
-            case 'trend':
-                const trendCheckbox = document.querySelector(`.trend-checkbox[value="${value}"]`);
-                if (trendCheckbox) trendCheckbox.checked = false;
-                break;
-        }
-
-        updateFilterDisplay();
-        autoApplyIfEnabled();
-        loadHeatmap(); // Always apply when removing chips
-    }
 
     function updateFilterCounts(filters) {
-        // Update count badges for each filter group
-        document.getElementById('search-count').textContent = filters.search ? '1' : '';
-        document.getElementById('search-count').style.display = filters.search ? 'inline' : 'none';
+        // Update count badges for each tree node
+        const totalCount = filters.compartments.length + filters.categories.length + filters.studies.length + filters.trends.length;
+
+        document.getElementById('total-filter-count').textContent = totalCount || '';
+        document.getElementById('total-filter-count').style.display = totalCount ? 'inline' : 'none';
 
         document.getElementById('compartment-count').textContent = filters.compartments.length || '';
         document.getElementById('compartment-count').style.display = filters.compartments.length ? 'inline' : 'none';
@@ -655,46 +589,7 @@ const CompareDatasets = (function() {
         document.getElementById('trend-count').style.display = filters.trends.length ? 'inline' : 'none';
     }
 
-    function updateActiveFiltersVisibility(filters) {
-        const activeContainer = document.getElementById('active-filters');
-        const chipsContainer = document.getElementById('active-filter-chips');
-        const toggleBtn = document.getElementById('toggle-active-filters');
 
-        const hasActiveFilters = filters.search || filters.compartments.length || filters.categories.length ||
-                                filters.studies.length || filters.trends.length;
-
-        if (hasActiveFilters) {
-            activeContainer.style.display = 'block';
-            // Keep collapsed state (chips hidden) by default when first shown
-            if (!activeContainer.classList.contains('expanded') && !activeContainer.classList.contains('collapsed')) {
-                activeContainer.classList.add('collapsed');
-                if (chipsContainer) chipsContainer.style.display = 'none';
-                if (toggleBtn) toggleBtn.textContent = '▶';
-            }
-        } else {
-            activeContainer.style.display = 'none';
-        }
-    }
-
-    function toggleActiveFilters() {
-        const activeContainer = document.getElementById('active-filters');
-        const chipsContainer = document.getElementById('active-filter-chips');
-        const toggleBtn = document.getElementById('toggle-active-filters');
-
-        if (activeContainer.classList.contains('collapsed')) {
-            // Expand
-            activeContainer.classList.remove('collapsed');
-            activeContainer.classList.add('expanded');
-            chipsContainer.style.display = 'flex';
-            toggleBtn.textContent = '▼';
-        } else {
-            // Collapse
-            activeContainer.classList.remove('expanded');
-            activeContainer.classList.add('collapsed');
-            chipsContainer.style.display = 'none';
-            toggleBtn.textContent = '▶';
-        }
-    }
 
     function updateFilterSummary() {
         const activeFilters = getActiveFilters();
@@ -710,11 +605,17 @@ const CompareDatasets = (function() {
         summaryElem.textContent = summaryTexts.length ? `(${summaryTexts.join(', ')})` : '';
     }
 
-    function toggleFilterGroup(group) {
-        group.classList.toggle('expanded');
-        const content = group.querySelector('.filter-group-content');
+    function toggleTreeNode(node) {
+        node.classList.toggle('expanded');
+        const content = node.querySelector('.tree-node-content');
+        const toggle = node.querySelector('.tree-toggle');
+
         if (content) {
-            content.style.display = group.classList.contains('expanded') ? 'block' : 'none';
+            content.style.display = node.classList.contains('expanded') ? 'block' : 'none';
+        }
+
+        if (toggle) {
+            toggle.textContent = node.classList.contains('expanded') ? '▼' : '▶';
         }
     }
 

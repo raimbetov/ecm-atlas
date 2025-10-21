@@ -6,7 +6,7 @@
     <title>ECM Atlas - Unified Analysis Dashboard</title>
     <script src="https://cdn.plot.ly/plotly-2.26.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-    <link rel="stylesheet" href="static/styles.css">
+    <link rel="stylesheet" href="static/styles.css?v=20251022-LATEST-FIX">
     <script>
         window.API_BASE = (() => {
             const protocol = window.location.protocol;
@@ -127,17 +127,17 @@
 
 
                 <!-- Contributors -->
-                <section class="sidebar-section contributors-section glass-card">
+                <section class="sidebar-section contributors-section">
                     <h4>Team</h4>
                     <div class="team-list">
-                        <div class="team-member">
+                        <a href="https://www.linkedin.com/in/raimbetov/" target="_blank" class="team-member">
                             <img src="static/assets/rakhan.png" alt="Rakhan Raimbetov" class="member-avatar">
-                            <a href="https://www.linkedin.com/in/raimbetov/" target="_blank" class="member-name">Rakhan Raimbetov</a>
-                        </div>
-                        <div class="team-member">
+                            <span class="member-name">Rakhan Raimbetov</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/danielkravtsov" target="_blank" class="team-member">
                             <img src="static/assets/daniel.png" alt="Daniel Kravtsov" class="member-avatar">
-                            <a href="https://www.linkedin.com/in/danielkravtsov" target="_blank" class="member-name">Daniel Kravtsov</a>
-                        </div>
+                            <span class="member-name">Daniel Kravtsov</span>
+                        </a>
                     </div>
                 </section>
             </aside>
@@ -212,8 +212,8 @@
 
     <!-- Scripts (with cache-busting version param) -->
     <script src="static/about_tab.js?v=20251018-1"></script>
-    <script src="static/main.js?v=20251018-2"></script>
+    <script src="static/main.js?v=20251022-FRESH-DATA"></script>
     <script src="static/individual_dataset.js?v=20251018-NaN-fix"></script>
-    <script src="static/compare_datasets.js?v=20251018-ORGAN-TOGGLE"></script>
+    <script src="static/compare_datasets.js?v=20251022-LATEST-FIX"></script>
 </body>
 </html>

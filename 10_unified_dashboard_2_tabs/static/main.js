@@ -183,6 +183,18 @@ function populateDatasetSelector() {
 
         datasetList.appendChild(datasetItem);
     });
+
+    // Trigger staggered animation for dataset items (modern CSS linear() easing)
+    requestAnimationFrame(() => {
+        const items = datasetList.querySelectorAll('.dataset-item');
+        items.forEach((item, index) => {
+            // Use setTimeout to create staggered effect as fallback for non-Chrome browsers
+            setTimeout(() => {
+                item.style.animationDelay = `${index * 50}ms`;
+                item.classList.add('animate-in');
+            }, index * 50);
+        });
+    });
 }
 
 // Dataset selection for Individual Analysis
@@ -278,7 +290,13 @@ function switchTab(tabName) {
 
 // Fetch from API
 async function fetchAPI(endpoint) {
-    const response = await fetch(`${API_BASE}${endpoint}`);
+    const response = await fetch(`${API_BASE}${endpoint}`, {
+        headers: {
+            'Cache-Control': 'no-cache',
+            'Pragma': 'no-cache'
+        },
+        cache: 'no-store'
+    });
     if (!response.ok) {
         throw new Error(`API error: ${response.statusText}`);
     }
