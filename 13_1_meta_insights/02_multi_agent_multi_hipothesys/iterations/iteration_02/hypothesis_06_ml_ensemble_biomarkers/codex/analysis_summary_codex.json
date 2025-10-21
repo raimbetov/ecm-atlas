@@ -1,0 +1,121 @@
+{
+  "rf_metrics": {
+    "accuracy": 0.75,
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1": 0.6666666666666666,
+    "auc": 0.75
+  },
+  "xgb_metrics": {
+    "accuracy": 1.0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "auc": 1.0
+  },
+  "nn_metrics": {
+    "accuracy": 0.75,
+    "precision": 0.6666666666666666,
+    "recall": 1.0,
+    "f1": 0.8,
+    "auc": 1.0
+  },
+  "ensemble_metrics": {
+    "accuracy": 0.75,
+    "precision": 0.6666666666666666,
+    "recall": 1.0,
+    "f1": 0.8,
+    "auc": 1.0
+  },
+  "reduced_metrics": {
+    "rf": {
+      "accuracy": 0.75,
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "f1": 0.8,
+      "auc": 0.875
+    },
+    "xgb": {
+      "accuracy": 0.5,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666,
+      "auc": 0.5
+    },
+    "nn": {
+      "accuracy": 0.75,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666,
+      "auc": 0.5
+    },
+    "ensemble": {
+      "accuracy": 0.75,
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "f1": 0.8,
+      "auc": 0.75
+    }
+  },
+  "biomarker_panel": [
+    {
+      "Protein": "FSTL1",
+      "mean_abs_shap": 0.0003156331319284315,
+      "rfe_selected": true,
+      "rfe_rank": 1,
+      "rank": 1
+    },
+    {
+      "Protein": "S100a9",
+      "mean_abs_shap": 0.00024274268212413149,
+      "rfe_selected": true,
+      "rfe_rank": 1,
+      "rank": 2
+    },
+    {
+      "Protein": "Ctsa",
+      "mean_abs_shap": 0.00022137335952235546,
+      "rfe_selected": true,
+      "rfe_rank": 1,
+      "rank": 3
+    },
+    {
+      "Protein": "CELA3A;CELA3B",
+      "mean_abs_shap": 0.00011719160981253177,
+      "rfe_selected": true,
+      "rfe_rank": 1,
+      "rank": 4
+    },
+    {
+      "Protein": "IL17D",
+      "mean_abs_shap": 0.00011011202028991345,
+      "rfe_selected": true,
+      "rfe_rank": 1,
+      "rank": 5
+    },
+    {
+      "Protein": "F13b",
+      "mean_abs_shap": 9.600823977962138e-05,
+      "rfe_selected": true,
+      "rfe_rank": 1,
+      "rank": 6
+    },
+    {
+      "Protein": "GAS6",
+      "mean_abs_shap": 4.7517348093606415e-05,
+      "rfe_selected": true,
+      "rfe_rank": 1,
+      "rank": 7
+    },
+    {
+      "Protein": "Fbln5",
+      "mean_abs_shap": 3.7221818881031744e-05,
+      "rfe_selected": true,
+      "rfe_rank": 1,
+      "rank": 8
+    }
+  ],
+  "n_features": 910,
+  "n_tissues": 17,
+  "median_velocity": 0.1352283363352565
+}

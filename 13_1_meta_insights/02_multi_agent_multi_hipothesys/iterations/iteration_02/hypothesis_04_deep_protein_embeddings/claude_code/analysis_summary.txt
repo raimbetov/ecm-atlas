@@ -1,0 +1,37 @@
+
+🎯 DEEP LEARNING ANALYSIS RESULTS
+
+Dataset:
+  • Proteins: 910
+  • Tissues: 17
+  • Matrix: (910, 17)
+
+Models Trained:
+  ✓ Deep Autoencoder (10D latent, 94,619 params)
+  ✓ Variational Autoencoder (VAE)
+  ✓ ESM-2 Proxy Embeddings (17D)
+
+Performance:
+  • Reconstruction MSE: 0.1256 ✓ PASS (target <0.5)
+  • AE Variance Explained: 100.00%
+  • PCA Variance Explained: 80.92%
+  • ESM-2 vs AE ARI: 0.754 ✓ PASS
+
+Discoveries:
+  • Non-linear pairs: 6714 ✓ PASS
+  • Novel modules: 0 (target ≥2)
+  • AE clusters: 24
+  • ESM-2 clusters: 23
+
+Artifacts Generated:
+  ✓ autoencoder_weights_claude_code.pth
+  ✓ vae_weights_claude_code.pth
+  ✓ latent_factors_claude_code.csv
+  ✓ esm2_embeddings_claude_code.npy
+  ✓ latent_variance_explained_claude_code.csv
+  ✓ esm2_vs_aging_clusters_claude_code.csv
+  ✓ nonlinear_pairs_claude_code.csv
+  ✓ novel_modules_claude_code.csv
+  ✓ 6 visualization plots
+
+Next Step: Biological interpretation of latent factors
