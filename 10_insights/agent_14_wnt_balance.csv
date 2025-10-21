@@ -1,5 +1,0 @@
-Tissue,Young_Inhibitor_Zscore,Old_Inhibitor_Zscore,Young_Activator_Zscore,Old_Activator_Zscore,Young_Balance,Old_Balance,N_Inhibitors_Young,N_Inhibitors_Old,N_Activators_Young,N_Activators_Old,Wnt_Unleashing_Index
-Intervertebral_disc_NP,0.08798012675291891,-0.5699423445408601,0.0,0,,,2,3,0,0,
-Intervertebral_disc_IAF,-0.4556798142030834,-0.4573441403013957,0.0,0,,,4,4,0,0,
-Intervertebral_disc_OAF,-0.5361678206242873,-0.1952527232093102,-2.1055202561679183,0,-3.926979902890022,,4,4,1,0,
-Skin dermis,-1.3209146156695064,-1.2187935205506382,0.0,0,,,1,1,0,0,

@@ -1,0 +1,141 @@
+Cluster,Stage,Gene_Symbol,Protein_Name,Matrisome_Category,N_Tissues,Direction,Effect_Size,Consistency,Strong_Effect_Rate,Universality_Score
+0,CLUSTER 0: Gradual/Variable Changes,NUP98,Nuclear pore complex protein Nup98-Nup96 OS=Homo sapiens GN=NUP98 PE=1 SV=4,Unknown,2,DOWN,0.4877806750464779,0.5,0.0,0.2340721851517066
+0,CLUSTER 0: Gradual/Variable Changes,ATP6V1A,V-type proton ATPase catalytic subunit A OS=Homo sapiens GN=ATP6V1A PE=1 SV=2,Unknown,2,DOWN,0.4801695192322669,0.5,0.0,0.2333110695702855
+0,CLUSTER 0: Gradual/Variable Changes,HIST1H2BB,Histone H2B type 1-B OS=Homo sapiens GN=HIST1H2BB PE=1 SV=2,Unknown,2,DOWN,0.4781533978040285,0.5,0.0,0.2331094574274617
+0,CLUSTER 0: Gradual/Variable Changes,CALB1,Calbindin OS=Homo sapiens GN=CALB1 PE=1 SV=2,Unknown,2,DOWN,0.4759200049500443,0.5,0.0,0.2328861181420632
+0,CLUSTER 0: Gradual/Variable Changes,CRTAP,Cartilage-associated protein OS=Homo sapiens GN=CRTAP PE=1 SV=1,Unknown,2,DOWN,0.4708171444607714,0.5,0.0,0.2323758320931359
+0,CLUSTER 0: Gradual/Variable Changes,EML4,Echinoderm microtubule-associated protein-like 4 OS=Homo sapiens GN=EML4 PE=1 SV=3,Unknown,2,DOWN,0.4688852472566427,0.5,0.0,0.2321826423727231
+0,CLUSTER 0: Gradual/Variable Changes,SYNPO2,Synaptopodin-2 (Fragment) OS=Homo sapiens GN=SYNPO2 PE=1 SV=1,Unknown,2,DOWN,0.4460647031437544,0.5,0.0,0.2299005879614342
+0,CLUSTER 0: Gradual/Variable Changes,DMGDH,"Dimethylglycine dehydrogenase, mitochondrial OS=Homo sapiens GN=DMGDH PE=1 SV=2",Unknown,2,DOWN,0.4231286682410774,0.5,0.0,0.2276069844711665
+0,CLUSTER 0: Gradual/Variable Changes,RBMY1C,"RNA-binding motif protein, Y chromosome, family 1 member C OS=Homo sapiens GN=RBMY1C PE=1 SV=1",Unknown,2,DOWN,0.4210445682478064,0.5,0.0,0.2273985744718394
+0,CLUSTER 0: Gradual/Variable Changes,ALDH3A1,"Aldehyde dehydrogenase, dimeric NADP-preferring OS=Homo sapiens GN=ALDH3A1 PE=1 SV=1",Unknown,2,DOWN,0.4155218950565114,0.5,0.0,0.2268463071527099
+0,CLUSTER 0: Gradual/Variable Changes,ACADSB,"Short/branched chain specific acyl-CoA dehydrogenase, mitochondrial OS=Homo sapiens GN=ACADSB PE=1 SV=1",Unknown,2,DOWN,0.4116740180340363,0.5,0.0,0.2264615194504624
+0,CLUSTER 0: Gradual/Variable Changes,KRT76,"Keratin, type II cytoskeletal 2 oral OS=Homo sapiens GN=KRT76 PE=1 SV=2",Unknown,2,DOWN,0.4082030076790285,0.5,0.0,0.2261144184149617
+0,CLUSTER 0: Gradual/Variable Changes,C8A,Complement component C8 alpha chain OS=Homo sapiens GN=C8A PE=1 SV=2,Unknown,2,DOWN,0.4031873595777443,0.5,0.0,0.2256128536048332
+0,CLUSTER 0: Gradual/Variable Changes,Iigp1,,Non-ECM,2,DOWN,0.4028867295503509,0.5,0.0,0.2255827906020939
+0,CLUSTER 0: Gradual/Variable Changes,RTCA,RNA 3'-terminal phosphate cyclase OS=Homo sapiens GN=RTCA PE=1 SV=1,Unknown,2,DOWN,0.4025487542348189,0.5,0.0,0.2255489930705407
+0,CLUSTER 0: Gradual/Variable Changes,PPP2R2A,Serine/threonine-protein phosphatase 2A 55 kDa regulatory subunit B alpha isoform OS=Homo sapiens GN=PPP2R2A PE=1 SV=1,Unknown,2,DOWN,0.402523548282617,0.5,0.0,0.2255464724753205
+0,CLUSTER 0: Gradual/Variable Changes,GSTK1,Glutathione S-transferase kappa 1 OS=Homo sapiens GN=GSTK1 PE=1 SV=3,Unknown,2,DOWN,0.4011553735813293,0.5,0.0,0.2254096550051917
+0,CLUSTER 0: Gradual/Variable Changes,LINC00479,Putative uncharacterized protein encoded by LINC00479 OS=Homo sapiens GN=LINC00479 PE=5 SV=2,Unknown,2,DOWN,0.4003697702448191,0.5,0.0,0.2253310946715407
+0,CLUSTER 0: Gradual/Variable Changes,KDM3B,Lysine-specific demethylase 3B OS=Homo sapiens GN=KDM3B PE=1 SV=2,Unknown,2,DOWN,0.4000767699464618,0.5,0.0,0.225301794641705
+0,CLUSTER 0: Gradual/Variable Changes,RRAS2,Ras-related protein R-Ras2 OS=Homo sapiens GN=RRAS2 PE=1 SV=1,Unknown,2,DOWN,0.395999806653874,0.5,0.0,0.2248940983124462
+1,PHASE 1: Early Dramatic Changes (20-40 years),ELAVL1,ELAV-like protein 1 OS=Homo sapiens GN=ELAVL1 PE=1 SV=2,Unknown,2,DOWN,0.948997110023318,0.5,0.5,0.2801938286493906
+1,PHASE 1: Early Dramatic Changes (20-40 years),PNO1,RNA-binding protein PNO1 OS=Homo sapiens GN=PNO1 PE=1 SV=1,Unknown,2,DOWN,0.91031637768026,0.5,0.5,0.2763257554150848
+1,PHASE 1: Early Dramatic Changes (20-40 years),SDSL,Serine dehydratase-like OS=Homo sapiens GN=SDSL PE=1 SV=1,Unknown,2,DOWN,0.8728561464666931,0.5,0.5,0.2725797322937281
+1,PHASE 1: Early Dramatic Changes (20-40 years),CENPV,Centromere protein V OS=Homo sapiens GN=CENPV PE=1 SV=1,Unknown,2,DOWN,0.8574018881843773,0.5,0.5,0.2710343064654966
+1,PHASE 1: Early Dramatic Changes (20-40 years),SFXN1,Sideroflexin-1 OS=Homo sapiens GN=SFXN1 PE=1 SV=4,Unknown,2,DOWN,0.8421676436261049,0.5,0.5,0.2695108820096693
+1,PHASE 1: Early Dramatic Changes (20-40 years),HIST1H3A,Histone H3.1 OS=Homo sapiens GN=HIST1H3A PE=1 SV=2,Unknown,2,DOWN,0.8411249168811108,0.5,0.5,0.2694066093351699
+1,PHASE 1: Early Dramatic Changes (20-40 years),CKAP4,Cytoskeleton-associated protein 4 OS=Homo sapiens GN=CKAP4 PE=1 SV=2,Unknown,2,DOWN,0.8367109632643746,0.5,0.5,0.2689652139734962
+1,PHASE 1: Early Dramatic Changes (20-40 years),LYZ,Lysozyme C OS=Homo sapiens GN=LYZ PE=1 SV=1,Unknown,2,DOWN,0.8319106397144633,0.5,0.5,0.2684851816185051
+1,PHASE 1: Early Dramatic Changes (20-40 years),ELN,Elastin,ECM Glycoproteins,5,DOWN,0.8185439568236912,0.5714285714285714,0.4285714285714285,0.5191934406848603
+1,PHASE 1: Early Dramatic Changes (20-40 years),HSD17B11,Estradiol 17-beta-dehydrogenase 11 OS=Homo sapiens GN=HSD17B11 PE=1 SV=2,Unknown,2,DOWN,0.8158538796168225,0.5,0.5,0.2668795056087411
+1,PHASE 1: Early Dramatic Changes (20-40 years),RRS1,Ribosome biogenesis regulatory protein homolog OS=Homo sapiens GN=RRS1 PE=1 SV=2,Unknown,2,DOWN,0.7997139486311776,0.5,0.5,0.2652655125101766
+1,PHASE 1: Early Dramatic Changes (20-40 years),CACNA2D1,Voltage-dependent calcium channel subunit alpha-2/delta-1 OS=Homo sapiens GN=CACNA2D1 PE=1 SV=3,Unknown,2,DOWN,0.7972914995779796,0.5,0.5,0.2650232676048568
+1,PHASE 1: Early Dramatic Changes (20-40 years),OPA1,"Dynamin-like 120 kDa protein, mitochondrial OS=Homo sapiens GN=OPA1 PE=1 SV=1",Unknown,2,DOWN,0.7653822227956968,0.5,0.5,0.2618323399266285
+1,PHASE 1: Early Dramatic Changes (20-40 years),PARS2,"Probable proline--tRNA ligase, mitochondrial OS=Homo sapiens GN=PARS2 PE=1 SV=1",Unknown,2,DOWN,0.7598531895240482,0.5,0.5,0.2612794365994637
+1,PHASE 1: Early Dramatic Changes (20-40 years),PIN1,Peptidyl-prolyl cis-trans isomerase NIMA-interacting 1 OS=Homo sapiens GN=PIN1 PE=1 SV=1,Unknown,2,DOWN,0.7541780967104172,0.5,0.5,0.3566015823109896
+1,PHASE 1: Early Dramatic Changes (20-40 years),B2M,Beta-2-microglobulin OS=Homo sapiens GN=B2M PE=1 SV=1,Unknown,2,DOWN,0.7504839014527027,0.5,0.5,0.2603425077923291
+1,PHASE 1: Early Dramatic Changes (20-40 years),SEMA3G,Semaphorin-3G,ECM-affiliated Proteins,3,DOWN,0.7414335083170234,0.6666666666666666,0.3333333333333333,0.4467342248413611
+1,PHASE 1: Early Dramatic Changes (20-40 years),PRDX6,Peroxiredoxin-6 OS=Homo sapiens GN=PRDX6 PE=1 SV=3,Unknown,2,DOWN,0.741287464118634,0.5,0.5,0.2594228640589222
+1,PHASE 1: Early Dramatic Changes (20-40 years),NUP153,Nuclear pore complex protein Nup153 OS=Homo sapiens GN=NUP153 PE=1 SV=2,Unknown,2,DOWN,0.6967378071366981,0.5,1.0,0.2549678983607286
+1,PHASE 1: Early Dramatic Changes (20-40 years),PDK3,"[Pyruvate dehydrogenase (acetyl-transferring)] kinase isozyme 3, mitochondrial OS=Homo sapiens GN=PDK3 PE=1 SV=1",Unknown,2,DOWN,0.6933682105612345,0.5,0.5,0.2546309387031823
+2,PHASE 2: Consistent Shifters (40-60 years),PXDNL,Peroxidasin-like protein (EC 1.11.1.7) (Cardiac peroxidase) (Vascular peroxidase 2) (polysomal ribonuclease 1) (PRM1),ECM Glycoproteins,1,DOWN,0.4949732643168332,1.0,0.0,0.3671443852552127
+2,PHASE 2: Consistent Shifters (40-60 years),TSP3,Thrombospondin-3 ,ECM Glycoproteins,1,UP,0.4802261262812798,1.0,0.0,0.3656696714516574
+2,PHASE 2: Consistent Shifters (40-60 years),SCIN,Adseverin OS=Homo sapiens GN=SCIN PE=1 SV=4,Unknown,2,DOWN,0.4742726668134845,1.0,0.0,0.3827213843284072
+2,PHASE 2: Consistent Shifters (40-60 years),PLXND1,Plexin-D1,ECM-affiliated Proteins,1,DOWN,0.4741604375453998,1.0,0.0,0.3650631025780694
+2,PHASE 2: Consistent Shifters (40-60 years),Rif1,Telomere-associated protein RIF1 (Rap1-interacting factor 1 homolog) (mRif1),Secreted Factors,1,DOWN,0.4588335360449208,1.0,0.0,0.3635304124280215
+2,PHASE 2: Consistent Shifters (40-60 years),CIRBP,"Cold inducible RNA binding protein, isoform CRA_c OS=Homo sapiens GN=CIRBP PE=1 SV=1",Unknown,2,DOWN,0.4558805970608134,1.0,0.0,0.3808821773531401
+2,PHASE 2: Consistent Shifters (40-60 years),RPS27L,40S ribosomal protein S27 OS=Homo sapiens GN=RPS27L PE=1 SV=1,Unknown,2,DOWN,0.4526552342308603,1.0,0.0,0.3805596410701448
+2,PHASE 2: Consistent Shifters (40-60 years),CAP2,Adenylyl cyclase-associated protein 2 (CAP 2),ECM Regulators,1,DOWN,0.4452899391844984,1.0,0.0,0.3621760527419792
+2,PHASE 2: Consistent Shifters (40-60 years),SCCPDH,Saccharopine dehydrogenase-like oxidoreductase OS=Homo sapiens GN=SCCPDH PE=1 SV=1,Unknown,2,UP,0.4437947601599861,1.0,0.0,0.3796735936630574
+2,PHASE 2: Consistent Shifters (40-60 years),IGHV3OR16-12,Protein IGHV3OR16-12 (Fragment) OS=Homo sapiens GN=IGHV3OR16-12 PE=1 SV=1,Unknown,2,DOWN,0.4412301875081579,1.0,0.0,0.3794171363978746
+2,PHASE 2: Consistent Shifters (40-60 years),C8g,,Non-ECM,1,DOWN,0.4399792884436617,1.0,0.0,0.3616449876678955
+2,PHASE 2: Consistent Shifters (40-60 years),RPL13A,60S ribosomal protein L13a (Fragment) OS=Homo sapiens GN=RPL13A PE=1 SV=2,Unknown,2,DOWN,0.438646719483325,1.0,0.0,0.3791587895953913
+2,PHASE 2: Consistent Shifters (40-60 years),MST1;MST1L,Hepatocyte growth factor-like protein;Hepatocyte growth factor-like protein alpha chain;Hepatocyte growth factor-like protein beta chain;Putative macrophage stimulating 1-like protein,Secreted Factors,1,UP,0.4376763283731042,1.0,0.0,0.3614146916608398
+2,PHASE 2: Consistent Shifters (40-60 years),Sulf2,Extracellular sulfatase Sulf-2 (mSulf-2) (EC 3.1.6.-),ECM Regulators,1,UP,0.4346948038918914,1.0,0.0,0.3611165392127185
+2,PHASE 2: Consistent Shifters (40-60 years),RBM19,Probable RNA-binding protein 19 OS=Homo sapiens GN=RBM19 PE=1 SV=3,Unknown,1,UP,0.4269923231489932,1.0,0.0,0.3603462911384287
+2,PHASE 2: Consistent Shifters (40-60 years),SERPINB5,Serpin B5,ECM Regulators,1,DOWN,0.4231888124223398,1.0,0.0,0.3599659400657634
+2,PHASE 2: Consistent Shifters (40-60 years),SYTL4,Synaptotagmin-like protein 4 OS=Homo sapiens GN=SYTL4 PE=1 SV=2,Unknown,2,DOWN,0.4172446138841744,1.0,0.0,0.3770185790354762
+2,PHASE 2: Consistent Shifters (40-60 years),LTF,Lactotransferrin OS=Homo sapiens GN=LTF PE=1 SV=6,Unknown,2,UP,0.4160011187773927,1.0,0.0,0.376894229524798
+2,PHASE 2: Consistent Shifters (40-60 years),BRIX1,Ribosome biogenesis protein BRX1 homolog OS=Homo sapiens GN=BRIX1 PE=1 SV=2,Unknown,2,UP,0.4157150402700209,1.0,0.0,0.3768656216740609
+2,PHASE 2: Consistent Shifters (40-60 years),SOD3,Extracellular superoxide dismutase [Cu-Zn] OS=Homo sapiens GN=SOD3 PE=1 SV=2,Unknown,2,UP,0.4133859020085498,1.0,0.0,0.3766327078479138
+3,PHASE 2: Consistent Shifters (40-60 years),VTN,Vitronectin;Vitronectin V65 subunit;Vitronectin V10 subunit;Somatomedin-B,ECM Glycoproteins,10,UP,1.1885305429265454,0.8,0.6,0.7324036983679243
+3,PHASE 2: Consistent Shifters (40-60 years),HPX,Hemopexin,ECM-affiliated Proteins,9,UP,1.0670101227397082,0.7777777777777778,0.5555555555555556,0.6928774071591087
+3,PHASE 2: Consistent Shifters (40-60 years),SERPINC1,Antithrombin-III,ECM Regulators,10,UP,0.9267061881979056,0.7,0.5,0.640171612661641
+3,PHASE 2: Consistent Shifters (40-60 years),PLG,"Plasminogen;Plasmin heavy chain A;Activation peptide;Angiostatin;Plasmin heavy chain A, short form;Plasmin light chain B",ECM Regulators,10,DOWN,0.8255683529628411,0.5,0.3,0.5872597606912913
+3,PHASE 2: Consistent Shifters (40-60 years),FGG,Fibrinogen gamma chain,ECM Glycoproteins,10,UP,0.8153690584735589,0.8,0.4,0.6852734941217447
+3,PHASE 2: Consistent Shifters (40-60 years),SERPINA4,Kallistatin,ECM Regulators,7,UP,0.765182077237892,0.7142857142857143,0.4285714285714285,0.5972371767766722
+3,PHASE 2: Consistent Shifters (40-60 years),ITIH4,Inter-alpha-trypsin inhibitor heavy chain H4;70 kDa inter-alpha-trypsin inhibitor heavy chain H4;35 kDa inter-alpha-trypsin inhibitor heavy chain H4,ECM Regulators,10,DOWN,0.7649616135672485,0.5,0.5,0.576584140125831
+3,PHASE 2: Consistent Shifters (40-60 years),FGA,Fibrinogen alpha chain;Fibrinopeptide A;Fibrinogen alpha chain,ECM Glycoproteins,10,UP,0.7530692485474235,0.8333333333333334,0.3333333333333333,0.687314233781326
+3,PHASE 2: Consistent Shifters (40-60 years),IGFALS,Insulin-like growth factor-binding protein complex acid labile subunit,ECM Glycoproteins,6,UP,0.7520053270570782,0.6666666666666666,0.5,0.5579262156028091
+3,PHASE 2: Consistent Shifters (40-60 years),ITIH1,Inter-alpha-trypsin inhibitor heavy chain H1,ECM Regulators,10,UP,0.7448794250647542,0.7,0.4,0.6367153545873856
+3,PHASE 2: Consistent Shifters (40-60 years),FGB,Fibrinogen beta chain;Fibrinopeptide B;Fibrinogen beta chain,ECM Glycoproteins,10,UP,0.7448227955496862,0.9,0.4,0.7139220710691185
+3,PHASE 2: Consistent Shifters (40-60 years),TNXB,Tenascin-X,ECM Glycoproteins,8,DOWN,0.7047557533071689,0.875,0.5,0.6686335403580934
+3,PHASE 2: Consistent Shifters (40-60 years),Serpinf1,,ECM Regulators,7,DOWN,0.6983844682242608,1.0,0.5714285714285714,0.6876022741202897
+3,PHASE 2: Consistent Shifters (40-60 years),SERPIND1,Heparin cofactor 2,ECM Regulators,8,UP,0.6899240129295641,0.875,0.625,0.6536011142593741
+3,PHASE 2: Consistent Shifters (40-60 years),CXCL12,Stromal cell-derived factor 1;SDF-1-beta(3-72);SDF-1-alpha(3-67),Secreted Factors,8,UP,0.6786329353667202,0.625,0.375,0.5583443807733057
+3,PHASE 2: Consistent Shifters (40-60 years),Serpinh1,,ECM Regulators,8,DOWN,0.660101795524813,1.0,0.625,0.7057111531270162
+3,PHASE 2: Consistent Shifters (40-60 years),F2,Prothrombin;Activation peptide fragment 1;Activation peptide fragment 2;Thrombin light chain;Thrombin heavy chain,ECM Regulators,13,UP,0.6507019888596577,0.7857142857142857,0.4285714285714285,0.717327746739094
+3,PHASE 2: Consistent Shifters (40-60 years),KNG1,Kininogen-1;Kininogen-1 heavy chain;T-kinin;Bradykinin;Lysyl-bradykinin;Kininogen-1 light chain;Low molecular weight growth-promoting factor,ECM Regulators,9,UP,0.6455925292324218,0.6666666666666666,0.4444444444444444,0.6077559158585539
+3,PHASE 2: Consistent Shifters (40-60 years),SERPINF2,Alpha-2-antiplasmin,ECM Regulators,10,UP,0.6283144136521013,0.6,0.4,0.6061134575852175
+3,PHASE 2: Consistent Shifters (40-60 years),HRG,Histidine-rich glycoprotein,ECM Regulators,10,UP,0.6223542884615182,0.7,0.4,0.6390128351612182
+4,PHASE 1: Early Dramatic Changes (20-40 years),MCHR1,Melanin-concentrating hormone receptor 1 OS=Homo sapiens GN=MCHR1 PE=1 SV=2,Unknown,2,DOWN,0.8776987767858487,1.0,0.5,0.4230639953256436
+4,PHASE 1: Early Dramatic Changes (20-40 years),MATR3,Matrin-3 OS=Homo sapiens GN=MATR3 PE=1 SV=2,Unknown,2,UP,0.8763033373217276,1.0,0.5,0.4229244513792315
+4,PHASE 1: Early Dramatic Changes (20-40 years),GANAB,Neutral alpha-glucosidase AB OS=Homo sapiens GN=GANAB PE=1 SV=3,Unknown,2,DOWN,0.8686790967096643,1.0,0.5,0.4221620273180252
+4,PHASE 1: Early Dramatic Changes (20-40 years),MPP5,MAGUK p55 subfamily member 5 OS=Homo sapiens GN=MPP5 PE=1 SV=3,Unknown,2,DOWN,0.8638066821441294,1.0,0.5,0.4216747858614717
+4,PHASE 1: Early Dramatic Changes (20-40 years),DAB2,Disabled homolog 2 OS=Homo sapiens GN=DAB2 PE=1 SV=3,Unknown,2,UP,0.847004746480752,1.0,0.5,0.419994592295134
+4,PHASE 1: Early Dramatic Changes (20-40 years),A1BG,Alpha-1B-glycoprotein OS=Homo sapiens GN=A1BG PE=1 SV=4,Unknown,2,UP,0.8453095971851126,1.0,0.5,0.41982507736557
+4,PHASE 1: Early Dramatic Changes (20-40 years),DCAF5,DDB1- and CUL4-associated factor 5 OS=Homo sapiens GN=DCAF5 PE=1 SV=2,Unknown,2,UP,0.8410275580236399,1.0,0.5,0.4193968734494228
+4,PHASE 1: Early Dramatic Changes (20-40 years),LAMC2,Laminin subunit gamma-2,ECM Glycoproteins,2,DOWN,0.8154892473775254,1.0,0.5,0.4168430423848113
+4,PHASE 1: Early Dramatic Changes (20-40 years),FSIP2,Fibrous sheath-interacting protein 2 OS=Homo sapiens GN=FSIP2 PE=2 SV=4,Unknown,2,UP,0.8123571378394909,1.0,0.5,0.4165298314310079
+4,PHASE 1: Early Dramatic Changes (20-40 years),SLC3A2,4F2 cell-surface antigen heavy chain OS=Homo sapiens GN=SLC3A2 PE=1 SV=1,Unknown,2,DOWN,0.8098880076658126,1.0,0.5,0.41628291841364
+4,PHASE 1: Early Dramatic Changes (20-40 years),AKR1D1,3-oxo-5-beta-steroid 4-dehydrogenase OS=Homo sapiens GN=AKR1D1 PE=1 SV=1,Unknown,2,DOWN,0.7938648730067236,1.0,0.5,0.4146806049477312
+4,PHASE 1: Early Dramatic Changes (20-40 years),ACSL1,Long-chain-fatty-acid--CoA ligase 1 OS=Homo sapiens GN=ACSL1 PE=1 SV=1,Unknown,2,UP,0.7936947642898433,1.0,0.5,0.4146635940760431
+4,PHASE 1: Early Dramatic Changes (20-40 years),SUN1,SUN domain-containing protein 1 (Fragment) OS=Homo sapiens GN=SUN1 PE=1 SV=1,Unknown,2,DOWN,0.7883811021107622,1.0,0.5,0.414132227858135
+4,PHASE 1: Early Dramatic Changes (20-40 years),EMILIN3,EMILIN-3,ECM Glycoproteins,5,DOWN,0.7878585169964121,1.0,0.6,0.6634212486986752
+4,PHASE 1: Early Dramatic Changes (20-40 years),FREM1,FRAS1-related extracellular matrix protein 1,ECM-affiliated Proteins,3,DOWN,0.7657477475944328,1.0,0.6666666666666666,0.6009917139115806
+4,PHASE 1: Early Dramatic Changes (20-40 years),KIF13B,Kinesin-like protein KIF13B OS=Homo sapiens GN=KIF13B PE=1 SV=2,Unknown,2,DOWN,0.755426981297611,1.0,0.5,0.4108368157768199
+4,PHASE 1: Early Dramatic Changes (20-40 years),HSPB1,Heat shock protein beta-1 OS=Homo sapiens GN=HSPB1 PE=1 SV=2,Unknown,2,DOWN,0.7529221233008772,1.0,0.5,0.4105863299771465
+4,PHASE 1: Early Dramatic Changes (20-40 years),MCM10,Protein MCM10 homolog OS=Homo sapiens GN=MCM10 PE=1 SV=2,Unknown,2,UP,0.7344914813103086,1.0,0.5,0.4087432657780896
+4,PHASE 1: Early Dramatic Changes (20-40 years),PPIA,Peptidyl-prolyl cis-trans isomerase A OS=Homo sapiens GN=PPIA PE=1 SV=2,Unknown,2,DOWN,0.7270065636409431,1.0,0.5,0.4079947740111531
+4,PHASE 1: Early Dramatic Changes (20-40 years),LRRC56,Leucine-rich repeat-containing protein 56 OS=Homo sapiens GN=LRRC56 PE=4 SV=1,Unknown,2,DOWN,0.7268939439269476,1.0,0.5,0.4079835120397536
+5,PHASE 1: Early Dramatic Changes (20-40 years),CO2A1,Collagen alpha-1(II) chain ,Collagens,1,DOWN,2.810348435516705,1.0,1.0,0.5176470588235293
+5,PHASE 1: Early Dramatic Changes (20-40 years),TENA,Tenascin ,ECM Glycoproteins,1,DOWN,2.740813453889599,1.0,1.0,0.7065992743289317
+5,PHASE 1: Early Dramatic Changes (20-40 years),CO1A2,Collagen alpha-2(I) chain ,Collagens,1,DOWN,2.4999630974081564,1.0,1.0,0.5176470588235293
+5,PHASE 1: Early Dramatic Changes (20-40 years),GPC6,Glypican-6,ECM-affiliated Proteins,1,DOWN,2.165066840594706,1.0,1.0,0.5176470588235293
+5,PHASE 1: Early Dramatic Changes (20-40 years),HPLN1,Hyaluronan and proteoglycan link protein 1 ,Proteoglycans,1,UP,2.048720904954968,1.0,1.0,0.5176470588235293
+5,PHASE 1: Early Dramatic Changes (20-40 years),ADAMTS4,A disintegrin and metalloproteinase with thrombospondin motifs 4 (ADAM-TS 4) (ADAM-TS4) (ADAMTS-4) (EC 3.4.24.82) (ADMP-1) (Aggrecanase-1),ECM Regulators,1,UP,1.963387906603653,1.0,1.0,0.5139858494838947
+5,PHASE 1: Early Dramatic Changes (20-40 years),CILP1,Cartilage intermediate layer protein 1 ,ECM Glycoproteins,1,UP,1.8289140118965357,1.0,1.0,0.500538460013183
+5,PHASE 1: Early Dramatic Changes (20-40 years),PGS2,Decorin ,Proteoglycans,1,UP,1.79333329886667,1.0,1.0,0.6916027773771951
+5,PHASE 1: Early Dramatic Changes (20-40 years),Hp,,Non-ECM,4,UP,1.7847414333738034,1.0,1.0,0.748663326572137
+5,PHASE 1: Early Dramatic Changes (20-40 years),SERPINA1E,Alpha-1-antitrypsin 1-5,ECM Regulators,1,UP,1.7082881882470042,1.0,1.0,0.4884758776482298
+5,PHASE 1: Early Dramatic Changes (20-40 years),KDM5C,Lysine-specific demethylase 5C OS=Homo sapiens GN=KDM5C PE=1 SV=2,Unknown,2,DOWN,1.6679024799386064,0.5,0.5,0.3520843656409195
+5,PHASE 1: Early Dramatic Changes (20-40 years),FAM120A,Constitutive coactivator of PPAR-gamma-like protein 1 OS=Homo sapiens GN=FAM120A PE=1 SV=2,Unknown,2,DOWN,1.6481575563229651,1.0,0.5,0.5001098732793554
+5,PHASE 1: Early Dramatic Changes (20-40 years),PRG4,Proteoglycan 4;Proteoglycan 4 C-terminal part,Proteoglycans,4,UP,1.5492759913809868,1.0,1.0,0.7106150338969908
+5,PHASE 1: Early Dramatic Changes (20-40 years),MRPL13,"39S ribosomal protein L13, mitochondrial OS=Homo sapiens GN=MRPL13 PE=1 SV=1",Unknown,2,DOWN,1.459655981081447,0.5,0.5,0.3312597157552035
+5,PHASE 1: Early Dramatic Changes (20-40 years),IL17B,Interleukin-17B,Secreted Factors,3,DOWN,1.421826012755146,1.0,1.0,0.6911127360931505
+5,PHASE 1: Early Dramatic Changes (20-40 years),RAB32,Ras-related protein Rab-32 OS=Homo sapiens GN=RAB32 PE=1 SV=3,Unknown,2,UP,1.420690139013094,1.0,1.0,0.4773631315483682
+5,PHASE 1: Early Dramatic Changes (20-40 years),Angptl7,,Secreted Factors,3,UP,1.35690839052571,1.0,1.0,0.6808309731800368
+5,PHASE 1: Early Dramatic Changes (20-40 years),TSP4,Thrombospondin-4 ,ECM Glycoproteins,1,DOWN,1.3309942682180127,1.0,1.0,0.4507464856453307
+5,PHASE 1: Early Dramatic Changes (20-40 years),Col11a2,,Collagens,2,DOWN,1.3178692918983457,0.5,1.0,0.3170810468368934
+5,PHASE 1: Early Dramatic Changes (20-40 years),Smoc2,,ECM Glycoproteins,4,UP,1.2688761889787077,0.75,1.0,0.5653200152242398
+6,PHASE 2: Consistent Shifters (40-60 years),COMP,Cartilage oligomeric matrix protein,ECM Glycoproteins,4,UP,0.6032152262092355,0.8,0.2,0.5278770492772994
+6,PHASE 2: Consistent Shifters (40-60 years),HMCN1,Hemicentin-1,ECM Glycoproteins,5,DOWN,0.5690803011334863,0.6,0.2,0.4322715206921976
+6,PHASE 2: Consistent Shifters (40-60 years),MGP,Matrix Gla protein,ECM Glycoproteins,5,DOWN,0.4617954799429277,0.6,0.2,0.3180656658582129
+6,PHASE 2: Consistent Shifters (40-60 years),P4HA2,Prolyl 4-hydroxylase subunit alpha-2,ECM Regulators,5,DOWN,0.4319436722718385,0.6,0.2,0.4603855314404343
+6,PHASE 2: Consistent Shifters (40-60 years),MXRA5,Matrix-remodeling-associated protein 5,ECM Glycoproteins,4,DOWN,0.4281269107814541,0.75,0.25,0.4622181675246699
+6,PHASE 2: Consistent Shifters (40-60 years),Clic1,,Non-ECM,4,DOWN,0.4228125934615976,1.0,0.25,0.6086246619704884
+6,PHASE 2: Consistent Shifters (40-60 years),WISP2,WNT1-inducible-signaling pathway protein 2,ECM Glycoproteins,5,UP,0.4208526751854723,0.8,0.4,0.5399445033575253
+6,PHASE 2: Consistent Shifters (40-60 years),LOX,Protein-lysine 6-oxidase,ECM Regulators,5,DOWN,0.4145278431697052,0.8,0.4,0.5579957392953699
+6,PHASE 2: Consistent Shifters (40-60 years),SPON1,Spondin-1,ECM Glycoproteins,5,DOWN,0.4004210942018941,0.6,0.2,0.3773416429537948
+6,PHASE 2: Consistent Shifters (40-60 years),Apoa1,,Non-ECM,4,DOWN,0.3956064424602178,1.0,0.25,0.6092542256317053
+6,PHASE 2: Consistent Shifters (40-60 years),COL4A5,,Collagens,3,UP,0.3887834925347925,0.8,0.2,0.4594281580014974
+6,PHASE 2: Consistent Shifters (40-60 years),Ace,,Non-ECM,4,DOWN,0.3866901562643408,1.0,0.25,0.5855380380654979
+6,PHASE 2: Consistent Shifters (40-60 years),Dhrs7c,,Non-ECM,4,DOWN,0.3866870085653869,0.75,0.25,0.4884492004977447
+6,PHASE 2: Consistent Shifters (40-60 years),COL11A1,Collagen alpha-1(XI) chain,Collagens,6,DOWN,0.3848630089900379,1.0,0.1666666666666666,0.6439412979049308
+6,PHASE 2: Consistent Shifters (40-60 years),Aoc3,,Non-ECM,4,DOWN,0.3824071933436214,0.75,0.25,0.4986362971205781
+6,PHASE 2: Consistent Shifters (40-60 years),SERPINE2,Glia-derived nexin,ECM Regulators,6,UP,0.3798875662849645,0.8333333333333334,0.1666666666666666,0.5478058676154404
+6,PHASE 2: Consistent Shifters (40-60 years),Efemp1,,ECM Glycoproteins,5,DOWN,0.3769245476451189,1.0,0.2,0.6250673169357666
+6,PHASE 2: Consistent Shifters (40-60 years),FLG,Filaggrin,Secreted Factors,4,DOWN,0.3658806712240717,0.75,0.25,0.4792034836633521
+6,PHASE 2: Consistent Shifters (40-60 years),F12,Coagulation factor XII;Coagulation factor XIIa heavy chain;Beta-factor XIIa part 1;Coagulation factor XIIa light chain,ECM Regulators,6,UP,0.3476995055795531,0.8571428571428571,0.2857142857142857,0.5804573992103107
+6,PHASE 2: Consistent Shifters (40-60 years),Pebp1,,Non-ECM,4,UP,0.3476438016996548,1.0,0.25,0.5936554602276866

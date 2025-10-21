@@ -4,7 +4,7 @@
 
 ```mermaid
 graph TD
-    Thesis[1 Sentence Thesis] --> Overview[1 Paragraph Overview]
+Thesis[1 Sentence Thesis] --> Overview[1 Paragraph Overview]
     Overview --> Diagrams[Mermaid Diagrams]
 
     Diagrams --> ContinuantDiagram[Continuant TD: Structure]

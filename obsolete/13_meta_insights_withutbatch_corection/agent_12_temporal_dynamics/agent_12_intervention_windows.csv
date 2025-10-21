@@ -1,0 +1,869 @@
+Protein,Timing,Magnitude,Category
+Hp,Early Prevention,1.7847414333738034,Non-ECM
+Angptl7,Early Prevention,1.35690839052571,Secreted Factors
+VTN,Continuous Monitoring,1.318911080793891,ECM Glycoproteins
+Myoc,Early Prevention,1.019469008625633,Non-ECM
+HPX,Continuous Monitoring,1.0050720136416453,ECM-affiliated Proteins
+SERPINA6,Continuous Monitoring,0.9884111368166959,ECM Regulators
+PRG4,Early Prevention,0.9799352703394154,Proteoglycans
+SERPINA10,Early Prevention,0.9728885696047098,ECM Regulators
+Amy1,Early Prevention,0.9653435213889985,Non-ECM
+ITIH2,Continuous Monitoring,0.9440918080613498,ECM Regulators
+TIMP3,Continuous Monitoring,0.9380965928302631,ECM Regulators
+CRLF1,Early Prevention,0.9262204024696703,Secreted Factors
+TNFAIP6,Early Prevention,0.9239561415399553,ECM Glycoproteins
+FGB,Continuous Monitoring,0.8946244408992193,ECM Glycoproteins
+CXCL10,Continuous Monitoring,0.8861453129831608,Secreted Factors
+FGG,Continuous Monitoring,0.8766169966808384,ECM Glycoproteins
+EPYC,Early Prevention,0.8760482804297104,Proteoglycans
+CILP,Continuous Monitoring,0.8710693426945131,ECM Glycoproteins
+Smoc2,Continuous Monitoring,0.8698545566693375,ECM Glycoproteins
+ELN,Continuous Monitoring,0.8678431513062174,ECM Glycoproteins
+Fth1,Early Prevention,0.8362570170983721,Non-ECM
+PLG,Continuous Monitoring,0.8340519123414248,ECM Regulators
+Ppt1,Early Prevention,0.7948489901554837,Non-ECM
+Ctsf,Continuous Monitoring,0.7774724633378417,ECM Regulators
+SEMA3A,Early Prevention,0.7766243461598726,ECM-affiliated Proteins
+Comp,Continuous Monitoring,0.7606552753374543,ECM Glycoproteins
+SERPINA4,Continuous Monitoring,0.7310964947436301,ECM Regulators
+FGA,Continuous Monitoring,0.7075108772488362,ECM Glycoproteins
+LOXL1,Continuous Monitoring,0.6937783601977471,ECM Regulators
+SERPINC1,Continuous Monitoring,0.6917881033815407,ECM Regulators
+ITIH1,Continuous Monitoring,0.6863276009367996,ECM Regulators
+LRG1,Continuous Monitoring,0.6621244494612865,ECM Glycoproteins
+KNG1,Continuous Monitoring,0.6527320983499096,ECM Regulators
+Gstm2,Early Prevention,0.6497362354779427,Non-ECM
+SERPIND1,Continuous Monitoring,0.6416155630658318,ECM Regulators
+HRG,Continuous Monitoring,0.6332291739319413,ECM Regulators
+SERPINF2,Continuous Monitoring,0.6314849186405268,ECM Regulators
+FCN3,Early Prevention,0.6303325475721668,ECM-affiliated Proteins
+AMBP,Continuous Monitoring,0.6179412953407062,ECM Regulators
+IGFALS,Continuous Monitoring,0.6169740643275367,ECM Glycoproteins
+Angptl2,Early Prevention,0.6060683479185923,Secreted Factors
+ITIH4,Continuous Monitoring,0.5912591915744232,ECM Regulators
+Fam213a,Early Prevention,0.589164138815103,Non-ECM
+MMP2,Continuous Monitoring,0.5809673122778218,ECM Regulators
+Cxcl12,Early Prevention,0.5657850903935682,Secreted Factors
+Col4a3,Early Prevention,0.5503172926340834,Collagens
+Col11a2,Continuous Monitoring,0.5480735216082906,Collagens
+Hc,Continuous Monitoring,0.5471800440083119,Non-ECM
+CSTB,Continuous Monitoring,0.5237034207287398,ECM Regulators
+ECM1,Continuous Monitoring,0.5230263321353391,ECM Glycoproteins
+MASP1,Early Prevention,0.5202177878722383,ECM Regulators
+ANGPTL2,Continuous Monitoring,0.49579426681827665,Secreted Factors
+Sema3c,Continuous Monitoring,0.48412940958823797,ECM-affiliated Proteins
+F2,Continuous Monitoring,0.4784004036981658,ECM Regulators
+INHBC,Continuous Monitoring,0.4773647345473106,Secreted Factors
+Apod,Continuous Monitoring,0.46313494957556,Non-ECM
+ITIH3,Continuous Monitoring,0.4564250217936337,ECM Regulators
+A2M,Continuous Monitoring,0.4526963934658959,ECM Regulators
+Srpx,Continuous Monitoring,0.45259696461881926,ECM Glycoproteins
+HTRA1,Continuous Monitoring,0.449299675319099,ECM Regulators
+Ppp1r1a,Continuous Monitoring,0.4411375943374869,Non-ECM
+HTRA3,Continuous Monitoring,0.4403139319156351,ECM Regulators
+CXCL12,Continuous Monitoring,0.4352467442360715,Secreted Factors
+Hrg,Continuous Monitoring,0.43404007909942166,ECM Regulators
+Mfge8,Continuous Monitoring,0.4329152409585449,ECM Glycoproteins
+COL10A1,Continuous Monitoring,0.43007233462145184,Collagens
+ADIPOQ,Continuous Monitoring,0.4268784384430349,ECM Glycoproteins
+Itih3,Continuous Monitoring,0.4243490387790778,ECM Regulators
+S100A7,Continuous Monitoring,0.41961148294373474,Secreted Factors
+Ambp,Continuous Monitoring,0.4187678254194361,ECM Regulators
+Pla2g7,Continuous Monitoring,0.4151469795374391,Non-ECM
+Aspn,Continuous Monitoring,0.4126795693589933,Proteoglycans
+SERPINE2,Continuous Monitoring,0.4082565941477477,ECM Regulators
+Hapln2,Continuous Monitoring,0.3973284483517803,Proteoglycans
+Alpl,Continuous Monitoring,0.39549052913049204,Non-ECM
+Thbs1,Continuous Monitoring,0.3902979874342554,ECM Glycoproteins
+SERPINA1,Continuous Monitoring,0.3900365751958458,ECM Regulators
+Cdnf,Continuous Monitoring,0.3806571223507656,Non-ECM
+Ces1d,Continuous Monitoring,0.37289938212478,Non-ECM
+CTSZ,Continuous Monitoring,0.3718366432846391,ECM Regulators
+NTN3,Continuous Monitoring,0.364636027519893,ECM Glycoproteins
+SERPINA7,Continuous Monitoring,0.3637666045159409,ECM Regulators
+CTSD,Continuous Monitoring,0.35673722730632784,ECM Regulators
+EBI3,Continuous Monitoring,0.35667127164328377,Secreted Factors
+Pebp1,Continuous Monitoring,0.34764380169965486,Non-ECM
+F12,Continuous Monitoring,0.34510577740472914,ECM Regulators
+Ctsd,Continuous Monitoring,0.3406239855236033,ECM Regulators
+SFRP1,Continuous Monitoring,0.3353492499187324,Secreted Factors
+ANGPTL4,Continuous Monitoring,0.3316414169098383,Secreted Factors
+Gpx3,Continuous Monitoring,0.3219618561277561,Non-ECM
+Clu,Continuous Monitoring,0.3119124778682617,Non-ECM
+Col4a4,Continuous Monitoring,0.3092273610429659,Collagens
+S100A7A,Continuous Monitoring,0.30812756427078014,Secreted Factors
+INHBA,Continuous Monitoring,0.30496775933932657,Secreted Factors
+POSTN,Continuous Monitoring,0.30232196370101705,ECM Glycoproteins
+Ctsb,Continuous Monitoring,0.29944733092727577,ECM Regulators
+CCN5,Continuous Monitoring,0.2974546749132226,ECM Glycoproteins
+COMP,Continuous Monitoring,0.2967765920416349,ECM Glycoproteins
+EFEMP1,Continuous Monitoring,0.29506366333491474,ECM Glycoproteins
+SERPINF1,Continuous Monitoring,0.2940033802248792,ECM Regulators
+Gfer,Continuous Monitoring,0.2939805856201262,Non-ECM
+Itih1,Continuous Monitoring,0.29094298646440936,ECM Regulators
+Gsto1,Continuous Monitoring,0.28726115657276263,Non-ECM
+ADAMTSL4,Continuous Monitoring,0.28436006551304005,ECM Regulators
+Naxe,Continuous Monitoring,0.28034085492071065,Non-ECM
+MMP3,Continuous Monitoring,0.2791378212647263,ECM Regulators
+SERPINA3,Continuous Monitoring,0.2750957077975833,ECM Regulators
+COL4A5,Continuous Monitoring,0.27394385251958375,Collagens
+Mif,Continuous Monitoring,0.2717451880984444,Non-ECM
+Col4a1,Continuous Monitoring,0.27143571270801725,Collagens
+Cfi,Continuous Monitoring,0.2688985139460397,Non-ECM
+FREM2,Continuous Monitoring,0.26849254297191794,ECM-affiliated Proteins
+Serpinb6a,Continuous Monitoring,0.2667496967034667,ECM Regulators
+COL22A1,Continuous Monitoring,0.2665164442222181,Collagens
+Mmrn1,Continuous Monitoring,0.2654502395691259,ECM Glycoproteins
+Ctss,Continuous Monitoring,0.2634879546289103,ECM Regulators
+Dbi,Continuous Monitoring,0.2614891843673119,Non-ECM
+Serpina3n,Continuous Monitoring,0.2602453639514771,ECM Regulators
+PODN,Continuous Monitoring,0.25969911617445274,Proteoglycans
+Fetub,Continuous Monitoring,0.25905854719212806,Non-ECM
+Akr1b3,Continuous Monitoring,0.2572940827430622,Non-ECM
+Hspb6,Continuous Monitoring,0.2563492331972402,Non-ECM
+Them6,Continuous Monitoring,0.2547747658241129,Non-ECM
+Hpx,Continuous Monitoring,0.25471393542323534,ECM-affiliated Proteins
+Vtn,Continuous Monitoring,0.2537413164355531,ECM Glycoproteins
+CPAMD8,Continuous Monitoring,0.25342864493153283,ECM Regulators
+CCL21,Continuous Monitoring,0.2518597660059456,Secreted Factors
+LTBP1,Continuous Monitoring,0.2513254655091098,ECM Glycoproteins
+Pcolce2,Continuous Monitoring,0.25004956679272483,ECM Glycoproteins
+Col6a5,Continuous Monitoring,0.24683398592755842,Collagens
+C1QB,Continuous Monitoring,0.24496743863676307,ECM-affiliated Proteins
+PRG3,Continuous Monitoring,0.24254037680676965,Proteoglycans
+Serpina1a,Continuous Monitoring,0.23883278804817995,ECM Regulators
+Dhrs11,Continuous Monitoring,0.23755009305753466,Non-ECM
+SFRP2,Continuous Monitoring,0.23403416885320089,Secreted Factors
+Fcna,Continuous Monitoring,0.23268200006754586,ECM-affiliated Proteins
+FN1,Continuous Monitoring,0.2288793111476802,ECM Glycoproteins
+CLEC11A,Continuous Monitoring,0.2272398453138574,ECM-affiliated Proteins
+ADAMTS5,Continuous Monitoring,0.22391331581593127,ECM Regulators
+Angpt1,Continuous Monitoring,0.22365470991707495,Secreted Factors
+Serpina3m,Continuous Monitoring,0.22314271543849673,ECM Regulators
+Psap,Continuous Monitoring,0.22310651923562744,Non-ECM
+CLEC5A,Continuous Monitoring,0.22056644923281052,ECM-affiliated Proteins
+Lgals3,Continuous Monitoring,0.21783895184111568,ECM-affiliated Proteins
+S100a6,Continuous Monitoring,0.2158892192116991,Secreted Factors
+S100A9,Continuous Monitoring,0.2156586334038839,Secreted Factors
+Htra1,Continuous Monitoring,0.21231720904722895,ECM Regulators
+OMD,Continuous Monitoring,0.21073914086328185,Proteoglycans
+Cpa3,Continuous Monitoring,0.20898202127617832,Non-ECM
+Gstm1,Continuous Monitoring,0.2074412061493101,Non-ECM
+Ttr,Continuous Monitoring,0.20729551385514908,Non-ECM
+Clec10a,Continuous Monitoring,0.2048128948537423,ECM-affiliated Proteins
+PDGFC,Continuous Monitoring,0.20294891524298872,Secreted Factors
+Cma1,Low Priority,0.19869858032458715,Non-ECM
+Cstb,Low Priority,0.19831588875001813,ECM Regulators
+F13A1,Low Priority,0.19198984504920671,ECM Regulators
+S100a5,Low Priority,0.19065449428478123,Secreted Factors
+Igfbp5,Low Priority,0.18557086252393934,ECM Glycoproteins
+Col4a2,Low Priority,0.18556267998988407,Collagens
+Itih4,Low Priority,0.18521850792353833,ECM Regulators
+Gstm5,Low Priority,0.18472964447974596,Non-ECM
+Wnt4,Low Priority,0.18369325241211873,Secreted Factors
+ITIH6,Low Priority,0.18192102139412494,ECM Regulators
+COL4A6,Low Priority,0.1801396184523861,Collagens
+Pdap1,Low Priority,0.1791271575877445,Non-ECM
+Actg1,Low Priority,0.17838986654018077,Non-ECM
+Tpt1,Low Priority,0.17545757343974802,Non-ECM
+OGN,Low Priority,0.1754071308006204,Proteoglycans
+PLXDC2,Low Priority,0.17504197831317672,ECM-affiliated Proteins
+CTSB,Low Priority,0.17319559250266922,ECM Regulators
+Ces1c,Low Priority,0.1731362991918946,Non-ECM
+CPN2,Low Priority,0.17286787935759046,ECM Regulators
+Orm1,Low Priority,0.17243384044013263,Non-ECM
+Hspa5,Low Priority,0.17138905423694464,Non-ECM
+ADAM19,Low Priority,0.1661997470001283,ECM Regulators
+Rnh1,Low Priority,0.16564272813652675,Non-ECM
+Mbl1,Low Priority,0.1652780335318328,ECM-affiliated Proteins
+CCL14,Low Priority,0.16469924360879287,Secreted Factors
+Fabp3,Low Priority,0.16422005596912295,Non-ECM
+CXCL14,Low Priority,0.16368400110841705,Secreted Factors
+Asah1,Low Priority,0.16210733241592556,Non-ECM
+SMOC1,Low Priority,0.1615638362717971,ECM Glycoproteins
+ADAMTSL5,Low Priority,0.15951023835203218,ECM Regulators
+Serpina10,Low Priority,0.15885805522263724,ECM Regulators
+Cp,Low Priority,0.1568294051992908,Non-ECM
+SERPINI2,Low Priority,0.15611754060839866,ECM Regulators
+Serpine2,Low Priority,0.15593328115821117,ECM Regulators
+Cbln4,Low Priority,0.15587224531348293,Secreted Factors
+Trf,Low Priority,0.1537597363424321,Non-ECM
+F10,Low Priority,0.15318295554184885,ECM Regulators
+Ache,Low Priority,0.15257381335870562,Non-ECM
+SFRP4,Low Priority,0.15200410944741996,Secreted Factors
+GDF5,Low Priority,0.1518947261098848,Secreted Factors
+A2m,Low Priority,0.150456705868355,ECM Regulators
+Papln,Low Priority,0.14999218593013172,ECM Glycoproteins
+Serpinc1,Low Priority,0.14856839188312582,ECM Regulators
+Aebp1,Low Priority,0.14787392529900728,ECM Glycoproteins
+SPON1,Low Priority,0.14653726475401618,ECM Glycoproteins
+Mgp,Low Priority,0.14633013047034,ECM Glycoproteins
+SPON2,Low Priority,0.14520812386599793,ECM Glycoproteins
+Alad,Low Priority,0.1450754277503022,Non-ECM
+ANGPTL6,Low Priority,0.14428050186534644,Secreted Factors
+Lamb2,Low Priority,0.140951961234512,ECM Glycoproteins
+LGALS2,Low Priority,0.14063018777017686,ECM-affiliated Proteins
+Sfrp1,Low Priority,0.14062458045705759,Secreted Factors
+Serpina1b,Low Priority,0.1382530395832279,ECM Regulators
+Bgn,Low Priority,0.13789025893583065,Proteoglycans
+Gc,Low Priority,0.1364379744770201,Non-ECM
+Sord,Low Priority,0.13425840097974798,Non-ECM
+Sod1,Low Priority,0.1308741302964665,Non-ECM
+C1QC,Low Priority,0.12993291100059914,ECM-affiliated Proteins
+Il1rap,Low Priority,0.12837701973057383,Non-ECM
+COL18A1,Low Priority,0.12836395254627464,Collagens
+Cfh,Low Priority,0.12512010615323926,Non-ECM
+Tsg101,Low Priority,0.12086099598284172,Non-ECM
+SERPING1,Low Priority,0.12024208660375194,ECM Regulators
+Acan,Low Priority,0.1179114095380627,Proteoglycans
+NELL1,Low Priority,0.11721597939258753,ECM Glycoproteins
+ANXA5,Low Priority,0.11697529462000113,ECM-affiliated Proteins
+COL2A1,Low Priority,0.11355528005198055,Collagens
+Kng1,Low Priority,0.11256351849967099,ECM Regulators
+TIMP1,Low Priority,0.11001416583704082,ECM Regulators
+SDC2,Low Priority,0.10950540745080965,ECM-affiliated Proteins
+PLOD1,Low Priority,0.10890747088501046,ECM Regulators
+Sdc1,Low Priority,0.10702264354707165,ECM-affiliated Proteins
+Prkacb,Low Priority,0.10634188899265487,Non-ECM
+LTBP2,Low Priority,0.10613808308582119,ECM Glycoproteins
+Pltp,Low Priority,0.1040030880932255,Non-ECM
+CTSG,Low Priority,0.10296662821103983,ECM Regulators
+Car4,Low Priority,0.10265380175612777,Non-ECM
+Azgp1,Low Priority,0.10161797985405473,Non-ECM
+Apoo,Low Priority,0.10080670176962302,Non-ECM
+S100B,Low Priority,0.09911267055447555,Secreted Factors
+Ppia,Low Priority,0.09816358718028863,Non-ECM
+Aqp1,Low Priority,0.09622933993731106,Non-ECM
+C1QTNF5,Low Priority,0.0958173793117354,ECM-affiliated Proteins
+Serpinf2,Low Priority,0.09574955551388681,ECM Regulators
+Gpi1,Low Priority,0.09574925746958092,Non-ECM
+Col6a2,Low Priority,0.09499525361963322,Collagens
+Sod3,Low Priority,0.09490627166668392,Non-ECM
+Serpina3k,Low Priority,0.09448571483936176,ECM Regulators
+Lgi3,Low Priority,0.09379454534972585,ECM Glycoproteins
+IGFBP3,Low Priority,0.09365598338169633,ECM Glycoproteins
+Gas6,Low Priority,0.09339743331375736,ECM Glycoproteins
+Col4a5,Low Priority,0.09213243199151175,Collagens
+Serpina1c,Low Priority,0.09052095985066781,ECM Regulators
+1300017J02Rik,Low Priority,0.089251987690925,Non-ECM
+FAM20C,Low Priority,0.08871697254349539,ECM Regulators
+MUC1,Low Priority,0.08806431925887169,ECM-affiliated Proteins
+Col12a1,Low Priority,0.0849178949052843,Collagens
+FBLN1,Low Priority,0.0837734078718199,ECM Glycoproteins
+SEMA3D,Low Priority,0.0835970652270851,ECM-affiliated Proteins
+Serpinb9b,Low Priority,0.08335670605724775,ECM Regulators
+Tnxb,Low Priority,0.08266950738535989,ECM Glycoproteins
+SERPINE1,Low Priority,0.08248756907183502,ECM Regulators
+Col18a1,Low Priority,0.08143449363388573,Collagens
+Npc2,Low Priority,0.08044381425414254,Non-ECM
+VWF,Low Priority,0.07895957721354792,ECM Glycoproteins
+Egfl7,Low Priority,0.07710040009769405,Secreted Factors
+Lama5,Low Priority,0.07651863119575038,ECM Glycoproteins
+CTSF,Low Priority,0.07610451412869046,ECM Regulators
+MMP12,Low Priority,0.0756803445838968,ECM Regulators
+Lgals1,Low Priority,0.07305267456999591,ECM-affiliated Proteins
+Col6a1,Low Priority,0.07080876804640195,Collagens
+Tgfbi,Low Priority,0.07045155113204142,ECM Glycoproteins
+Vwf,Low Priority,0.07037326428272483,ECM Glycoproteins
+HAPLN1,Low Priority,0.07003082493605253,Proteoglycans
+Hmgb1,Low Priority,0.06914898828615071,Non-ECM
+Nucb1,Low Priority,0.06905770924130639,Non-ECM
+SRPX,Low Priority,0.06704858255811784,ECM Glycoproteins
+S100a1,Low Priority,0.06664291970185453,Secreted Factors
+Rab5b,Low Priority,0.06638916200118529,Non-ECM
+TGFB1,Low Priority,0.06569377084860824,Secreted Factors
+NTN4,Low Priority,0.06495360015152585,ECM Glycoproteins
+BGN,Low Priority,0.06494913831333936,Proteoglycans
+Txn1,Low Priority,0.06490360830792552,Non-ECM
+Lamc1,Low Priority,0.06345058319046808,ECM Glycoproteins
+CILP2,Low Priority,0.0632938628081539,ECM Glycoproteins
+Megf10,Low Priority,0.0624161876426598,Secreted Factors
+Mstn,Low Priority,0.06239993507206115,Secreted Factors
+Gpt,Low Priority,0.061401770498920746,Non-ECM
+Sra1,Low Priority,0.06119553045182173,Non-ECM
+Itih2,Low Priority,0.061182154521559645,ECM Regulators
+Nenf,Low Priority,0.060090179704844704,Non-ECM
+Ddt,Low Priority,0.059565892040971694,Non-ECM
+Hdgf,Low Priority,0.05948211113745992,Non-ECM
+Agt,Low Priority,0.05938670335507806,ECM Regulators
+Edil3,Low Priority,0.058942434229655505,ECM Glycoproteins
+Pzp,Low Priority,0.05871402075621071,ECM Regulators
+Cpn2,Low Priority,0.057874444410764704,ECM Regulators
+SEMA3E,Low Priority,0.057630819638656905,ECM-affiliated Proteins
+Lrpap1,Low Priority,0.05739529601789537,Non-ECM
+MDK,Low Priority,0.05734040098229695,Secreted Factors
+Tinagl1,Low Priority,0.057000514412854156,ECM Glycoproteins
+CST3,Low Priority,0.05535741917194828,ECM Regulators
+EFEMP2,Low Priority,0.054247319259626225,ECM Glycoproteins
+Aldoa,Low Priority,0.05394101449516653,Non-ECM
+Cd151,Low Priority,0.05384245169299986,Non-ECM
+Loxl1,Low Priority,0.05357687188260499,ECM Regulators
+Igf2r,Low Priority,0.05342585512484632,Non-ECM
+SEMA3C,Low Priority,0.05338921741330199,ECM-affiliated Proteins
+C1qb,Low Priority,0.05284605950847114,ECM-affiliated Proteins
+TINAGL1,Low Priority,0.052739257206934696,ECM Glycoproteins
+NPNT,Low Priority,0.05159754041017438,ECM Glycoproteins
+S100a4,Low Priority,0.05155303209049945,Secreted Factors
+PRELP,Low Priority,0.051389483790773995,Proteoglycans
+PXDN,Low Priority,0.04964033702233864,ECM Glycoproteins
+Clec1a,Low Priority,0.048947723343975846,ECM-affiliated Proteins
+Slmap,Low Priority,0.04837730760344745,Non-ECM
+COL4A1,Low Priority,0.047400373923812134,Collagens
+Anxa4,Low Priority,0.0467552117494583,ECM-affiliated Proteins
+Alb,Low Priority,0.04491255060640116,Non-ECM
+Ccs,Low Priority,0.043491044013427134,Non-ECM
+Gars,Low Priority,0.04325489382171745,Non-ECM
+Gpc1,Low Priority,0.04320813142432293,ECM-affiliated Proteins
+Ctsc,Low Priority,0.04300731558169426,ECM Regulators
+Pkm,Low Priority,0.04277795202409243,Non-ECM
+ACAN,Low Priority,0.04174398552878804,Proteoglycans
+Dpt,Low Priority,0.041549320627626764,ECM Glycoproteins
+Col2a1,Low Priority,0.040566572268517086,Collagens
+Hapln4,Low Priority,0.0384156464937702,Proteoglycans
+Ybx1,Low Priority,0.036022761030458456,Non-ECM
+Serpind1,Low Priority,0.035837727153276995,ECM Regulators
+Npnt,Low Priority,0.0352407272595094,ECM Glycoproteins
+Snca,Low Priority,0.03404394692677501,Non-ECM
+Dpp7,Low Priority,0.033851473988945266,Non-ECM
+Afm,Low Priority,0.0330098767187093,Non-ECM
+Pdcd6ip,Low Priority,0.0326699097831104,Non-ECM
+Plxnb1,Low Priority,0.032533249142842634,ECM-affiliated Proteins
+S100a9,Low Priority,0.03203235223217935,Secreted Factors
+Hexb,Low Priority,0.0318866748116239,Non-ECM
+Sema7a,Low Priority,0.03167808743578568,ECM-affiliated Proteins
+DCN,Low Priority,0.03162510678876691,Proteoglycans
+Serpina6,Low Priority,0.03136021015611905,ECM Regulators
+Anxa5,Low Priority,0.030355841682335606,ECM-affiliated Proteins
+CTSC,Low Priority,0.030199971941038278,ECM Regulators
+Thbs4,Low Priority,0.029260606884920486,ECM Glycoproteins
+LAMC1,Low Priority,0.028977399988155537,ECM Glycoproteins
+Plg,Low Priority,0.0285395569753484,ECM Regulators
+SLPI,Low Priority,0.028482239892731267,ECM Regulators
+Hspg2,Low Priority,0.028346594279217863,Proteoglycans
+CLEC3B,Low Priority,0.027271992888374362,ECM-affiliated Proteins
+Lgals3bp,Low Priority,0.025330371294764602,Non-ECM
+Selenop,Low Priority,0.025255838577884063,Non-ECM
+PRSS2,Low Priority,0.025082626875862907,ECM Regulators
+Npc1,Low Priority,0.0249616686177545,Non-ECM
+TGM1,Low Priority,0.024853322532024658,ECM Regulators
+Galnt2,Low Priority,0.02459672248173095,Non-ECM
+Fgg,Low Priority,0.023295446578446857,ECM Glycoproteins
+THBS3,Low Priority,0.023289531905083205,ECM Glycoproteins
+Prg2,Low Priority,0.022570309868989422,Proteoglycans
+S100b,Low Priority,0.022261024015905333,Secreted Factors
+FNDC1,Low Priority,0.02169980373666231,ECM Glycoproteins
+Srpx2,Low Priority,0.0198693315320559,ECM Glycoproteins
+Ckm,Low Priority,0.019672677357352546,Non-ECM
+MMP9,Low Priority,0.019369865064413176,ECM Regulators
+Xdh,Low Priority,0.018892143959463648,Non-ECM
+Ago2,Low Priority,0.018853926073340327,Non-ECM
+Lama1,Low Priority,0.018822660864926025,ECM Glycoproteins
+Slc2a4,Low Priority,0.018509977216219702,Non-ECM
+S100A8,Low Priority,0.016216805507629734,Secreted Factors
+Vwa1,Low Priority,0.016115859332997598,ECM Glycoproteins
+SRPX2,Low Priority,0.015580860053251835,ECM Glycoproteins
+Pon1,Low Priority,0.014787324684155936,Non-ECM
+Dnpep,Low Priority,0.01399697786732667,Non-ECM
+Ogn,Low Priority,0.012824694567946458,Proteoglycans
+Pon3,Low Priority,0.01056247478953845,Non-ECM
+Dnajc9,Low Priority,0.010159996819656666,Non-ECM
+Pgk1,Low Priority,0.0099705944321026,Non-ECM
+DPT,Low Priority,0.009547146217448718,ECM Glycoproteins
+Cat,Low Priority,0.008931961824056254,Non-ECM
+Col6a3,Low Priority,0.008023712363903073,Collagens
+Cx3cl1,Low Priority,0.0072324114050986,Secreted Factors
+Rbmx,Low Priority,0.007144697528488129,Non-ECM
+Lgi1,Low Priority,0.007096767801054764,ECM Glycoproteins
+Ctsa,Low Priority,0.0068401859992725,ECM Regulators
+Cfb,Low Priority,0.005440962940836028,Non-ECM
+Adamtsl1,Low Priority,0.005038156971372852,ECM Regulators
+LMAN1,Low Priority,0.004943893402808086,ECM-affiliated Proteins
+Bag6,Low Priority,0.0044780141229068034,Non-ECM
+Adam10,Low Priority,0.0043083407159129105,ECM Regulators
+LAMC3,Low Priority,0.003977826653282848,ECM Glycoproteins
+Prelp,Low Priority,0.003439948658107339,Proteoglycans
+Dag1,Low Priority,0.002968639191082421,Non-ECM
+Ncan,Low Priority,0.0026623138098919013,Proteoglycans
+PLXNB2,Low Priority,0.0024972342011515547,ECM-affiliated Proteins
+FGF2,Low Priority,0.0018616693674311999,Secreted Factors
+Adam17,Low Priority,0.0015334487871206497,ECM Regulators
+Kars,Low Priority,0.0002467766441156677,Non-ECM
+PRG2,Low Priority,1.2800359514387322e-05,Proteoglycans
+Apoh,Low Priority,0.0007244788069074512,Non-ECM
+Vcan,Low Priority,0.002673110899252563,Proteoglycans
+Serpina1d,Low Priority,0.002680596967277799,ECM Regulators
+Cpm,Low Priority,0.003395502986289045,Non-ECM
+Crlf3,Low Priority,0.0036938410060611757,Secreted Factors
+Pik3ip1,Low Priority,0.005225266332723001,Secreted Factors
+MFGE8,Low Priority,0.0055643955264057755,ECM Glycoproteins
+Hsd17b11,Low Priority,0.00565348355860823,Non-ECM
+Ctsh,Low Priority,0.005714003805225951,ECM Regulators
+Adam9,Low Priority,0.00660413158550594,ECM Regulators
+S100a16,Low Priority,0.0070990098857849505,Secreted Factors
+Nid1,Low Priority,0.007680441364159135,ECM Glycoproteins
+FLG2,Low Priority,0.0078010106324163005,Secreted Factors
+Serpinb8,Low Priority,0.007852222170197135,ECM Regulators
+KCP,Low Priority,0.007937104838713335,ECM Glycoproteins
+FBLN7,Low Priority,0.008508612556035225,ECM Glycoproteins
+Col1a2,Low Priority,0.009398625057597532,Collagens
+PCOLCE2,Low Priority,0.011253735584990368,ECM Glycoproteins
+COL7A1,Low Priority,0.0115021284978013,Collagens
+COL6A6,Low Priority,0.013314555227181012,Collagens
+CCN1,Low Priority,0.013414028657248722,ECM Glycoproteins
+Igfbp6,Low Priority,0.014002450174827633,ECM Glycoproteins
+Lum,Low Priority,0.014859645458889459,Proteoglycans
+Fgb,Low Priority,0.015533122048256198,ECM Glycoproteins
+Spon1,Low Priority,0.016252213570134018,ECM Glycoproteins
+Col5a2,Low Priority,0.016586717467053202,Collagens
+Ctsz,Low Priority,0.018615527669182824,ECM Regulators
+Col6a6,Low Priority,0.018708596002950523,Collagens
+Fastkd2,Low Priority,0.019171213570057223,Non-ECM
+Cspg5,Low Priority,0.019193215996580668,ECM-affiliated Proteins
+Try4,Low Priority,0.0195758053842876,ECM Regulators
+Serpinb1a,Low Priority,0.01967099163318209,ECM Regulators
+CTHRC1,Low Priority,0.019953335375555978,ECM Glycoproteins
+S100a13,Low Priority,0.020891183373268066,Secreted Factors
+F9,Low Priority,0.02105923186588807,ECM Regulators
+Mmp2,Low Priority,0.02154012049846966,ECM Regulators
+Mfap4,Low Priority,0.021715075969663378,ECM Glycoproteins
+Retn,Low Priority,0.02245917274240379,Non-ECM
+SERPINB1,Low Priority,0.022516802025168814,ECM Regulators
+Lgalsl,Low Priority,0.022599648028272426,ECM-affiliated Proteins
+Fgf13,Low Priority,0.02260432288155147,Secreted Factors
+Lama2,Low Priority,0.022670758865966346,ECM Glycoproteins
+Cdh13,Low Priority,0.022740574453978746,Non-ECM
+Plxdc2,Low Priority,0.022827464873917902,ECM-affiliated Proteins
+Ist1,Low Priority,0.022836687680867798,Non-ECM
+Adam11,Low Priority,0.022901150662410198,ECM Regulators
+Sdc4,Low Priority,0.02303531001699535,ECM-affiliated Proteins
+Itm2b,Low Priority,0.02314487248114885,Non-ECM
+Gpc4,Low Priority,0.02322387131941654,ECM-affiliated Proteins
+Megf8,Low Priority,0.02339243102386365,Secreted Factors
+Ntn1,Low Priority,0.02365010823982357,ECM Glycoproteins
+Sema4b,Low Priority,0.0251513861525811,ECM-affiliated Proteins
+Rnpep,Low Priority,0.026816475449267303,Non-ECM
+Col25a1,Low Priority,0.028022938274496798,Collagens
+Sema6d,Low Priority,0.029013315567062797,ECM-affiliated Proteins
+THBS2,Low Priority,0.02916411866017604,ECM Glycoproteins
+Ogfod1,Low Priority,0.029694171703550598,ECM Regulators
+Calu,Low Priority,0.02975126335800687,Non-ECM
+COL4A2,Low Priority,0.029880851256382433,Collagens
+Agrn,Low Priority,0.030282967587935476,ECM Glycoproteins
+Pfn1,Low Priority,0.03108680612118675,Non-ECM
+Serpinb9,Low Priority,0.031319020348995155,ECM Regulators
+C1qtnf9,Low Priority,0.031685862512156215,ECM-affiliated Proteins
+CCN2,Low Priority,0.03305653944382437,ECM Glycoproteins
+Gpc6,Low Priority,0.03337244000185725,ECM-affiliated Proteins
+Ntng1,Low Priority,0.0333968150596053,ECM Glycoproteins
+BC048546,Low Priority,0.03378918158000345,ECM Regulators
+SPARC,Low Priority,0.033831372794234364,ECM Glycoproteins
+Itih5,Low Priority,0.03519755996726234,ECM Regulators
+S100A6,Low Priority,0.035487781433808825,Secreted Factors
+Dnajc8,Low Priority,0.03588852887966833,Non-ECM
+Serping1,Low Priority,0.03648639708044182,ECM Regulators
+Adam23,Low Priority,0.036513036156590246,ECM Regulators
+SEMA3B,Low Priority,0.03677307846462818,ECM-affiliated Proteins
+Epdr1,Low Priority,0.03690061450069927,Non-ECM
+THSD4,Low Priority,0.0372592380748602,ECM Glycoproteins
+S100a11,Low Priority,0.03729843049084935,Secreted Factors
+S100A4,Low Priority,0.038305191757887005,Secreted Factors
+EGF,Low Priority,0.0391934925184381,Secreted Factors
+ABI3BP,Low Priority,0.03943086323048154,ECM Glycoproteins
+MFAP4,Low Priority,0.04023334539436835,ECM Glycoproteins
+Plxnc1,Low Priority,0.04112602717818975,ECM-affiliated Proteins
+S100a10,Low Priority,0.041437857063096,Secreted Factors
+Klkb1,Low Priority,0.042402043006857924,Non-ECM
+COL8A1,Low Priority,0.04241899405885193,Collagens
+Hyou1,Low Priority,0.04292120977924099,Non-ECM
+Gpx7,Low Priority,0.042931573186577365,Non-ECM
+TIMP2,Low Priority,0.04418391496097246,ECM Regulators
+SMOC2,Low Priority,0.044480239963431104,ECM Glycoproteins
+C1qa,Low Priority,0.045138229914773544,ECM-affiliated Proteins
+SERPINB12,Low Priority,0.04525429625045479,ECM Regulators
+PAPLN,Low Priority,0.04656262493122482,ECM Glycoproteins
+PAMR1,Low Priority,0.046667785527908096,ECM Regulators
+Sema4d,Low Priority,0.0471995821391065,ECM-affiliated Proteins
+GDF6,Low Priority,0.04749830280771674,Secreted Factors
+MFAP2,Low Priority,0.04790476849141549,ECM Glycoproteins
+FBN2,Low Priority,0.04859887542057986,ECM Glycoproteins
+S100A10,Low Priority,0.048906274071570055,Secreted Factors
+Plaa,Low Priority,0.049941224667077996,Non-ECM
+Elfn1,Low Priority,0.05045367474306965,ECM-affiliated Proteins
+EDIL3,Low Priority,0.050960107988062164,ECM Glycoproteins
+Serpini1,Low Priority,0.0513300590613578,ECM Regulators
+CCN6,Low Priority,0.05206601377218022,ECM Glycoproteins
+Timp2,Low Priority,0.052504176311031645,ECM Regulators
+Fgf1,Low Priority,0.05321591840718498,Secreted Factors
+MGP,Low Priority,0.05336135752981025,ECM Glycoproteins
+Colec12,Low Priority,0.05392852023573415,ECM-affiliated Proteins
+Arhgdia,Low Priority,0.05441735428205326,Non-ECM
+Vldlr,Low Priority,0.05506605120284085,Non-ECM
+Plxdc1,Low Priority,0.055375662471803554,ECM-affiliated Proteins
+Entpd1,Low Priority,0.055581591492183224,Non-ECM
+Iigp1,Low Priority,0.05609754011886767,Non-ECM
+Mmp17,Low Priority,0.0562843479906579,ECM Regulators
+Lama3,Low Priority,0.0564340608693234,ECM Glycoproteins
+Chrdl1,Low Priority,0.05648622605462768,Secreted Factors
+Pcyox1,Low Priority,0.056526681409984826,Non-ECM
+Nell2,Low Priority,0.05727923704948705,ECM Glycoproteins
+Creld1,Low Priority,0.05744768256530662,ECM Glycoproteins
+Erap1,Low Priority,0.058575013685855215,Non-ECM
+Scpep1,Low Priority,0.05884106098441395,Non-ECM
+MBL2,Low Priority,0.05929735442904294,ECM-affiliated Proteins
+COL1A1,Low Priority,0.05940191925367057,Collagens
+Col1a1,Low Priority,0.059684066908149425,Collagens
+Plxna1,Low Priority,0.059791710300014886,ECM-affiliated Proteins
+IGF2,Low Priority,0.060079336822392554,Secreted Factors
+IGFBP7,Low Priority,0.06067927335963357,ECM Glycoproteins
+Efemp2,Low Priority,0.061533287768850496,ECM Glycoproteins
+GPC4,Low Priority,0.06158339248611884,ECM-affiliated Proteins
+Sema4f,Low Priority,0.061663645456298544,ECM-affiliated Proteins
+Smc3,Low Priority,0.06237250841493782,Non-ECM
+Prkaca,Low Priority,0.06250208101655165,Non-ECM
+Hspa8,Low Priority,0.06317609694283505,Non-ECM
+Adam22,Low Priority,0.0641333973719202,ECM Regulators
+Anxa6,Low Priority,0.06515602512342758,ECM-affiliated Proteins
+Serpina1e,Low Priority,0.06527371063945211,ECM Regulators
+THBS4,Low Priority,0.06547726530266973,ECM Glycoproteins
+Igf2,Low Priority,0.06561966040390814,Secreted Factors
+Lgi2,Low Priority,0.06563269215075125,ECM Glycoproteins
+Ecm1,Low Priority,0.06626705430977728,ECM Glycoproteins
+Plxna4,Low Priority,0.0663087849315957,ECM-affiliated Proteins
+Hspd1,Low Priority,0.06690810148408355,Non-ECM
+Ctsl,Low Priority,0.06713035391521234,ECM Regulators
+Bcan,Low Priority,0.06733732997069095,Proteoglycans
+LGALS1,Low Priority,0.06786786178979513,ECM-affiliated Proteins
+Sri,Low Priority,0.06816922747632993,Non-ECM
+Ccl21c,Low Priority,0.06824693931227706,Secreted Factors
+Hcfc1,Low Priority,0.06855385798189242,Secreted Factors
+Dcn,Low Priority,0.0689222858644474,Proteoglycans
+Pappa,Low Priority,0.06907771471412245,ECM Regulators
+Ngly1,Low Priority,0.06922043427862576,ECM Regulators
+Creld2,Low Priority,0.06926867178344306,ECM Glycoproteins
+Sdc2,Low Priority,0.0694464030634746,ECM-affiliated Proteins
+Sema4a,Low Priority,0.06967083024728704,ECM-affiliated Proteins
+Mbl2,Low Priority,0.0696732666800559,ECM-affiliated Proteins
+P4htm,Low Priority,0.07045310526538075,ECM Regulators
+Ltbp1,Low Priority,0.07047235731183844,ECM Glycoproteins
+Spock1,Low Priority,0.07065043524405,Proteoglycans
+Hapln1,Low Priority,0.07104890543588908,Proteoglycans
+Tbc1d15,Low Priority,0.07195823782992947,Non-ECM
+Elfn2,Low Priority,0.07313554716655996,ECM-affiliated Proteins
+Sdc3,Low Priority,0.07334197468780285,ECM-affiliated Proteins
+ANXA6,Low Priority,0.07337344173423747,ECM-affiliated Proteins
+Fga,Low Priority,0.0734823590717257,ECM Glycoproteins
+Spock2,Low Priority,0.07361146355637875,Proteoglycans
+Fstl1,Low Priority,0.07485238822889223,Secreted Factors
+Plxna2,Low Priority,0.07521656207364995,ECM-affiliated Proteins
+FCN2,Low Priority,0.0754987072813715,ECM-affiliated Proteins
+LTBP3,Low Priority,0.07593105762701348,ECM Glycoproteins
+Lamp2,Low Priority,0.0759407310642211,Non-ECM
+Anxa3,Low Priority,0.07594432923141455,ECM-affiliated Proteins
+Adck1,Low Priority,0.07638211419866607,Non-ECM
+Cst3,Low Priority,0.07728091958508464,ECM Regulators
+Brinp2,Low Priority,0.0777220646417144,Secreted Factors
+Gbp2,Low Priority,0.07820047855337309,Non-ECM
+FGL1,Low Priority,0.0791347584661549,ECM Glycoproteins
+Lpl,Low Priority,0.07923030410836006,Non-ECM
+Lman1,Low Priority,0.07955798722231665,ECM-affiliated Proteins
+Pon2,Low Priority,0.07961975271916313,Non-ECM
+Hmcn2,Low Priority,0.08012854947900963,ECM Glycoproteins
+Cd47,Low Priority,0.08043629651563905,Non-ECM
+ANGPTL5,Low Priority,0.08083664715925713,Secreted Factors
+C1qc,Low Priority,0.08157330872994208,ECM-affiliated Proteins
+Tgm2,Low Priority,0.08158615364115437,ECM Regulators
+Vwa5b2,Low Priority,0.0815980907636556,ECM Glycoproteins
+Gpc5,Low Priority,0.08179396716919879,ECM-affiliated Proteins
+Nrg3,Low Priority,0.08215260988230086,Secreted Factors
+Dspp,Low Priority,0.0826863000449821,ECM Glycoproteins
+Tnr,Low Priority,0.0837285264397449,ECM Glycoproteins
+Nampt,Low Priority,0.08565878871916598,Non-ECM
+BCAN,Low Priority,0.08641446358761873,Proteoglycans
+C1qtnf4,Low Priority,0.08664673610237815,ECM-affiliated Proteins
+Fgf2,Low Priority,0.08681714936851737,Secreted Factors
+Slit3,Low Priority,0.0870360918548148,ECM Glycoproteins
+Cpb2,Low Priority,0.08703940241768085,Non-ECM
+Cpe,Low Priority,0.08816908806102174,Non-ECM
+Podn,Low Priority,0.0900297749020446,Proteoglycans
+Car2,Low Priority,0.09024188257118157,Non-ECM
+HSPG2,Low Priority,0.09075654025186997,Proteoglycans
+Serpinb6b,Low Priority,0.09102559966664735,ECM Regulators
+Hnrnpa2b1,Low Priority,0.09142218569445996,Non-ECM
+Cd81,Low Priority,0.09434831414397722,Non-ECM
+Egln1,Low Priority,0.09491260247231065,ECM Regulators
+S100g,Low Priority,0.0950010706159893,Secreted Factors
+Fbln2,Low Priority,0.09575555645214666,ECM Glycoproteins
+Megf9,Low Priority,0.09624042611367975,Secreted Factors
+Sema3b,Low Priority,0.09664547267262641,ECM-affiliated Proteins
+TGFBI,Low Priority,0.09712594604797922,ECM Glycoproteins
+Fbln1,Low Priority,0.09746959695703306,ECM Glycoproteins
+IGFBP6,Low Priority,0.09932665715568889,ECM Glycoproteins
+LAMB4,Low Priority,0.09978580871234846,ECM Glycoproteins
+Anxa1,Low Priority,0.09980327501913704,ECM-affiliated Proteins
+Qsox1,Low Priority,0.10080245818161429,Non-ECM
+Vwa5a,Low Priority,0.100845167935787,ECM Glycoproteins
+FBN1,Low Priority,0.10195928985589076,ECM Glycoproteins
+Plod3,Low Priority,0.10197764416604373,ECM Regulators
+Hsp90b1,Low Priority,0.10232826683291915,Non-ECM
+MATN2,Low Priority,0.10245008121132654,ECM Glycoproteins
+Plxnd1,Low Priority,0.10369477808367118,ECM-affiliated Proteins
+Anpep,Low Priority,0.1039826095299488,Non-ECM
+PLOD2,Low Priority,0.10407963200602931,ECM Regulators
+Plxnb2,Low Priority,0.10543440114765527,ECM-affiliated Proteins
+Cd163,Low Priority,0.10572072323323695,Non-ECM
+COL6A1,Low Priority,0.10579852024084985,Collagens
+VEGFA,Low Priority,0.10623913736796428,Secreted Factors
+Tgm1,Low Priority,0.10632911182155845,ECM Regulators
+Man2b1,Low Priority,0.1066175653431942,Non-ECM
+Bdnf,Low Priority,0.10731777056428746,Secreted Factors
+TGM2,Low Priority,0.10744887936230975,ECM Regulators
+SDC1,Low Priority,0.10801780693797208,ECM-affiliated Proteins
+Ptn,Low Priority,0.10832824796272161,Secreted Factors
+LAMA5,Low Priority,0.10840926181449184,ECM Glycoproteins
+Anxa7,Low Priority,0.10858801078068565,ECM-affiliated Proteins
+Anxa11,Low Priority,0.10934395283625888,ECM-affiliated Proteins
+MMRN2,Low Priority,0.10955719663493735,ECM Glycoproteins
+Hnrnpm,Low Priority,0.10976388209466809,Non-ECM
+F13a1,Low Priority,0.11065898226188921,ECM Regulators
+Dnajb11,Low Priority,0.11066216806718696,Non-ECM
+Mmrn2,Low Priority,0.11093507459275198,ECM Glycoproteins
+SERPINB6,Low Priority,0.11178659055506883,ECM Regulators
+LTBP4,Low Priority,0.11229399272914999,ECM Glycoproteins
+C1ql3,Low Priority,0.11258789032870606,ECM-affiliated Proteins
+THBS1,Low Priority,0.11277261616617247,ECM Glycoproteins
+Adamtsl4,Low Priority,0.1127822879683673,ECM Regulators
+COL28A1,Low Priority,0.1146388882790393,Collagens
+Chadl,Low Priority,0.11533518823638281,Proteoglycans
+LOXL4,Low Priority,0.1159330987546089,ECM Regulators
+Ehd2,Low Priority,0.11707192214494949,Non-ECM
+Nid2,Low Priority,0.11713774042993925,ECM Glycoproteins
+C1QA,Low Priority,0.1174171882929,ECM-affiliated Proteins
+Itgb4,Low Priority,0.11767274934050174,Non-ECM
+LAMA1,Low Priority,0.1181522057790669,ECM Glycoproteins
+Lgals12,Low Priority,0.11874254230235955,ECM-affiliated Proteins
+Mfap5,Low Priority,0.11924546643454853,ECM Glycoproteins
+Eng,Low Priority,0.11944240179368804,Non-ECM
+Matn2,Low Priority,0.12204752564099544,ECM Glycoproteins
+CSTA,Low Priority,0.12579785570194255,ECM Regulators
+EMILIN1,Low Priority,0.1258040036203068,ECM Glycoproteins
+Sparcl1,Low Priority,0.12686607175354941,ECM Glycoproteins
+F13b,Low Priority,0.1274783367934548,ECM Regulators
+Col5a1,Low Priority,0.1276405469101776,Collagens
+LUM,Low Priority,0.13042318426503624,Proteoglycans
+CHADL,Low Priority,0.130614334346791,Proteoglycans
+Fmod,Low Priority,0.13137955064740983,Proteoglycans
+Fbn1,Low Priority,0.1323381002311389,ECM Glycoproteins
+Loxl2,Low Priority,0.133187045067201,ECM Regulators
+Apoc1,Low Priority,0.13334100329292395,Non-ECM
+FBLN5,Low Priority,0.1341880647517857,ECM Glycoproteins
+COL16A1,Low Priority,0.13422573477741304,Collagens
+Ccdc134,Low Priority,0.13465811493676805,Non-ECM
+Lgals8,Low Priority,0.1354048799510473,ECM-affiliated Proteins
+MMP13,Low Priority,0.13636505964980156,ECM Regulators
+MATN4,Low Priority,0.1368106349372141,ECM Glycoproteins
+B2m,Low Priority,0.1375941108934341,Non-ECM
+Slit1,Low Priority,0.13763596956199153,ECM Glycoproteins
+Pecam1,Low Priority,0.1385846043865298,Non-ECM
+Rpsa,Low Priority,0.1406263667371957,Non-ECM
+Igfbp7,Low Priority,0.1411200709965112,ECM Glycoproteins
+NID1,Low Priority,0.1411687651239464,ECM Glycoproteins
+Slit2,Low Priority,0.1419997368958876,ECM Glycoproteins
+Ahsg,Low Priority,0.1425066639822143,Non-ECM
+CCL18,Low Priority,0.14343041251542296,Secreted Factors
+COL4A4,Low Priority,0.1438536940642979,Collagens
+P4ha1,Low Priority,0.14481574281060322,ECM Regulators
+LAMA4,Low Priority,0.1450781770162956,ECM Glycoproteins
+LGALS8,Low Priority,0.14703107142145014,ECM-affiliated Proteins
+Stx4a,Low Priority,0.1474896570727944,Non-ECM
+LAMA2,Low Priority,0.1478338002284711,ECM Glycoproteins
+Emilin1,Low Priority,0.1479362523957137,ECM Glycoproteins
+Aga,Low Priority,0.14854123313318296,Non-ECM
+SBSPON,Low Priority,0.15024060082850466,ECM Glycoproteins
+S100A16,Low Priority,0.15188232525836948,Secreted Factors
+Lama4,Low Priority,0.15405418915463637,ECM Glycoproteins
+COL6A2,Low Priority,0.15430161122764258,Collagens
+SERPINA5,Low Priority,0.1561965206973348,ECM Regulators
+Clec2l,Low Priority,0.1570392194763949,ECM-affiliated Proteins
+CLEC18B,Low Priority,0.15818715066735617,ECM-affiliated Proteins
+Fn1,Low Priority,0.15823022522173855,ECM Glycoproteins
+CHRD,Low Priority,0.15864118685903442,Secreted Factors
+Dpep1,Low Priority,0.1588046290490411,Non-ECM
+Lman2,Low Priority,0.15975149791802667,Non-ECM
+COL8A2,Low Priority,0.1598585305323249,Collagens
+Cspg4,Low Priority,0.16006273955020517,ECM-affiliated Proteins
+Itgb1,Low Priority,0.1603966493446499,Non-ECM
+Rab35,Low Priority,0.16047460521572177,Non-ECM
+ASPN,Low Priority,0.16071872356593267,Proteoglycans
+Dlg1,Low Priority,0.16179629791900502,Non-ECM
+Hsp90ab1,Low Priority,0.1619979678701156,Non-ECM
+Cd109,Low Priority,0.16248874846004804,ECM Regulators
+LOXL3,Low Priority,0.16475832088285222,ECM Regulators
+Glg1,Low Priority,0.1649073872603137,Non-ECM
+Adipoq,Low Priority,0.16606423838464235,ECM Glycoproteins
+C4b,Low Priority,0.16706854691766057,Non-ECM
+FGFBP2,Low Priority,0.1680870853236082,Secreted Factors
+Mydgf,Low Priority,0.16956858762246108,Non-ECM
+ADAM15,Low Priority,0.17046702418052917,ECM Regulators
+PTN,Low Priority,0.17059357445175224,Secreted Factors
+ANXA4,Low Priority,0.17400350633305817,ECM-affiliated Proteins
+Tnfsf12,Low Priority,0.17642562605996204,Secreted Factors
+Cnp,Low Priority,0.1769459643493454,Non-ECM
+VCAN,Low Priority,0.17802976312669835,Proteoglycans
+S100A11,Low Priority,0.17955150035647158,Secreted Factors
+AEBP1,Low Priority,0.1801707367762912,ECM Glycoproteins
+AGRN,Low Priority,0.18206901919041227,ECM Glycoproteins
+Fgf12,Low Priority,0.1832729468419853,Secreted Factors
+S100A13,Low Priority,0.1836507250872749,Secreted Factors
+Tnc,Low Priority,0.1875164477187975,ECM Glycoproteins
+AGT,Low Priority,0.18924588214028773,ECM Regulators
+COL1A2,Low Priority,0.19006324886830506,Collagens
+Mug1,Low Priority,0.19227563506515066,Non-ECM
+Copa,Low Priority,0.1923135289573492,Non-ECM
+TINAG,Low Priority,0.19243567714122684,ECM Glycoproteins
+KERA,Low Priority,0.19371578322474844,Proteoglycans
+CHAD,Low Priority,0.19396339654720707,Proteoglycans
+S100A1,Low Priority,0.19408738246277257,Secreted Factors
+FSTL1,Low Priority,0.194296005335588,Secreted Factors
+Itga6,Low Priority,0.19694599133081345,Non-ECM
+Anxa2,Low Priority,0.19745574963717077,ECM-affiliated Proteins
+Plod1,Low Priority,0.19877750739666653,ECM Regulators
+Pdia3,Low Priority,0.19893932097564426,Non-ECM
+COL9A2,Continuous Monitoring,0.20120650622796296,Collagens
+ANXA11,Continuous Monitoring,0.2023888586022872,ECM-affiliated Proteins
+LAMB2,Continuous Monitoring,0.20265053950050493,ECM Glycoproteins
+MASP2,Continuous Monitoring,0.2057166780716693,ECM Regulators
+Il16,Continuous Monitoring,0.20685301309653076,Secreted Factors
+Fabp5,Continuous Monitoring,0.2103981041607551,Non-ECM
+COL12A1,Continuous Monitoring,0.21271594336702204,Collagens
+FGL2,Continuous Monitoring,0.2131744039929416,ECM Glycoproteins
+Emilin2,Continuous Monitoring,0.21334547619451272,ECM Glycoproteins
+IGFBP5,Continuous Monitoring,0.21486714605610127,ECM Glycoproteins
+DSPP,Continuous Monitoring,0.2166400898539064,ECM Glycoproteins
+Efemp1,Continuous Monitoring,0.21666865866730342,ECM Glycoproteins
+Gba,Continuous Monitoring,0.2171792140123786,Non-ECM
+P3h1,Continuous Monitoring,0.2177785951956807,ECM Regulators
+Apoa4,Continuous Monitoring,0.21828257410636423,Non-ECM
+ANXA2,Continuous Monitoring,0.22327288469154202,ECM-affiliated Proteins
+Cfl1,Continuous Monitoring,0.22900196451889687,Non-ECM
+Entpd2,Continuous Monitoring,0.23053914908504808,Non-ECM
+Lipe,Continuous Monitoring,0.23308377747611564,Non-ECM
+Col3a1,Continuous Monitoring,0.23311206576227192,Collagens
+FRAS1,Continuous Monitoring,0.23411852001586553,ECM Glycoproteins
+Matn4,Continuous Monitoring,0.2386269867270674,ECM Glycoproteins
+LGALS3,Continuous Monitoring,0.23868391246755374,ECM-affiliated Proteins
+BMP1,Continuous Monitoring,0.24181520521047228,ECM Regulators
+Apoe,Continuous Monitoring,0.24188406260688855,Non-ECM
+Hmcn1,Continuous Monitoring,0.2428333189060464,ECM Glycoproteins
+ANXA1,Continuous Monitoring,0.24313303845827233,ECM-affiliated Proteins
+COL3A1,Continuous Monitoring,0.24409723861614108,Collagens
+Lamb1,Continuous Monitoring,0.24690420130987328,ECM Glycoproteins
+C8b,Continuous Monitoring,0.2488160659903919,Non-ECM
+COL5A3,Continuous Monitoring,0.24958960601223457,Collagens
+FBLN2,Continuous Monitoring,0.2498762109792548,ECM Glycoproteins
+Hsd17b12,Continuous Monitoring,0.2501854416605138,Non-ECM
+PPBP,Continuous Monitoring,0.25023012215668183,Secreted Factors
+Calr,Continuous Monitoring,0.25123805039266267,Non-ECM
+MFAP1,Continuous Monitoring,0.2538577131467926,ECM Glycoproteins
+ANXA7,Continuous Monitoring,0.2543352587880978,ECM-affiliated Proteins
+Col15a1,Continuous Monitoring,0.25581050475262623,Collagens
+NID2,Continuous Monitoring,0.2573734230501411,ECM Glycoproteins
+Hsph1,Continuous Monitoring,0.25796151537909934,Non-ECM
+HRNR,Continuous Monitoring,0.2587873722891926,Secreted Factors
+TNC,Continuous Monitoring,0.2598270242198434,ECM Glycoproteins
+Hdlbp,Continuous Monitoring,0.2606781235691031,Non-ECM
+ECM2,Continuous Monitoring,0.2609506916035267,ECM Glycoproteins
+HMCN1,Continuous Monitoring,0.2636704084857344,ECM Glycoproteins
+Cap1,Continuous Monitoring,0.2651263061983812,Non-ECM
+CSPG4,Continuous Monitoring,0.2667594842421436,ECM-affiliated Proteins
+MXRA5,Continuous Monitoring,0.26811690618860373,ECM Glycoproteins
+Lgals9,Continuous Monitoring,0.2686754309316589,ECM-affiliated Proteins
+LOXL2,Continuous Monitoring,0.2710444761232375,ECM Regulators
+GDF15,Continuous Monitoring,0.2718203172343402,Secreted Factors
+P4HA1,Continuous Monitoring,0.27815130749453176,ECM Regulators
+Vwa9,Continuous Monitoring,0.2790746666675375,ECM Glycoproteins
+COL6A3,Continuous Monitoring,0.28103339061754185,Collagens
+PCOLCE,Continuous Monitoring,0.28687092978059164,ECM Glycoproteins
+ITIH5,Continuous Monitoring,0.2880071297414567,ECM Regulators
+Postn,Continuous Monitoring,0.2931370628254711,ECM Glycoproteins
+HHIP,Continuous Monitoring,0.300210634212834,Secreted Factors
+Phospho1,Continuous Monitoring,0.3024302401690824,Non-ECM
+GPC1,Continuous Monitoring,0.30287485203922204,ECM-affiliated Proteins
+VWA1,Continuous Monitoring,0.30425662999667724,ECM Glycoproteins
+LAMA3,Continuous Monitoring,0.30427703125248445,ECM Glycoproteins
+Cyb5d2,Continuous Monitoring,0.3046884096985659,Non-ECM
+Cilp2,Continuous Monitoring,0.31059581376725104,ECM Glycoproteins
+Gsn,Continuous Monitoring,0.31076056939475827,Non-ECM
+Dhrs7c,Continuous Monitoring,0.3113219713800227,Non-ECM
+P4HA2,Continuous Monitoring,0.31378495873038237,ECM Regulators
+COL4A3,Continuous Monitoring,0.3144795458809863,Collagens
+Cd34,Continuous Monitoring,0.31532062772497876,Non-ECM
+FLG,Continuous Monitoring,0.3194596470029014,Secreted Factors
+FMOD,Continuous Monitoring,0.3198289781519718,Proteoglycans
+ELANE,Continuous Monitoring,0.3217808204440935,ECM Regulators
+C3,Continuous Monitoring,0.32184217969782214,Non-ECM
+Aoc3,Continuous Monitoring,0.3222148724611824,Non-ECM
+INHBE,Continuous Monitoring,0.3258008060327195,Secreted Factors
+LOX,Continuous Monitoring,0.3298183974804678,ECM Regulators
+Apoa2,Continuous Monitoring,0.3321928697678335,Non-ECM
+COL15A1,Continuous Monitoring,0.3339225021624553,Collagens
+SERPINH1,Continuous Monitoring,0.3356702643667253,ECM Regulators
+CCN3,Continuous Monitoring,0.3364983272440799,ECM Glycoproteins
+Ltbp2,Continuous Monitoring,0.3369861601184021,ECM Glycoproteins
+Mcam,Continuous Monitoring,0.34368406557599035,Non-ECM
+Fgl2,Continuous Monitoring,0.34539704519844355,ECM Glycoproteins
+Col11a1,Continuous Monitoring,0.3473611556005225,Collagens
+Thbs3,Continuous Monitoring,0.34997542249416635,ECM Glycoproteins
+CRISPLD1,Continuous Monitoring,0.35310448663214344,ECM Glycoproteins
+COL5A2,Continuous Monitoring,0.37021545536941874,Collagens
+Pxdn,Continuous Monitoring,0.3760570618204606,ECM Glycoproteins
+Cfd,Continuous Monitoring,0.37757207274141363,Non-ECM
+C8a,Continuous Monitoring,0.37760879342532744,Non-ECM
+COL14A1,Continuous Monitoring,0.3807757585407655,Collagens
+Sparc,Continuous Monitoring,0.38159562049404555,ECM Glycoproteins
+Ace,Continuous Monitoring,0.38669015626434083,Non-ECM
+Mup11,Continuous Monitoring,0.38859775763998017,Non-ECM
+LAMB1,Continuous Monitoring,0.390870314170709,ECM Glycoproteins
+Chad,Continuous Monitoring,0.3912074917372481,Proteoglycans
+COL5A1,Continuous Monitoring,0.39481216312967704,Collagens
+Apoa1,Continuous Monitoring,0.3956064424602178,Non-ECM
+COL11A1,Continuous Monitoring,0.3995032134135438,Collagens
+SERPINB8,Continuous Monitoring,0.4006495341540937,ECM Regulators
+Islr,Continuous Monitoring,0.4137704601244797,Non-ECM
+ANXA3,Continuous Monitoring,0.4224324093343525,ECM-affiliated Proteins
+Clic1,Continuous Monitoring,0.4228125934615976,Non-ECM
+HAPLN3,Continuous Monitoring,0.42901151081988337,Proteoglycans
+SPP1,Continuous Monitoring,0.45150912804633364,ECM Glycoproteins
+Ltbp4,Continuous Monitoring,0.4602445238722049,ECM Glycoproteins
+FREM1,Continuous Monitoring,0.48773827992013535,ECM-affiliated Proteins
+MFAP5,Continuous Monitoring,0.49310269876150215,ECM Glycoproteins
+Fbln5,Continuous Monitoring,0.4971408719424292,ECM Glycoproteins
+Dpp4,Continuous Monitoring,0.5007142914609696,Non-ECM
+P3H1,Continuous Monitoring,0.5164161189550107,ECM Regulators
+CD109,Continuous Monitoring,0.5215845234201113,ECM Regulators
+FRZB,Continuous Monitoring,0.5243683442964379,Secreted Factors
+COL11A2,Continuous Monitoring,0.5354841120873555,Collagens
+Dpysl3,Early Supplementation,0.5370030847863166,Non-ECM
+EMILIN2,Early Supplementation,0.5549444325649479,ECM Glycoproteins
+COL21A1,Continuous Monitoring,0.5664816898463472,Collagens
+CHRDL2,Continuous Monitoring,0.5723148487450705,Secreted Factors
+Serpinh1,Continuous Monitoring,0.5734625551659357,ECM Regulators
+HCFC1,Early Supplementation,0.5764668059041833,Secreted Factors
+Eln,Continuous Monitoring,0.6035438442270636,ECM Glycoproteins
+Serpinf1,Continuous Monitoring,0.610669676941451,ECM Regulators
+TGM3,Continuous Monitoring,0.6682555768113927,ECM Regulators
+SCUBE1,Early Supplementation,0.6981558880442552,Secreted Factors
+SLIT3,Continuous Monitoring,0.7101640506452735,ECM Glycoproteins
+EMILIN3,Continuous Monitoring,0.7878585169964121,ECM Glycoproteins
+CLEC3A,Continuous Monitoring,0.7942434790763403,ECM-affiliated Proteins
+Pcolce,Continuous Monitoring,0.8249345752651844,ECM Glycoproteins
+COL9A1,Early Supplementation,0.8655147365797496,Collagens
+TNXB,Continuous Monitoring,0.8810209782365742,ECM Glycoproteins
+Fbn2,Continuous Monitoring,0.9096908665526114,ECM Glycoproteins
+Tfrc,Early Supplementation,0.9583067021298592,Non-ECM
+Kera,Early Supplementation,0.9703460258673459,Proteoglycans
+VIT,Continuous Monitoring,0.9767647112103883,ECM Glycoproteins
+SEMA3G,Continuous Monitoring,0.9979413600562048,ECM-affiliated Proteins
+Epx,Early Supplementation,0.9999403578689718,Non-ECM
+MATN3,Early Supplementation,1.000424115967756,ECM Glycoproteins
+Col14a1,Early Supplementation,1.1321262958691234,Collagens
+IL17B,Early Supplementation,1.4218260127551459,Secreted Factors

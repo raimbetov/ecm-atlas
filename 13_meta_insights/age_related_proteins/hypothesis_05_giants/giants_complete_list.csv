@@ -1,6 +1,0 @@
-Gene_Symbol,Protein_Name,Matrisome_Category,Matrisome_Division,N_Tissues,N_Measurements,Direction_Consistency,Predominant_Direction,N_Upregulated,N_Downregulated,Mean_Zscore_Delta,Abs_Mean_Zscore_Delta,Median_Zscore_Delta,Std_Zscore_Delta,N_Strong_Effects,Strong_Effect_Rate,T_Statistic,P_Value,Universality_Score
-CO2A1,Collagen alpha-1(II) chain ,Collagens,Core matrisome,1,1,1.0,DOWN,0,1,-2.810348435516705,2.810348435516705,-2.810348435516705,,1,1.0,,,0.5176470588235293
-TENA,Tenascin ,ECM Glycoproteins,Core matrisome,1,3,1.0,DOWN,0,3,-2.740813453889599,2.740813453889599,-3.1171407155901054,1.1645518786390676,3,1.0,-4.076441971613051,0.0552389224729885,0.7065992743289317
-CO1A2,Collagen alpha-2(I) chain ,Collagens,Core matrisome,1,1,1.0,DOWN,0,1,-2.4999630974081564,2.4999630974081564,-2.4999630974081564,,1,1.0,,,0.5176470588235293
-GPC6,Glypican-6,ECM-affiliated Proteins,Matrisome-associated,1,1,1.0,DOWN,0,1,-2.165066840594706,2.165066840594706,-2.165066840594706,,1,1.0,,,0.5176470588235293
-HPLN1,Hyaluronan and proteoglycan link protein 1 ,Proteoglycans,Core matrisome,1,1,1.0,UP,1,0,2.048720904954968,2.048720904954968,2.048720904954968,,1,1.0,,,0.5176470588235293

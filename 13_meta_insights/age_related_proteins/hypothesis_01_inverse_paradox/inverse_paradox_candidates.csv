@@ -1,3 +1,0 @@
-Gene_Symbol,Protein_Name,Matrisome_Category,Matrisome_Division,N_Tissues,N_Measurements,Direction_Consistency,Predominant_Direction,N_Upregulated,N_Downregulated,Mean_Zscore_Delta,Abs_Mean_Zscore_Delta,Median_Zscore_Delta,Std_Zscore_Delta,N_Strong_Effects,Strong_Effect_Rate,T_Statistic,P_Value,Universality_Score
-Col14a1,,Collagens,Core matrisome,6,6,1.0,DOWN,0,6,-1.2327393796361323,1.2327393796361323,-1.3392077356452572,0.3286937803093157,6,1.0,-9.18661272842474,0.0002563970600401,0.7291050114927817
-Pcolce,,ECM Glycoproteins,Core matrisome,6,6,1.0,DOWN,0,6,-1.0826789831978638,1.0826789831978638,-1.2340583095071929,0.8070504721673321,4,0.6666666666666666,-3.286053543774182,0.0218082725597347,0.7097885967490158

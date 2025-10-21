@@ -1,6 +1,0 @@
-Rank,Gene_Symbol,Protein_Name,Category,Division,Effect_Size,Direction,Consistency,N_Tissues,Strong_Effect_Rate,Universality_Score
-1,CO2A1,Collagen alpha-1(II) chain ,Collagens,Core matrisome,2.810348435516705,DOWN,1.0,1,1.0,0.5176470588235293
-2,TENA,Tenascin ,ECM Glycoproteins,Core matrisome,2.740813453889599,DOWN,1.0,1,1.0,0.7065992743289317
-3,CO1A2,Collagen alpha-2(I) chain ,Collagens,Core matrisome,2.4999630974081564,DOWN,1.0,1,1.0,0.5176470588235293
-4,GPC6,Glypican-6,ECM-affiliated Proteins,Matrisome-associated,2.165066840594706,DOWN,1.0,1,1.0,0.5176470588235293
-5,HPLN1,Hyaluronan and proteoglycan link protein 1 ,Proteoglycans,Core matrisome,2.048720904954968,UP,1.0,1,1.0,0.5176470588235293

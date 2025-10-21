@@ -1,0 +1,4 @@
+Gene_Symbol,Universality_Score,Abs_Mean_Zscore_Delta,N_Tissues,Direction_Consistency,Matrisome_Category
+Hp,0.748663326572137,1.7847414333738034,4,1.0,Non-ECM
+VTN,0.7324036983679243,1.1885305429265454,10,0.8,ECM Glycoproteins
+Col14a1,0.7291050114927817,1.2327393796361323,6,1.0,Collagens
