@@ -1,19 +1,169 @@
-The extracellular matrix is a complex substance found within the confines of the intercellular tissue space. Besides providing anchoring support, the extracellular matrix, secreted and assembled by resident cells, is a mechanical and biochemical environment that directs cellular functions and processes via a collection of various stimuli, prompting gene expression profiles to reflect developmental and physiological contexts. Being a dynamic structure, the extracellular matrix composition is subject to change as a function of pathology and age. Presently, there is a lack of a unified consensual understanding of the qualitative and quantitative aspects of said age-related compositional changes on a tissue/organ level. Herein, I describe a database that aggregates published proteomic datasets on extracellular matrix aging signatures with a tissue-level granularity, allowing direct comparison of matrisomal protein abundances across different compartments and methodologies.
+# ECM-Atlas
 
-The very first iteration of the database will be a CSV file, containing the information on protein abundances and accompanying data in a standardized format. For example,
+**Unified database for cross-study analysis of age-related extracellular matrix changes**
 
-Protein\_ID,Protein\_Name,Gene\_Symbol,Tissue,Species,Age,Age\_Unit,Abundance,Abundance\_Unit,Method,Study\_ID,Sample\_ID
-P02452,Collagen alpha-1(I) chain,COL1A1,Skin,Homo sapiens,25,years,1500,ppm,LC-MS/MS,PMID:12345678,S001
+ECM-Atlas aggregates 13 proteomic studies (128 files, 15 papers, 2017-2023) tracking age-related ECM protein changes across tissues and organisms, processed via autonomous agent pipeline into unified database with interactive dashboards for cross-tissue aging signature analysis.
 
-For this, I started expanding my [dataset inventory](https://docs.google.com/spreadsheets/d/1JSV8jQSin9vTu8mYVX0j-lZEAF2fyrfpiU5-K8xS3t0/edit?usp=sharing) with the aim of populating it with as much useful information as possible from the selected papers and associated supplementary data, paying extra attention to dataset structure and content; e.g. sampled age bins (they may be different between studies), how protein abundances are reported (they may vary), how protein IDs are reported (i.e protein vs. gene nomenclature) – all to determine common and contrasting features of the datasets in order to strategize standardization. In addition, to get a better “feel” of the data to account for any limitations, I’ve surveyed methodologies used in each of the papers, compiling workflows in Obsidian for better cross-referencing.
+---
 
-In case the abundance measures differ across datasets (which they do), a normalization method will have to be applied; e.g. conversion to percentiles or *z*\-scores. Once I have numerical columns with normalized abundance data, I will use [Matrisome AnalyzeR](https://matrinet.shinyapps.io/MatrisomeAnalyzer/) – a R package (and a web tool) – to classify and annotate my dataset. Database design is the next step.
+## Quick Start
 
-One of the suggestions under my pre-registration was that I look into existing metadata ontologies, such as [coderdata](https://github.com/PNNL-CompBio/coderdata) (PNNL), [CELLxGENE](https://cellxgene.cziscience.com/) (CZI), or [AnVIL](https://anvilproject.org/) (NIH). Using one of the existing standards would make sharing data and collaboration easier, as well as ensure interoperability with other databases and tools. I started looking at the documentation for these standards.
+### View Interactive Dashboard
+```bash
+cd 10_unified_dashboard_2_tabs
+./start_servers.sh
+```
+Open http://localhost:8083/dashboard.html
 
-To sum up, I’m at the data organization stage with the following tasks:
-\- Compile datasets into a standardized format;
-\- Ensure consistent protein naming/identifiers across datasets;
-\- Create metadata for each dataset (tissue type, age, methodology, etc.).
-\- Normalize protein abundance values;
-\- Annotate the resulting dataset using the matrisome-tailored toolkit.
+### Process New Dataset
+```bash
+source env/bin/activate
+python 11_subagent_for_LFQ_ingestion/autonomous_agent.py "data_raw/Study_Name/"
+```
+
+### Access Main Database
+```bash
+# Main unified database with z-scores
+08_merged_ecm_dataset/merged_ecm_aging_zscore.csv
+
+# Enriched version with UniProt metadata
+08_merged_ecm_dataset/merged_ecm_aging_zscore_enriched.csv
+```
+
+---
+
+## Project Status
+
+**Current:** 7/15 papers processed into unified database
+**Database:** 1.1 MB, includes z-scores for cross-study comparison
+**Last updated:** 2025-10-14
+
+### Data Coverage
+- **Tissues:** Lung, kidney, skin, heart, pancreas, adipose, ovary, brain
+- **Species:** Human, mouse
+- **Methods:** LFQ, TMT, SILAC, iTRAQ, DiLeu
+- **Proteins:** ~2,000+ ECM proteins tracked
+
+---
+
+## Repository Structure
+
+```
+ecm-atlas/
+├── data_raw/                    # 19 study directories with raw proteomics data
+├── 05_papers_to_csv/           # 7 processed studies (CSV format)
+├── 08_merged_ecm_dataset/      # Unified database (main output)
+├── 10_unified_dashboard_2_tabs/ # Interactive web dashboard
+├── 11_subagent_for_LFQ_ingestion/ # Autonomous processing pipeline
+├── 12_priority_research_questions/ # Analysis results
+├── knowledge_base/             # Documentation and guides
+└── reports/                    # Analysis reports
+
+```
+
+---
+
+## Key Features
+
+### Autonomous Processing Pipeline
+- **Phase 0:** Reconnaissance - identify data files
+- **Phase 1:** Normalization - Excel/TSV → standardized CSV
+- **Phase 2:** Merge - combine into unified database
+- **Phase 3:** Z-score calculation - enable cross-study comparison
+
+### Interactive Dashboard
+- Heatmaps for protein abundance patterns
+- Volcano plots for differential expression
+- Scatter plots for correlation analysis
+- Cross-dataset comparison tools
+
+### Unified Database Schema
+```csv
+Protein_ID, Gene_Symbol, Tissue, Species, Age, Abundance, Z_score, Study_ID
+```
+
+---
+
+## Scientific Context
+
+**Problem:** The extracellular matrix (ECM) composition changes with age, but there's no unified understanding of these changes across tissues and organisms.
+
+**Solution:** Aggregate published proteomic datasets with tissue-level granularity, normalize using z-scores, and enable direct comparison of matrisomal protein abundances.
+
+**Goal:** Identify universal ECM aging signatures and tissue-specific patterns.
+
+### Data Handling Notes
+- **NaN (missing data):** 50-80% missingness is normal in label-free quantification (LFQ). We preserve NaN values without imputation.
+- **Zero values (detected absence):** 0.0 abundance means protein was measured as undetectable/absent. These are included in statistical calculations.
+- **Normalization:** Within-study z-scores calculated per compartment/tissue.
+- **Batch correction:** Z-score normalization is applied within each study separately to account for systematic differences between datasets (different labs, instruments, protocols). This approach preserves biological signal while removing technical batch effects. Cross-study comparisons are enabled through standardized effect sizes rather than raw abundances.
+
+---
+
+## Development Setup
+
+### Environment
+```bash
+# Create virtual environment
+python -m venv env
+source env/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+### Common Tasks
+```bash
+# Start dashboard
+cd 10_unified_dashboard_2_tabs && ./start_servers.sh
+
+# Process new study
+python 11_subagent_for_LFQ_ingestion/autonomous_agent.py "data_raw/Study/"
+
+# Run analysis scripts
+python analyze_aging_signatures.py
+python find_common_signatures.py
+```
+
+---
+
+## Documentation
+
+- **Getting Started:** `11_subagent_for_LFQ_ingestion/00_START_HERE.md`
+- **Agent Guide:** `11_subagent_for_LFQ_ingestion/AUTONOMOUS_AGENT_GUIDE.md`
+- **Z-score Calculation:** `11_subagent_for_LFQ_ingestion/02_ZSCORE_CALCULATION_UNIVERSAL_FUNCTION.md`
+- **Processing Status:** `04_compilation_of_papers/00_README_compilation.md`
+- **Project Guide:** `CLAUDE.md`
+
+---
+
+## Data Sources
+
+### Processed Studies (7/15)
+Studies converted to standardized CSV format in `05_papers_to_csv/`
+
+### Raw Studies (19 total)
+All raw proteomic datasets available in `data_raw/` with corresponding PDFs
+
+### Publications
+15 full-text papers (2017-2023) providing methodological context
+
+---
+
+## Contributing
+
+When adding a new dataset:
+1. Run autonomous agent: `python 11_subagent_for_LFQ_ingestion/autonomous_agent.py "data_raw/New_Study/"`
+2. Verify output in `05_papers_to_csv/`
+3. Update `04_compilation_of_papers/00_README_compilation.md` with processing status
+4. Re-merge into unified database if needed
+
+---
+
+## License
+
+[To be specified]
+
+---
+
+**Note:** This is an active research project. Database schema and analysis methods are subject to refinement as new studies are processed.
