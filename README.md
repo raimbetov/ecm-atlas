@@ -25,9 +25,6 @@ python 11_subagent_for_LFQ_ingestion/autonomous_agent.py "data_raw/Study_Name/"
 ```bash
 # Main unified database with z-scores
 08_merged_ecm_dataset/merged_ecm_aging_zscore.csv
-
-# Enriched version with UniProt metadata
-08_merged_ecm_dataset/merged_ecm_aging_zscore_enriched.csv
 ```
 
 ---
