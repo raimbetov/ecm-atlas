@@ -1,0 +1,47 @@
+================================================================================
+ACCESSIBILITY AUDIT REPORT (axe-core)
+================================================================================
+
+URL: file:///Users/Kravtsovd/projects/ecm-atlas/documentation/pitchdeck/codex_01/pitchdeck_improved.html
+Timestamp: 2025-10-22T07:21:22.010Z
+Test Engine: axe-core 4.11.0
+
+────────────────────────────────────────────────────────────────────────────────
+SUMMARY
+────────────────────────────────────────────────────────────────────────────────
+✅ Passes: 17
+⚠️  Violations: 0
+ℹ️  Incomplete: 2
+⊘  Inapplicable: 45
+
+📊 Accessibility Score: 100/100
+
+✅ NO VIOLATIONS FOUND!
+
+────────────────────────────────────────────────────────────────────────────────
+PASSES (Sample of first 10)
+────────────────────────────────────────────────────────────────────────────────
+1. ✅ aria-allowed-attr - Elements must only use supported ARIA attributes
+2. ✅ aria-conditional-attr - ARIA attributes must be used as specified for the element's role
+3. ✅ aria-deprecated-role - Deprecated ARIA roles must not be used
+4. ✅ aria-hidden-body - aria-hidden="true" must not be present on the document body
+5. ✅ aria-prohibited-attr - Elements must only use permitted ARIA attributes
+6. ✅ aria-required-attr - Required ARIA attributes must be provided
+7. ✅ aria-roles - ARIA roles used must conform to valid values
+8. ✅ aria-valid-attr-value - ARIA attributes must conform to valid values
+9. ✅ aria-valid-attr - ARIA attributes must conform to valid names
+10. ✅ button-name - Buttons must have discernible text
+
+... and 7 more passed checks
+
+────────────────────────────────────────────────────────────────────────────────
+INCOMPLETE TESTS (Manual Review Needed)
+────────────────────────────────────────────────────────────────────────────────
+1. color-contrast-enhanced - Elements must meet enhanced color contrast ratio thresholds
+   Description: Ensure the contrast between foreground and background colors meets WCAG 2 AAA enhanced contrast ratio thresholds
+2. color-contrast - Elements must meet minimum color contrast ratio thresholds
+   Description: Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds
+
+================================================================================
+END OF REPORT
+================================================================================

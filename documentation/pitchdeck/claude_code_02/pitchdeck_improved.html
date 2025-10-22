@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Agent Frameworks for Scientific Discovery</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #000000;
+            --bg-secondary: #0d0d0d;
+            --bg-tertiary: #1a1a1a;
+            --text-primary: #ffffff;
+            --text-secondary: #b3b3b3;
+            --accent-purple: #9b59b6;
+            --accent-magenta: #e74c3c;
+            --accent-cyan: #3498db;
+            --accent-green: #2ecc71;
+            --accent-orange: #f39c12;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            overflow: hidden;
+            height: 100vh;
+            font-weight: 600;
+        }
+
+        .presentation-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 4rem 6rem;
+            opacity: 0;
+            transform: translateX(100%);
+            transition: all 0.7s cubic-bezier(0.4, 0.0, 0.2, 1);
+        }
+
+        .slide.active {
+            opacity: 1;
+            transform: translateX(0);
+            z-index: 10;
+        }
+
+        .slide.prev {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+
+        .slide-header {
+            width: 100%;
+            max-width: 1400px;
+            margin-bottom: 3rem;
+        }
+
+        .slide-title {
+            font-size: 4.5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-magenta) 50%, var(--accent-cyan) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        .slide-subtitle {
+            font-size: 1.6rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .slide-content {
+            width: 100%;
+            max-width: 1400px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .diagram-container {
+            width: 100%;
+            background: rgba(26, 26, 26, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 3.5rem;
+            box-shadow: 0 25px 80px rgba(155, 89, 182, 0.3);
+            margin-bottom: 2.5rem;
+            border: 2px solid rgba(155, 89, 182, 0.3);
+        }
+
+        .diagram-title {
+            font-size: 2.8rem;
+            color: var(--accent-purple);
+            margin-bottom: 3rem;
+            font-weight: 800;
+            text-align: center;
+            line-height: 1.3;
+            letter-spacing: -0.01em;
+        }
+
+        .mermaid {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 16px;
+            padding: 3.5rem;
+        }
+
+        /* Mermaid SVG improvements - CRITICAL FOR READABILITY */
+        .mermaid svg {
+            font-size: 32px !important;
+            font-weight: 700 !important;
+        }
+
+        .mermaid .node rect,
+        .mermaid .node circle,
+        .mermaid .node ellipse,
+        .mermaid .node polygon {
+            stroke-width: 4px !important;
+        }
+
+        .mermaid text {
+            fill: #ffffff !important;
+            font-weight: 800 !important;
+            font-family: 'Inter', sans-serif !important;
+        }
+
+        .key-insight {
+            background: linear-gradient(135deg, rgba(155, 89, 182, 0.2) 0%, rgba(231, 76, 60, 0.2) 100%);
+            border-left: 6px solid var(--accent-purple);
+            padding: 2rem 2.5rem;
+            border-radius: 16px;
+            margin-top: 2.5rem;
+            font-size: 1.4rem;
+            line-height: 1.7;
+            max-width: 1200px;
+            font-weight: 600;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .key-insight strong {
+            color: var(--accent-purple);
+            font-weight: 900;
+        }
+
+        /* Navigation */
+        .nav-controls {
+            position: fixed;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 2rem;
+            z-index: 1000;
+        }
+
+        .nav-btn {
+            background: rgba(26, 26, 26, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 3px solid var(--accent-purple);
+            color: var(--text-primary);
+            padding: 1.2rem 2.5rem;
+            border-radius: 60px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            font-weight: 800;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .nav-btn:hover {
+            background: var(--accent-purple);
+            color: #000000;
+            transform: scale(1.08);
+            box-shadow: 0 10px 40px rgba(155, 89, 182, 0.5);
+        }
+
+        .nav-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+            border-color: var(--text-secondary);
+        }
+
+        .nav-btn:disabled:hover {
+            background: rgba(26, 26, 26, 0.8);
+            color: var(--text-primary);
+            transform: scale(1);
+            box-shadow: none;
+        }
+
+        /* Progress indicator */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: var(--bg-tertiary);
+            z-index: 1001;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-purple) 0%, var(--accent-magenta) 50%, var(--accent-cyan) 100%);
+            transition: width 0.7s ease;
+        }
+
+        .slide-counter {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            background: rgba(26, 26, 26, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 1.2rem 2rem;
+            border-radius: 60px;
+            font-size: 1.3rem;
+            font-weight: 900;
+            color: var(--accent-purple);
+            z-index: 1001;
+            border: 3px solid var(--accent-purple);
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            width: 100%;
+            margin-top: 2.5rem;
+        }
+
+        .stat-card {
+            background: rgba(26, 26, 26, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 3px solid transparent;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .stat-card:hover {
+            border-color: var(--accent-purple);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(155, 89, 182, 0.4);
+        }
+
+        .stat-number {
+            font-size: 3.8rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--accent-purple) 0%, var(--accent-magenta) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-top: 0.7rem;
+            font-weight: 600;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .slide {
+                padding: 2rem 3rem;
+            }
+            .slide-title {
+                font-size: 3rem;
+            }
+            .slide-subtitle {
+                font-size: 1.3rem;
+            }
+            .diagram-container {
+                padding: 2.5rem;
+            }
+            .diagram-title {
+                font-size: 2rem;
+            }
+        }
+
+        /* Mermaid theme overrides */
+        .mermaid svg {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Title slide special styling */
+        .slide.title-slide {
+            background: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #000000 100%);
+        }
+
+        .title-slide .slide-title {
+            font-size: 5.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .title-slide .slide-subtitle {
+            font-size: 2rem;
+            text-align: center;
+            max-width: 1100px;
+            font-weight: 400;
+        }
+
+        .author-info {
+            margin-top: 3.5rem;
+            text-align: center;
+            font-size: 1.5rem;
+            color: var(--accent-cyan);
+            font-weight: 600;
+        }
+
+        /* Keyboard hint */
+        .keyboard-hint {
+            position: fixed;
+            bottom: 1rem;
+            left: 2rem;
+            color: var(--text-secondary);
+            font-size: 1rem;
+            opacity: 0.5;
+            z-index: 1001;
+            font-weight: 600;
+        }
+
+        /* Loading animation */
+        .loading {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.8rem;
+            color: var(--accent-purple);
+            z-index: 2000;
+            font-weight: 800;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.7s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Additional glassmorphism */
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+    </div>
+
+    <div class="slide-counter" id="slideCounter">1 / 10</div>
+
+    <div class="keyboard-hint">Use ← → arrow keys or buttons to navigate</div>
+
+    <div class="presentation-container" id="presentationContainer">
+
+        <!-- Slide 1: Title -->
+        <div class="slide active title-slide" data-slide="1">
+            <div class="slide-header">
+                <h1 class="slide-title">Multi-Agent Frameworks for Scientific Discovery</h1>
+                <p class="slide-subtitle">ECM-Atlas demonstrates 4 multi-agent patterns that transform complex scientific tasks into autonomous agent workflows, achieving 7 confirmed discoveries across 15 hypotheses via 28 independent agents</p>
+            </div>
+            <div class="slide-content">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">28</div>
+                        <div class="stat-label">Agent Executions</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">15</div>
+                        <div class="stat-label">Hypotheses Tested</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">7</div>
+                        <div class="stat-label">Confirmed Discoveries</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">6</div>
+                        <div class="stat-label">Iterations Completed</div>
+                    </div>
+                </div>
+                <div class="author-info">
+                    Daniel Kravtsov • ECM-Atlas Project • 2025
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Pitch Structure -->
+        <div class="slide" data-slide="2">
+            <div class="slide-header">
+                <h2 class="slide-title">The Pitch Structure</h2>
+                <p class="slide-subtitle">Meta-Framework: How We Present</p>
+            </div>
+            <div class="slide-content">
+                <div class="diagram-container">
+                    <h3 class="diagram-title">Three Solution Patterns Transform Problem Space into Evidence Base</h3>
+                    <div class="mermaid">
+graph TD
+    Pitch[3-Minute Pitch] --> Problem[Problem Space]
+    Pitch --> Solution[Solution Patterns]
+    Pitch --> Results[Evidence Base]
+
+    Problem --> Pipeline[Data Pipeline<br/>Evolution Challenge]
+    Problem --> Complexity[Task Complexity<br/>vs Agent Capability]
+
+    Solution --> KF[Knowledge Framework<br/>Documentation Standard]
+    Solution --> Parallel[Multi-Agent Validation<br/>Framework]
+    Solution --> Discovery[Nobel Prize<br/>Discovery Pattern]
+    Solution --> Iterative[Self-Improving<br/>Hypothesis Engine]
+
+    Results --> Discoveries[7 Confirmed<br/>Discoveries]
+    Results --> Agents[28 Agent<br/>Executions]
+    Results --> Iterations[6 Iterations<br/>Completed]
+
+    style Problem fill:#e74c3c
+    style Solution fill:#3498db
+    style Results fill:#9b59b6
+                    </div>
+                </div>
+                <div class="diagram-container">
+                    <h3 class="diagram-title">3-Minute Journey: Problem → Framework → Patterns → Results → Future</h3>
+                    <div class="mermaid">
+graph LR
+    Start[0:00 Problem] --> Evolution[0:30 Pipeline Evolution]
+    Evolution --> Framework[1:00 Knowledge Framework]
+    Framework --> Patterns[1:30 Multi-Agent Patterns]
+    Patterns --> Results[2:15 Key Results]
+    Results --> Future[2:45 Scaling Vision]
+    Future --> End[3:00 End]
+
+    style Start fill:#e74c3c
+    style Evolution fill:#e67e22
+    style Framework fill:#3498db
+    style Patterns fill:#9b59b6
+    style Results fill:#2ecc71
+    style Future fill:#1abc9c
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Data Pipeline Dilemma -->
+        <div class="slide" data-slide="3">
+            <div class="slide-header">
+                <h2 class="slide-title">The Data Pipeline Dilemma</h2>
+                <p class="slide-subtitle">The eternal engineering debate: Hardcode vs Flexibility vs Agents</p>
+            </div>
+            <div class="slide-content">
+                <div class="diagram-container">
+                    <h3 class="diagram-title">Three Approaches Compared: Hardcode (Months) → Flexible (Weeks) → Agent (Hours)</h3>
+                    <div class="mermaid">
+graph TD
+    Task[Complex Scientific Task<br/>Parse 15 Papers → Unified Database] --> Debate{Engineering Debate}
+
+    Debate --> Hardcode[Hardcode Approach<br/>Engineer writes specific parser]
+    Debate --> Flexible[Flexible Pipeline<br/>Configurable ETL framework]
+    Debate --> Agent[Agent Approach<br/>LLM autonomous execution]
+
+    Hardcode --> H_Pro[✅ Fast for 1 paper<br/>✅ Predictable]
+    Hardcode --> H_Con[❌ Breaks on paper 2<br/>❌ 100% re-engineering<br/>❌ Months of work]
+
+    Flexible --> F_Pro[✅ Handles variations<br/>✅ Reusable components]
+    Flexible --> F_Con[❌ Still needs coding<br/>❌ Edge cases multiply<br/>❌ Weeks per paper]
+
+    Agent --> A_Pro[✅ Adapts to any format<br/>✅ Self-corrects errors<br/>✅ Hours per paper]
+    Agent --> A_Con[⚠️ Needs validation<br/>⚠️ Non-deterministic]
+
+    H_Con --> Reality[Reality Check:<br/>15 papers × months = YEARS]
+    F_Con --> Reality
+    A_Pro --> Solution[Solution:<br/>Multi-Agent + Validation]
+
+    style Hardcode fill:#e74c3c
+    style Flexible fill:#f39c12
+    style Agent fill:#2ecc71
+    style Reality fill:#e74c3c
+    style Solution fill:#9b59b6
+                    </div>
+                </div>
+                <div class="key-insight">
+                    <strong>Key Insight:</strong> With Claude Code (Sonnet 4.5) and GPT-4.5, the question shifted from "can agents do it?" to "how do we TRUST agents?" → Multi-agent validation framework.
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Knowledge Framework -->
+        <div class="slide" data-slide="4">
+            <div class="slide-header">
+                <h2 class="slide-title">Pattern #1: Knowledge Framework</h2>
+                <p class="slide-subtitle">AI-First Documentation Standard</p>
+            </div>
+            <div class="slide-content">
+                <div class="diagram-container">
+                    <h3 class="diagram-title">From Thesis to Mermaid Diagrams to MECE Sections: Fractal Documentation</h3>
+                    <div class="mermaid">
+graph TD
+    Doc[Any Document] --> Thesis[Thesis: 1 Sentence<br/>Complete outcome preview]
+    Thesis --> Overview[Overview: 1 Paragraph<br/>Expands thesis + sections]
+
+    Overview --> Diagrams[Mermaid Diagrams<br/>MANDATORY]
+
+    Diagrams --> Continuant[Continuant Diagram<br/>graph TD<br/>Structure/Architecture]
+    Diagrams --> Occurrent[Occurrent Diagram<br/>graph LR<br/>Process/Flow]
+
+    Continuant --> Sections[MECE Sections<br/>1.0, 2.0, 3.0]
+    Occurrent --> Sections
+
+    Sections --> Details[Fractal Details<br/>¶1, ¶2, ¶3]
+
+    style Thesis fill:#9b59b6
+    style Diagrams fill:#3498db
+    style Sections fill:#2ecc71
+                    </div>
+                </div>
+                <div class="diagram-container">
+                    <h3 class="diagram-title">Agent Output → Knowledge Framework → 5-Min Human Review + Seamless Agent Reuse</h3>
+                    <div class="mermaid">
+graph LR
+    Agent[Agent Completes Task] --> Output[Raw Output<br/>Code, Data, Analysis]
+
+    Output --> KF[Knowledge Framework<br/>Structured Documentation]
+
+    KF --> Human[Human Review<br/>5 min scan]
+    KF --> NextAgent[Next Agent Input<br/>Clear context]
+
+    Human --> Decision{Quality?}
+    Decision --> Accept[✅ Accept<br/>Trust established]
+    Decision --> Iterate[🔄 Iterate<br/>Clear gaps identified]
+
+    NextAgent --> Reuse[Agent Reuses<br/>Results seamlessly]
+
+    style Output fill:#e74c3c
+    style KF fill:#3498db
+    style Accept fill:#2ecc71
+    style Reuse fill:#9b59b6
+                    </div>
+                </div>
+                <div class="key-insight">
+                    <strong>Impact:</strong> Every agent output instantly consumable by humans AND other agents. Full traceability - no "where did this number come from?"
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Multi-Agent Validation -->
+        <div class="slide" data-slide="5">
+            <div class="slide-header">
+                <h2 class="slide-title">Pattern #2: Multi-Agent Parallel Validation</h2>
+                <p class="slide-subtitle">2-3 Agents per Task, Cross-Validation Built-In</p>
+            </div>
+            <div class="slide-content">
+                <div class="diagram-container">
+                    <h3 class="diagram-title">One Task → Two Agents → Independent Plans → Self-Evaluation → Winner or Insight</h3>
+                    <div class="mermaid">
+graph TD
+    Task[01_task.md<br/>Single Source of Truth] --> Claude[Claude Code Agent<br/>claude_code/]
+    Task --> Codex[Codex Agent<br/>codex/]
+
+    Claude --> C_Plan[01_plan_claude_code.md<br/>Approach planning]
+    Codex --> X_Plan[01_plan_codex.md<br/>Approach planning]
+
+    C_Plan --> C_Results[90_results_claude_code.md<br/>Self-evaluation vs criteria]
+    X_Plan --> X_Results[90_results_codex.md<br/>Self-evaluation vs criteria]
+
+    C_Results --> Compare[Compare Self-Evaluations<br/>Score ✅/❌ per criterion]
+    X_Results --> Compare
+
+    Compare --> Winner[🏆 Winner = Most ✅<br/>OR Disagreement = Insight]
+
+    style Task fill:#9b59b6
+    style Compare fill:#3498db
+    style Winner fill:#2ecc71
+                    </div>
+                </div>
+                <div class="diagram-container">
+                    <h3 class="diagram-title">User Defines Criteria → Script Launches Agents → Auto-Comparison Finds Winner</h3>
+                    <div class="mermaid">
+graph LR
+    Start[Define Task] --> File[Create 01_task.md<br/>Success criteria]
+    File --> UserEdit[👤 User Edits Task<br/>Refines criteria]
+    UserEdit --> Ready{User: Ready?}
+    Ready --> Launch[./run_parallel_agents.sh<br/>Automated execution]
+
+    Launch --> A1[Agent 1 Works<br/>Independent workspace]
+    Launch --> A2[Agent 2 Works<br/>Independent workspace]
+
+    A1 --> Eval[Compare Results<br/>No manual testing]
+    A2 --> Eval
+
+    Eval --> Decision[Winner OR<br/>Disagreement Analysis]
+
+    style UserEdit fill:#3498db
+    style Launch fill:#9b59b6
+    style Decision fill:#2ecc71
+                    </div>
+                </div>
+                <div class="key-insight">
+                    <strong>Key Innovation:</strong> Disagreement is SIGNAL, not noise. When Claude says ✅ and Codex says ❌ → investigate WHY → methodological breakthroughs (happened 3 times!)
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Nobel Prize Discovery -->
+        <div class="slide" data-slide="6">
+            <div class="slide-header">
+                <h2 class="slide-title">Pattern #3: Nobel Prize Discovery Sprint</h2>
+                <p class="slide-subtitle">10 Hypotheses, 20 Agents, Nobel-Worthy Results</p>
+            </div>
+            <div class="slide-content">
+                <div class="diagram-container">
+                    <h3 class="diagram-title">10 Hypotheses × 2 Agents = 20 Parallel Executions → 3 Nobel-Worthy Discoveries</h3>
+                    <div class="mermaid">
+graph TD
+    Dataset[ECM-Atlas Database<br/>3,317 proteins, 13 studies] --> Agents[10 Parallel Agent Pairs<br/>20 agents total]
+
+    Agents --> H01[Hypothesis 01:<br/>Binary Universality]
+    Agents --> H02[Hypothesis 02:<br/>Causal Giants]
+    Agents --> H03[Hypothesis 03:<br/>Inverse Paradox]
+    Agents --> H_More[... Hypotheses 04-10]
+
+    H01 --> D1[Discovery #1:<br/>Aging threshold 0.72<br/>p=0.003]
+    H02 --> D2[Discovery #2:<br/>4 Driver proteins<br/>4.1× effect size]
+    H03 --> D3[Discovery #3:<br/>Quality loss paradox<br/>Δz=-1.23]
+
+    D1 --> Nobel[Nobel-Worthy Insights<br/>Paradigm shifts]
+    D2 --> Nobel
+    D3 --> Nobel
+
+    style Dataset fill:#3498db
+    style Agents fill:#9b59b6
+    style Nobel fill:#f39c12
+                    </div>
+                </div>
+                <div class="diagram-container">
+                    <h3 class="diagram-title">Generate Hypotheses → Parallel Agents → Cross-Validate → 7 Confirmed + 3 Rejected + Breakthroughs</h3>
+                    <div class="mermaid">
+graph LR
+    Question[Research Question:<br/>Find aging mechanisms] --> Hypothesis[Generate 10 Hypotheses<br/>Computational + Biological]
+
+    Hypothesis --> Parallel[Launch 2 Agents/Hypothesis<br/>Claude + Codex]
+
+    Parallel --> Validate[Cross-Agent Validation<br/>Both confirm? Reject?]
+
+    Validate --> Confirmed[7 CONFIRMED<br/>Both agents agree]
+    Validate --> Rejected[3 REJECTED<br/>Both agents reject]
+    Validate --> Insight[Disagreement<br/>Methodological discovery]
+
+    Confirmed --> Rank[Rank by Impact<br/>Novelty + Clinical]
+    Rejected --> Learn[Avoid false leads<br/>Negative results valuable]
+    Insight --> Breakthrough[Methodology fix<br/>Benefits all future work]
+
+    style Hypothesis fill:#3498db
+    style Confirmed fill:#2ecc71
+    style Breakthrough fill:#9b59b6
+                    </div>
+                </div>
+                <div class="key-insight">
+                    <strong>Result:</strong> 3 Nobel-worthy discoveries in 2 weeks. Single-agent approach would have taken 6 months + high false positive rate.
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Iterative Engine -->
+        <div class="slide" data-slide="7">
+            <div class="slide-header">
+                <h2 class="slide-title">Pattern #4: Iterative Self-Improving Engine</h2>
+                <p class="slide-subtitle">Autonomous Hypothesis Generation & Validation</p>
+            </div>
+            <div class="slide-content">
+                <div class="diagram-container">
+                    <h3 class="diagram-title">3 Hypotheses × 2 Agents = 6 Results → Synthesis → Next 3 Hypotheses Generated</h3>
+                    <div class="mermaid">
+graph TD
+    Registry[Hypothesis Registry<br/>Tracks all 15 hypotheses] --> Iteration[Current Iteration<br/>3 hypotheses tested]
+
+    Iteration --> H1[Hypothesis A<br/>2 agents]
+    Iteration --> H2[Hypothesis B<br/>2 agents]
+    Iteration --> H3[Hypothesis C<br/>2 agents]
+
+    H1 --> Claude1[Claude Code]
+    H1 --> Codex1[Codex]
+    H2 --> Claude2[Claude Code]
+    H2 --> Codex2[Codex]
+    H3 --> Claude3[Claude Code]
+    H3 --> Codex3[Codex]
+
+    Claude1 --> Synth[Synthesis Agent<br/>Aggregates all 6 results]
+    Codex1 --> Synth
+    Claude2 --> Synth
+    Codex2 --> Synth
+    Claude3 --> Synth
+    Codex3 --> Synth
+
+    Synth --> Next[Generate Next 3 Hypotheses<br/>Based on emergent patterns]
+
+    Next --> Registry
+
+    style Registry fill:#3498db
+    style Synth fill:#9b59b6
+    style Next fill:#e74c3c
+                    </div>
+                </div>
+                <div class="diagram-container">
+                    <h3 class="diagram-title">Each Iteration Discovers Patterns → Generates New Hypotheses → Self-Corrects Previous Work</h3>
+                    <div class="mermaid">
+graph LR
+    Start[Iteration N] --> Generate[Generate 3 Hypotheses]
+
+    Generate --> Launch[Launch 6 Agents<br/>2 per hypothesis]
+
+    Launch --> Work[Agents Work<br/>Days to weeks]
+
+    Work --> Collect[Collect 6 Results]
+
+    Collect --> Synthesize[Synthesis Document<br/>Cross-hypothesis patterns]
+
+    Synthesize --> Discover{Emergent Patterns?}
+
+    Discover --> New[New hypothesis types]
+    Discover --> Refine[Refine existing]
+    Discover --> Reject[Reject hypothesis]
+
+    New --> Next[Iteration N+1<br/>3 new hypotheses]
+    Refine --> Next
+    Reject --> Next
+
+    style Generate fill:#3498db
+    style Synthesize fill:#9b59b6
+    style Discover fill:#e74c3c
+                    </div>
+                </div>
+                <div class="key-insight">
+                    <strong>Emergent Intelligence:</strong> System discovered methodological flaws in its OWN earlier work (Iteration 4 invalidated Iteration 3 results) → self-correcting scientific process.
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 8: Key Results -->
+        <div class="slide" data-slide="8">
+            <div class="slide-header">
+                <h2 class="slide-title">Key Results</h2>
+                <p class="slide-subtitle">What We Discovered: Methodology + Science</p>
+            </div>
+            <div class="slide-content">
+                <div class="diagram-container">
+                    <h3 class="diagram-title">28 Agents → 3 Methodology Breakthroughs + 3 Scientific Discoveries + Error Prevention</h3>
+                    <div class="mermaid">
+graph TD
+    Results[28 Agent Executions<br/>15 Hypotheses] --> Method[Methodological<br/>Discoveries]
+    Results --> Science[Scientific<br/>Discoveries]
+
+    Method --> M1[PCA Pseudo-Time<br/>50× more robust<br/>Invalidated Iteration 3]
+    Method --> M2[Eigenvector Centrality<br/>ρ=0.929 knockout prediction<br/>Resolved disagreement]
+    Method --> M3[Multi-Agent Validation<br/>Caught overfitting 3× times<br/>Prevented false publications]
+
+    Science --> S1[Metabolic-Mechanical Transition<br/>v=1.65-2.17 window<br/>Rank #1: 27/30 score]
+    Science --> S2[S100 Calcium Pathway<br/>S100→CALM→CAMK→Crosslinking<br/>Drug targets identified]
+    Science --> S3[SERPINE1 Ideal Target<br/>Low centrality + beneficial KO<br/>Minimal toxicity]
+
+    M3 --> Impact1[Without multi-agent:<br/>Would publish wrong results]
+    S1 --> Impact2[Clinical trial ready:<br/>FDA intervention timing]
+
+    style Method fill:#3498db
+    style Science fill:#9b59b6
+    style Impact1 fill:#e74c3c
+    style Impact2 fill:#2ecc71
+                    </div>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">7</div>
+                        <div class="stat-label">CONFIRMED Discoveries</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">REJECTED Hypotheses</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">RESOLVED Methodologies</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">50×</div>
+                        <div class="stat-label">Time Savings vs Human</div>
+                    </div>
+                </div>
+                <div class="key-insight">
+                    <strong>ROI:</strong> 28 agent-days vs estimated 2 engineer-years. 50× time savings, PLUS methodological innovations impossible with single-agent approach.
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 9: Scaling Vision -->
+        <div class="slide" data-slide="9">
+            <div class="slide-header">
+                <h2 class="slide-title">Scaling Vision: The Future is Autonomous</h2>
+                <p class="slide-subtitle">From Simple Tasks to Nobel-Level Discovery</p>
+            </div>
+            <div class="slide-content">
+                <div class="diagram-container">
+                    <h3 class="diagram-title">Simple (1 Agent) → Medium (2-3) → Complex (6+) → Nobel (Dozens) = ROI 2× → ∞</h3>
+                    <div class="mermaid">
+graph TD
+    Simple[Simple Tasks<br/>Parse 1 file, Run script] --> Single[Single Agent<br/>Claude Code alone<br/>Minutes to hours]
+
+    Medium[Medium Complexity<br/>Parse 15 papers, Build pipeline] --> Multi[Multi-Agent Validation<br/>2-3 agents parallel<br/>Days, cross-validation]
+
+    Complex[Complex Tasks<br/>Scientific discovery, Novel hypotheses] --> Iterative[Iterative Multi-Hypothesis<br/>6+ agents per iteration<br/>Weeks, self-improving]
+
+    Nobel[Nobel-Level Discovery<br/>Paradigm shifts, Unknown unknowns] --> Emergent[Emergent Intelligence<br/>Dozens of agents, Multiple iterations<br/>Months, autonomous hypothesis generation]
+
+    Single --> ROI1[ROI: 2-5× faster]
+    Multi --> ROI2[ROI: 10-50× faster<br/>+ Error prevention]
+    Iterative --> ROI3[ROI: 100× faster<br/>+ Methodological innovation]
+    Emergent --> ROI4[ROI: ∞<br/>Tasks impossible alone]
+
+    style Simple fill:#7f8c8d
+    style Medium fill:#3498db
+    style Complex fill:#9b59b6
+    style Nobel fill:#f39c12
+    style ROI4 fill:#e74c3c
+                    </div>
+                </div>
+                <div class="diagram-container">
+                    <h3 class="diagram-title">Old (Decompose Tasks) → New (Give Larger Tasks) → Trust (Multi-Agent Agreement) → Future (100+ Agents)</h3>
+                    <div class="mermaid">
+graph LR
+    Old[Old Paradigm:<br/>Decompose tasks<br/>Engineer writes code] --> Problem[Problem:<br/>Human bottleneck<br/>Decomposition takes days]
+
+    Problem --> New[New Paradigm:<br/>Give LARGER tasks<br/>Let agents decompose]
+
+    New --> Trust[Trust Framework:<br/>How many agents agree?<br/>Not can agent do it?]
+
+    Trust --> Scale[Scaling Strategy:<br/>Simple = 1 agent<br/>Medium = 2-3 agents<br/>Complex = 6+ agents<br/>Nobel = Autonomous]
+
+    Scale --> Future[Future:<br/>AI Lab = 100+ agents<br/>Human = Curator]
+
+    style Old fill:#e74c3c
+    style New fill:#3498db
+    style Trust fill:#2ecc71
+    style Future fill:#9b59b6
+                    </div>
+                </div>
+                <div class="key-insight">
+                    <strong>Key Insight:</strong> The skill isn't task decomposition anymore. The skill is: (1) Defining clear success criteria, (2) Choosing agent count, (3) Recognizing disagreement = insight, (4) Synthesizing emergent patterns.
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 10: Conclusion -->
+        <div class="slide" data-slide="10">
+            <div class="slide-header">
+                <h2 class="slide-title">Conclusion: The Multi-Agent Future</h2>
+                <p class="slide-subtitle">Data Pipelines → Agent Orchestration</p>
+            </div>
+            <div class="slide-content">
+                <div class="diagram-container">
+                    <h3 class="diagram-title">4 Patterns → 50-100× Time Savings + Quality Improvements + Impossible Tasks Enabled</h3>
+                    <div class="mermaid">
+graph TD
+    Thesis[ECM-Atlas Multi-Agent Framework] --> Pattern1[Pattern 1:<br/>Knowledge Framework<br/>AI-first documentation]
+    Thesis --> Pattern2[Pattern 2:<br/>Parallel Validation<br/>2-3 agents per task]
+    Thesis --> Pattern3[Pattern 3:<br/>Discovery Sprint<br/>10 hypotheses, 20 agents]
+    Thesis --> Pattern4[Pattern 4:<br/>Iterative Engine<br/>Self-improving system]
+
+    Pattern1 --> Result1[Instant consumability<br/>Human + AI readable]
+    Pattern2 --> Result2[Error prevention<br/>3× caught overfitting]
+    Pattern3 --> Result3[7 discoveries in 2 weeks<br/>Nobel-worthy results]
+    Pattern4 --> Result4[Self-correction<br/>Emergent intelligence]
+
+    Result1 --> Impact[Impact:<br/>50-100× time savings<br/>Quality improvements<br/>Impossible tasks enabled]
+    Result2 --> Impact
+    Result3 --> Impact
+    Result4 --> Impact
+
+    Impact --> Future[Future:<br/>Pipelines = Orchestration<br/>Engineers = Curators<br/>Discovery = Emergent]
+
+    style Thesis fill:#9b59b6
+    style Pattern1 fill:#3498db
+    style Pattern2 fill:#3498db
+    style Pattern3 fill:#3498db
+    style Pattern4 fill:#3498db
+    style Impact fill:#2ecc71
+    style Future fill:#e74c3c
+                    </div>
+                </div>
+                <div class="diagram-container">
+                    <h3 class="diagram-title">2023: "Can AI Do It?" → 2025: "How Many AIs?" → New Skill: Agent Orchestration, Not Decomposition</h3>
+                    <div class="mermaid">
+graph LR
+    Question[The Question Changed] --> Old[2023: Can AI do my task?<br/>Answer: Sometimes]
+
+    Old --> New[2025: How many AIs?<br/>Answer: Depends on complexity]
+
+    New --> Framework[Simple = 1 agent<br/>Medium = 2-3<br/>Complex = 6+<br/>Nobel = Dozens]
+
+    Framework --> Skill[New Core Skill:<br/>Agent orchestration<br/>Not decomposition]
+
+    Skill --> Result[Tasks impossible alone<br/>Now routine with multi-agent]
+
+    style Question fill:#9b59b6
+    style Old fill:#e74c3c
+    style New fill:#3498db
+    style Framework fill:#2ecc71
+    style Skill fill:#f39c12
+    style Result fill:#9b59b6
+                    </div>
+                </div>
+                <div class="key-insight" style="margin-top: 2.5rem; text-align: center; font-size: 1.6rem;">
+                    <strong>Contact:</strong> daniel@improvado.io | <strong>Repository:</strong> ecm-atlas | <strong>2025</strong>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="nav-controls">
+        <button class="nav-btn" id="prevBtn" onclick="previousSlide()">
+            <span>←</span> Previous
+        </button>
+        <button class="nav-btn" id="nextBtn" onclick="nextSlide()">
+            Next <span>→</span>
+        </button>
+    </div>
+
+    <script>
+        // Initialize Mermaid with MAXIMUM READABILITY settings
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'dark',
+            themeVariables: {
+                primaryColor: '#1a1a1a',
+                primaryTextColor: '#ffffff',
+                primaryBorderColor: '#9b59b6',
+                lineColor: '#3498db',
+                secondaryColor: '#000000',
+                tertiaryColor: '#2c2c2c',
+                mainBkg: '#1a1a1a',
+                secondBkg: '#000000',
+                mainContrastColor: '#9b59b6',
+                darkMode: true,
+                background: '#000000',
+                fontFamily: 'Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+                fontSize: '32px',
+                nodeBorder: '4px',
+                clusterBkg: '#1a1a1a',
+                clusterBorder: '#9b59b6',
+                edgeLabelBackground: '#000000'
+            },
+            flowchart: {
+                nodeSpacing: 120,
+                rankSpacing: 120,
+                padding: 40,
+                useMaxWidth: true
+            }
+        });
+
+        let currentSlide = 1;
+        const totalSlides = 10;
+
+        function updateSlide() {
+            const slides = document.querySelectorAll('.slide');
+            slides.forEach((slide, index) => {
+                slide.classList.remove('active', 'prev');
+                if (index + 1 === currentSlide) {
+                    slide.classList.add('active');
+                } else if (index + 1 < currentSlide) {
+                    slide.classList.add('prev');
+                }
+            });
+
+            // Update counter
+            document.getElementById('slideCounter').textContent = `${currentSlide} / ${totalSlides}`;
+
+            // Update progress bar
+            const progress = (currentSlide / totalSlides) * 100;
+            document.getElementById('progressFill').style.width = `${progress}%`;
+
+            // Update button states
+            document.getElementById('prevBtn').disabled = currentSlide === 1;
+            document.getElementById('nextBtn').disabled = currentSlide === totalSlides;
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides) {
+                currentSlide++;
+                updateSlide();
+            }
+        }
+
+        function previousSlide() {
+            if (currentSlide > 1) {
+                currentSlide--;
+                updateSlide();
+            }
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') {
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                previousSlide();
+            }
+        });
+
+        // Touch/swipe support for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        document.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            if (touchEndX < touchStartX - 50) {
+                nextSlide();
+            }
+            if (touchEndX > touchStartX + 50) {
+                previousSlide();
+            }
+        }
+
+        // Initialize
+        updateSlide();
+    </script>
+</body>
+</html>
