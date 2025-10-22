@@ -1,0 +1,525 @@
+{
+  "metadata": {
+    "title": "Contrast Analysis - Improved Pitch Deck",
+    "timestamp": "2025-10-22T07:24:33.484Z",
+    "wcagVersion": "2.1",
+    "colorPalette": {
+      "bg-primary": "#0a0e27",
+      "bg-secondary": "#151b3d",
+      "bg-tertiary": "#1e2749",
+      "text-primary": "#ffffff",
+      "text-secondary": "#e8eaf6",
+      "accent-gold": "#ffd700",
+      "accent-cyan": "#4ecdc4",
+      "accent-blue": "#54a0ff",
+      "accent-red": "#ff6b6b",
+      "accent-green": "#6ab04c",
+      "accent-purple": "#9b59b6"
+    }
+  },
+  "summary": {
+    "totalPairs": 15,
+    "passingAA": 15,
+    "passingAAA": 15,
+    "minRatio": 5.249225863361088,
+    "maxRatio": 19.00421807972982,
+    "averageRatio": 11.83
+  },
+  "colorPairs": [
+    {
+      "name": "Body text on primary bg",
+      "foreground": {
+        "name": "text-primary",
+        "hex": "#ffffff",
+        "rgb": {
+          "r": 255,
+          "g": 255,
+          "b": 255
+        }
+      },
+      "background": {
+        "name": "bg-primary",
+        "hex": "#0a0e27",
+        "rgb": {
+          "r": 10,
+          "g": 14,
+          "b": 39
+        }
+      },
+      "contrastRatio": 19,
+      "fontSize": 29,
+      "isBold": false,
+      "compliance": {
+        "WCAG AA (Normal)": true,
+        "WCAG AA (Large)": true,
+        "WCAG AAA (Normal)": true,
+        "WCAG AAA (Large)": true,
+        "Applicable Level": "Large Text",
+        "Passes AA": true,
+        "Passes AAA": true
+      }
+    },
+    {
+      "name": "Secondary text on primary bg",
+      "foreground": {
+        "name": "text-secondary",
+        "hex": "#e8eaf6",
+        "rgb": {
+          "r": 232,
+          "g": 234,
+          "b": 246
+        }
+      },
+      "background": {
+        "name": "bg-primary",
+        "hex": "#0a0e27",
+        "rgb": {
+          "r": 10,
+          "g": 14,
+          "b": 39
+        }
+      },
+      "contrastRatio": 15.86,
+      "fontSize": 29,
+      "isBold": false,
+      "compliance": {
+        "WCAG AA (Normal)": true,
+        "WCAG AA (Large)": true,
+        "WCAG AAA (Normal)": true,
+        "WCAG AAA (Large)": true,
+        "Applicable Level": "Large Text",
+        "Passes AA": true,
+        "Passes AAA": true
+      }
+    },
+    {
+      "name": "Gold accent on tertiary bg",
+      "foreground": {
+        "name": "accent-gold",
+        "hex": "#ffd700",
+        "rgb": {
+          "r": 255,
+          "g": 215,
+          "b": 0
+        }
+      },
+      "background": {
+        "name": "bg-tertiary",
+        "hex": "#1e2749",
+        "rgb": {
+          "r": 30,
+          "g": 39,
+          "b": 73
+        }
+      },
+      "contrastRatio": 10.39,
+      "fontSize": 47,
+      "isBold": true,
+      "compliance": {
+        "WCAG AA (Normal)": true,
+        "WCAG AA (Large)": true,
+        "WCAG AAA (Normal)": true,
+        "WCAG AAA (Large)": true,
+        "Applicable Level": "Large Text",
+        "Passes AA": true,
+        "Passes AAA": true
+      }
+    },
+    {
+      "name": "Cyan accent on tertiary bg",
+      "foreground": {
+        "name": "accent-cyan",
+        "hex": "#4ecdc4",
+        "rgb": {
+          "r": 78,
+          "g": 205,
+          "b": 196
+        }
+      },
+      "background": {
+        "name": "bg-tertiary",
+        "hex": "#1e2749",
+        "rgb": {
+          "r": 30,
+          "g": 39,
+          "b": 73
+        }
+      },
+      "contrastRatio": 7.53,
+      "fontSize": 47,
+      "isBold": true,
+      "compliance": {
+        "WCAG AA (Normal)": true,
+        "WCAG AA (Large)": true,
+        "WCAG AAA (Normal)": true,
+        "WCAG AAA (Large)": true,
+        "Applicable Level": "Large Text",
+        "Passes AA": true,
+        "Passes AAA": true
+      }
+    },
+    {
+      "name": "Mermaid text on nodes",
+      "foreground": {
+        "name": "text-primary",
+        "hex": "#ffffff",
+        "rgb": {
+          "r": 255,
+          "g": 255,
+          "b": 255
+        }
+      },
+      "background": {
+        "name": "bg-tertiary",
+        "hex": "#1e2749",
+        "rgb": {
+          "r": 30,
+          "g": 39,
+          "b": 73
+        }
+      },
+      "contrastRatio": 14.57,
+      "fontSize": 28,
+      "isBold": true,
+      "compliance": {
+        "WCAG AA (Normal)": true,
+        "WCAG AA (Large)": true,
+        "WCAG AAA (Normal)": true,
+        "WCAG AAA (Large)": true,
+        "Applicable Level": "Large Text",
+        "Passes AA": true,
+        "Passes AAA": true
+      }
+    },
+    {
+      "name": "Mermaid edge labels (gold)",
+      "foreground": {
+        "name": "accent-gold",
+        "hex": "#ffd700",
+        "rgb": {
+          "r": 255,
+          "g": 215,
+          "b": 0
+        }
+      },
+      "background": {
+        "name": "bg-primary",
+        "hex": "#0a0e27",
+        "rgb": {
+          "r": 10,
+          "g": 14,
+          "b": 39
+        }
+      },
+      "contrastRatio": 13.55,
+      "fontSize": 24,
+      "isBold": true,
+      "compliance": {
+        "WCAG AA (Normal)": true,
+        "WCAG AA (Large)": true,
+        "WCAG AAA (Normal)": true,
+        "WCAG AAA (Large)": true,
+        "Applicable Level": "Large Text",
+        "Passes AA": true,
+        "Passes AAA": true
+      }
+    },
+    {
+      "name": "Button text on tertiary bg",
+      "foreground": {
+        "name": "text-primary",
+        "hex": "#ffffff",
+        "rgb": {
+          "r": 255,
+          "g": 255,
+          "b": 255
+        }
+      },
+      "background": {
+        "name": "bg-tertiary",
+        "hex": "#1e2749",
+        "rgb": {
+          "r": 30,
+          "g": 39,
+          "b": 73
+        }
+      },
+      "contrastRatio": 14.57,
+      "fontSize": 18,
+      "isBold": true,
+      "compliance": {
+        "WCAG AA (Normal)": true,
+        "WCAG AA (Large)": true,
+        "WCAG AAA (Normal)": true,
+        "WCAG AAA (Large)": true,
+        "Applicable Level": "Normal Text",
+        "Passes AA": true,
+        "Passes AAA": true
+      }
+    },
+    {
+      "name": "Gold border/text on primary",
+      "foreground": {
+        "name": "accent-gold",
+        "hex": "#ffd700",
+        "rgb": {
+          "r": 255,
+          "g": 215,
+          "b": 0
+        }
+      },
+      "background": {
+        "name": "bg-primary",
+        "hex": "#0a0e27",
+        "rgb": {
+          "r": 10,
+          "g": 14,
+          "b": 39
+        }
+      },
+      "contrastRatio": 13.55,
+      "fontSize": 18,
+      "isBold": true,
+      "compliance": {
+        "WCAG AA (Normal)": true,
+        "WCAG AA (Large)": true,
+        "WCAG AAA (Normal)": true,
+        "WCAG AAA (Large)": true,
+        "Applicable Level": "Normal Text",
+        "Passes AA": true,
+        "Passes AAA": true
+      }
+    },
+    {
+      "name": "Gold gradient (min) on primary",
+      "foreground": {
+        "name": "accent-gold",
+        "hex": "#ffd700",
+        "rgb": {
+          "r": 255,
+          "g": 215,
+          "b": 0
+        }
+      },
+      "background": {
+        "name": "bg-primary",
+        "hex": "#0a0e27",
+        "rgb": {
+          "r": 10,
+          "g": 14,
+          "b": 39
+        }
+      },
+      "contrastRatio": 13.55,
+      "fontSize": 76,
+      "isBold": true,
+      "compliance": {
+        "WCAG AA (Normal)": true,
+        "WCAG AA (Large)": true,
+        "WCAG AAA (Normal)": true,
+        "WCAG AAA (Large)": true,
+        "Applicable Level": "Large Text",
+        "Passes AA": true,
+        "Passes AAA": true
+      }
+    },
+    {
+      "name": "Cyan gradient (max) on primary",
+      "foreground": {
+        "name": "accent-cyan",
+        "hex": "#4ecdc4",
+        "rgb": {
+          "r": 78,
+          "g": 205,
+          "b": 196
+        }
+      },
+      "background": {
+        "name": "bg-primary",
+        "hex": "#0a0e27",
+        "rgb": {
+          "r": 10,
+          "g": 14,
+          "b": 39
+        }
+      },
+      "contrastRatio": 9.82,
+      "fontSize": 76,
+      "isBold": true,
+      "compliance": {
+        "WCAG AA (Normal)": true,
+        "WCAG AA (Large)": true,
+        "WCAG AAA (Normal)": true,
+        "WCAG AAA (Large)": true,
+        "Applicable Level": "Large Text",
+        "Passes AA": true,
+        "Passes AAA": true
+      }
+    },
+    {
+      "name": "Text on stat cards",
+      "foreground": {
+        "name": "text-secondary",
+        "hex": "#e8eaf6",
+        "rgb": {
+          "r": 232,
+          "g": 234,
+          "b": 246
+        }
+      },
+      "background": {
+        "name": "bg-tertiary",
+        "hex": "#1e2749",
+        "rgb": {
+          "r": 30,
+          "g": 39,
+          "b": 73
+        }
+      },
+      "contrastRatio": 12.16,
+      "fontSize": 18,
+      "isBold": true,
+      "compliance": {
+        "WCAG AA (Normal)": true,
+        "WCAG AA (Large)": true,
+        "WCAG AAA (Normal)": true,
+        "WCAG AAA (Large)": true,
+        "Applicable Level": "Normal Text",
+        "Passes AA": true,
+        "Passes AAA": true
+      }
+    },
+    {
+      "name": "White text on secondary bg",
+      "foreground": {
+        "name": "text-primary",
+        "hex": "#ffffff",
+        "rgb": {
+          "r": 255,
+          "g": 255,
+          "b": 255
+        }
+      },
+      "background": {
+        "name": "bg-secondary",
+        "hex": "#151b3d",
+        "rgb": {
+          "r": 21,
+          "g": 27,
+          "b": 61
+        }
+      },
+      "contrastRatio": 16.72,
+      "fontSize": 29,
+      "isBold": false,
+      "compliance": {
+        "WCAG AA (Normal)": true,
+        "WCAG AA (Large)": true,
+        "WCAG AAA (Normal)": true,
+        "WCAG AAA (Large)": true,
+        "Applicable Level": "Large Text",
+        "Passes AA": true,
+        "Passes AAA": true
+      }
+    },
+    {
+      "name": "Red accent on tertiary bg",
+      "foreground": {
+        "name": "accent-red",
+        "hex": "#ff6b6b",
+        "rgb": {
+          "r": 255,
+          "g": 107,
+          "b": 107
+        }
+      },
+      "background": {
+        "name": "bg-tertiary",
+        "hex": "#1e2749",
+        "rgb": {
+          "r": 30,
+          "g": 39,
+          "b": 73
+        }
+      },
+      "contrastRatio": 5.25,
+      "fontSize": 28,
+      "isBold": true,
+      "compliance": {
+        "WCAG AA (Normal)": true,
+        "WCAG AA (Large)": true,
+        "WCAG AAA (Normal)": false,
+        "WCAG AAA (Large)": true,
+        "Applicable Level": "Large Text",
+        "Passes AA": true,
+        "Passes AAA": true
+      }
+    },
+    {
+      "name": "Green accent on tertiary bg",
+      "foreground": {
+        "name": "accent-green",
+        "hex": "#6ab04c",
+        "rgb": {
+          "r": 106,
+          "g": 176,
+          "b": 76
+        }
+      },
+      "background": {
+        "name": "bg-tertiary",
+        "hex": "#1e2749",
+        "rgb": {
+          "r": 30,
+          "g": 39,
+          "b": 73
+        }
+      },
+      "contrastRatio": 5.5,
+      "fontSize": 28,
+      "isBold": true,
+      "compliance": {
+        "WCAG AA (Normal)": true,
+        "WCAG AA (Large)": true,
+        "WCAG AAA (Normal)": false,
+        "WCAG AAA (Large)": true,
+        "Applicable Level": "Large Text",
+        "Passes AA": true,
+        "Passes AAA": true
+      }
+    },
+    {
+      "name": "Blue accent on tertiary bg",
+      "foreground": {
+        "name": "accent-blue",
+        "hex": "#54a0ff",
+        "rgb": {
+          "r": 84,
+          "g": 160,
+          "b": 255
+        }
+      },
+      "background": {
+        "name": "bg-tertiary",
+        "hex": "#1e2749",
+        "rgb": {
+          "r": 30,
+          "g": 39,
+          "b": 73
+        }
+      },
+      "contrastRatio": 5.44,
+      "fontSize": 28,
+      "isBold": true,
+      "compliance": {
+        "WCAG AA (Normal)": true,
+        "WCAG AA (Large)": true,
+        "WCAG AAA (Normal)": false,
+        "WCAG AAA (Large)": true,
+        "Applicable Level": "Large Text",
+        "Passes AA": true,
+        "Passes AAA": true
+      }
+    }
+  ]
+}

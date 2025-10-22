@@ -1,0 +1,19 @@
+{
+  "name": "codex_01",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@axe-core/puppeteer": "^4.11.0",
+    "axe-core": "^4.11.0",
+    "contrast-ratio": "^1.1.0",
+    "pa11y": "^8.0.0",
+    "puppeteer": "^24.26.0"
+  }
+}
