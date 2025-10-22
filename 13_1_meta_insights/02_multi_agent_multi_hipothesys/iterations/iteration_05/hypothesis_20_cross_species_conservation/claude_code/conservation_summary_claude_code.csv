@@ -1,0 +1,5 @@
+Hypothesis,Mechanism,Human_Evidence,Mouse_Evidence,Conservation_Status,Verdict
+H08,S100→TGM2/LOX calcium-crosslinking,"9 pairs tested, ρ_mean=0.-1","9 pairs, 1 conserved",11% conserved,PARTIAL
+H12,Metabolic→Mechanical transition,"8 tissues, v=0.5-2.5","10 tissues, ratio=0.57",Similar velocity range,DIFFERENT
+H14,"Network hub proteins (FN1, COL1A1)",7 key hubs identified,6/7 hubs present,86% hub conservation,CONSERVED
+OVERALL,ECM aging mechanisms,505 genes,302 conserved,60% gene conservation,STRONG

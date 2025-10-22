@@ -1,0 +1,7 @@
+accession,repository,title,tissue,species,ftp,priority,age_groups,sample_size,proteins,note
+PXD011967,PRIDE,Discovery proteomics in aging human skeletal muscle,Skeletal muscle,Human,ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2019/11/PXD011967,HIGH,"20-34, 35-49, 50-64, 65-79, 80+",58,4380,
+PXD015982,PRIDE,Alterations in ECM composition during skin aging and photoaging,Skin,Human,https://www.ebi.ac.uk/pride/archive/projects/PXD015982,HIGH,"Young (26.7), Aged (84.0)",6,229,
+PXD007048,PRIDE,Cell-specific bone marrow proteomes and aging,Bone marrow,Human,ftp://ftp.pride.ebi.ac.uk/pride/data/archive/2018/09/PXD007048,MEDIUM,"Young (20-30), Old (60-70)",Multiple donors,Thousands,
+PXD016440,PRIDE,Time-resolved ECM atlas of developing human skin dermis,Skin dermis,Human,https://www.ebi.ac.uk/pride/archive/projects/PXD016440,LOW,Developmental (fetal to adult),Multiple stages,Comprehensive matrisome,
+MSV000082958,MassIVE,Quantitative proteomic profiling of ECM in lung fibrosis model,Lung (in vitro),Human,,MEDIUM,,,,"In vitro fibrosis model, excellent for collagen PTMs"
+MSV000096508,MassIVE,Brain ECM and cognitive aging,"Brain (hippocampus, cortex)",Mouse,,MEDIUM,,,,"Mouse model, cognitive aging focus"

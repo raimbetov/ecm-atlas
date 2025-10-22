@@ -1,0 +1,66 @@
+{
+  "H08_validation": {
+    "Claude_internal": {
+      "R2": -0.3768141967895251,
+      "MAE": 0.3456409932819648,
+      "Training_R2": 0.81,
+      "Drop": -1.1868141967895252
+    },
+    "External_status": "PENDING - Real data needed"
+  },
+  "H06_validation": {
+    "External_status": "PENDING - Real data needed"
+  },
+  "H03_validation": {
+    "Internal_velocities": {
+      "Ovary_Cortex": 0.9839794489919835,
+      "Skeletal_muscle_TA": 0.9679828299893153,
+      "Skeletal_muscle_EDL": 0.8838647570199909,
+      "Skeletal_muscle_Soleus": 0.8710595678894227,
+      "Skeletal_muscle_Gastrocnemius": 0.8574575900194424,
+      "Kidney_Glomerular": 0.8557795587226275,
+      "Ovary": 0.7446082345281287,
+      "Brain_Hippocampus": 0.7428983080696953,
+      "Heart_Decellularized_Tissue": 0.7427755494468655,
+      "Heart_Native_Tissue": 0.7206844512553595,
+      "Skin dermis": 0.6973722546998851,
+      "Intervertebral_disc_NP": 0.6513090731071457,
+      "Kidney_Tubulointerstitial": 0.6303896265233058,
+      "Brain_Cortex": 0.6190632075074268,
+      "Intervertebral_disc_IAF": 0.5928589287981638,
+      "Intervertebral_disc_OAF": 0.572128426886304,
+      "Lung": 0.39716497350478724
+    },
+    "Range": "0.397 - 0.984",
+    "Ratio": "2.48\u00d7",
+    "External_status": "PENDING - Real data needed"
+  },
+  "Meta_analysis": {
+    "Top_20_proteins": {
+      "ASTL": 4.880040555518632,
+      "Hapln2": 3.28150571509003,
+      "Angptl7": 3.1677736306286874,
+      "FBN3": 3.0760982001372663,
+      "SERPINA1E": 3.060987042523208,
+      "Col11a2": 3.059665282512349,
+      "Smoc2": 2.9946218174584662,
+      "SERPINB2": 2.9809275643880704,
+      "Col14a1": 2.9633545653437636,
+      "TNFSF13": 2.7544902672693117,
+      "Cyr61": 2.7391312784776156,
+      "Pcolce": 2.626818738947541,
+      "FCN1": 2.595293011910862,
+      "FGL1": 2.5776808572860888,
+      "Crp": 2.572406317181577,
+      "C17ORF58": 2.2838105802419815,
+      "SDC4": 2.2615553499531615,
+      "Kera": 2.241951394510898,
+      "Fbn2": 2.20365746754984,
+      "CILP": 2.1893761685125672
+    },
+    "Internal_data_ready": true,
+    "External_status": "PENDING - Real data needed",
+    "I2_heterogeneity": "NOT_COMPUTED"
+  },
+  "Overall_status": "PHASE_1_COMPLETE - Data download needed"
+}

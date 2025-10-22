@@ -1,0 +1,18 @@
+{
+  "dataset_id": "PXD015982",
+  "study": "Richter et al. 2021",
+  "journal": "Matrix Biology Plus",
+  "pmid": "33543036",
+  "tissue": "Skin (sun-exposed, sun-protected, post-auricular)",
+  "species": "Homo sapiens",
+  "technique": "TMT proteomics",
+  "n_samples": 6,
+  "age_groups": {
+    "Young": "26.7 \u00b1 4.5 years",
+    "Aged": "84.0 \u00b1 6.8 years"
+  },
+  "matrisome_focused": true,
+  "expected_proteins": 229,
+  "expected_overlap": "~150-200 ECM genes (HIGH matrisome focus)",
+  "status": "PLACEHOLDER - Real download needed"
+}

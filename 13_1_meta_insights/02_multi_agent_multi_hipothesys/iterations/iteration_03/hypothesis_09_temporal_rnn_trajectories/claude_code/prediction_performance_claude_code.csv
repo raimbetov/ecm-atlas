@@ -1,0 +1,5 @@
+Metric,Value
+MSE,0.16498785628378887
+R2,0.8101965583419465
+Target_Met_MSE,True
+Target_Met_R2,True

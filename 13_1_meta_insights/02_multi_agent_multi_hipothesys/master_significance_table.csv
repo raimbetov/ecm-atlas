@@ -1,0 +1,22 @@
+Rank,Hypothesis_ID,Title,Status,Claude_Score,Codex_Score,Avg_Score,Agreement,Iteration
+1,H01,Compartment Mechanical Stress Antagonism,BREAKTHROUGH,96.0,88.0,92.0,PARTIAL AGREEMENT,1
+2,H03,Tissue Aging Velocity Clocks,VALIDATED,92.0,,92.0,INCOMPLETE DATA,1
+3,H02,Serpin Cascade Dysregulation,VALIDATED,65.0,,65.0,INCOMPLETE DATA,1
+4,H07,Coagulation Central Hub,VALIDATED,10.0,,10.0,INCOMPLETE DATA,3
+5,H13,Independent Dataset Validation,UNKNOWN,,,0.0,N/A,4
+6,H20,Cross-Species Conservation,UNKNOWN,,,0.0,N/A,5
+7,H19,Metabolomics Phase 1,UNKNOWN,,,0.0,N/A,5
+8,H18,Multi-Modal AI Integration,UNKNOWN,,,0.0,N/A,5
+9,H17,SERPINE1 Precision Target,BREAKTHROUGH,,,0.0,INCOMPLETE DATA,5
+10,H16,H13 Validation Completion,UNKNOWN,,,0.0,N/A,5
+11,H15,Ovary-Heart Transition Biology,UNKNOWN,,,0.0,N/A,4
+12,H14,Serpin Centrality Resolution,VALIDATED,,,0.0,INCOMPLETE DATA,4
+13,H11,Standardized Temporal Trajectories,VALIDATED,,,0.0,INCOMPLETE DATA,4
+14,H12,Metabolic-Mechanical Transition,VALIDATED,,,0.0,INCOMPLETE DATA,4
+15,H10,Calcium Signaling Cascade,UNKNOWN,,,0.0,N/A,4
+16,H09,Temporal RNN Trajectories,BREAKTHROUGH,,,0.0,INCOMPLETE DATA,3
+17,H08,S100 Calcium Signaling,UNKNOWN,,,0.0,N/A,3
+18,H06,ML Ensemble Biomarkers,UNKNOWN,,,0.0,N/A,2
+19,H05,GNN Aging Networks,VALIDATED,,,0.0,INCOMPLETE DATA,2
+20,H04,Deep Protein Embeddings,UNKNOWN,,,0.0,N/A,2
+21,H21,Browser Automation (Unblocks H16),UNKNOWN,,,0.0,N/A,6

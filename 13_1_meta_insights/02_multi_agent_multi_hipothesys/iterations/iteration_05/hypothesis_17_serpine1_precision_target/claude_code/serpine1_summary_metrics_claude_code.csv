@@ -1,0 +1,10 @@
+Metric,Value,Target,Status
+In-Silico Knockout Effect,-0.22%,≥30%,✗ FAIL
+Literature Meta-Analysis (Cohen's d),2.524,>0.5,✓ PASS
+Literature Heterogeneity (I²),57.8%,<50%,⚠ MARGINAL
+Inhibitors with IC50<100nM,3/4,≥2,✓ PASS
+Drugs passing ADMET,4/4,≥2,✓ PASS
+Phase II trials completed,1 (PAI-039),≥1,✓ PASS
+Market Size (addressable),$6.26B,>$1B,✓ PASS
+NPV (Net Present Value),$8.47B,>$0,✓ PASS
+ROI (%),3387%,>100%,✓ PASS

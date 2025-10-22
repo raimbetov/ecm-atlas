@@ -1,0 +1,247 @@
+{
+  "mlp_metrics": [
+    {
+      "model": "model_a",
+      "r2_train": 0.9968482388361901,
+      "r2_test": -0.7920358049479197,
+      "mae_test": 0.3486916884242775,
+      "rmse_test": 0.4333781238671578,
+      "n_features": 8
+    },
+    {
+      "model": "model_b",
+      "r2_train": 0.9867867692572289,
+      "r2_test": 0.17745846532427723,
+      "mae_test": 0.20960056925408863,
+      "rmse_test": 0.2936111623873398,
+      "n_features": 10
+    },
+    {
+      "model": "model_c",
+      "r2_train": 0.9937491708692796,
+      "r2_test": -0.8811374037503747,
+      "mae_test": 0.3964302547861555,
+      "rmse_test": 0.44402140146233526,
+      "n_features": 15
+    }
+  ],
+  "gcn_metrics": {
+    "r2_train": 0.15864938497543335,
+    "r2_test": -0.6935650110244751,
+    "mae_test": 0.39312466979026794,
+    "rmse_test": 0.42130302579374046
+  },
+  "clustering": {
+    "silhouette": 0.2104497874722865
+  },
+  "reconstruction_loss": 0.004918544087558985,
+  "top_mediation": [
+    {
+      "effect_type": "S100\u2192CALM\u2192Target",
+      "S100": "S100A8",
+      "CALM": "CALM2",
+      "CAMK": "",
+      "Target": "LOXL2",
+      "total_effect": -0.05523371319765397,
+      "direct_effect": 0.16459342259664397,
+      "indirect_effect": -0.2198271357942856,
+      "mediated_pct": 397.9944911681633,
+      "p_value": 0.0038
+    },
+    {
+      "effect_type": "S100\u2192CALM\u2192CAMK\u2192Target",
+      "S100": "S100A8",
+      "CALM": "CALM2",
+      "CAMK": "CAMK2B",
+      "Target": "TGM2",
+      "total_effect": -0.015510030820020521,
+      "direct_effect": -0.3199906926225905,
+      "indirect_effect": -0.584875096896653,
+      "mediated_pct": 500.0,
+      "p_value": 0.0064
+    },
+    {
+      "effect_type": "S100\u2192CALM\u2192Target",
+      "S100": "S100A9",
+      "CALM": "CALM2",
+      "CAMK": "",
+      "Target": "LOXL3",
+      "total_effect": -0.005484173841464527,
+      "direct_effect": 0.07034608324394893,
+      "indirect_effect": -0.07583025708531063,
+      "mediated_pct": 500.0,
+      "p_value": 0.0226
+    },
+    {
+      "effect_type": "S100\u2192CALM\u2192Target",
+      "S100": "S100A9",
+      "CALM": "CALM2",
+      "CAMK": "",
+      "Target": "TGM2",
+      "total_effect": 0.17081786948098623,
+      "direct_effect": 0.44221913989120104,
+      "indirect_effect": -0.27140127040985007,
+      "mediated_pct": -158.88341848219795,
+      "p_value": 0.0228
+    },
+    {
+      "effect_type": "S100\u2192CALM\u2192CAMK\u2192Target",
+      "S100": "S100B",
+      "CALM": "CALM2",
+      "CAMK": "CAMK2G",
+      "Target": "LOXL2",
+      "total_effect": 0.11863239797836124,
+      "direct_effect": 0.15408418116588804,
+      "indirect_effect": 0.5853806389794254,
+      "mediated_pct": 493.4407876389718,
+      "p_value": 0.023
+    }
+  ],
+  "network_edges_strong": [
+    {
+      "source": "S100A4",
+      "target": "CALM1",
+      "rho": -0.5016435572230559,
+      "abs_rho": 0.5016435572230559
+    },
+    {
+      "source": "S100A8",
+      "target": "CALM2",
+      "rho": -0.7717463337315688,
+      "abs_rho": 0.7717463337315688
+    },
+    {
+      "source": "S100A9",
+      "target": "CALM1",
+      "rho": -0.5357142857142856,
+      "abs_rho": 0.5357142857142856
+    },
+    {
+      "source": "S100A9",
+      "target": "CALM2",
+      "rho": -0.6464285714285712,
+      "abs_rho": 0.6464285714285712
+    },
+    {
+      "source": "S100B",
+      "target": "CALM2",
+      "rho": 0.6604757688943013,
+      "abs_rho": 0.6604757688943013
+    },
+    {
+      "source": "CALM1",
+      "target": "CAMK1",
+      "rho": 0.5607142857142856,
+      "abs_rho": 0.5607142857142856
+    },
+    {
+      "source": "CALM1",
+      "target": "CAMK2A",
+      "rho": 0.7571428571428571,
+      "abs_rho": 0.7571428571428571
+    },
+    {
+      "source": "CALM1",
+      "target": "CAMK2D",
+      "rho": 0.9535714285714283,
+      "abs_rho": 0.9535714285714283
+    },
+    {
+      "source": "CALM2",
+      "target": "CAMK1",
+      "rho": 0.7571428571428571,
+      "abs_rho": 0.7571428571428571
+    },
+    {
+      "source": "CALM2",
+      "target": "CAMK2B",
+      "rho": -0.5392857142857141,
+      "abs_rho": 0.5392857142857141
+    },
+    {
+      "source": "CALM2",
+      "target": "CAMK2G",
+      "rho": -0.9107142857142855,
+      "abs_rho": 0.9107142857142855
+    },
+    {
+      "source": "CAMK2B",
+      "target": "LOXL2",
+      "rho": -0.6294857034916361,
+      "abs_rho": 0.6294857034916361
+    },
+    {
+      "source": "CAMK2B",
+      "target": "LOXL3",
+      "rho": -0.6279384704643246,
+      "abs_rho": 0.6279384704643246
+    },
+    {
+      "source": "CAMK2B",
+      "target": "LOXL4",
+      "rho": -0.5973743383375915,
+      "abs_rho": 0.5973743383375915
+    },
+    {
+      "source": "CAMK2B",
+      "target": "TGM2",
+      "rho": -0.5214285714285714,
+      "abs_rho": 0.5214285714285714
+    },
+    {
+      "source": "CAMK2G",
+      "target": "LOXL2",
+      "rho": -0.7611934814529631,
+      "abs_rho": 0.7611934814529631
+    },
+    {
+      "source": "CAMK2G",
+      "target": "LOXL3",
+      "rho": -0.6004375155534782,
+      "abs_rho": 0.6004375155534782
+    },
+    {
+      "source": "CAMK2G",
+      "target": "LOXL4",
+      "rho": -0.5973743383375915,
+      "abs_rho": 0.5973743383375915
+    }
+  ],
+  "imputation_stats": [
+    {
+      "gene": "CALM1",
+      "r2_train": 0.07815776523373608,
+      "n_samples": 14
+    },
+    {
+      "gene": "CALM2",
+      "r2_train": 0.33817274161240485,
+      "n_samples": 14
+    },
+    {
+      "gene": "CAMK1",
+      "r2_train": 0.20964805802947506,
+      "n_samples": 14
+    },
+    {
+      "gene": "CAMK2A",
+      "r2_train": 0.03152935567727433,
+      "n_samples": 14
+    },
+    {
+      "gene": "CAMK2B",
+      "r2_train": 0.4841509544563122,
+      "n_samples": 14
+    },
+    {
+      "gene": "CAMK2D",
+      "r2_train": 0.028000874269469178,
+      "n_samples": 14
+    },
+    {
+      "gene": "CAMK2G",
+      "r2_train": 0.5836231830908184,
+      "n_samples": 14
+    }
+  ]
+}

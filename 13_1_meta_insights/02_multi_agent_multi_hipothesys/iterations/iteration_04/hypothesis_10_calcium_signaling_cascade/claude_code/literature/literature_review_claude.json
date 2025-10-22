@@ -1,0 +1,772 @@
+[
+  {
+    "pmid": "32964723",
+    "title": "Cigarette smoke induction of S100A9 contributes to chronic obstructive pulmonary disease.",
+    "authors": "Railwah C, Lora A, Zahid K et al.",
+    "year": "2020",
+    "journal": "American journal of physiology. Lung cellular and molecular physiology",
+    "abstract": "S100 calcium-binding protein A9 (S100A9) is elevated in plasma and bronchoalveolar lavage fluid (BALF) of patients with chronic obstructive pulmonary disease (COPD), and aging enhances S100A9 expression in several tissues. Currently, the direct impact of S100A9-mediated signaling on lung function and within the aging lung is unknown. Here, we observed that elevated S100A9 levels in human BALF correlated with age. Elevated lung levels of S100A9 were higher in older mice compared with in young animals and coincided with pulmonary function changes. Both acute and chronic exposure to cigarette smoke enhanced S100A9 levels in age-matched mice. To examine the direct role of S100A9 on the development of COPD, S100a9-/- mice or mice administered paquinimod were exposed to chronic cigarette smoke. S100A9 depletion and inhibition attenuated the loss of lung function, pressure-volume loops, airway inflammation, lung compliance, and forced expiratory volume in 0.05 s/forced vital capacity, compared with age-matched wild-type or vehicle-administered animals. Loss of S100a9 signaling reduced cigarette smoke-induced airspace enlargement, alveolar remodeling, lung destruction, ERK and c-RAF phosphorylation, matrix metalloproteinase-3 (MMP-3), matrix metalloproteinase-9 (MMP-9), monocyte chemoattractant protein-1 (MCP-1), interleukin-6 (IL-6), and keratinocyte-derived chemokine (KC) release into the airways. Paquinimod administered to nonsmoked, aged animals reduced age-associated loss of lung function. Since fibroblasts play a major role in the production and maintenance of extracellular matrix in emphysema, primary lung fibroblasts were treated with the ERK inhibitor LY3214996 or the c-RAF inhibitor GW5074, resulting in less S100A9-induced MMP-3, MMP-9, MCP-1, IL-6, and IL-8. Silencing Toll-like receptor 4 (TLR4), receptor for advanced glycation endproducts (RAGE), or extracellular matrix metalloproteinase inducer (EMMPRIN) prevented S100A9-induced phosphorylation of ERK and c-RAF. Our data suggest that S100A9 signaling contributes to the progression of smoke-induced and age-related COPD.",
+    "query": "S100 calcium signaling aging extracellular matrix",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/32964723/"
+  },
+  {
+    "pmid": "35225608",
+    "title": "TRPM5 Channel Binds Calcium-Binding Proteins Calmodulin and S100A1.",
+    "authors": "Bousova K, Zouharova M, Herman P et al.",
+    "year": "2022",
+    "journal": "Biochemistry",
+    "abstract": "Melastatin transient receptor potential (TRPM) channels belong to one of the most significant subgroups of the transient receptor potential (TRP) channel family. Here, we studied the TRPM5 member, the receptor exposed to calcium-mediated activation, resulting in taste transduction. It is known that most TRP channels are highly modulated through interactions with extracellular and intracellular agents. The binding sites for these ligands are usually located at the intracellular N- and C-termini of the TRP channels, and they can demonstrate the character of an intrinsically disordered protein (IDP), which allows such a region to bind various types of molecules. We explored the N-termini of TRPM5 and found the intracellular regions for calcium-binding proteins (CBPs) the calmodulin (CaM) and calcium-binding protein S1 (S100A1) by in vitro binding assays. Furthermore, molecular docking and molecular dynamics simulations (MDs) of the discovered complexes confirmed their known common binding interface patterns and the uniqueness of the basic residues present in the TRPM binding regions for CaM/S100A1.",
+    "query": "S100 calmodulin binding interaction",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/35225608/"
+  },
+  {
+    "pmid": "36354074",
+    "title": "Binding and Functional Folding (BFF): A Physiological Framework for Studying Biomolecular Interactions and Allostery.",
+    "authors": "Young BD, Cook ME, Costabile BK et al.",
+    "year": "2022",
+    "journal": "Journal of molecular biology",
+    "abstract": "EF-hand Ca2+-binding proteins (CBPs), such as S100 proteins (S100s) and calmodulin (CaM), are signaling proteins that undergo conformational changes upon increasing intracellular Ca2+. Upon binding Ca2+, S100 proteins and CaM interact with protein targets and induce important biological responses. The Ca2+-binding affinity of CaM and most S100s in the absence of target is weak (CaKD\u00a0>\u00a01\u00a0\u03bcM). However, upon effector protein binding, the Ca2+ affinity of these proteins increases via heterotropic allostery (CaKD\u00a0<\u00a01\u00a0\u03bcM). Because of the high number and micromolar concentrations of EF-hand CBPs in a cell, at any given time, allostery is required physiologically, allowing for (i) proper Ca2+ homeostasis and (ii) strict maintenance of Ca2+-signaling within a narrow dynamic range of free Ca2+ ion concentrations, [Ca2+]free. In this review, mechanisms of allostery are coalesced into an empirical \"binding and functional folding (BFF)\" physiological framework. At the molecular level, folding (F), binding and folding (BF), and BFF events include all atoms in the biomolecular complex under study. The BFF framework is introduced with two straightforward BFF types for proteins (type 1, concerted; type 2, stepwise) and considers how homologous and nonhomologous amino acid residues of CBPs and their effector protein(s) evolved to provide allosteric tightening of Ca2+ and simultaneously determine how specific and relatively promiscuous CBP-target complexes form as both are needed for proper cellular function.",
+    "query": "S100 calmodulin binding interaction",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/36354074/"
+  },
+  {
+    "pmid": "31505788",
+    "title": "TRPM6 N-Terminal CaM- and S100A1-Binding Domains.",
+    "authors": "Zouharova M, Herman P, Hofbauerov\u00e1 K et al.",
+    "year": "2019",
+    "journal": "International journal of molecular sciences",
+    "abstract": "Transient receptor potential (TRPs) channels are crucial downstream targets of calcium signalling cascades. They can be modulated either by calcium itself and/or by calcium-binding proteins (CBPs). Intracellular messengers usually interact with binding domains present at the most variable TRP regions-N- and C-cytoplasmic termini. Calmodulin (CaM) is a calcium-dependent cytosolic protein serving as a modulator of most transmembrane receptors. Although CaM-binding domains are widespread within intracellular parts of TRPs, no such binding domain has been characterised at the TRP melastatin member-the transient receptor potential melastatin 6 (TRPM6) channel. Another CBP, the S100 calcium-binding protein A1 (S100A1), is also known for its modulatory activities towards receptors. S100A1 commonly shares a CaM-binding domain. Here, we present the first identified CaM and S100A1 binding sites at the N-terminal of TRPM6. We have confirmed the L520-R535 N-terminal TRPM6 domain as a shared binding site for CaM and S100A1 using biophysical and molecular modelling methods. A specific domain of basic amino acid residues (R526/R531/K532/R535) present at this TRPM6 domain has been identified as crucial to maintain non-covalent interactions with the ligands. Our data unambiguously confirm that CaM and S100A1 share the same binding domain at the TRPM6 N-terminus although the ligand-binding mechanism is different.",
+    "query": "S100 calmodulin binding interaction",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/31505788/"
+  },
+  {
+    "pmid": "32560560",
+    "title": "Mapping of CaM, S100A1 and PIP2-Binding Epitopes in the Intracellular N- and C-Termini of TRPM4.",
+    "authors": "Bousova K, Barvik I, Herman P et al.",
+    "year": "2020",
+    "journal": "International journal of molecular sciences",
+    "abstract": "Molecular determinants of the binding of various endogenous modulators to transient receptor potential (TRP) channels are crucial for the understanding of necessary cellular pathways, as well as new paths for rational drug designs. The aim of this study was to characterise interactions between the TRP cation channel subfamily melastatin member 4 (TRPM4) and endogenous intracellular modulators-calcium-binding proteins (calmodulin (CaM) and S100A1) and phosphatidylinositol 4, 5-bisphosphate (PIP2). We have found binding epitopes at the N- and C-termini of TRPM4 shared by CaM, S100A1 and PIP2. The binding affinities of short peptides representing the binding epitopes of N- and C-termini were measured by means of fluorescence anisotropy (FA). The importance of representative basic amino acids and their combinations from both peptides for the binding of endogenous TRPM4 modulators was proved using point alanine-scanning mutagenesis. In silico protein-protein docking of both peptides to CaM and S100A1 and extensive molecular dynamics (MD) simulations enabled the description of key stabilising interactions at the atomic level. Recently solved cryo-Electron Microscopy (EM) structures made it possible to put our findings into the context of the entire TRPM4 channel and to deduce how the binding of these endogenous modulators could allosterically affect the gating of TRPM4. Moreover, both identified binding epitopes seem to be ideally positioned to mediate the involvement of TRPM4 in higher-order hetero-multimeric complexes with important physiological functions.",
+    "query": "S100 calmodulin binding interaction",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/32560560/"
+  },
+  {
+    "pmid": "25543978",
+    "title": "Ca(2+) binding protein S100A1 competes with calmodulin and PIP2 for binding site on the C-terminus of the TPRV1 receptor.",
+    "authors": "Grycova L, Holendova B, Lansky Z et al.",
+    "year": "2015",
+    "journal": "ACS chemical neuroscience",
+    "abstract": "Transient receptor potential vanilloid 1 ion channel (TRPV1) belongs to the TRP family of ion channels. These channels play a role in many important biological processes such as thermosensation and pain transduction. The TRPV1 channel was reported to be also involved in nociception. Ca(2+) ions are described to participate in the regulation of TRP channels through the interaction with Ca(2+)-binding proteins, such as calmodulin or S100A1. Calmodulin is involved in the Ca(2+)-dependent regulation of TRPV1 via its binding to the TRPV1 C-terminal region. However, the role of the Ca(2+)-binding protein S100A1 in the process of TRP channel regulation remains elusive. Here we characterized a region on the TRPV1 C-terminus responsible for the interaction with S100A1 using biochemical and biophysical tools. We found that this region overlaps with previously identified calmodulin and PIP2 binding sites and that S100A1 competes with calmodulin and PIP2 for this binding site. We identified several positively charged residues within this region, which have crucial impact on S100A1 binding, and we show that the reported S100A1-TRPV1 interaction is calcium-dependent. Taken together, our data suggest a mechanism for the mutual regulation of PIP2 and the Ca(2+)-binding proteins S100A1 and calmodulin to TRPV1.",
+    "query": "S100 calmodulin binding interaction",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/25543978/"
+  },
+  {
+    "pmid": "28912854",
+    "title": "Comparative proteomics analysis of primary cutaneous amyloidosis.",
+    "authors": "Cai D, Li Y, Zhou C et al.",
+    "year": "2017",
+    "journal": "Experimental and therapeutic medicine",
+    "abstract": "Primary cutaneous amyloidosis (PCA) is a localized skin disorder that is characterized by the abnormal deposition of amyloid in the extracellular matrix (ECM) of the dermis. The pathogenesis of PCA is poorly understood. The objective of the present study was to survey proteome changes in PCA lesions in order to gain insight into the molecular basis and pathogenesis of PCA. Total protein from PCA lesions and normal skin tissue samples were extracted and analyzed using the isobaric tags for relative and absolute quantitation technique. The function of differentially expressed proteins in PCA were analyzed by gene ontology (GO), Kyoto Encyclopedia of Genes and Genomes (KEGG) and protein-protein interaction analysis. The proteins that were most upregulated in PCA lesions were further analyzed by immunohistochemistry. A total of 1,032 proteins were identified in PCA lesions and control skin samples, with 51 proteins differentially expressed in PCA lesions, of which 27 were upregulated. In PCA lesions, the upregulated proteins were primarily extracellulary located. In addition, GO analysis indicated that the upregulated proteins were significantly enriched in the biological processes of epidermal development, collagen fiber organization and response to wounding (adjusted P<0.001). KEGG analysis indicated that the upregulated proteins were significantly enriched in the signaling pathways of cell communication, ECM receptor interaction and focal adhesion (adjusted P<0.001). Furthermore, the upregulated proteins were enriched in the molecular function of calcium ion binding, and the calcium binding proteins calmodulin-like protein 5, S100 calcium-binding protein A7 (S100A7)/fatty-acid binding protein and S100A8/A9 exhibited the highest levels of upregulation in PCA. This analysis of differentially expressed proteins in PCA suggests that increased focal adhesion, differentiation and wound healing is associated with the pathogenesis of PCA.",
+    "query": "S100 calmodulin binding interaction",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/28912854/"
+  },
+  {
+    "pmid": "29240297",
+    "title": "Shared CaM- and S100A1-binding epitopes in the distal TRPM4 N terminus.",
+    "authors": "Bousova K, Herman P, Vecer J et al.",
+    "year": "2018",
+    "journal": "The FEBS journal",
+    "abstract": "The transient receptor potential channel of melastatin 4 (TRPM4) belongs to a group of large ion receptors that are involved in countless cell signalling cascades. This unique member is ubiquitously expressed in many human tissues, especially in cardiomyocytes, where it plays an important role in cardiovascular processes. Transient receptor potential channels (TRPs) are usually constituted by intracellular N- and C- termini, which serve as mediators affecting allosteric modulation of channels, resulting in the regulation of the channel function. The TRPs tails contain a number of conserved epitopes that specifically bind the intracellular modulators. Here, we identify new binding sites for the calmodulin (CaM) and S100 calcium-binding protein A1 (S100A1), located in the very distal part of the TRPM4 N terminus. We have used chemically synthesized peptides of the TRPM4, mimicking the binding epitopes, along with fluorescence methods to determine and specify CaM- and S100A1-binding sites. We have found that the ligands binding epitopes at the TRPM4 N terminus overlap, but the interacting mechanism of both complexes is probably different. The molecular models supported by data from the fluorescence method confirmed that the complexes formations are mediated by the positively charged (R139, R140, R144) and hydrophobic (L134, L138, V143) residues present at the TRPM4 N terminus-binding epitopes. The data suggest that the molecular complexes of TRPM4/CaM and TRPM4/S100A1 would lead to the modulation of the channel functions.",
+    "query": "S100 calmodulin binding interaction",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29240297/"
+  },
+  {
+    "pmid": "31821828",
+    "title": "Highly specific interaction of monomeric S100P protein with interferon beta.",
+    "authors": "Kazakov AS, Mayorov SA, Deryusheva EI et al.",
+    "year": "2020",
+    "journal": "International journal of biological macromolecules",
+    "abstract": "S100 proteins are EF-hand calcium-binding proteins of vertebrates exerting numerous intra- and extracellular actions and involved into multiple diseases. Some of S100 proteins serve as extracellular damage signals via interaction with receptors. Although several S100 proteins directly bind specific cytokines, this phenomenon remains underexplored. Using chemical crosslinking, intrinsic fluorescence and surface plasmon resonance spectroscopies, we show that S100P protein interacts with interferon beta (IFN-\u03b2) depending on calcium level and oligomeric state of S100P. Dimeric Ca2+-loaded S100P binds IFN-\u03b2 with equilibrium dissociation constants, Kd, of 0.05-0.6\u00a0\u03bcM. S100P monomerization favors this interaction decreasing Kd values down to 0.3-2\u00a0nM. Calcium depletion drastically lowers S100P affinity to IFN-\u03b2. Other related EF-hand proteins studied (calmodulin, \u03b1-parvalbumin and S100G) do not bind IFN-\u03b2, thereby confirming selectivity of the S100P - IFN-\u03b2 interaction. Crystal violet assay reveals that the S100P binding suppresses IFN-\u03b2 cytotoxicity to MCF-7 breast cancer cells. Since several cancers (breast, colon, lung, liver, etc.) exhibit dysregulated functioning of S100P and IFN-\u03b2, their interaction could be relevant to the cancer progression and directed therapeutic interventions.",
+    "query": "S100 calmodulin binding interaction",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/31821828/"
+  },
+  {
+    "pmid": "34045267",
+    "title": "Commentary on \"Novel Interaction of the Dopamine D2 Receptor and the Ca2+ Binding Protein S100B: Role in D2 Receptor Function\".",
+    "authors": "Lee HJ, Rodriguez-Contreras D, Neve KA",
+    "year": "2021",
+    "journal": "Molecular pharmacology",
+    "abstract": "We previously proposed that the dopamine D2 receptor-interacting protein S100B binds to a putative S100B-binding motif at residues R233-L240 toward the N terminus of the third intracellular loop. We used in vitro pull-down assays with FLAG-tagged fragments of the rat dopamine D2 receptor third intracellular loop (D2-IC3) and in vitro-synthesized S100B to evaluate this hypothesis. Our results indicate that the putative S100B-binding motif is neither necessary nor sufficient for strong binding of S100B to D2-IC3. Instead, two residues at the junction of the fifth membrane-spanning domain and the cytoplasmic extension of that \u03b1-helical domain, K211-I212, are required for robust, calcium-sensitive binding of S100B. This is also the approximate location of previously identified determinants for the binding of arrestin and calmodulin. A D2 receptor mutation converting I212 to phenylalanine has been described in patients with a hyperkinetic movement disorder. SIGNIFICANCE STATEMENT: S100B is a small calcium-binding protein that modulates signaling by the dopamine D2 receptor. New data suggest that the previous hypothesis about the involvement of an S100B-binding motif is incorrect, and that an important determinant of S100B binding includes a residue that is mutated in patients with a hyperkinetic movement disorder.",
+    "query": "S100 calmodulin binding interaction",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/34045267/"
+  },
+  {
+    "pmid": "39613175",
+    "title": "VDAC1-NF-\u03baB/p65-mediated S100A16 contributes to myocardial ischemia/reperfusion injury by regulating oxidative stress and inflammatory response via calmodulin/CaMKK2/AMPK pathway.",
+    "authors": "Zi C, Ma X, Zheng M et al.",
+    "year": "2025",
+    "journal": "European journal of pharmacology",
+    "abstract": "Myocardial injury triggers intense inflammatory reactions and oxidative stress responses. S100 calcium-binding protein A16 (S100A16), a multi-functional calcium (Ca2+)-binding protein, participates in inflammatory responses and contributes to ischemia/reperfusion (I/R) injury. Nevertheless, the precise mechanism by which S100A16 operates in myocardial I/R injury remains uncertain. Cardiac I/R injury was produced by ligation/release of the left anterior descending artery, and mouse cardiac cells were subjected to hypoxia/reoxygenation (H/R) to determine the biological effects in vitro. We demonstrated that S100A16 was upregulated in the ischemic hearts and cardiac cells after I/R and H/R injury. Adenovirus-mediated S100A16 inhibition led to a considerable improvement in cardiac function with a reduced infarct size, accompanied by a reduction in cardiomyocyte apoptosis. Similar effects of S100A16 inhibition on inflammation and reactive oxygen species (ROS) production were observed in cultured cardiomyocytes. Importantly, we showed that I/R and H/R treatment upregulated the expression of voltage-dependent anion channel 1 (VDAC1), which subsequently activated NF-\u03baB/p65 to facilitate the binding of NF-\u03baB/p65 to the S100A16 promoter, thereby activating the transcription and expression of S100A16. Mechanically, S100A16 responded to increasing Ca2+ and interacted with calmodulin (CaM) to regulate the activation of calcium/calmodulin-dependent protein kinase 2 (CAMKK2)/AMPK pathway. In conclusion, VDAC1 sustained the NF-\u03baB p65 pathway activation to elicit increased S100A16 expression, contributing to myocardial damage and heart failure post-I/R via the CaM/CaMKK2/AMPK pathway. This study revealed a crucial role of the VDAC1-S100A16 axis in the process of myocardial I/R injury, providing novel molecular targets for the treatment of cardiac conditions associated with I/R injury.",
+    "query": "S100 calmodulin binding interaction",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39613175/"
+  },
+  {
+    "pmid": "33808200",
+    "title": "Identification and Biochemical Characterization of High Mobility Group Protein 20A as a Novel Ca2+/S100A6 Target.",
+    "authors": "Yamamoto M, Kondo R, Hozumi H et al.",
+    "year": "2021",
+    "journal": "Biomolecules",
+    "abstract": "During screening of protein-protein interactions, using human protein arrays carrying 19,676 recombinant glutathione s-transferase (GST)-fused human proteins, we identified the high-mobility protein group 20A (HMG20A) as a novel S100A6 binding partner. We confirmed the Ca2+-dependent interaction of HMG20A with S100A6 by the protein array method, biotinylated S100A6 overlay, and GST-pulldown assay in vitro and in transfected COS-7 cells. Co-immunoprecipitation of S100A6 with HMG20A from HeLa cells in a Ca2+-dependent manner revealed the physiological relevance of the S100A6/HMG20A interaction. In addition, HMG20A has the ability to interact with S100A1, S100A2, and S100B in a Ca2+-dependent manner, but not with S100A4, A11, A12, and calmodulin. S100A6 binding experiments using various HMG20A mutants revealed that Ca2+/S100A6 interacts with the C-terminal region (residues 311-342) of HMG20A with stoichiometric binding (HMG20A:S100A6 dimer = 1:1). This was confirmed by the fact that a GST-HMG20A mutant lacking the S100A6 binding region (residues 311-347, HMG20A-\u0394C) failed to interact with endogenous S100A6 in transfected COS-7 cells, unlike wild-type HMG20A. Taken together, these results identify, for the first time, HMG20A as a target of Ca2+/S100 proteins, and may suggest a novel linkage between Ca2+/S100 protein signaling and HMG20A function, including in the regulation of neural differentiation.",
+    "query": "S100 calmodulin binding interaction",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/33808200/"
+  },
+  {
+    "pmid": "26005840",
+    "title": "S100A1 DNA-based Inotropic Therapy Protects Against Proarrhythmogenic Ryanodine Receptor 2 Dysfunction.",
+    "authors": "Ritterhoff J, V\u00f6lkers M, Seitz A et al.",
+    "year": "2015",
+    "journal": "Molecular therapy : the journal of the American Society of Gene Therapy",
+    "abstract": "Restoring expression levels of the EF-hand calcium (Ca(2+)) sensor protein S100A1 has emerged as a key factor in reconstituting normal Ca(2+) handling in failing myocardium. Improved sarcoplasmic reticulum (SR) function with enhanced Ca(2+) resequestration appears critical for S100A1's cyclic adenosine monophosphate-independent inotropic effects but raises concerns about potential diastolic SR Ca(2+) leakage that might trigger fatal arrhythmias. This study shows for the first time a diminished interaction between S100A1 and ryanodine receptors (RyR2s) in experimental HF. Restoring this link in failing cardiomyocytes, engineered heart tissue and mouse hearts, respectively, by means of adenoviral and adeno-associated viral S100A1 cDNA delivery normalizes diastolic RyR2 function and protects against Ca(2+)- and \u03b2-adrenergic receptor-triggered proarrhythmogenic SR Ca(2+) leakage in vitro and in vivo. S100A1 inhibits diastolic SR Ca(2+) leakage despite aberrant RyR2 phosphorylation via protein kinase A and calmodulin-dependent kinase II and stoichiometry with accessory modulators such as calmodulin, FKBP12.6 or sorcin. Our findings demonstrate that S100A1 is a regulator of diastolic RyR2 activity and beneficially modulates diastolic RyR2 dysfunction. S100A1 interaction with the RyR2 is sufficient to protect against basal and catecholamine-triggered arrhythmic SR Ca(2+) leak in HF, combining antiarrhythmic potency with chronic inotropic actions.",
+    "query": "S100 calmodulin binding interaction",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/26005840/"
+  },
+  {
+    "pmid": "26726132",
+    "title": "Interleukin-11 binds specific EF-hand proteins via their conserved structural motifs.",
+    "authors": "Kazakov AS, Sokolov AS, Vologzhannikova AA et al.",
+    "year": "2017",
+    "journal": "Journal of biomolecular structure & dynamics",
+    "abstract": "Interleukin-11 (IL-11) is a hematopoietic cytokine engaged in numerous biological processes and validated as a target for treatment of various cancers. IL-11 contains intrinsically disordered regions that might recognize multiple targets. Recently we found that aside from IL-11RA and gp130 receptors, IL-11 interacts with calcium sensor protein S100P. Strict calcium dependence of this interaction suggests a possibility of IL-11 interaction with other calcium sensor proteins. Here we probed specificity of IL-11 to calcium-binding proteins of various types: calcium sensors of the EF-hand family (calmodulin, S100B and neuronal calcium sensors: recoverin, NCS-1, GCAP-1, GCAP-2), calcium buffers of the EF-hand family (S100G, oncomodulin), and a non-EF-hand calcium buffer (\u03b1-lactalbumin). A specific subset of the calcium sensor proteins (calmodulin, S100B, NCS-1, GCAP-1/2) exhibits metal-dependent binding of IL-11 with dissociation constants of 1-19\u00a0\u03bcM. These proteins share several amino acid residues belonging to conservative structural motifs of the EF-hand proteins, 'black' and 'gray' clusters. Replacements of the respective S100P residues by alanine drastically decrease its affinity to IL-11, suggesting their involvement into the association process. Secondary structure and accessibility of the hinge region of the EF-hand proteins studied are predicted to control specificity and selectivity of their binding to IL-11. The IL-11 interaction with the EF-hand proteins is expected to occur under numerous pathological conditions, accompanied by disintegration of plasma membrane and efflux of cellular components into the extracellular milieu.",
+    "query": "S100 calmodulin binding interaction",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/26726132/"
+  },
+  {
+    "pmid": "31886651",
+    "title": "Avian MRP126 Restricts Microbial Growth through Ca(II)-Dependent Zn(II) Sequestration.",
+    "authors": "Bozzi AT, Nolan EM",
+    "year": "2020",
+    "journal": "Biochemistry",
+    "abstract": "The calgranulins form a class of S100 proteins in higher vertebrates that innate-immune cells release in abundance at infection sites. These proteins function by binding transition metal ions to prevent microbial pathogens from obtaining those essential nutrients. Mammals express three distinct members of this family: S100A8 (calgranulin A), S100A9 (calgranulin B, which heterooligomerizes with S100A8 to form calprotectin), and S100A12 (calgranulin C), that exhibit Ca(II)-dependent transition metal binding properties. Human calprotectin effectively sequesters Mn(II), Fe(II), Ni(II), and Zn(II), whereas human S100A12 selectively sequesters Zn(II) over these other metal ions. Birds and reptiles express a single calgranulin homologue named MRP126, which we reasoned could have properties more similar to those of either calprotectin or S100A12. Here we present the purification and biophysical characterization of recombinant chicken MRP126 and, to the best of our knowledge, provide the first assessment of the metal binding and antimicrobial properties of an avian MRP126. We show that MRP126 is a homodimer that selectively sequesters Zn(II) and restricts the growth of certain microbes. MRP126 binds Zn(II) at two canonical His3Asp sites. The presence of excess Ca(II) increases the affinity of the His3Asp sites from the low-nanomolar to the low-picomolar range, thereby enhancing antimicrobial activity. Chicken MRP126 also binds additional Zn(II) equivalents with low-nanomolar affinity at two nonconserved dicysteine sites and with high-nanomolar affinity using a histidine-rich C-terminal tail that is a hallmark of this clade of calgranulins. Our results with chicken MRP126 suggest that Ca(II)-dependent Zn(II) sequestration was a role of the last common ancestor of calgranulin proteins, with mammalian calprotectin subsequently evolving a broader metal binding repertoire.",
+    "query": "S100 calmodulin binding interaction",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/31886651/"
+  },
+  {
+    "pmid": "27226555",
+    "title": "S100A1 Protein Does Not Compete with Calmodulin for Ryanodine Receptor Binding but Structurally Alters the Ryanodine Receptor\u00b7Calmodulin Complex.",
+    "authors": "Rebbeck RT, Nitu FR, Rohde D et al.",
+    "year": "2016",
+    "journal": "The Journal of biological chemistry",
+    "abstract": "S100A1 has been suggested as a therapeutic agent to enhance myocyte Ca(2+) cycling in heart failure, but its molecular mode of action is poorly understood. Using FRET, we tested the hypothesis that S100A1 directly competes with calmodulin (CaM) for binding to intact, functional ryanodine receptors type I (RyR1) and II (RyR2) from skeletal and cardiac muscle, respectively. Our FRET readout provides an index of acceptor-labeled CaM binding near donor-labeled FKBP (FK506-binding protein 12.6) on the cytoplasmic domain of RyR in isolated sarcoplasmic reticulum vesicles. S100A1 (0.01-400 \u03bcm) partially inhibited FRET (i.e. CaM binding), with Ki > 10 \u03bcm, for both RyR1 and RyR2. The high [S100A1] required for partial effects on FRET indicates a lack of competition by S100A1 on CaM/RyR binding under normal physiological conditions. High-resolution analysis of time-resolved FRET detects two structural states of RyR-bound CaM, which respond to [Ca(2+)] and are isoform-specific. The distribution of these structural states was perturbed only by high micromolar [S100A1], which promoted a shift of bound CaM to a lower FRET orientation (without altering the amount of CaM bound to RyR). Thus, high micromolar S100A1 does alter the CaM/RyR interaction, without involving competition. Nevertheless, submicromolar S100A1 can alter RyR function, an effect that is influenced by both [Ca(2+)] and [CaM]. We conclude that CaM and S100A1 can concurrently bind to and functionally modulate RyR1 and RyR2, but this does not involve direct competition at the RyR CaM binding site.",
+    "query": "S100 calmodulin binding interaction",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/27226555/"
+  },
+  {
+    "pmid": "27435061",
+    "title": "The characterization of a novel S100A1 binding site in the N-terminus of TRPM1.",
+    "authors": "Jirku M, Lansky Z, Bednarova L et al.",
+    "year": "2016",
+    "journal": "The international journal of biochemistry & cell biology",
+    "abstract": "Transient receptor potential melastatin-1 channel (TRPM1) is an important mediator of calcium influx into the cell that is expressed in melanoma and ON-bipolar cells. Similar to other members of the TRP channel family, the intracellular N- and C- terminal domains of TRPM1 are expected to play important roles in the modulation of TRPM1 receptor function. Among the most commonly occurring modulators of TRP channels are the cytoplasmically expressed calcium binding proteins calmodulin and S100 calcium-binding protein A1 (S100A1), but the interaction of TRPM1 with S100A1 has not been described yet. Here, using a combination of biophysical and bioinformatics methods, we have determined that the N-terminal L242-E344 region of TRPM1 is a S100A1 binding domain. We show that formation of the TRPM1/S100A1 complex is calcium-dependent. Moreover, our structural model of the complex explained data obtained from fluorescence spectroscopy measurements revealing that the complex formation is facilitated through interactions of clusters positively charged (K271A, R273A, R274A) and hydrophobic (L263A, V270A, L276A) residues at the N-terminus of TRPM1. Taken together, our data suggest a molecular mechanism for the potential regulation of TRPM1 by S100A1.",
+    "query": "S100 calmodulin binding interaction",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/27435061/"
+  },
+  {
+    "pmid": "26527685",
+    "title": "Structural Basis of Ribosomal S6 Kinase 1 (RSK1) Inhibition by S100B Protein: MODULATION OF THE EXTRACELLULAR SIGNAL-REGULATED KINASE (ERK) SIGNALING CASCADE IN A CALCIUM-DEPENDENT WAY.",
+    "authors": "G\u00f3gl G, Alexa A, Kiss B et al.",
+    "year": "2016",
+    "journal": "The Journal of biological chemistry",
+    "abstract": "Mitogen-activated protein kinases (MAPK) promote MAPK-activated protein kinase activation. In the MAPK pathway responsible for cell growth, ERK2 initiates the first phosphorylation event on RSK1, which is inhibited by Ca(2+)-binding S100 proteins in malignant melanomas. Here, we present a detailed in vitro biochemical and structural characterization of the S100B-RSK1 interaction. The Ca(2+)-dependent binding of S100B to the calcium/calmodulin-dependent protein kinase (CaMK)-type domain of RSK1 is reminiscent of the better known binding of calmodulin to CaMKII. Although S100B-RSK1 and the calmodulin-CAMKII system are clearly distinct functionally, they demonstrate how unrelated intracellular Ca(2+)-binding proteins could influence the activity of the CaMK domain-containing protein kinases. Our crystallographic, small angle x-ray scattering, and NMR analysis revealed that S100B forms a \"fuzzy\" complex with RSK1 peptide ligands. Based on fast-kinetics experiments, we conclude that the binding involves both conformation selection and induced fit steps. Knowledge of the structural basis of this interaction could facilitate therapeutic targeting of melanomas.",
+    "query": "S100 calmodulin binding interaction",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/26527685/"
+  },
+  {
+    "pmid": "31069793",
+    "title": "S100A16, a novel lipogenesis promoting factor in livers of mice and hepatocytes in vitro.",
+    "authors": "Kan J, Zhao C, Lu S et al.",
+    "year": "2019",
+    "journal": "Journal of cellular physiology",
+    "abstract": "To investigate the role of S100 calcium-binding protein A16 (S100A16) in hepatic lipid metabolism, S100a16 transgenic, S100a16 knockdown, and wildtype C57BL/6 mice were fed either a high-fat diet (HFD) or normal-fat diet (NFD) for 16 weeks. The results showed that for HFD-fed mice, S100a16 transgenic mice showed significantly more severe fatty liver than other HFD-fed mice, with a significant increase in serum triglyceride (TG) concentration, with more and larger lipid droplets in the liver, whereas S100a16 knockdown mice were completely opposite, with liver fat lesions and TG serological changes being the mildest; for NFD-fed mice, liver fat accumulation and serum TG concentrations were significantly lower than those fed HFD, and no significant lipid droplets were found in the liver. Further, we found that calmodulin (CaM) interacts with S100A16, a member of the AMP-activated protein kinase (AMPK) pathway. Our research found that S100A16 regulates the AMPK pathway-associated protein by interacting with CaM to regulate liver lipid synthesis. S100A16 regulates liver lipid metabolism through the CaM/CAMKK2/AMPK pathway. Overexpression of S100A16 promotes the deterioration of fatty liver induced by HFD, and low expression of S100A16 can attenuate fatty liver.",
+    "query": "S100 calmodulin binding interaction",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/31069793/"
+  },
+  {
+    "pmid": "32835655",
+    "title": "Structural characterization of a dimeric complex between the short cytoplasmic domain of CEACAM1 and the pseudo tetramer of S100A10-Annexin A2 using NMR and molecular dynamics.",
+    "authors": "Hu W, Bhattacharya S, Hong T et al.",
+    "year": "2021",
+    "journal": "Biochimica et biophysica acta. Biomembranes",
+    "abstract": "AIIt, a heterotetramer of S100A10 (P11) and Annexin A2, plays a key role in calcium dependent, membrane associations with a variety of proteins. We previously showed that AIIt interacts with the short cytoplasmic domain (12 amino acids) of CEACAM1 (CEACAM1-SF). Since the cytoplasmic domains of CEACAM1 help regulate the formation of cis- or trans-dimers at the cell membrane, we investigated the possible role of their association with AIIt in this process. Using NMR and molecular dynamics, we show that AIIt and its pseudoheterodimer interacts with two molecules of short cytoplasmic domain isoform peptides, and that interaction depends on the binding motif 454-Phe-Gly-Lys-Thr-457 where Phe-454 binds in a hydrophobic pocket of AIIt, the null mutation Phe454Ala reduces binding by 2.5 fold, and the pseudophosphorylation mutant Thr457Glu reduces binding by three fold. Since these two residues in CEACAM1-SF were also found to play a role in the binding of calmodulin and G-actin at the membrane, we hypothesize a sequential set of three interactions are responsible for regulation of cis- to trans-dimerization of CEACAM1. The hydrophobic binding pocket in AIIt corresponds to a previously identified binding pocket for a peptide found in SMARCA3 and AHNAK, suggesting a conserved functional motif in AIIt allowing multiple proteins to reversibly interact with integral membrane proteins in a calcium dependent manner.",
+    "query": "S100 calmodulin binding interaction",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/32835655/"
+  },
+  {
+    "pmid": "32499888",
+    "title": "The Arianna thread: the matching of S-100 family with the RyR's muscle receptor.",
+    "authors": "Fulle S, Belia S, Fan\u00f2 Illic G",
+    "year": "2020",
+    "journal": "European journal of translational myology",
+    "abstract": "The functional state of RyR depends on the intracellular calcium concentration and on the oxidation state of its protein components in some particular sites and of some sentinel amino acids. In addition to the regulation of the RyR channel by exogenous substances (caffeine, ryanodine), ions environmental situations (oxidative state), other components, such as some endogenous proteins present in the sarcoplasm and/or in muscle membranes that are able to determine changes in Ca2+ channel activity. Among these, calmodulin and S-100A could determine modifications in the status of RyR channel in the skeletal muscle. The currently available data can be justified the use of a simplified S-100/CaM and RyR interaction model for the regulation of Ca2+ release in skeletal muscle. Under resting conditions, the CaM/S100A1 binding domain on RyR1 is predominantly dependent on S100A1. Vice versa when the intracellular Ca2+ concentration becomes high as well as during repetitive (tetanus) stimulation, the Ca-CaM bond becomes dominant, shifting S100A1 from RyR1 and promoting channel inactivation. This may be one of the mechanism of muscle fatigue.",
+    "query": "S100 calmodulin binding interaction",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/32499888/"
+  },
+  {
+    "pmid": "31593589",
+    "title": "CCL5 of glioma-associated microglia/macrophages regulates glioma migration and invasion via calcium-dependent matrix metalloproteinase 2.",
+    "authors": "Yu-Ju Wu C, Chen CH, Lin CY et al.",
+    "year": "2020",
+    "journal": "Neuro-oncology",
+    "abstract": "Glioma-associated microglia/macrophages (GAMs) comprise macrophages of peripheral origin and brain-intrinsic microglia, which support tumor progression. Chemokine C-C ligand 5 (CCL5) is an inflammatory mediator produced by immune cells and is involved in tumor growth and migration in several cancers, including glioma. However, the mechanisms detailing how CCL5 facilitates glioma invasion remain largely unresolved.",
+    "query": "calmodulin CAMK extracellular matrix",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/31593589/"
+  },
+  {
+    "pmid": "35964866",
+    "title": "RIPK3-MLKL signaling activates mitochondrial CaMKII and drives intrarenal extracellular matrix production during CKD.",
+    "authors": "Srivastava A, Tomar B, Sharma P et al.",
+    "year": "2022",
+    "journal": "Matrix biology : journal of the International Society for Matrix Biology",
+    "abstract": "Intrarenal extracellular matrix production or kidney fibrosis is a prevalent feature of all forms of chronic kidney disease (CKD). The transforming growth factor-beta (TGF\u03b2) is believed to be a major driver of extracellular matrix production. Nevertheless, anti-TGF\u03b2 therapies have consistently failed to reduce extracellular matrix production in CKD patients indicating the need for novel therapeutic strategies. We have previously shown that necroinflammation contributes to acute kidney injury. Here, we show that chronic/persistent necroinflammation drives intrarenal extracellular matrix production during CKD. We found that renal expression of receptor-interacting protein kinase-1 (RIPK1), RIPK3, and mixed lineage kinase domain-like (MLKL) increases with the production of intrarenal extracellular matrix and declined kidney function in both humans and mice. Furthermore, we found that TGF\u03b2 exposure induces the translocation of RIPK3 and MLKL to mitochondria resulting in mitochondrial dysfunction and ROS production. Mitochondrial ROS activates the serine-threonine kinase calcium/calmodulin-dependent protein kinases-II (CaMKII) that increases phosphorylation of Smad2/3 and subsequent production of alpha-smooth muscle actin (\u03b1SMA), collagen (Col) 1\u03b11, etc. in response to TGF\u03b2 during the intrarenal extracellular matrix production. Consistent with this, deficiency or knockdown of RIPK3 or MLKL as well as pharmacological inhibition of RIPK1, RIPK3, and CaMKII prevents the intrarenal extracellular matrix production in oxalate-induced CKD and unilateral ureteral obstruction (UUO). Together, RIPK1, RIPK3, MLKL, CaMKII, and Smad2/3 are molecular targets to inhibit intrarenal extracellular matrix production and preserve kidney function during CKD.",
+    "query": "calmodulin CAMK extracellular matrix",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/35964866/"
+  },
+  {
+    "pmid": "37178987",
+    "title": "CaMKII inhibition due to TRIC-B loss-of-function dysregulates SMAD signaling in osteogenesis imperfecta.",
+    "authors": "Besio R, Contento BM, Garibaldi N et al.",
+    "year": "2023",
+    "journal": "Matrix biology : journal of the International Society for Matrix Biology",
+    "abstract": "Ca2+ is a second messenger that regulates a variety of cellular responses in bone, including osteoblast differentiation. Mutations in trimeric intracellular cation channel B (TRIC-B), an endoplasmic reticulum channel specific for K+, a counter ion for Ca2+flux, affect bone and cause a recessive form of osteogenesis imperfecta (OI) with a still puzzling mechanism. Using a conditional Tmem38b knock out mouse, we demonstrated that lack of TRIC-B in osteoblasts strongly impairs skeleton growth and structure, leading to bone fractures. At the cellular level, delayed osteoblast differentiation and decreased collagen synthesis were found consequent to the Ca2+ imbalance and associated with reduced collagen incorporation in the extracellular matrix and poor mineralization. The impaired SMAD signaling detected in mutant mice, and validated in OI patient osteoblasts, explained the osteoblast malfunction. The reduced SMAD phosphorylation and nuclear translocation were mainly caused by alteration in Ca2+ calmodulin kinase II (CaMKII)-mediated signaling and to a less extend by a lower TGF-\u03b2 reservoir. SMAD signaling, osteoblast differentiation and matrix mineralization were only partially rescued by TGF-\u03b2 treatment, strengthening the impact of CaMKII-SMAD axes on osteoblast function. Our data established the TRIC-B role in osteoblasts and deepened the contribution of the CaMKII-SMAD signaling in bone.",
+    "query": "calmodulin CAMK extracellular matrix",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/37178987/"
+  },
+  {
+    "pmid": "40036145",
+    "title": "CaMKK2 Regulates Macrophage Polarization Induced by Matrix Stiffness: Implications for Shaping the Immune Response in Stiffened Tissues.",
+    "authors": "Guan Y, Zhang M, Song J et al.",
+    "year": "2025",
+    "journal": "Advanced science (Weinheim, Baden-Wurttemberg, Germany)",
+    "abstract": "Macrophages are essential for immune responses and maintaining tissue homeostasis, exhibiting a wide range of phenotypes depending on their microenvironment. The extracellular matrix (ECM) is a vital component that provides structural support and organization to tissues, with matrix stiffness acting as a key regulator of macrophage behavior. Using physiologically relevant 3D stiffening hydrogel models, it is found that increased matrix stiffness alone promoted macrophage polarization toward a pro-regenerative phenotype, mimicking the effect of interleukin-4(IL-4) in softer matrices. Blocking Calcium/calmodulin-dependent kinase kinase 2 (CaMKK2)\u00a0selectively inhibited stiffness-induced macrophage polarization without affecting IL-4-driven pro-regenerative pathways. In functional studies, CaMKK2 deletion prevented M2-like/pro-tumoral polarization caused by matrix stiffening, which in turn hindered tumor growth. In a murine wound healing model, loss of CaMKK2 impaired matrix stiffness-mediated macrophage accumulation, ultimately disrupting vascularization. These findings highlight the critical role of CaMKK2 in the macrophage mechanosensitive fate determination and gene expression program, positioning this kinase as a promising therapeutic target to selectively modulate macrophage responses in pathologically stiff tissues.",
+    "query": "calmodulin CAMK extracellular matrix",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40036145/"
+  },
+  {
+    "pmid": "28130256",
+    "title": "Ca2+/calmodulin-dependent protein kinase II\u03b2 and II\u03b4 mediate TGF\u03b2-induced transduction of fibronectin and collagen in human pulmonary fibroblasts.",
+    "authors": "Mukherjee S, Sheng W, Sun R et al.",
+    "year": "2017",
+    "journal": "American journal of physiology. Lung cellular and molecular physiology",
+    "abstract": "It is now clear that in addition to activating several complex kinase pathways (Smad, MAP kinase, PI3 kinase), TGF\u03b2 also acts by elevating cytosolic Ca2+ concentration within human pulmonary fibroblasts. Ca2+/calmodulin-dependent protein kinase II (CamK II) is also known to regulate gene expression in fibroblasts. In this study, we examined the interactions between calcium signaling, activation of CamK and other kinases, and extracellular matrix (ECM) gene expression. Human pulmonary fibroblasts were cultured and stimulated with artificially generated Ca2+ pulses in the absence of TGF\u03b2, or with TGF\u03b2 (1 nM) or vehicle in the presence of various blockers of Ca2+ signaling. PCR and Western blotting were used to measure gene expression and protein levels, respectively. We found that Ca2+ pulses in the absence of TGF\u03b2 increased ECM gene expression in a pulse frequency-dependent manner, and that blocking Ca2+ signaling and the CamK II pathway significantly reduced TGF\u03b2-mediated ECM gene expression, without having any effects on other kinase pathways (Smad, PI3 kinase, or MAP kinase). We also found that TGF\u03b2 elevated the expression of CamK II\u03b2 and CamK II\u03b4, while siRNA silencing of those two subtypes significantly reduced TGF\u03b2-mediated expression of collagen A1 and fibronectin 1. Our data suggest that TGF\u03b2 induces the expression of CamK II\u03b2 and CamK II\u03b4, which in turn are activated by TGF\u03b2-evoked Ca2+ waves in a frequency-dependent manner, leading to increased expression of ECM proteins.",
+    "query": "calmodulin CAMK extracellular matrix",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/28130256/"
+  },
+  {
+    "pmid": "37419684",
+    "title": "The CaMKII Inhibitory Peptide AIP Alleviates Renal Fibrosis Through the TGF-\u03b2/Smad and RAF/ERK Pathways.",
+    "authors": "Feng X, Zhang J, Yang R et al.",
+    "year": "2023",
+    "journal": "The Journal of pharmacology and experimental therapeutics",
+    "abstract": "Renal fibrosis is characterized by the excessive deposition of extracellular matrix that destroys and replaces the functional renal parenchyma, ultimately leading to organ failure. It is a common pathway by which chronic kidney disease can develop into end-stage renal disease, which has high global morbidity and mortality, and there are currently no good therapeutic agents available. Calcium/calmodulin-dependent protein kinase II (CaMKII) has been indicated to be closely related to the occurrence of renal fibrosis, and its specific inhibitory peptide, autocamtide-2-related inhibitory peptide (AIP), was shown to directly bind the active site of CaMKII. In this study, we examined the effect of AIP on the progression of renal fibrosis and its possible mechanism. The results showed that AIP could inhibit the expression of the fibrosis markers fibronectin, collagen I, matrix metalloproteinase 2, and \u03b1-smooth muscle actin in vivo and in vitro. Further analysis revealed that AIP could inhibit the expression of various epithelial-to-mesenchymal transformation-related markers, such as vimentin and Snail 1, in vivo and in vitro. Mechanistically, AIP could significantly inhibit the activation of CaMKII, Smad 2, Raf, and extracellular regulated protein kinases (ERK) in vitro and in vivo and reduce the expression of transforming growth factor-\u03b2 (TGF-\u03b2) in vivo. These results suggested that AIP could alleviate renal fibrosis by inhibiting CaMKII and blocking activation of the TGF-\u03b2/Smad2 and RAF/ERK pathways. Our study provides a possible drug candidate and demonstrates that CaMKII is a potential pharmacological target for the treatment of renal fibrosis. SIGNIFICANCE STATEMENT: We have demonstrated that AIP significantly attenuated transforming growth factor-\u03b2-1-induced fibrogenesis and ameliorated unilateral ureteral obstruction-induced renal fibrosis through the CaMKII/TGF-\u03b2/Smad and CaMKII/RAF/ERK signaling pathways in vitro and in vivo. Our study provides a possible drug candidate and demonstrates that CaMKII can be a potential pharmacological target for the treatment of renal fibrosis.",
+    "query": "calmodulin CAMK extracellular matrix",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/37419684/"
+  },
+  {
+    "pmid": "30758990",
+    "title": "Prostaglandin E2 inhibits profibrotic function of human pulmonary fibroblasts by disrupting Ca2+ signaling.",
+    "authors": "Mukherjee S, Sheng W, Michkov A et al.",
+    "year": "2019",
+    "journal": "American journal of physiology. Lung cellular and molecular physiology",
+    "abstract": "We have shown that calcium (Ca2+) oscillations in human pulmonary fibroblasts (HPFs) contribute to profibrotic effects of transforming growth factor-\u03b2 (TGF-\u03b2) and that disruption of these oscillations blunts features of pulmonary fibrosis. Prostaglandin E2 (PGE2) exerts antifibrotic effects in the lung, but the mechanisms for this action are not well defined. We thus sought to explore interactions between PGE2 and the profibrotic agent TGF-\u03b2 in pulmonary fibroblasts (PFs) isolated from patients with or without idiopathic pulmonary fibrosis (IPF). PGE2 inhibited TGF-\u03b2-promoted [Ca2+] oscillations and prevented the activation of Akt and Ca2+/calmodulin-dependent protein kinase-II (CaMK-II) but did not prevent activation of Smad-2 or ERK. PGE2 also eliminated TGF-\u03b2-stimulated expression of collagen A1, fibronectin, and \u03b1-smooth muscle actin and reduced stress fiber formation in the HPFs. RNA sequencing revealed that HPFs preferentially express EP2 receptors relative to other prostanoid receptor subtypes: EP2 expression is ~10-fold higher than that of EP4 receptors; EP1 and EP3 receptors are barely detectable; and EP2-receptor expression is ~3.5-fold lower in PFs from IPF patients than in normal HPFs. The inhibitory effects of PGE2 on synthetic function and stress fiber formation were blocked by selective EP2 or EP4 antagonists and mimicked by selective EP2 or EP4 agonists, the phosphodiesterase inhibitor isobutylmethylxanthine and forskolin, all of which elevate cellular cAMP concentrations. We conclude that PGE2, likely predominantly via EP2 receptors, interferes with Ca2+ signaling, CaMK-II activation, and Akt activation in IPF-HPFs and HPFs treated with TGF-\u03b2. Moreover, a decreased expression of EP2 receptors in pulmonary fibroblasts from IPF patients may contribute to the pathophysiology of this disease.",
+    "query": "calmodulin CAMK extracellular matrix",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/30758990/"
+  },
+  {
+    "pmid": "36899880",
+    "title": "Heparan Sulfates Regulate Axonal Excitability and Context Generalization through Ca2+/Calmodulin-Dependent Protein Kinase II.",
+    "authors": "Song I, Kuznetsova T, Baidoe-Ansah D et al.",
+    "year": "2023",
+    "journal": "Cells",
+    "abstract": "Our previous studies demonstrated that enzymatic removal of highly sulfated heparan sulfates with heparinase 1 impaired axonal excitability and reduced expression of ankyrin G at the axon initial segments in the CA1 region of the hippocampus ex vivo, impaired context discrimination in vivo, and increased Ca2+/calmodulin-dependent protein kinase II (CaMKII) activity in vitro. Here, we show that in vivo delivery of heparinase 1 in the CA1 region of the hippocampus elevated autophosphorylation of CaMKII 24 h after injection in mice. Patch clamp recording in CA1 neurons revealed no significant heparinase effects on the amplitude or frequency of miniature excitatory and inhibitory postsynaptic currents, while the threshold for action potential generation was increased and fewer spikes were generated in response to current injection. Delivery of heparinase on the next day after contextual fear conditioning induced context overgeneralization 24 h after injection. Co-administration of heparinase with the CaMKII inhibitor (autocamtide-2-related inhibitory peptide) rescued neuronal excitability and expression of ankyrin G at the axon initial segment. It also restored context discrimination, suggesting the key role of CaMKII in neuronal signaling downstream of heparan sulfate proteoglycans and highlighting a link between impaired CA1 pyramidal cell excitability and context generalization during recall of contextual memories.",
+    "query": "calmodulin CAMK extracellular matrix",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/36899880/"
+  },
+  {
+    "pmid": "35922702",
+    "title": "Verapamil inhibited the development of ureteral stricture by blocking CaMK II-mediated STAT3 and Smad3/JunD pathways.",
+    "authors": "Qing Z, Yuan W, Wang J et al.",
+    "year": "2022",
+    "journal": "International urology and nephrology",
+    "abstract": "Ureteral stricture (US) is a fibrotic process that leads to urinary tract obstruction and even kidney damage, with the characteristic of reduced extracellular matrix (ECM) degradation and increased collagen synthesis. Verapamil, as a calcium channel blocker, was reported to prevent scar formation. Our work aimed to investigate the biological effects and mechanism of verapamil in US.",
+    "query": "calmodulin CAMK extracellular matrix",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/35922702/"
+  },
+  {
+    "pmid": "38064002",
+    "title": "Role of CaMKII in diabetes induced vascular injury and its interaction with anti-diabetes therapy.",
+    "authors": "Chacar S, Abdi A, Almansoori K et al.",
+    "year": "2024",
+    "journal": "Reviews in endocrine & metabolic disorders",
+    "abstract": "Diabetes mellitus is a metabolic disorder denoted by chronic hyperglycemia that drives maladaptive structural changes and functional damage to the vasculature. Attenuation of this pathological remodeling of blood vessels remains an unmet target owing to paucity of information on the metabolic signatures of this process. Ca2+/calmodulin-dependent kinase II (CaMKII) is expressed in the vasculature and is implicated in the control of blood vessels homeostasis. Recently, CaMKII has attracted a special attention in view of its chronic upregulated activity in diabetic tissues, yet its role in the diabetic vasculature remains under investigation.This review highlights the physiological and pathological actions of CaMKII in the\u00a0diabetic vasculature, with focus on the\u00a0control of the dialogue between endothelial (EC) and vascular smooth muscle cells (VSMC). Activation of CaMKII enhances EC and VSMC proliferation and migration, and increases the production of extracellular matrix which leads to maladaptive remodeling of vessels. This is manifested by activation of genes/proteins implicated in the control of the cell cycle, cytoskeleton organization, proliferation, migration, and inflammation. Endothelial dysfunction is paralleled by impaired nitric oxide signaling, which is also influenced by CaMKII signaling (activation/oxidation). The efficiency of CaMKII inhibitors is currently being tested in animal models, with a focus on the genetic pathways involved in the regulation of CaMKII expression (microRNAs and single nucleotide polymorphisms). Interestingly, studies highlight an interaction between the anti-diabetic drugs and CaMKII expression/activity which requires further investigation. Together, the studies reviewed herein may guide pharmacological approaches to improve health-related outcomes in patients with diabetes.",
+    "query": "calmodulin CAMK extracellular matrix",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/38064002/"
+  },
+  {
+    "pmid": "31972963",
+    "title": "Dopamine Receptor Activation Modulates the Integrity of the Perisynaptic Extracellular Matrix at Excitatory Synapses.",
+    "authors": "Mitl\u00f6hner J, Kaushik R, Niekisch H et al.",
+    "year": "2020",
+    "journal": "Cells",
+    "abstract": "In the brain, Hebbian-type and homeostatic forms of plasticity are affected by neuromodulators like dopamine (DA). Modifications of the perisynaptic extracellular matrix (ECM), which control the functions and mobility of synaptic receptors as well as the diffusion of transmitters and neuromodulators in the extracellular space, are crucial for the manifestation of plasticity. Mechanistic links between synaptic activation and ECM modifications are largely unknown. Here, we report that neuromodulation via D1-type DA receptors can induce targeted ECM proteolysis specifically at excitatory synapses of rat cortical neurons via proteases ADAMTS-4 and -5. We showed that receptor activation induces increased proteolysis of brevican (BC) and aggrecan, two major constituents of the adult ECM both in vivo and in vitro. ADAMTS immunoreactivity was detected near synapses, and shRNA-mediated knockdown reduced BC cleavage. We have outlined a molecular scenario of how synaptic activity and neuromodulation are linked to ECM rearrangements via increased cAMP levels, NMDA receptor activation, and intracellular calcium signaling.",
+    "query": "calmodulin CAMK extracellular matrix",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/31972963/"
+  },
+  {
+    "pmid": "29860638",
+    "title": "Characterization of fibroblasts from hypertrophied right ventricle of pulmonary hypertensive rats.",
+    "authors": "Imoto K, Okada M, Yamawaki H",
+    "year": "2018",
+    "journal": "Pflugers Archiv : European journal of physiology",
+    "abstract": "Pulmonary arterial hypertension (PAH), which is characterized by an elevation of pulmonary arterial resistance, leads to a lethal right heart failure. It is an urgent issue to clarify the pathogenesis of PAH-induced right heart failure. The present study aimed to elucidate the characteristics of cardiac fibroblasts (CFs) isolated from hypertrophied right ventricles of monocrotaline (MCT)-induced PAH model rats. CFs were isolated from the right ventricles of MCT-injected rats (MCT-CFs) and saline-injected control rats (CONT-CFs). Expression of \u03b1-smooth muscle actin and collagen type I in MCT-CFs was lower than that in CONT-CFs. On the other hand, proliferation, migration, and matrix metalloproteinase (MMP)-9 production were significantly enhanced in MCT-CFs. In MCT-CFs, phosphorylation of extracellular signal-regulated kinase (ERK) 1/2, c-Jun N-terminal kinase (JNK), and Ca2+/calmodulin-dependent protein kinase (CaMK) II was significantly enhanced. In addition to mRNA expression of Orai1, a Ca2+ release-activated Ca2+ channel, and stromal interaction molecules (STIM) 1, an endoplasmic reticulum Ca2+ sensor, the associated store-operated Ca2+ entry (SOCE) was significantly higher in MCT-CFs than CONT-CFs. Pharmacological inhibition of ERK1/2 pathway prevented the enhanced proliferation of MCT-CFs. The enhanced migration of MCT-CFs was prevented by a pharmacological inhibition of ERK1/2, JNK, CaMKII, or SOCE pathway. The enhanced MMP-9 production in MCT-CFs was prevented by a pharmacological inhibition of ERK1/2, CaMKII, or SOCE pathway but not JNK. The present results suggested that MCT-CFs exhibit proliferative and migratory phenotypes perhaps through multiple signaling pathways. This study for the first time determined the characteristics of CFs isolated from hypertrophied right ventricles of MCT-induced PAH model rats.",
+    "query": "calmodulin CAMK extracellular matrix",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29860638/"
+  },
+  {
+    "pmid": "36902150",
+    "title": "Osteocyte-Derived CaMKK2 Regulates Osteoclasts and Bone Mass in a Sex-Dependent Manner through Secreted Calpastatin.",
+    "authors": "Williams JN, Irwin M, Li Y et al.",
+    "year": "2023",
+    "journal": "International journal of molecular sciences",
+    "abstract": "Calcium/calmodulin (CaM)-dependent protein kinase kinase 2 (CaMKK2) regulates bone remodeling through its effects on osteoblasts and osteoclasts. However, its role in osteocytes, the most abundant bone cell type and the master regulator of bone remodeling, remains unknown. Here we report that the conditional deletion of CaMKK2 from osteocytes using Dentine matrix protein 1 (Dmp1)-8kb-Cre mice led to enhanced bone mass only in female mice owing to a suppression of osteoclasts. Conditioned media isolated from female CaMKK2-deficient osteocytes inhibited osteoclast formation and function in in vitro assays, indicating a role for osteocyte-secreted factors. Proteomics analysis revealed significantly higher levels of extracellular calpastatin, a specific inhibitor of calcium-dependent cysteine proteases calpains, in female CaMKK2 null osteocyte conditioned media, compared to media from female control osteocytes. Further, exogenously added non-cell permeable recombinant calpastatin domain I elicited a marked, dose-dependent inhibition of female wild-type osteoclasts and depletion of calpastatin from female CaMKK2-deficient osteocyte conditioned media reversed the inhibition of matrix resorption by osteoclasts. Our findings reveal a novel role for extracellular calpastatin in regulating female osteoclast function and unravel a novel CaMKK2-mediated paracrine mechanism of osteoclast regulation by female osteocytes.",
+    "query": "calmodulin CAMK extracellular matrix",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/36902150/"
+  },
+  {
+    "pmid": "24384746",
+    "title": "Reelin signaling pathway genotypes and Alzheimer disease in a Spanish population.",
+    "authors": "Bufill E, Roura-Poch P, Sala-Matavera I et al.",
+    "year": "2015",
+    "journal": "Alzheimer disease and associated disorders",
+    "abstract": "Several reports suggest that the reelin protein could play a role in Alzheimer pathophysiology. This led us to ask whether genetic variability in the reelin pathway may increase the risk of developing Alzheimer disease (AD) or mild cognitive impairment (MCI).",
+    "query": "calmodulin CAMK extracellular matrix",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/24384746/"
+  },
+  {
+    "pmid": "31857698",
+    "title": "The TRPV4-AKT axis promotes oral squamous cell carcinoma cell proliferation via CaMKII activation.",
+    "authors": "Fujii S, Tajiri Y, Hasegawa K et al.",
+    "year": "2020",
+    "journal": "Laboratory investigation; a journal of technical methods and pathology",
+    "abstract": "Most human malignant tumor cells arise from epithelial tissues, which show distinctive characteristics, such as polarization, cell-to-cell contact between neighboring cells, and anchoring to a basement membrane. When tumor cells invaginate into the stroma, the cells are exposed to extracellular environments, including the extracellular matrix (ECM). Increased ECM stiffness has been reported to promote cellular biological activities, such as excessive cellular growth and enhanced migration capability. Therefore, tumorous ECM stiffness is not only an important clinical tumor feature but also plays a pivotal role in tumor cell behavior. Transient receptor potential vanilloid 4 (TRPV4), a Ca2+-permeable nonselective cation channel, has been reported to be mechano-sensitive and to regulate tumorigenesis, but the underlying molecular mechanism in tumorigenesis remains unclear. The function of TRPV4 in oral squamous cell carcinoma (OSCC) is also unknown. The current study was conducted to investigate whether or not TRPV4 might be involved in OSCC tumorigenesis. TRPV4 mRNA levels were elevated in OSCC cell lines compared with normal oral epithelial cells, and its expression was required for TRPV4 agonist-dependent Ca2+ entry. TRPV4-depleted tumor cells exhibited decreased proliferation capabilities in three-dimensional culture but not in a low-attachment plastic dish. A xenograft tumor model demonstrated that TRPV4 expression was involved in cancer cell proliferation in vivo. Furthermore, loss-of-function experiments using siRNA or an inhibitor revealed that the TRPV4 expression was required for CaMKII-mediated AKT activation. Immunohistochemical analyses of tissue specimens obtained from 36 OSCC patients showed that TRPV4 was weakly observed in non-tumor regions but was strongly expressed in tumor lesions at high frequencies where phosphorylated AKT expression was frequently detected. These results suggest that the TRPV4/CaMKII/AKT axis, which might be activated by extracellular environments, promotes OSCC tumor cell growth.",
+    "query": "calmodulin CAMK extracellular matrix",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/31857698/"
+  },
+  {
+    "pmid": "29626161",
+    "title": "Extracellular ATP activates hyaluronan synthase 2 (HAS2) in epidermal keratinocytes via P2Y2, Ca2+ signaling, and MAPK pathways.",
+    "authors": "Rauhala L, Jokela T, K\u00e4rn\u00e4 R et al.",
+    "year": "2018",
+    "journal": "The Biochemical journal",
+    "abstract": "Extracellular nucleotides are used as signaling molecules by several cell types. In epidermis, their release is triggered by insults such as ultraviolet radiation, barrier disruption, and tissue wounding, and by specific nerve terminals firing. Increased synthesis of hyaluronan, a ubiquitous extracellular matrix glycosaminoglycan, also occurs in response to stress, leading to the attractive hypothesis that nucleotide signaling and hyaluronan synthesis could also be linked. In HaCaT keratinocytes, ATP caused a rapid and strong but transient activation of hyaluronan synthase 2 (HAS2) expression via protein kinase C-, Ca2+/calmodulin-dependent protein kinase II-, mitogen-activated protein kinase-, and calcium response element-binding protein-dependent pathways by activating the purinergic P2Y2 receptor. Smaller but more persistent up-regulation of HAS3 and CD44, and delayed up-regulation of HAS1 were also observed. Accumulation of peri- and extracellular hyaluronan followed 4-6\u2005h after stimulation, an effect further enhanced by the hyaluronan precursor glucosamine. AMP and adenosine, the degradation products of ATP, markedly inhibited HAS2 expression and, despite concomitant up-regulation of HAS1 and HAS3, inhibited hyaluronan synthesis. Functionally, ATP moderately increased cell migration, whereas AMP and adenosine had no effect. Our data highlight the strong influence of adenosinergic signaling on hyaluronan metabolism in human keratinocytes. Epidermal insults are associated with extracellular ATP release, as well as rapid up-regulation of HAS2/3, CD44, and hyaluronan synthesis, and we show here that the two phenomena are linked. Furthermore, as ATP is rapidly degraded, the opposite effects of its less phosphorylated derivatives facilitate a rapid shut-off of the hyaluronan response, providing a feedback mechanism to prevent excessive reactions when more persistent signals are absent.",
+    "query": "calmodulin CAMK extracellular matrix",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29626161/"
+  },
+  {
+    "pmid": "28011257",
+    "title": "Cellular subtype expression and activation of CaMKII regulate the fate of atherosclerotic plaque.",
+    "authors": "Maione AS, Cipolletta E, Sorriento D et al.",
+    "year": "2017",
+    "journal": "Atherosclerosis",
+    "abstract": "Atherosclerosis is a degenerative process of the arterial wall implicating activation of macrophages and proliferation of vascular smooth muscle cells. Calcium-calmodulin dependent kinase type II (CaMKII) in vascular smooth muscle cells (VSMCs) regulates proliferation, while in macrophages, this kinase governs diapedesis, infiltration and release of extracellular matrix enzymes. We aimed at understanding the possible role of CaMKII in atherosclerosis plaques to regulate plaque evolution towards stability or instability.",
+    "query": "calmodulin CAMK extracellular matrix",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/28011257/"
+  },
+  {
+    "pmid": "34685689",
+    "title": "A Novel Pro-Inflammatory Mechanosensing Pathway Orchestrated by the Disintegrin Metalloproteinase ADAM15 in Synovial Fibroblasts.",
+    "authors": "Janczi T, Meier F, Fehrl Y et al.",
+    "year": "2021",
+    "journal": "Cells",
+    "abstract": "Mechanotransduction is elicited in cells upon the perception of physical forces transmitted via the extracellular matrix in their surroundings and results in signaling events that impact cellular functions. This physiological process is a prerequisite for maintaining the integrity of diarthrodial joints, while excessive loading is a factor promoting the inflammatory mechanisms of joint destruction. Here, we describe a mechanotransduction pathway in synovial fibroblasts (SF) derived from the synovial membrane of inflamed joints. The functionality of this pathway is completely lost in the absence of the disintegrin metalloproteinase ADAM15 strongly upregulated in SF. The mechanosignaling events involve the Ca2+-dependent activation of c-Jun-N-terminal kinases, the subsequent downregulation of long noncoding RNA HOTAIR, and upregulation of the metabolic energy sensor sirtuin-1. This afferent loop of the pathway is facilitated by ADAM15 via promoting the cell membrane density of the constitutively cycling mechanosensitive transient receptor potential vanilloid 4 calcium channels. In addition, ADAM15 reinforces the Src-mediated activation of pannexin-1 channels required for the enhanced release of ATP, a mediator of purinergic inflammation, which is increasingly produced upon sirtuin-1 induction.",
+    "query": "calmodulin CAMK extracellular matrix",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/34685689/"
+  },
+  {
+    "pmid": "29883672",
+    "title": "CaMK\u2161 mediates cadmium induced apoptosis in rat primary osteoblasts through MAPK activation and endoplasmic reticulum stress.",
+    "authors": "Liu W, Xu C, Ran D et al.",
+    "year": "2018",
+    "journal": "Toxicology",
+    "abstract": "Ca2+ is an important ion in various intracellular metabolic pathways. Endoplasmic reticulum (ER) is a major intracellular calcium store and ER calcium homeostasis plays a key part in the regulation of apoptosis. We have previously shown that Cadmium (Cd) induces apoptosis in osteoblasts (OBs), accompany by increased cytoplasmic calcium. As the role of calcium in OBs apoptosis induced by Cd has not been clarified we investigated the effects of Cd exposure in rat OBs on intracellular Ca2+, CaMKII phosphorylation, and the pathways implicated in inducing apoptosis. The results showed that cadmium(Cd) induced elevation of intracellular Ca2+ ([Ca2+]i) in OBs by the release of Ca2+ from ER and the inflow of Ca2+ from the extracellular matrix. Cd induced [Ca2+]i elevation and phosphorylation of CaMKII which might be involved in activation of MAPKs and participated in Cd-induced mitochondrial apoptosis through the alteration of the ratio of Bax/Bcl-2 expression. Meanwhile, CaMKII phosphorylation activated unfolded protein response (UPR) during cadmium treatment and could enable the ER apoptosis pathway through the activation of caspase-12. These results indicated that CaMKII plays an important role in Cd induced ER apoptosis and MAPK activation. Our data provide new insights into the mechanisms underlying apoptosis in OBs following Cd exposure. This provides a theoretical basis for future investigations into the clinical therapeutic application of CaMK\u2161 inhibitors in osteoporosis induced by Cd exposure.",
+    "query": "calmodulin CAMK extracellular matrix",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29883672/"
+  },
+  {
+    "pmid": "28383548",
+    "title": "miR-146a facilitates osteoarthritis by regulating cartilage homeostasis via targeting Camk2d and Ppp3r2.",
+    "authors": "Zhang X, Wang C, Zhao J et al.",
+    "year": "2017",
+    "journal": "Cell death & disease",
+    "abstract": "Osteoarthritis (OA), characterized by insufficient extracellular matrix synthesis and cartilage degeneration, is known as an incurable disease because its pathogenesis is poorly elucidated. Thus far, limited information is available regarding the pathophysiological role of microRNAs (miRNAs) in OA. In this study, we investigated the specific function of miR-146a in OA pathophysiology using mouse OA models. We found that the articular cartilage degeneration of miR-146a knockout (KO) mice was alleviated compared with that of the wild-type (WT) mice in spontaneous and instability-induced OA models. We demonstrate that miR-146a aggravated pro-inflammatory cytokines induced suppressing the expression of cartilage matrix-associated genes. We further identified calcium/calmodulin-dependent protein kinase II delta (Camk2d) and protein phosphatase 3, regulatory subunit B, beta isoform (Ppp3r2, also known as calcineurin B, type II) were essential targets of miR-146a in regulating cartilage homeostasis. Moreover, we found that surgical-induced OA mice treated with a miR-146a inhibitor significantly alleviated the destruction of articular cartilage via targeting Camk2d and Ppp3r2. These results suggested that miR-146a has a crucial role in maintaining cartilage homeostasis. MiR-146a inhibition in chondrocytes can be a potential therapeutic strategy to ameliorate OA.",
+    "query": "calmodulin CAMK extracellular matrix",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/28383548/"
+  },
+  {
+    "pmid": "39490703",
+    "title": "PIEZO1 mediates matrix stiffness-induced tumor progression in kidney renal clear cell carcinoma by activating the Ca2+/Calpain/YAP pathway.",
+    "authors": "Zhu B, Li F, Yu J et al.",
+    "year": "2025",
+    "journal": "Biochimica et biophysica acta. Molecular cell research",
+    "abstract": "The significance of physical factors in the onset and progression of tumors has been increasingly substantiated by a multitude of studies. The extracellular matrix, a pivotal component of the tumor microenvironment, has been the subject of extensive investigation in connection with the advancement of KIRC (Kidney Renal Clear Cell Carcinoma) in recent years. PIEZO1, a mechanosensitive ion channel, has been recognized as a modulator of diverse physiological processes. Nonetheless, the precise function of PIEZO1 as a transducer of mechanical stimuli in KIRC remains poorly elucidated.",
+    "query": "LOX lysyl oxidase calcium regulation",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39490703/"
+  },
+  {
+    "pmid": "30052320",
+    "title": "Exogenous Lysyl Oxidase-Like 2 and Perfusion Culture Induce Collagen Crosslink Formation in Osteogenic Grafts.",
+    "authors": "Mitra D, Yasui OW, Harvestine JN et al.",
+    "year": "2019",
+    "journal": "Biotechnology journal",
+    "abstract": "Lysyl oxidase (LOX)-mediated collagen crosslinking can regulate osteoblastic phenotype and enhance mechanical properties of tissues, both areas of interest in bone tissue engineering. The objective of this study is to investigate the effect of lysyl oxidase-like 2 (LOXL2) on osteogenic differentiation of mesenchymal stem cells (MSCs) cultured in perfusion bioreactors, enzymatic collagen crosslink formation in the extracellular matrix (ECM), and mechanical properties of engineered bone grafts. Exogenous LOXL2 to MSCs seeded in composite scaffolds under perfusion culture for up to 28 days is administered. Constructs treated with LOXL2 appear brown in color and possess greater DNA content and osteogenic potential measured by a twofold increase in bone sialoprotein gene expression. Collagen expression of LOXL2-treated scaffolds is lower than untreated controls. Functional outputs such as calcium deposition, osteocalcin expression, and compressive modulus are unaffected by LOXL2 supplementation. Excitingly, LOXL2-treated constructs contain 1.8- and 1.4-times more pyridinoline (PYD) crosslinks per mole of collagen and per wet weight, respectively, than untreated constructs. Despite these increases, compressive moduli of LOXL2-treated constructs are similar to untreated constructs over the 28-day culture duration. This is the first report of LOXL2 application to engineered, three-dimensional bony constructs. The results suggest a potentially new strategy for engineering osteogenic grafts with a mature ECM by modulating crosslink formation.",
+    "query": "LOX lysyl oxidase calcium regulation",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/30052320/"
+  },
+  {
+    "pmid": "37298730",
+    "title": "CD11b Deficiency Favors Cartilage Calcification via Increased Matrix Vesicles, Apoptosis, and Lysyl Oxidase Activity.",
+    "authors": "Bernabei I, Hansen U, Ehirchiou D et al.",
+    "year": "2023",
+    "journal": "International journal of molecular sciences",
+    "abstract": "Pathological cartilage calcification is a hallmark feature of osteoarthritis, a common degenerative joint disease, characterized by cartilage damage, progressively causing pain and loss of movement. The integrin subunit CD11b was shown to play a protective role against cartilage calcification in a mouse model of surgery-induced OA. Here, we investigated the possible mechanism by which CD11b deficiency could favor cartilage calcification by using na\u00efve mice. First, we found by transmission electron microscopy (TEM) that CD11b KO cartilage from young mice presented early calcification spots compared with WT. CD11b KO cartilage from old mice showed progression of calcification areas. Mechanistically, we found more calcification-competent matrix vesicles and more apoptosis in both cartilage and chondrocytes isolated from CD11b-deficient mice. Additionally, the extracellular matrix from cartilage lacking the integrin was dysregulated with increased collagen fibrils with smaller diameters. Moreover, we revealed by TEM that CD11b KO cartilage had increased expression of lysyl oxidase (LOX), the enzyme that catalyzes matrix crosslinks. We confirmed this in murine primary CD11b KO chondrocytes, where Lox gene expression and crosslinking activity were increased. Overall, our results suggest that CD11b integrin regulates cartilage calcification through reduced MV release, apoptosis, LOX activity, and matrix crosslinking. As such, CD11b activation might be a key pathway for maintaining cartilage integrity.",
+    "query": "LOX lysyl oxidase calcium regulation",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/37298730/"
+  },
+  {
+    "pmid": "38164183",
+    "title": "S100A4 Is a Key Facilitator of Thoracic Aortic Dissection.",
+    "authors": "Shi J, Yu W, Liang C et al.",
+    "year": "2024",
+    "journal": "International journal of biological sciences",
+    "abstract": "Background: Thoracic aortic dissection (TAD) is one of the cardiovascular diseases with high incidence and fatality rates. Vascular smooth muscle cells (VSMCs) play a vital role in TAD formation. Recent studies have shown that extracellular S100A4 may participate in VSMCs regulation. However, the mechanism(s) underlying this association remains elusive. Consequently, this study investigated the role of S100A4 in VSMCs regulation and TAD formation. Methods: Hub genes were screened based on the transcriptome data of aortic dissection in the Gene Expression Synthesis database. Three-week-old male S100A4 overexpression (AAV9- S100A4 OE) and S100A4 knockdown (AAV9- S100A4 KD) mice were exposed to \u03b2-aminopropionitrile monofumarate through drinking water for 28 days to create the murine TAD model. Results: S100A4 was observed to be the hub gene in aortic dissection. Furthermore, overexpression of S100A4 was exacerbated, whereas inhibition of S100A4 significantly improved TAD progression. In the TAD model, the S100A4 was observed to aggravate the phenotypic transition of VSMCs. Additionally, lysyl oxidase (LOX) was an important target of S100A4 in TAD. S100A4 interacted with LOX in VSMCs, reduced mature LOX (m-LOX), and decreased elastic fiber deposition, thereby disrupting extracellular matrix homeostasis and promoting TAD development. Elastic fiber deposition in human aortic tissues was negatively correlated with the expression of S100A4, which in turn, was negatively correlated with LOX. Conclusions: Our data showed that S100A4 modulates TADprogression, induces lysosomal degradation of m-LOX, and reduces the deposition of elastic fibers by interacting with LOX, thus contributing to the disruption of extracellular matrix homeostasis in TAD. These findings suggest that S100A4 may be a new target for the prevention and treatment of TAD.",
+    "query": "LOX lysyl oxidase calcium regulation",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/38164183/"
+  },
+  {
+    "pmid": "28411253",
+    "title": "A new path to platelet production through matrix sensing.",
+    "authors": "Abbonante V, Di Buduo CA, Gruppi C et al.",
+    "year": "2017",
+    "journal": "Haematologica",
+    "abstract": "Megakaryocytes (MK) in the bone marrow (BM) are immersed in a network of extracellular matrix components that regulates platelet release into the circulation. Combining biological and bioengineering approaches, we found that the activation of transient receptor potential cation channel subfamily V member 4 (TRPV4), a mechano-sensitive ion channel, is induced upon MK adhesion on softer matrices. This response promoted platelet production by triggering a cascade of events that lead to calcium influx, \u03b21 integrin activation and internalization, and Akt phosphorylation, responses not found on stiffer matrices. Lysyl oxidase (LOX) is a physiological modulator of BM matrix stiffness via collagen crosslinking. In vivo inhibition of LOX and consequent matrix softening lead to TRPV4 activation cascade and increased platelet levels. At the same time, in vitro proplatelet formation was reduced on a recombinant enzyme-mediated stiffer collagen. These results suggest a novel mechanism by which MKs, through TRPV4, sense extracellular matrix environmental rigidity and release platelets accordingly.",
+    "query": "LOX lysyl oxidase calcium regulation",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/28411253/"
+  },
+  {
+    "pmid": "30338930",
+    "title": "MAGP-1 and fibronectin control EGFL7 functions by driving its deposition into distinct endothelial extracellular matrix locations.",
+    "authors": "Villain G, Lelievre E, Broekelmann T et al.",
+    "year": "2018",
+    "journal": "The FEBS journal",
+    "abstract": "The extracellular matrix (ECM) is essential to provide mechanical support to tissues but is also a bioactive edifice which controls cell behavior. Cell signaling generated by ECM components through integrin-mediated contacts, modulates cell biological activity. In addition, by sequestrating or releasing growth factors, the ECM is an active player of physiological and pathological processes such as vascular development. EGFL7 is mainly expressed during blood vessel development and is deposited in the ECM after secretion by endothelial cells. While EGFL7 is known to control various endothelial cell molecular mechanisms [i.e., the repression of endothelial-derived lysyl oxidase (LOX) enzyme, the regulation of the Notch pathway, and the expression of leukocyte adhesion molecules and of RHOA by endothelial cells], it is not established whether EGFL7 functions when bound to the ECM. Here, we show that microfibrillar-associated glycoprotein-1 (MAGP-1) and fibronectin drive the deposition of EGFL7 into both fibers and individual aggregates in endothelial ECM. Although EGFL7 does not need to be docked into the ECM to control endothelial adhesion molecule expression, the ECM accumulation of EGFL7 is required for its regulation of LOX activity and of HEY2 expression along the Notch pathway. The interaction of EGFL7 with MAGP-1 is necessary for LOX activity repression by EGFL7 while it does not participate in the control of the Notch pathway by this protein. Altogether, this study highlights the roles played by EGFL7 in controlling various endothelial molecular mechanisms upon its localization and shows how the ECM can modulate its functions.",
+    "query": "LOX lysyl oxidase calcium regulation",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/30338930/"
+  },
+  {
+    "pmid": "35436337",
+    "title": "Liver tumor-initiating cells initiate the formation of a stiff cancer stem cell microenvironment niche by secreting LOX.",
+    "authors": "Zhao W, Lv M, Yang X et al.",
+    "year": "2022",
+    "journal": "Carcinogenesis",
+    "abstract": "Accumulating evidence has shown that the traits of tumor-initiating cells (TICs) are controlled by the microenvironment niches (MENs), but the composition and remodeling mechanisms of the MENs of TICs are poorly defined. Here, we report that the voltage-gated calcium channel \u03b12\u03b41 subunit-positive TICs of hepatocellular carcinoma (HCC) specifically secret lysyl oxidase (LOX), which leads to the cross-linking of collagen, forming a stiff extracellular matrix (ECM) that is sufficient to drive the formation of TICs with a stiff mechanical trait and is subsequently required for the maintenance the properties of HCC TICs. Furthermore, the cross-linked collagen results in the upregulation of integrin \u03b17 (ITGA7), increased phosphorylation of FAK and extracellular signal-regulated kinase 1/2 (ERK1/2). Inhibition of ITGA7 abolishes all the effects of cross-linked collagen mediated by LOX. Hence, the \u03b12\u03b41+ HCC TICs initiate ECM remodeling by secreting LOX to create a stiff MEN of TIC with cross-linked collagen, which drives the acquisition and subsequent maintenance of the properties of HCC TICs through ITGA7-FAK-ERK1/2 signaling pathway.",
+    "query": "LOX lysyl oxidase calcium regulation",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/35436337/"
+  },
+  {
+    "pmid": "32321307",
+    "title": "Excessive EP4 Signaling in Smooth Muscle Cells Induces Abdominal Aortic Aneurysm by Amplifying Inflammation.",
+    "authors": "Hiromi T, Yokoyama U, Kurotaki D et al.",
+    "year": "2020",
+    "journal": "Arteriosclerosis, thrombosis, and vascular biology",
+    "abstract": "Excessive prostaglandin E2 production is a hallmark of abdominal aortic aneurysm (AAA). Enhanced expression of prostaglandin E2 receptor EP4 (prostaglandin E receptor 4) in vascular smooth muscle cells (VSMCs) has been demonstrated in human AAAs. Although moderate expression of EP4 contributes to vascular homeostasis, the roles of excessive EP4 in vascular pathology remain uncertain. We aimed to investigate whether EP4 overexpression in VSMCs exacerbates AAAs. Approach and Results: We constructed mice with EP4 overexpressed selectively in VSMCs under an SM22\u03b1 promoter (EP4-Tg). Most EP4-Tg mice died within 2 weeks of Ang II (angiotensin II) infusion due to AAA, while nontransgenic mice given Ang II displayed no overt phenotype. EP4-Tg developed much larger AAAs than nontransgenic mice after periaortic CaCl2 application. In contrast, EP4fl/+;SM22-Cre;ApoE-/- and EP4fl/+;SM22-Cre mice, which are EP4 heterozygous knockout in VSMCs, rarely exhibited AAA after Ang II or CaCl2 treatment, respectively. In Ang II-infused EP4-Tg aorta, Ly6Chi inflammatory monocyte/macrophage infiltration and MMP-9 (matrix metalloprotease-9) activation were enhanced. An unbiased analysis revealed that EP4 stimulation positively regulated the genes binding cytokine receptors in VSMCs, in which IL (interleukin)-6 was the most strongly upregulated. In VSMCs of EP4-Tg and human AAAs, EP4 stimulation caused marked IL-6 production via TAK1 (transforming growth factor-\u03b2-activated kinase 1), NF-\u03baB (nuclear factor-kappa B), JNK (c-Jun N-terminal kinase), and p38. Inhibition of IL-6 prevented Ang II-induced AAA formation in EP4-Tg. In addition, EP4 stimulation decreased elastin/collagen cross-linking protein LOX (lysyl oxidase) in both human and mouse VSMCs.",
+    "query": "LOX lysyl oxidase calcium regulation",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/32321307/"
+  },
+  {
+    "pmid": "31646525",
+    "title": "Calcium Signaling and Gene Expression.",
+    "authors": "Puri BK",
+    "year": "2020",
+    "journal": "Advances in experimental medicine and biology",
+    "abstract": "Calcium signaling plays an important role in gene expression. At the transcriptional level, this may underpin mammalian neuronal synaptic plasticity. Calcium influx into the postsynaptic neuron via: N-methyl-D-aspartate (NMDA) receptors activates small GTPase Rac1 and other Rac guanine nucleotide exchange factors, and stimulates calmodulin-dependent kinase kinase (CaMKK) and CaMKI; \u03b1-amino-3-hydroxy-5-methyl-4-isoxazolepropionic acid receptors that are not impermeable to calcium ions, that is, those lacking the glutamate receptor-2 subunits, leads to activation of Ras guanine nucleotide-releasing factor proteins, which is coupled with activation of the mitogen-activated protein kinases/extracellular signal-regulated kinases signaling cascade; L-type voltage-gated calcium channels activates signaling pathways involving CaMKII, downstream responsive element antagonist modulator and distinct microdomains. Key members of these signaling cascades then translocate into the nucleus, where they alter the expression of genes involved in neuronal synaptic plasticity. At the post-transcriptional level, intracellular calcium level changes can change alternative splicing patterns; in the mammalian brain, alterations in calcium signaling via NMDA receptors is associated with exon silencing of the CI cassette of the NMDA R1 receptor (GRIN1) transcript by UAGG motifs in response to neuronal excitation. Regulation also occurs at the translational level; transglutaminase-2 (TG2) mediates calcium ion-regulated crosslinking of Y-box binding protein-1 (YB-1) translation-regulatory protein in TGF\u03b21-activated myofibroblasts; YB-1 binds smooth muscle \u03b1-actin mRNA and regulates its translational activity. Calcium signaling is also important in epigenetic regulation, for example in respect of changes in cytosine bases. Targeting calcium signaling may provide therapeutically useful options, for example to induce epigenetic reactivation of tumor suppressor genes in cancer patients.",
+    "query": "transglutaminase calcium calmodulin",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/31646525/"
+  },
+  {
+    "pmid": "38002659",
+    "title": "Protein Biomarkers Shared by Multiple Neurodegenerative Diseases Are Calmodulin-Binding Proteins Offering Novel and Potentially Universal Therapeutic Targets.",
+    "authors": "O'Day DH",
+    "year": "2023",
+    "journal": "Journal of clinical medicine",
+    "abstract": "Seven major neurodegenerative diseases and their variants share many overlapping biomarkers that are calmodulin-binding proteins: Alzheimer's disease (AD), amyotrophic lateral sclerosis (ALS), frontotemporal lobar dementia (FTD), Huntington's disease (HD), Lewy body disease (LBD), multiple sclerosis (MS), and Parkinson's disease (PD). Calcium dysregulation is an early and persistent event in each of these diseases, with calmodulin serving as an initial and primary target of increased cytosolic calcium. Considering the central role of calcium dysregulation and its downstream impact on calcium signaling, calmodulin has gained interest as a major regulator of neurodegenerative events. Here, we show that calmodulin serves a critical role in neurodegenerative diseases via binding to and regulating an abundance of biomarkers, many of which are involved in multiple neurodegenerative diseases. Of special interest are the shared functions of calmodulin in the generation of protein biomarker aggregates in AD, HD, LBD, and PD, where calmodulin not only binds to amyloid beta, pTau, alpha-synuclein, and mutant huntingtin but also, via its regulation of transglutaminase 2, converts them into toxic protein aggregates. It is suggested that several calmodulin binding proteins could immediately serve as primary drug targets, while combinations of calmodulin binding proteins could provide simultaneous insight into the onset and progression of multiple neurodegenerative diseases.",
+    "query": "transglutaminase calcium calmodulin",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/38002659/"
+  },
+  {
+    "pmid": "39769187",
+    "title": "The Search for a Universal Treatment for Defined and Mixed Pathology Neurodegenerative Diseases.",
+    "authors": "O'Day DH",
+    "year": "2024",
+    "journal": "International journal of molecular sciences",
+    "abstract": "The predominant neurodegenerative diseases, Alzheimer's disease, Parkinson's disease, dementia with Lewy Bodies, Huntington's disease, amyotrophic lateral sclerosis, and frontotemporal dementia, are rarely pure diseases but, instead, show a diversity of mixed pathologies. At some level, all of them share a combination of one or more different toxic biomarker proteins: amyloid beta (A\u03b2), phosphorylated Tau (pTau), alpha-synuclein (\u03b1Syn), mutant huntingtin (mHtt), fused in sarcoma, superoxide dismutase 1, and TAR DNA-binding protein 43. These toxic proteins share some common attributes, making them potentially universal and simultaneous targets for therapeutic intervention. First, they all form toxic aggregates prior to taking on their final forms as contributors to plaques, neurofibrillary tangles, Lewy bodies, and other protein deposits. Second, the primary enzyme that directs their aggregation is transglutaminase 2 (TGM2), a brain-localized enzyme involved in neurodegeneration. Third, TGM2 binds to calmodulin, a regulatory event that can increase the activity of this enzyme threefold. Fourth, the most common mixed pathology toxic biomarkers (A\u03b2, pTau, \u03b1Syn, nHtt) also bind calmodulin, which can affect their ability to aggregate. This review examines the potential therapeutic routes opened up by this knowledge. The end goal reveals multiple opportunities that are immediately available for universal therapeutic treatment of the most devastating neurodegenerative diseases facing humankind.",
+    "query": "transglutaminase calcium calmodulin",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39769187/"
+  },
+  {
+    "pmid": "25681078",
+    "title": "Characterization and identification of calmodulin and calmodulin binding proteins in hemocyte of the black tiger shrimp (Penaeus monodon).",
+    "authors": "Sengprasert P, Amparyup P, Tassanakajorn A et al.",
+    "year": "2015",
+    "journal": "Developmental and comparative immunology",
+    "abstract": "Calmodulin (CaM), a ubiquitous intracellular calcium (Ca(2+)) sensor in all eukaryotic cells, is one of the well-known signaling proteins. Previously, CaM gene has shown a high transcriptional level in hemocyte of the pathogen infected shrimp, suggesting that shrimp CaM does not only regulate Ca(2+) metabolism, but is also involved in immune response cascade. In the present study, the CaM gene of shrimp Penaeus monodon was identified and the recombinant P.monodon CaM (rPmCaM) was produced and biochemically characterized. The identification of CaM-binding proteins was also performed. The PmCaM cDNA consisted of an open reading frame of 447 bp encoding for 149 amino acid residues with a calculated mass of 16,810 Da and an isoelectric point of 4.09. Tissue distribution showed that the PmCaM transcript was expressed in all examined tissues. The results of gel mobility shift assay, circular dichroism spectroscopy and fluorescence spectroscopy all confirmed that the conformational changes of the rPmCaM were observed after the calcium binding. According to the gene silencing of PmCaM transcript levels, the shrimp's susceptibility to pathogenic Vibrio harveyi infection increased in comparison with that of the control groups. Protein pull-down assay and LC-MS/MS analysis were performed to identify rPmCaM-binding proteins involved in shrimp immune responses and transglutaminase, elongation factor 1-alpha, elongation factor 2 and actin were found. However, by computational analysis, only the first three proteins contained CaM-binding domain. These findings suggested that PmCaM may play an important role in regulation of shrimp immune system.",
+    "query": "transglutaminase calcium calmodulin",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/25681078/"
+  },
+  {
+    "pmid": "40173153",
+    "title": "The calmodulin hypothesis of neurodegenerative diseases: searching for a common cure.",
+    "authors": "O'Day DH",
+    "year": "2025",
+    "journal": "Neurodegenerative disease management",
+    "abstract": "N/A",
+    "query": "transglutaminase calcium calmodulin",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40173153/"
+  },
+  {
+    "pmid": "33921488",
+    "title": "Plasmin and Plasminogen System in the Tumor Microenvironment: Implications for Cancer Diagnosis, Prognosis, and Therapy.",
+    "authors": "Bharadwaj AG, Holloway RW, Miller VA et al.",
+    "year": "2021",
+    "journal": "Cancers",
+    "abstract": "The tumor microenvironment (TME) is now being widely accepted as the key contributor to a range of processes involved in cancer progression from tumor growth to metastasis and chemoresistance. The extracellular matrix (ECM) and the proteases that mediate the remodeling of the ECM form an integral part of the TME. Plasmin is a broad-spectrum, highly potent, serine protease whose activation from its precursor plasminogen is tightly regulated by the activators (uPA, uPAR, and tPA), the inhibitors (PAI-1, PAI-2), and plasminogen receptors. Collectively, this system is called the plasminogen activation system. The expression of the components of the plasminogen activation system by malignant cells and the surrounding stromal cells modulates the TME resulting in sustained cancer progression signals. In this review, we provide a detailed discussion of the roles of plasminogen activation system in tumor growth, invasion, metastasis, and chemoresistance with specific emphasis on their role in the TME. We particularly review the recent highlights of the plasminogen receptor S100A10 (p11), which is a pivotal component of the plasminogen activation system.",
+    "query": "S100A10 ECM remodeling",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/33921488/"
+  },
+  {
+    "pmid": "33160379",
+    "title": "Membranous S100A10 involvement in the tumor budding of colorectal cancer during oncogenesis: report of two cases with immunohistochemical analysis.",
+    "authors": "Arai K, Ishimatsu H, Iwasaki T et al.",
+    "year": "2020",
+    "journal": "World journal of surgical oncology",
+    "abstract": "Tumor budding (TB) and poorly differentiated clusters (PDCs) are a sequence of histologic findings that predict worse prognosis and node metastasis in colorectal cancer (CRC). TB and PDC (TB/PDC) are caused by cancer cell detachment and are distinguished by the number of cancer cells that constitute a cell cluster. In short, PDC is regarded as the previous step of TB. TB/PDC and epithelial-mesenchymal transition (EMT) are closely linked, but its pathogenic mechanisms are still unclear. S100A10, a member of the S100 protein family, forms a heterocomplex with annexin A2 (ANX A2) and then translocates to cell membrane from the cytoplasm and plays various roles in cell dynamics, including plasminogen activation. S100A10 is the activation modulator of the heterocomplex and promotes cell invasion. S100A10 is involved in the remodeling of both actin and extracellular matrix (ECM), which is also associated with EMT.",
+    "query": "S100A10 ECM remodeling",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/33160379/"
+  },
+  {
+    "pmid": "30071357",
+    "title": "Towards frailty biomarkers: Candidates from genes and pathways regulated in aging and age-related diseases.",
+    "authors": "Cardoso AL, Fernandes A, Aguilar-Pimentel JA et al.",
+    "year": "2018",
+    "journal": "Ageing research reviews",
+    "abstract": "Use of the frailty index to measure an accumulation of deficits has been proven a valuable method for identifying elderly people at risk for increased vulnerability, disease, injury, and mortality. However, complementary molecular frailty biomarkers or ideally biomarker panels have not yet been identified. We conducted a systematic search to identify biomarker candidates for a frailty biomarker panel.",
+    "query": "S100B aging fibrosis",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/30071357/"
+  },
+  {
+    "pmid": "38069357",
+    "title": "Calcium's Role and Signaling in Aging Muscle, Cellular Senescence, and Mineral Interactions.",
+    "authors": "Terrell K, Choi S, Choi S",
+    "year": "2023",
+    "journal": "International journal of molecular sciences",
+    "abstract": "Calcium research, since its pivotal discovery in the early 1800s through the heating of limestone, has led to the identification of its multi-functional roles. These include its functions as a reducing agent in chemical processes, structural properties in shells and bones, and significant role in cells relating to this review: cellular signaling. Calcium signaling involves the movement of calcium ions within or between cells, which can affect the electrochemical gradients between intra- and extracellular membranes, ligand binding, enzyme activity, and other mechanisms that determine cell fate. Calcium signaling in muscle, as elucidated by the sliding filament model, plays a significant role in muscle contraction. However, as organisms age, alterations occur within muscle tissue. These changes include sarcopenia, loss of neuromuscular junctions, and changes in mineral concentration, all of which have implications for calcium's role. Additionally, a field of study that has gained recent attention, cellular senescence, is associated with aging and disturbed calcium homeostasis, and is thought to affect sarcopenia progression. Changes seen in calcium upon aging may also be influenced by its crosstalk with other minerals such as iron and zinc. This review investigates the role of calcium signaling in aging muscle and cellular senescence. We also aim to elucidate the interactions among calcium, iron, and zinc across various cells and conditions, ultimately deepening our understanding of calcium signaling in muscle aging.",
+    "query": "calcium signaling tissue aging",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/38069357/"
+  },
+  {
+    "pmid": "39603237",
+    "title": "Mitochondrial calcium uptake declines during aging and is directly activated by oleuropein to boost energy metabolism and skeletal muscle performance.",
+    "authors": "Gherardi G, Weiser A, Bermont F et al.",
+    "year": "2025",
+    "journal": "Cell metabolism",
+    "abstract": "Mitochondrial calcium (mtCa2+) uptake via the mitochondrial calcium uniporter (MCU) couples calcium homeostasis and energy metabolism. mtCa2+ uptake via MCU is rate-limiting for mitochondrial activation during muscle contraction, but its pathophysiological role and therapeutic application remain largely uncharacterized. By profiling human muscle biopsies, patient-derived myotubes, and preclinical models, we discovered a conserved downregulation of mitochondrial calcium uniporter regulator 1 (MCUR1) during skeletal muscle aging that associates with human sarcopenia and impairs mtCa2+ uptake and mitochondrial respiration. Through a screen of 5,000 bioactive molecules, we identify the natural polyphenol oleuropein as a specific MCU activator that stimulates mitochondrial respiration via mitochondrial calcium uptake 1 (MICU1) binding. Oleuropein activates mtCa2+ uptake and energy metabolism to enhance endurance and reduce fatigue in young and aged mice but not in muscle-specific MCU knockout (KO) mice. Our work demonstrates that impaired mtCa2+ uptake contributes to mitochondrial dysfunction during aging and establishes oleuropein as a novel food-derived molecule that specifically targets MCU to stimulate mitochondrial bioenergetics and muscle performance.",
+    "query": "calcium signaling tissue aging",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39603237/"
+  },
+  {
+    "pmid": "38629274",
+    "title": "Orphan Nuclear Receptor NR4A3 Promotes Vascular Calcification via Histone Lactylation.",
+    "authors": "Ma W, Jia K, Cheng H et al.",
+    "year": "2024",
+    "journal": "Circulation research",
+    "abstract": "Medial arterial calcification is a chronic systemic vascular disorder distinct from atherosclerosis and is commonly observed in patients with chronic kidney disease, diabetes, and aging individuals. We previously showed that NR4A3 (nuclear receptor subfamily 4 group A member 3), an orphan nuclear receptor, is a key regulator in apo (apolipoprotein) A-IV-induced atherosclerosis progression; however, its role in vascular calcification is poorly understood.",
+    "query": "calcium signaling tissue aging",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/38629274/"
+  },
+  {
+    "pmid": "40818454",
+    "title": "Fibroblast bioelectric signaling drives hair growth.",
+    "authors": "Chen D, Yu Z, Wu W et al.",
+    "year": "2025",
+    "journal": "Cell",
+    "abstract": "Hair loss affects millions globally, significantly impacting quality of life and psychological well-being. Despite its prevalence, effective strategies for promoting human hair growth remain elusive. By investigating congenital generalized hypertrichosis terminalis (CGHT), a rare genetic disorder characterized by excessive hair growth, we discover that chromatin deletions or an inverted duplication disrupt the topologically associating domain (TAD), leading to the upregulation of the potassium channel KCNJ2 in dermal fibroblasts. Mouse genetics demonstrate that KCNJ2-mediated membrane hyperpolarization in dermal fibroblasts promotes hair growth by enhancing fibroblasts Wnt signaling responses, involving a reduction in intracellular calcium levels. Notably, fibroblast membrane potential oscillates during the normal hair cycle, with hyperpolarization specifically associated with the growth phase. Inducing fibroblast membrane depolarization delays the growth phase, while KCNJ2-mediated hyperpolarization rescues hair loss in aging and androgenetic alopecia models. These results uncover a previously unrecognized role of fibroblast bioelectricity in tissue regeneration, offering novel therapeutic avenues for hair loss treatment.",
+    "query": "calcium signaling tissue aging",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/40818454/"
+  },
+  {
+    "pmid": "31109450",
+    "title": "Endothelial cell senescence in aging-related vascular dysfunction.",
+    "authors": "Jia G, Aroor AR, Jia C et al.",
+    "year": "2019",
+    "journal": "Biochimica et biophysica acta. Molecular basis of disease",
+    "abstract": "Increased cardiovascular disease in aging is partly a consequence of the vascular endothelial cell (EC) senescence and associated vascular dysfunction. In this contest, EC senescence is a pathophysiological process of structural and functional changes including dysregulation of vascular tone, increased endothelium permeability, arterial stiffness, impairment of angiogenesis and vascular repair, and a reduction of EC mitochondrial biogenesis. Dysregulation of cell cycle, oxidative stress, altered calcium signaling, hyperuricemia, and vascular inflammation have been implicated in the development and progression of EC senescence and vascular disease in aging. A number of abnormal molecular pathways are associated with these underlying pathophysiological changes including Sirtuin 1, Klotho, fibroblast growth factor 21, and activation of the renin angiotensin-aldosterone system. However, the molecular mechanisms of EC senescence and associated vascular impairment in aging are not completely understood. This review provides a contemporary update on molecular mechanisms, pathophysiological events, as well functional changes in EC senescence and age-associated cardiovascular disease. This article is part of a Special Issue entitled: Genetic and epigenetic regulation of aging and longevity edited by Jun Ren & Megan Yingmei Zhang.",
+    "query": "calcium signaling tissue aging",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/31109450/"
+  },
+  {
+    "pmid": "29449364",
+    "title": "Diabetic Cardiomyopathy: An Update of Mechanisms Contributing to This Clinical Entity.",
+    "authors": "Jia G, Hill MA, Sowers JR",
+    "year": "2018",
+    "journal": "Circulation research",
+    "abstract": "Heart failure and related morbidity and mortality are increasing at an alarming rate, in large part, because of increases in aging, obesity, and diabetes mellitus. The clinical outcomes associated with heart failure are considerably worse for patients with diabetes mellitus than for those without diabetes mellitus. In people with diabetes mellitus, the presence of myocardial dysfunction in the absence of overt clinical coronary artery disease, valvular disease, and other conventional cardiovascular risk factors, such as hypertension and dyslipidemia, has led to the descriptive terminology, diabetic cardiomyopathy. The prevalence of diabetic cardiomyopathy is increasing in parallel with the increase in diabetes mellitus. Diabetic cardiomyopathy is initially characterized by myocardial fibrosis, dysfunctional remodeling, and associated diastolic dysfunction, later by systolic dysfunction, and eventually by clinical heart failure. Impaired cardiac insulin metabolic signaling, mitochondrial dysfunction, increases in oxidative stress, reduced nitric oxide bioavailability, elevations in advanced glycation end products and collagen-based cardiomyocyte and extracellular matrix stiffness, impaired mitochondrial and cardiomyocyte calcium handling, inflammation, renin-angiotensin-aldosterone system activation, cardiac autonomic neuropathy, endoplasmic reticulum stress, microvascular dysfunction, and a myriad of cardiac metabolic abnormalities have all been implicated in the development and progression of diabetic cardiomyopathy. Molecular mechanisms linked to the underlying pathophysiological changes include abnormalities in AMP-activated protein kinase, peroxisome proliferator-activated receptors, O-linked N-acetylglucosamine, protein kinase C, microRNA, and exosome pathways. The aim of this review is to provide a contemporary view of these instigators of diabetic cardiomyopathy, as well as mechanistically based strategies for the prevention and treatment of diabetic cardiomyopathy.",
+    "query": "calcium signaling tissue aging",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29449364/"
+  },
+  {
+    "pmid": "30321335",
+    "title": "Skeletal and Extraskeletal Actions of Vitamin D: Current Evidence and Outstanding Questions.",
+    "authors": "Bouillon R, Marcocci C, Carmeliet G et al.",
+    "year": "2019",
+    "journal": "Endocrine reviews",
+    "abstract": "The etiology of endemic rickets was discovered a century ago. Vitamin D is the precursor of 25-hydroxyvitamin D and other metabolites, including 1,25(OH)2D, the ligand for the vitamin D receptor (VDR). The effects of the vitamin D endocrine system on bone and its growth plate are primarily indirect and mediated by its effect on intestinal calcium transport and serum calcium and phosphate homeostasis. Rickets and osteomalacia can be prevented by daily supplements of 400 IU of vitamin D. Vitamin D deficiency (serum 25-hydroxyvitamin D <50 nmol/L) accelerates bone turnover, bone loss, and osteoporotic fractures. These risks can be reduced by 800 IU of vitamin D together with an appropriate calcium intake, given to institutionalized or vitamin D-deficient elderly subjects. VDR and vitamin D metabolic enzymes are widely expressed. Numerous genetic, molecular, cellular, and animal studies strongly suggest that vitamin D signaling has many extraskeletal effects. These include regulation of cell proliferation, immune and muscle function, skin differentiation, and reproduction, as well as vascular and metabolic properties. From observational studies in human subjects, poor vitamin D status is associated with nearly all diseases predicted by these extraskeletal actions. Results of randomized controlled trials and Mendelian randomization studies are supportive of vitamin D supplementation in reducing the incidence of some diseases, but, globally, conclusions are mixed. These findings point to a need for continued ongoing and future basic and clinical studies to better define whether vitamin D status can be optimized to improve many aspects of human health. Vitamin D deficiency enhances the risk of osteoporotic fractures and is associated with many diseases. We review what is established and what is plausible regarding the health effects of vitamin D.",
+    "query": "calcium signaling tissue aging",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/30321335/"
+  },
+  {
+    "pmid": "30842316",
+    "title": "Activin type II receptor signaling in cardiac aging and heart failure.",
+    "authors": "Roh JD, Hobson R, Chaudhari V et al.",
+    "year": "2019",
+    "journal": "Science translational medicine",
+    "abstract": "Activin type II receptor (ActRII) ligands have been implicated in muscle wasting in aging and disease. However, the role of these ligands and ActRII signaling in the heart remains unclear. Here, we investigated this catabolic pathway in human aging and heart failure (HF) using circulating follistatin-like 3 (FSTL3) as a potential indicator of systemic ActRII activity. FSTL3 is a downstream regulator of ActRII signaling, whose expression is up-regulated by the major ActRII ligands, activin A, circulating growth differentiation factor-8 (GDF8), and GDF11. In humans, we found that circulating FSTL3 increased with aging, frailty, and HF severity, correlating with an increase in circulating activins. In mice, increasing circulating activin A increased cardiac ActRII signaling and FSTL3 expression, as well as impaired cardiac function. Conversely, ActRII blockade with either clinical-stage inhibitors or genetic ablation reduced cardiac ActRII signaling while restoring or preserving cardiac function in multiple models of HF induced by aging, sarcomere mutation, or pressure overload. Using unbiased RNA sequencing, we show that activin A, GDF8, and GDF11 all induce a similar pathologic profile associated with up-regulation of the proteasome pathway in mammalian cardiomyocytes. The E3 ubiquitin ligase, Smurf1, was identified as a key downstream effector of activin-mediated ActRII signaling, which increased proteasome-dependent degradation of sarcoplasmic reticulum Ca2+ ATPase (SERCA2a), a critical determinant of cardiomyocyte function. Together, our findings suggest that increased activin/ActRII signaling links aging and HF pathobiology and that targeted inhibition of this catabolic pathway holds promise as a therapeutic strategy for multiple forms of HF.",
+    "query": "calcium signaling tissue aging",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/30842316/"
+  },
+  {
+    "pmid": "32266417",
+    "title": "Phosphate Metabolism in Health and Disease.",
+    "authors": "Peacock M",
+    "year": "2021",
+    "journal": "Calcified tissue international",
+    "abstract": "Phosphorus, a 5A element with atomic weight of 31, comprises just over 0.6% of the composition by weight of plants and animals. Three isotopes are available for studying phosphorus metabolism and kinetics. 31P is stable, whereas the radioactive isotope 33P has a half-life of 25\u00a0days and 32P has a half-life of 14\u00a0days. Phosphate ester and phosphoanhydride are common chemical linkages and phosphorus is a key element in organic molecules involved in a wide variety of essential cellular functions. These include biochemical energy transfer via adenosine triphosphate (ATP), maintenance of genetic information with nucleotides DNA and RNA, intracellular signaling via cyclic adenosine monophosphate (cAMP), and membrane structural integrity via glycerophospholipids. However, this review focuses on the metabolism of inorganic phosphorus (Pi) acting as a weak acid. Phosphoric acid has all three hydrogens attached to oxygen and is a weak diprotic acid. It has 3 pKa values: pH 2.2, pH 7.2, and pH 12.7. At physiological pH of 7.4, Pi exists as both H2PO4(-) and HPO4(2-) and acts as an extracellular fluid (ECF) buffer. Pi is the form transported across tissue compartments and cells. Measurement of Pi in biological fluids is based on its reaction with ammonium molybdate which does not measure organic phosphorus. In humans, 80% of the body phosphorus is present in the form of calcium phosphate crystals (apatite) that confer hardness to bone and teeth, and function as the major phosphorus reservoir (Fig.\u00a01). The remainder is present in soft tissues and ECF. Dietary phosphorus, comprising both inorganic and organic forms, is digested in the upper gastrointestinal tract. Absorbed Pi is transported to and from bone, skeletal muscle and soft tissues, and kidney at rates determined by ECF Pi concentration, rate of blood flow, and activity of cell Pi transporters (Fig.\u00a02). During growth, there is net accretion of phosphorus, and with aging, net loss of phosphorus occurs. The bone phosphorus reservoir is depleted and repleted by overall phosphorus requirement. Skeletal muscle is rich in phosphorus used in essential biochemical energy transfer. Kidney is the main regulator of ECF Pi concentration by virtue of having a tubular maximum reabsorptive capacity for Pi (TmPi) that is under close endocrine control. It is also the main excretory pathway for Pi surplus which is passed in urine. Transcellular and paracellular Pi transports are performed by a number of transport mechanisms widely distributed in tissues, and particularly important in gut, bone, and kidney. Pi transporters are regulated by a hormonal axis comprising fibroblast growth factor 23 (FGF23), parathyroid hormone (PTH), and 1,25 dihydroxy vitamin D (1,25D). Pi and calcium (Ca) metabolism are intimately interrelated, and clinically neither can be considered in isolation. Diseases of Pi metabolism affect bone as osteomalacia/rickets, soft tissues as ectopic mineralization, skeletal muscle as myopathy, and kidney as nephrocalcinosis and urinary stone formation. Fig. 1 Content of phosphorus in human adult: skeleton, soft tissue, and extracellular fluid (grams, log scale). Corresponding data for calcium are shown for comparison Fig. 2 Phosphate (Pi) transport to and from tissue compartments in mg/24\u00a0h. At a dietary phosphorus of 1400\u00a0mg, 1120\u00a0mg is absorbed in upper intestine to the ECF, 210\u00a0mg returned to intestine by endogenous secretion, resulting in 910\u00a0mg net Pi absorption and 490\u00a0mg fecal excretion. At bone, 180\u00a0mg is deposited by bone formation and 180\u00a0mg return to the ECF by bone resorption. At kidney, 5040\u00a0mg is filtered at the glomerulus and 4130\u00a0mg return to the ECF by tubular reabsorption with 910\u00a0mg excreted in the urine. In soft tissue, Pi is exchanged between ECF and cells.",
+    "query": "calcium signaling tissue aging",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/32266417/"
+  },
+  {
+    "pmid": "31138543",
+    "title": "Calcium Signaling and Tissue Calcification.",
+    "authors": "Proudfoot D",
+    "year": "2019",
+    "journal": "Cold Spring Harbor perspectives in biology",
+    "abstract": "Calcification is a regulated physiological process occurring in bones and teeth. However, calcification is commonly found in soft tissues in association with aging and in a variety of diseases. Over the last two decades, it has emerged that calcification occurring in diseased arteries is not simply an inevitable build-up of insoluble precipitates of calcium phosphate. In some cases, it is an active process in which transcription factors drive conversion of vascular cells to an osteoblast or chondrocyte-like phenotype, with the subsequent production of mineralizing \"matrix vesicles.\" Early studies of bone and cartilage calcification suggested roles for cellular calcium signaling in several of the processes involved in the regulation of bone calcification. Similarly, calcium signaling has recently been highlighted as an important component in the mechanisms regulating pathological calcification. The emerging hypothesis is that ectopic/pathological calcification occurs in tissues in which there is an imbalance in the regulatory mechanisms that actively prevent calcification. This review highlights the various ways that calcium signaling regulates tissue calcification, with a particular focus on pathological vascular calcification.",
+    "query": "calcium signaling tissue aging",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/31138543/"
+  },
+  {
+    "pmid": "35255899",
+    "title": "Cyanidin 3-O-arabinoside suppresses DHT-induced dermal papilla cell senescence by modulating p38-dependent ER-mitochondria contacts.",
+    "authors": "Jung YH, Chae CW, Choi GE et al.",
+    "year": "2022",
+    "journal": "Journal of biomedical science",
+    "abstract": "Androgenetic alopecia (AGA) is a genetic disorder caused by dihydrotestosterone (DHT), accompanied by the senescence of androgen-sensitive dermal papilla cells (DPCs) located in the base of hair follicles. DHT causes DPC senescence in AGA through mitochondrial dysfunction. However, the mechanism of this pathogenesis remains unknown. In this study, we investigated the protective role of cyanidins on DHT-induced mitochondrial dysfunction and DPC senescence and the regulatory mechanism involved.",
+    "query": "calcium signaling tissue aging",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/35255899/"
+  },
+  {
+    "pmid": "39013850",
+    "title": "Aging aggravates aortic aneurysm and dissection via miR-1204-MYLK signaling axis in mice.",
+    "authors": "Liu ZL, Li Y, Lin YJ et al.",
+    "year": "2024",
+    "journal": "Nature communications",
+    "abstract": "The mechanism by which aging induces aortic aneurysm and dissection (AAD) remains unclear. A total of 430 participants were recruited for the screening of differentially expressed plasma microRNAs (miRNAs). We found that miR-1204 is significantly increased in both the plasma and aorta of elder patients with AAD and is positively correlated with age. Cell senescence induces the expression of miR-1204 through p53 interaction with plasmacytoma variant translocation 1, and miR-1204 induces vascular smooth muscle cell (VSMC) senescence to form a positive feedback loop. Furthermore, miR-1204 aggravates angiotensin II-induced AAD formation, and inhibition of miR-1204 attenuates \u03b2-aminopropionitrile monofumarate-induced AAD development in mice. Mechanistically, miR-1204 directly targets myosin light chain kinase (MYLK), leading to the acquisition of a senescence-associated secretory phenotype (SASP) by VSMCs and loss of their contractile phenotype. MYLK overexpression reverses miR-1204-induced VSMC senescence, SASP and contractile phenotypic changes, and the decrease of transforming growth factor-\u03b2 signaling pathway. Our findings suggest that aging aggravates AAD via the miR-1204-MYLK signaling axis.",
+    "query": "calcium signaling tissue aging",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39013850/"
+  },
+  {
+    "pmid": "39163336",
+    "title": "MICU1 and MICU2 control mitochondrial calcium signaling in the mammalian heart.",
+    "authors": "Hasan P, Berezhnaya E, Rodr\u00edguez-Prados M et al.",
+    "year": "2024",
+    "journal": "Proceedings of the National Academy of Sciences of the United States of America",
+    "abstract": "Activating Ca2+-sensitive enzymes of oxidative metabolism while preventing calcium overload that leads to mitochondrial and cellular injury requires dynamic control of mitochondrial Ca2+ uptake. This is ensured by the mitochondrial calcium uptake (MICU)1/2 proteins that gate the pore of the mitochondrial calcium uniporter (mtCU). MICU1 is relatively sparse in the heart, and recent studies claimed the mammalian heart lacks MICU1 gating of mtCU. However, genetic models have not been tested. We find that MICU1 is present in a complex with MCU in nonfailing human hearts. Furthermore, using murine genetic models and pharmacology, we show that MICU1 and MICU2 control cardiac mitochondrial Ca2+ influx, and that MICU1 deletion alters cardiomyocyte mitochondrial calcium signaling and energy metabolism. MICU1 loss causes substantial compensatory changes in the mtCU composition and abundance, increased turnover of essential MCU regulator (EMRE) early on and, later, of MCU, that limit mitochondrial Ca2+ uptake and allow cell survival. Thus, both the primary consequences of MICU1 loss and the ensuing robust compensation highlight MICU1's relevance in the beating heart.",
+    "query": "calcium signaling tissue aging",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39163336/"
+  },
+  {
+    "pmid": "35777353",
+    "title": "Hedgehog signaling reprograms hair follicle niche fibroblasts to a hyper-activated state.",
+    "authors": "Liu Y, Guerrero-Juarez CF, Xiao F et al.",
+    "year": "2022",
+    "journal": "Developmental cell",
+    "abstract": "Hair follicle stem cells are regulated by dermal papilla fibroblasts, their principal signaling niche. Overactivation of Hedgehog signaling in the niche dramatically accelerates hair growth and induces follicle multiplication in mice. On single-cell RNA sequencing, dermal papilla fibroblasts increase heterogeneity to include new Wnt5ahigh states. Transcriptionally, mutant fibroblasts activate regulatory networks for Gli1, Alx3, Ebf1, Hoxc8, Sox18, and Zfp239. These networks jointly upregulate secreted factors for multiple hair morphogenesis and hair-growth-related pathways. Among these is non-conventional TGF-\u03b2 ligand Scube3. We show that in normal mouse skin, Scube3 is expressed only in dermal papillae of growing, but not in resting follicles. SCUBE3 protein microinjection is sufficient to induce new hair growth, and pharmacological TGF-\u03b2 inhibition rescues mutant hair hyper-activation phenotype. Moreover, dermal-papilla-enriched expression of SCUBE3 and its growth-activating effect are partially conserved in human scalp hair follicles. Thus, Hedgehog regulates mesenchymal niche function in the hair follicle via SCUBE3/TGF-\u03b2 mechanism.",
+    "query": "calcium signaling tissue aging",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/35777353/"
+  },
+  {
+    "pmid": "37284452",
+    "title": "Mechanical force drives the initial mesenchymal-epithelial interaction during skin organoid development.",
+    "authors": "Wang M, Zhou X, Zhou S et al.",
+    "year": "2023",
+    "journal": "Theranostics",
+    "abstract": "Rationale: Stem cells self-organize to form organoids that generate mini-organs that resemble the physiologically-developed ones. The mechanism by which the stem cells acquire the initial potential for generating mini-organs remains elusive. Here we used skin organoids as an example to study how mechanical force drives initial epidermal-dermal interaction which potentiates skin organoids to regenerate hair follicles. Methods: Live imaging analysis, single-cell RNA-sequencing analysis, and immunofluorescence were used to analyze the contractile force of dermal cells in skin organoids. Bulk RNA-sequencing analysis, calcium probe detection, and functional perturbations were used to verify that calcium signaling pathways respond to the contractile force of dermal cells. In vitro mechanical loading experiment was used to prove that the stretching force triggers the epidermal Piezo1 expression which negatively regulates dermal cell attachment. Transplantation assay was used to test the regenerative ability of skin organoids. Results: We found that dermal cell-derived contraction force drives the movement of dermal cells surrounding the epidermal aggregates to trigger initial mesenchymal-epithelial interaction (MEI). In response to dermal cell contraction force, the arrangement of the dermal cytoskeleton was negatively regulated by the calcium signaling pathway which further influences dermal-epidermal attachment. The native contraction force generated from the dermal cell movement exerts a stretching force on the adjacent epidermal cells, activating the stretching force sensor Piezo1 in the epidermal basal cells during organoid culture. Epidermal Piezo1 in turn drives strong MEI to negatively regulate dermal cell attachment. Proper initial MEI by mechanical-chemical coupling during organoid culture is required for hair regeneration upon transplantation of the skin organoids into the back of the nude mice. Conclusion: Our study demonstrated that mechanical-chemical cascade drives the initial event of MEI during skin organoid development, which is fundamental to the organoid, developmental, and regenerative biology fields.",
+    "query": "calcium signaling tissue aging",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/37284452/"
+  },
+  {
+    "pmid": "37277641",
+    "title": "Reduced mitochondrial calcium uptake in macrophages is a major driver of inflammaging.",
+    "authors": "Seegren PV, Harper LR, Downs TK et al.",
+    "year": "2023",
+    "journal": "Nature aging",
+    "abstract": "Mitochondrial dysfunction is linked to age-associated inflammation or inflammaging, but underlying mechanisms are not understood. Analyses of 700 human blood transcriptomes revealed clear signs of age-associated low-grade inflammation. Among changes in mitochondrial components, we found that the expression of mitochondrial calcium uniporter (MCU) and its regulatory subunit MICU1, genes central to mitochondrial Ca2+ (mCa2+) signaling, correlated inversely with age. Indeed, mCa2+ uptake capacity of mouse macrophages decreased significantly with age. We show that in both human and mouse macrophages, reduced mCa2+ uptake amplifies cytosolic Ca2+ oscillations and potentiates downstream nuclear factor kappa B activation, which is central to inflammation. Our findings pinpoint the mitochondrial calcium uniporter complex as a keystone molecular apparatus that links age-related changes in mitochondrial physiology to systemic macrophage-mediated age-associated inflammation. The findings raise the exciting possibility that restoring mCa2+ uptake capacity in tissue-resident macrophages may decrease inflammaging of specific organs and alleviate age-associated conditions such as neurodegenerative and cardiometabolic diseases.",
+    "query": "calcium signaling tissue aging",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/37277641/"
+  },
+  {
+    "pmid": "32918949",
+    "title": "Aging, calcium channel signaling and vascular tone.",
+    "authors": "Harraz OF, Jensen LJ",
+    "year": "2020",
+    "journal": "Mechanisms of ageing and development",
+    "abstract": "Calcium signaling in vascular smooth muscle is crucial for arterial tone regulation and vascular function. Several proteins, including Ca2+ channels, function in an orchestrated fashion so that blood vessels can sense and respond to physiological stimuli such as changes in intravascular pressure. Activation of the voltage-dependent Ca2+ channel, Cav1.2, leads to Ca2+ influx and consequently arterial tone development and vasoconstriction. Unique among Ca2+ channels, the vascular Cav3.2 T-type channel mediates feedback inhibition of arterial tone-and therefore causes vasodilation-of resistance arteries by virtue of functional association with hyperpolarizing ion channels. During aging, several signaling modalities are altered along with vascular remodeling. There is a growing appreciation of how calcium channel signaling alters with aging and how this may affect vascular function. Here, we discuss key determinants of arterial tone development and the crucial involvement of Ca2+ channels. We next provide an updated view of key changes in Ca2+ channel expression and function during aging and how these affect vascular function. Further, this article synthesizes new questions in light of recent developments. We hope that these questions will outline a roadmap for new research, which, undoubtedly, will unravel a more comprehensive picture of arterial tone dysfunction during aging.",
+    "query": "calcium signaling tissue aging",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/32918949/"
+  },
+  {
+    "pmid": "31433095",
+    "title": "Piezo1 regulates calcium oscillations and cytokine release from astrocytes.",
+    "authors": "Velasco-Estevez M, Rolle SO, Mampay M et al.",
+    "year": "2020",
+    "journal": "Glia",
+    "abstract": "Astrocytes are important for information processing in the brain and they achieve this by fine-tuning neuronal communication via continuous uptake and release of biochemical modulators of neurotransmission and synaptic plasticity. Often overlooked are their important functions in mechanosensation. Indeed, astrocytes can detect pathophysiological changes in the mechanical properties of injured, ageing, or degenerating brain tissue. We have recently shown that astrocytes surrounding mechanically-stiff amyloid plaques upregulate the mechanosensitive ion channel, Piezo1. Moreover, ageing transgenic Alzheimer's rats harboring a chronic peripheral bacterial infection displayed enhanced Piezo1 expression in amyloid plaque-reactive astrocytes of the hippocampus and cerebral cortex. Here, we have shown that the bacterial endotoxin, lipopolysaccharide (LPS), also upregulates Piezo1 in primary mouse cortical astrocyte cultures in vitro. Activation of Piezo1, via the small molecule agonist Yoda1, enhanced Ca2+ influx in both control and LPS-stimulated astrocytes. Moreover, Yoda1 augmented intracellular Ca2+ oscillations but decreased subsequent Ca2+ influx in response to adenosine triphosphate (ATP) stimulation. Neither blocking nor activating Piezo1 affected cell viability. However, LPS-stimulated astrocyte cultures exposed to the Piezo1 activator, Yoda1, migrated significantly slower than reactive astrocytes treated with the mechanosensitive channel-blocking peptide, GsMTx4. Furthermore, our data show that activating Piezo1 channels inhibits the release of cytokines and chemokines, such as IL-1\u03b2, TNF\u03b1, and fractalkine (CX3 CL1), from LPS-stimulated astrocyte cultures. Taken together, our results suggest that astrocytic Piezo1 upregulation may act to dampen neuroinflammation and could be a useful drug target for neuroinflammatory disorders of the brain.",
+    "query": "calcium signaling tissue aging",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/31433095/"
+  },
+  {
+    "pmid": "39044033",
+    "title": "An NAD+-dependent metabolic checkpoint regulates hematopoietic stem cell activation and aging.",
+    "authors": "Song Z, Park SH, Mu WC et al.",
+    "year": "2024",
+    "journal": "Nature aging",
+    "abstract": "How hematopoietic stem cells (HSCs) maintain metabolic homeostasis to support tissue repair and regeneration throughout the lifespan is elusive. Here, we show that CD38, an NAD+-dependent metabolic enzyme, promotes HSC proliferation by inducing mitochondrial Ca2+ influx and mitochondrial metabolism in young mice. Conversely, aberrant CD38 upregulation during aging is a driver of HSC deterioration in aged mice due to dysregulated NAD+ metabolism and compromised mitochondrial stress management. The mitochondrial calcium uniporter, a mediator of mitochondrial Ca2+ influx, also supports HSC proliferation in young mice yet drives HSC decline in aged mice. Pharmacological inactivation of CD38 reverses HSC aging and the pathophysiological changes of the aging hematopoietic system in aged mice. Together, our study highlights an NAD+ metabolic checkpoint that balances mitochondrial activation to support HSC proliferation and mitochondrial stress management to enhance HSC self-renewal throughout the lifespan, and links aberrant Ca2+ signaling to HSC aging.",
+    "query": "calcium signaling tissue aging",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/39044033/"
+  },
+  {
+    "pmid": "33361526",
+    "title": "Arterial elementary calcium signaling in aging.",
+    "authors": "Kassmann M, Fan G, Gollasch M",
+    "year": "2020",
+    "journal": "Aging",
+    "abstract": "N/A",
+    "query": "calcium signaling tissue aging",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/33361526/"
+  }
+]

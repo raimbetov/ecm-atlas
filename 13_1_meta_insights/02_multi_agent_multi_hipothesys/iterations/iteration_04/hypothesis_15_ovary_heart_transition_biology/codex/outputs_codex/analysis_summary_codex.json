@@ -1,0 +1,15 @@
+{
+  "num_ovary_specific":12.0,
+  "num_heart_specific":12.0,
+  "estrogen_present":28.0,
+  "yap_present":16.0,
+  "metabolic_overlap_genes":17.0,
+  "metabolic_gradient_pairs":4.0,
+  "metabolic_gradient_spearman":0.4,
+  "metabolic_zscore_pairs":3.0,
+  "metabolic_zscore_spearman":-1.0,
+  "autoencoder_latent_dim":8.0,
+  "mean_recon_error":0.2933947742,
+  "network_nodes":39.0,
+  "network_edges":91.0
+}

@@ -1,0 +1,18 @@
+Tissue,Velocity,Phase
+Skeletal_muscle_Gastrocnemius,1.02,Phase_I
+Brain_Hippocampus,1.18,Phase_I
+Ovary_Cortex,1.53,Phase_I
+Intervertebral_disc_IAF,3.12,Phase_II
+Lung,4.29,Phase_II
+Brain_Cortex,,Phase_II
+Heart_Decellularized_Tissue,,Phase_II
+Heart_Native_Tissue,,Phase_II
+Intervertebral_disc_NP,,Phase_II
+Intervertebral_disc_OAF,,Phase_II
+Kidney_Glomerular,,Phase_II
+Kidney_Tubulointerstitial,,Phase_II
+Ovary,,Phase_II
+Skeletal_muscle_EDL,,Phase_II
+Skeletal_muscle_Soleus,,Phase_II
+Skeletal_muscle_TA,,Phase_II
+Skin dermis,,Phase_II

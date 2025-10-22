@@ -1,0 +1,19 @@
+{
+  "dataset_id": "PXD011967",
+  "study": "Ferri et al. 2019",
+  "journal": "eLife",
+  "doi": "10.7554/eLife.49874",
+  "tissue": "Skeletal_muscle",
+  "species": "Homo sapiens",
+  "technique": "Label-free LC-MS/MS",
+  "n_samples": 58,
+  "age_groups": {
+    "Young": "20-34 years",
+    "Middle_1": "35-49 years",
+    "Middle_2": "50-64 years",
+    "Old_1": "65-79 years",
+    "Old_2": "80+ years"
+  },
+  "expected_overlap": "~300 ECM genes (38-46% of our 648)",
+  "status": "PLACEHOLDER - Real download needed"
+}

@@ -1,0 +1,3 @@
+Timestep,Tissue,Attention_Weight,Is_Critical_Transition
+7,Skeletal_muscle_Soleus,0.44794288,True
+15,Lung,0.48872223,True

@@ -1,0 +1,6 @@
+Category,Markers_Present,Markers_Upregulated,Percentage_Upregulated,Odds_Ratio,P_Value,Significant,Target_Phase
+crosslinking,5,0,0.0,0.0,1.0,False,Phase_II
+fibrillar_collagens,8,5,62.5,7.058080808080808,0.00911559228060216,True,Phase_II
+network_collagens,6,4,66.66666666666667,8.421052631578947,0.015338631199031694,True,Phase_II
+mechanical_glycoproteins,11,4,36.36363636363637,2.3845327604726103,0.15075604076964086,False,Phase_II
+matricellular,3,0,0.0,0.0,1.0,False,Phase_II

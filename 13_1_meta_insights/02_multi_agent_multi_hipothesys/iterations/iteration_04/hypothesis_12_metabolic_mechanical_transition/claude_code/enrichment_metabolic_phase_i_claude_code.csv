@@ -1,0 +1,6 @@
+Category,Markers_Present,Markers_Upregulated,Percentage_Upregulated,Odds_Ratio,P_Value,Significant,Target_Phase
+collagen_hydroxylases,5,0,0.0,0.0,1.0,False,Phase_I
+coagulation,10,0,0.0,0.0,1.0,False,Phase_I
+serpins,11,3,27.272727272727273,1.9704545454545455,0.25643447155249816,False,Phase_I
+inflammatory_factors,13,0,0.0,0.0,1.0,False,Phase_I
+cystatin_inhibitors,2,0,0.0,0.0,1.0,False,Phase_I

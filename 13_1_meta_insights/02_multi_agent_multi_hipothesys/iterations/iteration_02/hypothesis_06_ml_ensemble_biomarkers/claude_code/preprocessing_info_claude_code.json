@@ -1,0 +1,15 @@
+{
+  "n_tissues": 17,
+  "n_proteins": 910,
+  "median_aging_velocity": 0.7427755494468655,
+  "train_size": 11,
+  "test_size": 6,
+  "class_balance_train": {
+    "0": 6,
+    "1": 5
+  },
+  "class_balance_test": {
+    "0": 3,
+    "1": 3
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "grid_center": [
+    -26.485500000000002,
+    0.432500000000001,
+    -3.468499999999999
+  ],
+  "grid_size": [
+    50.0,
+    50.0,
+    50.0
+  ],
+  "results": [
+    {
+      "Ligand": "TM5441",
+      "Best_Affinity_kcal_mol": -7.888,
+      "Mean_Affinity_kcal_mol": -7.4809,
+      "Poses_File": "/Users/Kravtsovd/projects/ecm-atlas/13_1_meta_insights/02_multi_agent_multi_hipothesys/iterations/iteration_05/hypothesis_17_serpine1_precision_target/codex/data/docking/TM5441_poses.pdbqt"
+    },
+    {
+      "Ligand": "SK-216",
+      "Best_Affinity_kcal_mol": -7.524,
+      "Mean_Affinity_kcal_mol": -6.581799999999999,
+      "Poses_File": "/Users/Kravtsovd/projects/ecm-atlas/13_1_meta_insights/02_multi_agent_multi_hipothesys/iterations/iteration_05/hypothesis_17_serpine1_precision_target/codex/data/docking/SK-216_poses.pdbqt"
+    }
+  ]
+}

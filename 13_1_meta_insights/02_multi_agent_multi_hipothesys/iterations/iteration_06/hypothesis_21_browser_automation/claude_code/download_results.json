@@ -1,0 +1,56 @@
+{
+  "timestamp": "2025-10-21T14:30:55.573941",
+  "total_datasets": 6,
+  "successful": 0,
+  "failed": 6,
+  "results": [
+    {
+      "pxd": "PXD011967",
+      "priority": "HIGH",
+      "success": false,
+      "file_path": null,
+      "validation": null,
+      "error": "Could not find supplementary file download link for 10.7554/eLife.49874"
+    },
+    {
+      "pxd": "PXD015982",
+      "priority": "HIGH",
+      "success": false,
+      "file_path": null,
+      "validation": null,
+      "error": "Locator.click: Timeout 30000ms exceeded.\nCall log:\n  - waiting for locator(\"a:has-text(\\\"Download\\\")\").first\n    - locator resolved to <a href=\"../../downloads\">\u2026</a>\n  - attempting click action\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n    - waiting 20ms\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n      - waiting 100ms\n    58 \u00d7 waiting for element to be visible, enabled and stable\n       - element is not visible\n     - retrying click action\n       - waiting 500ms\n"
+    },
+    {
+      "pxd": "PXD007048",
+      "priority": "MEDIUM",
+      "success": false,
+      "file_path": null,
+      "validation": null,
+      "error": "Repository type PRIDE not yet automated"
+    },
+    {
+      "pxd": "MSV000082958",
+      "priority": "MEDIUM",
+      "success": false,
+      "file_path": null,
+      "validation": null,
+      "error": "Repository type MassIVE not yet automated"
+    },
+    {
+      "pxd": "MSV000096508",
+      "priority": "MEDIUM",
+      "success": false,
+      "file_path": null,
+      "validation": null,
+      "error": "Repository type MassIVE not yet automated"
+    },
+    {
+      "pxd": "PXD016440",
+      "priority": "MEDIUM",
+      "success": false,
+      "file_path": null,
+      "validation": null,
+      "error": "Repository type PRIDE not yet automated"
+    }
+  ]
+}

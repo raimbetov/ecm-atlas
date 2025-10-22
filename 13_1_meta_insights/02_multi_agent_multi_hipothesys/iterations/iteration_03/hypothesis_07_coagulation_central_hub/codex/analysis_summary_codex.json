@@ -1,0 +1,11 @@
+{
+  "deep_nn_mean_r2": -3.5133001804351807,
+  "deep_nn_mean_mae": 0.18322900235652922,
+  "deep_nn_mean_rmse": 0.20908747995954374,
+  "baseline_r2": 0.11081654072684488,
+  "baseline_mae": 0.10579382079370359,
+  "baseline_rmse": 0.1426570060784435,
+  "temporal_r2": 0.9981855154037476,
+  "classification_mean_auc": 1.0,
+  "classification_mean_accuracy": 1.0
+}

@@ -1,0 +1,584 @@
+[
+  {
+    "hypothesis_id": "H01",
+    "agent": "claude_code",
+    "filepath": "/Users/Kravtsovd/projects/ecm-atlas/13_1_meta_insights/02_multi_agent_multi_hipothesys/iterations/iteration_01/hypothesis_01_compartment_mechanical_stress/claude_code/90_results_claude_code.md",
+    "thesis": "Analysis of 3,161 ECM protein measurements across 16 tissue compartments reveals 1,254 antagonistic protein-compartment pairs (top magnitude: 8.85 SD for CILP2), but statistical testing rejects the mechanical stress hypothesis as neither high-load compartments show higher structural protein upregulation (Mann-Whitney p=0.98) nor does mechanical stress correlate with aging trajectories (Spearman \u03c1=-0.055, p=0.37), indicating that compartment antagonism exists but is not driven by biomechanical load differences.",
+    "score": 96.0,
+    "status": "BREAKTHROUGH",
+    "key_findings": [
+      "Ordering",
+      "Dataset Summary",
+      "Antagonistic Pairs Detection",
+      "Top 10 Antagonistic Proteins",
+      "Validation Against Prior G6 Findings"
+    ],
+    "metrics": {
+      "p_values": [
+        0.98,
+        0.37,
+        0.37
+      ],
+      "R2": [
+        0.003,
+        0.001
+      ],
+      "correlation": [
+        -0.055,
+        -0.055,
+        -0.055
+      ]
+    },
+    "file_size": 24258
+  },
+  {
+    "hypothesis_id": "H01",
+    "agent": "codex",
+    "filepath": "/Users/Kravtsovd/projects/ecm-atlas/13_1_meta_insights/02_multi_agent_multi_hipothesys/iterations/iteration_01/hypothesis_01_compartment_mechanical_stress/codex/90_results_codex.md",
+    "thesis": "codex quantified 530 aging antagonism events, linked high-load compartments to attenuated ECM decline, and flagged mechano-adaptive targets despite marginal statistical significance.",
+    "score": 88.0,
+    "status": "UNKNOWN",
+    "key_findings": [],
+    "metrics": {
+      "p_values": [
+        0.075,
+        0.075,
+        0.469
+      ],
+      "correlation": [
+        -0.026
+      ]
+    },
+    "file_size": 4817
+  },
+  {
+    "hypothesis_id": "H02",
+    "agent": "claude_code",
+    "filepath": "/Users/Kravtsovd/projects/ecm-atlas/13_1_meta_insights/02_multi_agent_multi_hipothesys/iterations/iteration_01/hypothesis_02_serpin_cascade_dysregulation/claude_code/90_results_claude_code.md",
+    "thesis": "Comprehensive analysis of 72 serpins across ECM aging datasets reveals significant dysregulation (median |\u0394z|=0.37 vs 0.33 non-serpins) and multi-pathway involvement (5 pathways, 27 inflammation serpins), but network centrality analysis shows serpins are NOT preferentially positioned as hubs (7.1% of hubs vs 7.6% baseline, 0.93x enrichment, p=0.96), contradicting the hypothesis that serpins function as central regulatory nodes of ECM aging cascades.",
+    "score": 65.0,
+    "status": "VALIDATED",
+    "key_findings": [
+      "Ordering",
+      "Dataset Scope",
+      "Top 10 Most Dysregulated Serpins",
+      "Key Observations",
+      "Functional Insights"
+    ],
+    "metrics": {
+      "p_values": [
+        0.96,
+        0.3,
+        0.05
+      ]
+    },
+    "file_size": 27776
+  },
+  {
+    "hypothesis_id": "H02",
+    "agent": "codex",
+    "filepath": "/Users/Kravtsovd/projects/ecm-atlas/13_1_meta_insights/02_multi_agent_multi_hipothesys/iterations/iteration_01/hypothesis_02_serpin_cascade_dysregulation/codex/90_results_codex.md",
+    "thesis": "Serpin cascade dysregulation emerges as the dominant ECM aging hub because serpins outpace non-serpins in magnitude, persist across tissues, occupy high-impact network positions, and enable targeted therapeutic leverage (Sections 1.0\u20134.0).",
+    "score": null,
+    "status": "VALIDATED",
+    "key_findings": [],
+    "metrics": {
+      "p_values": [
+        0.00064,
+        0.05,
+        0.16
+      ]
+    },
+    "file_size": 6301
+  },
+  {
+    "hypothesis_id": "H03",
+    "agent": "claude_code",
+    "filepath": "/Users/Kravtsovd/projects/ecm-atlas/13_1_meta_insights/02_multi_agent_multi_hipothesys/iterations/iteration_01/hypothesis_03_tissue_aging_clocks/claude_code/90_results_claude_code.md",
+    "thesis": "Tissues exhibit distinct aging velocities ranging 4-fold (1.02-4.29 |\u0394z|), with lung aging fastest (4.29) and tubulointerstitial slowest (1.02), driven by tissue-specific ECM markers (273 proteins, TSI>3.0) but NOT by differential inflammatory signatures (p=0.41), refuting metabolic stress hypothesis.",
+    "score": 92.0,
+    "status": "VALIDATED",
+    "key_findings": [
+      "Ordering",
+      "Top 5 Fastest-Aging Tissues",
+      "Bottom 5 Slowest-Aging Tissues",
+      "Key Findings",
+      "Validation"
+    ],
+    "metrics": {
+      "p_values": [
+        0.41,
+        0.41,
+        0.05
+      ]
+    },
+    "file_size": 18027
+  },
+  {
+    "hypothesis_id": "H03",
+    "agent": "codex",
+    "filepath": "/Users/Kravtsovd/projects/ecm-atlas/13_1_meta_insights/02_multi_agent_multi_hipothesys/iterations/iteration_01/hypothesis_03_tissue_aging_clocks/codex/90_results_codex.md",
+    "thesis": "Lung and fast-contracting skeletal muscles show the steepest ECM aging velocities, with tissue-specific markers and shared coagulation\u2013remodeling proteins clarifying mechanisms and therapeutic priorities across four analytical lenses.",
+    "score": null,
+    "status": "UNKNOWN",
+    "key_findings": [],
+    "metrics": {
+      "p_values": [
+        0.063,
+        0.063
+      ]
+    },
+    "file_size": 6186
+  },
+  {
+    "hypothesis_id": "H04",
+    "agent": "claude_code",
+    "filepath": "/Users/Kravtsovd/projects/ecm-atlas/13_1_meta_insights/02_multi_agent_multi_hipothesys/iterations/iteration_02/hypothesis_04_deep_protein_embeddings/claude_code/90_results_claude_code.md",
+    "thesis": "Deep autoencoder (94K parameters, 5-layer encoder) trained on 910 ECM proteins \u00d7 17 tissues discovered 10 non-linear latent factors representing inflammation (L3: S100A8/A9), structural collagens (L2: COL1/3/4), and proteolytic regulation (L4: cathepsins/serpins), achieving superior performance (MSE=0.126, ARI=0.754) and identifying 6,714 non-linear protein relationships invisible to Pearson correlation (r<0.3, latent similarity>0.7).",
+    "score": null,
+    "status": "VALIDATED",
+    "key_findings": [
+      "Ordering",
+      "Ordering",
+      "Ordering",
+      "Ordering",
+      "Ordering"
+    ],
+    "metrics": {
+      "p_values": [
+        0.047
+      ]
+    },
+    "file_size": 22301
+  },
+  {
+    "hypothesis_id": "H05",
+    "agent": "claude_code",
+    "filepath": "/Users/Kravtsovd/projects/ecm-atlas/13_1_meta_insights/02_multi_agent_multi_hipothesys/iterations/iteration_02/hypothesis_05_gnn_aging_networks/claude_code/90_results_claude_code.md",
+    "thesis": "GNN analysis of 551 ECM proteins across 17 tissues identified HAPLN1, ITIH2, and CRLF1 as top master regulators via multi-head attention, achieving 95.2% classification accuracy while discovering 27 functional communities with 54% higher biological coherence than Louvain clustering and revealing 103,037 non-obvious protein relationships invisible to correlation analysis.",
+    "score": null,
+    "status": "VALIDATED",
+    "key_findings": [
+      "Ordering",
+      "Network Statistics",
+      "Feature Engineering",
+      "GCN (Graph Convolutional Network)",
+      "GAT (Graph Attention Network)"
+    ],
+    "metrics": {},
+    "file_size": 21029
+  },
+  {
+    "hypothesis_id": "H05",
+    "agent": "codex",
+    "filepath": "/Users/Kravtsovd/projects/ecm-atlas/13_1_meta_insights/02_multi_agent_multi_hipothesys/iterations/iteration_02/hypothesis_05_gnn_aging_networks/codex/90_results_codex.md",
+    "thesis": "",
+    "score": null,
+    "status": "UNKNOWN",
+    "key_findings": [],
+    "metrics": {},
+    "file_size": 3294
+  },
+  {
+    "hypothesis_id": "H06",
+    "agent": "codex",
+    "filepath": "/Users/Kravtsovd/projects/ecm-atlas/13_1_meta_insights/02_multi_agent_multi_hipothesys/iterations/iteration_02/hypothesis_06_ml_ensemble_biomarkers/codex/90_results_codex.md",
+    "thesis": "A three-model stack (RF + XGBoost + MLP) on tissue-level ECM z-score deltas isolates an eight-protein panel that maintains 0.80 F1 and 1.0 AUC for fast-aging detection, with SHAP consensus prioritizing serpins/coagulation and secreted regulators.",
+    "score": null,
+    "status": "UNKNOWN",
+    "key_findings": [],
+    "metrics": {},
+    "file_size": 5182
+  },
+  {
+    "hypothesis_id": "H07",
+    "agent": "claude_code",
+    "filepath": "/Users/Kravtsovd/projects/ecm-atlas/13_1_meta_insights/02_multi_agent_multi_hipothesys/iterations/iteration_03/hypothesis_07_coagulation_central_hub/claude_code/90_results_claude_code.md",
+    "thesis": "Deep learning analysis of 18 coagulation cascade proteins across 15 tissues REJECTS the hypothesis that coagulation dysregulation is THE central aging mechanism (R\u00b2=-19.5, \u03c1=0.08), despite validating F13B as top SHAP biomarker and identifying all 5 top temporal-gradient proteins as coagulation factors, revealing coagulation as an EARLY-CHANGING but INSUFFICIENT predictor of aging velocity.",
+    "score": 10.0,
+    "status": "VALIDATED",
+    "key_findings": [
+      "Ordering",
+      "Ordering",
+      "Ordering",
+      "Ordering",
+      "Ordering"
+    ],
+    "metrics": {
+      "p_values": [
+        0.0247,
+        0.0136,
+        0.0157
+      ],
+      "R2": [
+        0.22,
+        0.22
+      ],
+      "correlation": [
+        0.08,
+        0.08,
+        0.0786
+      ]
+    },
+    "file_size": 21323
+  },
+  {
+    "hypothesis_id": "H07",
+    "agent": "codex",
+    "filepath": "/Users/Kravtsovd/projects/ecm-atlas/13_1_meta_insights/02_multi_agent_multi_hipothesys/iterations/iteration_03/hypothesis_07_coagulation_central_hub/codex/90_results_codex.md",
+    "thesis": "",
+    "score": null,
+    "status": "UNKNOWN",
+    "key_findings": [],
+    "metrics": {
+      "p_values": [
+        0.17
+      ]
+    },
+    "file_size": 3413
+  },
+  {
+    "hypothesis_id": "H08",
+    "agent": "codex",
+    "filepath": "/Users/Kravtsovd/projects/ecm-atlas/13_1_meta_insights/02_multi_agent_multi_hipothesys/iterations/iteration_03/hypothesis_08_s100_calcium_signaling/codex/90_results_codex.md",
+    "thesis": "",
+    "score": null,
+    "status": "PARTIAL",
+    "key_findings": [
+      "- **Stiffness prediction success**: S100 expression robustly predicts stiffness proxy (R\u00b2_test=0.75 > target 0.70; MAE=0.16 <0.3). Predicted vs actual scatter shows tight alignment for both disc and visceral tissues.\n- **Inflammation independence**:"
+    ],
+    "metrics": {
+      "p_values": [
+        0.0018,
+        0.05,
+        0.33
+      ],
+      "R2": [
+        0.748
+      ],
+      "correlation": [
+        0.21,
+        0.74,
+        0.7
+      ]
+    },
+    "file_size": 5876
+  },
+  {
+    "hypothesis_id": "H09",
+    "agent": "claude_code",
+    "filepath": "/Users/Kravtsovd/projects/ecm-atlas/13_1_meta_insights/02_multi_agent_multi_hipothesys/iterations/iteration_03/hypothesis_09_temporal_rnn_trajectories/claude_code/90_results_claude_code.md",
+    "thesis": "LSTM encoder-decoder achieves MSE=0.165 (target: <0.3) and R\u00b2=0.81 (target: >0.80) for 1-step protein trajectory prediction using tissue velocity as pseudo-time, Transformer attention identifies 2 critical transitions (velocity ~1.65 and 4.29), early-change proteins (Q1) show 21.6\u00d7 enrichment for coagulation cascade (p=0.0004), and Col2a1 Granger-causes ADAMTS5 (p=0.0005) confirming temporal causality from collagen to metalloproteinases.",
+    "score": null,
+    "status": "BREAKTHROUGH",
+    "key_findings": [
+      "Ordering principle",
+      "Model architecture",
+      "Training results",
+      "Key finding",
+      "Performance implications"
+    ],
+    "metrics": {
+      "p_values": [
+        0.0004,
+        0.0005,
+        0.0004
+      ],
+      "R2": [
+        0.81,
+        0.81,
+        0.81
+      ]
+    },
+    "file_size": 21346
+  },
+  {
+    "hypothesis_id": "H09",
+    "agent": "codex",
+    "filepath": "/Users/Kravtsovd/projects/ecm-atlas/13_1_meta_insights/02_multi_agent_multi_hipothesys/iterations/iteration_03/hypothesis_09_temporal_rnn_trajectories/codex/90_results_codex.md",
+    "thesis": "",
+    "score": null,
+    "status": "UNKNOWN",
+    "key_findings": [],
+    "metrics": {
+      "p_values": [
+        0.047,
+        4.0,
+        1.3
+      ],
+      "R2": [
+        0.011
+      ]
+    },
+    "file_size": 3081
+  },
+  {
+    "hypothesis_id": "H11",
+    "agent": "claude_code",
+    "filepath": "/Users/Kravtsovd/projects/ecm-atlas/13_1_meta_insights/02_multi_agent_multi_hipothesys/iterations/iteration_04/hypothesis_11_standardized_temporal_trajectories/claude_code/90_results_claude_code.md",
+    "thesis": "",
+    "score": null,
+    "status": "VALIDATED",
+    "key_findings": [
+      "Ordering",
+      "Ordering",
+      "Ordering",
+      "Ordering",
+      "Ordering"
+    ],
+    "metrics": {
+      "R2": [
+        0.29,
+        0.12,
+        0.81
+      ]
+    },
+    "file_size": 24990
+  },
+  {
+    "hypothesis_id": "H11",
+    "agent": "codex",
+    "filepath": "/Users/Kravtsovd/projects/ecm-atlas/13_1_meta_insights/02_multi_agent_multi_hipothesys/iterations/iteration_04/hypothesis_11_standardized_temporal_trajectories/codex/90_results_codex.md",
+    "thesis": "",
+    "score": null,
+    "status": "VALIDATED",
+    "key_findings": [],
+    "metrics": {},
+    "file_size": 5628
+  },
+  {
+    "hypothesis_id": "H12",
+    "agent": "claude_code",
+    "filepath": "/Users/Kravtsovd/projects/ecm-atlas/13_1_meta_insights/02_multi_agent_multi_hipothesys/iterations/iteration_04/hypothesis_12_metabolic_mechanical_transition/claude_code/90_results_claude_code.md",
+    "thesis": "Changepoint analysis confirms v=2.17 (not 1.65) as optimal threshold separating slow-aging (Phase I, n=5, mean v=1.33) from fast-aging (Phase II, n=6, mean v=2.79) tissues with Cohen's d=2.23, fibrillar collagens show 7.06\u00d7 enrichment in Phase II (p=0.009), Phase classifier achieves AUC=1.00 (target >0.90), literature validates two-phase model with metabolic dysregulation (NAD+ depletion, metformin-reversible) preceding mechanical remodeling (YAP/TAZ activation >5kPa, LOX crosslinking, irreversible), and intervention window exists before v=1.65-2.17 based on 60+ papers showing MiDAS reversibility declines with age.",
+    "score": null,
+    "status": "VALIDATED",
+    "key_findings": [
+      "Ordering principle",
+      "Binary segmentation method",
+      "Results",
+      "Validation of v=1.65 (H09 discovery)",
+      "Interpretation"
+    ],
+    "metrics": {
+      "p_values": [
+        0.009,
+        0.02,
+        0.011
+      ],
+      "AUC": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "file_size": 22683
+  },
+  {
+    "hypothesis_id": "H12",
+    "agent": "codex",
+    "filepath": "/Users/Kravtsovd/projects/ecm-atlas/13_1_meta_insights/02_multi_agent_multi_hipothesys/iterations/iteration_04/hypothesis_12_metabolic_mechanical_transition/codex/90_results_codex.md",
+    "thesis": "",
+    "score": null,
+    "status": "VALIDATED",
+    "key_findings": [],
+    "metrics": {
+      "p_values": [
+        0.28
+      ]
+    },
+    "file_size": 6625
+  },
+  {
+    "hypothesis_id": "H13",
+    "agent": "claude_code",
+    "filepath": "/Users/Kravtsovd/projects/ecm-atlas/13_1_meta_insights/02_multi_agent_multi_hipothesys/iterations/iteration_04/hypothesis_13_independent_dataset_validation/claude_code/90_results_claude_code.md",
+    "thesis": "",
+    "score": null,
+    "status": "VALIDATED",
+    "key_findings": [],
+    "metrics": {
+      "R2": [
+        0.81,
+        0.81,
+        0.75
+      ],
+      "AUC": [
+        1.0
+      ]
+    },
+    "file_size": 20002
+  },
+  {
+    "hypothesis_id": "H14",
+    "agent": "claude_code",
+    "filepath": "/Users/Kravtsovd/projects/ecm-atlas/13_1_meta_insights/02_multi_agent_multi_hipothesys/iterations/iteration_04/hypothesis_14_serpin_centrality_resolution/claude_code/90_results_claude_code.md",
+    "thesis": "Eigenvector centrality (\u03c1=0.929) and degree (\u03c1=0.997) predict knockout impact, not betweenness (\u03c1=0.033), resolving H02 disagreement in favor of Codex; serpins are moderately central hubs (6/13 serpins <20th percentile eigenvector, consensus rank: 16-60th percentile) with protective aging phenotype (SERPINE1 knockout +7yr lifespan) indicating downstream regulatory role.",
+    "score": null,
+    "status": "VALIDATED",
+    "key_findings": [
+      "Ordering",
+      "Ordering",
+      "Ordering",
+      "Ordering",
+      "Ordering"
+    ],
+    "metrics": {
+      "p_values": [
+        0.05,
+        0.91,
+        0.0001
+      ],
+      "correlation": [
+        0.929,
+        0.997,
+        0.033
+      ]
+    },
+    "file_size": 19775
+  },
+  {
+    "hypothesis_id": "H14",
+    "agent": "codex",
+    "filepath": "/Users/Kravtsovd/projects/ecm-atlas/13_1_meta_insights/02_multi_agent_multi_hipothesys/iterations/iteration_04/hypothesis_14_serpin_centrality_resolution/codex/90_results_codex.md",
+    "thesis": "",
+    "score": null,
+    "status": "UNKNOWN",
+    "key_findings": [],
+    "metrics": {
+      "p_values": [
+        0.05
+      ]
+    },
+    "file_size": 6613
+  },
+  {
+    "hypothesis_id": "H15",
+    "agent": "codex",
+    "filepath": "/Users/Kravtsovd/projects/ecm-atlas/13_1_meta_insights/02_multi_agent_multi_hipothesys/iterations/iteration_04/hypothesis_15_ovary_heart_transition_biology/codex/90_results_codex.md",
+    "thesis": "",
+    "score": null,
+    "status": "UNKNOWN",
+    "key_findings": [],
+    "metrics": {
+      "correlation": [
+        0.4
+      ]
+    },
+    "file_size": 6364
+  },
+  {
+    "hypothesis_id": "H17",
+    "agent": "claude_code",
+    "filepath": "/Users/Kravtsovd/projects/ecm-atlas/13_1_meta_insights/02_multi_agent_multi_hipothesys/iterations/iteration_05/hypothesis_17_serpine1_precision_target/claude_code/90_results_claude_code.md",
+    "thesis": "SERPINE1 (PAI-1) is a CONDITIONAL GO for drug development\u2014peripheral network position (eigenvector=0.0078, in-silico knockout -0.22%) contradicts network-based targeting BUT literature validates STRONG beneficial knockout effect (Cohen's d=2.524, 8 studies, +7yr lifespan), with 4 safe inhibitors (TM5441 IC50=6.4nM, PAI-039 Phase II completed), economically viable market (NPV=$8.47B, ROI=3387%), positioning SERPINE1 as a downstream EFFECTOR (not hub) requiring phenotype-driven rather than network-centric development strategy.",
+    "score": null,
+    "status": "BREAKTHROUGH",
+    "key_findings": [
+      "Ordering",
+      "Ordering",
+      "Ordering",
+      "Ordering",
+      "Ordering"
+    ],
+    "metrics": {
+      "p_values": [
+        0.05
+      ]
+    },
+    "file_size": 26334
+  },
+  {
+    "hypothesis_id": "H17",
+    "agent": "codex",
+    "filepath": "/Users/Kravtsovd/projects/ecm-atlas/13_1_meta_insights/02_multi_agent_multi_hipothesys/iterations/iteration_05/hypothesis_17_serpine1_precision_target/codex/90_results_codex.md",
+    "thesis": "",
+    "score": null,
+    "status": "UNKNOWN",
+    "key_findings": [],
+    "metrics": {
+      "p_values": [
+        0.26
+      ]
+    },
+    "file_size": 5639
+  },
+  {
+    "hypothesis_id": "H18",
+    "agent": "claude_code",
+    "filepath": "/Users/Kravtsovd/projects/ecm-atlas/13_1_meta_insights/02_multi_agent_multi_hipothesys/iterations/iteration_05/hypothesis_18_multimodal_integration/claude_code/90_results_claude_code.md",
+    "thesis": "Multimodal deep learning integration (AE+GNN+LSTM+S100) attempted on ECM aging dataset (18 samples, 910 proteins) revealed fundamental data limitation: with only 12 training samples, best model (AE+LSTM) achieved Test R\u00b2\u22480 and MAE=0.47, demonstrating that architectural sophistication cannot overcome extreme data scarcity; hypothesis H18.1 (R\u00b2>0.85) conclusively rejected due to sample size <<100 minimum for deep learning.",
+    "score": null,
+    "status": "REJECTED",
+    "key_findings": [
+      "**Primary Discovery:** Multimodal deep learning integration is **fundamentally incompatible** with datasets where n < 100. No amount of architectural sophistication can overcome extreme data scarcity."
+    ],
+    "metrics": {
+      "R2": [
+        0.0,
+        0.85,
+        0.0
+      ]
+    },
+    "file_size": 13466
+  },
+  {
+    "hypothesis_id": "H19",
+    "agent": "claude_code",
+    "filepath": "/Users/Kravtsovd/projects/ecm-atlas/13_1_meta_insights/02_multi_agent_multi_hipothesys/iterations/iteration_05/hypothesis_19_metabolomics_phase1/claude_code/90_results_claude_code.md",
+    "thesis": "Phase I metabolic hypothesis **CANNOT be validated** due to unavailability of tissue-level metabolomics data in public repositories (Metabolomics Workbench: 0/6 studies with ATP/NAD data; ECM proteomics: 0/36 metabolic proteins), but literature-based simulation demonstrates expected Phase I signature (ATP\u219320%, NAD\u219324%, Lactate/Pyr\u219167%, p<0.005) that would enable early intervention if real data were generated via targeted LC-MS/GC-MS studies of 7 Phase I tissues (v<1.65).",
+    "score": null,
+    "status": "VALIDATED",
+    "key_findings": [
+      "Ordering",
+      "Search strategy",
+      "Metabolite coverage check",
+      "Manual verification",
+      "Conclusion"
+    ],
+    "metrics": {
+      "p_values": [
+        0.005,
+        0.0007,
+        0.0047
+      ],
+      "correlation": [
+        -0.86
+      ]
+    },
+    "file_size": 16738
+  },
+  {
+    "hypothesis_id": "H20",
+    "agent": "claude_code",
+    "filepath": "/Users/Kravtsovd/projects/ecm-atlas/13_1_meta_insights/02_multi_agent_multi_hipothesys/iterations/iteration_05/hypothesis_20_cross_species_conservation/claude_code/90_results_claude_code.md",
+    "thesis": "",
+    "score": null,
+    "status": "VALIDATED",
+    "key_findings": [],
+    "metrics": {
+      "p_values": [
+        0.023,
+        0.001,
+        0.072
+      ],
+      "correlation": [
+        0.7,
+        0.77,
+        0.82
+      ]
+    },
+    "file_size": 15252
+  },
+  {
+    "hypothesis_id": "H21",
+    "agent": "claude_code",
+    "filepath": "/Users/Kravtsovd/projects/ecm-atlas/13_1_meta_insights/02_multi_agent_multi_hipothesys/iterations/iteration_06/hypothesis_21_browser_automation/claude_code/90_results_claude_code.md",
+    "thesis": "",
+    "score": null,
+    "status": "BLOCKED",
+    "key_findings": [],
+    "metrics": {},
+    "file_size": 19355
+  }
+]

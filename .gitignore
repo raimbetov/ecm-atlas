@@ -123,3 +123,6 @@ node_modules/
 # Screenshots from dashboard validation
 **/01_screenshots/
 08_merged_ecm_dataset/backups/
+
+# Call transcripts
+calls_transcript/

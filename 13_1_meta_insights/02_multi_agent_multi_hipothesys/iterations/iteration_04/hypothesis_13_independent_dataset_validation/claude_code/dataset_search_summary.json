@@ -1,0 +1,14 @@
+{
+  "validated_pride": [
+    "PXD011967",
+    "PXD015982",
+    "PXD007048",
+    "PXD016440"
+  ],
+  "validated_massive": [
+    "MSV000082958",
+    "MSV000096508"
+  ],
+  "additional_suitable": [],
+  "total_datasets_found": 6
+}

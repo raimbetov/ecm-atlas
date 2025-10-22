@@ -1,0 +1,86 @@
+{
+  "k": 8,
+  "random_effect_d": -1.1024202120180384,
+  "random_effect_ci95": [
+    -3.029136447974935,
+    0.8242960239388584
+  ],
+  "p_value": 0.26209024833773387,
+  "Q": 223.28545452133363,
+  "I_squared": 96.86499955180413,
+  "tau_squared": 7.429779764130097,
+  "studies": [
+    {
+      "Study": "Vaughan et al. 2000",
+      "PMID": "10636155",
+      "Cohen_d": 2.4642857142857153,
+      "SE": 0.41396673921653965,
+      "N": 30,
+      "Direction": "beneficial",
+      "Endpoint": "Myocardial collagen content (months survival surrogate)"
+    },
+    {
+      "Study": "Eren et al. 2014",
+      "PMID": "25237099",
+      "Cohen_d": -2.6666666666666665,
+      "SE": 0.4776485613378817,
+      "N": 25,
+      "Direction": "beneficial",
+      "Endpoint": "Fibrosis severity score"
+    },
+    {
+      "Study": "Erickson et al. 2017",
+      "PMID": "28138559",
+      "Cohen_d": 2.218749999999999,
+      "SE": 0.33632347757852527,
+      "N": 40,
+      "Direction": "beneficial",
+      "Endpoint": "Median lifespan (months)"
+    },
+    {
+      "Study": "Khan et al. 2017",
+      "PMID": "28768707",
+      "Cohen_d": -3.0,
+      "SE": 0.6130391451319013,
+      "N": 18,
+      "Direction": "beneficial",
+      "Endpoint": "Percent fibrotic area"
+    },
+    {
+      "Study": "Placencio et al. 2015",
+      "PMID": "25686606",
+      "Cohen_d": -3.555555555555556,
+      "SE": 0.6260259603399959,
+      "N": 22,
+      "Direction": "beneficial",
+      "Endpoint": "Collagen content (\u00b5g/mg tissue)"
+    },
+    {
+      "Study": "Sawdey et al. 1993",
+      "PMID": "8384393",
+      "Cohen_d": 1.6666666666666667,
+      "SE": 0.41605217846404596,
+      "N": 20,
+      "Direction": "beneficial",
+      "Endpoint": "Time to vessel occlusion (minutes)"
+    },
+    {
+      "Study": "Ghosh et al. 2013",
+      "PMID": "23897865",
+      "Cohen_d": -3.789473684210526,
+      "SE": 0.8038621980489262,
+      "N": 15,
+      "Direction": "beneficial",
+      "Endpoint": "% SA-\u03b2-gal positive cells"
+    },
+    {
+      "Study": "Kortlever et al. 2006",
+      "PMID": "16505382",
+      "Cohen_d": -2.5,
+      "SE": 0.5773502691896258,
+      "N": 16,
+      "Direction": "beneficial",
+      "Endpoint": "% Ki67+ proliferating cells"
+    }
+  ]
+}

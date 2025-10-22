@@ -1,0 +1,5 @@
+model,accuracy,precision,recall,f1,auc
+Random Forest,0.75,0.6666666666666666,1.0,0.8,0.875
+XGBoost,0.5,0.5,1.0,0.6666666666666666,0.5
+Neural Network,0.75,1.0,0.5,0.6666666666666666,0.5
+Stacked Ensemble,0.75,0.6666666666666666,1.0,0.8,0.75

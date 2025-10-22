@@ -1,0 +1,17 @@
+sample_id,Sample type,Species,bleomycin/IPF,saline/HLF,wt B6
+S00015469,Tissues,Mus musculus,N,Y,Y
+S00015470,Tissues,Mus musculus,N,Y,Y
+S00015471,Tissues,Mus musculus,Y,N,Y
+S00015472,Tissues,Mus musculus,Y,N,Y
+S00015473,Tissues,Mus musculus,Y,N,Y
+S00015474,Tissues,Mus musculus,Y,N,Y
+S00015475,Cells,Homo sapiens,N,Y,N
+S00015476,Cells,Homo sapiens,N,Y,N
+S00015477,Cells,Homo sapiens,N,Y,N
+S00015478,Cells,Homo sapiens,N,Y,N
+S00015479,Cells,Homo sapiens,N,Y,N
+S00015480,Cells,Homo sapiens,Y,N,N
+S00015481,Cells,Homo sapiens,Y,N,N
+S00015482,Cells,Homo sapiens,Y,N,N
+S00015483,Cells,Homo sapiens,Y,N,N
+S00015484,Cells,Homo sapiens,Y,N,N

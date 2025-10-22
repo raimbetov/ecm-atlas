@@ -1,0 +1,25 @@
+{
+  "num_tissues": 17,
+  "autoencoder_latent_dim": 32,
+  "gcn_phaseII_probs": {
+    "Lung": 0.9896076321601868,
+    "Skeletal_muscle_EDL": 0.9955006241798401,
+    "Ovary_Cortex": 0.9991614818572998,
+    "Skin dermis": 0.9998196959495544,
+    "Skeletal_muscle_TA": 0.9973570108413696,
+    "Skeletal_muscle_Gastrocnemius": 0.9983730316162109,
+    "Intervertebral_disc_OAF": 0.9975953698158264,
+    "Kidney_Glomerular": 1.0,
+    "Brain_Cortex": 0.9998168349266052,
+    "Intervertebral_disc_IAF": 0.9999750852584839,
+    "Skeletal_muscle_Soleus": 0.9999990463256836,
+    "Heart_Native_Tissue": 0.013096744194626808,
+    "Brain_Hippocampus": 2.7586635753529265e-10,
+    "Ovary": 0.00018926373741123825,
+    "Intervertebral_disc_NP": 2.938451912348761e-11,
+    "Heart_Decellularized_Tissue": 0.006782976910471916,
+    "Kidney_Tubulointerstitial": 0.007185411173850298
+  },
+  "hdbscan_unique_clusters": 1,
+  "transition_prediction_r2": 0.9999999920156372
+}

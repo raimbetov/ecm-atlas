@@ -1,0 +1,5 @@
+Metabolite,Spearman_rho,p_value,Expected_Direction,Hypothesis_Supported
+ATP,0.8647058823529412,1.544234049652656e-05,Negative,No
+NAD,0.7352941176470589,0.0011716155350991778,Negative,No
+Lactate,-0.823529411764706,8.839139363842149e-05,Positive,No
+Lactate_Pyruvate_Ratio,-0.8558823529411764,2.3449156927289165e-05,Positive,No

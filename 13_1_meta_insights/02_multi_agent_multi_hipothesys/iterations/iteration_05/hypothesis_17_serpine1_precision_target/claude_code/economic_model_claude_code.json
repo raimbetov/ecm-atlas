@@ -1,0 +1,11 @@
+{
+  "Target_Population": 6960000,
+  "Annual_Cost_per_Patient_USD": 18000,
+  "Market_Penetration_%": 5.0,
+  "Total_Market_Size_B_USD": 6.264,
+  "Development_Cost_M_USD": 250.0,
+  "Timeline_Years": 8,
+  "NPV_B_USD": 8.466539751451117,
+  "ROI_%": 3386.615900580447,
+  "Economically_Viable": true
+}

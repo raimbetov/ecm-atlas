@@ -1,0 +1,132 @@
+{
+  "analysis_type": "Calcium Signaling Cascade - S100 to LOX/TGM Pathway",
+  "hypothesis": "H10: S100 calcium sensors regulate ECM stiffness via LOX/TGM crosslinkers",
+  "dataset": {
+    "samples": 18,
+    "total_proteins": 30,
+    "s100_proteins": 21,
+    "lox_proteins": 5,
+    "tgm_proteins": 4,
+    "total_crosslinkers": 9
+  },
+  "correlations": {
+    "total_pairs": 189,
+    "significant_positive": 47,
+    "significant_negative": 39,
+    "top_10_correlations": [
+      {
+        "S100": "S100A2",
+        "Crosslinker": "TGM5",
+        "Spearman_rho": 1.0,
+        "P_value": 0.0
+      },
+      {
+        "S100": "S100A14",
+        "Crosslinker": "TGM5",
+        "Spearman_rho": 1.0,
+        "P_value": 0.0
+      },
+      {
+        "S100": "S100A3",
+        "Crosslinker": "TGM5",
+        "Spearman_rho": 1.0,
+        "P_value": 0.0
+      },
+      {
+        "S100": "S100A11",
+        "Crosslinker": "LOXL2",
+        "Spearman_rho": -0.7887649980021979,
+        "P_value": 0.00010023405097035272
+      },
+      {
+        "S100": "S100A12",
+        "Crosslinker": "TGM3",
+        "Spearman_rho": 0.6911482839544804,
+        "P_value": 0.0014910003524803703
+      },
+      {
+        "S100": "S100A7A",
+        "Crosslinker": "TGM3",
+        "Spearman_rho": -0.6911482839544804,
+        "P_value": 0.0014910003524803703
+      },
+      {
+        "S100": "S100A8",
+        "Crosslinker": "TGM1",
+        "Spearman_rho": -0.6681595882055783,
+        "P_value": 0.0024392356664714315
+      },
+      {
+        "S100": "S100A10",
+        "Crosslinker": "LOXL2",
+        "Spearman_rho": -0.656384017118922,
+        "P_value": 0.0030902789595383087
+      },
+      {
+        "S100": "S100B",
+        "Crosslinker": "LOXL4",
+        "Spearman_rho": 0.6413953251208546,
+        "P_value": 0.0041187398497009465
+      },
+      {
+        "S100": "S100A11",
+        "Crosslinker": "LOXL3",
+        "Spearman_rho": -0.628564507518729,
+        "P_value": 0.005207102440705051
+      }
+    ]
+  },
+  "deep_learning": {
+    "architecture": "128-64-32",
+    "input_features": 21,
+    "epochs": 500,
+    "train_r2": 0.9922265331289765,
+    "test_r2": -2.3191735330221097,
+    "train_mae": 0.02119728513445204,
+    "test_mae": 0.29685972278401673,
+    "train_rmse": 0.02640659624101357,
+    "test_rmse": 0.3477749178143179
+  },
+  "random_forest": {
+    "n_estimators": 200,
+    "train_r2": 0.8960941210628317,
+    "test_r2": 0.29299493695886925,
+    "top_5_features": [
+      {
+        "S100_Protein": "S100A9",
+        "Importance": 0.2267529257300015
+      },
+      {
+        "S100_Protein": "S100A10",
+        "Importance": 0.16410803699705528
+      },
+      {
+        "S100_Protein": "S100A1",
+        "Importance": 0.15902878561884998
+      },
+      {
+        "S100_Protein": "S100A11",
+        "Importance": 0.10224427506151018
+      },
+      {
+        "S100_Protein": "S100A8",
+        "Importance": 0.0955264837593895
+      }
+    ]
+  },
+  "outputs": {
+    "correlations_csv": "/Users/Kravtsovd/projects/ecm-atlas/13_1_meta_insights/02_multi_agent_multi_hipothesys/iterations/iteration_04/hypothesis_10_calcium_signaling_cascade/claude_code/s100_crosslinker_correlations_claude.csv",
+    "feature_importance_csv": "/Users/Kravtsovd/projects/ecm-atlas/13_1_meta_insights/02_multi_agent_multi_hipothesys/iterations/iteration_04/hypothesis_10_calcium_signaling_cascade/claude_code/s100_feature_importance_claude.csv",
+    "model_weights": "/Users/Kravtsovd/projects/ecm-atlas/13_1_meta_insights/02_multi_agent_multi_hipothesys/iterations/iteration_04/hypothesis_10_calcium_signaling_cascade/claude_code/visualizations_claude_code/calcium_signaling_model_claude.pth",
+    "heatmap": "/Users/Kravtsovd/projects/ecm-atlas/13_1_meta_insights/02_multi_agent_multi_hipothesys/iterations/iteration_04/hypothesis_10_calcium_signaling_cascade/claude_code/visualizations_claude_code/calcium_network_heatmap_claude.png",
+    "loss_curve": "/Users/Kravtsovd/projects/ecm-atlas/13_1_meta_insights/02_multi_agent_multi_hipothesys/iterations/iteration_04/hypothesis_10_calcium_signaling_cascade/claude_code/visualizations_claude_code/training_loss_claude.png",
+    "scatter_plot": "/Users/Kravtsovd/projects/ecm-atlas/13_1_meta_insights/02_multi_agent_multi_hipothesys/iterations/iteration_04/hypothesis_10_calcium_signaling_cascade/claude_code/visualizations_claude_code/predictions_scatter_claude.png",
+    "importance_plot": "/Users/Kravtsovd/projects/ecm-atlas/13_1_meta_insights/02_multi_agent_multi_hipothesys/iterations/iteration_04/hypothesis_10_calcium_signaling_cascade/claude_code/visualizations_claude_code/feature_importance_claude.png"
+  },
+  "notes": [
+    "CALM and CAMK proteins are MISSING from dataset",
+    "Analysis focused on DIRECT S100 -> LOX/TGM pathway",
+    "Small dataset (18 samples) - results are preliminary",
+    "Z-scores used from old age samples"
+  ]
+}
