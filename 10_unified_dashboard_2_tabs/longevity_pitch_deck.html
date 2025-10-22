@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECM-Atlas: The Future of Longevity</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #ffffff;
+            background: #000000;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .presentation {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .presentation-container {
+            position: relative;
+            width: 100%;
+            max-width: none;
+            aspect-ratio: 16 / 9;
+            margin: 0.5rem;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(255, 255, 255, 0.1);
+            background: #ffffff;
+            backdrop-filter: blur(10px);
+        }
+
+        .slide {
+            position: absolute;
+            top: 124px; /* Account for header (120px) + progress bar (4px) */
+            left: 0;
+            width: 100%;
+            height: calc(100% - 124px); /* Fill remaining space after header */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            background: #ffffff;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .slide.active {
+            opacity: 1;
+            visibility: visible;
+            z-index: 10;
+        }
+
+        .slide-content {
+            max-width: 1200px;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0.5rem;
+            overflow-y: auto; /* Allow scrolling if content overflows */
+        }
+
+        .slide-number {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            font-size: 1rem;
+            color: rgba(0, 0, 0, 0.5);
+            font-weight: 700;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+
+        /* Standardized Typography Classes */
+        .text-large {
+            font-size: clamp(2rem, 5vw, 2.8rem);
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .text-medium {
+            font-size: clamp(1.4rem, 3vw, 1.8rem);
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        .text-body {
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            color: #333333;
+            line-height: 1.7;
+            max-width: 800px;
+        }
+
+        .text-emphasis {
+            font-weight: 700;
+            color: #000000;
+        }
+
+        .text-highlight {
+            color: #ff6b35;
+            font-weight: 700;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        .title-slide h1 {
+            font-size: clamp(3.5rem, 9vw, 7rem);
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.025em;
+            line-height: 1.1;
+        }
+
+        .title-slide .subtitle {
+            font-size: clamp(1.4rem, 3.5vw, 2.4rem);
+            font-weight: 500;
+            color: #333333;
+            margin-bottom: 3rem;
+            letter-spacing: -0.005em;
+        }
+
+        .title-slide .highlight {
+            font-size: clamp(1.8rem, 4.5vw, 3rem);
+            font-weight: 800;
+            color: #1a202c;
+            margin: 2.5rem 0;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 1.5rem 2rem;
+            border-radius: 16px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .content-slide h2 {
+            font-size: clamp(2.8rem, 7vw, 4.5rem);
+            font-weight: 900;
+            margin-bottom: 2.5rem;
+            color: #000000;
+            letter-spacing: -0.015em;
+            line-height: 1.1;
+            text-align: center;
+            width: 100%;
+        }
+
+        .content-slide .big-number {
+            font-size: clamp(4rem, 12vw, 8rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, #ff6b35, #ff8c42);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 2rem 0;
+            line-height: 0.8;
+        }
+
+        .content-slide .metric {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-weight: 700;
+            color: #000000;
+            margin: 1rem 0;
+        }
+
+        .content-slide .description {
+            font-size: clamp(1rem, 2.5vw, 1.3rem);
+            color: #333333;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            line-height: 1.7;
+        }
+
+        .content-slide .emphasis {
+            font-weight: 700;
+            color: #000000;
+        }
+
+        /* Standardized Spacing Classes */
+        .mb-1 { margin-bottom: 1rem; }
+        .mb-2 { margin-bottom: 2rem; }
+        .mb-3 { margin-bottom: 3rem; }
+        .mt-1 { margin-top: 1rem; }
+        .mt-2 { margin-top: 2rem; }
+        .mt-3 { margin-top: 3rem; }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        .stats-grid-4 {
+            grid-template-columns: repeat(4, 1fr) !important;
+            max-width: none !important;
+        }
+
+        .stat-card {
+            background: #f8f8f8;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #ff6b35, #ff8c42);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #333333;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-desc {
+            font-size: 0.9rem;
+            color: #666666;
+            line-height: 1.5;
+        }
+
+        .note-block {
+            background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+            border: 2px solid #f39c12;
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            box-shadow: 0 8px 24px rgba(243, 156, 18, 0.2);
+            max-width: 800px;
+        }
+
+        .note-icon {
+            font-size: 2.5rem;
+            flex-shrink: 0;
+        }
+
+        .note-content {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #8b4513;
+            line-height: 1.4;
+        }
+
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .solution-card {
+            background: #f8f8f8;
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .solution-card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 1rem;
+        }
+
+        .solution-card p {
+            color: #666666;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .solution-card .highlight {
+            color: #ff6b35;
+            font-weight: 700;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 100%);
+            color: white;
+            padding: 4rem 3rem;
+            border-radius: 24px;
+            margin: 4rem 0;
+            max-width: 900px;
+            box-shadow: 0 24px 72px rgba(255, 107, 53, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            width: 100%;
+        }
+
+        .cta-section h3 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .cta-section p {
+            font-size: 1.4rem;
+            margin-bottom: 3rem;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #000000;
+            color: #ffffff;
+            padding: 1.5rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+            border: 2px solid #ff6b35;
+        }
+
+        .cta-button:hover {
+            background: #ff6b35;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+        }
+
+        .navigation {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 1rem;
+            z-index: 100;
+        }
+
+        .nav-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .nav-dot.active {
+            background: #ff6b35;
+            transform: scale(1.3);
+        }
+
+        /* Fixed Header (now part of presentation) */
+        .fixed-header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 120px;
+            background: #000000;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #ff6b35;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 2rem;
+            box-shadow: 0 2px 20px rgba(255, 255, 255, 0.1);
+        }
+
+        .header-left {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #ff6b35, #ff8c42);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        .header-subtitle {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #cccccc;
+            margin-top: 2px;
+            opacity: 0.9;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .header-progress {
+            font-size: 0.85rem;
+            color: #ffffff;
+            font-weight: 600;
+        }
+
+        .progress-bar {
+            position: absolute;
+            top: 120px;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #ff6b35, #ff8c42);
+            box-shadow: 0 2px 8px rgba(255, 107, 53, 0.3);
+            z-index: 100;
+            border-radius: 0 0 2px 2px;
+        }
+
+        @media (max-width: 768px) {
+            .fixed-header {
+                height: 90px;
+                padding: 0 1rem;
+            }
+
+            .header-title {
+                font-size: 1.8rem;
+                background: linear-gradient(135deg, #ff6b35, #ff8c42);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+
+            .header-subtitle {
+                font-size: 0.8rem;
+                color: #cccccc;
+            }
+
+            .header-progress {
+                font-size: 0.8rem;
+            }
+
+            .progress-bar {
+                top: 90px;
+            }
+
+            .presentation-container {
+                margin: 0.25rem;
+                aspect-ratio: 4 / 3; /* More appropriate for mobile */
+            }
+
+            .slide {
+                top: 94px; /* Account for mobile header (90px) + progress bar (4px) */
+                height: calc(100% - 94px);
+                padding: 0.5rem;
+            }
+
+            .slide-content {
+                padding: 0.5rem;
+            }
+
+            .title-slide h1 {
+                font-size: clamp(2.5rem, 12vw, 5rem);
+            }
+
+            .content-slide h2 {
+                font-size: clamp(2rem, 8vw, 3.5rem);
+            }
+
+            .big-number {
+                font-size: clamp(3rem, 15vw, 6rem);
+            }
+
+            .stats-grid, .solution-grid, .metrics-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .stats-grid-4 {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+
+            .note-block {
+                flex-direction: column;
+                text-align: center;
+                padding: 1.5rem;
+                gap: 1rem;
+            }
+
+            .note-icon {
+                font-size: 2rem;
+            }
+
+            .note-content {
+                font-size: 1.1rem;
+            }
+
+            .cta-section {
+                padding: 3rem 2rem;
+                margin: 2rem 0;
+                border-radius: 20px;
+            }
+
+            .cta-section h3 {
+                font-size: 2.5rem;
+            }
+
+            .cta-section p {
+                font-size: 1.2rem;
+                margin-bottom: 2rem;
+            }
+
+            .cta-button {
+                padding: 1.2rem 2.5rem;
+                font-size: 1.1rem;
+            }
+
+            .navigation {
+                bottom: 1rem;
+            }
+
+            .text-large {
+                font-size: clamp(1.5rem, 6vw, 2.2rem);
+            }
+
+            .text-medium {
+                font-size: clamp(1.2rem, 4vw, 1.6rem);
+            }
+
+        }
+
+        /* Enhanced grid layouts for better content organization */
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .metric-item {
+            background: #f8f8f8;
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            transition: transform 0.2s ease;
+        }
+
+        .metric-item:hover {
+            transform: translateY(-4px);
+        }
+
+        .metric-number {
+            font-size: 4rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #ff6b35, #ff8c42);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            line-height: 1;
+        }
+
+        .metric-label {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .metric-desc {
+            font-size: 0.95rem;
+            color: #666666;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation">
+        <div class="presentation-container">
+            <!-- Fixed Header (now part of presentation) -->
+            <div class="fixed-header">
+                <div class="header-left">
+                    <div class="header-title" id="headerTitle">ECM-Atlas</div>
+                    <div class="header-subtitle" id="headerSubtitle">Unified Database of ECM Aging</div>
+                </div>
+                <div class="header-right">
+                    <div class="header-progress" id="slideCounter">1 / 13</div>
+                </div>
+            </div>
+
+            <div class="progress-bar" id="progressBar"></div>
+            <!-- Slide 1: Title -->
+        <div class="slide active" id="slide1" data-title="ECM-Atlas" data-subtitle="Unified Database of ECM Aging">
+            <div class="slide-content title-slide">
+                <div class="slide-number">01</div>
+                <h1>ECM-Atlas</h1>
+                <div class="subtitle">Unified Database of ECM Aging</div>
+                <div class="stats-grid stats-grid-4">
+                    <div class="stat-card">
+                        <div class="stat-number">14</div>
+                        <div class="stat-label">Studies</div>
+                        <div class="stat-desc">Peer-reviewed publications from 2017-2023</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">1,106</div>
+                        <div class="stat-label">Proteins</div>
+                        <div class="stat-desc">Comprehensive matrisome coverage across all studies</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">8</div>
+                        <div class="stat-label">Organs</div>
+                        <div class="stat-desc">Kidney, Lung, Heart, Skin, Brain, Muscle, Ovary, Intervertebral disc</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">1</div>
+                        <div class="stat-label">Platform</div>
+                        <div class="stat-desc">Unified database for ECM aging research</div>
+                    </div>
+                </div>
+                <div class="description">
+                    ECM-Atlas aggregates proteomic studies to track age-related changes<br>
+                    in the extracellular matrix across tissues and organisms.<br>
+                    <strong>Our goal:</strong> Identify universal aging biomarkers and therapeutic targets.
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: The Problem -->
+        <div class="slide" id="slide2" data-title="The Data Crisis" data-subtitle="The Challenge of Fragmented Research">
+            <div class="slide-content content-slide">
+                <div class="slide-number">02</div>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">128</div>
+                        <div class="stat-label">Files</div>
+                        <div class="stat-desc">Raw proteomic datasets scattered across publications</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">13</div>
+                        <div class="stat-label">Studies</div>
+                        <div class="stat-desc">Brilliant research trapped in incompatible formats</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">0</div>
+                        <div class="stat-label">Unified Database</div>
+                        <div class="stat-desc">No single platform to analyze ECM aging together</div>
+                    </div>
+                </div>
+                <div class="description">
+                    Brilliant researchers have generated the data we need.<br>
+                    But it's scattered across journals, trapped in incompatible formats,<br>
+                    impossible to analyze together.
+                </div>
+                <div class="note-block">
+                    <div class="note-icon">💡</div>
+                    <div class="note-content">
+                        The insights exist. They're just locked away.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: The Blind Spot -->
+        <div class="slide" id="slide3" data-title="The Blind Spot" data-subtitle="What's Missing from Biology's Central Dogma">
+            <div class="slide-content content-slide">
+                <div class="slide-number">03</div>
+                <div class="text-large mb-3 mt-3">
+                    DNA → RNA → Protein
+                </div>
+                <div class="description">
+                    Biology's central dogma explains what happens <em>inside</em> cells.<br>
+                    But what about the space <em>between</em> them?
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">Research Focus</div>
+                        <div class="stat-desc">Inside the cell</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">5%</div>
+                        <div class="stat-label">Research Focus</div>
+                        <div class="stat-desc">The extracellular matrix</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">10-1000x</div>
+                        <div class="stat-label">Volume</div>
+                        <div class="stat-desc">ECM occupies vs. cells</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: The Science -->
+        <div class="slide" id="slide4" data-title="The Matrisome" data-subtitle="The Complete ECM Protein Universe">
+            <div class="slide-content content-slide">
+                <div class="slide-number">04</div>
+                <div class="text-medium text-emphasis mb-3 mt-3">
+                    The ECM: 1,027 genes in humans, 1,110 in mice
+                </div>
+                <div class="description">
+                    The matrisome comprises all proteins that constitute the ECM—<br>
+                    over 150 ECM and ECM-associated proteins per tissue with characteristic differences.<br>
+                    As a dynamic structure, the ECM composition changes as a function of age.
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-label">Challenge</div>
+                        <div class="stat-desc">Limited knowledge of temporal matrisome changes across life stages</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Opportunity</div>
+                        <div class="stat-desc">Recent proteomic studies (2017-2024) provide time-resolved ECM data</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-label">Solution</div>
+                        <div class="stat-desc">Integrate public datasets to understand ECM aging signatures</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Data Processing Pipeline -->
+        <div class="slide" id="slide5" data-title="Data Processing Pipeline" data-subtitle="From Raw Data to Unified Database">
+            <div class="slide-content content-slide">
+                <div class="slide-number">05</div>
+                <div class="text-medium text-emphasis mb-3 mt-3">
+                    From Raw Data to Unified Database
+                </div>
+                <div class="description">
+                    Raw proteomic datasets flow through an autonomous normalization pipeline<br>
+                    into a unified database with standardized z-scores for cross-study comparison.
+                </div>
+                <div class="pipeline-diagram" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); padding: 3rem; border-radius: 20px; margin: 3rem 0; box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08); border: 1px solid rgba(255, 255, 255, 0.8);">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; align-items: center; margin-bottom: 2rem;">
+                        <div style="background: linear-gradient(135deg, #ffebee, #ffcdd2); padding: 1.5rem; border-radius: 12px; text-align: center; font-weight: 600; color: #c62828; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);">Raw Excel/TSV Files</div>
+                        <div style="text-align: center; font-size: 1.5rem; color: #667eea; font-weight: 700;">→</div>
+                        <div style="background: linear-gradient(135deg, #e3f2fd, #bbdefb); padding: 1.5rem; border-radius: 12px; text-align: center; font-weight: 600; color: #1565c0; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);">Autonomous Agent<br/><small>Normalization</small></div>
+                        <div style="text-align: center; font-size: 1.5rem; color: #667eea; font-weight: 700;">→</div>
+                        <div style="background: linear-gradient(135deg, #f3e5f5, #e1bee7); padding: 1.5rem; border-radius: 12px; text-align: center; font-weight: 600; color: #6a1b9a; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);">Long Format</div>
+                        <div style="text-align: center; font-size: 1.5rem; color: #667eea; font-weight: 700;">→</div>
+                        <div style="background: linear-gradient(135deg, #fff3e0, #ffcc02); padding: 1.5rem; border-radius: 12px; text-align: center; font-weight: 600; color: #e65100; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);">ECM Filtering</div>
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; align-items: center;">
+                        <div style="background: linear-gradient(135deg, #e8f5e9, #c8e6c9); padding: 1.5rem; border-radius: 12px; text-align: center; font-weight: 600; color: #2e7d32; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);">Wide Format CSV</div>
+                        <div style="text-align: center; font-size: 1.5rem; color: #667eea; font-weight: 700;">→</div>
+                        <div style="background: linear-gradient(135deg, #fff8e1, #ffecb3); padding: 1.5rem; border-radius: 12px; text-align: center; font-weight: 600; color: #f57c00; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);">Merge to<br/>Unified DB</div>
+                        <div style="text-align: center; font-size: 1.5rem; color: #667eea; font-weight: 700;">→</div>
+                        <div style="background: linear-gradient(135deg, #e8f5e9, #c8e6c9); padding: 1.5rem; border-radius: 12px; text-align: center; font-weight: 600; color: #2e7d32; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);">Z-score<br/>Calculation</div>
+                        <div style="text-align: center; font-size: 1.5rem; color: #667eea; font-weight: 700;">→</div>
+                        <div style="background: linear-gradient(135deg, #e8f5e9, #c8e6c9); padding: 1.5rem; border-radius: 12px; text-align: center; font-weight: 600; color: #2e7d32; box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);">Dashboard<br/>Visualization</div>
+                    </div>
+                </div>
+                <div class="description emphasis">
+                    From 30 hours of manual work to 30 seconds of insight.
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Database Structure -->
+        <div class="slide" id="slide6" data-title="Database Structure" data-subtitle="merged_ecm_aging_zscore.csv">
+            <div class="slide-content content-slide">
+                <div class="slide-number">06</div>
+                <div class="description">
+                    14 datasets from 2017-2023. 3,715 measurements. 1,106 unique ECM proteins.<br>
+                    Species: Human (Homo sapiens), Mouse (Mus musculus).
+                </div>
+                <div class="metrics-grid">
+                    <div class="metric-item">
+                        <div class="metric-number">14</div>
+                        <div class="metric-label">Datasets</div>
+                        <div class="metric-desc">Peer-reviewed publications from 2017-2023</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-number">1,106</div>
+                        <div class="metric-label">ECM Proteins</div>
+                        <div class="metric-desc">Comprehensive matrisome coverage across all studies</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-number">8</div>
+                        <div class="metric-label">Organs</div>
+                        <div class="metric-desc">Kidney, Lung, Heart, Skin, Brain, Muscle, Ovary, Intervertebral disc</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6.5: System Architecture -->
+        <div class="slide" id="slide6_5">
+            <div class="slide-content content-slide">
+                <div class="slide-number">06.5</div>
+                <h2>System Architecture</h2>
+                <div class="description" style="margin-bottom: 2rem;">
+                    ECM-Atlas integrates data from multiple sources into a unified platform.
+                </div>
+                <div class="architecture-diagram" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); padding: 3rem; border-radius: 24px; margin: 3rem 0; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1); border: 1px solid rgba(255, 255, 255, 0.8);">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5rem; margin-bottom: 2.5rem;">
+                        <div style="padding: 1.5rem; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border-radius: 12px; font-weight: 700; text-align: center; box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);">ECM-Atlas Repository</div>
+                        <div style="padding: 1.5rem; background: linear-gradient(135deg, #e3f2fd, #bbdefb); border-radius: 12px; font-weight: 600; text-align: center; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);">Data Layer<br/><small style="font-weight: 500; opacity: 0.8;">19 studies</small></div>
+                        <div style="padding: 1.5rem; background: linear-gradient(135deg, #fff3e0, #ffcc02); border-radius: 12px; font-weight: 600; text-align: center; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);">Processing Layer<br/><small style="font-weight: 500; opacity: 0.8;">Autonomous Agent</small></div>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2.5rem;">
+                        <div style="padding: 1.5rem; background: linear-gradient(135deg, #4caf50, #66bb6a); color: white; border-radius: 12px; font-weight: 700; text-align: center; box-shadow: 0 8px 24px rgba(76, 175, 80, 0.3);">Output Layer</div>
+                        <div style="padding: 1.5rem; background: linear-gradient(135deg, #2196f3, #42a5f5); color: white; border-radius: 12px; font-weight: 700; text-align: center; box-shadow: 0 8px 24px rgba(33, 150, 243, 0.3);">Dashboard<br/><small style="font-weight: 500; opacity: 0.9;">This Platform</small></div>
+                    </div>
+                    <div style="padding: 2rem; background: linear-gradient(135deg, #ff9800, #ffb74d); color: white; border-radius: 12px; font-weight: 700; text-align: center; box-shadow: 0 8px 24px rgba(255, 152, 0, 0.3);">
+                        Result: 3,715 measurements, 1,106 ECM proteins
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: The Solution -->
+        <div class="slide" id="slide7" data-title="The Solution" data-subtitle="ECM-Atlas: The Future of ECM Aging Research">
+            <div class="slide-content content-slide">
+                <div class="slide-number">07</div>
+                <div class="description">
+                    The first unified database of ECM aging across all organs.<br>
+                    Built for discovery. Powered by AI. Open to everyone.
+                </div>
+                <div class="solution-grid">
+                    <div class="solution-card">
+                        <h3>Unified Data</h3>
+                        <p>14 studies harmonized into one searchable database with consistent metrics and identifiers.</p>
+                        <p class="highlight">From 30 hours of manual work to 30 seconds of insight.</p>
+                    </div>
+                    <div class="solution-card">
+                        <h3>AI-Powered Analysis</h3>
+                        <p>Natural language queries: "Show proteins that age in all organs" or "What changes in kidney glomeruli?"</p>
+                        <p class="highlight">Democratizing longevity research for every scientist.</p>
+                    </div>
+                    <div class="solution-card">
+                        <h3>Interactive Dashboard</h3>
+                        <p>Filter by tissue, age, compartment. Visualize patterns. Export results. Share findings.</p>
+                        <p class="highlight">Making complex data accessible and actionable.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 8: Heatmap Visualization -->
+        <div class="slide" id="slide8" data-title="Heatmap Visualization" data-subtitle="Top Aging-Associated Proteins">
+            <div class="slide-content content-slide">
+                <div class="slide-number">08</div>
+                <div class="description" style="margin-bottom: 2rem;">
+                    Interactive heatmap showing protein expression patterns across different age groups and tissues.
+                </div>
+                <div style="text-align: center; margin: 3rem 0;">
+                    <img src="static/assets/screenshots/Heatmap Top Aging-Associated Proteins.png"
+                         alt="Heatmap visualization" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);">
+                    <p style="margin-top: 2rem; font-size: 1.1rem; color: #666;">Top aging-associated proteins ranked by z-score across multiple tissues</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 9: Volcano Plot Visualization -->
+        <div class="slide" id="slide9" data-title="Volcano Plot Visualization" data-subtitle="Differential Expression Analysis">
+            <div class="slide-content content-slide">
+                <div class="slide-number">09</div>
+                <div class="description" style="margin-bottom: 2rem;">
+                    Statistical analysis revealing proteins with significant age-related changes.
+                </div>
+                <div style="text-align: center; margin: 3rem 0;">
+                    <img src="static/assets/screenshots/Volcano Plot Differential Expression.png"
+                         alt="Volcano plot visualization" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);">
+                    <p style="margin-top: 2rem; font-size: 1.1rem; color: #666;">Statistical significance vs fold-change for ECM proteins</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 10: Age Comparison Visualization -->
+        <div class="slide" id="slide10" data-title="Age Comparison Analysis" data-subtitle="Young vs Aged Abundance Patterns">
+            <div class="slide-content content-slide">
+                <div class="slide-number">10</div>
+                <div class="description" style="margin-bottom: 2rem;">
+                    Direct comparison of protein abundance between young and aged samples.
+                </div>
+                <div style="text-align: center; margin: 3rem 0;">
+                    <img src="static/assets/screenshots/Scatter Plot Young vs Old Comparison.png"
+                         alt="Scatter plot visualization" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);">
+                    <p style="margin-top: 2rem; font-size: 1.1rem; color: #666;">Young vs aged abundance patterns revealing age-related ECM changes</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 11: The Discovery -->
+        <div class="slide" id="slide11" data-title="The Discovery" data-subtitle="Universal Biomarkers Identified">
+            <div class="slide-content content-slide">
+                <div class="slide-number">11</div>
+                <div class="big-number">101</div>
+                <div class="metric">Cross-study markers (q<0.05)</div>
+                <div class="description">
+                    Batch correction applied successfully: ICC improved from 0.29 to 0.507.<br>
+                    14/14 key collagens detected. Z-score variance at target (1.00).
+                </div>
+                <div class="description emphasis">
+                    Universal biomarkers identified. Therapeutic targets prioritized.<br>
+                    The foundation for precision ECM interventions.
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 12: The Impact -->
+        <div class="slide" id="slide12" data-title="The Impact" data-subtitle="From Fragmented Data to Unified Discovery">
+            <div class="slide-content content-slide">
+                <div class="slide-number">12</div>
+                <div class="description">
+                    ECM-Atlas transforms scattered proteomic studies into actionable insights.<br>
+                    Enabling the next generation of longevity therapeutics.
+                </div>
+                <div class="metrics-grid">
+                    <div class="metric-item">
+                        <div class="metric-number">14</div>
+                        <div class="metric-label">Studies Unified</div>
+                        <div class="metric-desc">From fragmented data to unified analysis</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-number">1,106</div>
+                        <div class="metric-label">ECM Proteins</div>
+                        <div class="metric-desc">Complete matrisome coverage for discovery</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-number">101</div>
+                        <div class="metric-label">Validated Markers</div>
+                        <div class="metric-desc">Cross-study biomarkers (q<0.05)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 13: Call to Action -->
+        <div class="slide" id="slide13">
+            <div class="slide-content content-slide">
+                <div class="slide-number">13</div>
+                <h2>Let's Build This Future</h2>
+                <div class="cta-section">
+                    <h3 class="text-center">Together</h3>
+                    <p class="text-center mb-3">
+                        ECM-Atlas is more than a database—it's the foundation<br>
+                        for understanding and intervening in ECM aging.<br>
+                        Join us in advancing longevity science.
+                    </p>
+                    <div class="text-center">
+                        <a href="mailto:daniel@improvado.io" class="cta-button">
+                            Start the Conversation →
+                        </a>
+                    </div>
+                </div>
+                <div class="description mt-3">
+                    For science. For health. For humanity.
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div class="navigation">
+        <div class="nav-dot active" data-slide="1"></div>
+        <div class="nav-dot" data-slide="2"></div>
+        <div class="nav-dot" data-slide="3"></div>
+        <div class="nav-dot" data-slide="4"></div>
+        <div class="nav-dot" data-slide="5"></div>
+        <div class="nav-dot" data-slide="6"></div>
+        <div class="nav-dot" data-slide="7"></div>
+        <div class="nav-dot" data-slide="8"></div>
+        <div class="nav-dot" data-slide="9"></div>
+        <div class="nav-dot" data-slide="10"></div>
+        <div class="nav-dot" data-slide="11"></div>
+        <div class="nav-dot" data-slide="12"></div>
+        <div class="nav-dot" data-slide="13"></div>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 13;
+        const slides = document.querySelectorAll('.slide');
+        const navDots = document.querySelectorAll('.nav-dot');
+        const progressBar = document.getElementById('progressBar');
+
+        function showSlide(slideNumber) {
+            // Hide all slides
+            slides.forEach(slide => slide.classList.remove('active'));
+            navDots.forEach(dot => dot.classList.remove('active'));
+
+            // Show target slide
+            const targetSlide = document.getElementById(`slide${slideNumber}`);
+            targetSlide.classList.add('active');
+            document.querySelector(`[data-slide="${slideNumber}"]`).classList.add('active');
+
+            // Update header with slide-specific content
+            const slideTitle = targetSlide.getAttribute('data-title') || 'ECM-Atlas';
+            const slideSubtitle = targetSlide.getAttribute('data-subtitle') || 'Unified Database of ECM Aging';
+
+            document.getElementById('headerTitle').textContent = slideTitle;
+            document.getElementById('headerSubtitle').textContent = slideSubtitle;
+
+            // Update slide counter
+            document.getElementById('slideCounter').textContent = slideNumber + ' / ' + totalSlides;
+
+            // Update progress bar
+            const progress = ((slideNumber - 1) / (totalSlides - 1)) * 100;
+            progressBar.style.width = progress + '%';
+
+            currentSlide = slideNumber;
+        }
+
+        // Navigation dot clicks
+        navDots.forEach(dot => {
+            dot.addEventListener('click', () => {
+                const slideNumber = parseInt(dot.getAttribute('data-slide'));
+                showSlide(slideNumber);
+            });
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                e.preventDefault();
+                if (currentSlide < totalSlides) {
+                    showSlide(currentSlide + 1);
+                }
+            } else if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                if (currentSlide > 1) {
+                    showSlide(currentSlide - 1);
+                }
+            }
+        });
+
+        // Touch/swipe navigation
+        let startX = 0;
+        let endX = 0;
+
+        document.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+        });
+
+        document.addEventListener('touchend', (e) => {
+            endX = e.changedTouches[0].clientX;
+            const diffX = startX - endX;
+
+            if (Math.abs(diffX) > 50) { // Minimum swipe distance
+                if (diffX > 0 && currentSlide < totalSlides) {
+                    // Swipe left - next slide
+                    showSlide(currentSlide + 1);
+                } else if (diffX < 0 && currentSlide > 1) {
+                    // Swipe right - previous slide
+                    showSlide(currentSlide - 1);
+                }
+            }
+        });
+
+        // Auto-advance for demo (optional - comment out for manual control)
+        // setInterval(() => {
+        //     if (currentSlide < totalSlides) {
+        //         showSlide(currentSlide + 1);
+        //     } else {
+        //         showSlide(1);
+        //     }
+        // }, 5000);
+    </script>
+</body>
+</html>

@@ -94,6 +94,8 @@
             max-width: 1600px;
             margin: 0 auto;
             padding: 0 var(--space-sm);
+            position: relative;
+            z-index: 3;
         }
 
         .header-top {
@@ -171,6 +173,72 @@
 
 [data-theme="dark"] .theme-btn-delicate.active { box-shadow: 0 0 0 2px rgba(0,0,0,.5); }
 
+/* Matrix Background Styles */
+.matrix-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    display: block;
+}
+
+/* Multi-layer blended gradient glass overlays */
+.matrix-glass-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+    mix-blend-mode: soft-light;
+}
+
+.matrix-layer-1 {
+    background:
+        radial-gradient(circle at 20% 80%, rgba(255, 165, 0, 0.15) 0%, transparent 50%),
+        linear-gradient(135deg, rgba(255, 165, 0, 0.08) 0%, rgba(255, 140, 0, 0.04) 100%);
+    animation: matrix-gradient-shift 25s ease infinite;
+}
+
+.matrix-layer-2 {
+    background:
+        conic-gradient(from 0deg, rgba(255, 165, 0, 0.12), rgba(255, 140, 0, 0.12), rgba(255, 215, 0, 0.12), rgba(255, 165, 0, 0.12)),
+        radial-gradient(circle at 80% 20%, rgba(255, 165, 0, 0.10) 0%, transparent 70%);
+    opacity: 0.9;
+    animation: matrix-gradient-rotate 20s linear infinite;
+}
+
+.matrix-layer-3 {
+    background:
+        linear-gradient(45deg, rgba(255, 165, 0, 0.06) 25%, transparent 25%) 0 0,
+        linear-gradient(-45deg, rgba(255, 165, 0, 0.06) 25%, transparent 25%) 0 0,
+        linear-gradient(45deg, transparent 75%, rgba(255, 165, 0, 0.06) 75%) 0 0,
+        linear-gradient(-45deg, transparent 75%, rgba(255, 165, 0, 0.06) 75%) 0 0;
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    opacity: 0.7;
+    animation: matrix-grid-fade 15s ease-in-out infinite alternate;
+}
+
+@keyframes matrix-gradient-shift {
+    0%, 100% { transform: translateX(0) scale(1); }
+    50% { transform: translateX(10px) scale(1.02); }
+}
+
+@keyframes matrix-gradient-rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes matrix-grid-fade {
+    0% { opacity: 0.2; }
+    100% { opacity: 0.6; }
+}
+
 /* Header Typography */
         .header-name {
             margin: 0;
@@ -182,6 +250,7 @@
             background-clip: text;
     letter-spacing: -.05em;
             line-height: 1;
+            text-shadow: 0 0 20px rgba(255, 165, 0, 0.5), 0 0 40px rgba(255, 165, 0, 0.3);
         }
 
         .header-type {
@@ -213,6 +282,7 @@
             line-height: 1.5;
             color: var(--text-light);
             font-weight: 400;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
 
         .header-stats {
@@ -253,6 +323,7 @@
             order: 1;
             flex-shrink: 0;
             margin: 0;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
 
         .header-stats .stat-label {
@@ -266,6 +337,7 @@
             flex-grow: 1;
             margin: 0;
             line-height: 1;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
 
 /* Dataset Info Cards */

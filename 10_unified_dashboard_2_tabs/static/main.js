@@ -364,6 +364,95 @@ function initTheme() {
 // Initialize theme when DOM is loaded
 document.addEventListener('DOMContentLoaded', initTheme);
 
+// Matrix Background Animation
+class MatrixBackground {
+    constructor() {
+        this.canvas = document.getElementById('matrix-bg');
+        if (!this.canvas) return;
+
+        this.ctx = this.canvas.getContext('2d');
+        this.fontSize = 14;
+        this.columns = 0;
+        this.drops = [];
+
+        // Expanded alphabet for more variety (ASCII-like symbols, letters, numbers, katakana)
+        this.alphabet = 'アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッンABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=[]{}|;:,.<>?/~`';
+
+        this.resizeCanvas();
+        this.initializeDrops();
+        this.animate();
+
+        window.addEventListener('resize', () => this.handleResize());
+    }
+
+    resizeCanvas() {
+        const header = document.querySelector('.header-awesome');
+        if (header) {
+            this.canvas.width = header.offsetWidth;
+            this.canvas.height = header.offsetHeight;
+        } else {
+            // Fallback to window dimensions if header not found
+            this.canvas.width = window.innerWidth;
+            this.canvas.height = window.innerHeight;
+        }
+        this.columns = Math.floor(this.canvas.width / this.fontSize);
+    }
+
+    initializeDrops() {
+        this.drops = [];
+        for (let i = 0; i < this.columns; i++) {
+            this.drops[i] = Math.random() * -100;
+        }
+    }
+
+    handleResize() {
+        this.resizeCanvas();
+        this.initializeDrops();
+    }
+
+    draw() {
+        // Semi-transparent black for fading trails - slightly more opaque for better contrast
+        this.ctx.fillStyle = 'rgba(0, 0, 0, 0.06)';
+        this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
+
+        // More opaque orange for better visibility
+        this.ctx.fillStyle = 'rgba(255, 165, 0, 0.9)';
+        this.ctx.font = `${this.fontSize}px monospace`;
+
+        for (let i = 0; i < this.drops.length; i++) {
+            const x = i * this.fontSize;
+            const y = this.drops[i] * this.fontSize;
+
+            if (y > this.canvas.height && Math.random() > 0.975) {
+                this.drops[i] = 0;
+            }
+            // Slower drop speed - only increment every few frames
+            if (Math.random() > 0.7) {
+                this.drops[i] += 0.5; // Slower movement
+            }
+
+            // Draw random char
+            const char = this.alphabet[Math.floor(Math.random() * this.alphabet.length)];
+            this.ctx.fillText(char, x, y);
+
+            // Trail effect: more opaque orange for previous chars (simulate head glow)
+            if (this.drops[i] > 1 && Math.random() > 0.3) {
+                this.ctx.fillStyle = 'rgba(255, 165, 0, 0.6)';
+                this.ctx.fillText(this.alphabet[Math.floor(Math.random() * this.alphabet.length)], x, (this.drops[i] - 1) * this.fontSize);
+                this.ctx.fillStyle = 'rgba(255, 165, 0, 0.9)'; // Reset to more opaque
+            }
+        }
+    }
+
+    animate() {
+        this.draw();
+        requestAnimationFrame(() => this.animate());
+    }
+}
+
+// Initialize Matrix background
+const matrixBackground = new MatrixBackground();
+
 // Export for use in other modules
 window.ECMAtlas = {
     API_BASE,
@@ -371,5 +460,6 @@ window.ECMAtlas = {
     fetchAPI,
     showLoading,
     updateActiveTab,
-    initTheme
+    initTheme,
+    matrixBackground
 };
