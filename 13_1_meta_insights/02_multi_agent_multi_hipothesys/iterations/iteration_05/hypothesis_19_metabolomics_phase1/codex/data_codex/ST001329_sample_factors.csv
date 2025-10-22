@@ -1,0 +1,54 @@
+sample_id,Age (Months),Treatment
+JWY1-RF,5-6,None
+JWY1-LB,5-6,None
+JWY1-RB,5-6,None
+JWY1-LF,5-6,None
+JWY2-LB,5-6,None
+JWY2-RB,5-6,None
+JWY2-LF,5-6,None
+JWY2-RF,5-6,None
+JWY4-RF,5-6,None
+JWY4-LF,5-6,None
+JWY4-RB,5-6,None
+JWY4-LB,5-6,None
+JW42-NP,26,None
+JW41-RF,26,None
+JW42-LF,26,None
+JW43-RB,26,None
+JW49-RF,26,None
+JW48-NP,26,None
+JW49-LB,26,None
+JW25-NP,26,None
+JW37-LB,26,None
+JW25-R,26,None
+JW42-RF,26,SS-31 (3 mg/kg/day)
+JW43-LB,26,SS-31 (3 mg/kg/day)
+JW41-LF,26,SS-31 (3 mg/kg/day)
+JW41-NP,26,SS-31 (3 mg/kg/day)
+JW47-LF,26,SS-31 (3 mg/kg/day)
+JW34-RF,26,SS-31 (3 mg/kg/day)
+JW34-LB,26,SS-31 (3 mg/kg/day)
+JW49-LF,26,SS-31 (3 mg/kg/day)
+JW35-RF,26,SS-31 (3 mg/kg/day)
+JW37-RB,26,SS-31 (3 mg/kg/day)
+JW36-RF,26,SS-31 (3 mg/kg/day)
+JW35-RB,26,SS-31 (3 mg/kg/day)
+JW44-RF,26,NMN (300 mg/kg/day)
+JW46-LF,26,NMN (300 mg/kg/day)
+JW45-LF,26,NMN (300 mg/kg/day)
+JW45-NP,26,NMN (300 mg/kg/day)
+JW51-LF,26,NMN (300 mg/kg/day)
+JW39-RB,26,NMN (300 mg/kg/day)
+JW46-RB,26,NMN (300 mg/kg/day)
+JW39-RF,26,NMN (300 mg/kg/day)
+JW27-LB,26,NMN (300 mg/kg/day)
+JW29-LB,26,NMN (300 mg/kg/day)
+JW33-LF,26,NMN (300 mg/kg/day)
+JW45-RF,26,SS-31 (3 mg/kg/day) + NMN (300 mg/kg/day)
+JW44-LF,26,SS-31 (3 mg/kg/day) + NMN (300 mg/kg/day)
+JW44-NP,26,SS-31 (3 mg/kg/day) + NMN (300 mg/kg/day)
+JW51-RF,26,SS-31 (3 mg/kg/day) + NMN (300 mg/kg/day)
+JW50-LF,26,SS-31 (3 mg/kg/day) + NMN (300 mg/kg/day)
+JW50-NP,26,SS-31 (3 mg/kg/day) + NMN (300 mg/kg/day)
+JW52-RF,26,SS-31 (3 mg/kg/day) + NMN (300 mg/kg/day)
+JW52-LF,26,SS-31 (3 mg/kg/day) + NMN (300 mg/kg/day)

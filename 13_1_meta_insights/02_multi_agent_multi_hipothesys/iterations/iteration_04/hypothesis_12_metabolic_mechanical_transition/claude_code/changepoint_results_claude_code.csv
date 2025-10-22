@@ -1,0 +1,4 @@
+Method,Breakpoint,Metric,Value
+Binary Segmentation,2.17,Explained Variance Ratio,0.7317462062703083
+Likelihood Ratio,2.17,LR Statistic,18.970429802341318
+v=1.65 Validation,1.65,T-statistic,-3.205470876658584

@@ -1,0 +1,32 @@
+{
+  "Internal_data": {
+    "Total_rows": 3715,
+    "Unique_genes": 911,
+    "Tissues": 17,
+    "Studies": 11
+  },
+  "Tissue_velocities": {
+    "Range": "0.397 - 0.984",
+    "Ratio": "2.48\u00d7",
+    "Fastest": "Ovary_Cortex",
+    "Slowest": "Lung"
+  },
+  "Top_20_proteins": {
+    "Range": "2.189 - 4.880",
+    "Top_protein": "ASTL",
+    "Top_delta_z": 4.880040555518632
+  },
+  "External_datasets": {
+    "Identified": 6,
+    "HIGH_priority": 2,
+    "MEDIUM_priority": 4,
+    "Downloaded": 0,
+    "Status": "Metadata created, real data needed"
+  },
+  "Validation_targets": {
+    "H08_R2_threshold": 0.6,
+    "H06_AUC_threshold": 0.8,
+    "H03_rho_threshold": 0.7,
+    "Meta_I2_stable_threshold": 15
+  }
+}

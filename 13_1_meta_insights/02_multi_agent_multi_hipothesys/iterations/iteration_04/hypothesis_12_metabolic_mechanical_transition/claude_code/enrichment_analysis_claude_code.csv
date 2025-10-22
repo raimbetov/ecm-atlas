@@ -1,0 +1,4 @@
+Phase,Category,Markers_Present,Markers_Upregulated,Odds_Ratio,P_Value,Significant
+Phase_II,crosslinking,8.0,3.0,0.8967032967032967,0.6868938225375305,False
+Phase_II,collagens,6.0,0.0,0.0,1.0,False
+Phase_II,ecm_glycoproteins,5.0,2.0,0.993607305936073,0.666254329607146,False

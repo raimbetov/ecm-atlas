@@ -1,0 +1,3 @@
+Category,Count,Total,P_Value,Odds_Ratio,Significant
+Coagulation_in_Early,7,227,0.00035792115134346936,21.636363636363637,True
+Structural_in_Late,0,227,0.21194012164431955,0.0,False

@@ -1,0 +1,4 @@
+Study_ID,Total_Metabolites,Target_Metabolites_Found,Found_Metabolites,Has_ATP,Has_NAD,Has_Lactate,Has_Pyruvate,Score
+ST001699,0,0,,False,False,False,False,0
+ST001701,0,0,,False,False,False,False,0
+ST001702,0,0,,False,False,False,False,0

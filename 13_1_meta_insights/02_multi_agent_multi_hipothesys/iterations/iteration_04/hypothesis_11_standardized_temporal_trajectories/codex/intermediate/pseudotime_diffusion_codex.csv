@@ -1,0 +1,18 @@
+method,Tissue,pseudo_time_score,normalized_pseudo_time,rank
+diffusion,Brain_Cortex,0.9602768894130125,0.375,7
+diffusion,Brain_Hippocampus,1.3166628768293225,0.625,11
+diffusion,Heart_Decellularized_Tissue,0.9949682576592086,0.4375,8
+diffusion,Heart_Native_Tissue,6.840753119445524,1.0,17
+diffusion,Intervertebral_disc_IAF,-3.224331463060397,0.0625,2
+diffusion,Intervertebral_disc_NP,-3.0311110698855597,0.125,3
+diffusion,Intervertebral_disc_OAF,-17.496566552110444,0.0,1
+diffusion,Kidney_Glomerular,1.2657497594547444,0.5625,10
+diffusion,Kidney_Tubulointerstitial,0.8215048044798734,0.3125,6
+diffusion,Lung,1.7682099041322572,0.875,15
+diffusion,Ovary,0.7842602590665654,0.25,5
+diffusion,Ovary_Cortex,0.7337870027336397,0.1875,4
+diffusion,Skeletal_muscle_EDL,1.2060873874662636,0.5,9
+diffusion,Skeletal_muscle_Gastrocnemius,1.5841315667673221,0.75,13
+diffusion,Skeletal_muscle_Soleus,1.6752430492960808,0.8125,14
+diffusion,Skeletal_muscle_TA,1.484394185777601,0.6875,12
+diffusion,Skin dermis,2.069218674015242,0.9375,16

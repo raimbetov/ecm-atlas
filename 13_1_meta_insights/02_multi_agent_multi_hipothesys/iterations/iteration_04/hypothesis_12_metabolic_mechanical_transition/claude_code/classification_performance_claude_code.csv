@@ -1,0 +1,2 @@
+Model,AUC,Target_AUC,Success
+Random Forest,1.0,0.9,True

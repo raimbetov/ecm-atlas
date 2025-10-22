@@ -1,0 +1,7 @@
+Protein,Severity,Score,Evidence
+SERPINE1,Beneficial,-10,"Knockout +7yr lifespan, protective"
+SERPINC1,Moderate,5,Null mutation 66% VTE-free survival
+SERPINF1,Unknown,0,Limited knockout data
+SERPINF2,Unknown,0,Limited knockout data
+SERPING1,Moderate,5,C1-inhibitor deficiency (angioedema)
+SERPINH1,Mild,2,"Collagen chaperone, not lethal"

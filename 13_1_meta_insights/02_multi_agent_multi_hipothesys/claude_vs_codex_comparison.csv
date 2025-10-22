@@ -1,0 +1,9 @@
+Metric,Claude,Codex
+Total Hypotheses Attempted,18.0,15.0
+Successfully Completed,18.0,5.0
+Partial Success,0.0,1.0
+Failures,0.0,1.0
+Average Score,90.66666666666667,88.0
+Median Score,92.0,88.0
+Hypotheses with Score >= 90,2.0,0.0
+Hypotheses with Score < 70,0.0,0.0

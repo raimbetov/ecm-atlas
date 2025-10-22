@@ -1,0 +1,18 @@
+,Velocity (H03),PCA (Codex),Slingshot,Autoencoder,Diffusion
+Brain_Cortex,9.0,2,2,5,8
+Brain_Hippocampus,7.0,1,1,4,9
+Heart_Decellularized_Tissue,13.0,3,3,10,12
+Heart_Native_Tissue,1.0,4,4,6,13
+Intervertebral_disc_IAF,4.0,15,15,2,4
+Intervertebral_disc_NP,3.0,16,16,1,5
+Intervertebral_disc_OAF,2.0,17,17,9,2
+Kidney_Glomerular,6.0,9,9,8,11
+Kidney_Tubulointerstitial,10.0,11,11,3,3
+Lung,14.0,12,12,16,7
+Ovary,8.0,10,10,7,10
+Ovary_Cortex,15.0,13,13,11,6
+Skeletal_muscle_EDL,17.0,7,7,14,14
+Skeletal_muscle_Gastrocnemius,16.0,5,5,13,17
+Skeletal_muscle_Soleus,11.0,6,6,12,15
+Skeletal_muscle_TA,12.0,8,8,17,16
+Skin dermis,5.0,14,14,15,1

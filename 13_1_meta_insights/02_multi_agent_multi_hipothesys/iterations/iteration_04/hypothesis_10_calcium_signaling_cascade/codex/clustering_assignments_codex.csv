@@ -1,0 +1,16 @@
+tissue,cluster
+Brain_Cortex,0
+Brain_Hippocampus,1
+Heart_Decellularized_Tissue,0
+Heart_Native_Tissue,2
+Intervertebral_disc_IAF,2
+Intervertebral_disc_NP,0
+Intervertebral_disc_OAF,0
+Kidney_Glomerular,0
+Kidney_Tubulointerstitial,2
+Lung,0
+Ovary,0
+Ovary_Cortex,0
+Skeletal_muscle_Gastrocnemius,0
+Skeletal_muscle_Soleus,0
+Skin dermis,1

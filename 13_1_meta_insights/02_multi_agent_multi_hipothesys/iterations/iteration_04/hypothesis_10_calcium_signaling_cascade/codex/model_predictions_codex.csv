@@ -1,0 +1,46 @@
+tissue,split,actual,predicted,model
+Skeletal_muscle_Soleus,train,-0.7872191242244624,-0.7579006,model_a
+Intervertebral_disc_NP,train,-0.44189600294618314,-0.39975795,model_a
+Kidney_Tubulointerstitial,train,0.3157353232309592,0.2829027,model_a
+Heart_Decellularized_Tissue,train,-0.07832625453469358,-0.069731474,model_a
+Brain_Hippocampus,train,0.5821234862043385,0.60050607,model_a
+Skin dermis,train,-0.08057166670872368,-0.07287511,model_a
+Intervertebral_disc_IAF,train,-0.34120222632572583,-0.35537314,model_a
+Kidney_Glomerular,train,0.9431941823315065,0.8936976,model_a
+Ovary,train,1.084611967406968,1.1605959,model_a
+Skeletal_muscle_Gastrocnemius,train,-0.20925430116978175,-0.20036006,model_a
+Heart_Native_Tissue,train,1.3494180553707138,1.304828,model_a
+Intervertebral_disc_OAF,train,0.07398107070627147,0.050286695,model_a
+Lung,test,-0.4125481908962334,-0.45854813,model_a
+Ovary_Cortex,test,0.21182711075785798,0.88687706,model_a
+Brain_Cortex,test,0.3230126424558318,-0.002012536,model_a
+Skeletal_muscle_Soleus,train,-0.7872191242244624,-0.78343886,model_b
+Intervertebral_disc_NP,train,-0.44189600294618314,-0.43302116,model_b
+Kidney_Tubulointerstitial,train,0.3157353232309592,0.262179,model_b
+Heart_Decellularized_Tissue,train,-0.07832625453469358,-0.08359841,model_b
+Brain_Hippocampus,train,0.5821234862043385,0.49753854,model_b
+Skin dermis,train,-0.08057166670872368,-0.09707563,model_b
+Intervertebral_disc_IAF,train,-0.34120222632572583,-0.34846094,model_b
+Kidney_Glomerular,train,0.9431941823315065,0.84535295,model_b
+Ovary,train,1.084611967406968,0.97600466,model_b
+Skeletal_muscle_Gastrocnemius,train,-0.20925430116978175,-0.2115759,model_b
+Heart_Native_Tissue,train,1.3494180553707138,1.1784362,model_b
+Intervertebral_disc_OAF,train,0.07398107070627147,0.02104447,model_b
+Lung,test,-0.4125481908962334,-0.41389087,model_b
+Ovary_Cortex,test,0.21182711075785798,0.34981772,model_b
+Brain_Cortex,test,0.3230126424558318,-0.16645578,model_b
+Skeletal_muscle_Soleus,train,-0.7872191242244624,-0.7274075,model_c
+Intervertebral_disc_NP,train,-0.44189600294618314,-0.4186511,model_c
+Kidney_Tubulointerstitial,train,0.3157353232309592,0.27737093,model_c
+Heart_Decellularized_Tissue,train,-0.07832625453469358,-0.08937223,model_c
+Brain_Hippocampus,train,0.5821234862043385,0.5398961,model_c
+Skin dermis,train,-0.08057166670872368,-0.10299517,model_c
+Intervertebral_disc_IAF,train,-0.34120222632572583,-0.31035388,model_c
+Kidney_Glomerular,train,0.9431941823315065,0.9821814,model_c
+Ovary,train,1.084611967406968,1.1724337,model_c
+Skeletal_muscle_Gastrocnemius,train,-0.20925430116978175,-0.20727006,model_c
+Heart_Native_Tissue,train,1.3494180553707138,1.241548,model_c
+Intervertebral_disc_OAF,train,0.07398107070627147,0.05402936,model_c
+Lung,test,-0.4125481908962334,-0.2835394,model_c
+Ovary_Cortex,test,0.21182711075785798,0.8217265,model_c
+Brain_Cortex,test,0.3230126424558318,-0.12736996,model_c

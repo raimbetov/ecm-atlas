@@ -1,0 +1,15 @@
+{
+  "nodes": 713,
+  "edges": 34147,
+  "density": 0.13452810564634318,
+  "average_clustering": 0.4122509781029021,
+  "number_connected_components": 1,
+  "matrix_samples": 18,
+  "matrix_genes": 713,
+  "average_degree": 95.78401122019635,
+  "average_strength": 66.03428929527557,
+  "global_efficiency": 0.4777798351650571,
+  "degree_assortativity": 0.6301855722497223,
+  "largest_component_nodes": 713,
+  "largest_component_fraction": 1.0
+}

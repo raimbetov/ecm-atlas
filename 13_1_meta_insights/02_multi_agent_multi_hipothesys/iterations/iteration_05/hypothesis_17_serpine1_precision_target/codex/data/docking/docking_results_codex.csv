@@ -1,0 +1,3 @@
+Ligand,Best_Affinity_kcal_mol,Mean_Affinity_kcal_mol,Poses_File
+TM5441,-7.888,-7.4809,/Users/Kravtsovd/projects/ecm-atlas/13_1_meta_insights/02_multi_agent_multi_hipothesys/iterations/iteration_05/hypothesis_17_serpine1_precision_target/codex/data/docking/TM5441_poses.pdbqt
+SK-216,-7.524,-6.581799999999999,/Users/Kravtsovd/projects/ecm-atlas/13_1_meta_insights/02_multi_agent_multi_hipothesys/iterations/iteration_05/hypothesis_17_serpine1_precision_target/codex/data/docking/SK-216_poses.pdbqt

@@ -1,0 +1,420 @@
+#METABOLOMICS WORKBENCH araskind_20170802_131251 DATATRACK_ID:1175 STUDY_ID:ST000828 ANALYSIS_ID:AN001834 PROJECT_ID:PR000219
+VERSION             	1
+CREATED_ON             	January 15, 2019, 12:36 pm
+#PROJECT
+PR:PROJECT_TITLE                 	Metabolic regulation by PARP-1 in myofibroblast differentiation and fibrosis
+PR:PROJECT_TYPE                  	MS analysis
+PR:PROJECT_SUMMARY               	Analysis of wild type lung tissue after saline or bleomycin treatment
+PR:INSTITUTE                     	University of Michigan
+PR:DEPARTMENT                    	Deaprtment of Pathology
+PR:LABORATORY                    	Sem H. Phan
+PR:LAST_NAME                     	Hu
+PR:FIRST_NAME                    	Biao
+PR:ADDRESS                       	Ann Arbor, MI
+PR:EMAIL                         	biaohu@med.umich.edu
+PR:PHONE                         	734-7635731
+#STUDY
+ST:STUDY_TITLE                   	Metabolic analysis of Parp1 ko/wt Saline & Bleo Mouse Lung Fiboblasts and Human
+ST:STUDY_TITLE                   	IPF & Normal Lung Fiboblasts 3
+ST:STUDY_TYPE                    	MS analysis
+ST:STUDY_SUMMARY                 	Glycolysis/TCA/Nucleotide analysis (especially interested in
+ST:STUDY_SUMMARY                 	alpha-ketoglutarate) and NAD+ and related metabolite analysis for all samples
+ST:INSTITUTE                     	University of Michigan
+ST:DEPARTMENT                    	Biomedical Research Core Facilities
+ST:LABORATORY                    	Metabolomics core
+ST:LAST_NAME                     	Kachman
+ST:FIRST_NAME                    	Maureen
+ST:ADDRESS                       	6300 Brehm Tower, 1000 Wall Street, Ann Arbor, MI 48105-5714
+ST:EMAIL                         	mkachman@med.umich.edu
+ST:PHONE                         	(734) 232-8175
+ST:NUM_GROUPS                    	6
+ST:TOTAL_SUBJECTS                	16
+#SUBJECT
+SU:SUBJECT_TYPE                  	HUMAN
+SU:SUBJECT_SPECIES               	Homo sapiens
+SU:TAXONOMY_ID                   	9606
+#SUBJECT_SAMPLE_FACTORS:         	SUBJECT(optional)[tab]SAMPLE[tab]FACTORS(NAME:VALUE pairs separated by |)[tab]Additional sample data
+SUBJECT_SAMPLE_FACTORS           	SU0004492	S00015469	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:N | saline/HLF:Y | wt B6:Y	
+SUBJECT_SAMPLE_FACTORS           	SU0004493	S00015470	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:N | saline/HLF:Y | wt B6:Y	
+SUBJECT_SAMPLE_FACTORS           	SU0004494	S00015471	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:Y | saline/HLF:N | wt B6:Y	
+SUBJECT_SAMPLE_FACTORS           	SU0004495	S00015472	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:Y | saline/HLF:N | wt B6:Y	
+SUBJECT_SAMPLE_FACTORS           	SU0004496	S00015473	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:Y | saline/HLF:N | wt B6:Y	
+SUBJECT_SAMPLE_FACTORS           	SU0004497	S00015474	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:Y | saline/HLF:N | wt B6:Y	
+SUBJECT_SAMPLE_FACTORS           	SU0004498	S00015475	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:N | saline/HLF:Y | wt B6:N	
+SUBJECT_SAMPLE_FACTORS           	SU0004499	S00015476	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:N | saline/HLF:Y | wt B6:N	
+SUBJECT_SAMPLE_FACTORS           	SU0004500	S00015477	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:N | saline/HLF:Y | wt B6:N	
+SUBJECT_SAMPLE_FACTORS           	SU0004501	S00015478	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:N | saline/HLF:Y | wt B6:N	
+SUBJECT_SAMPLE_FACTORS           	SU0004502	S00015479	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:N | saline/HLF:Y | wt B6:N	
+SUBJECT_SAMPLE_FACTORS           	SU0004503	S00015480	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:Y | saline/HLF:N | wt B6:N	
+SUBJECT_SAMPLE_FACTORS           	SU0004504	S00015481	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:Y | saline/HLF:N | wt B6:N	
+SUBJECT_SAMPLE_FACTORS           	SU0004505	S00015482	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:Y | saline/HLF:N | wt B6:N	
+SUBJECT_SAMPLE_FACTORS           	SU0004506	S00015483	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:Y | saline/HLF:N | wt B6:N	
+SUBJECT_SAMPLE_FACTORS           	SU0004507	S00015484	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:Y | saline/HLF:N | wt B6:N	
+#COLLECTION
+CO:COLLECTION_SUMMARY            	-
+CO:SAMPLE_TYPE                   	Cultured cells
+#TREATMENT
+TR:TREATMENT_SUMMARY             	-
+#SAMPLEPREP
+SP:SAMPLEPREP_SUMMARY            	-
+SP:SAMPLEPREP_PROTOCOL_FILENAME  	A010-Ceramides.pdf
+#CHROMATOGRAPHY
+CH:CHROMATOGRAPHY_TYPE           	Phenyl
+CH:INSTRUMENT_NAME               	Agilent
+CH:COLUMN_NAME                   	Pinnacle DB Biphenyl, 140A, 1.9mkm, 2.1mm X 50mm (Restek)
+#ANALYSIS
+AN:ANALYSIS_TYPE                 	MS
+AN:ANALYSIS_PROTOCOL_FILE        	A010-Ceramides.pdf
+AN:ACQUISITION_PARAMETERS_FILE   	QM033_2mmC18_Ceramide_MRM
+#MS
+MS:INSTRUMENT_NAME               	Agilent 6490A QQQ
+MS:INSTRUMENT_TYPE               	Triple quadrupole
+MS:MS_TYPE                       	ESI
+MS:ION_MODE                      	POSITIVE
+MS:MS_COMMENTS                   	none
+#MS_METABOLITE_DATA
+MS_METABOLITE_DATA:UNITS         	counts
+MS_METABOLITE_DATA_START
+Samples	S00015469	S00015470	S00015471	S00015472	S00015473	S00015474	S00015475	S00015476	S00015477	S00015478	S00015479	S00015480	S00015481	S00015482	S00015483	S00015484
+Factors	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:N | saline/HLF:Y | wt B6:Y	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:N | saline/HLF:Y | wt B6:Y	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:Y | saline/HLF:N | wt B6:Y	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:Y | saline/HLF:N | wt B6:Y	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:Y | saline/HLF:N | wt B6:Y	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:Y | saline/HLF:N | wt B6:Y	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:N | saline/HLF:Y | wt B6:N	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:N | saline/HLF:Y | wt B6:N	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:N | saline/HLF:Y | wt B6:N	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:N | saline/HLF:Y | wt B6:N	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:N | saline/HLF:Y | wt B6:N	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:Y | saline/HLF:N | wt B6:N	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:Y | saline/HLF:N | wt B6:N	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:Y | saline/HLF:N | wt B6:N	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:Y | saline/HLF:N | wt B6:N	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:Y | saline/HLF:N | wt B6:N
+C22 CER	5703936.582	5015879.938	5467201.523	6207717.35	6183899.084	6941223.742	1789750.106	2430036.041	2736578.926	1759028.005	2164439.651	1043406.914	835781.0316	1106883.454	1281598.917	1273825.67
+C24:1 CER	22157790.11	20169886.19	28601422.45	38763327.08	33508656.7	27013966.14	4395266.064	5056058.144	5724159.406	3835527.436	4598070.547	3316148.601	2967606.983	4547323.576	4872113.069	4184632.31
+MS_METABOLITE_DATA_END
+#METABOLITES
+METABOLITES_START
+metabolite_name	moverz_quant	ri	ri_type	pubchem_id	inchi_key	kegg_id	other_id	other_id_type
+C22 CER				5283567
+C24:1 CER				5283568
+METABOLITES_END
+#END
+
+
+#METABOLOMICS WORKBENCH araskind_20170802_131251 DATATRACK_ID:1175 STUDY_ID:ST000828 ANALYSIS_ID:AN001835 PROJECT_ID:PR000219
+VERSION             	1
+CREATED_ON             	January 15, 2019, 12:36 pm
+#PROJECT
+PR:PROJECT_TITLE                 	Metabolic regulation by PARP-1 in myofibroblast differentiation and fibrosis
+PR:PROJECT_TYPE                  	MS analysis
+PR:PROJECT_SUMMARY               	Analysis of wild type lung tissue after saline or bleomycin treatment
+PR:INSTITUTE                     	University of Michigan
+PR:DEPARTMENT                    	Deaprtment of Pathology
+PR:LABORATORY                    	Sem H. Phan
+PR:LAST_NAME                     	Hu
+PR:FIRST_NAME                    	Biao
+PR:ADDRESS                       	Ann Arbor, MI
+PR:EMAIL                         	biaohu@med.umich.edu
+PR:PHONE                         	734-7635731
+#STUDY
+ST:STUDY_TITLE                   	Metabolic analysis of Parp1 ko/wt Saline & Bleo Mouse Lung Fiboblasts and Human
+ST:STUDY_TITLE                   	IPF & Normal Lung Fiboblasts 3
+ST:STUDY_TYPE                    	MS analysis
+ST:STUDY_SUMMARY                 	Glycolysis/TCA/Nucleotide analysis (especially interested in
+ST:STUDY_SUMMARY                 	alpha-ketoglutarate) and NAD+ and related metabolite analysis for all samples
+ST:INSTITUTE                     	University of Michigan
+ST:DEPARTMENT                    	Biomedical Research Core Facilities
+ST:LABORATORY                    	Metabolomics core
+ST:LAST_NAME                     	Kachman
+ST:FIRST_NAME                    	Maureen
+ST:ADDRESS                       	6300 Brehm Tower, 1000 Wall Street, Ann Arbor, MI 48105-5714
+ST:EMAIL                         	mkachman@med.umich.edu
+ST:PHONE                         	(734) 232-8175
+ST:NUM_GROUPS                    	6
+ST:TOTAL_SUBJECTS                	16
+#SUBJECT
+SU:SUBJECT_TYPE                  	HUMAN
+SU:SUBJECT_SPECIES               	Homo sapiens
+SU:TAXONOMY_ID                   	9606
+#SUBJECT_SAMPLE_FACTORS:         	SUBJECT(optional)[tab]SAMPLE[tab]FACTORS(NAME:VALUE pairs separated by |)[tab]Additional sample data
+SUBJECT_SAMPLE_FACTORS           	SU0004492	S00015469	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:N | saline/HLF:Y | wt B6:Y	
+SUBJECT_SAMPLE_FACTORS           	SU0004493	S00015470	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:N | saline/HLF:Y | wt B6:Y	
+SUBJECT_SAMPLE_FACTORS           	SU0004494	S00015471	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:Y | saline/HLF:N | wt B6:Y	
+SUBJECT_SAMPLE_FACTORS           	SU0004495	S00015472	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:Y | saline/HLF:N | wt B6:Y	
+SUBJECT_SAMPLE_FACTORS           	SU0004496	S00015473	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:Y | saline/HLF:N | wt B6:Y	
+SUBJECT_SAMPLE_FACTORS           	SU0004497	S00015474	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:Y | saline/HLF:N | wt B6:Y	
+SUBJECT_SAMPLE_FACTORS           	SU0004498	S00015475	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:N | saline/HLF:Y | wt B6:N	
+SUBJECT_SAMPLE_FACTORS           	SU0004499	S00015476	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:N | saline/HLF:Y | wt B6:N	
+SUBJECT_SAMPLE_FACTORS           	SU0004500	S00015477	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:N | saline/HLF:Y | wt B6:N	
+SUBJECT_SAMPLE_FACTORS           	SU0004501	S00015478	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:N | saline/HLF:Y | wt B6:N	
+SUBJECT_SAMPLE_FACTORS           	SU0004502	S00015479	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:N | saline/HLF:Y | wt B6:N	
+SUBJECT_SAMPLE_FACTORS           	SU0004503	S00015480	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:Y | saline/HLF:N | wt B6:N	
+SUBJECT_SAMPLE_FACTORS           	SU0004504	S00015481	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:Y | saline/HLF:N | wt B6:N	
+SUBJECT_SAMPLE_FACTORS           	SU0004505	S00015482	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:Y | saline/HLF:N | wt B6:N	
+SUBJECT_SAMPLE_FACTORS           	SU0004506	S00015483	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:Y | saline/HLF:N | wt B6:N	
+SUBJECT_SAMPLE_FACTORS           	SU0004507	S00015484	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:Y | saline/HLF:N | wt B6:N	
+#COLLECTION
+CO:COLLECTION_SUMMARY            	-
+CO:SAMPLE_TYPE                   	Cultured cells
+#TREATMENT
+TR:TREATMENT_SUMMARY             	-
+#SAMPLEPREP
+SP:SAMPLEPREP_SUMMARY            	-
+SP:SAMPLEPREP_PROTOCOL_FILENAME  	A010-Ceramides.pdf
+#CHROMATOGRAPHY
+CH:CHROMATOGRAPHY_TYPE           	Phenyl
+CH:INSTRUMENT_NAME               	Agilent
+CH:COLUMN_NAME                   	Pinnacle DB Biphenyl, 140A, 1.9mkm, 2.1mm X 50mm (Restek)
+#ANALYSIS
+AN:ANALYSIS_TYPE                 	MS
+AN:ANALYSIS_PROTOCOL_FILE        	A010-Ceramides.pdf
+AN:ACQUISITION_PARAMETERS_FILE   	QM033_2mmC18_Ceramide_MRM
+#MS
+MS:INSTRUMENT_NAME               	Agilent 6490A QQQ
+MS:INSTRUMENT_TYPE               	Triple quadrupole
+MS:MS_TYPE                       	ESI
+MS:ION_MODE                      	POSITIVE
+MS:MS_COMMENTS                   	none
+#MS_METABOLITE_DATA
+MS_METABOLITE_DATA:UNITS         	uM
+MS_METABOLITE_DATA_START
+Samples	S00015469	S00015470	S00015471	S00015472	S00015473	S00015474	S00015475	S00015476	S00015477	S00015478	S00015479	S00015480	S00015481	S00015482	S00015483	S00015484
+Factors	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:N | saline/HLF:Y | wt B6:Y	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:N | saline/HLF:Y | wt B6:Y	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:Y | saline/HLF:N | wt B6:Y	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:Y | saline/HLF:N | wt B6:Y	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:Y | saline/HLF:N | wt B6:Y	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:Y | saline/HLF:N | wt B6:Y	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:N | saline/HLF:Y | wt B6:N	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:N | saline/HLF:Y | wt B6:N	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:N | saline/HLF:Y | wt B6:N	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:N | saline/HLF:Y | wt B6:N	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:N | saline/HLF:Y | wt B6:N	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:Y | saline/HLF:N | wt B6:N	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:Y | saline/HLF:N | wt B6:N	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:Y | saline/HLF:N | wt B6:N	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:Y | saline/HLF:N | wt B6:N	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:Y | saline/HLF:N | wt B6:N
+C14 CER	13.18467456	11.3554499	16.71693126	17.5211094	14.99545025	16.52230241	4.341071808	4.523389516	3.910946385	3.72642603	3.686349582	2.567389296	2.579638735	3.295066866	3.169451064	2.82618964
+N-(OLEOYL)-CERAMIDE	60.09308441	56.13348308	79.88984208	80.01543077	47.18888104	52.99986529	8.563245435	8.477443107	8.287113223	8.085358	8.100988521	7.322380042	7.567238928	7.561450824	7.569146526	7.309183262
+N-PALMITOYLSPHINGOSINE	3589.962036	3102.803433	5239.218675	4368.8023	2968.105857	3291.572604	111.2430941	134.7340545	102.0941312	106.2026024	96.60617206	129.5525361	121.4395177	158.712242	153.9979781	138.7477852
+N-STEAROYLSPHINGOSINE	541.0739629	408.8605058	688.209609	530.1515236	523.4719251	650.0436023	6.172734398	8.660236358	6.583264455	6.456199665	5.610454373	3.182783523	2.541264579	3.43938129	3.66297448	3.129887079
+N-ICOSANOYLSPHINGOSINE	842.957053	842.3758328	982.6844946	833.68724	916.7110151	1578.309097	7.319720471	8.581557899	7.358170248	6.659164131	6.719343166	6.324317278	5.929982975	6.889094001	7.170088474	6.964446368
+C24 CER	1279.74824	1379.284799	542.9248375	1478.376646	1147.90664	1505.891429	130.060554	159.1229516	308.3833215	112.5124306	292.9832778	32.53552938	30.83932337	37.78045285	41.90340042	35.88320168
+MS_METABOLITE_DATA_END
+#METABOLITES
+METABOLITES_START
+metabolite_name	moverz_quant	ri	ri_type	pubchem_id	inchi_key	kegg_id	other_id	other_id_type
+C14 CER				5282310
+N-(OLEOYL)-CERAMIDE				5283563
+N-PALMITOYLSPHINGOSINE				5283564
+N-STEAROYLSPHINGOSINE				5283565
+N-ICOSANOYLSPHINGOSINE				5283566
+C24 CER				5283571
+METABOLITES_END
+#END
+
+
+#METABOLOMICS WORKBENCH araskind_20170802_131251 DATATRACK_ID:1175 STUDY_ID:ST000828 ANALYSIS_ID:AN001836 PROJECT_ID:PR000219
+VERSION             	1
+CREATED_ON             	January 15, 2019, 12:36 pm
+#PROJECT
+PR:PROJECT_TITLE                 	Metabolic regulation by PARP-1 in myofibroblast differentiation and fibrosis
+PR:PROJECT_TYPE                  	MS analysis
+PR:PROJECT_SUMMARY               	Analysis of wild type lung tissue after saline or bleomycin treatment
+PR:INSTITUTE                     	University of Michigan
+PR:DEPARTMENT                    	Deaprtment of Pathology
+PR:LABORATORY                    	Sem H. Phan
+PR:LAST_NAME                     	Hu
+PR:FIRST_NAME                    	Biao
+PR:ADDRESS                       	Ann Arbor, MI
+PR:EMAIL                         	biaohu@med.umich.edu
+PR:PHONE                         	734-7635731
+#STUDY
+ST:STUDY_TITLE                   	Metabolic analysis of Parp1 ko/wt Saline & Bleo Mouse Lung Fiboblasts and Human
+ST:STUDY_TITLE                   	IPF & Normal Lung Fiboblasts 3
+ST:STUDY_TYPE                    	MS analysis
+ST:STUDY_SUMMARY                 	Glycolysis/TCA/Nucleotide analysis (especially interested in
+ST:STUDY_SUMMARY                 	alpha-ketoglutarate) and NAD+ and related metabolite analysis for all samples
+ST:INSTITUTE                     	University of Michigan
+ST:DEPARTMENT                    	Biomedical Research Core Facilities
+ST:LABORATORY                    	Metabolomics core
+ST:LAST_NAME                     	Kachman
+ST:FIRST_NAME                    	Maureen
+ST:ADDRESS                       	6300 Brehm Tower, 1000 Wall Street, Ann Arbor, MI 48105-5714
+ST:EMAIL                         	mkachman@med.umich.edu
+ST:PHONE                         	(734) 232-8175
+ST:NUM_GROUPS                    	6
+ST:TOTAL_SUBJECTS                	16
+#SUBJECT
+SU:SUBJECT_TYPE                  	HUMAN
+SU:SUBJECT_SPECIES               	Homo sapiens
+SU:TAXONOMY_ID                   	9606
+#SUBJECT_SAMPLE_FACTORS:         	SUBJECT(optional)[tab]SAMPLE[tab]FACTORS(NAME:VALUE pairs separated by |)[tab]Additional sample data
+SUBJECT_SAMPLE_FACTORS           	SU0004492	S00015469	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:N | saline/HLF:Y | wt B6:Y	
+SUBJECT_SAMPLE_FACTORS           	SU0004493	S00015470	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:N | saline/HLF:Y | wt B6:Y	
+SUBJECT_SAMPLE_FACTORS           	SU0004494	S00015471	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:Y | saline/HLF:N | wt B6:Y	
+SUBJECT_SAMPLE_FACTORS           	SU0004495	S00015472	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:Y | saline/HLF:N | wt B6:Y	
+SUBJECT_SAMPLE_FACTORS           	SU0004496	S00015473	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:Y | saline/HLF:N | wt B6:Y	
+SUBJECT_SAMPLE_FACTORS           	SU0004497	S00015474	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:Y | saline/HLF:N | wt B6:Y	
+SUBJECT_SAMPLE_FACTORS           	SU0004498	S00015475	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:N | saline/HLF:Y | wt B6:N	
+SUBJECT_SAMPLE_FACTORS           	SU0004499	S00015476	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:N | saline/HLF:Y | wt B6:N	
+SUBJECT_SAMPLE_FACTORS           	SU0004500	S00015477	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:N | saline/HLF:Y | wt B6:N	
+SUBJECT_SAMPLE_FACTORS           	SU0004501	S00015478	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:N | saline/HLF:Y | wt B6:N	
+SUBJECT_SAMPLE_FACTORS           	SU0004502	S00015479	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:N | saline/HLF:Y | wt B6:N	
+SUBJECT_SAMPLE_FACTORS           	SU0004503	S00015480	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:Y | saline/HLF:N | wt B6:N	
+SUBJECT_SAMPLE_FACTORS           	SU0004504	S00015481	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:Y | saline/HLF:N | wt B6:N	
+SUBJECT_SAMPLE_FACTORS           	SU0004505	S00015482	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:Y | saline/HLF:N | wt B6:N	
+SUBJECT_SAMPLE_FACTORS           	SU0004506	S00015483	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:Y | saline/HLF:N | wt B6:N	
+SUBJECT_SAMPLE_FACTORS           	SU0004507	S00015484	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:Y | saline/HLF:N | wt B6:N	
+#COLLECTION
+CO:COLLECTION_SUMMARY            	-
+CO:SAMPLE_TYPE                   	Cultured cells
+#TREATMENT
+TR:TREATMENT_SUMMARY             	-
+#SAMPLEPREP
+SP:SAMPLEPREP_SUMMARY            	-
+SP:SAMPLEPREP_PROTOCOL_FILENAME  	A010-Ceramides.pdf
+#CHROMATOGRAPHY
+CH:CHROMATOGRAPHY_TYPE           	HILIC
+CH:INSTRUMENT_NAME               	Agilent
+CH:COLUMN_NAME                   	Phenomenex Luna NH2 (150 x 1mm, 3um)
+#ANALYSIS
+AN:ANALYSIS_TYPE                 	MS
+AN:ANALYSIS_PROTOCOL_FILE        	A011-Glycolysis-TCA-nucleotides.pdf
+AN:ACQUISITION_PARAMETERS_FILE   	QTOF-002-HILIC-35min-1mm.m
+#MS
+MS:INSTRUMENT_NAME               	Agilent 6520B QTOF
+MS:INSTRUMENT_TYPE               	QTOF
+MS:MS_TYPE                       	ESI
+MS:ION_MODE                      	NEGATIVE
+MS:MS_COMMENTS                   	none
+#MS_METABOLITE_DATA
+MS_METABOLITE_DATA:UNITS         	uM
+MS_METABOLITE_DATA_START
+Samples	S00015469	S00015470	S00015471	S00015472	S00015473	S00015474	S00015475	S00015476	S00015477	S00015478	S00015479	S00015480	S00015481	S00015482	S00015483	S00015484
+Factors	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:N | saline/HLF:Y | wt B6:Y	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:N | saline/HLF:Y | wt B6:Y	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:Y | saline/HLF:N | wt B6:Y	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:Y | saline/HLF:N | wt B6:Y	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:Y | saline/HLF:N | wt B6:Y	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:Y | saline/HLF:N | wt B6:Y	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:N | saline/HLF:Y | wt B6:N	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:N | saline/HLF:Y | wt B6:N	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:N | saline/HLF:Y | wt B6:N	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:N | saline/HLF:Y | wt B6:N	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:N | saline/HLF:Y | wt B6:N	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:Y | saline/HLF:N | wt B6:N	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:Y | saline/HLF:N | wt B6:N	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:Y | saline/HLF:N | wt B6:N	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:Y | saline/HLF:N | wt B6:N	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:Y | saline/HLF:N | wt B6:N
+PHOSPHOENOLPYRUVATE							.0957662	.1273109	.262627	.1784907	.0631907	.1120064	.0970568	.2332775	.1411019	.139734
+D-ERYTHROSE 4-PHOSPHATE	20.038248	18.463215	24.897075	41.339513	26.906668	18.936015	7.1859221	7.6633347	7.3595467	7.6626101	5.3614791	4.9663587	6.1584988	8.5746897	5.041	5.2846295
+BETA-NAD+	.0429542	.0213538	.0553099	.0122934		.0523494	2.0001918	1.884432	1.7880502	1.4416016	1.9292067	1.3798333	1.4030294	1.1507029	1.3779033	1.5333966
+COENZYME II	.306565	.37369	.4093067	.2941398	.2866139	.3482391	.1601165	.1517684	.1488863	.157594	.145193	.2324267	.2723429	.2253776	.3245565	.2858331
+SEDOHEPTULOSE 7-PHOSPHATE	5.9628209	6.2185794	9.420146	13.688768	9.2061606	6.6865866	.8841395	.7139528	.8641375	.7320475	.7306849	1.154272	1.2961419	1.5113028	1.5292353	1.4073574
+D-FRUCTOSE, 1,6-BIS(DIHYDROGEN PHOSPHATE)	6.3723916	5.439822	9.3443261	15.561284	10.959178	7.0867371	11.364279	10.741573	11.156786	10.313154	11.226625	11.72122	12.380766	10.183232	9.9282018	10.864181
+NADP-REDUCED		.0755421					.4728172	.4615219	.5132325	.4266329	.4589753	.8275916	.8698826	.954375	.6208281	.8070651
+CITRIC ACID	15.595332	16.849292	23.983276	30.592716	21.22123	18.118261	5.8991654	5.7512861	5.9812548	5.7826572	5.754673	4.2949692	4.575296	3.8840375	3.3337491	3.8567326
+NADH	.1592711	.116138	.1871239	.2157112	.1964078	.1747716	.7820604	1.5548812	1.6838621	1.6165801	.8676868	.3096472	.3762415	.5646147	.4539162	.3929547
+ACETYL-COA	.1490353	.1692829	.1256338	.0944061	.1456283	.1520306	.0325782	.0110472	.0198041	.0312529	.0276192	.0257642	.0128234	.0107122	.0165798	.0128476
+FAD	.563794	.5387095	.5867344	.6589072	.5708251	.488485	.0958641	.1210101	.1205986	.108877	.108084	.1980292	.1795314	.2030527	.1894987	.1953024
+MALIC ACID	58.547583	61.338201	107.90417	158.99348	112.05654	77.08009	5.8923572	4.9490797	5.7228991	5.8795718	6.0309487	5.9355426	7.1125568	8.3023407	6.9307845	7.2478374
+ADENOSINE TRIPHOSPHATE	1.1035712	.5494341	1.4067392	1.8128907	1.3925519	1.0409066	24.264502	22.058601	19.217528	20.123856	21.504412	11.199269	12.616523	11.129699	9.3763254	11.262628
+ROBISON ESTER	32.102187	29.382406	36.974363	60.61004	41.203271	26.926794	5.6627556	3.1875173	3.2625985	2.8042734	2.953797	5.281643	5.8430044	7.5404443	3.8791709	4.7753611
+SUCROSE	.988763	.9008241	.9309666	1.2047016	1.4064805	.8448488	1.4053597	1.3931808	1.52942	1.4947303	1.2299552	.844104	.95206	1.4246512	.9968124	.9296339
+ADENOSINE 5'-DIPHOSPHATE	5.4226688	4.6860995	7.2679813	6.4957224	7.0485665	5.495183	4.6881385	4.5222835	3.6985387	4.1268358	3.8255866	5.6181899	5.8949762	5.8488405	5.8450959	6.2206817
+ADENOSINE 5'-MONOPHOSPHATE	407.22294	326.80863	139.18028	84.540786	217.29523	203.80003	28.270338	24.158615	22.726548	24.919884	24.324044	79.370131	92.896699	80.242521	117.29868	110.32047
+GLYCERATE 3-PHOSPHATE	.6900139	.6752874	.8682791	1.128289	1.1246906	.8061432	1.1185312	1.337023	1.5968898	1.4706157	1.0635177	1.0550395	1.1363625	1.6313113	1.3067948	1.2689223
+RIBOSE PHOSPHATE	13.095815	13.163072	22.114275	40.000622	27.709286	15.878479	6.3307028	6.2182392	9.6119573	6.5955613	7.3134732	6.6111134	8.8571162	11.821992	7.2819838	9.6029894
+MS_METABOLITE_DATA_END
+#METABOLITES
+METABOLITES_START
+metabolite_name	moverz_quant	ri	ri_type	pubchem_id	inchi_key	kegg_id	other_id	other_id_type
+PHOSPHOENOLPYRUVATE				1005
+D-ERYTHROSE 4-PHOSPHATE				122357
+BETA-NAD+				15938971
+COENZYME II				15938972
+SEDOHEPTULOSE 7-PHOSPHATE				165007
+D-FRUCTOSE, 1,6-BIS(DIHYDROGEN PHOSPHATE)				21125049
+NADP-REDUCED				22833512
+CITRIC ACID				311
+NADH				439153
+ACETYL-COA				444493
+FAD				46906035
+MALIC ACID				525
+ADENOSINE TRIPHOSPHATE				5957
+ROBISON ESTER				5958
+SUCROSE				5988
+ADENOSINE 5'-DIPHOSPHATE				6022
+ADENOSINE 5'-MONOPHOSPHATE				6083
+GLYCERATE 3-PHOSPHATE				724
+RIBOSE PHOSPHATE				77982
+METABOLITES_END
+#END
+
+
+#METABOLOMICS WORKBENCH araskind_20170802_131251 DATATRACK_ID:1175 STUDY_ID:ST000828 ANALYSIS_ID:AN001837 PROJECT_ID:PR000219
+VERSION             	1
+CREATED_ON             	January 15, 2019, 12:36 pm
+#PROJECT
+PR:PROJECT_TITLE                 	Metabolic regulation by PARP-1 in myofibroblast differentiation and fibrosis
+PR:PROJECT_TYPE                  	MS analysis
+PR:PROJECT_SUMMARY               	Analysis of wild type lung tissue after saline or bleomycin treatment
+PR:INSTITUTE                     	University of Michigan
+PR:DEPARTMENT                    	Deaprtment of Pathology
+PR:LABORATORY                    	Sem H. Phan
+PR:LAST_NAME                     	Hu
+PR:FIRST_NAME                    	Biao
+PR:ADDRESS                       	Ann Arbor, MI
+PR:EMAIL                         	biaohu@med.umich.edu
+PR:PHONE                         	734-7635731
+#STUDY
+ST:STUDY_TITLE                   	Metabolic analysis of Parp1 ko/wt Saline & Bleo Mouse Lung Fiboblasts and Human
+ST:STUDY_TITLE                   	IPF & Normal Lung Fiboblasts 3
+ST:STUDY_TYPE                    	MS analysis
+ST:STUDY_SUMMARY                 	Glycolysis/TCA/Nucleotide analysis (especially interested in
+ST:STUDY_SUMMARY                 	alpha-ketoglutarate) and NAD+ and related metabolite analysis for all samples
+ST:INSTITUTE                     	University of Michigan
+ST:DEPARTMENT                    	Biomedical Research Core Facilities
+ST:LABORATORY                    	Metabolomics core
+ST:LAST_NAME                     	Kachman
+ST:FIRST_NAME                    	Maureen
+ST:ADDRESS                       	6300 Brehm Tower, 1000 Wall Street, Ann Arbor, MI 48105-5714
+ST:EMAIL                         	mkachman@med.umich.edu
+ST:PHONE                         	(734) 232-8175
+ST:NUM_GROUPS                    	6
+ST:TOTAL_SUBJECTS                	16
+#SUBJECT
+SU:SUBJECT_TYPE                  	HUMAN
+SU:SUBJECT_SPECIES               	Homo sapiens
+SU:TAXONOMY_ID                   	9606
+#SUBJECT_SAMPLE_FACTORS:         	SUBJECT(optional)[tab]SAMPLE[tab]FACTORS(NAME:VALUE pairs separated by |)[tab]Additional sample data
+SUBJECT_SAMPLE_FACTORS           	SU0004492	S00015469	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:N | saline/HLF:Y | wt B6:Y	
+SUBJECT_SAMPLE_FACTORS           	SU0004493	S00015470	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:N | saline/HLF:Y | wt B6:Y	
+SUBJECT_SAMPLE_FACTORS           	SU0004494	S00015471	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:Y | saline/HLF:N | wt B6:Y	
+SUBJECT_SAMPLE_FACTORS           	SU0004495	S00015472	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:Y | saline/HLF:N | wt B6:Y	
+SUBJECT_SAMPLE_FACTORS           	SU0004496	S00015473	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:Y | saline/HLF:N | wt B6:Y	
+SUBJECT_SAMPLE_FACTORS           	SU0004497	S00015474	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:Y | saline/HLF:N | wt B6:Y	
+SUBJECT_SAMPLE_FACTORS           	SU0004498	S00015475	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:N | saline/HLF:Y | wt B6:N	
+SUBJECT_SAMPLE_FACTORS           	SU0004499	S00015476	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:N | saline/HLF:Y | wt B6:N	
+SUBJECT_SAMPLE_FACTORS           	SU0004500	S00015477	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:N | saline/HLF:Y | wt B6:N	
+SUBJECT_SAMPLE_FACTORS           	SU0004501	S00015478	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:N | saline/HLF:Y | wt B6:N	
+SUBJECT_SAMPLE_FACTORS           	SU0004502	S00015479	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:N | saline/HLF:Y | wt B6:N	
+SUBJECT_SAMPLE_FACTORS           	SU0004503	S00015480	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:Y | saline/HLF:N | wt B6:N	
+SUBJECT_SAMPLE_FACTORS           	SU0004504	S00015481	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:Y | saline/HLF:N | wt B6:N	
+SUBJECT_SAMPLE_FACTORS           	SU0004505	S00015482	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:Y | saline/HLF:N | wt B6:N	
+SUBJECT_SAMPLE_FACTORS           	SU0004506	S00015483	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:Y | saline/HLF:N | wt B6:N	
+SUBJECT_SAMPLE_FACTORS           	SU0004507	S00015484	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:Y | saline/HLF:N | wt B6:N	
+#COLLECTION
+CO:COLLECTION_SUMMARY            	-
+CO:SAMPLE_TYPE                   	Cultured cells
+#TREATMENT
+TR:TREATMENT_SUMMARY             	-
+#SAMPLEPREP
+SP:SAMPLEPREP_SUMMARY            	-
+SP:SAMPLEPREP_PROTOCOL_FILENAME  	A010-Ceramides.pdf
+#CHROMATOGRAPHY
+CH:CHROMATOGRAPHY_TYPE           	GC
+CH:INSTRUMENT_NAME               	Agilent GC_7890N
+CH:COLUMN_NAME                   	Agilent DB5-MS (30m Ã— 0.25mm, 0.25um)
+#ANALYSIS
+AN:ANALYSIS_TYPE                 	MS
+AN:ANALYSIS_PROTOCOL_FILE        	A011-Glycolysis-TCA-nucleotides.pdf
+AN:ACQUISITION_PARAMETERS_FILE   	ALPHA KETO ACIDS-FULL.M
+#MS
+MS:INSTRUMENT_NAME               	Agilent 5975
+MS:INSTRUMENT_TYPE               	Single quadrupole
+MS:MS_TYPE                       	EI
+MS:ION_MODE                      	POSITIVE
+MS:MS_COMMENTS                   	none
+#MS_METABOLITE_DATA
+MS_METABOLITE_DATA:UNITS         	uM
+MS_METABOLITE_DATA_START
+Samples	S00015469	S00015470	S00015471	S00015472	S00015473	S00015474	S00015475	S00015476	S00015477	S00015478	S00015479	S00015480	S00015481	S00015483	S00015484
+Factors	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:N | saline/HLF:Y | wt B6:Y	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:N | saline/HLF:Y | wt B6:Y	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:Y | saline/HLF:N | wt B6:Y	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:Y | saline/HLF:N | wt B6:Y	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:Y | saline/HLF:N | wt B6:Y	Sample type:Tissues | Species:Mus musculus | bleomycin/IPF:Y | saline/HLF:N | wt B6:Y	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:N | saline/HLF:Y | wt B6:N	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:N | saline/HLF:Y | wt B6:N	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:N | saline/HLF:Y | wt B6:N	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:N | saline/HLF:Y | wt B6:N	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:N | saline/HLF:Y | wt B6:N	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:Y | saline/HLF:N | wt B6:N	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:Y | saline/HLF:N | wt B6:N	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:Y | saline/HLF:N | wt B6:N	Sample type:Cells | Species:Homo sapiens | bleomycin/IPF:Y | saline/HLF:N | wt B6:N
+PYRUVIC ACID	1.2120888	1.2122738	1.2166433	1.2240997	1.2343615	1.2364795	1.2239584	1.2458525	1.2510062	1.2534862	1.2427141	1.2304312	1.2203002	1.2220662	1.2503706
+DL-ASPARTIC ACID	82.228826	83.121791	108.35697	208.59358	125.90848	193.98439	4.8687735	8.2218718	8.0346042	8.0066445	12.427014	6.3079602	4.6913311	3.7597118	10.857118
+FUMARIC ACID	3.8291594	3.9963144	4.8130148	5.2062561	4.7341648	7.0042579	2.8785189	2.7818424	2.7896288	2.7916152	2.8256436	2.8390397	2.8076263	2.788486	3.1031532
+2-KETOGLUTARIC ACID	.2250877	.2279765	.2287517	.2308893	.2359683	.2380787	.2405373	.2504593	.2586114	.2526327	.2507883	.2645688	.2453656	.2402555	.2662557
+L-ALANINE	2.1491892	2.4596988	4.2169022	7.72233	4.4421291	7.3234857	.5943472	1.0897502	1.3225341	1.1751392	1.6511848	2.0681367	1.3205668	1.1158445	4.0713104
+L-GLUTAMINE	6.8331443	6.4461493	19.418498	31.933477	13.350189	19.513302	11.692336	20.719397	21.157957	22.825003	29.682731	14.900903	10.147254	8.7444129	22.633999
+DL-GLUTAMIC ACID	6.3028675	6.1040444	8.6936756	14.290988	8.9094007	14.378001	2.8702344	4.8957194	4.775305	4.8792137	6.8351299	3.9097877	2.9760384	2.4428808	6.6109082
+LACTIC ACID			1.9040661	3.0101775	2.9742998	6.3374418		.3731999	1.055963	1.1604786	.9431695	1.5286465	.3026353	.1891682	4.6088339
+OXALACETIC ACID	.1944054	.1944054	.1944054	.1944054	.1944054	.1944054	.1944054	.1944054	.1944054	.1944054	.1944054	.1944054	.1944054	.1944054	.1944054
+MS_METABOLITE_DATA_END
+#METABOLITES
+METABOLITES_START
+metabolite_name	moverz_quant	ri	ri_type	pubchem_id	inchi_key	kegg_id	other_id	other_id_type
+PYRUVIC ACID				1060
+DL-ASPARTIC ACID				424
+FUMARIC ACID				444972
+2-KETOGLUTARIC ACID				51
+L-ALANINE				5950
+L-GLUTAMINE				5961
+DL-GLUTAMIC ACID				611
+LACTIC ACID				612
+OXALACETIC ACID				970
+METABOLITES_END
+#END
+
+

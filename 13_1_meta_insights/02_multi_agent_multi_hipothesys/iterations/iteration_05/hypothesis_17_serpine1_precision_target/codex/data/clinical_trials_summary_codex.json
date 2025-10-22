@@ -1,0 +1,148 @@
+{
+  "query": "SERPINE1 OR PAI-1 OR plasminogen activator inhibitor-1 OR tiplaxtinin",
+  "total_trials": 250,
+  "phase_breakdown": {
+    "NA": 107,
+    "": 46,
+    "PHASE4": 35,
+    "PHASE3": 22,
+    "PHASE2": 19,
+    "PHASE1": 8,
+    "PHASE1, PHASE2": 6,
+    "EARLY_PHASE1": 4,
+    "PHASE2, PHASE3": 3
+  },
+  "status_breakdown": {
+    "COMPLETED": 138,
+    "UNKNOWN": 48,
+    "RECRUITING": 19,
+    "ACTIVE_NOT_RECRUITING": 13,
+    "TERMINATED": 13,
+    "WITHDRAWN": 8,
+    "ENROLLING_BY_INVITATION": 6,
+    "NOT_YET_RECRUITING": 4,
+    "SUSPENDED": 1
+  },
+  "recent_trials": [
+    {
+      "NCTId": "NCT00379769",
+      "BriefTitle": "RECORD: Rosiglitazone Evaluated for Cardiac Outcomes and Regulation of Glycaemia in Diabetes",
+      "OverallStatus": "COMPLETED",
+      "Phase": "PHASE3",
+      "Conditions": "Diabetes Mellitus, Type 2",
+      "Interventions": "DRUG: Rosiglitazone; DRUG: Sulfonylurea; DRUG: Metformin",
+      "StudyType": "INTERVENTIONAL",
+      "StartDate": "2001-04",
+      "PrimaryCompletionDate": "2008-12",
+      "Enrollment": ""
+    },
+    {
+      "NCTId": "NCT06367166",
+      "BriefTitle": "Effects of Bioflavanoids on Vascular Wall Remodeling in Patients With Varicose Veins",
+      "OverallStatus": "ACTIVE_NOT_RECRUITING",
+      "Phase": "NA",
+      "Conditions": "Varicose Veins of Lower Limb; Varix; Vascular Diseases; Leg Edema",
+      "Interventions": "DRUG: \"Venarus\u00ae\" (diosmin and hesperidin); PROCEDURE: Endovenous laser ablation (EVLA) with miniphlebectomy; OTHER: Elastic compression; OTHER: Evaluation of biomarkers of venous wall remodeling (fibronectin, PAI-1, vimentin, vWF, CD31), venous symptoms and severity scores",
+      "StudyType": "INTERVENTIONAL",
+      "StartDate": "2023-04-01",
+      "PrimaryCompletionDate": "2026-04-01",
+      "Enrollment": ""
+    },
+    {
+      "NCTId": "NCT01161394",
+      "BriefTitle": "Effect of Pioglitazone on Oxidative Load, Inflammatory End-Points and Vascular Reactivity in Obese Non-Diabetic Patients: A Dose Ranging Study",
+      "OverallStatus": "COMPLETED",
+      "Phase": "PHASE4",
+      "Conditions": "Inflammation",
+      "Interventions": "DRUG: Pioglitazone 15mg; DRUG: pioglitazone 30mg; DRUG: placebo",
+      "StudyType": "INTERVENTIONAL",
+      "StartDate": "",
+      "PrimaryCompletionDate": "",
+      "Enrollment": ""
+    },
+    {
+      "NCTId": "NCT04262960",
+      "BriefTitle": "Effect of Continuous Positive Airway Pressure on Chronotype, Dietary Intake, and Cardiovascular Risk Markers",
+      "OverallStatus": "UNKNOWN",
+      "Phase": "NA",
+      "Conditions": "Obstructive Sleep Apnea of Adult",
+      "Interventions": "DEVICE: Device: active CPAP; DEVICE: Device: sham-CPAP",
+      "StudyType": "INTERVENTIONAL",
+      "StartDate": "2019-08-01",
+      "PrimaryCompletionDate": "2020-04",
+      "Enrollment": ""
+    },
+    {
+      "NCTId": "NCT00669435",
+      "BriefTitle": "Losartan and Simvastatin in Hypertensive Obeses With Liver Steatosis",
+      "OverallStatus": "UNKNOWN",
+      "Phase": "PHASE4",
+      "Conditions": "Hypertension",
+      "Interventions": "DRUG: Losartan + Simvastatin; DRUG: Amlodipine + Simvastatin",
+      "StudyType": "INTERVENTIONAL",
+      "StartDate": "2008-04",
+      "PrimaryCompletionDate": "2008-04",
+      "Enrollment": ""
+    },
+    {
+      "NCTId": "NCT04582188",
+      "BriefTitle": "The Early Coagulopathy for the Prognosis in Sepsis",
+      "OverallStatus": "UNKNOWN",
+      "Phase": "",
+      "Conditions": "Sepsis; Coagulopathy; Outcome, Fatal",
+      "Interventions": "",
+      "StudyType": "OBSERVATIONAL",
+      "StartDate": "2020-11-05",
+      "PrimaryCompletionDate": "2021-03-31",
+      "Enrollment": ""
+    },
+    {
+      "NCTId": "NCT02176941",
+      "BriefTitle": "Telomeres and Arterial Aging",
+      "OverallStatus": "UNKNOWN",
+      "Phase": "",
+      "Conditions": "Atherosclerotic Disease",
+      "Interventions": "",
+      "StudyType": "OBSERVATIONAL",
+      "StartDate": "2014-06",
+      "PrimaryCompletionDate": "2016-11",
+      "Enrollment": ""
+    },
+    {
+      "NCTId": "NCT06051461",
+      "BriefTitle": "Deciphering the Role of Dietary Fatty Acids on Extracellular Vesicles-mediated Intercellular Communication",
+      "OverallStatus": "ACTIVE_NOT_RECRUITING",
+      "Phase": "NA",
+      "Conditions": "Obesity; Metabolic Syndrome; Metabolic Disorder; Inflammation; Immune System and Related Disorders",
+      "Interventions": "DIETARY_SUPPLEMENT: Oral lipid emulsions",
+      "StudyType": "INTERVENTIONAL",
+      "StartDate": "2023-11-01",
+      "PrimaryCompletionDate": "2024-09-01",
+      "Enrollment": ""
+    },
+    {
+      "NCTId": "NCT05645887",
+      "BriefTitle": "Human Albumin Treatment in Adult Septic Shock. A Study Evaluating Immune Response and Organ Failure.",
+      "OverallStatus": "WITHDRAWN",
+      "Phase": "PHASE2",
+      "Conditions": "Septic Shock",
+      "Interventions": "DRUG: Human albumin; OTHER: Saline solution",
+      "StudyType": "INTERVENTIONAL",
+      "StartDate": "2024-02",
+      "PrimaryCompletionDate": "2024-05-23",
+      "Enrollment": ""
+    },
+    {
+      "NCTId": "NCT06382298",
+      "BriefTitle": "Cottonseed Oil Versus Matched PUFA Effects",
+      "OverallStatus": "RECRUITING",
+      "Phase": "NA",
+      "Conditions": "Dyslipidemia; Overweight and Obesity; Nutrition, Healthy",
+      "Interventions": "OTHER: COTTONSEED OIL; OTHER: MATCHED PUFA DIET; OTHER: CONTROL",
+      "StudyType": "INTERVENTIONAL",
+      "StartDate": "2024-08-31",
+      "PrimaryCompletionDate": "2026-12",
+      "Enrollment": ""
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+Tissue,True_Label,Predicted_Label,Predicted_Prob_PhaseII,Model
+Lung,1,1,0.9999843302683865,GradientBoosting
+Skeletal_muscle_EDL,1,1,0.9999843302683865,GradientBoosting
+Ovary_Cortex,1,1,0.9999843302683865,GradientBoosting
+Skin dermis,1,1,0.9999843302683865,GradientBoosting
+Skeletal_muscle_TA,1,1,0.9999843302683865,GradientBoosting
+Skeletal_muscle_Gastrocnemius,1,1,0.9999843302683865,GradientBoosting
+Intervertebral_disc_OAF,1,1,0.9999843302683865,GradientBoosting
+Kidney_Glomerular,1,1,0.9999843302683865,GradientBoosting
+Brain_Cortex,1,1,0.9999843302683865,GradientBoosting
+Intervertebral_disc_IAF,1,1,0.9999843302683865,GradientBoosting
+Skeletal_muscle_Soleus,1,1,0.9999843302683865,GradientBoosting
+Heart_Native_Tissue,0,0,2.7819488839252134e-05,GradientBoosting
+Brain_Hippocampus,0,0,2.7819488839252134e-05,GradientBoosting
+Ovary,0,0,2.7819488839252134e-05,GradientBoosting
+Intervertebral_disc_NP,0,0,2.7819488839252134e-05,GradientBoosting
+Heart_Decellularized_Tissue,0,0,2.7819488839252134e-05,GradientBoosting
+Kidney_Tubulointerstitial,0,0,2.7819488839252086e-05,GradientBoosting

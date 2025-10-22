@@ -1,0 +1,16 @@
+S100_protein,CALM_protein,binding_predicted,evidence,binding_site,estimated_Kd,structural_data_available
+S100A1,CALM1,True,Bousova et al. 2022 (PMID: 35225608) - Direct binding demonstrated,EF-hand calcium-binding domains,Sub-micromolar (Ca²⁺-dependent),False
+S100A1,CALM2,True,Bousova et al. 2022 (PMID: 35225608) - Direct binding demonstrated,EF-hand calcium-binding domains,Sub-micromolar (Ca²⁺-dependent),False
+S100A1,CALM3,True,Bousova et al. 2022 (PMID: 35225608) - Direct binding demonstrated,EF-hand calcium-binding domains,Sub-micromolar (Ca²⁺-dependent),False
+S100B,CALM1,True,Gógl et al. 2016 (PMID: 26527685) - Calmodulin competition,Hydrophobic target-binding cleft,Micromolar range,False
+S100B,CALM2,True,Gógl et al. 2016 (PMID: 26527685) - Calmodulin competition,Hydrophobic target-binding cleft,Micromolar range,False
+S100B,CALM3,True,Gógl et al. 2016 (PMID: 26527685) - Calmodulin competition,Hydrophobic target-binding cleft,Micromolar range,False
+S100A10,CALM1,Indirect,"Preferentially binds annexin A2, not calmodulin",N/A,N/A,False
+S100A10,CALM2,Indirect,"Preferentially binds annexin A2, not calmodulin",N/A,N/A,False
+S100A10,CALM3,Indirect,"Preferentially binds annexin A2, not calmodulin",N/A,N/A,False
+S100A8,CALM1,Unknown,No direct CaM binding reported; heterodimerizes with S100A9,N/A,N/A,False
+S100A8,CALM2,Unknown,No direct CaM binding reported; heterodimerizes with S100A9,N/A,N/A,False
+S100A8,CALM3,Unknown,No direct CaM binding reported; heterodimerizes with S100A9,N/A,N/A,False
+S100A9,CALM1,Unknown,No direct CaM binding reported; forms calprotectin with S100A8,N/A,N/A,False
+S100A9,CALM2,Unknown,No direct CaM binding reported; forms calprotectin with S100A8,N/A,N/A,False
+S100A9,CALM3,Unknown,No direct CaM binding reported; forms calprotectin with S100A8,N/A,N/A,False

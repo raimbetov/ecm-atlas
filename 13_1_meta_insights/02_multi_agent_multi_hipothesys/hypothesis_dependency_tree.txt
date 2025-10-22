@@ -1,0 +1,29 @@
+HYPOTHESIS DEPENDENCY TREE
+
+ROOT HYPOTHESES (No parents):
+├── H01: Compartment Mechanical Stress (REJECTED) → H21
+├── H02: Serpin Cascade → H07, H14
+├── H03: Tissue Aging Velocities (BREAKTHROUGH) → H08, H11, H15
+├── H04: Deep Protein Embeddings → H18
+├── H05: GNN Aging Networks → H18
+├── H06: ML Ensemble Biomarkers → H16
+├── H09: Temporal RNN Trajectories
+├── H13: Independent Dataset Validation → H16
+├── H19: Metabolomics Phase 1 (BLOCKED)
+└── H20: Cross-Species Conservation
+
+DEPENDENT HYPOTHESES:
+├── H07: Coagulation Hub ← H02
+├── H08: S100 Calcium Signaling ← H03 → H10, H18
+├── H10: Calcium Cascade ← H08
+├── H11: Temporal Trajectories ← H03 → H12, H18
+├── H12: Metabolic-Mechanical Transition ← H11
+├── H14: Serpin Centrality ← H02 → H17
+├── H15: Ovary-Heart Transition ← H03
+├── H16: External Validation ← H06, H13 → H21
+├── H17: SERPINE1 Drug Target ← H14
+└── H18: Multi-Modal Integration ← H04, H05, H08, H11
+
+BLOCKING CHAIN:
+H13 (incomplete) → H16 (blocked) → H21 (browser automation) → UNBLOCK
+

@@ -1,0 +1,88 @@
+{
+  "stiffness_metrics": {
+    "r2_train": 0.9871503595957627,
+    "r2_test": 0.7480003753507447,
+    "mae_train": 0.04941502969882336,
+    "mae_test": 0.15551815296525773,
+    "rmse_test": 0.19046164240514857
+  },
+  "attention_metrics": {
+    "attention_mse": 0.10303324460983276
+  },
+  "fisher_stats": {
+    "fisher_odds_ratio": 0.42857142857142855,
+    "fisher_p_value": 0.3332130795979517
+  },
+  "paired_stats": {
+    "paired_t_stat": 3.623699502195931,
+    "paired_t_p_value": 0.0018082419347627441
+  },
+  "structural_metrics": {
+    "struct_r2_train": 0.9992127195522531,
+    "struct_r2_test": -0.360316518296663,
+    "struct_mae_test": 0.3929815005790692,
+    "struct_rmse_test": 0.44251455914256316
+  },
+  "significant_crosslinks": [
+    {
+      "source_gene": "S100B",
+      "target_gene": "LOXL4",
+      "spearman_rho": 0.7405431231562993,
+      "p_value": 0.00067388570797677
+    },
+    {
+      "source_gene": "S100A10",
+      "target_gene": "LOXL2",
+      "spearman_rho": 0.6956097573907082,
+      "p_value": 0.001930893897939282
+    },
+    {
+      "source_gene": "S100A10",
+      "target_gene": "LOX",
+      "spearman_rho": 0.6870032911806955,
+      "p_value": 0.0023139423920549196
+    },
+    {
+      "source_gene": "S100A1",
+      "target_gene": "LOX",
+      "spearman_rho": 0.6767195200049725,
+      "p_value": 0.0028509069126754724
+    },
+    {
+      "source_gene": "S100A12",
+      "target_gene": "TGM3",
+      "spearman_rho": -0.651558364144604,
+      "p_value": 0.004601943391588271
+    },
+    {
+      "source_gene": "S100A7A",
+      "target_gene": "TGM1",
+      "spearman_rho": 0.651558364144604,
+      "p_value": 0.004601943391588271
+    },
+    {
+      "source_gene": "S100A1",
+      "target_gene": "LOXL4",
+      "spearman_rho": 0.6353406181953767,
+      "p_value": 0.006131836111968325
+    },
+    {
+      "source_gene": "S100A7",
+      "target_gene": "LOXL1",
+      "spearman_rho": 0.633748795542634,
+      "p_value": 0.006301721393736524
+    },
+    {
+      "source_gene": "S100A13",
+      "target_gene": "LOXL3",
+      "spearman_rho": 0.6176359364356253,
+      "p_value": 0.008243817400741205
+    },
+    {
+      "source_gene": "S100A10",
+      "target_gene": "TGM2",
+      "spearman_rho": 0.6175559678707981,
+      "p_value": 0.008254525775422366
+    }
+  ]
+}

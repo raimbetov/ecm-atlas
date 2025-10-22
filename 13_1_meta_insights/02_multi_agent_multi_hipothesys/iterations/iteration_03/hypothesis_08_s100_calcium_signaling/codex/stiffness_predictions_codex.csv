@@ -1,0 +1,18 @@
+Tissue,Split,Actual,Predicted
+Brain_Cortex,test,0.3230126424558318,0.34952515
+Brain_Hippocampus,test,0.5821234862043385,0.486448
+Heart_Decellularized_Tissue,train,-0.07832625453469358,-0.10992195
+Heart_Native_Tissue,train,1.3494180553707138,1.1962464
+Intervertebral_disc_IAF,train,-0.34120222632572583,-0.33660322
+Intervertebral_disc_NP,test,-0.44189600294618314,-0.12017792
+Intervertebral_disc_OAF,train,0.07398107070627147,0.047761906
+Kidney_Glomerular,train,0.9431941823315065,0.9269558
+Kidney_Tubulointerstitial,train,0.3157353232309592,0.30105308
+Lung,train,-0.4125481908962334,-0.39753312
+Ovary,train,1.084611967406968,1.0059606
+Ovary_Cortex,train,0.21182711075785798,0.1845286
+Skeletal_muscle_EDL,train,0.007254829809936586,-0.13243064
+Skeletal_muscle_Gastrocnemius,train,-0.20925430116978175,-0.13269274
+Skeletal_muscle_Soleus,train,-0.7872191242244624,-0.7514841
+Skeletal_muscle_TA,test,0.04573589071041226,-0.13243063
+Skin dermis,train,-0.08057166670872368,-0.10351389

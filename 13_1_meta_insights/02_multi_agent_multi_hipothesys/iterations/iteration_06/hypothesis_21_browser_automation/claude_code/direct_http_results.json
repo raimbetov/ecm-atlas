@@ -1,0 +1,17 @@
+{
+  "timestamp": "2025-10-21T14:33:36.370297",
+  "method": "direct_http",
+  "successful": 0,
+  "results": [
+    {
+      "pxd": "PXD011967",
+      "success": false,
+      "error": "All URL patterns failed"
+    },
+    {
+      "pxd": "PXD015982",
+      "success": false,
+      "error": "All URL patterns failed"
+    }
+  ]
+}

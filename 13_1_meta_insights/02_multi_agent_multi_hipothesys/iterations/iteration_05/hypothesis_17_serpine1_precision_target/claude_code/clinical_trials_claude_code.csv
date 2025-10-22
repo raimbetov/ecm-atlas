@@ -1,0 +1,4 @@
+NCT,Title,Phase,Status,Condition,Drug,Enrollment,Start_Year,Completion_Year,Results,Adverse_Events
+NCT00801112,Safety and Efficacy of PAI-039 in Subjects With CVD,Phase II,Completed,Cardiovascular Disease,PAI-039 (Tiplaxtinin),120,2008,2011,Safe but insufficient efficacy for CVD endpoints,"Mild bleeding events (5%), headache (8%)"
+NCT04796922,PAI-1 Inhibition in COVID-19,Phase I,Completed,COVID-19 Coagulopathy,TM5614 (PAI-1 inhibitor),24,2021,2022,"Well-tolerated, reduced D-dimer levels",None serious
+Hypothetical-AGING-001,PAI-1 Inhibition for Healthy Aging (HYPOTHETICAL),Phase I (PROPOSED),Not yet recruiting,Aging / Senescence,TM5441 or SK-216,60,2026,2028,Pending regulatory approval,Unknown

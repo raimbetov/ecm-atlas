@@ -1,0 +1,18 @@
+method,Tissue,pseudo_time_score,normalized_pseudo_time,rank,fallback_used
+slingshot,Brain_Cortex,69.6474698567556,0.875,15,True
+slingshot,Brain_Hippocampus,79.46025031634703,0.9375,16,True
+slingshot,Heart_Decellularized_Tissue,44.46332136282749,0.6875,12,True
+slingshot,Heart_Native_Tissue,82.23154953343649,1.0,17,True
+slingshot,Intervertebral_disc_IAF,7.23764412398003,0.125,3,True
+slingshot,Intervertebral_disc_NP,6.826703629978641,0.0625,2,True
+slingshot,Intervertebral_disc_OAF,0.0,0.0,1,True
+slingshot,Kidney_Glomerular,37.65773433843162,0.375,7,True
+slingshot,Kidney_Tubulointerstitial,35.71452744348431,0.25,5,True
+slingshot,Lung,51.62965619697239,0.8125,14,True
+slingshot,Ovary,40.07877873533771,0.5625,10,True
+slingshot,Ovary_Cortex,33.517596039701004,0.1875,4,True
+slingshot,Skeletal_muscle_EDL,38.72852291741076,0.4375,8,True
+slingshot,Skeletal_muscle_Gastrocnemius,39.48953004150747,0.5,9,True
+slingshot,Skeletal_muscle_Soleus,40.97330844885876,0.625,11,True
+slingshot,Skeletal_muscle_TA,37.07631920986251,0.3125,6,True
+slingshot,Skin dermis,44.98382221787688,0.75,13,True

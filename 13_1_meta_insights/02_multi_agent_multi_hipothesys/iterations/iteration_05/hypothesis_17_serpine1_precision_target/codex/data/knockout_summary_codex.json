@@ -1,0 +1,50 @@
+{
+  "target_gene": "SERPINE1",
+  "global_score_reduction": -0.00020329300605226308,
+  "global_percent_reduction": -0.020331720588728786,
+  "top_20_genes": [
+    "Sulf2",
+    "SERPINB6",
+    "NID1",
+    "COL7A1",
+    "ANGPTL2",
+    "Masp2",
+    "CLGN",
+    "FGF12",
+    "Sfrp1",
+    "WIF1",
+    "Fcn1",
+    "Clec1a",
+    "Clec10a",
+    "COL4A3",
+    "Hgfac",
+    "LAMC1",
+    "FBLN5",
+    "HMCN1",
+    "SERPINI2",
+    "CTSZ"
+  ],
+  "downstream_markers": {
+    "LOX": {
+      "Baseline_Score": 0.021067744120955467,
+      "Knockout_Score": 0.021066835150122643,
+      "Delta_Score": 9.08970832824707e-07,
+      "Percent_Change": 0.004314309451729059,
+      "Embedding_Shift": 5.926442827330902e-05
+    },
+    "TGM2": {
+      "Baseline_Score": 0.9913529753684998,
+      "Knockout_Score": 0.9913749694824219,
+      "Delta_Score": -2.199411392211914e-05,
+      "Percent_Change": -0.0022185933776199818,
+      "Embedding_Shift": 0.01081677433103323
+    },
+    "COL1A1": {
+      "Baseline_Score": 0.9690282940864563,
+      "Knockout_Score": 0.9692181348800659,
+      "Delta_Score": -0.00018984079360961914,
+      "Percent_Change": -0.019590819254517555,
+      "Embedding_Shift": 0.024385442957282066
+    }
+  }
+}

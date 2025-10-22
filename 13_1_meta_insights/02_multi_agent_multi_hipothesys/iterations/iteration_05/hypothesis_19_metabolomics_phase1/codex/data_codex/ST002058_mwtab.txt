@@ -1,0 +1,894 @@
+#METABOLOMICS WORKBENCH nemkovt_20220112_091932 DATATRACK_ID:3033 STUDY_ID:ST002058 ANALYSIS_ID:AN003350 PROJECT_ID:PR001303
+VERSION             	1
+CREATED_ON             	January 12, 2022, 12:50 pm
+#PROJECT
+PR:PROJECT_TITLE                 	Unchecked oxidative stress is an insurmountable barrier for tumour cells that
+PR:PROJECT_TITLE                 	disseminate to skeletal muscle
+PR:PROJECT_SUMMARY               	Skeletal muscle has been recognized as an inhospitable site for disseminated
+PR:PROJECT_SUMMARY               	tumour cells (DTCs) for decades, yet its antimetastatic nature has eluded a
+PR:PROJECT_SUMMARY               	thorough mechanistic description. Here, we show that DTCs traffic to and persist
+PR:PROJECT_SUMMARY               	within skeletal muscle, raising the question as to how this tissue suppresses
+PR:PROJECT_SUMMARY               	colonization. We employed mouse and organotypic culture models along with
+PR:PROJECT_SUMMARY               	metabolomic profiling and ultimately find that oxidative stress is a principal
+PR:PROJECT_SUMMARY               	suppressor of DTC proliferation in skeletal muscle. DTCs bypassed this oxidative
+PR:PROJECT_SUMMARY               	constraint upon colonization of more fertile sites, but were unable to in
+PR:PROJECT_SUMMARY               	muscle. Functional studies demonstrated that disrupting redox homeostasis via
+PR:PROJECT_SUMMARY               	chemogenetic induction of reactive oxygen species slowed proliferation in lung.
+PR:PROJECT_SUMMARY               	Conversely, enhancing antioxidant potential of tumour cells via ectopic
+PR:PROJECT_SUMMARY               	expression of catalase allowed robust colonization of skeletal muscle. These
+PR:PROJECT_SUMMARY               	findings reveal a profound metabolic bottleneck imposed on DTCs and sustained by
+PR:PROJECT_SUMMARY               	skeletal muscle. Understanding this biology could reveal novel DTC
+PR:PROJECT_SUMMARY               	vulnerabilities.
+PR:INSTITUTE                     	University of Colorado Anschutz Medical Campus
+PR:LAST_NAME                     	Nemkov
+PR:FIRST_NAME                    	Travis
+PR:ADDRESS                       	12801 E 17th Avenue, RC-1 South, Rm 9403G, Aurora, CO, 80045, USA
+PR:EMAIL                         	travis.nemkov@cuanschutz.edu
+PR:PHONE                         	303-724-3253
+#STUDY
+ST:STUDY_TITLE                   	Muscle/Lung/Tumor metabolomics
+ST:STUDY_SUMMARY                 	Skeletal muscle (SkM, tibialis anterior and upper arm) and lung samples analyzed
+ST:STUDY_SUMMARY                 	by LC-MS metabolomics. These tissue types are analyzed as healthy control,
+ST:STUDY_SUMMARY                 	Mcherry+ tumor, or adjacent tissue.
+ST:INSTITUTE                     	University of Colorado Anschutz Medical Campus
+ST:LAST_NAME                     	Nemkov
+ST:FIRST_NAME                    	Travis
+ST:ADDRESS                       	12801 East 17th Ave. Research 1 South Rm 9121 Aurora CO 80045
+ST:EMAIL                         	travis.nemkov@cuanschutz.edu
+ST:PHONE                         	303-724-3253
+#SUBJECT
+SU:SUBJECT_TYPE                  	Mammal
+SU:SUBJECT_SPECIES               	Mus musculus
+SU:TAXONOMY_ID                   	10090
+#SUBJECT_SAMPLE_FACTORS:         	SUBJECT(optional)[tab]SAMPLE[tab]FACTORS(NAME:VALUE pairs separated by |)[tab]Raw file names and additional sample data
+SUBJECT_SAMPLE_FACTORS           	4T1-1	4T1-1_R7-	Tissue:Tibialis_anterior | Treatment:Tumor	RAW_FILE_NAME=4T1-1_R7-.raw
+SUBJECT_SAMPLE_FACTORS           	4T1-15	4T1-15_R11-	Tissue:Tibialis_anterior | Treatment:Tumor	RAW_FILE_NAME=4T1-15_R11-.raw
+SUBJECT_SAMPLE_FACTORS           	4T1-19	4T1-19_R15-	Tissue:Upper_Arm_SkM | Treatment:Tumor	RAW_FILE_NAME=4T1-19_R15-.raw
+SUBJECT_SAMPLE_FACTORS           	4T1-27	4T1-27_R18-	Tissue:Upper_Arm_SkM | Treatment:Tumor	RAW_FILE_NAME=4T1-27_R18-.raw
+SUBJECT_SAMPLE_FACTORS           	CTL-1	CTL-1_R23-	Tissue:Tibialis_anterior | Treatment:Control	RAW_FILE_NAME=CTL-1_R23-.raw
+SUBJECT_SAMPLE_FACTORS           	CTL-5	CTL-5_R2-	Tissue:Tibialis_anterior | Treatment:Control	RAW_FILE_NAME=CTL-5_R2-.raw
+SUBJECT_SAMPLE_FACTORS           	CTL-9	CTL-9_R1-	Tissue:Tibialis_anterior | Treatment:Control	RAW_FILE_NAME=CTL-9_R1-.raw
+SUBJECT_SAMPLE_FACTORS           	CTL-3	CTL-3_R6-	Tissue:Upper_Arm_SkM | Treatment:Control	RAW_FILE_NAME=CTL-3_R6-.raw
+SUBJECT_SAMPLE_FACTORS           	CTL-7	CTL-7_R3-	Tissue:Upper_Arm_SkM | Treatment:Control	RAW_FILE_NAME=CTL-7_R3-.raw
+SUBJECT_SAMPLE_FACTORS           	CTL-11	CTL-11_R21-	Tissue:Upper_Arm_SkM | Treatment:Control	RAW_FILE_NAME=CTL-11_R21-.raw
+SUBJECT_SAMPLE_FACTORS           	4T1-17	4T1-17_R4-	Tissue:Lung | Treatment:Tumor	RAW_FILE_NAME=4T1-17_R4-.raw
+SUBJECT_SAMPLE_FACTORS           	4T1-21	4T1-21_R22-	Tissue:Lung | Treatment:Tumor	RAW_FILE_NAME=4T1-21_R22-.raw
+SUBJECT_SAMPLE_FACTORS           	4T1-25	4T1-25_R16-	Tissue:Lung | Treatment:Tumor	RAW_FILE_NAME=4T1-25_R16-.raw
+SUBJECT_SAMPLE_FACTORS           	CTL-4	CTL-4_R20-	Tissue:Lung | Treatment:Control	RAW_FILE_NAME=CTL-4_R20-.raw
+SUBJECT_SAMPLE_FACTORS           	CTL-8	CTL-8_R13-	Tissue:Lung | Treatment:Control	RAW_FILE_NAME=CTL-8_R13-.raw
+SUBJECT_SAMPLE_FACTORS           	CTL-12	CTL-12_R14-	Tissue:Lung | Treatment:Control	RAW_FILE_NAME=CTL-12_R14-.raw
+SUBJECT_SAMPLE_FACTORS           	4T1-1	4T1-1_R7+	Tissue:Tibialis_anterior | Treatment:Tumor	RAW_FILE_NAME=4T1-1_R7+.raw
+SUBJECT_SAMPLE_FACTORS           	4T1-15	4T1-15_R11+	Tissue:Tibialis_anterior | Treatment:Tumor	RAW_FILE_NAME=4T1-15_R11+.raw
+SUBJECT_SAMPLE_FACTORS           	4T1-19	4T1-19_R15+	Tissue:Upper_Arm_SkM | Treatment:Tumor	RAW_FILE_NAME=4T1-19_R15+.raw
+SUBJECT_SAMPLE_FACTORS           	4T1-27	4T1-27_R18+	Tissue:Upper_Arm_SkM | Treatment:Tumor	RAW_FILE_NAME=4T1-27_R18+.raw
+SUBJECT_SAMPLE_FACTORS           	CTL-1	CTL-1_R23+	Tissue:Tibialis_anterior | Treatment:Control	RAW_FILE_NAME=CTL-1_R23+.raw
+SUBJECT_SAMPLE_FACTORS           	CTL-5	CTL-5_R2+	Tissue:Tibialis_anterior | Treatment:Control	RAW_FILE_NAME=CTL-5_R2+.raw
+SUBJECT_SAMPLE_FACTORS           	CTL-9	CTL-9_R1+	Tissue:Tibialis_anterior | Treatment:Control	RAW_FILE_NAME=CTL-9_R1+.raw
+SUBJECT_SAMPLE_FACTORS           	CTL-3	CTL-3_R6+	Tissue:Upper_Arm_SkM | Treatment:Control	RAW_FILE_NAME=CTL-3_R6+.raw
+SUBJECT_SAMPLE_FACTORS           	CTL-7	CTL-7_R3+	Tissue:Upper_Arm_SkM | Treatment:Control	RAW_FILE_NAME=CTL-7_R3+.raw
+SUBJECT_SAMPLE_FACTORS           	CTL-11	CTL-11_R21+	Tissue:Upper_Arm_SkM | Treatment:Control	RAW_FILE_NAME=CTL-11_R21+.raw
+SUBJECT_SAMPLE_FACTORS           	4T1-17	4T1-17_R4+	Tissue:Lung | Treatment:Tumor	RAW_FILE_NAME=4T1-17_R4+.raw
+SUBJECT_SAMPLE_FACTORS           	4T1-21	4T1-21_R22+	Tissue:Lung | Treatment:Tumor	RAW_FILE_NAME=4T1-21_R22+.raw
+SUBJECT_SAMPLE_FACTORS           	4T1-25	4T1-25_R16+	Tissue:Lung | Treatment:Tumor	RAW_FILE_NAME=4T1-25_R16+.raw
+SUBJECT_SAMPLE_FACTORS           	CTL-4	CTL-4_R20+	Tissue:Lung | Treatment:Control	RAW_FILE_NAME=CTL-4_R20+.raw
+SUBJECT_SAMPLE_FACTORS           	CTL-8	CTL-8_R13+	Tissue:Lung | Treatment:Control	RAW_FILE_NAME=CTL-8_R13+.raw
+SUBJECT_SAMPLE_FACTORS           	CTL-12	CTL-12_R14+	Tissue:Lung | Treatment:Control	RAW_FILE_NAME=CTL-12_R14+.raw
+#COLLECTION
+CO:COLLECTION_SUMMARY            	Lung and skeletal muscle (TA and bulk muscles from the upper arm) were collected
+CO:COLLECTION_SUMMARY            	upon necropsy and imaged for mCherry+ 4T1-SkM lesions (Zeiss AxioZoom). Once a
+CO:COLLECTION_SUMMARY            	mCherry+ lesion was identified, the region was excised, leaving as little tissue
+CO:COLLECTION_SUMMARY            	margins as possible. The sample was weighed and then flash frozen using LN2.
+CO:COLLECTION_SUMMARY            	Healthy lung and skeletal muscle samples were collected through the same
+CO:COLLECTION_SUMMARY            	process, without the mCherry imaging step. 4T1-parental and 4T1-SkM cells were
+CO:COLLECTION_SUMMARY            	plated in 6-well plates at an initial density of 50,000 cells/well and collected
+CO:COLLECTION_SUMMARY            	48h later (final density ~275,000 cells/well). Wells were washed twice with 1x
+CO:COLLECTION_SUMMARY            	PBS and cells were scraped into 1.5 mL microcentrifuge tubes and spun at 16,000
+CO:COLLECTION_SUMMARY            	x g for 3 minutes. Samples were then flash frozen and stored at -80°C until
+CO:COLLECTION_SUMMARY            	ready to process.
+CO:SAMPLE_TYPE                   	Lung
+#TREATMENT
+TR:TREATMENT_SUMMARY             	Lung and skeletal muscle (TA and bulk muscles from the upper arm) were collected
+TR:TREATMENT_SUMMARY             	upon necropsy and imaged for mCherry+ 4T1-SkM lesions (Zeiss AxioZoom). Once a
+TR:TREATMENT_SUMMARY             	mCherry+ lesion was identified, the region was excised, leaving as little tissue
+TR:TREATMENT_SUMMARY             	margins as possible. The sample was weighed and then flash frozen using LN2.
+TR:TREATMENT_SUMMARY             	Healthy lung and skeletal muscle samples were collected through the same
+TR:TREATMENT_SUMMARY             	process, without the mCherry imaging step. 4T1-parental and 4T1-SkM cells were
+TR:TREATMENT_SUMMARY             	plated in 6-well plates at an initial density of 50,000 cells/well and collected
+TR:TREATMENT_SUMMARY             	48h later (final density ~275,000 cells/well). Wells were washed twice with 1x
+TR:TREATMENT_SUMMARY             	PBS and cells were scraped into 1.5 mL microcentrifuge tubes and spun at 16,000
+TR:TREATMENT_SUMMARY             	x g for 3 minutes. Samples were then flash frozen and stored at -80°C until
+TR:TREATMENT_SUMMARY             	ready to process.
+#SAMPLEPREP
+SP:SAMPLEPREP_SUMMARY            	Prior to LC-MS analysis, tissue samples were weighed and resuspended in
+SP:SAMPLEPREP_SUMMARY            	pre-chilled (-20°C) methanol:acetonitrile:water (5:3:2, v:v) to a final
+SP:SAMPLEPREP_SUMMARY            	concentration of 30 mg/ml, cell samples were placed on ice and re-suspended with
+SP:SAMPLEPREP_SUMMARY            	methanol:acetonitrile:water (5:3:2, v:v) at a concentration of 2x106 cells/mL,
+SP:SAMPLEPREP_SUMMARY            	and media samples were extracted with the same solution at a dilution of 1:25
+SP:SAMPLEPREP_SUMMARY            	(v/v). Suspensions were vortexed continuously for 30 min at 4°C. Insoluble
+SP:SAMPLEPREP_SUMMARY            	material was removed by centrifugation at 18,000 g for 10 min at 4°C and
+SP:SAMPLEPREP_SUMMARY            	supernatants were isolated for metabolomics analysis by UHPLC-MS. Analyses were
+SP:SAMPLEPREP_SUMMARY            	performed as previously published85,86. Injection volumes for tissue, cell, and
+SP:SAMPLEPREP_SUMMARY            	media extracts were 2 L, 10 L, and 10L, respectively. The analytical
+SP:SAMPLEPREP_SUMMARY            	platform employs a Vanquish UHPLC system (ThermoFisher) coupled online to a Q
+SP:SAMPLEPREP_SUMMARY            	Exactive mass spectrometer (ThermoFisher). Samples were resolved over a Kinetex
+SP:SAMPLEPREP_SUMMARY            	C18 column, 2.1 x 150 mm, 1.7 m particle size (Phenomenex, Torrance, CA)
+SP:SAMPLEPREP_SUMMARY            	equipped with a guard column (SecurityGuardTM Ultracartridge – UHPLC C18 for
+SP:SAMPLEPREP_SUMMARY            	2.1 mm ID Columns – AJO-8782 – Phenomenex, Torrance, CA) using an aqueous
+SP:SAMPLEPREP_SUMMARY            	phase (A) of water and 0.1% formic acid and a mobile phase (B) of acetonitrile
+SP:SAMPLEPREP_SUMMARY            	and 0.1% formic acid for positive ion polarity mode, and an aqueous phase (A) of
+SP:SAMPLEPREP_SUMMARY            	water:acetonitrile (95:5) with 1 mM ammonium acetate, and a mobile phase (B) of
+SP:SAMPLEPREP_SUMMARY            	acetonitrile:water (95:5) with 1 mM ammonium acetate for negative ion polarity
+SP:SAMPLEPREP_SUMMARY            	mode. Samples were eluted from the column using either an isocratic elution of
+SP:SAMPLEPREP_SUMMARY            	5% B flowed at 250 L/min and 25°C or a gradient from 5% to 95% B over 1 min,
+SP:SAMPLEPREP_SUMMARY            	followed by an isocratic hold at 95% B for 2 min, flowed at 400 L/min and
+SP:SAMPLEPREP_SUMMARY            	45°C. The Q Exactive mass spectrometer (ThermoFisher) was operated
+SP:SAMPLEPREP_SUMMARY            	independently in positive or negative ion mode, scanning in Full MS mode (2
+SP:SAMPLEPREP_SUMMARY            	scans) from 60 to 900 m/z at 70,000 resolution, with 4 kV spray voltage, 45
+SP:SAMPLEPREP_SUMMARY            	sheath gas, 15 auxiliary gas. Calibration was performed prior to analysis using
+SP:SAMPLEPREP_SUMMARY            	the PierceTM Positive and Negative Ion Calibration Solutions (ThermoFisher).
+SP:SAMPLEPREP_SUMMARY            	Acquired data was then converted from raw to mzXML file format using Mass Matrix
+SP:SAMPLEPREP_SUMMARY            	(Cleveland, OH). Samples were analyzed in randomized order with a technical
+SP:SAMPLEPREP_SUMMARY            	mixture injected periodically through analysis to qualify instrument
+SP:SAMPLEPREP_SUMMARY            	performance. Metabolite assignments, isotopologue distributions, and correction
+SP:SAMPLEPREP_SUMMARY            	for expected natural abundances of deuterium, 13C, and 15N isotopes were
+SP:SAMPLEPREP_SUMMARY            	performed using MAVEN (Princeton, NJ)92.
+#CHROMATOGRAPHY
+CH:CHROMATOGRAPHY_TYPE           	Reversed phase
+CH:INSTRUMENT_NAME               	QExactive
+CH:COLUMN_NAME                   	Kinetex C18 2.1x100
+#ANALYSIS
+AN:ANALYSIS_TYPE                 	MS
+#MS
+MS:INSTRUMENT_NAME               	Thermo Q Exactive Orbitrap
+MS:INSTRUMENT_TYPE               	Orbitrap
+MS:MS_TYPE                       	ESI
+MS:ION_MODE                      	POSITIVE
+MS:MS_COMMENTS                   	The Q Exactive mass spectrometer (ThermoFisher) was operated independently in
+MS:MS_COMMENTS                   	positive or negative ion mode, scanning in Full MS mode (2 scans) from 60 to
+MS:MS_COMMENTS                   	900 m/z at 70,000 resolution, with 4 kV spray voltage, 45 sheath gas, 15
+MS:MS_COMMENTS                   	auxiliary gas. Calibration was performed prior to analysis using the PierceTM
+MS:MS_COMMENTS                   	Positive and Negative Ion Calibration Solutions (ThermoFisher). Acquired data
+MS:MS_COMMENTS                   	was then converted from raw to mzXML file format using Mass Matrix (Cleveland,
+MS:MS_COMMENTS                   	OH). Samples were analyzed in randomized order with a technical mixture injected
+MS:MS_COMMENTS                   	periodically through analysis to qualify instrument performance. Metabolite
+MS:MS_COMMENTS                   	assignments, isotopologue distributions, and correction for expected natural
+MS:MS_COMMENTS                   	abundances of deuterium, 13C, and 15N isotopes were performed using MAVEN
+MS:MS_COMMENTS                   	(Princeton, NJ)
+#MS_METABOLITE_DATA
+MS_METABOLITE_DATA:UNITS	AU
+MS_METABOLITE_DATA_START
+Samples	4T1-1_R7+	4T1-15_R11+	4T1-19_R15+	4T1-27_R18+	CTL-1_R23+	CTL-5_R2+	CTL-9_R1+	CTL-3_R6+	CTL-7_R3+	CTL-11_R21+	4T1-17_R4+	4T1-21_R22+	4T1-25_R16+	CTL-4_R20+	CTL-8_R13+	CTL-12_R14+
+Factors	Tissue:Tibialis_anterior | Treatment:Tumor	Tissue:Tibialis_anterior | Treatment:Tumor	Tissue:Upper_Arm_SkM | Treatment:Tumor	Tissue:Upper_Arm_SkM | Treatment:Tumor	Tissue:Tibialis_anterior | Treatment:Control	Tissue:Tibialis_anterior | Treatment:Control	Tissue:Tibialis_anterior | Treatment:Control	Tissue:Upper_Arm_SkM | Treatment:Control	Tissue:Upper_Arm_SkM | Treatment:Control	Tissue:Upper_Arm_SkM | Treatment:Control	Tissue:Lung | Treatment:Tumor	Tissue:Lung | Treatment:Tumor	Tissue:Lung | Treatment:Tumor	Tissue:Lung | Treatment:Control	Tissue:Lung | Treatment:Control	Tissue:Lung | Treatment:Control
+L-alanine	2.93E+07	3.17E+07	2.69E+07	3.99E+07	2.89E+07	5.00E+07	4.47E+07	3.32E+07	2.81E+07	3.76E+07	7.50E+06	7.69E+06	6.57E+06	4.33E+06	6.26E+06	4.29E+06
+L-arginine	3.95E+06	3.18E+06	4.07E+06	3.61E+06	2.64E+06	4.29E+06	4.96E+06	4.50E+06	4.73E+06	4.16E+06	2.67E+06	1.38E+06	9.80E+05	1.94E+06	3.78E+06	2.39E+06
+L-asparagine	2.01E+06	1.94E+06	2.38E+06	2.31E+06	1.18E+06	1.52E+06	1.60E+06	1.47E+06	1.61E+06	1.64E+06	9.56E+05	1.38E+06	8.93E+05	5.74E+05	8.78E+05	6.34E+05
+L-aspartate	2.95E+06	2.87E+06	3.73E+06	4.67E+06	1.71E+06	2.39E+06	3.49E+06	2.65E+06	1.90E+06	2.80E+06	7.04E+06	6.82E+06	5.03E+06	7.03E+06	5.24E+06	4.92E+06
+L-cysteine	1.37E+05	3.36E+05	6.96E+05	5.66E+05	1.41E+05	1.03E+05	7.18E+04	1.02E+05	1.30E+04	1.98E+05	5.90E+05	5.81E+05	4.81E+05	1.70E+05	2.28E+05	5.19E+04
+L-glutamate	4.58E+07	2.97E+07	4.17E+07	4.68E+07	4.70E+07	3.69E+07	3.58E+07	3.39E+07	2.68E+07	2.66E+07	3.87E+07	5.71E+07	4.19E+07	4.18E+07	2.97E+07	2.86E+07
+L-glutamine	5.44E+07	6.21E+07	7.13E+07	7.17E+07	8.25E+07	1.07E+08	8.53E+07	1.02E+08	9.04E+07	9.00E+07	1.94E+07	1.15E+07	1.06E+07	1.24E+07	1.12E+07	6.65E+06
+glycine	5.99E+06	7.25E+06	6.07E+06	6.06E+06	5.62E+06	6.29E+06	5.67E+06	8.70E+06	7.45E+06	9.92E+06	1.04E+07	7.58E+06	5.84E+06	6.05E+06	7.49E+06	7.18E+06
+L-histidine	1.46E+07	1.17E+07	7.64E+06	1.01E+07	1.58E+07	1.60E+07	1.51E+07	1.59E+07	1.46E+07	1.56E+07	2.86E+06	2.34E+06	1.99E+06	1.57E+06	2.45E+06	1.30E+06
+L-leucine	1.63E+07	1.78E+07	2.17E+07	1.52E+07	1.27E+07	1.70E+07	1.46E+07	9.60E+06	1.20E+07	1.12E+07	9.67E+06	1.37E+07	1.32E+07	9.96E+06	1.33E+07	9.57E+06
+L-lysine	1.89E+07	1.26E+07	1.50E+07	1.45E+07	1.73E+07	2.12E+07	2.80E+07	2.25E+07	2.41E+07	2.64E+07	7.40E+06	5.04E+06	5.73E+06	4.64E+06	8.76E+06	5.27E+06
+L-methionine	1.94E+07	1.61E+07	1.41E+07	1.72E+07	9.57E+06	1.58E+07	2.20E+07	1.32E+07	1.20E+07	1.75E+07	1.10E+07	1.07E+07	1.01E+07	4.76E+06	9.74E+06	6.14E+06
+L-phenylalanine	8.80E+06	8.24E+06	1.05E+07	9.14E+06	5.15E+06	8.16E+06	1.01E+07	4.58E+06	6.05E+06	4.35E+06	4.81E+06	6.61E+06	5.94E+06	3.09E+06	5.13E+06	3.16E+06
+L-proline	4.83E+07	4.30E+07	5.13E+07	4.35E+07	1.60E+07	2.22E+07	2.76E+07	2.01E+07	2.18E+07	2.17E+07	1.48E+07	2.09E+07	2.44E+07	8.78E+06	1.82E+07	1.28E+07
+L-serine	2.47E+06	2.61E+06	3.03E+06	2.78E+06	2.78E+06	3.09E+06	2.56E+06	3.44E+06	2.64E+06	3.18E+06	1.35E+06	1.83E+06	1.25E+06	9.44E+05	1.55E+06	1.10E+06
+L-threonine	7.40E+06	9.81E+06	7.13E+06	1.06E+07	7.21E+06	9.68E+06	7.63E+06	6.36E+06	8.58E+06	7.51E+06	3.63E+06	3.86E+06	3.97E+06	2.10E+06	3.48E+06	2.06E+06
+L-tryptophan	2.66E+07	2.03E+07	2.37E+07	1.88E+07	8.52E+06	9.61E+06	1.40E+07	5.64E+06	9.68E+06	8.01E+06	2.34E+07	1.24E+07	1.21E+07	1.02E+07	1.65E+07	8.19E+06
+L-tyrosine	1.37E+07	1.02E+07	1.17E+07	9.44E+06	4.68E+06	9.42E+06	1.11E+07	6.49E+06	6.36E+06	8.56E+06	9.08E+06	8.78E+06	6.19E+06	2.94E+06	5.83E+06	4.06E+06
+L-valine	3.91E+07	3.25E+07	4.55E+07	3.65E+07	2.39E+07	3.89E+07	3.26E+07	2.87E+07	3.61E+07	2.70E+07	2.42E+07	2.54E+07	1.93E+07	1.71E+07	2.22E+07	1.69E+07
+L-cystine	7.99E+03	0.00E+00	3.27E+03	0.00E+00	2.18E+04	0.00E+00	0.00E+00	0.00E+00	0.00E+00	0.00E+00	6.31E+03	0.00E+00	6.01E+03	1.80E+04	1.43E+04	1.33E+04
+AMP	5.12E+06	5.45E+06	1.45E+06	4.14E+06	3.14E+06	1.56E+06	4.21E+06	2.50E+06	1.35E+06	4.62E+06	2.54E+07	2.51E+07	1.83E+07	3.22E+07	1.17E+07	1.86E+07
+dAMP	0.00E+00	0.00E+00	1.44E+04	0.00E+00	3.89E+03	0.00E+00	0.00E+00	0.00E+00	6.87E+03	1.98E+03	6.71E+03	7.06E+04	3.45E+04	1.75E+04	9.29E+03	6.81E+03
+Adenosine	3.15E+06	1.54E+06	2.85E+06	2.42E+06	5.04E+05	6.18E+05	2.64E+05	6.73E+05	2.45E+05	3.01E+05	2.44E+07	8.05E+06	6.42E+06	2.36E+07	1.12E+07	6.61E+06
+Adenine	8.17E+05	3.65E+05	2.61E+05	4.79E+05	2.03E+05	2.21E+05	2.73E+05	2.65E+05	2.55E+05	2.21E+05	1.66E+06	1.08E+06	6.77E+05	1.52E+06	8.65E+05	6.94E+05
+GMP	1.14E+06	4.85E+05	1.10E+06	8.30E+05	8.32E+05	8.50E+05	1.11E+06	8.78E+05	7.71E+05	8.66E+05	4.11E+06	4.06E+06	2.69E+06	3.85E+06	2.58E+06	3.35E+06
+Guanosine	6.22E+05	2.93E+05	8.86E+05	1.19E+06	5.77E+04	1.11E+05	8.21E+04	6.94E+04	5.84E+04	3.91E+04	8.36E+05	8.97E+05	1.09E+06	8.23E+05	1.02E+06	9.18E+05
+Guanine	2.72E+05	1.51E+05	3.92E+05	6.20E+05	1.03E+05	1.19E+05	1.58E+05	6.93E+04	1.13E+05	9.11E+04	4.91E+05	5.98E+05	5.57E+05	5.27E+05	5.87E+05	4.88E+05
+CMP	1.91E+05	1.06E+05	2.48E+05	3.54E+05	1.55E+05	1.84E+05	1.90E+05	1.15E+05	4.26E+04	1.34E+05	6.21E+05	9.43E+05	8.30E+05	6.61E+05	4.05E+05	4.93E+05
+Cytidine	1.13E+06	8.82E+05	1.98E+06	1.12E+06	6.88E+05	5.78E+05	7.22E+05	4.29E+05	3.35E+05	3.98E+05	1.13E+06	1.26E+06	1.47E+06	1.34E+06	1.86E+06	1.47E+06
+Cytosine	8.17E+05	5.27E+05	1.13E+06	6.05E+05	4.49E+05	3.97E+05	4.05E+05	2.62E+05	1.80E+05	1.83E+05	6.66E+05	8.45E+05	8.69E+05	8.14E+05	1.08E+06	1.14E+06
+Thymidine	1.48E+04	4.99E+03	9.02E+03	4.64E+03	4.13E+03	8.44E+03	6.69E+03	4.06E+03	6.31E+03	5.19E+03	1.25E+04	0.00E+00	0.00E+00	0.00E+00	7.89E+03	0.00E+00
+Thymine	2.99E+04	3.00E+04	2.64E+04	3.78E+04	2.15E+04	2.22E+04	3.49E+04	1.93E+04	1.94E+04	1.99E+04	1.48E+04	4.93E+04	2.48E+04	1.17E+04	1.15E+04	1.43E+04
+UMP	8.04E+05	2.96E+05	9.66E+05	1.06E+06	1.34E+06	1.07E+06	1.17E+06	8.29E+05	8.43E+05	1.18E+06	1.50E+06	2.59E+06	1.55E+06	1.60E+06	1.05E+06	1.18E+06
+Uracil	5.25E+05	3.33E+05	1.19E+06	1.13E+06	2.67E+05	3.45E+05	1.70E+05	2.04E+05	1.80E+05	1.59E+05	4.38E+05	1.34E+06	8.24E+05	4.12E+05	4.09E+05	4.23E+05
+IMP	5.74E+07	3.03E+07	4.73E+07	4.47E+07	5.49E+07	6.20E+07	4.68E+07	6.22E+07	5.77E+07	6.49E+07	3.46E+06	4.77E+06	3.98E+06	1.14E+06	1.10E+06	8.50E+05
+Inosine	1.13E+07	6.73E+06	1.76E+07	1.66E+07	3.79E+06	4.68E+06	3.17E+06	4.83E+06	4.04E+06	3.14E+06	2.08E+06	4.80E+06	5.69E+06	2.34E+06	4.02E+06	5.01E+06
+Hypoxanthine	4.88E+07	3.21E+07	8.46E+07	8.83E+07	2.33E+07	2.89E+07	2.43E+07	2.91E+07	2.63E+07	2.32E+07	2.45E+07	4.75E+07	4.10E+07	2.64E+07	4.85E+07	5.04E+07
+Xanthosine	2.13E+03	0.00E+00	1.49E+04	8.06E+03	0.00E+00	2.23E+03	2.10E+03	0.00E+00	0.00E+00	0.00E+00	5.56E+03	1.94E+04	1.90E+04	4.32E+03	9.03E+03	8.16E+03
+Xanthine	1.43E+06	8.89E+05	3.65E+06	2.49E+06	1.01E+06	1.39E+06	1.48E+06	1.06E+06	9.21E+05	1.03E+06	1.93E+06	3.75E+06	2.75E+06	1.76E+06	2.37E+06	2.90E+06
+Urate	4.42E+05	2.97E+05	9.64E+05	3.60E+05	3.54E+05	5.49E+05	3.66E+05	2.59E+05	2.84E+05	2.77E+05	2.09E+06	2.20E+06	2.01E+06	1.36E+06	1.15E+06	1.29E+06
+5-Hydroxyisourate	1.33E+06	2.60E+06	3.08E+06	3.63E+06	4.27E+06	2.76E+06	2.39E+06	2.86E+06	3.85E+06	3.47E+06	1.59E+06	9.57E+05	6.76E+05	8.54E+04	4.70E+05	2.58E+04
+(S)(+)-Allantoin	3.95E+05	3.23E+05	4.28E+05	3.23E+05	4.07E+05	2.97E+05	3.59E+05	4.33E+05	3.27E+05	3.05E+05	3.48E+05	2.25E+05	2.82E+05	2.76E+05	3.99E+05	2.12E+05
+Allantoate	4.08E+04	2.30E+04	6.82E+04	3.24E+04	0.00E+00	3.07E+04	2.84E+04	1.29E+04	2.30E+04	1.81E+04	1.35E+05	2.65E+05	4.08E+05	6.89E+04	1.72E+05	7.78E+04
+3',5'-Cyclic IMP	1.61E+04	1.07E+04	1.91E+04	1.49E+04	2.00E+04	1.71E+04	6.66E+03	1.06E+04	3.67E+03	1.93E+04	0.00E+00	0.00E+00	0.00E+00	0.00E+00	2.26E+03	0.00E+00
+Adenylyl sulfate	1.40E+05	1.14E+05	1.31E+05	1.32E+05	1.48E+05	1.25E+05	1.24E+05	1.35E+05	1.45E+05	1.59E+05	2.14E+04	3.84E+04	4.12E+04	2.23E+03	9.92E+03	0.00E+00
+Pyridoxal	5.37E+04	1.64E+04	3.56E+04	7.57E+04	3.09E+03	1.68E+04	2.95E+03	1.83E+04	2.97E+03	8.18E+03	3.18E+04	1.96E+04	9.53E+03	2.42E+04	2.82E+04	1.04E+04
+Nicotinamide	8.90E+07	5.58E+07	4.60E+07	6.27E+07	8.70E+07	7.81E+07	1.02E+08	6.62E+07	5.85E+07	5.97E+07	2.35E+07	2.42E+07	1.97E+07	1.83E+07	1.48E+07	2.10E+07
+Nicotinate ribonucleotide	3.55E+03	1.45E+05	0.00E+00	4.38E+03	0.00E+00	0.00E+00	6.23E+03	2.74E+04	2.81E+04	0.00E+00	5.01E+03	0.00E+00	0.00E+00	0.00E+00	0.00E+00	0.00E+00
+NADPH	3.26E+04	4.45E+04	6.61E+04	0.00E+00	5.75E+04	2.22E+04	4.46E+04	3.04E+04	0.00E+00	2.18E+04	0.00E+00	0.00E+00	0.00E+00	0.00E+00	0.00E+00	0.00E+00
+NADH	1.84E+04	1.17E+04	0.00E+00	0.00E+00	1.38E+03	4.77E+03	2.42E+03	7.77E+03	4.35E+03	2.30E+03	0.00E+00	0.00E+00	0.00E+00	0.00E+00	0.00E+00	0.00E+00
+Glutathione	6.16E+07	3.65E+07	4.60E+07	4.92E+07	5.42E+07	7.02E+07	5.18E+07	6.61E+07	5.91E+07	5.12E+07	6.81E+07	8.95E+07	4.82E+07	3.61E+07	2.14E+07	3.64E+07
+Glutathione disulfide	8.22E+05	6.91E+05	8.36E+05	6.46E+05	4.18E+05	8.07E+05	4.68E+05	4.88E+05	5.25E+05	2.71E+05	3.27E+06	1.76E+06	1.62E+06	3.18E+06	2.52E+06	3.28E+06
+5-Oxoproline	3.48E+07	3.45E+07	3.98E+07	4.42E+07	4.89E+07	4.38E+07	5.06E+07	6.02E+07	5.23E+07	5.22E+07	1.67E+07	1.52E+07	1.33E+07	1.28E+07	1.10E+07	7.76E+06
+S-Glutathionyl-L-cysteine	4.74E+04	8.00E+04	1.77E+05	3.57E+04	0.00E+00	2.64E+04	4.58E+04	0.00E+00	0.00E+00	1.24E+04	2.94E+05	2.67E+05	2.51E+05	3.75E+05	5.49E+05	4.03E+05
+Cys-Gly	4.47E+05	2.59E+05	2.73E+05	3.34E+05	3.94E+05	4.56E+05	3.70E+05	4.84E+05	4.18E+05	3.66E+05	4.85E+05	6.68E+05	3.12E+05	2.94E+05	1.92E+05	2.56E+05
+Ascorbate	6.03E+05	4.94E+05	7.84E+05	6.39E+05	5.05E+05	5.61E+05	4.00E+05	5.98E+05	5.37E+05	4.32E+05	3.82E+06	2.16E+06	9.82E+05	1.72E+06	5.17E+05	8.02E+05
+Dehydroascorbate	2.06E+04	1.35E+04	3.59E+04	3.13E+04	3.14E+04	3.01E+04	2.34E+04	2.13E+04	1.42E+04	1.98E+04	6.00E+04	4.84E+04	2.60E+04	4.62E+04	3.64E+04	4.44E+04
+gamma-L-Glutamyl-D-alanine	8.47E+04	6.71E+04	9.12E+04	5.67E+04	1.03E+05	1.03E+05	9.22E+04	5.54E+04	8.53E+04	6.39E+04	2.57E+05	7.58E+04	7.26E+04	1.13E+05	2.05E+05	1.36E+05
+gamma-Glutamyl-gamma-aminobutyrate	1.09E+05	7.57E+04	1.02E+05	1.00E+05	1.40E+05	1.41E+05	1.21E+05	1.35E+05	8.41E+04	8.40E+04	4.06E+04	9.89E+04	3.67E+04	3.04E+04	3.73E+04	2.09E+04
+gamma-L-Glutamylputrescine	1.35E+05	1.08E+05	1.36E+05	9.64E+04	1.24E+05	1.33E+05	1.14E+05	1.04E+05	7.57E+04	4.23E+04	1.69E+04	2.15E+04	4.02E+04	3.18E+03	2.30E+03	0.00E+00
+(5-L-Glutamyl)-L-glutamine	5.77E+04	9.79E+04	1.00E+05	0.00E+00	3.50E+04	2.43E+04	1.72E+04	7.99E+03	4.28E+03	7.80E+03	3.69E+05	1.72E+05	1.37E+05	2.23E+05	2.62E+05	1.40E+05
+L-Homocysteine	9.67E+04	4.05E+04	5.24E+04	3.40E+04	5.09E+04	4.72E+04	3.75E+04	4.17E+04	3.01E+04	6.85E+04	5.14E+04	5.32E+04	2.39E+04	3.23E+04	2.71E+04	1.93E+04
+Phosphoserine	8.94E+04	3.43E+04	7.27E+04	4.44E+04	3.96E+04	1.97E+04	4.52E+04	4.01E+04	1.60E+04	1.04E+04	1.84E+05	3.05E+05	2.25E+05	1.87E+05	1.84E+05	1.05E+05
+S-Adenosyl-L-homocysteine	1.17E+05	9.39E+04	2.35E+05	2.04E+05	1.68E+05	1.97E+05	1.36E+05	1.37E+05	1.31E+05	1.32E+05	3.69E+05	3.95E+05	3.17E+05	2.66E+05	2.82E+05	4.00E+05
+S-Adenosyl-L-methionine	2.14E+05	1.82E+05	1.64E+05	2.09E+05	2.65E+05	2.29E+05	1.94E+05	1.91E+05	1.75E+05	2.38E+05	2.12E+05	2.95E+05	2.14E+05	2.10E+05	1.76E+05	1.75E+05
+Ornithine	9.31E+05	1.05E+06	1.04E+06	6.98E+05	7.14E+05	1.23E+06	1.53E+06	7.09E+05	1.04E+06	1.26E+06	7.73E+05	1.32E+06	1.74E+06	2.88E+05	8.46E+05	4.34E+05
+L-Citrulline	7.76E+06	8.18E+06	4.88E+06	7.06E+06	9.53E+06	1.01E+07	8.04E+06	8.32E+06	8.45E+06	9.20E+06	2.06E+06	1.85E+06	1.82E+06	1.58E+06	2.15E+06	1.08E+06
+Argininosuccinate	3.28E+04	2.33E+04	6.58E+04	7.85E+04	2.74E+04	3.48E+04	2.02E+04	3.68E+04	1.78E+04	3.51E+04	2.60E+04	3.32E+04	2.22E+04	9.48E+03	2.75E+04	1.48E+04
+5-Methylthioadenosine	4.53E+05	4.16E+05	2.38E+05	2.91E+05	2.25E+05	2.25E+05	2.51E+05	2.67E+05	2.47E+05	2.04E+05	1.02E+06	9.91E+05	6.55E+05	6.18E+05	5.04E+05	5.47E+05
+Putrescine	1.59E+05	1.07E+05	5.69E+04	1.25E+05	6.51E+04	5.57E+04	5.66E+04	4.40E+04	5.02E+04	5.56E+04	2.01E+05	3.16E+05	1.81E+05	8.87E+04	7.23E+04	9.95E+04
+Spermidine	9.38E+05	1.23E+06	8.60E+05	1.24E+06	5.50E+05	5.21E+05	5.61E+05	6.96E+05	6.90E+05	5.81E+05	1.38E+06	2.66E+06	2.95E+06	1.78E+06	2.87E+06	2.76E+06
+Spermine	1.26E+05	9.78E+04	2.31E+04	2.84E+04	2.41E+04	3.07E+04	2.37E+04	3.05E+04	3.74E+04	3.70E+04	6.49E+04	7.67E+04	9.02E+04	8.30E+04	1.19E+05	1.02E+05
+N1-Acetylspermidine	1.27E+05	1.06E+05	1.72E+05	1.95E+05	1.62E+04	1.59E+04	1.79E+04	3.63E+04	4.23E+04	1.76E+04	3.19E+05	6.83E+05	3.19E+05	1.74E+05	1.97E+05	1.38E+05
+Atherospermidine	4.02E+03	6.84E+03	0.00E+00	0.00E+00	0.00E+00	0.00E+00	0.00E+00	0.00E+00	0.00E+00	0.00E+00	2.39E+04	1.82E+04	1.92E+04	3.32E+04	7.72E+03	2.58E+04
+Asymmetric dimethyl arginine	3.19E+05	1.86E+05	3.25E+05	2.81E+05	2.17E+05	2.61E+05	3.07E+05	3.19E+05	2.19E+05	2.29E+05	1.31E+05	3.45E+05	2.46E+05	1.35E+05	1.56E+05	1.43E+05
+Carnosine	1.72E+07	1.74E+07	3.65E+06	7.53E+06	1.94E+07	1.61E+07	1.60E+07	1.64E+07	1.47E+07	1.63E+07	7.89E+04	8.74E+04	1.49E+05	6.55E+04	8.42E+04	4.78E+04
+Phosphocreatine	4.05E+05	2.80E+06	2.84E+04	2.59E+04	2.59E+04	6.98E+04	1.99E+04	7.85E+05	5.84E+05	1.82E+04	6.00E+05	2.75E+05	4.25E+05	3.01E+05	2.58E+05	2.47E+05
+Guanidinoacetate	6.87E+05	6.29E+05	5.40E+05	8.06E+05	5.83E+05	7.50E+05	5.92E+05	4.76E+05	2.66E+05	4.12E+05	5.19E+05	6.49E+05	4.17E+05	3.03E+05	3.15E+05	2.22E+05
+trans-4-Hydroxy-L-proline	4.40E+06	3.50E+06	1.92E+06	2.90E+06	8.71E+06	7.71E+06	6.86E+06	8.80E+06	6.42E+06	7.18E+06	1.13E+06	1.86E+06	1.35E+06	9.39E+05	8.81E+05	7.22E+05
+5-6-Dihydrouracil	5.94E+05	5.90E+05	4.97E+05	7.84E+05	8.06E+05	9.13E+05	6.79E+05	8.03E+05	8.21E+05	7.75E+05	5.24E+04	4.68E+04	3.47E+04	2.72E+04	5.53E+04	3.26E+04
+Taurine	1.72E+08	1.84E+08	1.54E+08	1.76E+08	1.71E+08	1.88E+08	1.59E+08	1.89E+08	1.70E+08	1.85E+08	5.40E+07	5.13E+07	5.52E+07	4.93E+07	4.24E+07	3.80E+07
+Hypotaurine	1.01E+06	1.53E+06	1.48E+06	2.04E+06	1.64E+06	1.76E+06	1.41E+06	1.97E+06	1.57E+06	1.51E+06	1.06E+06	8.44E+05	6.58E+05	7.24E+05	7.71E+05	6.60E+05
+L-Methionine S-oxide	2.26E+05	1.37E+05	2.10E+05	1.42E+05	1.34E+05	1.78E+05	3.01E+05	1.27E+05	1.62E+05	1.62E+05	3.07E+05	3.29E+05	1.62E+05	2.61E+05	4.06E+05	3.83E+05
+Kynurenine	2.38E+04	1.92E+04	5.98E+04	1.86E+04	1.41E+04	1.18E+04	1.87E+04	1.03E+04	1.17E+04	9.96E+03	3.13E+04	2.66E+04	2.54E+04	2.55E+04	3.53E+04	2.41E+04
+N-formyl kynurenine	1.15E+04	1.72E+04	5.92E+03	1.24E+04	1.57E+04	1.44E+04	2.65E+04	5.48E+03	1.27E+04	7.83E+03	9.26E+03	1.27E+04	1.58E+04	1.10E+04	1.22E+04	3.18E+03
+g-Oxalo-crotonate	4.87E+05	4.76E+05	1.02E+06	8.15E+05	2.76E+05	2.85E+05	2.51E+05	2.20E+05	1.95E+05	1.88E+05	7.11E+05	1.12E+06	1.17E+06	7.03E+05	1.17E+06	1.21E+06
+2-Aminomuconate	2.94E+04	2.27E+04	2.82E+04	2.69E+04	1.34E+04	1.46E+04	9.24E+03	4.91E+04	3.40E+04	2.01E+04	4.35E+04	3.65E+04	2.33E+04	3.35E+04	1.22E+04	1.86E+04
+L-Adrenaline	6.99E+03	6.00E+03	1.67E+04	1.68E+04	4.66E+03	9.90E+03	1.70E+04	1.61E+04	1.68E+04	2.63E+04	8.94E+03	9.26E+03	6.39E+03	7.95E+03	4.99E+03	8.61E+03
+Serotonin	2.96E+04	2.39E+04	4.37E+04	1.67E+04	1.81E+04	2.11E+04	2.18E+04	1.31E+04	1.02E+04	9.45E+03	1.01E+05	2.82E+04	3.40E+04	6.31E+05	5.01E+05	5.70E+05
+Ectoine	1.60E+05	1.82E+05	1.47E+05	7.39E+04	1.28E+05	1.49E+05	2.09E+05	3.09E+05	2.09E+05	2.27E+05	1.61E+05	1.17E+05	2.36E+05	3.21E+05	4.80E+05	4.57E+05
+3D-(3-5/4)-Trihydroxycyclohexane-1-2-dione	4.13E+03	4.03E+03	2.69E+03	0.00E+00	3.05E+03	2.52E+03	0.00E+00	0.00E+00	0.00E+00	1.67E+03	3.05E+04	1.73E+04	4.87E+04	6.35E+04	6.20E+04	7.28E+04
+sn-glycero-3-Phosphoethanolamine	2.77E+05	1.93E+05	2.41E+05	5.16E+05	1.21E+05	9.54E+04	1.06E+05	1.11E+05	1.16E+05	7.76E+04	1.30E+06	1.11E+06	8.16E+05	1.06E+06	9.80E+05	8.13E+05
+Diethanolamine	2.76E+04	4.73E+04	1.60E+04	4.17E+04	9.29E+03	2.21E+04	1.62E+04	1.83E+04	1.77E+04	1.74E+04	1.35E+04	1.33E+04	1.81E+04	1.35E+04	1.98E+04	1.09E+04
+Triethanolamine	3.45E+05	2.15E+05	1.58E+06	2.76E+05	5.46E+04	2.85E+04	2.35E+04	3.57E+04	1.38E+04	1.28E+04	1.51E+04	7.17E+04	4.00E+04	8.78E+03	1.27E+04	1.85E+04
+N-Methylethanolamine phosphate	1.31E+05	1.41E+05	1.44E+05	1.66E+05	1.72E+05	1.64E+05	1.75E+05	1.71E+05	1.75E+05	1.79E+05	1.48E+05	1.24E+05	1.36E+05	1.12E+05	1.17E+05	1.13E+05
+CDP-choline	2.72E+04	3.68E+04	6.62E+04	7.80E+04	1.69E+04	7.59E+03	1.36E+04	3.32E+04	1.13E+04	1.29E+04	3.13E+04	1.77E+05	5.63E+04	3.37E+04	2.38E+04	4.14E+04
+L-Carnitine	9.60E+07	1.11E+08	7.93E+07	9.70E+07	1.68E+08	1.64E+08	1.49E+08	1.10E+08	9.91E+07	1.10E+08	7.01E+07	4.38E+07	4.38E+07	6.48E+07	6.27E+07	4.72E+07
+Acetylcarnitine	2.00E+08	9.90E+07	1.20E+08	9.89E+07	1.42E+08	1.79E+08	1.38E+08	1.22E+08	1.01E+08	9.81E+07	7.81E+07	5.54E+07	3.84E+07	5.76E+07	4.51E+07	5.81E+07
+Propenoylcarnitine	2.81E+04	1.16E+04	1.13E+04	5.20E+03	1.98E+04	2.02E+04	1.86E+04	2.67E+04	2.30E+04	1.08E+04	1.33E+04	1.05E+04	1.47E+04	1.04E+04	1.47E+04	1.14E+04
+Propionylcarnitine	7.34E+05	7.51E+05	4.80E+05	5.48E+05	2.65E+05	4.18E+05	3.76E+05	3.59E+05	3.60E+05	4.39E+05	4.57E+05	2.68E+05	2.25E+05	2.57E+05	2.12E+05	2.07E+05
+Butyrylcarnitine	5.46E+06	6.36E+06	5.18E+06	5.42E+06	3.81E+06	4.47E+06	7.49E+06	5.23E+06	5.82E+06	4.82E+06	1.01E+07	3.90E+06	2.77E+06	5.14E+06	4.34E+06	3.80E+06
+Tiglylcarnitine	6.56E+04	1.61E+05	6.18E+04	1.24E+05	5.26E+04	1.68E+05	1.89E+05	5.51E+04	1.58E+05	1.65E+05	3.96E+04	2.50E+04	3.12E+04	1.81E+04	2.99E+04	1.44E+04
+Isovalerylcarnitine	9.43E+05	1.21E+06	7.22E+05	1.17E+06	3.63E+05	8.26E+05	1.24E+06	2.75E+05	7.46E+05	1.09E+06	1.11E+06	6.42E+05	6.66E+05	4.36E+05	9.79E+05	6.39E+05
+Malonylcarnitine	5.82E+05	4.42E+05	4.74E+05	4.17E+05	6.46E+05	7.81E+05	6.93E+05	3.60E+05	3.60E+05	4.04E+05	1.33E+05	8.44E+04	1.38E+05	7.71E+04	8.70E+04	7.87E+04
+Hexenoylcarnitine	3.57E+04	4.14E+04	2.00E+04	5.84E+04	4.43E+04	5.41E+04	5.39E+04	4.05E+04	6.15E+04	3.26E+04	3.92E+04	3.97E+04	4.33E+04	2.96E+04	4.52E+04	4.47E+04
+Hexanoylcarnitine	1.30E+06	1.11E+06	1.46E+06	1.83E+06	1.16E+06	9.71E+05	1.91E+06	1.20E+06	1.42E+06	1.52E+06	7.81E+05	3.25E+05	2.40E+05	3.51E+05	3.02E+05	2.84E+05
+Methylmalonylcarnitine	7.12E+05	3.05E+05	5.40E+05	6.08E+05	6.71E+05	1.03E+06	1.04E+06	8.25E+05	9.57E+05	6.06E+05	1.06E+05	9.63E+04	1.83E+05	8.59E+04	1.06E+05	8.21E+04
+Hydroxyisovaleroyl carnitine	2.70E+05	1.97E+05	1.24E+05	1.41E+05	2.34E+05	2.41E+05	2.63E+05	2.37E+05	2.49E+05	1.71E+05	9.88E+04	6.35E+04	7.20E+04	7.27E+04	9.85E+04	5.72E+04
+Octenoylcarnitine	4.54E+04	3.28E+04	3.52E+04	5.19E+04	5.89E+04	3.04E+04	6.13E+04	3.51E+04	3.10E+04	4.39E+04	2.30E+04	1.70E+04	1.87E+04	1.56E+04	1.44E+04	1.80E+04
+Octanoylcarnitine	4.79E+05	4.51E+05	5.45E+05	2.22E+05	4.03E+05	2.89E+05	7.26E+05	3.52E+05	3.46E+05	5.61E+05	1.34E+05	3.19E+04	3.75E+04	5.29E+04	4.24E+04	3.62E+04
+Methylglutarylcarnitine	1.55E+04	1.75E+04	2.15E+04	1.74E+04	1.87E+04	1.70E+04	1.63E+04	2.22E+04	1.30E+04	6.25E+03	1.40E+04	2.11E+04	8.97E+03	2.16E+04	1.17E+04	2.08E+04
+Pimelylcarnitine	1.26E+04	2.10E+04	5.46E+03	1.72E+04	2.02E+04	1.63E+04	6.04E+03	1.09E+04	1.82E+04	7.52E+03	1.00E+04	6.95E+03	2.87E+04	9.44E+03	2.55E+04	1.97E+04
+Hydroxyoctanoyl carnitine	1.53E+05	1.14E+05	1.56E+05	2.54E+05	2.93E+05	1.76E+05	3.45E+05	1.87E+05	1.95E+05	2.30E+05	1.70E+05	1.15E+05	5.75E+04	1.02E+05	8.58E+04	9.51E+04
+Decanoylcarnitine	7.07E+04	2.22E+04	6.39E+04	5.87E+04	6.86E+04	3.21E+04	1.02E+05	6.98E+04	4.40E+04	7.70E+04	1.35E+04	5.52E+03	1.06E+04	1.12E+04	5.24E+03	4.30E+03
+Hydroxynonanoyl carnitine	4.10E+04	3.89E+04	2.15E+04	2.52E+04	2.48E+04	2.89E+04	2.52E+04	2.33E+04	2.64E+04	1.77E+04	3.09E+04	3.16E+04	3.85E+04	2.11E+04	2.51E+04	4.10E+04
+Hydroxydecanoyl carnitine	1.46E+05	6.77E+04	2.88E+05	5.18E+05	5.07E+05	2.45E+05	7.07E+05	2.49E+05	1.49E+05	3.52E+05	1.58E+05	9.76E+04	6.99E+04	9.31E+04	6.81E+04	1.20E+05
+Dodecenoylcarnitine	6.81E+04	2.48E+04	2.51E+04	1.41E+04	2.57E+04	2.14E+04	2.95E+04	2.00E+04	1.91E+04	1.59E+04	1.83E+04	2.03E+04	1.25E+04	2.56E+04	1.04E+04	2.19E+04
+Hydroxyundecanoyl carnitine	5.59E+03	3.48E+03	4.25E+03	5.37E+03	8.71E+03	6.12E+03	5.04E+03	3.77E+03	3.58E+03	3.40E+03	6.60E+03	3.50E+03	5.65E+03	8.71E+03	8.60E+03	8.44E+03
+Hydroxydodecanoyl carnitine	2.39E+04	9.83E+03	6.13E+04	1.15E+05	1.53E+05	6.12E+04	1.57E+05	1.14E+05	4.43E+04	9.40E+04	4.00E+04	2.87E+04	1.31E+04	3.07E+04	1.67E+04	1.63E+04
+Tetradecenoylcarnitine	6.84E+04	1.57E+05	2.73E+04	4.49E+04	3.30E+04	1.15E+04	3.52E+04	1.42E+04	1.18E+04	2.03E+04	1.98E+03	5.02E+02	3.45E+03	6.26E+03	3.23E+03	1.70E+03
+Tetradecanoylcarnitine	9.87E+05	7.78E+05	3.23E+05	6.03E+05	1.23E+05	1.43E+05	1.52E+05	2.61E+05	2.69E+05	2.94E+04	4.95E+05	2.06E+05	6.53E+05	4.13E+05	8.28E+04	4.83E+05
+Dodecanedioylcarnitine	8.17E+03	4.56E+03	9.96E+03	7.83E+03	3.31E+03	3.87E+03	9.04E+03	4.71E+03	9.82E+03	1.13E+04	3.46E+03	7.76E+03	3.99E+03	9.20E+03	5.47E+03	1.41E+04
+Hexadecenoyl carnitine	9.33E+05	1.88E+05	3.45E+05	5.73E+05	4.64E+04	9.50E+04	4.72E+05	5.14E+05	6.93E+05	2.10E+04	7.17E+05	7.23E+04	3.76E+05	4.02E+05	2.37E+04	4.06E+05
+Hydroxyhexadecenoylcarnitine	3.18E+03	1.55E+04	0.00E+00	5.47E+03	0.00E+00	0.00E+00	9.20E+02	7.71E+02	0.00E+00	0.00E+00	0.00E+00	0.00E+00	7.35E+03	0.00E+00	4.70E+03	1.54E+03
+Heptadecanoyl carnitine	1.21E+04	4.04E+03	1.34E+04	2.14E+04	1.25E+04	2.16E+04	6.11E+03	3.30E+03	3.19E+03	7.62E+03	1.68E+04	1.64E+04	1.05E+04	6.64E+03	1.03E+04	8.03E+03
+Hydroxyhexadecanoyl carnitine	1.54E+05	1.27E+05	9.54E+04	6.26E+04	1.11E+05	1.10E+05	3.33E+05	7.88E+04	3.57E+04	1.56E+05	8.64E+04	6.30E+04	6.05E+04	5.76E+04	4.70E+04	9.39E+04
+Alpha-linolenyl carnitine	5.97E+04	6.17E+04	8.13E+04	2.11E+04	8.34E+04	1.79E+04	6.13E+04	8.02E+04	5.61E+04	8.22E+04	6.49E+04	3.05E+03	8.07E+04	4.53E+04	8.16E+02	1.19E+04
+Linoelaidyl carnitine	4.79E+05	7.29E+04	2.05E+05	1.99E+05	1.00E+04	4.75E+04	3.39E+05	3.90E+05	3.65E+05	1.35E+04	5.51E+05	2.47E+04	8.17E+04	3.24E+05	3.98E+03	4.80E+04
+Elaidic carnitine	6.25E+05	1.20E+06	3.02E+04	1.17E+05	6.63E+03	9.79E+03	2.12E+04	2.30E+04	3.88E+04	2.65E+03	4.99E+04	1.49E+04	7.92E+05	4.02E+04	5.87E+04	1.01E+06
+Hydroxyoctadecenoylcarnitine	1.87E+05	6.37E+04	3.44E+05	1.35E+05	1.36E+05	2.26E+05	1.33E+05	7.51E+05	4.67E+05	4.58E+04	4.41E+05	1.39E+05	6.79E+04	4.66E+05	3.41E+04	1.11E+05
+Cervonyl carnitine	9.47E+04	2.53E+04	3.57E+04	3.93E+04	5.54E+03	9.68E+03	3.79E+04	8.18E+04	4.04E+04	0.00E+00	4.75E+04	8.21E+03	3.16E+04	3.92E+04	1.52E+03	1.26E+04
+Docosapentaenoyl carnitine	9.40E+03	1.03E+03	5.09E+03	4.65E+03	5.88E+02	6.37E+02	4.41E+03	1.31E+04	1.16E+04	0.00E+00	5.96E+03	1.15E+03	9.25E+02	1.38E+04	0.00E+00	3.08E+02
+Hexadecadienoylcarnitine	1.26E+05	2.95E+05	1.78E+05	2.11E+05	1.39E+05	9.23E+04	4.74E+04	3.89E+04	5.49E+04	6.10E+04	3.05E+03	1.94E+03	0.00E+00	1.95E+03	0.00E+00	0.00E+00
+3-4-Dihydroxy-L-phenylalanine	0.00E+00	3.52E+03	2.71E+03	1.56E+03	3.20E+03	3.21E+03	1.34E+03	1.65E+03	3.00E+03	0.00E+00	6.61E+03	4.86E+03	3.51E+03	2.16E+04	2.70E+04	2.37E+04
+Tyramine	4.68E+04	4.67E+04	3.12E+04	3.94E+04	5.69E+04	4.51E+04	3.87E+04	3.54E+04	4.50E+04	3.13E+04	3.43E+04	3.64E+04	3.75E+04	3.23E+04	3.33E+04	5.36E+04
+4-Hydroxyphenylacetylglutamic acid	0.00E+00	0.00E+00	4.72E+03	5.36E+03	0.00E+00	0.00E+00	0.00E+00	0.00E+00	0.00E+00	0.00E+00	4.66E+04	4.09E+04	3.32E+04	3.53E+04	4.13E+04	4.50E+04
+4-Coumarate	1.78E+06	1.21E+06	1.43E+06	1.20E+06	6.59E+05	1.12E+06	1.42E+06	8.48E+05	8.26E+05	9.97E+05	1.01E+06	1.15E+06	8.12E+05	4.28E+05	7.86E+05	5.18E+05
+3alpha-12alpha-Dihydroxy-5beta-cholanate	1.56E+03	4.75E+02	4.85E+02	5.49E+02	6.40E+02	1.75E+03	6.42E+02	3.93E+02	0.00E+00	0.00E+00	7.72E+02	3.81E+02	3.29E+02	5.27E+02	7.75E+02	0.00E+00
+Leukotriene C4	0.00E+00	4.14E+03	2.52E+03	5.60E+03	0.00E+00	0.00E+00	2.26E+03	0.00E+00	2.94E+03	3.85E+03	3.46E+03	6.24E+03	5.78E+03	9.94E+03	8.13E+03	4.40E+04
+Testosterone	6.26E+03	3.96E+02	0.00E+00	1.70E+03	4.63E+02	0.00E+00	1.92E+03	3.86E+02	4.74E+02	3.11E+02	1.46E+03	1.49E+03	2.44E+02	5.23E+02	3.99E+02	1.47E+03
+Mevalonate	3.10E+05	3.45E+05	4.37E+05	4.53E+05	5.21E+05	5.93E+05	5.68E+05	7.02E+05	5.87E+05	5.89E+05	1.26E+05	5.61E+04	7.07E+04	8.19E+04	7.31E+04	3.82E+04
+Sphingosine	5.81E+04	4.51E+04	3.31E+05	1.25E+05	6.16E+05	5.46E+05	4.86E+04	6.87E+04	5.06E+04	5.18E+05	1.07E+05	8.36E+05	6.50E+04	1.26E+05	3.26E+05	8.25E+04
+Biliverdin	5.19E+02	1.30E+03	4.37E+02	0.00E+00	0.00E+00	0.00E+00	0.00E+00	0.00E+00	3.56E+02	0.00E+00	2.13E+03	5.10E+02	2.97E+03	2.86E+03	4.39E+03	2.24E+03
+trimethylamineoxide	9.59E+03	0.00E+00	0.00E+00	0.00E+00	0.00E+00	0.00E+00	1.05E+04	0.00E+00	8.92E+04	7.06E+05	3.10E+03	3.12E+03	0.00E+00	0.00E+00	2.49E+03	0.00E+00
+4-Imidazolone-5-propanoate	5.09E+04	1.70E+04	1.69E+04	3.52E+03	3.18E+03	3.40E+04	1.99E+04	1.96E+04	6.12E+03	4.41E+03	3.95E+04	3.55E+04	3.48E+04	4.17E+04	3.09E+04	2.00E+04
+N-Acetylmethionine	5.52E+04	3.34E+04	1.67E+05	1.51E+05	1.11E+05	9.51E+04	9.16E+04	5.15E+04	5.89E+04	4.61E+04	8.81E+04	2.08E+05	1.19E+05	7.13E+04	1.45E+05	1.33E+05
+N-Acetyl-D-phenylalanine	3.61E+04	3.63E+04	3.21E+04	2.79E+04	1.44E+04	2.41E+04	4.30E+04	3.83E+03	1.03E+04	9.24E+03	5.35E+04	1.48E+04	6.41E+03	1.93E+04	4.78E+04	1.42E+04
+N-Acetyl-L-aspartate	1.02E+05	1.15E+05	1.58E+05	1.23E+05	7.71E+04	6.10E+04	8.49E+04	2.11E+05	1.72E+05	9.30E+04	2.17E+05	1.74E+05	1.65E+05	1.25E+05	6.60E+04	9.12E+04
+N-Acetyl-L-glutamate	8.94E+03	5.54E+03	3.05E+04	1.14E+04	2.38E+04	1.72E+04	2.29E+04	2.14E+04	1.71E+04	1.16E+04	2.49E+04	2.07E+04	2.14E+04	1.19E+04	9.95E+03	4.04E+04
+N-Acetyl-L-histidine	9.19E+06	7.42E+06	2.23E+06	4.41E+06	1.01E+07	9.51E+06	9.24E+06	1.02E+07	8.51E+06	9.21E+06	8.82E+05	6.98E+05	6.34E+05	9.38E+05	7.91E+05	9.14E+05
+MS_METABOLITE_DATA_END
+#METABOLITES
+METABOLITES_START
+metabolite_name	CmpdID	parent	medRt
+L-alanine	C00041	90.055664	0.656
+L-arginine	C00062	175.119019	0.633
+L-asparagine	C00152	133.060974	0.645
+L-aspartate	C00049	134.044937	0.651
+L-cysteine	C00097	122.027374	0.699
+L-glutamate	C00025	148.060501	0.66
+L-glutamine	C00064	147.076477	0.652
+glycine	C00037	76.040161	0.651
+L-histidine	C00135	156.076859	0.628
+L-leucine	C00123	132.102051	0.97
+L-lysine	C00047	147.112854	0.614
+L-methionine	C00073	150.058472	0.734
+L-phenylalanine	C00079	166.08638	1.451
+L-proline	C00148	116.07103	0.701
+L-serine	C00065	106.050369	0.661
+L-threonine	C00188	120.065834	0.695
+L-tryptophan	C00078	205.097244	1.745
+L-tyrosine	C00082	182.081268	0.735
+L-valine	C00183	118.086647	0.714
+L-cystine	C00491	241.030792	0.588
+AMP	C00020	348.070312	0.696
+dAMP	C00360	332.076385	0.723
+Adenosine	C00212	268.103882	0.74
+Adenine	C00147	136.061981	0.729
+GMP	C00144	364.064911	0.708
+Guanosine	C00387	284.098816	0.717
+Guanine	C00242	152.056931	0.716
+CMP	C00055	324.059082	0.671
+Cytidine	C00475	244.092834	0.696
+Cytosine	C00380	112.05101	0.696
+Thymidine	C00214	243.098999	1.765
+Thymine	C00178	127.050507	1.285
+UMP	C00105	325.042999	0.695
+Uracil	C00106	113.034958	0.754
+IMP	C00130	349.05426	0.704
+Inosine	C00294	269.087921	0.719
+Hypoxanthine	C00262	137.045883	0.719
+Xanthosine	C01762	285.082977	1.053
+Xanthine	C00385	153.04071	0.723
+Urate	C00366	169.035721	0.732
+5-Hydroxyisourate	C11821	185.031631	0.649
+(S)(+)-Allantoin	C02350	159.051376	0.691
+Allantoate	C00499	177.06105	0.606
+3',5'-Cyclic IMP	C00943	331.04422	0.709
+Adenylyl sulfate	C00224	428.027069	0.735
+Pyridoxal	C00250	168.065582	0.765
+Nicotinamide	C00153	123.055565	0.804
+Nicotinate ribonucleotide	C01185	337.057037	0.661
+NADPH	C00005	746.094299	0.661
+NADH	C00004	666.131348	1.679
+Glutathione	C00051	308.090851	0.715
+Glutathione disulfide	C00127	613.158997	0.713
+5-Oxoproline	C01879	130.050064	0.661
+S-Glutathionyl-L-cysteine	C05526	427.095062	0.659
+Cys-Gly	C01419	179.048569	0.715
+Ascorbate	C00072	177.039581	0.738
+Dehydroascorbate	C05422	175.023651	0.831
+gamma-L-Glutamyl-D-alanine	C03738	219.097488	0.705
+gamma-Glutamyl-gamma-aminobutyrate	C15767	233.113266	0.718
+gamma-L-Glutamylputrescine	C15699	218.150101	0.608
+(5-L-Glutamyl)-L-glutamine	C05283	276.118866	0.674
+L-Homocysteine	C00155	136.042755	0.71
+Phosphoserine	C02532	186.016373	0.657
+S-Adenosyl-L-homocysteine	C00021	385.128845	0.718
+S-Adenosyl-L-methionine	C00019	399.14447	0.633
+Ornithine	C01602	133.097321	0.622
+L-Citrulline	C00327	176.103012	0.658
+Argininosuccinate	C03406	291.129761	0.65
+5-Methylthioadenosine	C00170	298.096741	1.732
+Putrescine	C00134	89.108139	0.598
+Spermidine	C00315	146.165253	0.568
+Spermine	C00750	203.22316	0.568
+N1-Acetylspermidine	C00612	188.175797	0.6
+Atherospermidine	C09347	306.075409	0.72
+Asymmetric dimethyl arginine	C03626	203.150375	0.655
+Carnosine	C00386	227.113892	0.614
+Phosphocreatine	C02305	212.04303	0.727
+Guanidinoacetate	C00581	118.061516	0.66
+trans-4-Hydroxy-L-proline	C01157	132.06572	0.681
+5-6-Dihydrouracil	C00429	115.050644	0.683
+Taurine	C00245	126.022171	0.658
+Hypotaurine	C00519	110.027557	0.654
+L-Methionine S-oxide	C02989	166.053101	0.72
+Kynurenine	C00328	209.092209	1.408
+N-formyl kynurenine	C02700	237.088776	0.636
+g-Oxalo-crotonate	C03453	159.027863	0.813
+2-Aminomuconate	C02220	158.044861	0.746
+L-Adrenaline	C00788	184.096848	1.695
+Serotonin	C00780	177.102325	1.154
+Ectoine	C06231	143.08168	0.695
+3D-(3-5/4)-Trihydroxycyclohexane-1-2-dione	C04287	161.044525	0.725
+sn-glycero-3-Phosphoethanolamine	C01233	216.063156	0.655
+Diethanolamine	C06772	106.086823	0.691
+Triethanolamine	C06771	150.11261	0.668
+N-Methylethanolamine phosphate	C01210	156.042191	0.617
+CDP-choline	C00307	489.114319	0.656
+L-Carnitine	C00318	162.112442	0.662
+Acetylcarnitine	HMDB0000201	204.123062	0.718
+Propenoylcarnitine	HMDB0013124	216.123123	0.932
+Propionylcarnitine	HMDB0000824	218.138748	1.064
+Butyrylcarnitine	HMDB0002013	232.154358	1.741
+Tiglylcarnitine	HMDB02366	244.154419	1.776
+Isovalerylcarnitine	HMDB0000688	246.169983	1.775
+Malonylcarnitine	HMDB0062592	248.112808	0.712
+Hexenoylcarnitine	HMDB0013161	258.170044	1.835
+Hexanoylcarnitine	HMDB0000705	260.185669	1.815
+Methylmalonylcarnitine	HMDB0013133	262.128479	0.723
+Hydroxyisovaleroyl carnitine	HMDB0062555	262.164948	1.109
+Octenoylcarnitine	HMDB0013324	286.201172	1.89
+Octanoylcarnitine	HMDB0000791	288.216827	1.903
+Methylglutarylcarnitine	HMDB0000552	290.159698	1.824
+Pimelylcarnitine	HMDB0013328	304.175537	1.806
+Hydroxyoctanoyl carnitine	HMDB0061634	304.211823	1.807
+Decanoylcarnitine	HMDB0000651	316.248169	2.02
+Hydroxynonanoyl carnitine	HMDB0061635	318.227478	1.813
+Hydroxydecanoyl carnitine	HMDB0061636	332.24292	1.887
+Dodecenoylcarnitine	HMDB0013326	342.263763	1.867
+Hydroxyundecanoyl carnitine	HMDB0061637	346.258789	1.906
+Hydroxydodecanoyl carnitine	HMDB0061638	360.274323	2.027
+Tetradecenoylcarnitine	HMDB0062588	370.295074	3.768
+Tetradecanoylcarnitine	HMDB0005066	372.31073	1.888
+Dodecanedioylcarnitine	HMDB0013327	374.253815	1.89
+Hexadecenoyl carnitine	HMDB0006317	398.326721	1.993
+Hydroxyhexadecenoylcarnitine	HMDB0013333	414.321289	3.673
+Heptadecanoyl carnitine	HMDB0006210	414.357666	1.962
+Hydroxyhexadecanoyl carnitine	HMDB0061642	416.336945	2.79
+Alpha-linolenyl carnitine	HMDB0006319	422.325867	2.862
+Linoelaidyl carnitine	HMDB0006461	424.341797	2.131
+Elaidic carnitine	HMDB06464	426.357574	3.517
+Hydroxyoctadecenoylcarnitine	HMDB0013339	442.35257	1.969
+Cervonyl carnitine	HMDB0006510	472.342224	1.953
+Docosapentaenoyl carnitine	HMDB0006321	474.357849	2.122
+Hexadecadienoylcarnitine	HMDB0013334	396.310791	3.793
+3-4-Dihydroxy-L-phenylalanine	C00355	198.076172	1.715
+Tyramine	C00483	138.091461	1.795
+4-Hydroxyphenylacetylglutamic acid	C05595	282.09668	0.647
+4-Coumarate	C00811	165.054764	0.735
+3alpha-12alpha-Dihydroxy-5beta-cholanate	C04483	393.297394	3.718
+Leukotriene C4	C02166	626.310913	1.848
+Testosterone	C00535	289.216217	2.112
+Mevalonate	C00418	149.08165	0.649
+Sphingosine	C00319	300.289612	1.86
+Biliverdin	C00500	583.255249	2.085
+trimethylamineoxide	C01104	76.076256	0.63
+4-Imidazolone-5-propanoate	C03680	157.060974	0.593
+N-Acetylmethionine	C02712	192.068863	1.781
+N-Acetyl-D-phenylalanine	C05620	208.096985	1.849
+N-Acetyl-L-aspartate	C01042	176.055496	0.744
+N-Acetyl-L-glutamate	C00624	190.071411	1.901
+N-Acetyl-L-histidine	C02997	198.087814	0.639
+METABOLITES_END
+#END
+
+
+#METABOLOMICS WORKBENCH nemkovt_20220112_091932 DATATRACK_ID:3033 STUDY_ID:ST002058 ANALYSIS_ID:AN003351 PROJECT_ID:PR001303
+VERSION             	1
+CREATED_ON             	January 12, 2022, 12:50 pm
+#PROJECT
+PR:PROJECT_TITLE                 	Unchecked oxidative stress is an insurmountable barrier for tumour cells that
+PR:PROJECT_TITLE                 	disseminate to skeletal muscle
+PR:PROJECT_SUMMARY               	Skeletal muscle has been recognized as an inhospitable site for disseminated
+PR:PROJECT_SUMMARY               	tumour cells (DTCs) for decades, yet its antimetastatic nature has eluded a
+PR:PROJECT_SUMMARY               	thorough mechanistic description. Here, we show that DTCs traffic to and persist
+PR:PROJECT_SUMMARY               	within skeletal muscle, raising the question as to how this tissue suppresses
+PR:PROJECT_SUMMARY               	colonization. We employed mouse and organotypic culture models along with
+PR:PROJECT_SUMMARY               	metabolomic profiling and ultimately find that oxidative stress is a principal
+PR:PROJECT_SUMMARY               	suppressor of DTC proliferation in skeletal muscle. DTCs bypassed this oxidative
+PR:PROJECT_SUMMARY               	constraint upon colonization of more fertile sites, but were unable to in
+PR:PROJECT_SUMMARY               	muscle. Functional studies demonstrated that disrupting redox homeostasis via
+PR:PROJECT_SUMMARY               	chemogenetic induction of reactive oxygen species slowed proliferation in lung.
+PR:PROJECT_SUMMARY               	Conversely, enhancing antioxidant potential of tumour cells via ectopic
+PR:PROJECT_SUMMARY               	expression of catalase allowed robust colonization of skeletal muscle. These
+PR:PROJECT_SUMMARY               	findings reveal a profound metabolic bottleneck imposed on DTCs and sustained by
+PR:PROJECT_SUMMARY               	skeletal muscle. Understanding this biology could reveal novel DTC
+PR:PROJECT_SUMMARY               	vulnerabilities.
+PR:INSTITUTE                     	University of Colorado Anschutz Medical Campus
+PR:LAST_NAME                     	Nemkov
+PR:FIRST_NAME                    	Travis
+PR:ADDRESS                       	12801 E 17th Avenue, RC-1 South, Rm 9403G, Aurora, CO, 80045, USA
+PR:EMAIL                         	travis.nemkov@cuanschutz.edu
+PR:PHONE                         	303-724-3253
+#STUDY
+ST:STUDY_TITLE                   	Muscle/Lung/Tumor metabolomics
+ST:STUDY_SUMMARY                 	Skeletal muscle (SkM, tibialis anterior and upper arm) and lung samples analyzed
+ST:STUDY_SUMMARY                 	by LC-MS metabolomics. These tissue types are analyzed as healthy control,
+ST:STUDY_SUMMARY                 	Mcherry+ tumor, or adjacent tissue.
+ST:INSTITUTE                     	University of Colorado Anschutz Medical Campus
+ST:LAST_NAME                     	Nemkov
+ST:FIRST_NAME                    	Travis
+ST:ADDRESS                       	12801 East 17th Ave. Research 1 South Rm 9121 Aurora CO 80045
+ST:EMAIL                         	travis.nemkov@cuanschutz.edu
+ST:PHONE                         	303-724-3253
+#SUBJECT
+SU:SUBJECT_TYPE                  	Mammal
+SU:SUBJECT_SPECIES               	Mus musculus
+SU:TAXONOMY_ID                   	10090
+#SUBJECT_SAMPLE_FACTORS:         	SUBJECT(optional)[tab]SAMPLE[tab]FACTORS(NAME:VALUE pairs separated by |)[tab]Raw file names and additional sample data
+SUBJECT_SAMPLE_FACTORS           	4T1-1	4T1-1_R7-	Tissue:Tibialis_anterior | Treatment:Tumor	RAW_FILE_NAME=4T1-1_R7-.raw
+SUBJECT_SAMPLE_FACTORS           	4T1-15	4T1-15_R11-	Tissue:Tibialis_anterior | Treatment:Tumor	RAW_FILE_NAME=4T1-15_R11-.raw
+SUBJECT_SAMPLE_FACTORS           	4T1-19	4T1-19_R15-	Tissue:Upper_Arm_SkM | Treatment:Tumor	RAW_FILE_NAME=4T1-19_R15-.raw
+SUBJECT_SAMPLE_FACTORS           	4T1-27	4T1-27_R18-	Tissue:Upper_Arm_SkM | Treatment:Tumor	RAW_FILE_NAME=4T1-27_R18-.raw
+SUBJECT_SAMPLE_FACTORS           	CTL-1	CTL-1_R23-	Tissue:Tibialis_anterior | Treatment:Control	RAW_FILE_NAME=CTL-1_R23-.raw
+SUBJECT_SAMPLE_FACTORS           	CTL-5	CTL-5_R2-	Tissue:Tibialis_anterior | Treatment:Control	RAW_FILE_NAME=CTL-5_R2-.raw
+SUBJECT_SAMPLE_FACTORS           	CTL-9	CTL-9_R1-	Tissue:Tibialis_anterior | Treatment:Control	RAW_FILE_NAME=CTL-9_R1-.raw
+SUBJECT_SAMPLE_FACTORS           	CTL-3	CTL-3_R6-	Tissue:Upper_Arm_SkM | Treatment:Control	RAW_FILE_NAME=CTL-3_R6-.raw
+SUBJECT_SAMPLE_FACTORS           	CTL-7	CTL-7_R3-	Tissue:Upper_Arm_SkM | Treatment:Control	RAW_FILE_NAME=CTL-7_R3-.raw
+SUBJECT_SAMPLE_FACTORS           	CTL-11	CTL-11_R21-	Tissue:Upper_Arm_SkM | Treatment:Control	RAW_FILE_NAME=CTL-11_R21-.raw
+SUBJECT_SAMPLE_FACTORS           	4T1-17	4T1-17_R4-	Tissue:Lung | Treatment:Tumor	RAW_FILE_NAME=4T1-17_R4-.raw
+SUBJECT_SAMPLE_FACTORS           	4T1-21	4T1-21_R22-	Tissue:Lung | Treatment:Tumor	RAW_FILE_NAME=4T1-21_R22-.raw
+SUBJECT_SAMPLE_FACTORS           	4T1-25	4T1-25_R16-	Tissue:Lung | Treatment:Tumor	RAW_FILE_NAME=4T1-25_R16-.raw
+SUBJECT_SAMPLE_FACTORS           	CTL-4	CTL-4_R20-	Tissue:Lung | Treatment:Control	RAW_FILE_NAME=CTL-4_R20-.raw
+SUBJECT_SAMPLE_FACTORS           	CTL-8	CTL-8_R13-	Tissue:Lung | Treatment:Control	RAW_FILE_NAME=CTL-8_R13-.raw
+SUBJECT_SAMPLE_FACTORS           	CTL-12	CTL-12_R14-	Tissue:Lung | Treatment:Control	RAW_FILE_NAME=CTL-12_R14-.raw
+SUBJECT_SAMPLE_FACTORS           	4T1-1	4T1-1_R7+	Tissue:Tibialis_anterior | Treatment:Tumor	RAW_FILE_NAME=4T1-1_R7+.raw
+SUBJECT_SAMPLE_FACTORS           	4T1-15	4T1-15_R11+	Tissue:Tibialis_anterior | Treatment:Tumor	RAW_FILE_NAME=4T1-15_R11+.raw
+SUBJECT_SAMPLE_FACTORS           	4T1-19	4T1-19_R15+	Tissue:Upper_Arm_SkM | Treatment:Tumor	RAW_FILE_NAME=4T1-19_R15+.raw
+SUBJECT_SAMPLE_FACTORS           	4T1-27	4T1-27_R18+	Tissue:Upper_Arm_SkM | Treatment:Tumor	RAW_FILE_NAME=4T1-27_R18+.raw
+SUBJECT_SAMPLE_FACTORS           	CTL-1	CTL-1_R23+	Tissue:Tibialis_anterior | Treatment:Control	RAW_FILE_NAME=CTL-1_R23+.raw
+SUBJECT_SAMPLE_FACTORS           	CTL-5	CTL-5_R2+	Tissue:Tibialis_anterior | Treatment:Control	RAW_FILE_NAME=CTL-5_R2+.raw
+SUBJECT_SAMPLE_FACTORS           	CTL-9	CTL-9_R1+	Tissue:Tibialis_anterior | Treatment:Control	RAW_FILE_NAME=CTL-9_R1+.raw
+SUBJECT_SAMPLE_FACTORS           	CTL-3	CTL-3_R6+	Tissue:Upper_Arm_SkM | Treatment:Control	RAW_FILE_NAME=CTL-3_R6+.raw
+SUBJECT_SAMPLE_FACTORS           	CTL-7	CTL-7_R3+	Tissue:Upper_Arm_SkM | Treatment:Control	RAW_FILE_NAME=CTL-7_R3+.raw
+SUBJECT_SAMPLE_FACTORS           	CTL-11	CTL-11_R21+	Tissue:Upper_Arm_SkM | Treatment:Control	RAW_FILE_NAME=CTL-11_R21+.raw
+SUBJECT_SAMPLE_FACTORS           	4T1-17	4T1-17_R4+	Tissue:Lung | Treatment:Tumor	RAW_FILE_NAME=4T1-17_R4+.raw
+SUBJECT_SAMPLE_FACTORS           	4T1-21	4T1-21_R22+	Tissue:Lung | Treatment:Tumor	RAW_FILE_NAME=4T1-21_R22+.raw
+SUBJECT_SAMPLE_FACTORS           	4T1-25	4T1-25_R16+	Tissue:Lung | Treatment:Tumor	RAW_FILE_NAME=4T1-25_R16+.raw
+SUBJECT_SAMPLE_FACTORS           	CTL-4	CTL-4_R20+	Tissue:Lung | Treatment:Control	RAW_FILE_NAME=CTL-4_R20+.raw
+SUBJECT_SAMPLE_FACTORS           	CTL-8	CTL-8_R13+	Tissue:Lung | Treatment:Control	RAW_FILE_NAME=CTL-8_R13+.raw
+SUBJECT_SAMPLE_FACTORS           	CTL-12	CTL-12_R14+	Tissue:Lung | Treatment:Control	RAW_FILE_NAME=CTL-12_R14+.raw
+#COLLECTION
+CO:COLLECTION_SUMMARY            	Lung and skeletal muscle (TA and bulk muscles from the upper arm) were collected
+CO:COLLECTION_SUMMARY            	upon necropsy and imaged for mCherry+ 4T1-SkM lesions (Zeiss AxioZoom). Once a
+CO:COLLECTION_SUMMARY            	mCherry+ lesion was identified, the region was excised, leaving as little tissue
+CO:COLLECTION_SUMMARY            	margins as possible. The sample was weighed and then flash frozen using LN2.
+CO:COLLECTION_SUMMARY            	Healthy lung and skeletal muscle samples were collected through the same
+CO:COLLECTION_SUMMARY            	process, without the mCherry imaging step. 4T1-parental and 4T1-SkM cells were
+CO:COLLECTION_SUMMARY            	plated in 6-well plates at an initial density of 50,000 cells/well and collected
+CO:COLLECTION_SUMMARY            	48h later (final density ~275,000 cells/well). Wells were washed twice with 1x
+CO:COLLECTION_SUMMARY            	PBS and cells were scraped into 1.5 mL microcentrifuge tubes and spun at 16,000
+CO:COLLECTION_SUMMARY            	x g for 3 minutes. Samples were then flash frozen and stored at -80°C until
+CO:COLLECTION_SUMMARY            	ready to process.
+CO:SAMPLE_TYPE                   	Lung
+#TREATMENT
+TR:TREATMENT_SUMMARY             	Lung and skeletal muscle (TA and bulk muscles from the upper arm) were collected
+TR:TREATMENT_SUMMARY             	upon necropsy and imaged for mCherry+ 4T1-SkM lesions (Zeiss AxioZoom). Once a
+TR:TREATMENT_SUMMARY             	mCherry+ lesion was identified, the region was excised, leaving as little tissue
+TR:TREATMENT_SUMMARY             	margins as possible. The sample was weighed and then flash frozen using LN2.
+TR:TREATMENT_SUMMARY             	Healthy lung and skeletal muscle samples were collected through the same
+TR:TREATMENT_SUMMARY             	process, without the mCherry imaging step. 4T1-parental and 4T1-SkM cells were
+TR:TREATMENT_SUMMARY             	plated in 6-well plates at an initial density of 50,000 cells/well and collected
+TR:TREATMENT_SUMMARY             	48h later (final density ~275,000 cells/well). Wells were washed twice with 1x
+TR:TREATMENT_SUMMARY             	PBS and cells were scraped into 1.5 mL microcentrifuge tubes and spun at 16,000
+TR:TREATMENT_SUMMARY             	x g for 3 minutes. Samples were then flash frozen and stored at -80°C until
+TR:TREATMENT_SUMMARY             	ready to process.
+#SAMPLEPREP
+SP:SAMPLEPREP_SUMMARY            	Prior to LC-MS analysis, tissue samples were weighed and resuspended in
+SP:SAMPLEPREP_SUMMARY            	pre-chilled (-20°C) methanol:acetonitrile:water (5:3:2, v:v) to a final
+SP:SAMPLEPREP_SUMMARY            	concentration of 30 mg/ml, cell samples were placed on ice and re-suspended with
+SP:SAMPLEPREP_SUMMARY            	methanol:acetonitrile:water (5:3:2, v:v) at a concentration of 2x106 cells/mL,
+SP:SAMPLEPREP_SUMMARY            	and media samples were extracted with the same solution at a dilution of 1:25
+SP:SAMPLEPREP_SUMMARY            	(v/v). Suspensions were vortexed continuously for 30 min at 4°C. Insoluble
+SP:SAMPLEPREP_SUMMARY            	material was removed by centrifugation at 18,000 g for 10 min at 4°C and
+SP:SAMPLEPREP_SUMMARY            	supernatants were isolated for metabolomics analysis by UHPLC-MS. Analyses were
+SP:SAMPLEPREP_SUMMARY            	performed as previously published85,86. Injection volumes for tissue, cell, and
+SP:SAMPLEPREP_SUMMARY            	media extracts were 2 L, 10 L, and 10L, respectively. The analytical
+SP:SAMPLEPREP_SUMMARY            	platform employs a Vanquish UHPLC system (ThermoFisher) coupled online to a Q
+SP:SAMPLEPREP_SUMMARY            	Exactive mass spectrometer (ThermoFisher). Samples were resolved over a Kinetex
+SP:SAMPLEPREP_SUMMARY            	C18 column, 2.1 x 150 mm, 1.7 m particle size (Phenomenex, Torrance, CA)
+SP:SAMPLEPREP_SUMMARY            	equipped with a guard column (SecurityGuardTM Ultracartridge – UHPLC C18 for
+SP:SAMPLEPREP_SUMMARY            	2.1 mm ID Columns – AJO-8782 – Phenomenex, Torrance, CA) using an aqueous
+SP:SAMPLEPREP_SUMMARY            	phase (A) of water and 0.1% formic acid and a mobile phase (B) of acetonitrile
+SP:SAMPLEPREP_SUMMARY            	and 0.1% formic acid for positive ion polarity mode, and an aqueous phase (A) of
+SP:SAMPLEPREP_SUMMARY            	water:acetonitrile (95:5) with 1 mM ammonium acetate, and a mobile phase (B) of
+SP:SAMPLEPREP_SUMMARY            	acetonitrile:water (95:5) with 1 mM ammonium acetate for negative ion polarity
+SP:SAMPLEPREP_SUMMARY            	mode. Samples were eluted from the column using either an isocratic elution of
+SP:SAMPLEPREP_SUMMARY            	5% B flowed at 250 L/min and 25°C or a gradient from 5% to 95% B over 1 min,
+SP:SAMPLEPREP_SUMMARY            	followed by an isocratic hold at 95% B for 2 min, flowed at 400 L/min and
+SP:SAMPLEPREP_SUMMARY            	45°C. The Q Exactive mass spectrometer (ThermoFisher) was operated
+SP:SAMPLEPREP_SUMMARY            	independently in positive or negative ion mode, scanning in Full MS mode (2
+SP:SAMPLEPREP_SUMMARY            	scans) from 60 to 900 m/z at 70,000 resolution, with 4 kV spray voltage, 45
+SP:SAMPLEPREP_SUMMARY            	sheath gas, 15 auxiliary gas. Calibration was performed prior to analysis using
+SP:SAMPLEPREP_SUMMARY            	the PierceTM Positive and Negative Ion Calibration Solutions (ThermoFisher).
+SP:SAMPLEPREP_SUMMARY            	Acquired data was then converted from raw to mzXML file format using Mass Matrix
+SP:SAMPLEPREP_SUMMARY            	(Cleveland, OH). Samples were analyzed in randomized order with a technical
+SP:SAMPLEPREP_SUMMARY            	mixture injected periodically through analysis to qualify instrument
+SP:SAMPLEPREP_SUMMARY            	performance. Metabolite assignments, isotopologue distributions, and correction
+SP:SAMPLEPREP_SUMMARY            	for expected natural abundances of deuterium, 13C, and 15N isotopes were
+SP:SAMPLEPREP_SUMMARY            	performed using MAVEN (Princeton, NJ)92.
+#CHROMATOGRAPHY
+CH:CHROMATOGRAPHY_TYPE           	Reversed phase
+CH:INSTRUMENT_NAME               	QExactive
+CH:COLUMN_NAME                   	Kinetex C18 2.1x100
+#ANALYSIS
+AN:ANALYSIS_TYPE                 	MS
+#MS
+MS:INSTRUMENT_NAME               	Thermo Q Exactive Orbitrap
+MS:INSTRUMENT_TYPE               	Orbitrap
+MS:MS_TYPE                       	ESI
+MS:ION_MODE                      	NEGATIVE
+MS:MS_COMMENTS                   	The Q Exactive mass spectrometer (ThermoFisher) was operated independently in
+MS:MS_COMMENTS                   	positive or negative ion mode, scanning in Full MS mode (2 scans) from 60 to
+MS:MS_COMMENTS                   	900 m/z at 70,000 resolution, with 4 kV spray voltage, 45 sheath gas, 15
+MS:MS_COMMENTS                   	auxiliary gas. Calibration was performed prior to analysis using the PierceTM
+MS:MS_COMMENTS                   	Positive and Negative Ion Calibration Solutions (ThermoFisher). Acquired data
+MS:MS_COMMENTS                   	was then converted from raw to mzXML file format using Mass Matrix (Cleveland,
+MS:MS_COMMENTS                   	OH). Samples were analyzed in randomized order with a technical mixture injected
+MS:MS_COMMENTS                   	periodically through analysis to qualify instrument performance. Metabolite
+MS:MS_COMMENTS                   	assignments, isotopologue distributions, and correction for expected natural
+MS:MS_COMMENTS                   	abundances of deuterium, 13C, and 15N isotopes were performed using MAVEN
+MS:MS_COMMENTS                   	(Princeton, NJ)
+#MS_METABOLITE_DATA
+MS_METABOLITE_DATA:UNITS	AU
+MS_METABOLITE_DATA_START
+Samples	4T1-1_R7-	4T1-15_R11-	4T1-19_R15-	4T1-27_R18-	CTL-1_R23-	CTL-5_R2-	CTL-9_R1-	CTL-3_R6-	CTL-7_R3-	CTL-11_R21-	4T1-17_R4-	4T1-21_R22-	4T1-25_R16-	CTL-4_R20-	CTL-8_R13-	CTL-12_R14-
+Factors	Tissue:Tibialis_anterior | Treatment:Tumor	Tissue:Tibialis_anterior | Treatment:Tumor	Tissue:Upper_Arm_SkM | Treatment:Tumor	Tissue:Upper_Arm_SkM | Treatment:Tumor	Tissue:Tibialis_anterior | Treatment:Control	Tissue:Tibialis_anterior | Treatment:Control	Tissue:Tibialis_anterior | Treatment:Control	Tissue:Upper_Arm_SkM | Treatment:Control	Tissue:Upper_Arm_SkM | Treatment:Control	Tissue:Upper_Arm_SkM | Treatment:Control	Tissue:Lung | Treatment:Tumor	Tissue:Lung | Treatment:Tumor	Tissue:Lung | Treatment:Tumor	Tissue:Lung | Treatment:Control	Tissue:Lung | Treatment:Control	Tissue:Lung | Treatment:Control
+ATP	1.19E+06	5.37E+06	1.96E+05	7.08E+05	2.67E+05	1.64E+05	1.47E+05	7.35E+05	4.83E+05	4.33E+05	3.13E+04	5.60E+04	9.94E+04	9.36E+04	4.26E+04	1.14E+05
+ADP	3.00E+06	2.67E+06	1.35E+06	1.38E+06	1.24E+06	1.11E+06	8.51E+05	6.47E+05	4.40E+05	1.07E+06	6.90E+05	4.73E+05	6.80E+05	5.73E+05	4.31E+05	4.89E+05
+GTP	1.25E+04	3.32E+04	0.00E+00	6.85E+03	8.42E+03	0.00E+00	0.00E+00	3.53E+03	3.92E+03	8.53E+03	0.00E+00	0.00E+00	0.00E+00	5.68E+03	0.00E+00	0.00E+00
+GDP	6.02E+04	4.11E+04	2.63E+04	5.64E+04	2.17E+04	1.53E+04	1.14E+04	2.00E+04	2.49E+03	1.19E+04	5.75E+04	7.69E+04	4.69E+04	8.98E+04	1.85E+04	4.56E+04
+CTP	7.56E+04	6.93E+04	1.05E+04	1.99E+04	1.16E+04	1.10E+04	0.00E+00	2.30E+04	2.54E+04	2.09E+04	0.00E+00	9.90E+03	0.00E+00	2.55E+03	0.00E+00	1.10E+04
+CDP	5.24E+04	6.68E+04	4.11E+04	1.80E+04	1.38E+04	1.26E+04	2.45E+04	1.84E+04	4.03E+03	9.87E+03	4.80E+04	2.33E+04	2.43E+04	2.39E+04	3.90E+04	1.95E+04
+UTP	3.54E+05	4.31E+05	6.29E+04	8.95E+04	6.47E+04	2.68E+04	2.82E+04	1.09E+05	9.54E+04	7.73E+04	4.74E+03	7.59E+03	6.05E+03	5.08E+03	0.00E+00	5.22E+03
+UDP	3.93E+05	4.21E+05	5.88E+05	3.60E+05	7.92E+04	8.37E+04	5.30E+04	1.09E+05	8.69E+04	1.24E+05	9.03E+05	1.91E+06	1.54E+06	1.68E+06	1.09E+06	1.26E+06
+ITP	4.57E+04	1.67E+04	6.99E+03	1.40E+05	2.79E+04	0.00E+00	2.88E+03	1.96E+04	2.53E+04	1.64E+04	0.00E+00	2.83E+04	2.82E+04	4.41E+04	4.67E+04	3.83E+04
+IDP	2.33E+04	1.19E+04	9.15E+03	3.47E+04	4.01E+03	0.00E+00	1.71E+03	6.54E+03	1.15E+05	0.00E+00	1.02E+04	2.34E+04	1.36E+04	2.37E+04	1.66E+04	2.75E+03
+3',5'-Cyclic AMP	8.94E+03	6.37E+03	2.64E+03	5.82E+03	3.77E+03	4.13E+03	5.40E+03	5.51E+03	5.50E+03	6.87E+03	8.29E+03	6.85E+03	5.40E+03	4.62E+03	5.29E+03	8.76E+03
+2',3'-Cyclic CMP	2.03E+04	1.89E+04	1.63E+04	1.31E+04	1.45E+04	1.05E+04	1.30E+04	1.50E+04	1.40E+04	2.02E+04	2.01E+04	2.47E+04	1.69E+04	3.02E+04	2.73E+04	2.42E+04
+5'-Phosphoribosyl-N-formylglycinamide	3.70E+03	1.63E+04	5.01E+03	1.94E+04	2.58E+04	2.04E+04	1.50E+04	2.99E+03	3.36E+03	2.91E+04	1.49E+04	0.00E+00	0.00E+00	7.64E+03	0.00E+00	1.45E+04
+Pyridoxamine 5'-phosphate	7.50E+04	7.07E+04	1.26E+05	1.06E+05	3.57E+04	0.00E+00	1.13E+05	4.61E+04	0.00E+00	0.00E+00	2.33E+04	2.43E+04	3.61E+04	4.70E+04	4.68E+04	2.96E+04
+Adenylosuccinic acid	4.66E+05	3.65E+05	9.84E+04	3.17E+05	1.65E+05	8.80E+04	3.46E+05	4.34E+05	2.58E+05	3.19E+05	3.29E+05	6.58E+05	1.86E+05	2.76E+05	1.75E+05	1.07E+05
+UDP-glucose	1.07E+06	9.33E+05	1.05E+06	1.23E+06	3.51E+05	3.01E+05	2.82E+05	3.37E+05	3.49E+05	2.75E+05	2.06E+06	2.97E+06	2.06E+06	1.92E+06	1.13E+06	1.94E+06
+ADP-D-ribose	7.43E+06	3.46E+06	4.31E+06	6.09E+06	4.13E+06	7.48E+06	9.51E+06	5.78E+06	5.55E+06	5.61E+06	3.41E+06	1.03E+06	2.01E+06	2.43E+06	2.19E+06	1.84E+06
+Flavin mononucleotide	1.04E+05	6.71E+04	4.95E+04	4.33E+04	7.49E+04	1.04E+05	6.57E+04	8.45E+04	5.87E+04	6.54E+04	4.03E+04	2.98E+04	3.45E+04	3.06E+04	2.58E+04	2.47E+04
+FAD	4.30E+05	1.85E+05	1.82E+05	1.81E+05	2.02E+05	3.07E+05	1.74E+05	1.86E+05	1.89E+05	1.56E+05	1.94E+05	1.36E+05	1.53E+05	1.27E+05	1.11E+05	1.31E+05
+FADH2	3.43E+04	1.59E+04	1.36E+04	7.56E+03	1.82E+04	2.00E+04	1.54E+04	1.06E+04	1.44E+04	9.92E+03	1.55E+04	1.13E+04	1.07E+04	7.00E+03	6.44E+03	9.33E+03
+NADP+	2.52E+04	9.38E+03	0.00E+00	6.63E+03	2.61E+03	0.00E+00	6.78E+03	7.08E+03	0.00E+00	9.51E+03	0.00E+00	1.80E+04	0.00E+00	2.23E+03	0.00E+00	0.00E+00
+NAD+	5.68E+04	6.35E+04	0.00E+00	0.00E+00	2.52E+04	1.78E+04	2.94E+04	0.00E+00	3.61E+04	1.45E+04	0.00E+00	0.00E+00	0.00E+00	0.00E+00	0.00E+00	0.00E+00
+Phosphate	9.33E+04	5.25E+05	2.50E+07	9.55E+05	1.17E+07	2.39E+05	2.77E+05	1.74E+04	7.65E+04	1.49E+07	8.50E+04	1.49E+07	6.65E+07	1.60E+07	3.06E+05	1.67E+07
+Diphosphate	2.11E+07	2.25E+07	2.19E+07	2.68E+07	2.51E+07	2.73E+07	3.38E+07	3.09E+07	2.88E+07	3.50E+07	7.62E+06	8.21E+06	8.64E+06	9.26E+06	7.28E+06	8.37E+06
+D-Glucose	1.62E+07	1.01E+07	7.94E+06	9.78E+06	5.94E+06	9.66E+06	8.41E+06	4.41E+06	7.57E+06	6.51E+06	7.13E+06	3.18E+06	3.81E+06	6.75E+06	1.08E+07	5.43E+06
+D-Hexose-phosphate	5.82E+07	1.46E+07	2.58E+06	3.28E+07	1.71E+07	3.36E+07	1.66E+07	1.71E+07	3.61E+07	6.66E+06	6.59E+06	9.80E+06	9.66E+06	1.24E+07	1.16E+07	1.23E+07
+D-Fructose 1-6-bisphosphate	1.15E+07	4.86E+06	3.55E+05	2.99E+06	1.90E+06	2.15E+06	5.27E+05	2.95E+06	5.18E+06	5.43E+05	1.49E+06	2.14E+06	1.77E+06	2.88E+06	2.12E+06	2.25E+06
+D-Glyceraldehyde 3-phosphate/Glycerone phosphate	8.87E+06	4.36E+06	6.62E+05	2.98E+06	3.03E+06	3.28E+06	1.54E+06	3.88E+06	5.83E+06	1.17E+06	2.46E+06	2.33E+06	2.39E+06	3.39E+06	3.15E+06	3.43E+06
+1-3-Bisphosphoglycerate	0.00E+00	0.00E+00	0.00E+00	5.44E+03	0.00E+00	0.00E+00	0.00E+00	0.00E+00	3.00E+04	4.16E+03	0.00E+00	7.36E+03	2.31E+04	1.00E+05	4.58E+04	1.19E+05
+2/3-Phospho-D-glycerate	6.10E+06	6.15E+06	3.68E+05	7.29E+06	5.51E+05	3.17E+06	2.00E+06	6.22E+06	1.13E+07	7.66E+06	8.73E+05	5.83E+05	1.13E+06	1.28E+06	1.16E+06	1.39E+06
+Phosphoenolpyruvate	1.18E+06	3.52E+05	2.71E+05	7.84E+05	1.06E+05	4.35E+05	2.16E+05	2.46E+05	9.41E+05	3.28E+05	2.15E+05	1.59E+05	2.80E+05	1.22E+05	8.95E+04	1.42E+05
+Pyruvate	1.85E+07	1.15E+07	9.17E+06	2.18E+07	2.42E+07	3.09E+07	1.73E+07	3.14E+07	2.63E+07	2.15E+07	2.15E+06	1.48E+06	2.07E+06	2.21E+06	1.31E+06	1.10E+06
+Lactate	1.09E+09	4.64E+08	5.60E+08	8.97E+08	8.56E+08	9.47E+08	9.01E+08	8.00E+08	6.75E+08	6.61E+08	8.36E+07	6.76E+07	7.77E+07	2.82E+07	6.74E+07	3.07E+07
+Maltose/Sucrose	1.54E+05	1.02E+05	3.30E+05	4.83E+05	1.95E+05	3.31E+05	1.69E+05	1.76E+05	2.18E+05	1.72E+05	2.77E+05	1.09E+05	1.68E+05	1.60E+05	2.13E+05	1.97E+05
+Maltotriose	9.68E+04	2.18E+04	6.75E+04	9.97E+04	4.04E+04	1.26E+05	6.02E+04	4.41E+04	5.44E+04	3.20E+04	7.27E+04	1.56E+04	5.35E+04	3.24E+04	1.13E+04	1.47E+04
+Mannitol/Sorbitol/Glucitol/Iditol	1.25E+06	6.36E+05	6.54E+05	1.15E+06	4.71E+05	6.59E+05	6.94E+05	3.59E+05	5.83E+05	5.88E+05	2.85E+05	9.04E+05	1.05E+06	2.93E+05	2.26E+05	2.72E+05
+D-Ribose	3.52E+05	2.92E+05	3.43E+05	7.65E+05	2.15E+05	1.53E+05	2.07E+05	1.10E+05	1.19E+05	1.45E+05	1.76E+05	1.14E+05	1.12E+05	1.87E+05	2.40E+05	2.33E+05
+D-Rhamnose	1.26E+05	1.67E+05	9.05E+04	6.33E+04	1.38E+05	1.45E+05	2.09E+05	1.07E+05	7.90E+04	1.68E+05	2.53E+04	3.27E+04	1.92E+04	7.99E+04	7.40E+04	3.98E+04
+D-Arabitol/Xylitol/Ribitol	4.81E+05	3.71E+05	4.19E+05	7.19E+05	3.53E+05	3.71E+05	4.11E+05	2.08E+05	3.05E+05	3.36E+05	1.89E+05	2.50E+05	3.60E+05	1.68E+05	1.43E+05	2.17E+05
+cis-Aconitate	5.70E+05	4.60E+05	5.74E+05	9.55E+05	3.58E+05	3.06E+05	4.22E+05	3.43E+05	2.79E+05	2.75E+05	2.55E+06	1.42E+06	1.38E+06	1.07E+06	1.23E+06	9.83E+05
+Citrate	5.21E+06	4.35E+06	5.24E+06	6.71E+06	2.29E+06	3.46E+06	3.99E+06	2.20E+06	2.40E+06	2.43E+06	8.18E+06	4.92E+06	6.72E+06	1.09E+07	1.21E+07	1.09E+07
+2-Oxoglutarate	1.77E+05	1.49E+05	9.40E+04	2.05E+05	2.60E+05	3.02E+05	2.36E+05	3.57E+05	2.45E+05	2.46E+05	2.22E+05	1.59E+05	1.32E+05	1.85E+05	2.40E+05	1.90E+05
+2-Oxoglutaramate	5.39E+04	1.46E+04	4.18E+04	4.21E+04	6.28E+03	2.51E+03	5.05E+04	6.32E+04	3.59E+04	7.24E+04	5.47E+04	2.19E+04	3.26E+04	2.33E+04	4.94E+04	4.97E+04
+Succinate	8.37E+06	1.40E+07	1.77E+06	2.52E+06	1.38E+06	4.42E+06	4.79E+06	3.64E+06	7.51E+06	4.79E+06	2.61E+06	1.40E+06	9.43E+05	1.31E+06	1.44E+06	4.75E+05
+Fumarate	4.27E+06	4.29E+06	6.95E+06	6.99E+06	5.80E+06	6.17E+06	5.97E+06	6.82E+06	5.00E+06	4.39E+06	2.33E+06	2.79E+06	2.12E+06	2.38E+06	2.10E+06	1.53E+06
+Malate	3.80E+07	2.99E+07	4.16E+07	5.99E+07	3.97E+07	4.53E+07	4.20E+07	3.61E+07	3.62E+07	3.28E+07	1.43E+07	2.37E+07	1.69E+07	1.22E+07	1.37E+07	1.31E+07
+Oxaloacetate	2.40E+04	1.88E+04	1.29E+04	1.94E+04	1.43E+04	1.54E+04	2.31E+04	1.46E+04	7.55E+03	2.75E+03	9.72E+03	2.06E+04	2.94E+04	8.05E+04	5.01E+04	3.93E+04
+2-Hydroxyglutarate	2.25E+05	3.52E+05	4.43E+05	3.63E+05	4.64E+05	4.01E+05	3.28E+05	3.78E+05	4.35E+05	2.86E+05	2.79E+05	4.93E+05	3.88E+05	3.63E+05	5.54E+05	4.52E+05
+Itaconate	7.17E+05	2.64E+05	4.77E+05	4.24E+05	2.26E+05	2.40E+05	2.71E+05	1.81E+05	1.54E+05	2.00E+05	1.03E+06	8.90E+05	6.76E+05	5.69E+05	1.52E+05	7.33E+05
+D-Glucono-1-5-lactone 6-phosphate	2.70E+05	6.35E+04	1.11E+04	1.53E+05	9.50E+04	1.50E+05	4.74E+04	5.57E+04	1.79E+05	3.77E+04	1.13E+04	2.34E+04	4.34E+04	3.14E+04	5.25E+04	4.20E+04
+6-Phospho-D-gluconate	4.61E+05	4.16E+05	2.00E+05	4.03E+05	2.45E+05	2.53E+05	2.06E+05	3.04E+05	1.65E+05	1.82E+05	2.45E+05	1.36E+05	2.28E+05	4.05E+05	1.83E+05	3.28E+05
+D-Erythrose 4-phosphate	4.11E+06	1.38E+06	9.07E+05	2.34E+06	4.73E+05	1.35E+06	8.24E+05	1.11E+06	1.33E+06	7.26E+05	7.60E+05	4.71E+05	1.08E+06	3.20E+05	4.03E+05	3.97E+05
+Sedoheptulose 7-phosphate	3.99E+05	2.76E+05	4.59E+05	6.06E+05	8.13E+04	1.10E+05	7.91E+04	2.39E+04	7.83E+04	9.32E+04	1.61E+06	1.42E+06	1.13E+06	1.57E+06	1.53E+06	1.29E+06
+Pentose phosphates (isobars)	8.41E+06	8.89E+06	1.19E+07	9.20E+06	5.44E+06	7.57E+06	8.02E+06	4.83E+06	4.63E+06	5.54E+06	6.08E+06	7.36E+06	1.01E+07	6.91E+06	8.67E+06	8.25E+06
+gamma-L-Glutamyl-L-cysteine	1.61E+04	4.70E+03	4.44E+04	4.02E+03	1.96E+03	3.91E+03	1.53E+04	7.14E+03	4.40E+03	2.91E+03	1.84E+05	1.25E+05	7.89E+04	8.72E+04	1.26E+05	6.10E+04
+5-L-Glutamyl-taurine	0.00E+00	3.86E+04	6.65E+04	1.08E+05	1.92E+04	2.83E+04	2.38E+04	0.00E+00	2.60E+04	5.14E+04	9.60E+04	4.30E+04	5.43E+04	2.01E+04	6.20E+04	4.41E+04
+Dimethylglycine	3.89E+03	4.82E+04	2.47E+05	3.63E+05	1.76E+05	5.22E+04	1.15E+05	1.04E+05	3.77E+04	8.34E+04	3.12E+05	3.58E+05	2.40E+05	2.06E+05	8.88E+04	1.93E+05
+3-Phosphonooxypyruvate	8.68E+04	1.38E+04	3.49E+04	2.77E+04	2.83E+04	5.85E+04	6.96E+04	1.96E+04	2.31E+04	9.95E+03	6.78E+04	3.38E+04	2.48E+04	1.50E+04	2.31E+04	5.26E+04
+Carbamoyl phosphate	5.27E+04	3.51E+04	3.76E+04	3.54E+04	3.21E+04	3.46E+04	3.18E+04	4.61E+04	2.64E+04	3.61E+04	4.23E+04	4.59E+04	4.23E+04	3.84E+04	2.98E+04	4.92E+04
+3-Hydroxyisobutyrate	1.01E+05	1.56E+06	7.99E+06	1.13E+06	2.36E+06	1.46E+06	6.54E+05	8.34E+05	9.44E+05	6.91E+05	2.09E+06	4.23E+06	5.80E+05	2.46E+06	1.23E+06	5.82E+05
+N-Acetylneuraminate	5.33E+05	1.99E+05	7.83E+05	5.98E+05	2.87E+05	3.90E+05	3.13E+05	3.19E+05	2.31E+05	1.98E+05	1.00E+06	7.35E+05	6.68E+05	7.61E+05	8.88E+05	8.53E+05
+N-Glycoloyl-neuraminate	6.69E+05	7.42E+05	1.83E+06	1.01E+06	1.60E+05	1.92E+05	2.55E+05	1.84E+05	2.25E+05	6.89E+04	1.59E+06	2.01E+06	1.68E+06	7.95E+05	1.09E+06	9.57E+05
+alpha-D-Glucosamine 1-phosphate	1.56E+05	1.45E+05	8.96E+04	1.97E+05	3.47E+04	6.60E+04	4.79E+04	3.43E+04	5.89E+04	1.18E+04	1.78E+05	1.71E+05	1.74E+05	1.16E+05	1.82E+05	1.24E+05
+D-Glucoronate	1.75E+05	1.05E+05	2.64E+05	2.14E+05	0.00E+00	3.80E+03	3.73E+03	0.00E+00	0.00E+00	0.00E+00	1.21E+05	2.31E+05	3.16E+05	1.61E+05	1.84E+05	1.42E+05
+UDP-D-glucuronate	3.72E+05	2.20E+05	2.56E+05	3.00E+05	4.43E+04	7.58E+04	1.34E+05	5.98E+04	6.00E+04	6.31E+04	3.58E+05	4.55E+05	4.85E+05	2.35E+05	2.84E+05	2.70E+05
+UDP-N-acetyl-D-glucosamine	1.68E+06	1.43E+06	2.14E+06	2.20E+06	7.25E+05	1.14E+06	1.12E+06	4.49E+05	5.68E+05	5.29E+05	2.07E+06	3.38E+06	2.74E+06	1.58E+06	1.14E+06	1.81E+06
+N-acetyl-D-glucosamine	1.69E+04	1.08E+04	6.57E+04	6.24E+04	3.19E+03	3.82E+03	1.39E+04	3.00E+03	3.06E+03	5.83E+03	1.27E+04	2.98E+04	8.96E+03	3.65E+04	2.70E+04	3.93E+04
+CMP-N-acetylneuraminate	3.87E+05	4.44E+05	4.22E+05	5.31E+05	2.76E+05	2.73E+05	3.12E+05	1.58E+05	2.01E+05	1.95E+05	5.56E+05	6.13E+05	5.07E+05	6.07E+05	4.06E+05	6.65E+05
+Homocarnosine	8.16E+06	8.97E+06	2.99E+06	4.29E+06	8.72E+06	8.85E+06	8.60E+06	8.46E+06	5.32E+06	8.51E+06	1.27E+04	5.05E+03	1.07E+05	3.31E+03	6.03E+03	1.29E+03
+Creatine	6.70E+07	6.78E+07	4.37E+07	5.71E+07	6.05E+07	5.23E+07	5.16E+07	4.71E+07	6.13E+07	6.43E+07	1.42E+06	1.15E+06	4.06E+06	7.13E+05	8.15E+05	5.49E+05
+Creatinine	7.07E+05	1.02E+06	7.32E+05	9.69E+05	8.80E+05	6.72E+05	9.61E+05	8.62E+05	1.11E+06	1.05E+06	6.16E+04	6.11E+04	8.25E+04	3.77E+04	9.90E+04	6.77E+04
+Pantothenate	2.50E+06	9.10E+05	4.04E+06	2.07E+06	1.78E+06	1.58E+06	2.56E+06	3.36E+06	2.42E+06	3.21E+06	1.04E+06	1.68E+06	9.96E+05	5.27E+05	6.95E+05	6.56E+05
+Pantetheine 4--phosphate	4.96E+05	1.24E+05	7.39E+05	4.15E+05	3.42E+05	3.35E+05	4.00E+05	3.87E+05	2.58E+05	4.21E+05	7.73E+04	1.57E+05	1.22E+05	5.11E+04	1.03E+05	1.33E+05
+Pantetheine	6.94E+04	2.77E+04	2.36E+05	1.83E+05	6.17E+04	7.82E+04	7.48E+04	4.92E+04	6.03E+04	5.06E+04	3.21E+04	3.91E+04	3.99E+04	4.25E+04	3.43E+04	2.99E+04
+5-Hydroxyindoleacetate	4.54E+04	1.58E+04	8.69E+04	3.53E+04	4.74E+04	3.10E+04	2.98E+04	2.53E+04	1.92E+04	3.55E+04	3.47E+04	1.15E+05	5.31E+04	1.43E+05	2.42E+05	4.22E+05
+3-Methyldioxyindole	5.69E+03	8.73E+03	1.35E+04	3.28E+03	2.15E+03	2.10E+03	3.10E+03	2.24E+03	1.38E+03	6.15E+03	8.11E+03	6.78E+03	2.58E+04	1.86E+04	3.68E+04	3.36E+04
+Kynurenic acid	4.15E+03	1.12E+03	1.89E+03	1.13E+03	2.23E+03	5.49E+03	2.00E+03	3.68E+03	4.23E+03	1.85E+03	1.80E+03	1.55E+03	1.34E+03	4.93E+04	5.35E+04	1.42E+05
+Quinolinic acid	1.36E+05	1.09E+05	1.74E+05	1.41E+05	5.96E+04	1.32E+05	1.56E+05	2.79E+04	1.16E+05	1.66E+05	2.02E+05	1.20E+05	1.08E+05	1.72E+05	1.25E+05	1.33E+05
+Anthranilate	2.09E+04	1.63E+04	1.10E+04	1.64E+04	7.97E+03	1.55E+04	1.37E+04	1.60E+04	1.50E+04	1.19E+04	1.44E+04	2.11E+04	1.70E+04	1.91E+04	3.90E+04	3.02E+04
+Glycerol 3-phosphate	1.99E+07	2.61E+07	1.13E+06	1.31E+06	4.83E+05	3.30E+06	1.26E+06	6.91E+06	1.39E+07	1.11E+06	2.20E+06	1.08E+06	2.05E+06	6.74E+05	9.70E+05	1.15E+06
+Phosphoethanolamine	4.06E+06	1.86E+06	3.42E+06	4.85E+06	6.21E+05	1.26E+06	1.18E+06	7.32E+05	7.24E+05	7.88E+05	2.67E+07	1.97E+07	2.22E+07	1.32E+07	1.67E+07	1.59E+07
+CDP-ethanolamine	2.31E+05	2.98E+05	1.69E+05	4.30E+05	1.13E+05	2.08E+05	1.29E+05	1.30E+05	1.05E+05	9.78E+04	7.07E+05	7.41E+05	5.35E+05	4.03E+05	5.09E+05	4.54E+05
+Phosphodimethyl-ethanolamine	4.32E+05	1.81E+05	7.13E+05	7.28E+05	3.92E+04	3.29E+05	2.89E+05	1.67E+05	1.44E+05	1.64E+05	4.36E+06	1.70E+06	3.41E+06	3.25E+06	3.72E+06	3.49E+06
+Serine-Phosphoethanolamine	8.28E+04	1.13E+05	9.06E+04	7.45E+04	1.03E+05	6.25E+04	6.09E+04	8.12E+04	6.79E+04	1.14E+05	8.92E+04	1.21E+05	1.25E+05	1.66E+05	1.00E+05	1.30E+05
+Acetylcholine	0.00E+00	4.49E+02	1.27E+03	1.54E+03	4.80E+02	0.00E+00	0.00E+00	5.35E+02	0.00E+00	0.00E+00	9.21E+02	0.00E+00	0.00E+00	1.96E+03	1.12E+03	3.51E+03
+Acetoacetate	5.42E+04	1.49E+05	9.98E+05	5.99E+05	6.25E+05	7.47E+05	5.92E+05	1.76E+05	4.41E+05	3.72E+05	3.62E+05	3.70E+05	3.31E+05	3.16E+05	7.85E+05	5.04E+05
+Pentanoate	7.95E+04	5.68E+04	9.06E+04	8.84E+04	4.12E+04	9.38E+04	6.04E+04	5.56E+04	5.23E+04	1.04E+05	9.18E+04	7.34E+04	1.04E+05	1.09E+05	1.06E+05	9.94E+04
+Hexanoic acid	1.61E+06	5.00E+05	6.55E+05	5.54E+05	5.53E+05	2.55E+05	4.07E+05	3.58E+05	3.10E+05	5.82E+05	4.14E+05	5.67E+05	4.96E+05	4.90E+05	5.37E+05	4.35E+05
+Octanoic acid	8.80E+05	2.14E+05	3.77E+05	3.06E+05	2.35E+05	1.94E+05	2.28E+05	2.39E+05	1.96E+05	3.57E+05	3.75E+05	4.18E+05	2.45E+05	3.79E+05	5.09E+05	3.81E+05
+Nonanoic acid	8.98E+05	6.39E+05	4.80E+05	2.76E+05	5.15E+05	4.20E+05	8.36E+05	3.66E+05	1.12E+06	6.05E+05	4.58E+05	6.21E+05	3.18E+05	6.33E+05	7.62E+05	5.27E+05
+Decanoic acid	4.34E+05	5.03E+05	4.14E+05	3.41E+05	5.57E+05	4.11E+05	2.48E+05	4.39E+05	4.06E+05	4.84E+05	3.79E+05	7.40E+05	4.32E+05	7.89E+05	4.95E+05	5.49E+05
+Dodecanoic acid	2.78E+05	3.52E+05	3.05E+05	2.06E+05	2.35E+05	4.13E+05	3.02E+05	2.43E+05	1.78E+05	1.80E+05	1.72E+05	2.51E+05	2.05E+05	1.77E+05	1.85E+05	4.04E+05
+Tetradecanoic acid	1.34E+06	8.51E+05	1.04E+06	8.95E+05	5.13E+05	6.71E+05	5.69E+05	6.99E+05	5.42E+05	9.50E+05	1.00E+06	4.94E+05	1.08E+06	1.00E+06	6.17E+05	1.49E+06
+Hexadecanoic acid	2.16E+07	1.21E+07	1.03E+07	8.12E+06	7.87E+06	6.99E+06	7.53E+06	6.66E+06	6.39E+06	1.01E+07	1.24E+07	6.20E+06	1.20E+07	1.28E+07	1.58E+07	1.03E+07
+Octadecanoic acid	6.56E+06	5.62E+06	3.87E+06	2.54E+06	2.62E+06	3.43E+06	1.98E+06	3.33E+06	1.99E+06	1.40E+06	3.75E+06	3.57E+06	3.94E+06	6.18E+06	4.58E+06	4.38E+06
+Tetradecenoic acid	8.41E+04	6.01E+04	6.17E+04	5.93E+04	5.28E+04	4.33E+04	6.06E+04	3.77E+04	5.71E+04	8.66E+04	4.79E+04	3.59E+04	6.12E+04	4.36E+04	7.71E+04	4.88E+04
+Hexadecenoic acid	1.04E+06	6.37E+05	1.90E+06	8.75E+05	9.12E+05	6.70E+05	2.19E+06	5.97E+05	7.91E+05	9.19E+05	5.32E+05	6.60E+05	5.76E+05	5.55E+05	1.20E+06	1.08E+06
+Octadecenoic acid	3.47E+06	3.68E+06	1.18E+07	5.73E+06	2.65E+06	3.45E+06	4.91E+06	1.94E+06	3.34E+06	3.64E+06	4.17E+06	5.31E+06	3.22E+06	3.05E+06	3.37E+06	4.30E+06
+Octadecadienoic acid	4.80E+06	2.70E+06	1.28E+07	4.65E+06	3.86E+06	5.80E+06	7.75E+06	3.15E+06	3.89E+06	7.94E+06	3.30E+06	3.29E+06	2.50E+06	3.07E+06	5.27E+06	4.12E+06
+Octadecatrienoic acid	4.17E+05	1.72E+05	4.55E+05	3.02E+05	4.61E+05	6.43E+05	3.89E+05	4.78E+05	6.76E+05	2.27E+05	2.12E+05	1.13E+05	7.75E+04	2.17E+05	2.32E+05	3.91E+05
+Eicosatetraenoic acid	4.07E+06	1.22E+06	2.96E+06	3.06E+06	2.47E+06	2.59E+06	1.89E+06	8.55E+05	8.60E+05	1.41E+06	7.26E+06	2.47E+06	4.56E+06	4.50E+06	3.54E+06	5.87E+06
+Eicosapentaenoic acid	2.34E+05	1.06E+05	1.57E+05	1.81E+05	5.47E+05	2.11E+05	2.96E+05	1.56E+05	6.26E+05	1.84E+05	2.28E+05	9.48E+04	1.13E+05	2.22E+05	2.86E+05	3.73E+05
+Docosahexaenoic acid	1.43E+06	2.57E+05	1.12E+06	7.97E+05	9.18E+05	1.06E+06	1.86E+06	4.78E+05	1.15E+06	8.49E+05	1.86E+06	9.89E+05	9.91E+05	6.77E+05	1.74E+06	8.04E+05
+(8Z-11Z-14Z)-Icosatrienoic acid	2.98E+05	7.22E+04	2.70E+05	2.19E+05	1.35E+05	1.45E+05	1.97E+05	1.19E+05	1.43E+05	1.05E+05	4.74E+05	2.72E+05	3.31E+05	5.85E+05	3.12E+05	4.63E+05
+(7Z-10Z-13Z-16Z-19Z)-Docosa-7-10-13-16-19-pentaenoic acid	3.15E+05	1.21E+05	3.25E+05	3.27E+05	4.10E+05	8.31E+05	7.44E+05	2.27E+05	4.75E+05	3.64E+05	5.22E+05	5.05E+05	1.29E+05	4.10E+05	5.66E+05	4.22E+05
+alhpa-tocopheronolactone	4.23E+04	3.96E+04	3.59E+04	2.10E+04	1.70E+04	4.02E+04	8.16E+04	2.44E+04	3.69E+04	3.57E+04	4.66E+04	2.11E+04	2.15E+04	1.91E+04	4.66E+04	2.40E+04
+dihydroxy-octadecanoic acid	9.50E+04	7.69E+04	5.67E+04	3.29E+04	3.96E+04	2.55E+04	2.86E+04	3.19E+04	3.35E+04	4.95E+04	6.50E+04	4.25E+04	6.83E+04	5.23E+04	9.51E+04	5.57E+04
+Indole-5-6-quinone	1.12E+05	1.36E+05	1.11E+05	9.17E+04	1.61E+05	9.42E+04	1.15E+05	8.65E+04	9.92E+04	1.84E+05	1.43E+05	1.20E+05	1.32E+05	1.53E+05	1.08E+05	1.15E+05
+Homovanillate	2.31E+05	1.12E+05	1.39E+05	1.05E+05	7.80E+04	9.48E+04	1.37E+05	7.21E+04	7.14E+04	1.07E+05	5.77E+04	5.54E+04	3.09E+04	1.91E+04	3.35E+04	1.88E+04
+4-Hydroxyphenylacetate	6.95E+05	8.01E+05	9.53E+05	1.53E+06	3.44E+05	4.95E+05	3.48E+05	3.54E+05	3.69E+05	4.49E+05	5.71E+05	3.53E+05	4.10E+05	4.50E+05	4.91E+05	5.80E+05
+3-Fumarylpyruvate	3.78E+04	4.89E+04	5.14E+04	4.52E+04	4.81E+04	2.34E+04	1.83E+04	2.82E+04	1.50E+04	5.05E+04	1.87E+04	3.35E+04	4.98E+04	4.62E+04	5.02E+04	4.52E+04
+CerP	2.34E+03	2.19E+03	2.36E+03	8.93E+03	1.15E+03	2.00E+03	1.19E+04	1.70E+03	1.40E+03	1.05E+04	4.06E+03	2.72E+03	9.72E+03	0.00E+00	1.56E+04	2.07E+04
+Taurocholate	1.09E+05	1.44E+05	5.68E+04	2.39E+04	3.52E+03	1.82E+05	5.45E+04	5.12E+03	1.30E+05	2.66E+04	9.52E+04	2.32E+04	2.85E+04	5.22E+04	1.33E+06	4.53E+04
+Taurochenodeoxycholate/Tauroursodeoxycholate	2.56E+04	1.35E+04	2.38E+03	0.00E+00	0.00E+00	9.13E+03	7.65E+03	0.00E+00	2.42E+03	4.59E+03	1.32E+04	0.00E+00	0.00E+00	0.00E+00	6.70E+04	1.09E+04
+HODE	7.41E+04	2.18E+04	2.12E+05	6.89E+04	1.65E+04	1.47E+05	4.56E+04	1.25E+04	5.59E+04	2.15E+04	2.83E+05	1.67E+05	9.95E+04	2.42E+05	2.51E+05	4.17E+05
+HETE	2.32E+04	2.78E+04	2.11E+05	2.92E+04	6.11E+03	8.99E+04	1.95E+04	1.22E+03	1.01E+04	1.10E+03	2.12E+05	3.73E+05	4.67E+05	7.01E+05	1.17E+06	1.71E+06
+Prostaglandin A2/B2	2.83E+04	2.43E+04	1.75E+04	4.11E+04	1.38E+04	8.18E+03	1.22E+04	2.21E+04	1.61E+04	1.28E+04	8.62E+04	4.90E+04	2.78E+04	2.03E+04	4.58E+04	4.81E+04
+Prostaglandin D2/Thromboxane A2 (isobars)	1.75E+05	7.25E+04	1.12E+05	3.67E+05	4.85E+04	9.81E+04	6.93E+04	8.45E+04	7.73E+04	5.69E+04	1.30E+06	7.66E+05	7.25E+05	5.78E+05	1.28E+06	1.39E+06
+Prostaglandin F2alpha/beta/D1 (isobars)	1.15E+04	4.06E+03	1.84E+04	2.35E+04	2.59E+03	7.23E+03	5.81E+03	2.93E+03	1.35E+03	5.97E+02	3.71E+05	1.94E+05	1.49E+05	1.73E+05	3.09E+05	2.78E+05
+Prostaglandin G2	5.79E+04	6.16E+04	6.79E+04	4.26E+04	4.03E+04	5.33E+04	5.49E+04	3.54E+04	3.70E+04	5.47E+04	9.36E+04	4.25E+04	7.75E+04	4.37E+04	7.41E+04	4.31E+04
+Thromboxane B2	2.56E+04	9.93E+03	9.53E+04	5.17E+04	1.04E+04	3.79E+04	5.15E+04	2.02E+03	2.92E+03	2.12E+03	1.49E+06	1.17E+06	9.54E+05	1.18E+06	9.93E+05	1.15E+06
+Leukotriene A4	7.72E+02	8.55E+02	9.65E+03	1.56E+03	0.00E+00	4.18E+03	2.22E+03	0.00E+00	0.00E+00	0.00E+00	1.16E+04	1.57E+04	1.19E+04	9.37E+04	1.48E+05	1.00E+05
+Cholesterol sulfate	4.84E+05	1.08E+05	1.16E+05	3.33E+05	5.63E+04	1.19E+05	1.07E+05	1.06E+05	6.99E+04	6.88E+04	1.31E+06	6.21E+05	9.85E+05	8.27E+05	4.59E+05	5.13E+05
+Mevalonate-P	3.93E+03	0.00E+00	3.92E+03	0.00E+00	7.63E+03	1.33E+04	1.36E+04	9.56E+02	1.70E+04	4.95E+03	0.00E+00	0.00E+00	0.00E+00	0.00E+00	0.00E+00	0.00E+00
+Mevalonate-PP	0.00E+00	5.83E+03	1.04E+04	0.00E+00	0.00E+00	0.00E+00	0.00E+00	0.00E+00	0.00E+00	0.00E+00	3.28E+04	9.82E+03	9.74E+03	1.56E+04	4.20E+03	2.44E+04
+Sphingosine 1-phosphate	1.43E+04	7.63E+03	1.98E+04	1.27E+04	1.95E+03	1.05E+04	2.22E+04	7.26E+03	1.29E+04	0.00E+00	1.19E+04	1.26E+04	9.61E+03	2.54E+03	7.43E+03	9.19E+03
+Sphinganine 1-phosphate	2.03E+04	2.11E+04	1.15E+04	8.05E+03	5.75E+03	1.24E+04	2.04E+04	1.52E+04	1.55E+04	3.93E+03	1.38E+04	8.28E+03	1.08E+04	3.43E+04	1.80E+04	1.74E+04
+N-Acetyl-L-leucine	5.33E+04	1.96E+04	3.93E+04	1.32E+04	1.42E+04	2.09E+04	1.46E+04	8.46E+03	1.24E+04	1.55E+04	4.77E+04	2.90E+04	6.71E+03	2.80E+04	2.60E+04	1.75E+04
+MS_METABOLITE_DATA_END
+#METABOLITES
+METABOLITES_START
+metabolite_name	CmpdID	parent	medRt
+ATP	C00002	505.988586	0.586
+ADP	C00008	426.0224	0.601
+GTP	C00044	521.98291	0.546
+GDP	C00035	442.017059	0.579
+CTP	C00063	481.977997	0.567
+CDP	C00112	402.009918	0.594
+UTP	C00075	482.961212	0.554
+UDP	C00015	402.997772	0.625
+ITP	C00081	506.969635	0.571
+IDP	C00104	427.006012	0.567
+3',5'-Cyclic AMP	C00575	328.045349	1.073
+2',3'-Cyclic CMP	C02354	304.036194	1.851
+5'-Phosphoribosyl-N-formylglycinamide	C04376	313.044403	0.638
+Pyridoxamine 5'-phosphate	C00647	247.048187	0.623
+Adenylosuccinic acid	C03794	462.066986	0.543
+UDP-glucose	C00029	565.047668	0.56
+ADP-D-ribose	C01882	558.064392	0.607
+Flavin mononucleotide	C00061	455.098724	1.721
+FAD	C00016	784.149963	1.702
+FADH2	C01352	786.155518	1.702
+NADP+	C00006	743.071655	0.56
+NAD+	C00003	663.10498	0.675
+Phosphate	C00009	96.968307	0.835
+Diphosphate	C00013	176.93486	0.609
+D-Glucose	C00031	179.055237	0.661
+D-Hexose-phosphate	C02965	259.022369	0.583
+D-Fructose 1-6-bisphosphate	C00354	338.988861	0.557
+D-Glyceraldehyde 3-phosphate/Glycerone phosphate	C00118	168.98941	0.597
+1-3-Bisphosphoglycerate	C00236	264.951996	0.559
+2/3-Phospho-D-glycerate	C00631	184.984833	0.559
+Phosphoenolpyruvate	C00074	166.974258	0.599
+Pyruvate	C00022	87.007233	0.652
+Lactate	C01432	89.022903	0.642
+Maltose/Sucrose	C00208	341.109039	0.673
+Maltotriose	C01835	503.161682	0.668
+Mannitol/Sorbitol/Glucitol/Iditol	C00392	181.07048	0.664
+D-Ribose	C00121	149.044846	0.654
+D-Rhamnose	C01684	163.060669	0.672
+D-Arabitol/Xylitol/Ribitol	C01904	151.060211	0.721
+cis-Aconitate	C00417	173.008347	0.609
+Citrate	C00158	191.018982	0.585
+2-Oxoglutarate	C00026	145.013214	0.615
+2-Oxoglutaramate	C00940	144.028976	0.608
+Succinate	C00042	117.017868	0.568
+Fumarate	C00122	115.002464	0.576
+Malate	C00149	133.012909	0.554
+Oxaloacetate	C00036	130.999863	0.582
+2-Hydroxyglutarate	C02630	147.028946	0.549
+Itaconate	C00490	129.018021	0.734
+D-Glucono-1-5-lactone 6-phosphate	C01236	257.006653	0.591
+6-Phospho-D-gluconate	C00345	275.017181	0.551
+D-Erythrose 4-phosphate	C00279	199.000565	0.629
+Sedoheptulose 7-phosphate	C05382	289.033112	0.581
+Pentose phosphates (isobars)	C00199	229.01152	0.589
+gamma-L-Glutamyl-L-cysteine	C00669	249.056198	0.689
+5-L-Glutamyl-taurine	C05844	253.049911	0.613
+Dimethylglycine	C01026	102.054604	0.598
+3-Phosphonooxypyruvate	C03232	182.969421	0.69
+Carbamoyl phosphate	C00169	139.97435	3.921
+3-Hydroxyisobutyrate	C01188	103.038582	0.65
+N-Acetylneuraminate	C00270	308.098816	0.628
+N-Glycoloyl-neuraminate	C03410	324.093658	0.611
+alpha-D-Glucosamine 1-phosphate	C06156	258.0383	0.608
+D-Glucoronate	C00191	193.034668	0.617
+UDP-D-glucuronate	C00167	579.027039	0.534
+UDP-N-acetyl-D-glucosamine	C00043	606.074402	0.561
+N-acetyl-D-glucosamine	C00140	220.082367	0.683
+CMP-N-acetylneuraminate	C00128	613.140015	0.559
+Homocarnosine	C00884	239.114761	0.766
+Creatine	C00300	130.060822	0.672
+Creatinine	C00791	112.050255	0.779
+Pantothenate	C00864	218.103012	0.736
+Pantetheine 4--phosphate	C01134	357.089264	0.716
+Pantetheine	C00831	277.122437	1.772
+5-Hydroxyindoleacetate	C05635	190.051895	0.738
+3-Methyldioxyindole	C05834	162.054672	1.983
+Kynurenic acid	C01717	188.034637	1.777
+Quinolinic acid	C03722	166.015701	0.657
+Anthranilate	C00108	136.039124	1.841
+Glycerol 3-phosphate	C00093	171.005417	0.593
+Phosphoethanolamine	C00346	140.01059	0.621
+CDP-ethanolamine	C00570	445.052887	0.609
+Phosphodimethyl-ethanolamine	C13482	168.041885	0.627
+Serine-Phosphoethanolamine	C03872	227.041336	1.791
+Acetylcholine	C01996	145.110779	2.03
+Acetoacetate	C00164	101.022949	0.652
+Pentanoate	C00803	101.059326	1.122
+Hexanoic acid	C01585	115.07505	1.811
+Octanoic acid	C06423	143.106522	2.065
+Nonanoic acid	C01601	157.122269	2.151
+Decanoic acid	C01571	171.138092	2.24
+Dodecanoic acid	C02679	199.169678	2.424
+Tetradecanoic acid	C06424	227.201263	2.687
+Hexadecanoic acid	C00249	255.232895	3.061
+Octadecanoic acid	C01530	283.264435	3.625
+Tetradecenoic acid	C08322	225.185593	2.481
+Hexadecenoic acid	C08362	253.217194	2.731
+Octadecenoic acid	C00712	281.248718	3.103
+Octadecadienoic acid	C01595	279.232941	2.788
+Octadecatrienoic acid	C06427	277.217255	2.584
+Eicosatetraenoic acid	C00219	303.233032	2.691
+Eicosapentaenoic acid	C06428	301.217316	2.517
+Docosahexaenoic acid	C06429	327.233032	2.596
+(8Z-11Z-14Z)-Icosatrienoic acid	C03242	305.248749	2.866
+(7Z-10Z-13Z-16Z-19Z)-Docosa-7-10-13-16-19-pentaenoic acid	C16513	329.24884	2.717
+alhpa-tocopheronolactone	LMPR02020063	277.145508	2.013
+dihydroxy-octadecanoic acid	LMFA01050198	315.25412	3.081
+Indole-5-6-quinone	C05579	146.023575	1.858
+Homovanillate	C05582	181.049881	0.709
+4-Hydroxyphenylacetate	C00642	151.038986	1.933
+3-Fumarylpyruvate	C02514	185.010498	3.611
+CerP	C02960	405.229248	1.984
+Taurocholate	C05122	514.284363	1.803
+Taurochenodeoxycholate/Tauroursodeoxycholate	C05465	498.289307	1.824
+HODE	C14762	295.227844	2.27
+HETE	C04805	319.227905	2.293
+Prostaglandin A2/B2	C05953	333.20993	1.877
+Prostaglandin D2/Thromboxane A2 (isobars)	C00696	351.219177	1.977
+Prostaglandin F2alpha/beta/D1 (isobars)	C00639	353.233246	1.937
+Prostaglandin G2	C05956	367.21463	2.034
+Thromboxane B2	C05963	369.228333	1.842
+Leukotriene A4	C00909	317.212463	2.189
+Cholesterol sulfate	C18043	465.305969	2.118
+Mevalonate-P	C01107	227.032257	0.608
+Mevalonate-PP	C01143	307.001862	0.678
+Sphingosine 1-phosphate	C06124	378.239502	3.11
+Sphinganine 1-phosphate	C01120	380.25531	3.638
+N-Acetyl-L-leucine	C02710	172.097046	1.717
+METABOLITES_END
+#END
+
+

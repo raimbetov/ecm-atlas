@@ -1,0 +1,38 @@
+[
+  {
+    "dataset_id": "ST001329",
+    "mwtab_path": "data_codex/ST001329_mwtab.txt",
+    "samples": 53,
+    "metabolites": 187,
+    "sample_factors": "data_codex/ST001329_sample_factors.csv",
+    "metabolites_long": "data_codex/ST001329_metabolites_long.csv",
+    "metabolites_wide": "data_codex/ST001329_metabolites_wide.csv"
+  },
+  {
+    "dataset_id": "ST001507",
+    "mwtab_path": "data_codex/ST001507_mwtab.txt",
+    "samples": 119,
+    "metabolites": 302,
+    "sample_factors": "data_codex/ST001507_sample_factors.csv",
+    "metabolites_long": "data_codex/ST001507_metabolites_long.csv",
+    "metabolites_wide": "data_codex/ST001507_metabolites_wide.csv"
+  },
+  {
+    "dataset_id": "ST002058",
+    "mwtab_path": "data_codex/ST002058_mwtab.txt",
+    "samples": 32,
+    "metabolites": 278,
+    "sample_factors": "data_codex/ST002058_sample_factors.csv",
+    "metabolites_long": "data_codex/ST002058_metabolites_long.csv",
+    "metabolites_wide": "data_codex/ST002058_metabolites_wide.csv"
+  },
+  {
+    "dataset_id": "ST000828",
+    "mwtab_path": "data_codex/ST000828_mwtab.txt",
+    "samples": 16,
+    "metabolites": 36,
+    "sample_factors": "data_codex/ST000828_sample_factors.csv",
+    "metabolites_long": "data_codex/ST000828_metabolites_long.csv",
+    "metabolites_wide": "data_codex/ST000828_metabolites_wide.csv"
+  }
+]

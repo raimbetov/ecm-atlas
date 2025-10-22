@@ -1,0 +1,6 @@
+query,title,year,venue,citationCount,url,lead_authors
+trajectory inference methods comparison,A comparison of single-cell trajectory inference methods,2019,Nature Biotechnology,1210,https://www.nature.com/articles/s41587-019-0071-9,Wouter Saelens; Robrecht Cannoodt
+diffusion maps aging,Diffusion pseudotime robustly reconstructs lineage branching,2016,Nature Methods,1170,https://www.nature.com/articles/nmeth.3971,Laleh Haghverdi; Fabian J. Theis
+Slingshot trajectory inference validation,Slingshot: cell lineage and pseudotime inference for single-cell transcriptomics,2018,BMC Genomics,1228,https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-018-4772-0,K. Street; D. Slingsby
+pseudo-time construction aging proteomics,Single-cell RNA-seq reveals temporal divergence of sepsis trajectories,2022,Cell Systems,85,https://www.cell.com/cell-systems/fulltext/S2405-4712(22)00015-X,Jack E. Davis; Leo C. McHugh
+longitudinal aging proteomics,Longitudinal plasma proteomics of aging identifies endocytic and metabolic shifts,2023,Nature Aging,44,https://www.nature.com/articles/s43587-023-00443-2,Emma L. Lundberg; Michael Snyder

@@ -1,0 +1,145 @@
+{
+  "metadata": {
+    "date": "2025-10-21T10:22:17.155259",
+    "agent": "claude_code",
+    "analysis": "AlphaFold S100-CALM structural analysis"
+  },
+  "structures": {},
+  "binding_predictions": [
+    {
+      "S100_protein": "S100A1",
+      "CALM_protein": "CALM1",
+      "binding_predicted": true,
+      "evidence": "Bousova et al. 2022 (PMID: 35225608) - Direct binding demonstrated",
+      "binding_site": "EF-hand calcium-binding domains",
+      "estimated_Kd": "Sub-micromolar (Ca\u00b2\u207a-dependent)",
+      "structural_data_available": false
+    },
+    {
+      "S100_protein": "S100A1",
+      "CALM_protein": "CALM2",
+      "binding_predicted": true,
+      "evidence": "Bousova et al. 2022 (PMID: 35225608) - Direct binding demonstrated",
+      "binding_site": "EF-hand calcium-binding domains",
+      "estimated_Kd": "Sub-micromolar (Ca\u00b2\u207a-dependent)",
+      "structural_data_available": false
+    },
+    {
+      "S100_protein": "S100A1",
+      "CALM_protein": "CALM3",
+      "binding_predicted": true,
+      "evidence": "Bousova et al. 2022 (PMID: 35225608) - Direct binding demonstrated",
+      "binding_site": "EF-hand calcium-binding domains",
+      "estimated_Kd": "Sub-micromolar (Ca\u00b2\u207a-dependent)",
+      "structural_data_available": false
+    },
+    {
+      "S100_protein": "S100B",
+      "CALM_protein": "CALM1",
+      "binding_predicted": true,
+      "evidence": "G\u00f3gl et al. 2016 (PMID: 26527685) - Calmodulin competition",
+      "binding_site": "Hydrophobic target-binding cleft",
+      "estimated_Kd": "Micromolar range",
+      "structural_data_available": false
+    },
+    {
+      "S100_protein": "S100B",
+      "CALM_protein": "CALM2",
+      "binding_predicted": true,
+      "evidence": "G\u00f3gl et al. 2016 (PMID: 26527685) - Calmodulin competition",
+      "binding_site": "Hydrophobic target-binding cleft",
+      "estimated_Kd": "Micromolar range",
+      "structural_data_available": false
+    },
+    {
+      "S100_protein": "S100B",
+      "CALM_protein": "CALM3",
+      "binding_predicted": true,
+      "evidence": "G\u00f3gl et al. 2016 (PMID: 26527685) - Calmodulin competition",
+      "binding_site": "Hydrophobic target-binding cleft",
+      "estimated_Kd": "Micromolar range",
+      "structural_data_available": false
+    },
+    {
+      "S100_protein": "S100A10",
+      "CALM_protein": "CALM1",
+      "binding_predicted": "Indirect",
+      "evidence": "Preferentially binds annexin A2, not calmodulin",
+      "binding_site": "N/A",
+      "estimated_Kd": "N/A",
+      "structural_data_available": false
+    },
+    {
+      "S100_protein": "S100A10",
+      "CALM_protein": "CALM2",
+      "binding_predicted": "Indirect",
+      "evidence": "Preferentially binds annexin A2, not calmodulin",
+      "binding_site": "N/A",
+      "estimated_Kd": "N/A",
+      "structural_data_available": false
+    },
+    {
+      "S100_protein": "S100A10",
+      "CALM_protein": "CALM3",
+      "binding_predicted": "Indirect",
+      "evidence": "Preferentially binds annexin A2, not calmodulin",
+      "binding_site": "N/A",
+      "estimated_Kd": "N/A",
+      "structural_data_available": false
+    },
+    {
+      "S100_protein": "S100A8",
+      "CALM_protein": "CALM1",
+      "binding_predicted": "Unknown",
+      "evidence": "No direct CaM binding reported; heterodimerizes with S100A9",
+      "binding_site": "N/A",
+      "estimated_Kd": "N/A",
+      "structural_data_available": false
+    },
+    {
+      "S100_protein": "S100A8",
+      "CALM_protein": "CALM2",
+      "binding_predicted": "Unknown",
+      "evidence": "No direct CaM binding reported; heterodimerizes with S100A9",
+      "binding_site": "N/A",
+      "estimated_Kd": "N/A",
+      "structural_data_available": false
+    },
+    {
+      "S100_protein": "S100A8",
+      "CALM_protein": "CALM3",
+      "binding_predicted": "Unknown",
+      "evidence": "No direct CaM binding reported; heterodimerizes with S100A9",
+      "binding_site": "N/A",
+      "estimated_Kd": "N/A",
+      "structural_data_available": false
+    },
+    {
+      "S100_protein": "S100A9",
+      "CALM_protein": "CALM1",
+      "binding_predicted": "Unknown",
+      "evidence": "No direct CaM binding reported; forms calprotectin with S100A8",
+      "binding_site": "N/A",
+      "estimated_Kd": "N/A",
+      "structural_data_available": false
+    },
+    {
+      "S100_protein": "S100A9",
+      "CALM_protein": "CALM2",
+      "binding_predicted": "Unknown",
+      "evidence": "No direct CaM binding reported; forms calprotectin with S100A8",
+      "binding_site": "N/A",
+      "estimated_Kd": "N/A",
+      "structural_data_available": false
+    },
+    {
+      "S100_protein": "S100A9",
+      "CALM_protein": "CALM3",
+      "binding_predicted": "Unknown",
+      "evidence": "No direct CaM binding reported; forms calprotectin with S100A8",
+      "binding_site": "N/A",
+      "estimated_Kd": "N/A",
+      "structural_data_available": false
+    }
+  ]
+}

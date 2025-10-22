@@ -1,0 +1,11 @@
+task,fold,tissue,prob_fast,predicted_label,true_label
+classification,1,Kidney_Tubulointerstitial,0.119708054,0,0
+classification,1,Skeletal_muscle_Soleus,0.8808972,1,1
+classification,2,Intervertebral_disc_IAF,0.18040642,0,0
+classification,2,Skeletal_muscle_EDL,0.8885202,1,1
+classification,3,Intervertebral_disc_OAF,0.037548613,0,0
+classification,3,Skeletal_muscle_Gastrocnemius,0.8875578,1,1
+classification,4,Lung,0.051364735,0,0
+classification,4,Ovary_Cortex,0.81669503,1,1
+classification,5,Intervertebral_disc_NP,0.046329334,0,0
+classification,5,Skeletal_muscle_TA,0.8576821,1,1
